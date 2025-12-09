@@ -42,7 +42,7 @@ export default function Home() {
                   <Button variant="outline">Email Me</Button>
                 </Link>
                 <div className="relative coin-bounce">
-                  <Link href="tel:+18283073591" className="relative z-10">
+                  <Link href="tel:+18285931935" className="relative z-10">
                     <Button variant="secondary" className="font-black">
                       Call or Text Me
                     </Button>
@@ -508,7 +508,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link
-                href="tel:+18283073591"
+                href="tel:+18285931935"
                 className="block border-gradient-animated"
               >
                 <Button variant="secondary">Call or Text Me</Button>
