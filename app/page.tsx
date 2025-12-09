@@ -271,12 +271,13 @@ export default function Home() {
           <div className="flex flex-col items-stretch justify-start text-xs sm:text-center gap-md grow w-full">
             <h2 className="font-black">Experience</h2>
             <div className="flex flex-col flex-wrap wrap sm:flex-row items-stretch justify-start text-xs text-left grow w-full">
+              {/* Zaxby's Sylva/Waynesville, NC */}
               <div className="flex flex-col items-stretch justify-start p-md w-full sm:w-1/2">
                 <h3 className="text-md font-bold">
                   <strong>Hustle Launch</strong>
                 </h3>
                 <p>
-                  <strong>Owner/Operator</strong>, 02/2024 - Present
+                  <strong>Senior PM</strong>, 02/2022 - 09/2024
                 </p>
                 <p>
                   MGR: 2.5k - <strong>$7k</strong>
