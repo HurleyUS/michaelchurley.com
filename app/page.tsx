@@ -1,4 +1,5 @@
 import { ContainerBoxedCenter } from "@/components/layout/containers";
+import Zaxbys from "@/components/dynamic/zaxbys";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
 import Image from "next/image";
@@ -272,6 +273,7 @@ export default function Home() {
             <h2 className="font-black">Experience</h2>
             <div className="flex flex-col flex-wrap wrap sm:flex-row items-stretch justify-start text-xs text-left grow w-full">
               {/* Zaxby's Sylva/Waynesville, NC */}
+              <Zaxbys />
               <div className="flex flex-col items-stretch justify-start p-md w-full sm:w-1/2">
                 <h3 className="text-md font-bold">
                   <strong>Hustle Launch</strong>
