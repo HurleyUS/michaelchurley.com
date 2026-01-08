@@ -185,3 +185,67 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 - Regular content updates are important
 - Monitor analytics to understand audience
 - Iterate based on feedback
+
+---
+
+## Improvement Opportunities (Updated 2025-01-08)
+
+### 🔴 Critical (Must Have)
+
+1. **Content Update** - Refresh resume with latest experience
+
+2. **Project Case Studies** - Detailed writeups of key projects
+
+3. **Professional Photography** - High-quality headshot and photos
+
+4. **Contact Form** - Working contact form with Resend
+
+5. **Mobile Optimization** - Ensure great mobile experience
+
+### 🟡 High Priority (Professional Image)
+
+6. **Blog Posts** - Technical articles demonstrating expertise
+
+7. **Skills Visualization** - Interactive skills display
+
+8. **Testimonials** - Client and colleague endorsements
+
+9. **GitHub Integration** - Show recent contributions
+
+10. **LinkedIn Sync** - Keep resume in sync with LinkedIn
+
+11. **Download Resume** - PDF download option
+
+12. **Speaking/Presentations** - Videos or slides from talks
+
+### 🟢 Nice to Have (Engagement)
+
+13. **Dark Mode** - Toggle between light/dark themes
+
+14. **Newsletter** - Email signup for blog updates
+
+15. **Social Links** - Twitter, LinkedIn, GitHub integration
+
+16. **RSS Feed** - Blog RSS for subscribers
+
+17. **Search** - Search across blog posts
+
+18. **Reading List** - Books and resources I recommend
+
+19. **Now Page** - What I'm currently working on
+
+20. **Uses Page** - My tools and setup
+
+### 🔧 Technical Improvements
+
+21. **Next.js 15 Upgrade** - Currently on Next.js 14
+
+22. **Convex for CMS** - Use Convex for blog content
+
+23. **MDX Support** - Rich blog posts with components
+
+24. **Image Optimization** - Next/Image with CDN
+
+25. **Structured Data** - JSON-LD for rich snippets
+
+26. **Analytics** - PostHog or Vercel Analytics
