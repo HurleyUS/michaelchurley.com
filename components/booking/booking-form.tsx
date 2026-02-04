@@ -1,19 +1,37 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 
-// Generate available time slots (9 AM to 5 PM EST, 30-min intervals)
-const TIME_SLOTS = [
-  "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-  "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
-  "15:00", "15:30", "16:00", "16:30", "17:00",
-];
+// Generate time slots from 7:30 AM to 8:30 PM (30-min intervals)
+function generateTimeSlots(): string[] {
+  const slots: string[] = [];
+  // 7:30 AM = 7.5 hours, 8:30 PM = 20.5 hours
+  for (let h = 7; h <= 20; h++) {
+    if (h === 7) {
+      slots.push("07:30");
+    } else {
+      slots.push(`${h.toString().padStart(2, "0")}:00`);
+      if (h < 20 || (h === 20 && true)) {
+        slots.push(`${h.toString().padStart(2, "0")}:30`);
+      }
+    }
+  }
+  // Add 20:00 and 20:30 (8:00 PM and 8:30 PM)
+  return slots.filter(s => {
+    const [hh, mm] = s.split(":").map(Number);
+    const minutes = hh * 60 + mm;
+    return minutes >= 7 * 60 + 30 && minutes <= 20 * 60 + 30;
+  });
+}
+
+const ALL_TIME_SLOTS = generateTimeSlots();
 
 function formatTimeSlot(slot: string): string {
   const [hours, minutes] = slot.split(":").map(Number);
@@ -30,31 +48,54 @@ function getDayName(date: Date): string {
   return date.toLocaleDateString("en-US", { weekday: "short" });
 }
 
-// Get next 14 days excluding weekends
-function getAvailableDates(): Date[] {
-  const dates: Date[] = [];
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+function getMonthDay(date: Date): string {
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+// Get available time slots for a given date (only future times)
+function getAvailableSlotsForDate(date: Date, now: Date): string[] {
+  const isToday = formatDate(date) === formatDate(now);
   
-  const current = new Date(today);
-  current.setDate(current.getDate() + 1); // Start from tomorrow
+  if (!isToday) {
+    return ALL_TIME_SLOTS;
+  }
   
-  while (dates.length < 14) {
+  // For today, filter out past times (with 30min buffer)
+  const currentMinutes = now.getHours() * 60 + now.getMinutes() + 30;
+  
+  return ALL_TIME_SLOTS.filter(slot => {
+    const [hh, mm] = slot.split(":").map(Number);
+    const slotMinutes = hh * 60 + mm;
+    return slotMinutes > currentMinutes;
+  });
+}
+
+// Get next N weekdays (M-F) that have available slots
+function getWeekdaysWithSlots(startDate: Date, count: number, now: Date): Date[] {
+  const days: Date[] = [];
+  const current = new Date(startDate);
+  current.setHours(0, 0, 0, 0);
+  
+  while (days.length < count) {
     const dayOfWeek = current.getDay();
-    // Skip weekends (0 = Sunday, 6 = Saturday)
-    if (dayOfWeek !== 0 && dayOfWeek !== 6) {
-      dates.push(new Date(current));
+    // Only M-F (1-5)
+    if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+      // Check if this day has any available slots
+      const slots = getAvailableSlotsForDate(current, now);
+      if (slots.length > 0) {
+        days.push(new Date(current));
+      }
     }
     current.setDate(current.getDate() + 1);
   }
   
-  return dates;
+  return days;
 }
 
-type Step = "date" | "time" | "details" | "confirm" | "success";
+type Step = "select" | "details" | "confirm" | "success";
 
 export default function BookingForm() {
-  const [step, setStep] = useState<Step>("date");
+  const [step, setStep] = useState<Step>("select");
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [name, setName] = useState("");
@@ -63,16 +104,58 @@ export default function BookingForm() {
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [startOffset, setStartOffset] = useState(0); // How many weekdays forward from today
+  const [now, setNow] = useState(() => new Date());
 
   const createBooking = useMutation(api.bookings.create);
-  const availableDates = useMemo(() => getAvailableDates(), []);
 
-  const handleDateSelect = (date: Date) => {
-    setSelectedDate(date);
-    setStep("time");
+  // Update "now" every minute to keep slots fresh
+  useEffect(() => {
+    const interval = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Get the start date based on offset
+  const startDate = useMemo(() => {
+    const date = new Date(now);
+    date.setHours(0, 0, 0, 0);
+    
+    // Skip forward by startOffset weekdays
+    let skipped = 0;
+    while (skipped < startOffset) {
+      date.setDate(date.getDate() + 1);
+      const dow = date.getDay();
+      if (dow >= 1 && dow <= 5) {
+        // Also check if this day has slots
+        const slots = getAvailableSlotsForDate(date, now);
+        if (slots.length > 0) {
+          skipped++;
+        }
+      }
+    }
+    
+    return date;
+  }, [startOffset, now]);
+
+  // Get 3 days to display
+  const visibleDays = useMemo(() => {
+    return getWeekdaysWithSlots(startDate, 3, now);
+  }, [startDate, now]);
+
+  const canGoBack = startOffset > 0;
+
+  const handlePrev = () => {
+    if (canGoBack) {
+      setStartOffset(Math.max(0, startOffset - 3));
+    }
   };
 
-  const handleTimeSelect = (time: string) => {
+  const handleNext = () => {
+    setStartOffset(startOffset + 3);
+  };
+
+  const handleSlotSelect = (date: Date, time: string) => {
+    setSelectedDate(date);
     setSelectedTime(time);
     setStep("details");
   };
@@ -98,7 +181,6 @@ export default function BookingForm() {
     setError(null);
 
     try {
-      // Save to Convex
       await createBooking({
         name: name.trim(),
         email: email.trim(),
@@ -108,7 +190,6 @@ export default function BookingForm() {
         timeSlot: selectedTime,
       });
 
-      // Send emails with ICS
       const response = await fetch("/api/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -136,13 +217,12 @@ export default function BookingForm() {
   };
 
   const handleBack = () => {
-    if (step === "time") setStep("date");
-    else if (step === "details") setStep("time");
+    if (step === "details") setStep("select");
     else if (step === "confirm") setStep("details");
   };
 
   const handleReset = () => {
-    setStep("date");
+    setStep("select");
     setSelectedDate(null);
     setSelectedTime(null);
     setName("");
@@ -150,234 +230,210 @@ export default function BookingForm() {
     setPhone("");
     setMessage("");
     setError(null);
+    setStartOffset(0);
   };
 
-  return (
-    <div className="w-full max-w-2xl mx-auto">
-      {/* Progress indicator */}
-      <div className="flex items-center justify-center gap-2 mb-8">
-        {["date", "time", "details", "confirm"].map((s, i) => (
-          <div
-            key={s}
-            className={cn(
-              "h-2 w-12 rounded-full transition-colors",
-              step === s || ["date", "time", "details", "confirm"].indexOf(step) > i
-                ? "bg-primary"
-                : "bg-muted"
-            )}
-          />
-        ))}
-      </div>
-
-      {/* Date Selection */}
-      {step === "date" && (
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-center">Select a Date</h2>
-          <p className="text-muted-foreground text-center">Choose a day that works for you</p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 mt-6">
-            {availableDates.map((date) => (
-              <button
-                key={formatDate(date)}
-                onClick={() => handleDateSelect(date)}
-                className={cn(
-                  "flex flex-col items-center p-3 rounded-lg border transition-all",
-                  "hover:border-primary hover:bg-primary/5",
-                  "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                )}
-              >
-                <span className="text-xs text-muted-foreground">{getDayName(date)}</span>
-                <span className="text-lg font-semibold">{date.getDate()}</span>
-                <span className="text-xs text-muted-foreground">{date.toLocaleDateString("en-US", { month: "short" })}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Time Selection */}
-      {step === "time" && selectedDate && (
-        <div className="space-y-4">
-          <button
-            onClick={handleBack}
-            className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1"
-          >
-            ← Back
-          </button>
-          <h2 className="text-2xl font-bold text-center">Select a Time</h2>
-          <p className="text-muted-foreground text-center">
-            {selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}
-          </p>
-          <p className="text-sm text-muted-foreground text-center">All times are in Eastern Time (EST)</p>
-          <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mt-6">
-            {TIME_SLOTS.map((slot) => (
-              <button
-                key={slot}
-                onClick={() => handleTimeSelect(slot)}
-                className={cn(
-                  "px-4 py-3 rounded-lg border transition-all text-sm font-medium",
-                  "hover:border-primary hover:bg-primary/5",
-                  "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                )}
-              >
-                {formatTimeSlot(slot)}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Details Form */}
-      {step === "details" && (
-        <div className="space-y-4">
-          <button
-            onClick={handleBack}
-            className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1"
-          >
-            ← Back
-          </button>
-          <h2 className="text-2xl font-bold text-center">Your Details</h2>
-          <p className="text-muted-foreground text-center">
-            {selectedDate?.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })} at {selectedTime && formatTimeSlot(selectedTime)}
-          </p>
-          <form onSubmit={handleDetailsSubmit} className="space-y-4 mt-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-1">
-                Name *
-              </label>
-              <Input
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Your name"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-1">
-                Email *
-              </label>
-              <Input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium mb-1">
-                Phone
-              </label>
-              <Input
-                id="phone"
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="(555) 555-5555"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-1">
-                Message (optional)
-              </label>
-              <Textarea
-                id="message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="What would you like to discuss?"
-                rows={4}
-              />
-            </div>
-            {error && (
-              <p className="text-sm text-red-500">{error}</p>
-            )}
-            <Button type="submit" className="w-full" size="lg">
-              Continue
-            </Button>
-          </form>
-        </div>
-      )}
-
-      {/* Confirmation */}
-      {step === "confirm" && selectedDate && selectedTime && (
-        <div className="space-y-4">
-          <button
-            onClick={handleBack}
-            className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1"
-          >
-            ← Back
-          </button>
-          <h2 className="text-2xl font-bold text-center">Confirm Booking</h2>
-          <div className="bg-muted/50 rounded-lg p-6 space-y-3 mt-6">
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Date</span>
-              <span className="font-medium">
-                {selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Time</span>
-              <span className="font-medium">{formatTimeSlot(selectedTime)} EST</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Duration</span>
-              <span className="font-medium">30 minutes</span>
-            </div>
-            <hr className="border-border" />
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Name</span>
-              <span className="font-medium">{name}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Email</span>
-              <span className="font-medium">{email}</span>
-            </div>
-            {phone && (
-              <div className="flex justify-between">
-                <span className="text-muted-foreground">Phone</span>
-                <span className="font-medium">{phone}</span>
-              </div>
-            )}
-            {message && (
-              <div>
-                <span className="text-muted-foreground">Message</span>
-                <p className="mt-1">{message}</p>
-              </div>
+  // Slot selection view
+  if (step === "select") {
+    return (
+      <div className="w-full">
+        {/* Navigation */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="w-10">
+            {canGoBack && (
+              <Button variant="ghost" size="icon" onClick={handlePrev}>
+                <PiCaretLeftBold />
+              </Button>
             )}
           </div>
-          {error && (
-            <p className="text-sm text-red-500 text-center">{error}</p>
-          )}
-          <Button
-            onClick={handleConfirm}
-            disabled={isSubmitting}
-            className="w-full"
-            size="lg"
-          >
-            {isSubmitting ? "Booking..." : "Confirm Booking"}
+          <h3 className="text-lg font-semibold">Select a Time</h3>
+          <Button variant="ghost" size="icon" onClick={handleNext}>
+            <PiCaretRightBold />
           </Button>
-          <p className="text-xs text-muted-foreground text-center">
-            You will receive a calendar invite via email
-          </p>
         </div>
-      )}
 
-      {/* Success */}
-      {step === "success" && (
-        <div className="text-center space-y-4">
-          <div className="text-6xl">✓</div>
-          <h2 className="text-2xl font-bold">Booking Confirmed!</h2>
-          <p className="text-muted-foreground">
-            Check your email for the calendar invite. Looking forward to speaking with you!
-          </p>
-          <div className="pt-4">
-            <Button onClick={handleReset} variant="outline">
-              Book Another Meeting
-            </Button>
-          </div>
+        {/* 3-column day view */}
+        <div className="grid grid-cols-3 gap-3">
+          {visibleDays.map((date) => {
+            const slots = getAvailableSlotsForDate(date, now);
+            const displaySlots = slots.slice(0, 5);
+            const emptySlots = Math.max(0, 5 - displaySlots.length);
+            const hasMore = slots.length > 5;
+
+            return (
+              <div key={formatDate(date)} className="flex flex-col">
+                {/* Day header */}
+                <div className="text-center mb-2 pb-2 border-b">
+                  <div className="font-semibold">{getDayName(date)}</div>
+                  <div className="text-sm text-muted-foreground">{getMonthDay(date)}</div>
+                </div>
+
+                {/* Scrollable slots container */}
+                <div className="flex flex-col gap-2 max-h-[280px] overflow-y-auto pr-1">
+                  {slots.map((slot) => (
+                    <button
+                      key={slot}
+                      onClick={() => handleSlotSelect(date, slot)}
+                      className={cn(
+                        "px-2 py-2 text-sm rounded-md border transition-all",
+                        "hover:border-primary hover:bg-primary/5",
+                        "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
+                      )}
+                    >
+                      {formatTimeSlot(slot)}
+                    </button>
+                  ))}
+                  {/* Muted booked placeholders if less than 5 slots */}
+                  {emptySlots > 0 && slots.length < 5 && Array.from({ length: emptySlots }).map((_, i) => (
+                    <div
+                      key={`booked-${i}`}
+                      className="px-2 py-2 text-sm rounded-md border border-muted bg-muted/30 text-muted-foreground text-center"
+                    >
+                      Booked
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
-      )}
+
+        <p className="text-xs text-muted-foreground text-center mt-4">
+          All times are in Eastern Time (EST)
+        </p>
+      </div>
+    );
+  }
+
+  // Details form
+  if (step === "details") {
+    return (
+      <div className="w-full">
+        <button
+          onClick={handleBack}
+          className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1 mb-4"
+        >
+          ← Back
+        </button>
+        <h3 className="text-lg font-semibold text-center mb-1">Your Details</h3>
+        <p className="text-sm text-muted-foreground text-center mb-4">
+          {selectedDate?.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })} at {selectedTime && formatTimeSlot(selectedTime)}
+        </p>
+        <form onSubmit={handleDetailsSubmit} className="space-y-3">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium mb-1">Name *</label>
+            <Input
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium mb-1">Email *</label>
+            <Input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone</label>
+            <Input
+              id="phone"
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="(555) 555-5555"
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium mb-1">Message (optional)</label>
+            <Textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="What would you like to discuss?"
+              rows={3}
+            />
+          </div>
+          {error && <p className="text-sm text-red-500">{error}</p>}
+          <Button type="submit" className="w-full">Continue</Button>
+        </form>
+      </div>
+    );
+  }
+
+  // Confirmation
+  if (step === "confirm" && selectedDate && selectedTime) {
+    return (
+      <div className="w-full">
+        <button
+          onClick={handleBack}
+          className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1 mb-4"
+        >
+          ← Back
+        </button>
+        <h3 className="text-lg font-semibold text-center mb-4">Confirm Booking</h3>
+        <div className="bg-muted/50 rounded-lg p-4 space-y-2 text-sm">
+          <div className="flex justify-between">
+            <span className="text-muted-foreground">Date</span>
+            <span className="font-medium">{selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-muted-foreground">Time</span>
+            <span className="font-medium">{formatTimeSlot(selectedTime)} EST</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-muted-foreground">Duration</span>
+            <span className="font-medium">30 minutes</span>
+          </div>
+          <hr className="border-border" />
+          <div className="flex justify-between">
+            <span className="text-muted-foreground">Name</span>
+            <span className="font-medium">{name}</span>
+          </div>
+          <div className="flex justify-between">
+            <span className="text-muted-foreground">Email</span>
+            <span className="font-medium">{email}</span>
+          </div>
+          {phone && (
+            <div className="flex justify-between">
+              <span className="text-muted-foreground">Phone</span>
+              <span className="font-medium">{phone}</span>
+            </div>
+          )}
+          {message && (
+            <div>
+              <span className="text-muted-foreground">Message</span>
+              <p className="mt-1">{message}</p>
+            </div>
+          )}
+        </div>
+        {error && <p className="text-sm text-red-500 text-center mt-2">{error}</p>}
+        <Button onClick={handleConfirm} disabled={isSubmitting} className="w-full mt-4">
+          {isSubmitting ? "Booking..." : "Confirm Booking"}
+        </Button>
+        <p className="text-xs text-muted-foreground text-center mt-2">
+          You will receive a calendar invite via email
+        </p>
+      </div>
+    );
+  }
+
+  // Success
+  return (
+    <div className="text-center py-4">
+      <div className="text-5xl mb-4">✓</div>
+      <h3 className="text-xl font-semibold mb-2">Booking Confirmed!</h3>
+      <p className="text-muted-foreground mb-4">
+        Check your email for the calendar invite.
+      </p>
+      <Button onClick={handleReset} variant="outline">Book Another Meeting</Button>
     </div>
   );
 }
