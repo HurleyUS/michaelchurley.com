@@ -6,6 +6,7 @@ export default defineSchema({
   bookings: defineTable({
     name: v.string(),
     email: v.string(),
+    phone: v.optional(v.string()),
     message: v.string(),
     date: v.string(), // YYYY-MM-DD format
     timeSlot: v.string(), // HH:MM format

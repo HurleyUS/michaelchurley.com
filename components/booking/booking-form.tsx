@@ -59,6 +59,7 @@ export default function BookingForm() {
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -101,6 +102,7 @@ export default function BookingForm() {
       await createBooking({
         name: name.trim(),
         email: email.trim(),
+        phone: phone.trim(),
         message: message.trim(),
         date: formatDate(selectedDate),
         timeSlot: selectedTime,
@@ -113,6 +115,7 @@ export default function BookingForm() {
         body: JSON.stringify({
           name: name.trim(),
           email: email.trim(),
+          phone: phone.trim(),
           message: message.trim(),
           date: formatDate(selectedDate),
           timeSlot: selectedTime,
@@ -144,6 +147,7 @@ export default function BookingForm() {
     setSelectedTime(null);
     setName("");
     setEmail("");
+    setPhone("");
     setMessage("");
     setError(null);
   };
@@ -262,6 +266,18 @@ export default function BookingForm() {
               />
             </div>
             <div>
+              <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                Phone
+              </label>
+              <Input
+                id="phone"
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="(555) 555-5555"
+              />
+            </div>
+            <div>
               <label htmlFor="message" className="block text-sm font-medium mb-1">
                 Message (optional)
               </label>
@@ -317,6 +333,12 @@ export default function BookingForm() {
               <span className="text-muted-foreground">Email</span>
               <span className="font-medium">{email}</span>
             </div>
+            {phone && (
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Phone</span>
+                <span className="font-medium">{phone}</span>
+              </div>
+            )}
             {message && (
               <div>
                 <span className="text-muted-foreground">Message</span>

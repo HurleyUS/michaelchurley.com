@@ -13,6 +13,8 @@ import {
   PiListLight,
   PiXLight,
   PiXLogoLight,
+  PiBriefcaseLight,
+  PiArticleLight,
 } from "react-icons/pi";
 import Link from "next/link";
 import { Button } from "./button";
@@ -48,6 +50,23 @@ export default function MenuTop() {
                   <PiXLight />
                 </SheetTrigger>
               </div>
+              
+              {/* Navigation Links */}
+              <div className="flex flex-col gap-2 p-md">
+                <Link href="/portfolio" className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg">
+                  <PiBriefcaseLight />
+                  <span>Portfolio</span>
+                </Link>
+                <Link href="/blog" className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg">
+                  <PiArticleLight />
+                  <span>Blog</span>
+                </Link>
+                <Link href="/book" className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg">
+                  <PiCalendarPlusLight />
+                  <span>Book a Meeting</span>
+                </Link>
+              </div>
+
               <div className="flex items-center justify-between gap-md p-md w-full">
                 <Link
                   href="mailto:michaelhurley.pj@gmail.com"
@@ -57,27 +76,30 @@ export default function MenuTop() {
                     Email Me
                   </Button>
                 </Link>
-                <Link href="tel:+18283073591" className="w-full">
+                <Link href="tel:+18285931935" className="w-full">
                   <Button variant="secondary" className="font-black w-full">
                     Call or Text Me
                   </Button>
                 </Link>
               </div>
-
-              <iframe
-                src="https://koalendar.com/e/hire-michael-hurley?embed=true"
-                width="100%"
-                height="800px"
-                frameBorder="0"
-              ></iframe>
             </div>
           </SheetContent>
         </Sheet>
       </div>
 
-      <div className="hidden md:flex fkex-row grow items-center justify-end gap-md text-xs">
+      <div className="hidden md:flex flex-row grow items-center justify-end gap-md text-xs">
         <NavigationMenu>
           <NavigationMenuList>
+            {/* Navigation Links */}
+            <div className="flex items-center gap-4 mr-4">
+              <Link href="/portfolio" className="text-sm hover:text-primary transition-colors">
+                Portfolio
+              </Link>
+              <Link href="/blog" className="text-sm hover:text-primary transition-colors">
+                Blog
+              </Link>
+            </div>
+            
             <div className="flex items-center justify-between gap-md px-md w-full">
               <Link href="https://github.com/michaelmonetized">
                 <PiGithubLogoLight />
@@ -104,15 +126,12 @@ export default function MenuTop() {
                   <span className="text-[14px]">Email Me</span>
                 </Button>
               </Link>
-              <Link href="tel:+18283073591" className="text-xs">
+              <Link href="tel:+18285931935" className="text-xs">
                 <Button size="sm" variant="secondary" className="text-xs">
-                  <span className="text-[14px]">Call or Text Me</span>
+                  <span className="text-[14px]">Call or Text</span>
                 </Button>
               </Link>
-              <Link
-                href="https://koalendar.com/e/hire-michael-hurley"
-                className="block"
-              >
+              <Link href="/book" className="block">
                 <Button size="icon">
                   <PiCalendarPlusLight />
                 </Button>

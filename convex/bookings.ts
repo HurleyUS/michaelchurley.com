@@ -5,6 +5,7 @@ export const create = mutation({
   args: {
     name: v.string(),
     email: v.string(),
+    phone: v.optional(v.string()),
     message: v.string(),
     date: v.string(), // ISO date string YYYY-MM-DD
     timeSlot: v.string(), // HH:MM format
@@ -15,6 +16,7 @@ export const create = mutation({
     return await ctx.db.insert("bookings", {
       name: args.name,
       email: args.email,
+      phone: args.phone,
       message: args.message,
       date: args.date,
       timeSlot: args.timeSlot,
