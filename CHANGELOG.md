@@ -13,7 +13,7 @@ All notable changes to this project will be documented in this file.
 - **Clerk Authentication**
   - Added Clerk for authentication
   - Protected /manage routes for admin-only access
-  - Email: michaelmonetized@gmail.com has admin access
+  - Admin access configured for authorized users
   - Google-only sign-in support ready (configure in Clerk dashboard)
 
 - **Admin Dashboard (/manage)**

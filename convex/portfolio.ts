@@ -1,5 +1,6 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
+import { requireAdmin } from "./lib/auth";
 
 // Public queries
 export const list = query({
@@ -45,7 +46,25 @@ export const getById = query({
   },
 });
 
-// Admin mutations
+// Check if slug is unique (excluding a specific item ID for updates)
+export const isSlugUnique = query({
+  args: {
+    slug: v.string(),
+    excludeId: v.optional(v.id("portfolioItems")),
+  },
+  handler: async (ctx, args) => {
+    const existing = await ctx.db
+      .query("portfolioItems")
+      .withIndex("by_slug", (q) => q.eq("slug", args.slug))
+      .first();
+    
+    if (!existing) return true;
+    if (args.excludeId && existing._id === args.excludeId) return true;
+    return false;
+  },
+});
+
+// Admin mutations - require authentication
 export const create = mutation({
   args: {
     title: v.string(),
@@ -61,6 +80,19 @@ export const create = mutation({
     published: v.boolean(),
   },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
+    
+    // Check slug uniqueness
+    const existingSlug = await ctx.db
+      .query("portfolioItems")
+      .withIndex("by_slug", (q) => q.eq("slug", args.slug))
+      .first();
+    
+    if (existingSlug) {
+      throw new Error("A portfolio item with this slug already exists");
+    }
+    
     const now = Date.now();
     return await ctx.db.insert("portfolioItems", {
       ...args,
@@ -87,9 +119,24 @@ export const update = mutation({
     published: v.optional(v.boolean()),
   },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
+    
     const { id, ...updates } = args;
     const existing = await ctx.db.get(id);
     if (!existing) throw new Error("Portfolio item not found");
+    
+    // Check slug uniqueness if changing slug
+    if (updates.slug && updates.slug !== existing.slug) {
+      const existingSlug = await ctx.db
+        .query("portfolioItems")
+        .withIndex("by_slug", (q) => q.eq("slug", updates.slug!))
+        .first();
+      
+      if (existingSlug) {
+        throw new Error("A portfolio item with this slug already exists");
+      }
+    }
     
     const now = Date.now();
     const updateData: Record<string, unknown> = {
@@ -110,6 +157,8 @@ export const update = mutation({
 export const remove = mutation({
   args: { id: v.id("portfolioItems") },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
     await ctx.db.delete(args.id);
   },
 });

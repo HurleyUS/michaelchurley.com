@@ -4,12 +4,20 @@ export const dynamic = "force-dynamic";
 
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 
 export default function BlogPage() {
-  const blogPosts = useQuery(api.blog.list, { onlyPublished: true });
+  const searchParams = useSearchParams();
+  const selectedTag = searchParams.get("tag");
+  
+  // Pass the tag to filter posts server-side
+  const blogPosts = useQuery(api.blog.list, { 
+    onlyPublished: true,
+    tag: selectedTag || undefined,
+  });
   const tags = useQuery(api.blog.getAllTags);
 
   const formatDate = (timestamp: number | undefined) => {
@@ -39,15 +47,44 @@ export default function BlogPage() {
         {/* Tags */}
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap justify-center gap-2">
+            {/* All posts link */}
+            <Link
+              href="/blog"
+              className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                !selectedTag 
+                  ? "bg-primary text-primary-foreground" 
+                  : "bg-muted hover:bg-muted/80"
+              }`}
+            >
+              All
+            </Link>
             {tags.map((tag) => (
               <Link
                 key={tag}
                 href={`/blog?tag=${encodeURIComponent(tag)}`}
-                className="px-3 py-1 bg-muted rounded-full text-sm hover:bg-muted/80 transition-colors"
+                className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                  selectedTag === tag 
+                    ? "bg-primary text-primary-foreground" 
+                    : "bg-muted hover:bg-muted/80"
+                }`}
               >
                 {tag}
               </Link>
             ))}
+          </div>
+        )}
+
+        {/* Show active filter */}
+        {selectedTag && (
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-muted-foreground">Showing posts tagged:</span>
+            <span className="font-medium">{selectedTag}</span>
+            <Link 
+              href="/blog" 
+              className="text-xs text-muted-foreground hover:text-foreground"
+            >
+              (clear)
+            </Link>
           </div>
         )}
 
@@ -57,7 +94,11 @@ export default function BlogPage() {
           </div>
         ) : blogPosts.length === 0 ? (
           <div className="text-center py-12 text-muted-foreground">
-            <p>No blog posts yet. Check back soon!</p>
+            {selectedTag ? (
+              <p>No posts found with tag &quot;{selectedTag}&quot;.</p>
+            ) : (
+              <p>No blog posts yet. Check back soon!</p>
+            )}
           </div>
         ) : (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -1,5 +1,6 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
+import { requireAdmin, getAuthenticatedUser } from "./lib/auth";
 
 // Public queries
 export const listForItem = query({
@@ -8,21 +9,16 @@ export const listForItem = query({
     itemId: v.string(),
   },
   handler: async (ctx, args) => {
-    // Get visible comments for an item
+    // Use index for efficient querying
     const comments = await ctx.db
       .query("comments")
-      .filter((q) => 
-        q.and(
-          q.eq(q.field("itemType"), args.itemType),
-          q.eq(q.field("visible"), true)
-        )
+      .withIndex("by_item", (q) => 
+        q.eq("itemType", args.itemType).eq("itemId", args.itemId)
       )
+      .filter((q) => q.eq(q.field("visible"), true))
       .collect();
     
-    // Filter by itemId (stored as string for flexibility)
-    return comments
-      .filter((c) => c.itemId.toString() === args.itemId)
-      .sort((a, b) => a.createdAt - b.createdAt);
+    return comments.sort((a, b) => a.createdAt - b.createdAt);
   },
 });
 
@@ -38,6 +34,16 @@ export const createPending = mutation({
   handler: async (ctx, args) => {
     const now = Date.now();
     const expiresAt = now + 24 * 60 * 60 * 1000; // 24 hours
+    
+    // Delete any existing pending comment for this session
+    const existing = await ctx.db
+      .query("pendingComments")
+      .withIndex("by_session", (q) => q.eq("sessionId", args.sessionId))
+      .first();
+    
+    if (existing) {
+      await ctx.db.delete(existing._id);
+    }
     
     return await ctx.db.insert("pendingComments", {
       ...args,
@@ -59,15 +65,19 @@ export const getPendingBySession = query({
 });
 
 // Verify and publish comment (after sign-in)
+// Uses authenticated user identity instead of trusting client input
 export const verifyAndPublish = mutation({
   args: {
     sessionId: v.string(),
-    clerkId: v.string(),
-    email: v.string(),
-    name: v.optional(v.string()),
-    image: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
+    // Get authenticated user from Clerk
+    const user = await getAuthenticatedUser(ctx);
+    
+    if (!user || !user.email) {
+      return { success: false, error: "Authentication required" };
+    }
+    
     // Find pending comment
     const pending = await ctx.db
       .query("pendingComments")
@@ -75,6 +85,7 @@ export const verifyAndPublish = mutation({
       .first();
     
     if (!pending) {
+      // Not necessarily an error - might already be published
       return { success: false, error: "No pending comment found" };
     }
     
@@ -84,23 +95,21 @@ export const verifyAndPublish = mutation({
       return { success: false, error: "Comment expired" };
     }
     
-    // Verify email matches
-    if (pending.email.toLowerCase() !== args.email.toLowerCase()) {
-      return { success: false, error: "Email mismatch" };
+    // Verify email matches (case insensitive)
+    if (pending.email.toLowerCase() !== user.email.toLowerCase()) {
+      return { success: false, error: "Email mismatch - please sign in with the same email you entered" };
     }
     
     const now = Date.now();
     
-    // Create the verified comment
-    // Note: We're storing itemId as string but need to cast for the schema
-    // This is a workaround since itemId could be either blogPosts or portfolioItems
+    // Create the verified comment with server-verified user data
     await ctx.db.insert("comments", {
       itemType: pending.itemType,
-      itemId: pending.itemId as any, // Type workaround
-      authorEmail: args.email,
-      authorName: args.name,
-      authorClerkId: args.clerkId,
-      authorImage: args.image,
+      itemId: pending.itemId,
+      authorEmail: user.email,
+      authorName: user.name,
+      authorClerkId: user.userId,
+      authorImage: user.image,
       content: pending.content,
       verified: true,
       visible: true,
@@ -140,6 +149,9 @@ export const listAll = query({
 export const toggleVisibility = mutation({
   args: { id: v.id("comments") },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
+    
     const comment = await ctx.db.get(args.id);
     if (!comment) throw new Error("Comment not found");
     
@@ -154,6 +166,8 @@ export const toggleVisibility = mutation({
 export const remove = mutation({
   args: { id: v.id("comments") },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
     await ctx.db.delete(args.id);
   },
 });

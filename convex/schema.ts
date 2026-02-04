@@ -67,7 +67,7 @@ export default defineSchema({
   comments: defineTable({
     // Reference to parent item
     itemType: v.union(v.literal("blog"), v.literal("portfolio")),
-    itemId: v.id("blogPosts"), // Will actually be union but convex needs concrete type
+    itemId: v.string(), // String ID for flexibility across blog/portfolio
     
     // Author info
     authorEmail: v.string(), // Captured before sign-in
@@ -85,7 +85,7 @@ export default defineSchema({
     createdAt: v.number(),
     updatedAt: v.number(),
   })
-    .index("by_item", ["itemType", "itemId", "visible"])
+    .index("by_item", ["itemType", "itemId"])
     .index("by_author_email", ["authorEmail"])
     .index("by_clerk_id", ["authorClerkId"]),
 

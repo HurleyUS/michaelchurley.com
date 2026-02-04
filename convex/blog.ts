@@ -1,5 +1,6 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
+import { requireAdmin } from "./lib/auth";
 
 // Public queries
 export const list = query({
@@ -64,7 +65,25 @@ export const getAllTags = query({
   },
 });
 
-// Admin mutations
+// Check if slug is unique (excluding a specific post ID for updates)
+export const isSlugUnique = query({
+  args: {
+    slug: v.string(),
+    excludeId: v.optional(v.id("blogPosts")),
+  },
+  handler: async (ctx, args) => {
+    const existing = await ctx.db
+      .query("blogPosts")
+      .withIndex("by_slug", (q) => q.eq("slug", args.slug))
+      .first();
+    
+    if (!existing) return true;
+    if (args.excludeId && existing._id === args.excludeId) return true;
+    return false;
+  },
+});
+
+// Admin mutations - require authentication
 export const create = mutation({
   args: {
     title: v.string(),
@@ -78,6 +97,19 @@ export const create = mutation({
     readingTime: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
+    
+    // Check slug uniqueness
+    const existingSlug = await ctx.db
+      .query("blogPosts")
+      .withIndex("by_slug", (q) => q.eq("slug", args.slug))
+      .first();
+    
+    if (existingSlug) {
+      throw new Error("A blog post with this slug already exists");
+    }
+    
     const now = Date.now();
     
     // Calculate reading time if not provided (avg 200 words per minute)
@@ -107,9 +139,24 @@ export const update = mutation({
     readingTime: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
+    
     const { id, ...updates } = args;
     const existing = await ctx.db.get(id);
     if (!existing) throw new Error("Blog post not found");
+    
+    // Check slug uniqueness if changing slug
+    if (updates.slug && updates.slug !== existing.slug) {
+      const existingSlug = await ctx.db
+        .query("blogPosts")
+        .withIndex("by_slug", (q) => q.eq("slug", updates.slug!))
+        .first();
+      
+      if (existingSlug) {
+        throw new Error("A blog post with this slug already exists");
+      }
+    }
     
     const now = Date.now();
     const updateData: Record<string, unknown> = {
@@ -117,9 +164,10 @@ export const update = mutation({
       updatedAt: now,
     };
     
-    // Recalculate reading time if content changed
-    if (updates.content && !updates.readingTime) {
-      updateData.readingTime = Math.ceil(updates.content.split(/\s+/).length / 200);
+    // Recalculate reading time if content changed (including empty content)
+    if ("content" in updates && !updates.readingTime) {
+      const content = updates.content ?? "";
+      updateData.readingTime = Math.ceil(content.split(/\s+/).length / 200);
     }
     
     // Set publishedAt if publishing for the first time
@@ -135,6 +183,8 @@ export const update = mutation({
 export const remove = mutation({
   args: { id: v.id("blogPosts") },
   handler: async (ctx, args) => {
+    // Require admin authentication
+    await requireAdmin(ctx);
     await ctx.db.delete(args.id);
   },
 });

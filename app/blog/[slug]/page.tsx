@@ -7,6 +7,7 @@ import { api } from "@/convex/_generated/api";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 import CommentSection from "@/components/comments/comment-section";
 
@@ -108,30 +109,9 @@ export default function BlogPostPage() {
           </div>
         </div>
 
-        {/* Content */}
+        {/* Content - using react-markdown for proper rendering */}
         <article className="prose dark:prose-invert max-w-none">
-          {/* Simple markdown rendering - for a production app, use react-markdown */}
-          {post.content.split("\n").map((line, i) => {
-            if (line.startsWith("# ")) {
-              return <h1 key={i}>{line.slice(2)}</h1>;
-            }
-            if (line.startsWith("## ")) {
-              return <h2 key={i}>{line.slice(3)}</h2>;
-            }
-            if (line.startsWith("### ")) {
-              return <h3 key={i}>{line.slice(4)}</h3>;
-            }
-            if (line.startsWith("- ")) {
-              return <li key={i}>{line.slice(2)}</li>;
-            }
-            if (line.startsWith("```")) {
-              return <pre key={i}><code>{line.slice(3)}</code></pre>;
-            }
-            if (line.trim() === "") {
-              return <br key={i} />;
-            }
-            return <p key={i}>{line}</p>;
-          })}
+          <ReactMarkdown>{post.content}</ReactMarkdown>
         </article>
 
         {/* Comments */}

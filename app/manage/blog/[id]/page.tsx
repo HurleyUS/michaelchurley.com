@@ -12,9 +12,15 @@ import Link from "next/link";
 export default function EditBlogPost() {
   const router = useRouter();
   const params = useParams();
-  const id = params.id as Id<"blogPosts">;
   
-  const post = useQuery(api.blog.getById, { id });
+  // Get the raw ID - handle array case from catch-all routes
+  const rawId = Array.isArray(params.id) ? params.id[0] : params.id;
+  
+  // Cast to Convex ID type (validation happens via the query)
+  const id = (rawId || "") as Id<"blogPosts">;
+  
+  // All hooks must be called unconditionally
+  const post = useQuery(api.blog.getById, rawId ? { id } : "skip");
   const updatePost = useMutation(api.blog.update);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -69,6 +75,18 @@ export default function EditBlogPost() {
       setIsSubmitting(false);
     }
   };
+
+  // Handle invalid ID after hooks
+  if (!rawId) {
+    return (
+      <div className="text-center py-12">
+        <h1 className="text-2xl font-bold">Invalid Post ID</h1>
+        <Link href="/manage/blog" className="text-primary hover:underline">
+          Back to Blog
+        </Link>
+      </div>
+    );
+  }
 
   if (post === undefined) {
     return (

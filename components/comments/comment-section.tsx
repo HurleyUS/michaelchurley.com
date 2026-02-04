@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useUser, SignInButton } from "@clerk/nextjs";
 import { useQuery, useMutation } from "convex/react";
@@ -31,6 +31,9 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
   const [showSignInPrompt, setShowSignInPrompt] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  
+  // Ref to prevent double-calling verifyAndPublish
+  const isPublishing = useRef(false);
 
   // Convex queries and mutations
   const comments = useQuery(api.comments.listForItem, {
@@ -45,26 +48,33 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
 
   // When user signs in, check for pending comment and verify
   useEffect(() => {
-    if (isSignedIn && user && pendingComment) {
-      const userEmail = user.primaryEmailAddress?.emailAddress;
-      if (userEmail) {
-        verifyAndPublish({
-          sessionId: getSessionId(),
-          clerkId: user.id,
-          email: userEmail,
-          name: user.fullName || user.firstName || undefined,
-          image: user.imageUrl || undefined,
-        }).then((result) => {
+    if (isSignedIn && user && pendingComment && !isPublishing.current) {
+      // Mark as publishing to prevent race condition
+      isPublishing.current = true;
+      
+      verifyAndPublish({
+        sessionId: getSessionId(),
+      })
+        .then((result) => {
           if (result.success) {
             setSuccess("Your comment has been published!");
             setShowSignInPrompt(false);
             setContent("");
             setEmail("");
-          } else {
+          } else if (result.error !== "No pending comment found") {
+            // Only show error if it's not just "already published"
             setError(result.error || "Failed to publish comment");
           }
+        })
+        .catch((err) => {
+          setError(err instanceof Error ? err.message : "Failed to publish comment");
+        })
+        .finally(() => {
+          // Reset after a delay to handle any delayed reactive updates
+          setTimeout(() => {
+            isPublishing.current = false;
+          }, 1000);
         });
-      }
     }
   }, [isSignedIn, user, pendingComment, verifyAndPublish]);
 
@@ -83,7 +93,13 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
           return;
         }
 
-        // Directly create and verify the comment
+        // Prevent double submission
+        if (isPublishing.current) {
+          return;
+        }
+        isPublishing.current = true;
+
+        // Create pending comment
         await createPending({
           itemType,
           itemId: itemId.toString(),
@@ -92,16 +108,19 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
           sessionId: getSessionId(),
         });
 
-        await verifyAndPublish({
+        // Directly verify and publish (user already authenticated)
+        const result = await verifyAndPublish({
           sessionId: getSessionId(),
-          clerkId: user.id,
-          email: userEmail,
-          name: user.fullName || user.firstName || undefined,
-          image: user.imageUrl || undefined,
         });
 
-        setSuccess("Your comment has been published!");
-        setContent("");
+        isPublishing.current = false;
+
+        if (result.success) {
+          setSuccess("Your comment has been published!");
+          setContent("");
+        } else {
+          setError(result.error || "Failed to publish comment");
+        }
       } else {
         // Not signed in - capture email and comment, then prompt sign-in
         if (!email || !content) {
@@ -123,6 +142,7 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
         setSuccess("Please sign in with Google to publish your comment");
       }
     } catch (err) {
+      isPublishing.current = false;
       setError(err instanceof Error ? err.message : "Failed to submit comment");
     } finally {
       setIsSubmitting(false);

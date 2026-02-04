@@ -22,12 +22,12 @@ export default function RootLayout({
             {"Skip to main content"}
           </a>
           <Header />
-          <section
-            id="top"
+          <main
+            id="main"
             className="flex grow flex-col items-stretch justify-start"
           >
             {children}
-          </section>
+          </main>
           <Footer />
         </ConvexClientProvider>
       </body>
