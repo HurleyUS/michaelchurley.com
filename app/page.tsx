@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
 import Image from "next/image";
 import Link from "next/link";
-import { PiCalendarPlusLight, PiEnvelopeSimple } from "react-icons/pi";
-import { ContactForm } from "@/components/contact/contact-form";
+import { PiCalendarPlusLight } from "react-icons/pi";
+import BookingForm from "@/components/booking/booking-form";
+import BookingModal from "@/components/booking/booking-modal";
 
 export default function Home() {
   return (
@@ -58,14 +59,7 @@ export default function Home() {
                     className="block absolute left-1/2 top-1/2 coin z-0"
                   />
                 </div>
-                <Link
-                  href="/book"
-                  className="block"
-                >
-                  <Button size="icon">
-                    <PiCalendarPlusLight />
-                  </Button>
-                </Link>
+                <BookingModal iconOnly />
               </div>
             </div>
           </div>
@@ -483,7 +477,7 @@ export default function Home() {
         </ContainerBoxedCenter>
       </section>
       {/* Contact Form Section */}
-      <section id="contact" className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl">
+      <section id="book" className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl">
         <ContainerBoxedCenter
           props={{
             className:
@@ -496,16 +490,16 @@ export default function Home() {
         >
           <div className="flex flex-col items-center justify-start text-xs sm:text-center gap-md grow w-full">
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10">
-              <PiEnvelopeSimple className="w-8 h-8 text-primary" />
+              <PiCalendarPlusLight className="w-8 h-8 text-primary" />
             </div>
-            <h2 className="font-black">Get In Touch</h2>
+            <h2 className="font-black">Book a Meeting</h2>
             <p className="text-muted-foreground max-w-lg">
-              Have a project in mind or want to discuss how I can help your business? 
-              Send me a message and I&apos;ll get back to you within 24-48 hours.
+              Schedule a 30-minute call to discuss business opportunities, 
+              technology projects, or collaboration ideas.
             </p>
           </div>
           <div className="w-full bg-background rounded-lg p-lg border border-border shadow-sm">
-            <ContactForm />
+            <BookingForm />
           </div>
         </ContainerBoxedCenter>
       </section>

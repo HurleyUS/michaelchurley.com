@@ -1,0 +1,36 @@
+"use client";
+
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { PiCalendarPlusLight } from "react-icons/pi";
+import BookingForm from "./booking-form";
+import { ReactNode } from "react";
+
+interface BookingModalProps {
+  trigger?: ReactNode;
+  iconOnly?: boolean;
+}
+
+export default function BookingModal({ trigger, iconOnly }: BookingModalProps) {
+  return (
+    <Dialog>
+      <DialogTrigger asChild>
+        {trigger || (
+          iconOnly ? (
+            <Button size="icon">
+              <PiCalendarPlusLight />
+            </Button>
+          ) : (
+            <Button>
+              <PiCalendarPlusLight className="mr-2" />
+              Book a Meeting
+            </Button>
+          )
+        )}
+      </DialogTrigger>
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <BookingForm />
+      </DialogContent>
+    </Dialog>
+  );
+}

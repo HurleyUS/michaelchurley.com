@@ -1,3 +1,5 @@
+"use client";
+
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -6,7 +8,6 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import {
-  PiCalendarPlusLight,
   PiGithubLogoLight,
   PiInstagramLogoLight,
   PiLinkedinLogoLight,
@@ -15,9 +16,11 @@ import {
   PiXLogoLight,
   PiBriefcaseLight,
   PiArticleLight,
+  PiCalendarPlusLight,
 } from "react-icons/pi";
 import Link from "next/link";
 import { Button } from "./button";
+import BookingModal from "@/components/booking/booking-modal";
 
 export default function MenuTop() {
   return (
@@ -61,10 +64,12 @@ export default function MenuTop() {
                   <PiArticleLight />
                   <span>Blog</span>
                 </Link>
-                <Link href="/book" className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg">
-                  <PiCalendarPlusLight />
-                  <span>Book a Meeting</span>
-                </Link>
+                <BookingModal trigger={
+                  <button className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg w-full text-left">
+                    <PiCalendarPlusLight />
+                    <span>Book a Meeting</span>
+                  </button>
+                } />
               </div>
 
               <div className="flex items-center justify-between gap-md p-md w-full">
@@ -131,11 +136,7 @@ export default function MenuTop() {
                   <span className="text-[14px]">Call or Text</span>
                 </Button>
               </Link>
-              <Link href="/book" className="block">
-                <Button size="icon">
-                  <PiCalendarPlusLight />
-                </Button>
-              </Link>
+              <BookingModal iconOnly />
             </div>
           </NavigationMenuList>
         </NavigationMenu>
