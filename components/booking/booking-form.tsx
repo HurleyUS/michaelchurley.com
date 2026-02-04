@@ -256,9 +256,7 @@ export default function BookingForm() {
         <div className="grid grid-cols-3 gap-3">
           {visibleDays.map((date) => {
             const slots = getAvailableSlotsForDate(date, now);
-            const displaySlots = slots.slice(0, 5);
-            const emptySlots = Math.max(0, 5 - displaySlots.length);
-            const hasMore = slots.length > 5;
+            const emptySlots = Math.max(0, 5 - slots.length);
 
             return (
               <div key={formatDate(date)} className="flex flex-col">
