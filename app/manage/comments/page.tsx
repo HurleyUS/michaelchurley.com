@@ -1,5 +1,8 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
+import Image from "next/image";
 import { useQuery, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
@@ -56,10 +59,13 @@ export default function ManageComments() {
               <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
                   {comment.authorImage ? (
-                    <img
+                    <Image
                       src={comment.authorImage}
                       alt={comment.authorName || "User"}
-                      className="w-10 h-10 rounded-full"
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      unoptimized
                     />
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">

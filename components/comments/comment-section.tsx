@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useUser, SignInButton } from "@clerk/nextjs";
 import { useQuery, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
@@ -23,7 +24,7 @@ function getSessionId() {
 }
 
 export default function CommentSection({ itemType, itemId }: CommentSectionProps) {
-  const { user, isLoaded, isSignedIn } = useUser();
+  const { user, isSignedIn } = useUser();
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -228,10 +229,13 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
             <div key={comment._id} className="rounded-lg border bg-card p-4">
               <div className="flex items-start gap-3">
                 {comment.authorImage ? (
-                  <img
+                  <Image
                     src={comment.authorImage}
                     alt={comment.authorName || "User"}
-                    className="w-10 h-10 rounded-full"
+                    width={40}
+                    height={40}
+                    className="rounded-full"
+                    unoptimized
                   />
                 ) : (
                   <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">

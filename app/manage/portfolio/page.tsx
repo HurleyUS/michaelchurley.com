@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+export const dynamic = "force-dynamic";
+
 import { useQuery, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
@@ -110,7 +111,7 @@ export default function ManagePortfolio() {
                       <Link
                         href={`/portfolio/${item.slug}`}
                         className="text-sm text-muted-foreground hover:underline"
-                        target="_blank"
+                        target="_blank" rel="noopener noreferrer"
                       >
                         View
                       </Link>

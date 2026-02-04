@@ -2,6 +2,26 @@ import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
 export default defineSchema({
+  // Bookings
+  bookings: defineTable({
+    name: v.string(),
+    email: v.string(),
+    message: v.string(),
+    date: v.string(), // YYYY-MM-DD format
+    timeSlot: v.string(), // HH:MM format
+    status: v.union(
+      v.literal("pending"),
+      v.literal("confirmed"),
+      v.literal("cancelled"),
+      v.literal("completed")
+    ),
+    createdAt: v.number(),
+    updatedAt: v.number(),
+  })
+    .index("by_date", ["date"])
+    .index("by_status", ["status"])
+    .index("by_email", ["email"]),
+
   // Portfolio items
   portfolioItems: defineTable({
     title: v.string(),

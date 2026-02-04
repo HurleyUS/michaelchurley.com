@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 import Zaxbys from "@/components/dynamic/zaxbys";
 import { Button } from "@/components/ui/button";
@@ -56,7 +58,7 @@ export default function Home() {
                   />
                 </div>
                 <Link
-                  href="https://koalendar.com/e/hire-michael-hurley"
+                  href="/book"
                   className="block"
                 >
                   <Button size="icon">
@@ -492,19 +494,18 @@ export default function Home() {
         >
           <div className="flex flex-col items-center justify-start text-xs sm:text-center gap-md grow w-full">
             <h2 className="font-black">Ready To Bring Me On Board?</h2>
-            <iframe
-              src="https://koalendar.com/e/hire-michael-hurley?embed=true"
-              width="100%"
-              height="800px"
-              frameBorder="0"
-            ></iframe>
+            <p className="text-muted-foreground max-w-lg">
+              Schedule a 30-minute call to discuss your project, business needs, 
+              or collaboration opportunities.
+            </p>
             <div className="flex flex-col flex-wrap wrap sm:flex-row items-center justify-center p-md text-xs grow w-full gap-md">
               <Link
-                href="https://koalendar.com/e/hire-michael-hurley"
-                className="block"
+                href="/book"
+                className="block border-gradient-animated"
               >
-                <Button size="icon">
-                  <PiCalendarPlusLight />
+                <Button size="lg" className="gap-2">
+                  <PiCalendarPlusLight className="w-5 h-5" />
+                  Book a Meeting
                 </Button>
               </Link>
               <Link
