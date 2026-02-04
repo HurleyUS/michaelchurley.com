@@ -1,0 +1,73 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]
+
+### Added
+- **Convex Backend Integration**
+  - Set up Convex with schema for portfolio items, blog posts, and comments
+  - Created CRUD operations for all content types
+  - Deployed to Convex cloud (blessed-panther-485)
+
+- **Clerk Authentication**
+  - Added Clerk for authentication
+  - Protected /manage routes for admin-only access
+  - Email: michaelmonetized@gmail.com has admin access
+  - Google-only sign-in support ready (configure in Clerk dashboard)
+
+- **Admin Dashboard (/manage)**
+  - Dashboard overview with stats
+  - Portfolio management (CRUD)
+  - Blog management (CRUD)
+  - Comments moderation (show/hide/delete)
+
+- **Portfolio System**
+  - Public portfolio listing page (/portfolio)
+  - Individual portfolio item pages (/portfolio/[slug])
+  - Support for: title, description, content (markdown), cover image, technologies, project URL, GitHub URL
+  - Featured items support
+  - Draft/Published status
+
+- **Blog System**
+  - Public blog listing page (/blog)
+  - Individual blog post pages (/blog/[slug])
+  - Support for: title, excerpt, content (markdown), cover image, tags
+  - Auto-calculated reading time
+  - Featured posts support
+  - Draft/Published status
+  - Tag-based filtering
+
+- **Comment System**
+  - Capture-before-signin flow for visitor comments
+  - Email capture before prompting sign-in
+  - Comments only visible after email verification via Google sign-in
+  - Admin moderation (show/hide/delete)
+  - Session-based pending comments (24hr expiry)
+
+### Technical Details
+- Convex schema with proper indexes for performance
+- ConvexClientProvider wrapping the app with ClerkProvider
+- Clerk middleware protecting /manage routes
+- Real-time updates via Convex subscriptions
+
+### Configuration Required
+1. Set up Clerk at https://dashboard.clerk.com
+2. Enable Google OAuth only
+3. Require email from Google sign-in
+4. Add keys to .env.local:
+   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`
+   - `CLERK_SECRET_KEY`
+
+### Dependencies Added
+- `convex` - Backend as a service
+- `@clerk/nextjs` - Authentication
+
+---
+
+## [0.1.0] - Initial Release
+
+- Basic Next.js site with homepage
+- Resume/portfolio content
+- Contact information
+- Responsive design with Tailwind CSS

@@ -13,13 +13,13 @@
 - [ ] Add social media links
 
 ### Portfolio Section
-- [ ] Create portfolio project cards
-- [ ] Add project detail pages
-- [ ] Include project screenshots/images
-- [ ] Write project descriptions
-- [ ] Add technologies used
-- [ ] Include links to live projects
-- [ ] Add GitHub links
+- [x] Create portfolio project cards
+- [x] Add project detail pages
+- [x] Include project screenshots/images (via Convex)
+- [x] Write project descriptions (via Convex)
+- [x] Add technologies used (via Convex)
+- [x] Include links to live projects (via Convex)
+- [x] Add GitHub links (via Convex)
 - [ ] Create case studies for key projects
 
 ### Contact & Engagement
@@ -35,18 +35,18 @@
 ## Medium Priority
 
 ### Blog Functionality
-- [ ] Design blog layout
-- [ ] Create blog listing page
-- [ ] Create blog post template
-- [ ] Set up markdown processing
-- [ ] Add blog post detail pages
+- [x] Design blog layout
+- [x] Create blog listing page
+- [x] Create blog post template
+- [x] Set up markdown processing (basic)
+- [x] Add blog post detail pages
 - [ ] Implement blog categories
-- [ ] Add blog tags
+- [x] Add blog tags (via Convex)
 - [ ] Create blog search
 - [ ] Add RSS feed
 - [ ] Implement code syntax highlighting
-- [ ] Add reading time estimates
-- [ ] Create blog post creation workflow
+- [x] Add reading time estimates (auto-calculated)
+- [x] Create blog post creation workflow (via /manage)
 
 ### Design & UX
 - [ ] Improve homepage design
@@ -95,11 +95,11 @@
 - [ ] Implement print styles
 
 ### CMS Integration (Future)
-- [ ] Evaluate CMS options
-- [ ] Set up chosen CMS
+- [x] Evaluate CMS options (Convex selected)
+- [x] Set up chosen CMS (Convex)
 - [ ] Migrate content
-- [ ] Create admin interface
-- [ ] Test content updates
+- [x] Create admin interface (/manage route)
+- [x] Test content updates
 - [ ] Document CMS usage
 
 ### Testing & Quality
