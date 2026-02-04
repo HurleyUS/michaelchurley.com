@@ -4,9 +4,101 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { ConvexClientProvider } from "@/components/providers/convex-client-provider";
 
+const siteUrl = "https://www.michaelchurley.com";
+const siteName = "Michael C. Hurley";
+const siteDescription =
+  "Business operations and technology professional with 20+ years of experience in management, sales, marketing, graphic design, and software development. Available for hire.";
+
 export const metadata: Metadata = {
-  title: "Michael C. Hurley",
-  description: "Hire Michael C. Hurley a professional business operator.",
+  // Basic metadata
+  title: {
+    default: "Michael C. Hurley | Business Operations & Technology Professional",
+    template: "%s | Michael C. Hurley",
+  },
+  description: siteDescription,
+  keywords: [
+    "Michael C. Hurley",
+    "business operations",
+    "technology consultant",
+    "software developer",
+    "full-stack developer",
+    "project manager",
+    "CTO",
+    "web development",
+    "React",
+    "Next.js",
+    "hire developer",
+    "freelance developer",
+    "North Carolina",
+  ],
+  authors: [{ name: "Michael C. Hurley", url: siteUrl }],
+  creator: "Michael C. Hurley",
+  publisher: "Michael C. Hurley",
+
+  // Canonical URL
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
+
+  // Open Graph
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: siteName,
+    title: "Michael C. Hurley | Business Operations & Technology Professional",
+    description: siteDescription,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Michael C. Hurley - Business Operations & Technology Professional",
+      },
+    ],
+  },
+
+  // Twitter Card
+  twitter: {
+    card: "summary_large_image",
+    title: "Michael C. Hurley | Business Operations & Technology Professional",
+    description: siteDescription,
+    images: ["/og-image.png"],
+    creator: "@michaelchurley",
+  },
+
+  // Robots
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  // Verification (add your verification codes here)
+  // verification: {
+  //   google: "your-google-verification-code",
+  //   yandex: "your-yandex-verification-code",
+  // },
+
+  // Icons
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+
+  // Manifest
+  manifest: "/manifest.webmanifest",
+
+  // Category
+  category: "technology",
 };
 
 export default function RootLayout({

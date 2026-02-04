@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import Logo from "@/components/ui/logo";
 import Image from "next/image";
 import Link from "next/link";
-import { PiCalendarPlusLight } from "react-icons/pi";
+import { PiCalendarPlusLight, PiEnvelopeSimple } from "react-icons/pi";
+import { ContactForm } from "@/components/contact/contact-form";
 
 export default function Home() {
   return (
@@ -481,6 +482,35 @@ export default function Home() {
           </div>
         </ContainerBoxedCenter>
       </section>
+      {/* Contact Form Section */}
+      <section id="contact" className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl">
+        <ContainerBoxedCenter
+          props={{
+            className:
+              "flex flex-col items-stretch lg:items-center justify-center gap-md p-md w-full max-w-[800px] mx-auto p-0",
+          }}
+          propsInner={{
+            className:
+              "flex flex-col items-stretch lg:items-center justify-center gap-lg grow w-full",
+          }}
+        >
+          <div className="flex flex-col items-center justify-start text-xs sm:text-center gap-md grow w-full">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10">
+              <PiEnvelopeSimple className="w-8 h-8 text-primary" />
+            </div>
+            <h2 className="font-black">Get In Touch</h2>
+            <p className="text-muted-foreground max-w-lg">
+              Have a project in mind or want to discuss how I can help your business? 
+              Send me a message and I&apos;ll get back to you within 24-48 hours.
+            </p>
+          </div>
+          <div className="w-full bg-background rounded-lg p-lg border border-border shadow-sm">
+            <ContactForm />
+          </div>
+        </ContainerBoxedCenter>
+      </section>
+
+      {/* CTA Section */}
       <section className="flex flex-col bg-Latte-Base dark:bg-Mocha-Base py-4xl">
         <ContainerBoxedCenter
           props={{
@@ -514,8 +544,8 @@ export default function Home() {
               >
                 <Button variant="secondary">Call or Text Me</Button>
               </Link>
-              <Link href="mailto:michaelhurley.pj@gmail.com" className="block">
-                <Button variant="outline">Email Me</Button>
+              <Link href="#contact" className="block">
+                <Button variant="outline">Send a Message</Button>
               </Link>
             </div>
           </div>
