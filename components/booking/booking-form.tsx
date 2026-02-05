@@ -103,18 +103,27 @@ export default function BookingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [startOffset, setStartOffset] = useState(0); // How many weekdays forward from today
-  const [now, setNow] = useState(() => new Date());
+  const [now, setNow] = useState<Date | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   const createBooking = useMutation(api.bookings.create);
 
+  // Set now on mount to avoid hydration mismatch
+  useEffect(() => {
+    setNow(new Date());
+    setMounted(true);
+  }, []);
+
   // Update "now" every minute to keep slots fresh
   useEffect(() => {
+    if (!mounted) return;
     const interval = setInterval(() => setNow(new Date()), 60000);
     return () => clearInterval(interval);
-  }, []);
+  }, [mounted]);
 
   // Get the start date based on offset
   const startDate = useMemo(() => {
+    if (!now) return new Date();
     const date = new Date(now);
     date.setHours(0, 0, 0, 0);
     
@@ -137,6 +146,7 @@ export default function BookingForm() {
 
   // Get 3 days to display
   const visibleDays = useMemo(() => {
+    if (!now) return [];
     return getWeekdaysWithSlots(startDate, 3, now);
   }, [startDate, now]);
 
@@ -222,6 +232,15 @@ export default function BookingForm() {
     setError(null);
     setStartOffset(0);
   };
+
+  // Loading state until client-side date is available
+  if (!mounted || !now) {
+    return (
+      <div className="w-full flex items-center justify-center py-12">
+        <div className="animate-pulse text-muted-foreground">Loading available times...</div>
+      </div>
+    );
+  }
 
   // Slot selection view
   if (step === "select") {
