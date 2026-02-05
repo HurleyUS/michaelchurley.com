@@ -5,21 +5,15 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "*.convex.cloud",
+        hostname: "**.convex.cloud",
       },
       {
         protocol: "https",
-        hostname: "*.convex.site",
-      },
-      {
-        protocol: "https",
-        hostname: "blessed-panther-485.convex.site",
-      },
-      {
-        protocol: "https",
-        hostname: "blessed-panther-485.convex.cloud",
+        hostname: "**.convex.site",
       },
     ],
+    // Also allow unoptimized for Convex storage
+    unoptimized: false,
   },
 };
 
