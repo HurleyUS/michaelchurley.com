@@ -5,7 +5,6 @@ export const dynamic = "force-dynamic";
 import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import Link from "next/link";
-import Image from "next/image";
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 
 export default function PortfolioPage() {
@@ -44,11 +43,11 @@ export default function PortfolioPage() {
               >
                 {item.coverImage && (
                   <div className="aspect-video relative overflow-hidden">
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={item.coverImage}
                       alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 )}

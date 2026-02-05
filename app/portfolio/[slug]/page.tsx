@@ -6,7 +6,6 @@ import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 import CommentSection from "@/components/comments/comment-section";
 
@@ -61,12 +60,11 @@ export default function PortfolioItemPage() {
         {/* Cover image */}
         {item.coverImage && (
           <div className="aspect-video relative rounded-lg overflow-hidden">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={item.coverImage}
               alt={item.title}
-              fill
-              className="object-cover"
-              priority
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         )}

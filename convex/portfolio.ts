@@ -224,9 +224,17 @@ export const clearCoverImage = mutation({
     const item = await ctx.db.get(args.id);
     if (!item) throw new Error("Portfolio item not found");
 
-    // Delete the old image from storage if it exists
+    // Delete the old image from storage if it's a storage ID (not a legacy URL)
     if (item.coverImage) {
-      await ctx.storage.delete(item.coverImage);
+      const isLegacyUrl = typeof item.coverImage === "string" && item.coverImage.startsWith("http");
+      if (!isLegacyUrl) {
+        try {
+          await ctx.storage.delete(item.coverImage as Id<"_storage">);
+        } catch (e) {
+          // Storage delete can fail if file doesn't exist, that's ok
+          console.log("Could not delete storage file:", e);
+        }
+      }
     }
 
     await ctx.db.patch(args.id, {
