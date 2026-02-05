@@ -394,6 +394,15 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  /* Custom fluid spacing */
+  --spacing-xs: clamp(0.66667rem, 0.6667rem + 0.3182vw, 0.881rem);
+  --spacing-sm: clamp(0.7619rem, 0.7619rem + 0.3182vw, 1rem);
+  --spacing-md: clamp(0.881rem, 1rem + 0.3182vw, 1.3333rem);
+  --spacing-lg: clamp(1.1072rem, 1.3333rem + 0.3182vw, 1.6667rem);
+  --spacing-xl: clamp(1.6667rem, 2rem + 0.3182vw, 2.6667rem);
+  --spacing-2xl: clamp(2rem, 2.6667rem + 0.3182vw, 3.3333rem);
+  --spacing-3xl: clamp(2.6667rem, 3.3333rem + 0.3182vw, 4rem);
 }
 
 /*
