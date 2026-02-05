@@ -1,6 +1,6 @@
 "use client";
 
-import { useUser, SignInButton, UserButton } from "@clerk/nextjs";
+import { useUser, SignInButton, SignOutButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
@@ -45,12 +45,19 @@ export default function ManageLayout({ children }: { children: ReactNode }) {
         <p className="text-sm text-muted-foreground">
           Signed in as: {userEmail}
         </p>
-        <Link
-          href="/"
-          className="px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90"
-        >
-          Go Home
-        </Link>
+        <div className="flex gap-3">
+          <Link
+            href="/"
+            className="px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90"
+          >
+            Go Home
+          </Link>
+          <SignOutButton>
+            <button className="px-4 py-2 bg-destructive text-destructive-foreground rounded-md hover:bg-destructive/90">
+              Sign Out
+            </button>
+          </SignOutButton>
+        </div>
       </div>
     );
   }
