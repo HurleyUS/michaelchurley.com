@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 export const dynamicRoute = "force-dynamic";
 
@@ -184,10 +185,10 @@ export default function NewBlogPost() {
           <div className="flex items-start gap-4">
             {form.coverImage ? (
               <div className="relative w-48 h-32 rounded-lg overflow-hidden border">
-                <img 
+                <Image 
                   src={form.coverImage} 
                   alt="Cover preview" 
-                  className="w-full h-full object-cover"
+                  fill className="object-cover"
                 />
                 <button
                   type="button"
