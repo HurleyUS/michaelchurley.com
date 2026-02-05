@@ -12,7 +12,7 @@ export default function PortfolioPage() {
   const portfolioItems = useQuery(api.portfolio.list, { onlyPublished: true });
 
   return (
-    <section className="flex flex-col py-4xl bg-gradient-to-b from-Base to-Crust">
+    <section className="flex flex-col py-4xl bg-linear-to-b from-Base to-Crust">
       <ContainerBoxedCenter
         propsInner={{
           className:

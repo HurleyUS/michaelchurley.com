@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
-import { Catppuccin } from "@/tailwind.config";
+
+// Catppuccin Mocha Base color (was imported from tailwind.config)
+const MOCHA_BASE = "#1e1e2e";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -9,8 +11,8 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: "https://www.michaelchurley.com",
     scope: "/",
     display: "standalone",
-    background_color: Catppuccin.Mocha.Base,
-    theme_color: Catppuccin.Mocha.Base,
+    background_color: MOCHA_BASE,
+    theme_color: MOCHA_BASE,
     icons: [
       {
         src: "favicon.ico",

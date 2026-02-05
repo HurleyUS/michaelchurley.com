@@ -80,7 +80,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-md w-full">
       {status === "error" && (
         <div className="flex items-center gap-sm p-md bg-red-50 dark:bg-red-950/20 rounded-lg border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300">
-          <PiWarningCircle className="w-5 h-5 flex-shrink-0" />
+          <PiWarningCircle className="w-5 h-5 shrink-0" />
           <p>{errorMessage}</p>
         </div>
       )}
