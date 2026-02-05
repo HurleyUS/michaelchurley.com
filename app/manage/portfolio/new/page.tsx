@@ -1,32 +1,49 @@
 "use client";
-import Image from "next/image";
 
 export const dynamic = "force-dynamic";
 
-import { useState, KeyboardEvent } from "react";
+import { useState, useRef, KeyboardEvent, DragEvent } from "react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { Id } from "@/convex/_generated/dataModel";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { PiX, PiImage, PiSpinner } from "react-icons/pi";
+import nextDynamic from "next/dynamic";
+import { PiX, PiImage, PiSpinner, PiUploadSimple } from "react-icons/pi";
+
+// Dynamically import Toast UI Editor (SSR not supported)
+const Editor = nextDynamic(
+  () => import("@toast-ui/react-editor").then((mod) => mod.Editor),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[400px] border rounded-lg animate-pulse bg-muted" />
+    ),
+  }
+);
+
+// Import Toast UI Editor CSS
+import "@toast-ui/editor/dist/toastui-editor.css";
+import "@/styles/toastui-dark.css";
 
 export default function NewPortfolioItem() {
   const router = useRouter();
   const createItem = useMutation(api.portfolio.create);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
   const getStorageUrl = useMutation(api.storage.getStorageUrl);
-  
+  const editorRef = useRef<any>(null);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [techInput, setTechInput] = useState("");
   const [technologies, setTechnologies] = useState<string[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
 
   const [form, setForm] = useState({
     title: "",
     slug: "",
     description: "",
-    content: "",
     coverImage: "",
     projectUrl: "",
     githubUrl: "",
@@ -85,10 +102,7 @@ export default function NewPortfolioItem() {
     }
   };
 
-  const handleCoverImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
+  const handleCoverImageUpload = async (file: File) => {
     try {
       const url = await handleImageUpload(file);
       setForm({ ...form, coverImage: url });
@@ -97,19 +111,70 @@ export default function NewPortfolioItem() {
     }
   };
 
+  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    await handleCoverImageUpload(file);
+  };
+
+  // Drag and drop handlers
+  const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = async (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      const file = files[0];
+      if (file.type.startsWith("image/")) {
+        await handleCoverImageUpload(file);
+      } else {
+        setError("Please drop an image file");
+      }
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
 
+    // Validate required fields
+    if (!form.title.trim()) {
+      setError("Title is required");
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!form.coverImage) {
+      setError("Cover image is required");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
+      // Get content from Toast UI editor
+      const content = editorRef.current?.getInstance().getMarkdown() || "";
+
       await createItem({
         title: form.title,
         slug: form.slug || generateSlug(form.title),
-        description: form.description,
-        content: form.content,
-        coverImage: form.coverImage || undefined,
-        technologies,
+        description: form.description || "",
+        content: content || "",
+        coverImage: form.coverImage,
+        technologies: technologies.length > 0 ? technologies : [],
         projectUrl: form.projectUrl || undefined,
         githubUrl: form.githubUrl || undefined,
         featured: form.featured,
@@ -126,8 +191,8 @@ export default function NewPortfolioItem() {
   return (
     <div className="p-6 lg:p-8 max-w-5xl mx-auto">
       <div className="flex items-center gap-4 mb-8">
-        <Link 
-          href="/manage/portfolio" 
+        <Link
+          href="/manage/portfolio"
           className="text-muted-foreground hover:text-foreground transition-colors"
         >
           ← Back
@@ -168,83 +233,104 @@ export default function NewPortfolioItem() {
           <p className="text-xs text-muted-foreground">Leave blank to auto-generate from title</p>
         </div>
 
-        {/* Cover Image */}
+        {/* Cover Image - Drop Zone */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Cover Image</label>
-          <div className="flex items-start gap-4">
+          <label className="text-sm font-medium">Cover Image *</label>
+          <div
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            className={`relative border-2 border-dashed rounded-lg transition-all duration-200 ${
+              isDragging
+                ? "border-primary bg-primary/10 scale-[1.02]"
+                : form.coverImage
+                ? "border-border"
+                : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
+            }`}
+          >
             {form.coverImage ? (
-              <div className="relative w-48 h-32 rounded-lg overflow-hidden border">
-                <img 
-                  src={form.coverImage} 
-                  alt="Cover preview" 
+              <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                <img
+                  src={form.coverImage}
+                  alt="Cover preview"
                   className="w-full h-full object-cover"
                 />
                 <button
                   type="button"
                   onClick={() => setForm({ ...form, coverImage: "" })}
-                  className="absolute top-2 right-2 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80"
+                  className="absolute top-2 right-2 p-2 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80 transition-colors"
                 >
                   <PiX size={16} />
                 </button>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
+                  <p className="text-white text-sm">Drop new image to replace</p>
+                </div>
               </div>
             ) : (
-              <label className="flex flex-col items-center justify-center w-48 h-32 border-2 border-dashed rounded-lg cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+              <label className="flex flex-col items-center justify-center h-48 cursor-pointer">
                 <input
                   type="file"
                   accept="image/*"
-                  onChange={handleCoverImageUpload}
+                  onChange={handleFileInputChange}
                   className="hidden"
                   disabled={isUploading}
                 />
                 {isUploading ? (
-                  <PiSpinner className="animate-spin text-2xl text-muted-foreground" />
+                  <PiSpinner className="animate-spin text-3xl text-muted-foreground" />
                 ) : (
                   <>
-                    <PiImage className="text-2xl text-muted-foreground mb-2" />
-                    <span className="text-xs text-muted-foreground">Click to upload</span>
+                    <PiUploadSimple className="text-4xl text-muted-foreground mb-3" />
+                    <span className="text-sm text-muted-foreground font-medium">
+                      Drag & drop an image here
+                    </span>
+                    <span className="text-xs text-muted-foreground mt-1">
+                      or click to browse
+                    </span>
                   </>
                 )}
               </label>
             )}
-            <div className="flex-1">
-              <input
-                type="url"
-                value={form.coverImage}
-                onChange={(e) => setForm({ ...form, coverImage: e.target.value })}
-                placeholder="Or paste image URL..."
-                className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-              />
-            </div>
           </div>
         </div>
 
         {/* Description */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Description *</label>
+          <label className="text-sm font-medium">Description</label>
           <textarea
             value={form.description}
             onChange={(e) => setForm({ ...form, description: e.target.value })}
             className="w-full px-4 py-3 border rounded-lg bg-background h-24 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
             placeholder="Brief project summary..."
-            required
           />
         </div>
 
-        {/* Content */}
+        {/* Content - Toast UI Editor */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Content (Markdown) *</label>
-          <textarea
-            value={form.content}
-            onChange={(e) => setForm({ ...form, content: e.target.value })}
-            className="w-full px-4 py-3 border rounded-lg bg-background h-64 font-mono text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-            placeholder="Detailed project description in markdown..."
-            required
-          />
+          <label className="text-sm font-medium">Content (Markdown)</label>
+          <div className="border rounded-lg overflow-hidden toastui-editor-dark-wrapper">
+            <Editor
+              ref={editorRef}
+              initialValue=""
+              previewStyle="vertical"
+              height="400px"
+              initialEditType="markdown"
+              useCommandShortcut={true}
+              hideModeSwitch={false}
+              toolbarItems={[
+                ["heading", "bold", "italic", "strike"],
+                ["hr", "quote"],
+                ["ul", "ol", "task", "indent", "outdent"],
+                ["table", "image", "link"],
+                ["code", "codeblock"],
+                ["scrollSync"],
+              ]}
+            />
+          </div>
         </div>
 
         {/* Technologies */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Technologies *</label>
+          <label className="text-sm font-medium">Technologies</label>
           <div className="flex flex-wrap gap-2 p-3 border rounded-lg bg-background min-h-[52px] focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
             {technologies.map((tech) => (
               <span
@@ -324,7 +410,7 @@ export default function NewPortfolioItem() {
         <div className="flex items-center gap-4 pt-4 border-t">
           <button
             type="submit"
-            disabled={isSubmitting || technologies.length === 0}
+            disabled={isSubmitting}
             className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 font-medium transition-all"
           >
             {isSubmitting ? "Creating..." : "Create Project"}

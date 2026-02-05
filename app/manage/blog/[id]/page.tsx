@@ -2,14 +2,14 @@
 
 export const dynamic = "force-dynamic";
 
-import { useState, useEffect, useRef, KeyboardEvent } from "react";
+import { useState, useEffect, useRef, KeyboardEvent, DragEvent } from "react";
 import { useQuery, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 import nextDynamic from "next/dynamic";
-import { PiX, PiImage, PiSpinner } from "react-icons/pi";
+import { PiX, PiSpinner, PiUploadSimple } from "react-icons/pi";
 
 // Dynamically import Toast UI Editor (SSR not supported)
 const Editor = nextDynamic(
@@ -49,6 +49,7 @@ export default function EditBlogPost() {
   const [tagInput, setTagInput] = useState("");
   const [tags, setTags] = useState<string[]>([]);
   const [editorReady, setEditorReady] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
 
   // Form state - coverImageId stores the storage ID, coverImageUrl is for display
   const [form, setForm] = useState({
@@ -107,12 +108,7 @@ export default function EditBlogPost() {
   };
 
   // Handle cover image upload - returns storage ID
-  const handleCoverImageUpload = async (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
+  const handleCoverImageUpload = async (file: File) => {
     setIsUploading(true);
     setError(null);
 
@@ -143,6 +139,41 @@ export default function EditBlogPost() {
       setError("Failed to upload cover image");
     } finally {
       setIsUploading(false);
+    }
+  };
+
+  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    await handleCoverImageUpload(file);
+  };
+
+  // Drag and drop handlers
+  const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = async (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      const file = files[0];
+      if (file.type.startsWith("image/")) {
+        await handleCoverImageUpload(file);
+      } else {
+        setError("Please drop an image file");
+      }
     }
   };
 
@@ -287,12 +318,23 @@ export default function EditBlogPost() {
           />
         </div>
 
-        {/* Cover Image */}
+        {/* Cover Image - Drop Zone */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Cover Image</label>
-          <div className="flex items-start gap-4">
+          <div
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            className={`relative border-2 border-dashed rounded-lg transition-all duration-200 ${
+              isDragging
+                ? "border-primary bg-primary/10 scale-[1.02]"
+                : coverImageUrl
+                ? "border-border"
+                : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
+            }`}
+          >
             {coverImageUrl ? (
-              <div className="relative w-48 h-32 rounded-lg overflow-hidden border bg-muted">
+              <div className="relative w-full h-48 rounded-lg overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={coverImageUrl}
@@ -302,30 +344,36 @@ export default function EditBlogPost() {
                 <button
                   type="button"
                   onClick={post.coverImage ? handleClearCoverImage : handleRemoveCoverImage}
-                  className="absolute top-1 right-1 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/90"
+                  className="absolute top-2 right-2 p-2 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80 transition-colors"
                 >
-                  <PiX className="w-4 h-4" />
+                  <PiX size={16} />
                 </button>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
+                  <p className="text-white text-sm">Drop new image to replace</p>
+                </div>
               </div>
             ) : (
-              <label className="w-48 h-32 border-2 border-dashed rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-primary hover:bg-muted/50 transition-all">
-                {isUploading ? (
-                  <PiSpinner className="w-6 h-6 animate-spin" />
-                ) : (
-                  <>
-                    <PiImage className="w-6 h-6 text-muted-foreground" />
-                    <span className="text-xs text-muted-foreground">
-                      Click to upload
-                    </span>
-                  </>
-                )}
+              <label className="flex flex-col items-center justify-center h-48 cursor-pointer">
                 <input
                   type="file"
                   accept="image/*"
-                  onChange={handleCoverImageUpload}
+                  onChange={handleFileInputChange}
                   className="hidden"
                   disabled={isUploading}
                 />
+                {isUploading ? (
+                  <PiSpinner className="animate-spin text-3xl text-muted-foreground" />
+                ) : (
+                  <>
+                    <PiUploadSimple className="text-4xl text-muted-foreground mb-3" />
+                    <span className="text-sm text-muted-foreground font-medium">
+                      Drag & drop an image here
+                    </span>
+                    <span className="text-xs text-muted-foreground mt-1">
+                      or click to browse
+                    </span>
+                  </>
+                )}
               </label>
             )}
           </div>

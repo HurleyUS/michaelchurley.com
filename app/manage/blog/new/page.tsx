@@ -2,14 +2,14 @@
 
 export const dynamicRoute = "force-dynamic";
 
-import { useState, useRef, KeyboardEvent } from "react";
+import { useState, useRef, KeyboardEvent, DragEvent } from "react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import nextDynamic from "next/dynamic";
-import { PiX, PiImage, PiSpinner } from "react-icons/pi";
+import { PiX, PiSpinner, PiUploadSimple } from "react-icons/pi";
 
 // Dynamically import Toast UI Editor (SSR not supported)
 const Editor = nextDynamic(
@@ -37,6 +37,7 @@ export default function NewBlogPost() {
   const [error, setError] = useState<string | null>(null);
   const [tagInput, setTagInput] = useState("");
   const [tags, setTags] = useState<string[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
 
   // Form state
   const [form, setForm] = useState({
@@ -84,12 +85,7 @@ export default function NewBlogPost() {
   };
 
   // Handle cover image upload - returns storage ID
-  const handleCoverImageUpload = async (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
+  const handleCoverImageUpload = async (file: File) => {
     setIsUploading(true);
     setError(null);
 
@@ -120,6 +116,41 @@ export default function NewBlogPost() {
       setError("Failed to upload cover image");
     } finally {
       setIsUploading(false);
+    }
+  };
+
+  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    await handleCoverImageUpload(file);
+  };
+
+  // Drag and drop handlers
+  const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+  };
+
+  const handleDrop = async (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      const file = files[0];
+      if (file.type.startsWith("image/")) {
+        await handleCoverImageUpload(file);
+      } else {
+        setError("Please drop an image file");
+      }
     }
   };
 
@@ -221,12 +252,23 @@ export default function NewBlogPost() {
           </p>
         </div>
 
-        {/* Cover Image */}
+        {/* Cover Image - Drop Zone */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Cover Image</label>
-          <div className="flex items-start gap-4">
+          <div
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            className={`relative border-2 border-dashed rounded-lg transition-all duration-200 ${
+              isDragging
+                ? "border-primary bg-primary/10 scale-[1.02]"
+                : coverImagePreview
+                ? "border-border"
+                : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
+            }`}
+          >
             {coverImagePreview ? (
-              <div className="relative w-48 h-32 rounded-lg overflow-hidden border bg-muted">
+              <div className="relative w-full h-48 rounded-lg overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={coverImagePreview}
@@ -236,27 +278,33 @@ export default function NewBlogPost() {
                 <button
                   type="button"
                   onClick={handleRemoveCoverImage}
-                  className="absolute top-2 right-2 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80"
+                  className="absolute top-2 right-2 p-2 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80 transition-colors"
                 >
                   <PiX size={16} />
                 </button>
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
+                  <p className="text-white text-sm">Drop new image to replace</p>
+                </div>
               </div>
             ) : (
-              <label className="flex flex-col items-center justify-center w-48 h-32 border-2 border-dashed rounded-lg cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+              <label className="flex flex-col items-center justify-center h-48 cursor-pointer">
                 <input
                   type="file"
                   accept="image/*"
-                  onChange={handleCoverImageUpload}
+                  onChange={handleFileInputChange}
                   className="hidden"
                   disabled={isUploading}
                 />
                 {isUploading ? (
-                  <PiSpinner className="animate-spin text-2xl text-muted-foreground" />
+                  <PiSpinner className="animate-spin text-3xl text-muted-foreground" />
                 ) : (
                   <>
-                    <PiImage className="text-2xl text-muted-foreground mb-2" />
-                    <span className="text-xs text-muted-foreground">
-                      Click to upload
+                    <PiUploadSimple className="text-4xl text-muted-foreground mb-3" />
+                    <span className="text-sm text-muted-foreground font-medium">
+                      Drag & drop an image here
+                    </span>
+                    <span className="text-xs text-muted-foreground mt-1">
+                      or click to browse
                     </span>
                   </>
                 )}
