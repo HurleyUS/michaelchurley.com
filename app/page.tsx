@@ -13,7 +13,7 @@ import BookingModal from "@/components/booking/booking-modal";
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col bg-linear-to-b from-Base to-Crust static">
+      <section className="flex flex-col bg-gradient-to-b from-Base to-Crust static">
         <Image
           src="/hero-bg.png"
           width={3840}
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-stretch justify-center gap-md grow w-full">
-              <div className="flex flex-col z-0 absolute inset-0 opacity-50 pointer-none items-center justify-center sm:items-end sm:relative sm:z-auto">
+              <div className="flex flex-col z-[0] absolute inset-0 opacity-50 pointer-none items-center justify-center sm:items-end sm:relative sm:z-[auto]">
                 <Logo multiplier={2} />
               </div>
               <div className="flex items-center justify-end gap-md px-md w-full text-xs">
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </ContainerBoxedCenter>
       </section>
-      <section className="flex flex-col bg-Latte-Crust bg-linear-to-b from-Latte-Crust to-Latte-Mantle dark:bg-Mocha-Crust dark:from-Mocha-Crust dark:to-Mocha-Mantle py-4xl">
+      <section className="flex flex-col bg-Latte-Crust bg-gradient-to-b from-Latte-Crust to-Latte-Mantle dark:bg-Mocha-Crust dark:from-Mocha-Crust dark:to-Mocha-Mantle py-4xl">
         <ContainerBoxedCenter
           props={{
             className:
@@ -77,7 +77,7 @@ export default function Home() {
           }}
         >
           <div className="border-gradient-animated shadow-2xl w-full">
-            <div className="flex flex-col items-stretch justify-start text-xs sm:text-center gap-md grow w-full bg-linear-to-b from-background to-Latte-Crust dark:to-Mocha-Crust p-lg border-background rounded-lg">
+            <div className="flex flex-col items-stretch justify-start text-xs sm:text-center gap-md grow w-full bg-gradient-to-b from-background to-Latte-Crust dark:to-Mocha-Crust p-lg border-background rounded-lg">
               <h2 className="font-black">Proven Skills</h2>
               <p>
                 I have 10,000 - 52,000 hours of active, professional career
@@ -213,7 +213,7 @@ export default function Home() {
             width={3840}
             height={2160}
             alt=""
-            className="absolute inset-0 pointer-events-none mix-blend-overlay w-full h-auto z-0 -translate-y-4xl"
+            className="absolute inset-0 pointer-events-none mix-blend-overlay w-full h-auto -z-[0] -translate-y-4xl"
           />
           <ContainerBoxedCenter
             props={{
@@ -252,14 +252,14 @@ export default function Home() {
           </ContainerBoxedCenter>
         </section>
       </section>
-      <section className="flex flex-col bg-linear-to-b from-Mantle/50 to-Base/50 z-10 backdrop-opacity-50 backdrop-blur-lg relative">
-        <div className="w-full p-0 bg-size-[720px_720px] bg-no-repeat bg-gradient-radial bg-center from-white-600/50 to-Latte-Mantle/0 h-2 dark:from-Mocha-Surface2/50 dark:to-Mocha-Mantle/0 absolute top-0">
+      <section className="flex flex-col bg-gradient-to-b from-Mantle/50 to-Base/50 z-10 backdrop-opacity-50 backdrop-blur-lg relative">
+        <div className="w-full p-0 bg-[length:720px_720px] bg-no-repeat bg-gradient-radial bg-center from-white-600/50 to-Latte-Mantle/0 h-2 dark:from-Mocha-Surface2/50 dark:to-Mocha-Mantle/0 absolute top-0">
           &nbsp;
         </div>
         <ContainerBoxedCenter
           props={{
             className:
-              "flex flex-col items-stretch lg:items-center justify-center gap-md p-md w-full max-w-[1170px] mx-auto bg-size-[640px_640px] bg-no-repeat bg-gradient-radial from-Latte-Base to-Latte-Mantle/0 bg-position-[center_top_-320px] py-4xl dark:from-Mocha-Surface0 dark:to-Mocha-Mantle/0",
+              "flex flex-col items-stretch lg:items-center justify-center gap-md p-md w-full max-w-[1170px] mx-auto bg-[length:640px_640px] bg-no-repeat bg-gradient-radial from-Latte-Base to-Latte-Mantle/0 bg-[center_top_-320px] py-4xl dark:from-Mocha-Surface0 dark:to-Mocha-Mantle/0",
           }}
           propsInner={{
             className:
@@ -498,7 +498,7 @@ export default function Home() {
               technology projects, or collaboration ideas.
             </p>
           </div>
-          <div className="w-full bg-background rounded-lg p-lg border border-border shadow-xs">
+          <div className="w-full bg-background rounded-lg p-lg border border-border shadow-sm">
             <BookingForm />
           </div>
         </ContainerBoxedCenter>

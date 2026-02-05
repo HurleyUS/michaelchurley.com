@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function BookPage() {
   return (
-    <div className="w-full min-h-screen bg-linear-to-b from-Base to-Crust">
+    <div className="w-full min-h-screen bg-gradient-to-b from-Base to-Crust">
       <section className="py-12 pt-24">
         <ContainerBoxedCenter
           propsInner={{
@@ -26,7 +26,7 @@ export default function BookPage() {
             </p>
           </div>
           
-          <div className="w-full max-w-2xl bg-background/80 backdrop-blur-xs rounded-xl p-8 shadow-lg border border-border/50">
+          <div className="w-full max-w-2xl bg-background/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-border/50">
             <BookingForm />
           </div>
 

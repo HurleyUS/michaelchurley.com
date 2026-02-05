@@ -284,7 +284,7 @@ export default function BookingForm() {
                       className={cn(
                         "px-2 py-2 text-sm rounded-md border transition-all",
                         "hover:border-primary hover:bg-primary/5",
-                        "focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-1"
+                        "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
                       )}
                     >
                       {formatTimeSlot(slot)}

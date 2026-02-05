@@ -65,7 +65,7 @@ export default function ManageLayout({ children }: { children: ReactNode }) {
   return (
     <div className="flex flex-col min-h-[50vh]">
       {/* Admin Header */}
-      <header className="border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60">
+      <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-14 items-center justify-between">
           <nav className="flex items-center gap-6">
             {navItems.map((item) => {
