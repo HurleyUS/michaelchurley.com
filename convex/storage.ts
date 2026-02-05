@@ -14,6 +14,16 @@ export const getUrl = query({
   },
 });
 
+// Get URL from storage ID string (for use after upload)
+export const getUrlFromId = mutation({
+  args: { storageId: v.string() },
+  handler: async (ctx, args) => {
+    // Cast the string to storage ID and get URL
+    const url = await ctx.storage.getUrl(args.storageId as any);
+    return url;
+  },
+});
+
 // Delete a stored file
 export const deleteFile = mutation({
   args: { storageId: v.id("_storage") },

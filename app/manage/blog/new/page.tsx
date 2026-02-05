@@ -25,6 +25,7 @@ export default function NewBlogPost() {
   const router = useRouter();
   const createPost = useMutation(api.blog.create);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
+  const getUrlFromId = useMutation(api.storage.getUrlFromId);
   const editorRef = useRef<any>(null);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -85,7 +86,9 @@ export default function NewBlogPost() {
       const { storageId } = await result.json();
       // For now, use the Convex storage URL directly
       // In production, you might want to use a CDN or custom domain
-      return `${process.env.NEXT_PUBLIC_CONVEX_URL?.replace(".cloud", ".site")}/api/storage/${storageId}`;
+      const url = await getUrlFromId({ storageId });
+      if (!url) throw new Error("Failed to get storage URL");
+      return url;
     } catch (err) {
       console.error("Upload failed:", err);
       throw err;

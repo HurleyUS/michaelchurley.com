@@ -19,6 +19,7 @@ export default function EditPortfolioItem() {
   const item = useQuery(api.portfolio.getById, { id });
   const updateItem = useMutation(api.portfolio.update);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
+  const getUrlFromId = useMutation(api.storage.getUrlFromId);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
@@ -87,7 +88,9 @@ export default function EditPortfolioItem() {
         body: file,
       });
       const { storageId } = await result.json();
-      return `${process.env.NEXT_PUBLIC_CONVEX_URL?.replace(".cloud", ".site")}/api/storage/${storageId}`;
+      const url = await getUrlFromId({ storageId });
+      if (!url) throw new Error("Failed to get storage URL");
+      return url;
     } catch (err) {
       console.error("Upload failed:", err);
       throw err;

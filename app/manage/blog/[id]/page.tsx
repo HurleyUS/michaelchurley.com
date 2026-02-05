@@ -36,6 +36,7 @@ export default function EditBlogPost() {
   const post = useQuery(api.blog.getById, rawId ? { id } : "skip");
   const updatePost = useMutation(api.blog.update);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
+  const getUrlFromId = useMutation(api.storage.getUrlFromId);
   const editorRef = useRef<any>(null);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -106,8 +107,10 @@ export default function EditBlogPost() {
         body: file,
       });
       const { storageId } = await result.json();
-      // For now, use the Convex storage URL directly
-      return `${process.env.NEXT_PUBLIC_CONVEX_URL?.replace(".cloud", ".site")}/api/storage/${storageId}`;
+      // Get the proper URL from Convex
+      const url = await getUrlFromId({ storageId });
+      if (!url) throw new Error("Failed to get storage URL");
+      return url;
     } catch (err) {
       console.error("Upload failed:", err);
       throw err;
