@@ -403,6 +403,11 @@
   --spacing-xl: clamp(1.6667rem, 2rem + 0.3182vw, 2.6667rem);
   --spacing-2xl: clamp(2rem, 2.6667rem + 0.3182vw, 3.3333rem);
   --spacing-3xl: clamp(2.6667rem, 3.3333rem + 0.3182vw, 4rem);
+
+  /* Custom gradient utilities */
+  --gradient-gradient-radial: radial-gradient(closest-side, var(--tw-gradient-stops));
+  --gradient-gradient-circle: radial-gradient(circle, var(--tw-gradient-stops));
+  --gradient-gradient-conic: conic-gradient(var(--tw-gradient-stops));
 }
 
 /*
