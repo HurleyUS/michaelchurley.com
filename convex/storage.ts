@@ -14,12 +14,11 @@ export const getUrl = query({
   },
 });
 
-// Get URL from storage ID string (for use after upload)
-export const getUrlFromId = mutation({
-  args: { storageId: v.string() },
+// Get URL from storage ID (for use after upload)
+export const getStorageUrl = mutation({
+  args: { storageId: v.id("_storage") },
   handler: async (ctx, args) => {
-    // Cast the string to storage ID and get URL
-    const url = await ctx.storage.getUrl(args.storageId as any);
+    const url = await ctx.storage.getUrl(args.storageId);
     return url;
   },
 });

@@ -14,7 +14,7 @@ export default function NewPortfolioItem() {
   const router = useRouter();
   const createItem = useMutation(api.portfolio.create);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
-  const getUrlFromId = useMutation(api.storage.getUrlFromId);
+  const getStorageUrl = useMutation(api.storage.getStorageUrl);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
@@ -74,7 +74,7 @@ export default function NewPortfolioItem() {
         body: file,
       });
       const { storageId } = await result.json();
-      const url = await getUrlFromId({ storageId });
+      const url = await getStorageUrl({ storageId });
       if (!url) throw new Error("Failed to get storage URL");
       return url;
     } catch (err) {

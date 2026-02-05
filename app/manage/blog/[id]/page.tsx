@@ -36,7 +36,7 @@ export default function EditBlogPost() {
   const post = useQuery(api.blog.getById, rawId ? { id } : "skip");
   const updatePost = useMutation(api.blog.update);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
-  const getUrlFromId = useMutation(api.storage.getUrlFromId);
+  const getStorageUrl = useMutation(api.storage.getStorageUrl);
   const editorRef = useRef<any>(null);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -108,7 +108,7 @@ export default function EditBlogPost() {
       });
       const { storageId } = await result.json();
       // Get the proper URL from Convex
-      const url = await getUrlFromId({ storageId });
+      const url = await getStorageUrl({ storageId });
       if (!url) throw new Error("Failed to get storage URL");
       return url;
     } catch (err) {
