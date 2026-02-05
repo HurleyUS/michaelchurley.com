@@ -110,11 +110,10 @@ export default function BlogPage() {
               >
                 {post.coverImage && (
                   <div className="aspect-video relative overflow-hidden">
-                    <Image
+                    <img
                       src={post.coverImage}
                       alt={post.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 )}

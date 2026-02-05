@@ -188,10 +188,10 @@ export default function NewBlogPost() {
           <div className="flex items-start gap-4">
             {form.coverImage ? (
               <div className="relative w-48 h-32 rounded-lg overflow-hidden border">
-                <Image 
+                <img 
                   src={form.coverImage} 
                   alt="Cover preview" 
-                  fill className="object-cover"
+                  className="w-full h-full object-cover"
                 />
                 <button
                   type="button"

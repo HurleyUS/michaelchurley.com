@@ -71,12 +71,10 @@ export default function BlogPostPage() {
         {/* Cover image */}
         {post.coverImage && (
           <div className="aspect-video relative rounded-lg overflow-hidden">
-            <Image
+            <img
               src={post.coverImage}
               alt={post.title}
-              fill
-              className="object-cover"
-              priority
+              className="w-full h-full object-cover"
             />
           </div>
         )}
