@@ -6,6 +6,7 @@ import { useQuery, useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ManageBlog() {
   const blogPosts = useQuery(api.blog.list, { onlyPublished: false });
@@ -53,21 +54,39 @@ export default function ManageBlog() {
           </Link>
         </div>
       ) : (
-        <div className="rounded-lg border">
+        <div className="rounded-lg border overflow-hidden">
           <table className="w-full">
             <thead>
               <tr className="border-b bg-muted/50">
+                <th className="text-left p-4 font-medium w-20">Image</th>
                 <th className="text-left p-4 font-medium">Title</th>
-                <th className="text-left p-4 font-medium">Slug</th>
-                <th className="text-left p-4 font-medium">Tags</th>
+                <th className="text-left p-4 font-medium hidden md:table-cell">Slug</th>
+                <th className="text-left p-4 font-medium hidden lg:table-cell">Tags</th>
                 <th className="text-left p-4 font-medium">Status</th>
-                <th className="text-left p-4 font-medium">Featured</th>
+                <th className="text-left p-4 font-medium hidden sm:table-cell">Featured</th>
                 <th className="text-left p-4 font-medium">Actions</th>
               </tr>
             </thead>
             <tbody>
               {blogPosts.map((post) => (
-                <tr key={post._id} className="border-b last:border-b-0">
+                <tr key={post._id} className="border-b last:border-b-0 hover:bg-muted/30">
+                  <td className="p-4">
+                    {post.coverImage ? (
+                      <div className="relative w-16 h-12 rounded overflow-hidden bg-muted">
+                        <Image
+                          src={post.coverImage}
+                          alt={post.title}
+                          fill
+                          className="object-cover"
+                          sizes="64px"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-16 h-12 rounded bg-muted flex items-center justify-center">
+                        <span className="text-xs text-muted-foreground">No image</span>
+                      </div>
+                    )}
+                  </td>
                   <td className="p-4">
                     <Link
                       href={`/manage/blog/${post._id}`}
@@ -76,8 +95,8 @@ export default function ManageBlog() {
                       {post.title}
                     </Link>
                   </td>
-                  <td className="p-4 text-muted-foreground">{post.slug}</td>
-                  <td className="p-4">
+                  <td className="p-4 text-muted-foreground hidden md:table-cell">{post.slug}</td>
+                  <td className="p-4 hidden lg:table-cell">
                     <div className="flex flex-wrap gap-1">
                       {post.tags.slice(0, 3).map((tag) => (
                         <span
@@ -106,7 +125,7 @@ export default function ManageBlog() {
                       {post.published ? "Published" : "Draft"}
                     </button>
                   </td>
-                  <td className="p-4">
+                  <td className="p-4 hidden sm:table-cell">
                     <button
                       onClick={() => handleToggleFeatured(post._id, post.featured)}
                       className={`text-xs px-2 py-1 rounded cursor-pointer ${

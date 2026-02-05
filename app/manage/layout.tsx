@@ -73,7 +73,7 @@ export default function ManageLayout({ children }: { children: ReactNode }) {
     <div className="flex flex-col min-h-[50vh]">
       {/* Admin Header */}
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-14 items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
           <nav className="flex items-center gap-6">
             {navItems.map((item) => {
               const isActive = item.exact
@@ -100,7 +100,7 @@ export default function ManageLayout({ children }: { children: ReactNode }) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 container py-6">{children}</main>
+      <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">{children}</main>
     </div>
   );
 }
