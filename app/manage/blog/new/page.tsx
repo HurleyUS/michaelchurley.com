@@ -1,11 +1,11 @@
 "use client";
-import Image from "next/image";
 
 export const dynamicRoute = "force-dynamic";
 
 import { useState, useRef, KeyboardEvent } from "react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import { Id } from "@/convex/_generated/dataModel";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import nextDynamic from "next/dynamic";
@@ -14,7 +14,12 @@ import { PiX, PiImage, PiSpinner } from "react-icons/pi";
 // Dynamically import Toast UI Editor (SSR not supported)
 const Editor = nextDynamic(
   () => import("@toast-ui/react-editor").then((mod) => mod.Editor),
-  { ssr: false, loading: () => <div className="h-[500px] border rounded-lg animate-pulse bg-muted" /> }
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />
+    ),
+  }
 );
 
 // Import Toast UI Editor CSS
@@ -25,23 +30,28 @@ export default function NewBlogPost() {
   const router = useRouter();
   const createPost = useMutation(api.blog.create);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
-  const getStorageUrl = useMutation(api.storage.getStorageUrl);
   const editorRef = useRef<any>(null);
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [tagInput, setTagInput] = useState("");
   const [tags, setTags] = useState<string[]>([]);
 
+  // Form state
   const [form, setForm] = useState({
     title: "",
     slug: "",
     excerpt: "",
-    coverImage: "",
     featured: false,
     published: false,
   });
+
+  // Separate state for cover image
+  const [coverImageId, setCoverImageId] = useState<Id<"_storage"> | null>(null);
+  const [coverImagePreview, setCoverImagePreview] = useState<string | null>(
+    null
+  );
 
   const generateSlug = (title: string) => {
     return title
@@ -73,41 +83,50 @@ export default function NewBlogPost() {
     setTags(tags.filter((t) => t !== tagToRemove));
   };
 
-  // Handle image upload
-  const handleImageUpload = async (file: File): Promise<string> => {
+  // Handle cover image upload - returns storage ID
+  const handleCoverImageUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
     setIsUploading(true);
+    setError(null);
+
     try {
+      // Get upload URL from Convex
       const uploadUrl = await generateUploadUrl();
+
+      // Upload file to Convex storage
       const result = await fetch(uploadUrl, {
         method: "POST",
         headers: { "Content-Type": file.type },
         body: file,
       });
+
+      if (!result.ok) {
+        throw new Error("Upload failed");
+      }
+
       const { storageId } = await result.json();
-      // For now, use the Convex storage URL directly
-      // In production, you might want to use a CDN or custom domain
-      const url = await getStorageUrl({ storageId });
-      if (!url) throw new Error("Failed to get storage URL");
-      return url;
+
+      // Store the ID for the mutation
+      setCoverImageId(storageId as Id<"_storage">);
+
+      // Create a local preview URL
+      setCoverImagePreview(URL.createObjectURL(file));
     } catch (err) {
       console.error("Upload failed:", err);
-      throw err;
+      setError("Failed to upload cover image");
     } finally {
       setIsUploading(false);
     }
   };
 
-  // Handle cover image upload
-  const handleCoverImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    try {
-      const url = await handleImageUpload(file);
-      setForm({ ...form, coverImage: url });
-    } catch (err) {
-      setError("Failed to upload cover image");
-    }
+  // Handle removing cover image
+  const handleRemoveCoverImage = () => {
+    setCoverImageId(null);
+    setCoverImagePreview(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -119,16 +138,32 @@ export default function NewBlogPost() {
       // Get content from Toast UI editor
       const content = editorRef.current?.getInstance().getMarkdown() || "";
 
-      await createPost({
+      // Build create data
+      const createData: {
+        title: string;
+        slug: string;
+        excerpt: string;
+        content: string;
+        tags: string[];
+        featured: boolean;
+        published: boolean;
+        coverImage?: Id<"_storage">;
+      } = {
         title: form.title,
         slug: form.slug || generateSlug(form.title),
         excerpt: form.excerpt,
         content,
-        coverImage: form.coverImage || undefined,
         tags,
         featured: form.featured,
         published: form.published,
-      });
+      };
+
+      // Include cover image ID if uploaded
+      if (coverImageId) {
+        createData.coverImage = coverImageId;
+      }
+
+      await createPost(createData);
       router.push("/manage/blog");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to create post");
@@ -140,8 +175,8 @@ export default function NewBlogPost() {
   return (
     <div className="p-6 lg:p-8 max-w-5xl mx-auto">
       <div className="flex items-center gap-4 mb-8">
-        <Link 
-          href="/manage/blog" 
+        <Link
+          href="/manage/blog"
           className="text-muted-foreground hover:text-foreground transition-colors"
         >
           ← Back
@@ -176,26 +211,31 @@ export default function NewBlogPost() {
             type="text"
             value={form.slug}
             onChange={(e) => setForm({ ...form, slug: e.target.value })}
-            placeholder={generateSlug(form.title) || "auto-generated-from-title"}
+            placeholder={
+              generateSlug(form.title) || "auto-generated-from-title"
+            }
             className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
           />
-          <p className="text-xs text-muted-foreground">Leave blank to auto-generate from title</p>
+          <p className="text-xs text-muted-foreground">
+            Leave blank to auto-generate from title
+          </p>
         </div>
 
         {/* Cover Image */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Cover Image</label>
           <div className="flex items-start gap-4">
-            {form.coverImage ? (
-              <div className="relative w-48 h-32 rounded-lg overflow-hidden border">
-                <img 
-                  src={form.coverImage} 
-                  alt="Cover preview" 
+            {coverImagePreview ? (
+              <div className="relative w-48 h-32 rounded-lg overflow-hidden border bg-muted">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={coverImagePreview}
+                  alt="Cover preview"
                   className="w-full h-full object-cover"
                 />
                 <button
                   type="button"
-                  onClick={() => setForm({ ...form, coverImage: "" })}
+                  onClick={handleRemoveCoverImage}
                   className="absolute top-2 right-2 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80"
                 >
                   <PiX size={16} />
@@ -215,20 +255,13 @@ export default function NewBlogPost() {
                 ) : (
                   <>
                     <PiImage className="text-2xl text-muted-foreground mb-2" />
-                    <span className="text-xs text-muted-foreground">Click to upload</span>
+                    <span className="text-xs text-muted-foreground">
+                      Click to upload
+                    </span>
                   </>
                 )}
               </label>
             )}
-            <div className="flex-1">
-              <input
-                type="url"
-                value={form.coverImage}
-                onChange={(e) => setForm({ ...form, coverImage: e.target.value })}
-                placeholder="Or paste image URL..."
-                className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-              />
-            </div>
           </div>
         </div>
 
@@ -242,7 +275,9 @@ export default function NewBlogPost() {
             placeholder="Brief summary for previews and SEO..."
             required
           />
-          <p className="text-xs text-muted-foreground">{form.excerpt.length}/300 characters</p>
+          <p className="text-xs text-muted-foreground">
+            {form.excerpt.length}/300 characters
+          </p>
         </div>
 
         {/* Content - Toast UI Editor */}
@@ -294,11 +329,15 @@ export default function NewBlogPost() {
               onChange={(e) => setTagInput(e.target.value)}
               onKeyDown={handleTagKeyDown}
               onBlur={addTag}
-              placeholder={tags.length === 0 ? "Add tags (press comma or enter)" : ""}
+              placeholder={
+                tags.length === 0 ? "Add tags (press comma or enter)" : ""
+              }
               className="flex-1 min-w-[150px] outline-none bg-transparent"
             />
           </div>
-          <p className="text-xs text-muted-foreground">Press comma, enter, or tab to add a tag</p>
+          <p className="text-xs text-muted-foreground">
+            Press comma, enter, or tab to add a tag
+          </p>
         </div>
 
         {/* Options */}
@@ -316,7 +355,9 @@ export default function NewBlogPost() {
             <input
               type="checkbox"
               checked={form.published}
-              onChange={(e) => setForm({ ...form, published: e.target.checked })}
+              onChange={(e) =>
+                setForm({ ...form, published: e.target.checked })
+              }
               className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
             />
             <span className="text-sm font-medium">Publish immediately</span>

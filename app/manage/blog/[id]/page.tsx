@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 export const dynamic = "force-dynamic";
 
@@ -15,7 +14,12 @@ import { PiX, PiImage, PiSpinner } from "react-icons/pi";
 // Dynamically import Toast UI Editor (SSR not supported)
 const Editor = nextDynamic(
   () => import("@toast-ui/react-editor").then((mod) => mod.Editor),
-  { ssr: false, loading: () => <div className="h-[500px] border rounded-lg animate-pulse bg-muted" /> }
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />
+    ),
+  }
 );
 
 // Import Toast UI Editor CSS
@@ -25,34 +29,37 @@ import "@/styles/toastui-dark.css";
 export default function EditBlogPost() {
   const router = useRouter();
   const params = useParams();
-  
+
   // Get the raw ID - handle array case from catch-all routes
   const rawId = Array.isArray(params.id) ? params.id[0] : params.id;
-  
+
   // Cast to Convex ID type (validation happens via the query)
   const id = (rawId || "") as Id<"blogPosts">;
-  
+
   // All hooks must be called unconditionally
   const post = useQuery(api.blog.getById, rawId ? { id } : "skip");
   const updatePost = useMutation(api.blog.update);
+  const clearCoverImage = useMutation(api.blog.clearCoverImage);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
-  const getStorageUrl = useMutation(api.storage.getStorageUrl);
   const editorRef = useRef<any>(null);
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [tagInput, setTagInput] = useState("");
   const [tags, setTags] = useState<string[]>([]);
   const [editorReady, setEditorReady] = useState(false);
+
+  // Form state - coverImageId stores the storage ID, coverImageUrl is for display
   const [form, setForm] = useState({
     title: "",
     slug: "",
     excerpt: "",
-    coverImage: "",
     featured: false,
     published: false,
   });
+  const [coverImageId, setCoverImageId] = useState<Id<"_storage"> | null>(null);
+  const [coverImageUrl, setCoverImageUrl] = useState<string | null>(null);
 
   useEffect(() => {
     if (post) {
@@ -60,12 +67,15 @@ export default function EditBlogPost() {
         title: post.title,
         slug: post.slug,
         excerpt: post.excerpt,
-        coverImage: post.coverImage || "",
         featured: post.featured,
         published: post.published,
       });
       setTags(post.tags);
-      
+      // The query now returns the resolved URL in coverImage field
+      setCoverImageUrl(post.coverImage || null);
+      // We don't have the ID anymore since query returns URL, but that's ok
+      // New uploads will set the ID
+
       // Set editor content once it's ready
       if (editorReady && editorRef.current) {
         editorRef.current.getInstance().setMarkdown(post.content);
@@ -96,40 +106,50 @@ export default function EditBlogPost() {
     setTags(tags.filter((t) => t !== tagToRemove));
   };
 
-  // Handle image upload
-  const handleImageUpload = async (file: File): Promise<string> => {
+  // Handle cover image upload - returns storage ID
+  const handleCoverImageUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
     setIsUploading(true);
+    setError(null);
+
     try {
+      // Get upload URL from Convex
       const uploadUrl = await generateUploadUrl();
+
+      // Upload file to Convex storage
       const result = await fetch(uploadUrl, {
         method: "POST",
         headers: { "Content-Type": file.type },
         body: file,
       });
+
+      if (!result.ok) {
+        throw new Error("Upload failed");
+      }
+
       const { storageId } = await result.json();
-      // Get the proper URL from Convex
-      const url = await getStorageUrl({ storageId });
-      if (!url) throw new Error("Failed to get storage URL");
-      return url;
+
+      // Store the ID for the mutation
+      setCoverImageId(storageId as Id<"_storage">);
+
+      // Create a local preview URL
+      setCoverImageUrl(URL.createObjectURL(file));
     } catch (err) {
       console.error("Upload failed:", err);
-      throw err;
+      setError("Failed to upload cover image");
     } finally {
       setIsUploading(false);
     }
   };
 
-  // Handle cover image upload
-  const handleCoverImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    try {
-      const url = await handleImageUpload(file);
-      setForm({ ...form, coverImage: url });
-    } catch (err) {
-      setError("Failed to upload cover image");
-    }
+  // Handle removing cover image
+  const handleRemoveCoverImage = async () => {
+    setCoverImageId(null);
+    setCoverImageUrl(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -141,17 +161,34 @@ export default function EditBlogPost() {
       // Get content from Toast UI editor
       const content = editorRef.current?.getInstance().getMarkdown() || "";
 
-      await updatePost({
+      // Build update object
+      const updateData: {
+        id: Id<"blogPosts">;
+        title: string;
+        slug: string;
+        excerpt: string;
+        content: string;
+        tags: string[];
+        featured: boolean;
+        published: boolean;
+        coverImage?: Id<"_storage">;
+      } = {
         id,
         title: form.title,
         slug: form.slug,
         excerpt: form.excerpt,
         content,
-        coverImage: form.coverImage || undefined,
         tags,
         featured: form.featured,
         published: form.published,
-      });
+      };
+
+      // Only include coverImage if we have a new one
+      if (coverImageId) {
+        updateData.coverImage = coverImageId;
+      }
+
+      await updatePost(updateData);
       router.push("/manage/blog");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to update post");
@@ -160,11 +197,22 @@ export default function EditBlogPost() {
     }
   };
 
+  // Handle clearing cover image from server
+  const handleClearCoverImage = async () => {
+    try {
+      await clearCoverImage({ id });
+      setCoverImageId(null);
+      setCoverImageUrl(null);
+    } catch (err) {
+      setError("Failed to clear cover image");
+    }
+  };
+
   // Handle invalid ID after hooks
   if (!rawId) {
     return (
-      <div className="text-center py-12">
-        <h1 className="text-2xl font-bold">Invalid Post ID</h1>
+      <div className="max-w-4xl mx-auto py-8 px-4">
+        <p className="text-destructive">Invalid blog post ID</p>
         <Link href="/manage/blog" className="text-primary hover:underline">
           Back to Blog
         </Link>
@@ -174,16 +222,21 @@ export default function EditBlogPost() {
 
   if (post === undefined) {
     return (
-      <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
+      <div className="max-w-4xl mx-auto py-8 px-4">
+        <div className="animate-pulse space-y-4">
+          <div className="h-8 bg-muted rounded w-1/3"></div>
+          <div className="h-12 bg-muted rounded"></div>
+          <div className="h-12 bg-muted rounded"></div>
+          <div className="h-64 bg-muted rounded"></div>
+        </div>
       </div>
     );
   }
 
   if (post === null) {
     return (
-      <div className="text-center py-12">
-        <h1 className="text-2xl font-bold">Post Not Found</h1>
+      <div className="max-w-4xl mx-auto py-8 px-4">
+        <p className="text-destructive">Blog post not found</p>
         <Link href="/manage/blog" className="text-primary hover:underline">
           Back to Blog
         </Link>
@@ -192,11 +245,11 @@ export default function EditBlogPost() {
   }
 
   return (
-    <div className="p-6 lg:p-8 max-w-5xl mx-auto">
+    <div className="max-w-4xl mx-auto py-8 px-4">
       <div className="flex items-center gap-4 mb-8">
-        <Link 
-          href="/manage/blog" 
-          className="text-muted-foreground hover:text-foreground transition-colors"
+        <Link
+          href="/manage/blog"
+          className="text-muted-foreground hover:text-foreground"
         >
           ← Back
         </Link>
@@ -204,7 +257,7 @@ export default function EditBlogPost() {
       </div>
 
       {error && (
-        <div className="p-4 mb-6 bg-destructive/10 text-destructive rounded-lg border border-destructive/20">
+        <div className="mb-6 p-4 bg-destructive/10 text-destructive rounded-lg">
           {error}
         </div>
       )}
@@ -217,8 +270,7 @@ export default function EditBlogPost() {
             type="text"
             value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })}
-            className="w-full px-4 py-3 border rounded-lg bg-background text-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-            placeholder="Enter your post title..."
+            className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
             required
           />
         </div>
@@ -239,23 +291,34 @@ export default function EditBlogPost() {
         <div className="space-y-2">
           <label className="text-sm font-medium">Cover Image</label>
           <div className="flex items-start gap-4">
-            {form.coverImage ? (
-              <div className="relative w-48 h-32 rounded-lg overflow-hidden border">
-                <img 
-                  src={form.coverImage} 
-                  alt="Cover preview" 
+            {coverImageUrl ? (
+              <div className="relative w-48 h-32 rounded-lg overflow-hidden border bg-muted">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={coverImageUrl}
+                  alt="Cover preview"
                   className="w-full h-full object-cover"
                 />
                 <button
                   type="button"
-                  onClick={() => setForm({ ...form, coverImage: "" })}
-                  className="absolute top-2 right-2 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80"
+                  onClick={post.coverImage ? handleClearCoverImage : handleRemoveCoverImage}
+                  className="absolute top-1 right-1 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/90"
                 >
-                  <PiX size={16} />
+                  <PiX className="w-4 h-4" />
                 </button>
               </div>
             ) : (
-              <label className="flex flex-col items-center justify-center w-48 h-32 border-2 border-dashed rounded-lg cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+              <label className="w-48 h-32 border-2 border-dashed rounded-lg flex flex-col items-center justify-center gap-2 cursor-pointer hover:border-primary hover:bg-muted/50 transition-all">
+                {isUploading ? (
+                  <PiSpinner className="w-6 h-6 animate-spin" />
+                ) : (
+                  <>
+                    <PiImage className="w-6 h-6 text-muted-foreground" />
+                    <span className="text-xs text-muted-foreground">
+                      Click to upload
+                    </span>
+                  </>
+                )}
                 <input
                   type="file"
                   accept="image/*"
@@ -263,25 +326,8 @@ export default function EditBlogPost() {
                   className="hidden"
                   disabled={isUploading}
                 />
-                {isUploading ? (
-                  <PiSpinner className="animate-spin text-2xl text-muted-foreground" />
-                ) : (
-                  <>
-                    <PiImage className="text-2xl text-muted-foreground mb-2" />
-                    <span className="text-xs text-muted-foreground">Click to upload</span>
-                  </>
-                )}
               </label>
             )}
-            <div className="flex-1">
-              <input
-                type="url"
-                value={form.coverImage}
-                onChange={(e) => setForm({ ...form, coverImage: e.target.value })}
-                placeholder="Or paste image URL..."
-                className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-              />
-            </div>
           </div>
         </div>
 
@@ -291,60 +337,32 @@ export default function EditBlogPost() {
           <textarea
             value={form.excerpt}
             onChange={(e) => setForm({ ...form, excerpt: e.target.value })}
-            className="w-full px-4 py-3 border rounded-lg bg-background h-24 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
-            placeholder="Brief summary for previews and SEO..."
+            rows={3}
+            maxLength={300}
+            className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
             required
           />
-          <p className="text-xs text-muted-foreground">{form.excerpt.length}/300 characters</p>
-        </div>
-
-        {/* Content - Toast UI Editor */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Content *</label>
-          <div className="border rounded-lg overflow-hidden toastui-editor-dark-wrapper">
-            <Editor
-              ref={editorRef}
-              initialValue=""
-              previewStyle="vertical"
-              height="500px"
-              initialEditType="markdown"
-              useCommandShortcut={true}
-              hideModeSwitch={false}
-              onLoad={() => {
-                setEditorReady(true);
-                // Set content if post is already loaded
-                if (post && editorRef.current) {
-                  editorRef.current.getInstance().setMarkdown(post.content);
-                }
-              }}
-              toolbarItems={[
-                ["heading", "bold", "italic", "strike"],
-                ["hr", "quote"],
-                ["ul", "ol", "task", "indent", "outdent"],
-                ["table", "image", "link"],
-                ["code", "codeblock"],
-                ["scrollSync"],
-              ]}
-            />
-          </div>
+          <p className="text-xs text-muted-foreground">
+            {form.excerpt.length}/300 characters
+          </p>
         </div>
 
         {/* Tags */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Tags</label>
-          <div className="flex flex-wrap gap-2 p-3 border rounded-lg bg-background min-h-[52px] focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+          <div className="flex flex-wrap gap-2 p-3 border rounded-lg bg-background min-h-[48px]">
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                className="inline-flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary rounded-md text-sm"
               >
                 {tag}
                 <button
                   type="button"
                   onClick={() => removeTag(tag)}
-                  className="hover:text-destructive transition-colors"
+                  className="hover:text-destructive"
                 >
-                  <PiX size={14} />
+                  <PiX className="w-3 h-3" />
                 </button>
               </span>
             ))}
@@ -354,47 +372,67 @@ export default function EditBlogPost() {
               onChange={(e) => setTagInput(e.target.value)}
               onKeyDown={handleTagKeyDown}
               onBlur={addTag}
-              placeholder={tags.length === 0 ? "Add tags (press comma or enter)" : ""}
-              className="flex-1 min-w-[150px] outline-none bg-transparent text-foreground placeholder:text-muted-foreground"
+              placeholder={tags.length === 0 ? "Add tags..." : ""}
+              className="flex-1 min-w-[100px] outline-none bg-transparent text-foreground placeholder:text-muted-foreground"
             />
           </div>
-          <p className="text-xs text-muted-foreground">Press comma, enter, or tab to add a tag</p>
+          <p className="text-xs text-muted-foreground">
+            Press comma, enter, or tab to add a tag
+          </p>
+        </div>
+
+        {/* Content Editor */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Content *</label>
+          <div className="border rounded-lg overflow-hidden">
+            <Editor
+              ref={editorRef}
+              initialValue={post.content || ""}
+              previewStyle="vertical"
+              height="500px"
+              initialEditType="markdown"
+              useCommandShortcut={true}
+              onLoad={() => setEditorReady(true)}
+            />
+          </div>
         </div>
 
         {/* Options */}
-        <div className="flex items-center gap-8 p-4 bg-muted/50 rounded-lg">
-          <label className="flex items-center gap-3 cursor-pointer">
+        <div className="flex gap-6">
+          <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="checkbox"
               checked={form.featured}
               onChange={(e) => setForm({ ...form, featured: e.target.checked })}
-              className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
+              className="w-4 h-4 rounded border-gray-300"
             />
-            <span className="text-sm font-medium">Featured post</span>
+            <span className="text-sm">Featured</span>
           </label>
-          <label className="flex items-center gap-3 cursor-pointer">
+          <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="checkbox"
               checked={form.published}
-              onChange={(e) => setForm({ ...form, published: e.target.checked })}
-              className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
+              onChange={(e) =>
+                setForm({ ...form, published: e.target.checked })
+              }
+              className="w-4 h-4 rounded border-gray-300"
             />
-            <span className="text-sm font-medium">Published</span>
+            <span className="text-sm">Published</span>
           </label>
         </div>
 
-        {/* Actions */}
-        <div className="flex items-center gap-4 pt-4 border-t">
+        {/* Submit */}
+        <div className="flex gap-4">
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 font-medium transition-all"
+            className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 disabled:opacity-50 transition-all"
           >
             {isSubmitting ? "Saving..." : "Save Changes"}
           </button>
           <Link
             href="/manage/blog"
-            className="px-6 py-3 text-muted-foreground hover:text-foreground transition-colors"
+            className="px-6 py-3 border rounded-lg hover:bg-muted transition-all"
           >
             Cancel
           </Link>

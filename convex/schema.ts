@@ -29,8 +29,8 @@ export default defineSchema({
     slug: v.string(),
     description: v.string(),
     content: v.string(), // Markdown content
-    coverImage: v.optional(v.string()),
-    images: v.optional(v.array(v.string())),
+    coverImage: v.optional(v.union(v.id("_storage"), v.string())), // Migration: accepts both
+    images: v.optional(v.array(v.union(v.id("_storage"), v.string()))), // Migration: accepts both
     technologies: v.array(v.string()),
     projectUrl: v.optional(v.string()),
     githubUrl: v.optional(v.string()),
@@ -50,7 +50,7 @@ export default defineSchema({
     slug: v.string(),
     excerpt: v.string(),
     content: v.string(), // Markdown content
-    coverImage: v.optional(v.string()),
+    coverImage: v.optional(v.union(v.id("_storage"), v.string())), // Migration: accepts both
     tags: v.array(v.string()),
     featured: v.boolean(),
     published: v.boolean(),
