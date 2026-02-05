@@ -238,9 +238,17 @@ export const clearCoverImage = mutation({
     const post = await ctx.db.get(args.id);
     if (!post) throw new Error("Blog post not found");
 
-    // Delete the old image from storage if it exists
+    // Delete the old image from storage if it's a storage ID (not a legacy URL)
     if (post.coverImage) {
-      await ctx.storage.delete(post.coverImage);
+      const isLegacyUrl = typeof post.coverImage === "string" && post.coverImage.startsWith("http");
+      if (!isLegacyUrl) {
+        try {
+          await ctx.storage.delete(post.coverImage as Id<"_storage">);
+        } catch (e) {
+          // Storage delete can fail if file doesn't exist, that's ok
+          console.log("Could not delete storage file:", e);
+        }
+      }
     }
 
     await ctx.db.patch(args.id, { coverImage: undefined, updatedAt: Date.now() });

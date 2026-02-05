@@ -384,7 +384,7 @@ export default function EditBlogPost() {
         {/* Content Editor */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Content *</label>
-          <div className="border rounded-lg overflow-hidden">
+          <div className="border rounded-lg overflow-hidden toastui-editor-dark-wrapper">
             <Editor
               ref={editorRef}
               initialValue={post.content || ""}
