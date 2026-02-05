@@ -1,26 +1,41 @@
 "use client";
 
-export const dynamic = "force-dynamic";
+export const dynamicRoute = "force-dynamic";
 
-import { useState } from "react";
+import { useState, useRef, KeyboardEvent } from "react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import nextDynamic from "next/dynamic";
+import { PiX, PiImage, PiSpinner } from "react-icons/pi";
+
+// Dynamically import Toast UI Editor (SSR not supported)
+const Editor = nextDynamic(
+  () => import("@toast-ui/react-editor").then((mod) => mod.Editor),
+  { ssr: false, loading: () => <div className="h-[500px] border rounded-lg animate-pulse bg-muted" /> }
+);
+
+// Import Toast UI Editor CSS
+import "@toast-ui/editor/dist/toastui-editor.css";
 
 export default function NewBlogPost() {
   const router = useRouter();
   const createPost = useMutation(api.blog.create);
+  const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
+  const editorRef = useRef<any>(null);
+  
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [tagInput, setTagInput] = useState("");
+  const [tags, setTags] = useState<string[]>([]);
 
   const [form, setForm] = useState({
     title: "",
     slug: "",
     excerpt: "",
-    content: "",
     coverImage: "",
-    tags: "",
     featured: false,
     published: false,
   });
@@ -32,19 +47,80 @@ export default function NewBlogPost() {
       .replace(/^-+|-+$/g, "");
   };
 
+  // Handle tag input - add tag on comma, enter, or tab
+  const handleTagKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "," || e.key === "Enter" || e.key === "Tab") {
+      e.preventDefault();
+      addTag();
+    } else if (e.key === "Backspace" && tagInput === "" && tags.length > 0) {
+      // Remove last tag on backspace if input is empty
+      setTags(tags.slice(0, -1));
+    }
+  };
+
+  const addTag = () => {
+    const newTag = tagInput.trim().toLowerCase().replace(/,/g, "");
+    if (newTag && !tags.includes(newTag)) {
+      setTags([...tags, newTag]);
+    }
+    setTagInput("");
+  };
+
+  const removeTag = (tagToRemove: string) => {
+    setTags(tags.filter((t) => t !== tagToRemove));
+  };
+
+  // Handle image upload
+  const handleImageUpload = async (file: File): Promise<string> => {
+    setIsUploading(true);
+    try {
+      const uploadUrl = await generateUploadUrl();
+      const result = await fetch(uploadUrl, {
+        method: "POST",
+        headers: { "Content-Type": file.type },
+        body: file,
+      });
+      const { storageId } = await result.json();
+      // For now, use the Convex storage URL directly
+      // In production, you might want to use a CDN or custom domain
+      return `${process.env.NEXT_PUBLIC_CONVEX_URL?.replace(".cloud", ".site")}/api/storage/${storageId}`;
+    } catch (err) {
+      console.error("Upload failed:", err);
+      throw err;
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
+  // Handle cover image upload
+  const handleCoverImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const url = await handleImageUpload(file);
+      setForm({ ...form, coverImage: url });
+    } catch (err) {
+      setError("Failed to upload cover image");
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
 
     try {
+      // Get content from Toast UI editor
+      const content = editorRef.current?.getInstance().getMarkdown() || "";
+
       await createPost({
         title: form.title,
         slug: form.slug || generateSlug(form.title),
         excerpt: form.excerpt,
-        content: form.content,
+        content,
         coverImage: form.coverImage || undefined,
-        tags: form.tags.split(",").map((t) => t.trim()).filter(Boolean),
+        tags,
         featured: form.featured,
         published: form.published,
       });
@@ -57,30 +133,38 @@ export default function NewBlogPost() {
   };
 
   return (
-    <div className="space-y-6 max-w-3xl">
-      <div className="flex items-center gap-4">
-        <Link href="/manage/blog" className="text-muted-foreground hover:text-foreground">
+    <div className="p-6 lg:p-8 max-w-5xl mx-auto">
+      <div className="flex items-center gap-4 mb-8">
+        <Link 
+          href="/manage/blog" 
+          className="text-muted-foreground hover:text-foreground transition-colors"
+        >
           ← Back
         </Link>
         <h1 className="text-3xl font-bold">New Blog Post</h1>
       </div>
 
       {error && (
-        <div className="p-4 bg-destructive/10 text-destructive rounded-lg">{error}</div>
+        <div className="p-4 mb-6 bg-destructive/10 text-destructive rounded-lg border border-destructive/20">
+          {error}
+        </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Title */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Title *</label>
           <input
             type="text"
             value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })}
-            className="w-full px-3 py-2 border rounded-md bg-background"
+            className="w-full px-4 py-3 border rounded-lg bg-background text-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+            placeholder="Enter your post title..."
             required
           />
         </div>
 
+        {/* Slug */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Slug</label>
           <input
@@ -88,84 +172,174 @@ export default function NewBlogPost() {
             value={form.slug}
             onChange={(e) => setForm({ ...form, slug: e.target.value })}
             placeholder={generateSlug(form.title) || "auto-generated-from-title"}
-            className="w-full px-3 py-2 border rounded-md bg-background"
+            className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
           />
+          <p className="text-xs text-muted-foreground">Leave blank to auto-generate from title</p>
         </div>
 
+        {/* Cover Image */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Cover Image</label>
+          <div className="flex items-start gap-4">
+            {form.coverImage ? (
+              <div className="relative w-48 h-32 rounded-lg overflow-hidden border">
+                <img 
+                  src={form.coverImage} 
+                  alt="Cover preview" 
+                  className="w-full h-full object-cover"
+                />
+                <button
+                  type="button"
+                  onClick={() => setForm({ ...form, coverImage: "" })}
+                  className="absolute top-2 right-2 p-1 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80"
+                >
+                  <PiX size={16} />
+                </button>
+              </div>
+            ) : (
+              <label className="flex flex-col items-center justify-center w-48 h-32 border-2 border-dashed rounded-lg cursor-pointer hover:border-primary hover:bg-primary/5 transition-all">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleCoverImageUpload}
+                  className="hidden"
+                  disabled={isUploading}
+                />
+                {isUploading ? (
+                  <PiSpinner className="animate-spin text-2xl text-muted-foreground" />
+                ) : (
+                  <>
+                    <PiImage className="text-2xl text-muted-foreground mb-2" />
+                    <span className="text-xs text-muted-foreground">Click to upload</span>
+                  </>
+                )}
+              </label>
+            )}
+            <div className="flex-1">
+              <input
+                type="url"
+                value={form.coverImage}
+                onChange={(e) => setForm({ ...form, coverImage: e.target.value })}
+                placeholder="Or paste image URL..."
+                className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Excerpt */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Excerpt *</label>
           <textarea
             value={form.excerpt}
             onChange={(e) => setForm({ ...form, excerpt: e.target.value })}
-            className="w-full px-3 py-2 border rounded-md bg-background h-24"
-            placeholder="Brief summary for previews..."
+            className="w-full px-4 py-3 border rounded-lg bg-background h-24 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
+            placeholder="Brief summary for previews and SEO..."
             required
           />
+          <p className="text-xs text-muted-foreground">{form.excerpt.length}/300 characters</p>
         </div>
 
+        {/* Content - Toast UI Editor */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Content (Markdown) *</label>
-          <textarea
-            value={form.content}
-            onChange={(e) => setForm({ ...form, content: e.target.value })}
-            className="w-full px-3 py-2 border rounded-md bg-background h-64 font-mono"
-            required
-          />
+          <label className="text-sm font-medium">Content *</label>
+          <div className="border rounded-lg overflow-hidden">
+            <Editor
+              ref={editorRef}
+              initialValue=""
+              previewStyle="vertical"
+              height="500px"
+              initialEditType="markdown"
+              useCommandShortcut={true}
+              hideModeSwitch={false}
+              toolbarItems={[
+                ["heading", "bold", "italic", "strike"],
+                ["hr", "quote"],
+                ["ul", "ol", "task", "indent", "outdent"],
+                ["table", "image", "link"],
+                ["code", "codeblock"],
+                ["scrollSync"],
+              ]}
+            />
+          </div>
         </div>
 
+        {/* Tags */}
         <div className="space-y-2">
-          <label className="text-sm font-medium">Cover Image URL</label>
-          <input
-            type="url"
-            value={form.coverImage}
-            onChange={(e) => setForm({ ...form, coverImage: e.target.value })}
-            className="w-full px-3 py-2 border rounded-md bg-background"
-          />
+          <label className="text-sm font-medium">Tags</label>
+          <div className="flex flex-wrap gap-2 p-3 border rounded-lg bg-background min-h-[52px] focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center gap-1 px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+              >
+                {tag}
+                <button
+                  type="button"
+                  onClick={() => removeTag(tag)}
+                  className="hover:text-destructive transition-colors"
+                >
+                  <PiX size={14} />
+                </button>
+              </span>
+            ))}
+            <input
+              type="text"
+              value={tagInput}
+              onChange={(e) => setTagInput(e.target.value)}
+              onKeyDown={handleTagKeyDown}
+              onBlur={addTag}
+              placeholder={tags.length === 0 ? "Add tags (press comma or enter)" : ""}
+              className="flex-1 min-w-[150px] outline-none bg-transparent"
+            />
+          </div>
+          <p className="text-xs text-muted-foreground">Press comma, enter, or tab to add a tag</p>
         </div>
 
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Tags (comma-separated)</label>
-          <input
-            type="text"
-            value={form.tags}
-            onChange={(e) => setForm({ ...form, tags: e.target.value })}
-            placeholder="technology, business, tutorial"
-            className="w-full px-3 py-2 border rounded-md bg-background"
-          />
-        </div>
-
-        <div className="flex items-center gap-6">
-          <label className="flex items-center gap-2">
+        {/* Options */}
+        <div className="flex items-center gap-8 p-4 bg-muted/50 rounded-lg">
+          <label className="flex items-center gap-3 cursor-pointer">
             <input
               type="checkbox"
               checked={form.featured}
               onChange={(e) => setForm({ ...form, featured: e.target.checked })}
-              className="rounded"
+              className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
             />
-            <span className="text-sm">Featured</span>
+            <span className="text-sm font-medium">Featured post</span>
           </label>
-          <label className="flex items-center gap-2">
+          <label className="flex items-center gap-3 cursor-pointer">
             <input
               type="checkbox"
               checked={form.published}
               onChange={(e) => setForm({ ...form, published: e.target.checked })}
-              className="rounded"
+              className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
             />
-            <span className="text-sm">Published</span>
+            <span className="text-sm font-medium">Publish immediately</span>
           </label>
         </div>
 
-        <div className="flex items-center gap-4 pt-4">
+        {/* Actions */}
+        <div className="flex items-center gap-4 pt-4 border-t">
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 disabled:opacity-50"
+            className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 font-medium transition-all"
           >
             {isSubmitting ? "Creating..." : "Create Post"}
           </button>
+          <button
+            type="button"
+            onClick={() => {
+              // Save as draft logic could go here
+              setForm({ ...form, published: false });
+            }}
+            className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 font-medium transition-all"
+          >
+            Save as Draft
+          </button>
           <Link
             href="/manage/blog"
-            className="px-4 py-2 bg-secondary text-secondary-foreground rounded-md hover:bg-secondary/90"
+            className="px-6 py-3 text-muted-foreground hover:text-foreground transition-colors"
           >
             Cancel
           </Link>

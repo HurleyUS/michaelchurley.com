@@ -13,6 +13,7 @@ import type * as bookings from "../bookings.js";
 import type * as comments from "../comments.js";
 import type * as lib_auth from "../lib/auth.js";
 import type * as portfolio from "../portfolio.js";
+import type * as storage from "../storage.js";
 
 import type {
   ApiFromModules,
@@ -26,6 +27,7 @@ declare const fullApi: ApiFromModules<{
   comments: typeof comments;
   "lib/auth": typeof lib_auth;
   portfolio: typeof portfolio;
+  storage: typeof storage;
 }>;
 
 /**
