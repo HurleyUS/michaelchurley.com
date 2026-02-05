@@ -1,0 +1,469 @@
+/* Toast UI Editor Dark Mode Overrides */
+
+/* Dark mode via .dark class */
+.dark .toastui-editor-dark-wrapper .toastui-editor-defaultUI {
+  background-color: var(--Catppuccin-Mocha-Mantle);
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+/* Dark mode via prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-defaultUI {
+    background-color: var(--Catppuccin-Mocha-Mantle);
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+}
+
+/* Editor container */
+.dark .toastui-editor-dark-wrapper .toastui-editor-defaultUI .toastui-editor,
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-container,
+.dark .toastui-editor-dark-wrapper .toastui-editor-ww-container {
+  background-color: var(--Catppuccin-Mocha-Base);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-defaultUI .toastui-editor,
+  .toastui-editor-dark-wrapper .toastui-editor-md-container,
+  .toastui-editor-dark-wrapper .toastui-editor-ww-container {
+    background-color: var(--Catppuccin-Mocha-Base);
+  }
+}
+
+/* Main text color in editor */
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents,
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-preview,
+.dark .toastui-editor-dark-wrapper .ProseMirror {
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-contents,
+  .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-preview,
+  .toastui-editor-dark-wrapper .ProseMirror {
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Markdown editor tab container */
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-tab-container {
+  background-color: var(--Catppuccin-Mocha-Mantle);
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-tab-container {
+    background-color: var(--Catppuccin-Mocha-Mantle);
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+}
+
+/* CodeMirror editor */
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-container .CodeMirror,
+.dark .toastui-editor-dark-wrapper .CodeMirror {
+  background-color: var(--Catppuccin-Mocha-Base);
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-md-container .CodeMirror,
+  .toastui-editor-dark-wrapper .CodeMirror {
+    background-color: var(--Catppuccin-Mocha-Base);
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* CodeMirror text */
+.dark .toastui-editor-dark-wrapper .CodeMirror-line,
+.dark .toastui-editor-dark-wrapper .CodeMirror-line span,
+.dark .toastui-editor-dark-wrapper .cm-s-default .cm-header,
+.dark .toastui-editor-dark-wrapper .cm-s-default .cm-variable-2,
+.dark .toastui-editor-dark-wrapper .cm-s-default .cm-comment {
+  color: var(--Catppuccin-Mocha-Text) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .CodeMirror-line,
+  .toastui-editor-dark-wrapper .CodeMirror-line span,
+  .toastui-editor-dark-wrapper .cm-s-default .cm-header,
+  .toastui-editor-dark-wrapper .cm-s-default .cm-variable-2,
+  .toastui-editor-dark-wrapper .cm-s-default .cm-comment {
+    color: var(--Catppuccin-Mocha-Text) !important;
+  }
+}
+
+/* Cursor */
+.dark .toastui-editor-dark-wrapper .CodeMirror-cursor {
+  border-left-color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .CodeMirror-cursor {
+    border-left-color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Toolbar */
+.dark .toastui-editor-dark-wrapper .toastui-editor-toolbar {
+  background-color: var(--Catppuccin-Mocha-Mantle);
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-toolbar {
+    background-color: var(--Catppuccin-Mocha-Mantle);
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+}
+
+/* Toolbar buttons */
+.dark .toastui-editor-dark-wrapper .toastui-editor-toolbar-icons {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--Catppuccin-Mocha-Subtext0);
+}
+
+.dark .toastui-editor-dark-wrapper .toastui-editor-toolbar-icons:hover {
+  background-color: var(--Catppuccin-Mocha-Surface0);
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-toolbar-icons {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--Catppuccin-Mocha-Subtext0);
+  }
+
+  .toastui-editor-dark-wrapper .toastui-editor-toolbar-icons:hover {
+    background-color: var(--Catppuccin-Mocha-Surface0);
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Toolbar divider */
+.dark .toastui-editor-dark-wrapper .toastui-editor-toolbar-divider {
+  background-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-toolbar-divider {
+    background-color: var(--Catppuccin-Mocha-Surface0);
+  }
+}
+
+/* Mode switch tabs */
+.dark .toastui-editor-dark-wrapper .toastui-editor-mode-switch {
+  background-color: var(--Catppuccin-Mocha-Mantle);
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+.dark .toastui-editor-dark-wrapper .toastui-editor-mode-switch .tab-item {
+  color: var(--Catppuccin-Mocha-Subtext0);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.dark .toastui-editor-dark-wrapper .toastui-editor-mode-switch .tab-item.active {
+  color: var(--Catppuccin-Mocha-Text);
+  background-color: var(--Catppuccin-Mocha-Surface0);
+  border-color: var(--Catppuccin-Mocha-Surface1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-mode-switch {
+    background-color: var(--Catppuccin-Mocha-Mantle);
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+
+  .toastui-editor-dark-wrapper .toastui-editor-mode-switch .tab-item {
+    color: var(--Catppuccin-Mocha-Subtext0);
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .toastui-editor-dark-wrapper .toastui-editor-mode-switch .tab-item.active {
+    color: var(--Catppuccin-Mocha-Text);
+    background-color: var(--Catppuccin-Mocha-Surface0);
+    border-color: var(--Catppuccin-Mocha-Surface1);
+  }
+}
+
+/* Preview pane */
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-preview,
+.dark .toastui-editor-dark-wrapper .toastui-editor-ww-container {
+  background-color: var(--Catppuccin-Mocha-Base);
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-md-preview,
+  .toastui-editor-dark-wrapper .toastui-editor-ww-container {
+    background-color: var(--Catppuccin-Mocha-Base);
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Preview content */
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents p,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents h1,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents h2,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents h3,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents h4,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents h5,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents h6,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents li,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents td,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents th {
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-contents p,
+  .toastui-editor-dark-wrapper .toastui-editor-contents h1,
+  .toastui-editor-dark-wrapper .toastui-editor-contents h2,
+  .toastui-editor-dark-wrapper .toastui-editor-contents h3,
+  .toastui-editor-dark-wrapper .toastui-editor-contents h4,
+  .toastui-editor-dark-wrapper .toastui-editor-contents h5,
+  .toastui-editor-dark-wrapper .toastui-editor-contents h6,
+  .toastui-editor-dark-wrapper .toastui-editor-contents li,
+  .toastui-editor-dark-wrapper .toastui-editor-contents td,
+  .toastui-editor-dark-wrapper .toastui-editor-contents th {
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Code blocks in preview */
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents pre,
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents code {
+  background-color: var(--Catppuccin-Mocha-Surface0);
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-contents pre,
+  .toastui-editor-dark-wrapper .toastui-editor-contents code {
+    background-color: var(--Catppuccin-Mocha-Surface0);
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Blockquote */
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents blockquote {
+  border-left-color: var(--Catppuccin-Mocha-Surface2);
+  color: var(--Catppuccin-Mocha-Subtext0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-contents blockquote {
+    border-left-color: var(--Catppuccin-Mocha-Surface2);
+    color: var(--Catppuccin-Mocha-Subtext0);
+  }
+}
+
+/* Links in preview */
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents a {
+  color: var(--cyan);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-contents a {
+    color: var(--cyan);
+  }
+}
+
+/* Tables */
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents table {
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents th {
+  background-color: var(--Catppuccin-Mocha-Surface0);
+  border-color: var(--Catppuccin-Mocha-Surface1);
+}
+
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents td {
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-contents table {
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+
+  .toastui-editor-dark-wrapper .toastui-editor-contents th {
+    background-color: var(--Catppuccin-Mocha-Surface0);
+    border-color: var(--Catppuccin-Mocha-Surface1);
+  }
+
+  .toastui-editor-dark-wrapper .toastui-editor-contents td {
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+}
+
+/* Horizontal rule */
+.dark .toastui-editor-dark-wrapper .toastui-editor-contents hr {
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-contents hr {
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+}
+
+/* Splitter between edit and preview */
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-splitter {
+  background-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-md-splitter {
+    background-color: var(--Catppuccin-Mocha-Surface0);
+  }
+}
+
+/* Popup menus */
+.dark .toastui-editor-popup {
+  background-color: var(--Catppuccin-Mocha-Surface0);
+  border-color: var(--Catppuccin-Mocha-Surface1);
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-popup {
+    background-color: var(--Catppuccin-Mocha-Surface0);
+    border-color: var(--Catppuccin-Mocha-Surface1);
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Popup inputs */
+.dark .toastui-editor-popup input,
+.dark .toastui-editor-popup textarea {
+  background-color: var(--Catppuccin-Mocha-Base);
+  border-color: var(--Catppuccin-Mocha-Surface1);
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-popup input,
+  .toastui-editor-popup textarea {
+    background-color: var(--Catppuccin-Mocha-Base);
+    border-color: var(--Catppuccin-Mocha-Surface1);
+    color: var(--Catppuccin-Mocha-Text);
+  }
+}
+
+/* Popup buttons */
+.dark .toastui-editor-popup .toastui-editor-ok-button {
+  background-color: var(--cyan);
+  color: var(--Catppuccin-Mocha-Crust);
+}
+
+.dark .toastui-editor-popup .toastui-editor-close-button {
+  color: var(--Catppuccin-Mocha-Subtext0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-popup .toastui-editor-ok-button {
+    background-color: var(--cyan);
+    color: var(--Catppuccin-Mocha-Crust);
+  }
+
+  .toastui-editor-popup .toastui-editor-close-button {
+    color: var(--Catppuccin-Mocha-Subtext0);
+  }
+}
+
+/* Context menu */
+.dark .toastui-editor-context-menu {
+  background-color: var(--Catppuccin-Mocha-Surface0);
+  border-color: var(--Catppuccin-Mocha-Surface1);
+}
+
+.dark .toastui-editor-context-menu li {
+  color: var(--Catppuccin-Mocha-Text);
+}
+
+.dark .toastui-editor-context-menu li:hover {
+  background-color: var(--Catppuccin-Mocha-Surface1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-context-menu {
+    background-color: var(--Catppuccin-Mocha-Surface0);
+    border-color: var(--Catppuccin-Mocha-Surface1);
+  }
+
+  .toastui-editor-context-menu li {
+    color: var(--Catppuccin-Mocha-Text);
+  }
+
+  .toastui-editor-context-menu li:hover {
+    background-color: var(--Catppuccin-Mocha-Surface1);
+  }
+}
+
+/* Selection highlight */
+.dark .toastui-editor-dark-wrapper .CodeMirror-selected,
+.dark .toastui-editor-dark-wrapper .CodeMirror-focused .CodeMirror-selected {
+  background-color: var(--Catppuccin-Mocha-Surface1) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .CodeMirror-selected,
+  .toastui-editor-dark-wrapper .CodeMirror-focused .CodeMirror-selected {
+    background-color: var(--Catppuccin-Mocha-Surface1) !important;
+  }
+}
+
+/* Scrollbar styling */
+.dark .toastui-editor-dark-wrapper ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark .toastui-editor-dark-wrapper ::-webkit-scrollbar-track {
+  background: var(--Catppuccin-Mocha-Mantle);
+}
+
+.dark .toastui-editor-dark-wrapper ::-webkit-scrollbar-thumb {
+  background: var(--Catppuccin-Mocha-Surface1);
+  border-radius: 4px;
+}
+
+.dark .toastui-editor-dark-wrapper ::-webkit-scrollbar-thumb:hover {
+  background: var(--Catppuccin-Mocha-Surface2);
+}
+
+/* Gutter (line numbers area) */
+.dark .toastui-editor-dark-wrapper .CodeMirror-gutters {
+  background-color: var(--Catppuccin-Mocha-Mantle);
+  border-color: var(--Catppuccin-Mocha-Surface0);
+}
+
+.dark .toastui-editor-dark-wrapper .CodeMirror-linenumber {
+  color: var(--Catppuccin-Mocha-Overlay0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .CodeMirror-gutters {
+    background-color: var(--Catppuccin-Mocha-Mantle);
+    border-color: var(--Catppuccin-Mocha-Surface0);
+  }
+
+  .toastui-editor-dark-wrapper .CodeMirror-linenumber {
+    color: var(--Catppuccin-Mocha-Overlay0);
+  }
+}
+
+/* Toolbar background */
+.dark .toastui-editor-dark-wrapper .toastui-editor-defaultUI-toolbar {
+  background-color: var(--Catppuccin-Mocha-Mantle);
+}
+
+@media (prefers-color-scheme: dark) {
+  .toastui-editor-dark-wrapper .toastui-editor-defaultUI-toolbar {
+    background-color: var(--Catppuccin-Mocha-Mantle);
+  }
+}

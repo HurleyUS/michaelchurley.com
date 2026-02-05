@@ -18,6 +18,7 @@ const Editor = nextDynamic(
 
 // Import Toast UI Editor CSS
 import "@toast-ui/editor/dist/toastui-editor.css";
+import "@/styles/toastui-dark.css";
 
 export default function NewBlogPost() {
   const router = useRouter();
@@ -243,7 +244,7 @@ export default function NewBlogPost() {
         {/* Content - Toast UI Editor */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Content *</label>
-          <div className="border rounded-lg overflow-hidden">
+          <div className="border rounded-lg overflow-hidden toastui-editor-dark-wrapper">
             <Editor
               ref={editorRef}
               initialValue=""

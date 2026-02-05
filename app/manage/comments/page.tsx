@@ -96,17 +96,17 @@ export default function ManageComments() {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => handleToggleVisibility(comment._id)}
-                    className={`text-xs px-2 py-1 rounded ${
+                    className={`text-xs px-2 py-1 rounded font-medium ${
                       comment.visible
-                        ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100"
-                        : "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100"
+                        ? "bg-Yellow/20 text-Yellow"
+                        : "bg-Green/20 text-Green"
                     }`}
                   >
                     {comment.visible ? "Hide" : "Show"}
                   </button>
                   <button
                     onClick={() => handleDelete(comment._id)}
-                    className="text-xs px-2 py-1 rounded bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100"
+                    className="text-xs px-2 py-1 rounded font-medium bg-Red/20 text-Red"
                   >
                     Delete
                   </button>

@@ -79,10 +79,10 @@ export default function ManagePortfolio() {
                   <td className="p-4">
                     <button
                       onClick={() => handleTogglePublish(item._id, item.published)}
-                      className={`text-xs px-2 py-1 rounded cursor-pointer ${
+                      className={`text-xs px-2 py-1 rounded cursor-pointer font-medium ${
                         item.published
-                          ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100"
-                          : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100"
+                          ? "bg-Green/20 text-Green"
+                          : "bg-Yellow/20 text-Yellow"
                       }`}
                     >
                       {item.published ? "Published" : "Draft"}
@@ -91,10 +91,10 @@ export default function ManagePortfolio() {
                   <td className="p-4">
                     <button
                       onClick={() => handleToggleFeatured(item._id, item.featured)}
-                      className={`text-xs px-2 py-1 rounded cursor-pointer ${
+                      className={`text-xs px-2 py-1 rounded cursor-pointer font-medium ${
                         item.featured
-                          ? "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100"
-                          : "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100"
+                          ? "bg-Blue/20 text-Blue"
+                          : "bg-Overlay0/30 text-Subtext0"
                       }`}
                     >
                       {item.featured ? "Featured" : "Not Featured"}

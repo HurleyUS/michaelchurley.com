@@ -72,10 +72,10 @@ export default function ManageDashboard() {
                 <li key={item._id} className="flex items-center justify-between">
                   <span className="truncate">{item.title}</span>
                   <span
-                    className={`text-xs px-2 py-1 rounded ${
+                    className={`text-xs px-2 py-1 rounded font-medium ${
                       item.published
-                        ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100"
-                        : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100"
+                        ? "bg-Green/20 text-Green"
+                        : "bg-Yellow/20 text-Yellow"
                     }`}
                   >
                     {item.published ? "Published" : "Draft"}
@@ -99,10 +99,10 @@ export default function ManageDashboard() {
                 <li key={post._id} className="flex items-center justify-between">
                   <span className="truncate">{post.title}</span>
                   <span
-                    className={`text-xs px-2 py-1 rounded ${
+                    className={`text-xs px-2 py-1 rounded font-medium ${
                       post.published
-                        ? "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100"
-                        : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100"
+                        ? "bg-Green/20 text-Green"
+                        : "bg-Yellow/20 text-Yellow"
                     }`}
                   >
                     {post.published ? "Published" : "Draft"}
