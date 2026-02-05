@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, email, message, date, timeSlot } = body;
+    const { name, email, phone, message, date, timeSlot } = body;
 
     // Validate required fields
     if (!name || !email || !date || !timeSlot) {
@@ -76,7 +76,6 @@ export async function POST(request: NextRequest) {
           <li><strong>Time:</strong> ${displayTime} (EST)</li>
           <li><strong>Duration:</strong> 30 minutes</li>
         </ul>
-        ${message ? `<p><strong>Your message:</strong> ${message}</p>` : ''}
         <p>Please add the attached calendar invite to your calendar.</p>
         <p>If you need to reschedule, please reply to this email or contact Michael directly.</p>
         <hr />
@@ -100,6 +99,7 @@ export async function POST(request: NextRequest) {
         <ul>
           <li><strong>Name:</strong> ${name}</li>
           <li><strong>Email:</strong> <a href="mailto:${email}">${email}</a></li>
+          ${phone ? `<li><strong>Phone:</strong> <a href="tel:${phone}">${phone}</a></li>` : ''}
           <li><strong>Date:</strong> ${displayDate}</li>
           <li><strong>Time:</strong> ${displayTime} (EST)</li>
           <li><strong>Duration:</strong> 30 minutes</li>

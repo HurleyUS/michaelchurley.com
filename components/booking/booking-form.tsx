@@ -3,7 +3,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
@@ -92,7 +91,7 @@ function getWeekdaysWithSlots(startDate: Date, count: number, now: Date): Date[]
   return days;
 }
 
-type Step = "select" | "details" | "confirm" | "success";
+type Step = "select" | "details" | "success";
 
 export default function BookingForm() {
   const [step, setStep] = useState<Step>("select");
@@ -101,7 +100,6 @@ export default function BookingForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [startOffset, setStartOffset] = useState(0); // How many weekdays forward from today
@@ -160,8 +158,9 @@ export default function BookingForm() {
     setStep("details");
   };
 
-  const handleDetailsSubmit = (e: React.FormEvent) => {
+  const handleBookNow = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (!name.trim() || !email.trim()) {
       setError("Please fill in your name and email");
       return;
@@ -170,11 +169,6 @@ export default function BookingForm() {
       setError("Please enter a valid email address");
       return;
     }
-    setError(null);
-    setStep("confirm");
-  };
-
-  const handleConfirm = async () => {
     if (!selectedDate || !selectedTime) return;
     
     setIsSubmitting(true);
@@ -185,7 +179,6 @@ export default function BookingForm() {
         name: name.trim(),
         email: email.trim(),
         phone: phone.trim(),
-        message: message.trim(),
         date: formatDate(selectedDate),
         timeSlot: selectedTime,
       });
@@ -197,7 +190,6 @@ export default function BookingForm() {
           name: name.trim(),
           email: email.trim(),
           phone: phone.trim(),
-          message: message.trim(),
           date: formatDate(selectedDate),
           timeSlot: selectedTime,
         }),
@@ -218,7 +210,6 @@ export default function BookingForm() {
 
   const handleBack = () => {
     if (step === "details") setStep("select");
-    else if (step === "confirm") setStep("details");
   };
 
   const handleReset = () => {
@@ -228,7 +219,6 @@ export default function BookingForm() {
     setName("");
     setEmail("");
     setPhone("");
-    setMessage("");
     setError(null);
     setStartOffset(0);
   };
@@ -313,11 +303,11 @@ export default function BookingForm() {
         >
           ← Back
         </button>
-        <h3 className="text-lg font-semibold text-center mb-1">Your Details</h3>
+        <h3 className="text-lg font-semibold text-center mb-1">Book Your Meeting</h3>
         <p className="text-sm text-muted-foreground text-center mb-4">
           {selectedDate?.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })} at {selectedTime && formatTimeSlot(selectedTime)}
         </p>
-        <form onSubmit={handleDetailsSubmit} className="space-y-3">
+        <form onSubmit={handleBookNow} className="space-y-3">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-1">Name *</label>
             <Input
@@ -325,6 +315,17 @@ export default function BookingForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone *</label>
+            <Input
+              id="phone"
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="(555) 555-5555"
               required
             />
           </div>
@@ -339,86 +340,11 @@ export default function BookingForm() {
               required
             />
           </div>
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone</label>
-            <Input
-              id="phone"
-              type="tel"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              placeholder="(555) 555-5555"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-1">Message (optional)</label>
-            <Textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="What would you like to discuss?"
-              rows={3}
-            />
-          </div>
           {error && <p className="text-sm text-red-500">{error}</p>}
-          <Button type="submit" className="w-full">Continue</Button>
+          <Button type="submit" disabled={isSubmitting} className="w-full">
+            {isSubmitting ? "Booking..." : "Book Now"}
+          </Button>
         </form>
-      </div>
-    );
-  }
-
-  // Confirmation
-  if (step === "confirm" && selectedDate && selectedTime) {
-    return (
-      <div className="w-full">
-        <button
-          onClick={handleBack}
-          className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-1 mb-4"
-        >
-          ← Back
-        </button>
-        <h3 className="text-lg font-semibold text-center mb-4">Confirm Booking</h3>
-        <div className="bg-muted/50 rounded-lg p-4 space-y-2 text-sm">
-          <div className="flex justify-between">
-            <span className="text-muted-foreground">Date</span>
-            <span className="font-medium">{selectedDate.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-muted-foreground">Time</span>
-            <span className="font-medium">{formatTimeSlot(selectedTime)} EST</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-muted-foreground">Duration</span>
-            <span className="font-medium">30 minutes</span>
-          </div>
-          <hr className="border-border" />
-          <div className="flex justify-between">
-            <span className="text-muted-foreground">Name</span>
-            <span className="font-medium">{name}</span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-muted-foreground">Email</span>
-            <span className="font-medium">{email}</span>
-          </div>
-          {phone && (
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Phone</span>
-              <span className="font-medium">{phone}</span>
-            </div>
-          )}
-          {message && (
-            <div>
-              <span className="text-muted-foreground">Message</span>
-              <p className="mt-1">{message}</p>
-            </div>
-          )}
-        </div>
-        {error && <p className="text-sm text-red-500 text-center mt-2">{error}</p>}
-        <Button onClick={handleConfirm} disabled={isSubmitting} className="w-full mt-4">
-          {isSubmitting ? "Booking..." : "Confirm Booking"}
-        </Button>
-        <p className="text-xs text-muted-foreground text-center mt-2">
-          You will receive a calendar invite via email
-        </p>
       </div>
     );
   }

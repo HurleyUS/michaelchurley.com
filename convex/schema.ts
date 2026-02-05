@@ -7,7 +7,7 @@ export default defineSchema({
     name: v.string(),
     email: v.string(),
     phone: v.optional(v.string()),
-    message: v.string(),
+    message: v.optional(v.string()),
     date: v.string(), // YYYY-MM-DD format
     timeSlot: v.string(), // HH:MM format
     status: v.union(

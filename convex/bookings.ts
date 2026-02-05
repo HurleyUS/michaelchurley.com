@@ -6,7 +6,7 @@ export const create = mutation({
     name: v.string(),
     email: v.string(),
     phone: v.optional(v.string()),
-    message: v.string(),
+    message: v.optional(v.string()),
     date: v.string(), // ISO date string YYYY-MM-DD
     timeSlot: v.string(), // HH:MM format
   },
