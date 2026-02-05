@@ -10,16 +10,12 @@ import {
 import NotFoundFooterButtons from "@/components/layout/not-found-footer-buttons";
 
 export default async function NotFound() {
-  const headersList = headers();
-  console.log(headersList);
+  const headersList = await headers();
 
-  //const domain = headersList.get('host')
-  //const data = await getSiteData(domain)
-  const pathname = headersList.get("x-pathname");
-  const referrer: string = (headersList.get("referrer") as string) || "/";
+  const pathname = headersList.get("x-pathname") || "this page";
+  const referrer: string = headersList.get("referrer") || "/";
 
-  const errorMesage = `404 Page Not Found: ${pathname} ${referrer} ${JSON.stringify(headersList)}`;
-  console.error(errorMesage);
+  console.error(`404 Page Not Found: ${pathname} (referrer: ${referrer})`);
 
   return (
     <div className="flex flex-col items-center justify-center gap-md p-md w-full max-w-[1170px] mx-auto text-center">
