@@ -3,7 +3,7 @@ export const dynamic = "force-dynamic";
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 import Zaxbys from "@/components/dynamic/zaxbys";
 import { Button } from "@/components/ui/button";
-import Logo from "@/components/ui/logo";
+import HeroABTest from "@/components/hero/hero-ab-test";
 import Image from "next/image";
 import Link from "next/link";
 import { PiCalendarPlusLight } from "react-icons/pi";
@@ -38,9 +38,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-stretch justify-center gap-md grow w-full">
-              <div className="flex flex-col z-[0] absolute inset-0 opacity-50 pointer-none items-center justify-center sm:items-end sm:relative sm:z-[auto]">
-                <Logo multiplier={2} />
-              </div>
+              <HeroABTest />
               <div className="flex items-center justify-end gap-md px-md w-full text-xs">
                 <Link href="mailto:michaelhurley.pj@gmail.com">
                   <Button variant="outline">Email Me</Button>
@@ -234,7 +232,7 @@ export default function Home() {
                       Trident Technical College
                     </h3>
                     <p>
-                      <strong>A.A.</strong> Commercial Graphics, 2003
+                      <strong>A.A.</strong> Commercial Graphics, 2001 - 2003
                     </p>
                   </div>
                 </div>
@@ -243,7 +241,7 @@ export default function Home() {
                   <div className="flex flex-col items-stretch justify-start w-full bg-background rounded-lg p-md">
                     <h3 className="text-md font-bold">College of Charleston</h3>
                     <p>
-                      <strong>B.S.</strong> Computer Science, 2005
+                      <strong>B.S.</strong> Computer Science, 2003 - 2007
                     </p>
                   </div>
                 </div>
@@ -276,7 +274,7 @@ export default function Home() {
                   <strong>Hustle Launch</strong>
                 </h3>
                 <p>
-                  <strong>Senior PM</strong>, 02/2022 - 09/2024
+                  <strong>Director</strong>, 02/2024 - Present
                 </p>
                 <p>
                   MGR: 2.5k - <strong>$7k</strong>
@@ -328,10 +326,10 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-stretch justify-start p-md w-full sm:w-1/2">
                 <h3 className="text-md font-bold">
-                  <strong>Boessel Enterprises, LLC</strong>
+                  <strong>White Fox Studios</strong>
                 </h3>
                 <p>
-                  <strong>Director of Operations</strong>, 02/2015 - 03/2024
+                  <strong>Director</strong>, 02/2015 - 02/2024
                 </p>
                 <p>
                   Salary: $28k/yr - <strong>$60k++</strong>/yr
@@ -359,7 +357,7 @@ export default function Home() {
                   <strong>{"Papa John's Waynesville/Franklin, NC"}</strong>
                 </h3>
                 <p>
-                  <strong>GM/Franchisee Training</strong>, 05/2014 - 02/2015
+                  <strong>Franchisee Partner</strong>, 06/2014 - 02/2015
                 </p>
                 <p>
                   Salary: $7.50/h - <strong>$27k</strong>/yr
@@ -404,10 +402,10 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-stretch justify-start p-md w-full sm:w-1/2">
                 <h3 className="text-md font-bold">
-                  <strong>{"Studio 12 Designs"}</strong>
+                  <strong>{"StudioTWLEVE"}</strong>
                 </h3>
                 <p>
-                  <strong>Owner/Operator</strong>, 11/2008 - 02/2015
+                  <strong>Director</strong>, 01/2007 - 07/2010
                 </p>
                 <p>
                   ANP: $50k - <strong>$387k</strong>
@@ -434,7 +432,7 @@ export default function Home() {
                   <strong>{"Signs 'R' Us"}</strong>
                 </h3>
                 <p>
-                  <strong>Production Manager</strong>, 08/2005 - 11/2008
+                  <strong>Production Manager</strong>, 07/2003 - 01/2007
                 </p>
                 <p>
                   Salary: $10.50/h - <strong>$42k</strong>/yr
@@ -457,7 +455,7 @@ export default function Home() {
                   <strong>{"Corporate Cleaning Services, Inc."}</strong>
                 </h3>
                 <p>
-                  <strong>Regional Manager</strong>, 08/1999 - 07/2005
+                  <strong>Regional Manager</strong>, 06/1996 - 06/2003
                 </p>
                 <p>
                   Salary: $7.50/h - <strong>$35k</strong>/yr

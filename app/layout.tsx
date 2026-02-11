@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { ConvexClientProvider } from "@/components/providers/convex-client-provider";
+import { PostHogProvider } from "@/components/providers/posthog-provider";
 
 const siteUrl = "https://www.michaelchurley.com";
 const siteName = "Michael C. Hurley";
@@ -109,19 +110,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex min-h-dvh flex-col items-stretch justify-start relative bg-background overflow-x-clip overflow-y-auto">
-        <ConvexClientProvider>
-          <a href="#main" className="sr-only focus:not-sr-only">
-            {"Skip to main content"}
-          </a>
-          <Header />
-          <main
-            id="main"
-            className="flex grow flex-col items-stretch justify-start"
-          >
-            {children}
-          </main>
-          <Footer />
-        </ConvexClientProvider>
+        <PostHogProvider>
+          <ConvexClientProvider>
+            <a href="#main" className="sr-only focus:not-sr-only">
+              {"Skip to main content"}
+            </a>
+            <Header />
+            <main
+              id="main"
+              className="flex grow flex-col items-stretch justify-start"
+            >
+              {children}
+            </main>
+            <Footer />
+          </ConvexClientProvider>
+        </PostHogProvider>
       </body>
     </html>
   );
