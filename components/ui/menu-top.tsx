@@ -20,6 +20,7 @@ import {
 } from "react-icons/pi";
 import Link from "next/link";
 import { Button } from "./button";
+import { ThemeToggle } from "./theme-toggle";
 import BookingModal from "@/components/booking/booking-modal";
 
 export default function MenuTop() {
@@ -27,33 +28,35 @@ export default function MenuTop() {
     <>
       <div className="flex flex-col md:hidden">
         <Sheet>
-          <SheetTrigger>
+          <SheetTrigger aria-label="Open menu">
             <PiListLight />
           </SheetTrigger>
           <SheetContent className="p-0 bg-Base z-50 w-full h-dvh overflow-x-clip overflow-y-auto">
             <div className="flex flex-col items-stretch justify-start divide-y divide-y-foreground">
               <div className="flex items-center justify-between gap-md p-md w-full text-md">
-                <Link href="https://github.com/michaelmonetized">
+                <Link href="https://github.com/michaelmonetized" aria-label="GitHub profile">
                   <PiGithubLogoLight />
                 </Link>
 
-                <Link href="https://www.linkedin.com/in/michaelchurley/">
+                <Link href="https://www.linkedin.com/in/michaelchurley/" aria-label="LinkedIn profile">
                   <PiLinkedinLogoLight />
                 </Link>
 
-                <Link href="https://instagram.com/michaelh_rley">
+                <Link href="https://instagram.com/michaelh_rley" aria-label="Instagram profile">
                   <PiInstagramLogoLight />
                 </Link>
 
-                <Link href="https://x.com/MichaelH_rley2">
+                <Link href="https://x.com/MichaelH_rley2" aria-label="X profile">
                   <PiXLogoLight />
                 </Link>
 
-                <SheetTrigger>
+                <ThemeToggle />
+
+                <SheetTrigger aria-label="Close menu">
                   <PiXLight />
                 </SheetTrigger>
               </div>
-              
+
               {/* Navigation Links */}
               <div className="flex flex-col gap-2 p-md">
                 <Link href="/portfolio" className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg">
@@ -65,24 +68,21 @@ export default function MenuTop() {
                   <span>Blog</span>
                 </Link>
                 <BookingModal trigger={
-                  <button className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg w-full text-left">
+                  <button className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg text-left">
                     <PiCalendarPlusLight />
                     <span>Book a Meeting</span>
                   </button>
                 } />
               </div>
 
-              <div className="flex items-center justify-between gap-md p-md w-full">
-                <Link
-                  href="mailto:michaelhurley.pj@gmail.com"
-                  className="w-full"
-                >
-                  <Button variant="outline" className="w-full">
+              <div className="flex items-center justify-end gap-md p-md">
+                <Link href="mailto:michaelhurley.pj@gmail.com">
+                  <Button variant="outline">
                     Email Me
                   </Button>
                 </Link>
-                <Link href="tel:+18285931935" className="w-full">
-                  <Button variant="secondary" className="font-black w-full">
+                <Link href="tel:+18285931935">
+                  <Button variant="secondary" className="font-black">
                     Call or Text Me
                   </Button>
                 </Link>
@@ -104,21 +104,21 @@ export default function MenuTop() {
                 Blog
               </Link>
             </div>
-            
+
             <div className="flex items-center justify-between gap-md px-md w-full">
-              <Link href="https://github.com/michaelmonetized">
+              <Link href="https://github.com/michaelmonetized" aria-label="GitHub profile">
                 <PiGithubLogoLight />
               </Link>
 
-              <Link href="https://www.linkedin.com/in/michaelchurley/">
+              <Link href="https://www.linkedin.com/in/michaelchurley/" aria-label="LinkedIn profile">
                 <PiLinkedinLogoLight />
               </Link>
 
-              <Link href="https://instagram.com/michaelh_rley">
+              <Link href="https://instagram.com/michaelh_rley" aria-label="Instagram profile">
                 <PiInstagramLogoLight />
               </Link>
 
-              <Link href="https://x.com/MichaelH_rley2">
+              <Link href="https://x.com/MichaelH_rley2" aria-label="X profile">
                 <PiXLogoLight />
               </Link>
             </div>
@@ -136,6 +136,7 @@ export default function MenuTop() {
                   <span className="text-[14px]">Call or Text</span>
                 </Button>
               </Link>
+              <ThemeToggle />
               <BookingModal iconOnly />
             </div>
           </NavigationMenuList>

@@ -250,13 +250,13 @@ export default function BookingForm() {
         <div className="flex items-center justify-between mb-4">
           <div className="w-10">
             {canGoBack && (
-              <Button variant="ghost" size="icon" onClick={handlePrev}>
+              <Button variant="ghost" size="icon" onClick={handlePrev} aria-label="Previous days">
                 <PiCaretLeftBold />
               </Button>
             )}
           </div>
           <h3 className="text-lg font-semibold">Select a Time</h3>
-          <Button variant="ghost" size="icon" onClick={handleNext}>
+          <Button variant="ghost" size="icon" onClick={handleNext} aria-label="Next days">
             <PiCaretRightBold />
           </Button>
         </div>
@@ -359,10 +359,12 @@ export default function BookingForm() {
               required
             />
           </div>
-          {error && <p className="text-sm text-red-500">{error}</p>}
-          <Button type="submit" disabled={isSubmitting} className="w-full">
-            {isSubmitting ? "Booking..." : "Book Now"}
-          </Button>
+          {error && <p className="text-sm text-red-500" role="alert">{error}</p>}
+          <div className="flex justify-end">
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Booking..." : "Book Now"}
+            </Button>
+          </div>
         </form>
       </div>
     );

@@ -57,7 +57,7 @@
 - [ ] Create 404 page
 - [ ] Design error pages
 - [ ] Improve mobile experience
-- [ ] Add dark mode toggle
+- [x] Add dark mode toggle (next-themes, defaultTheme="dark")
 - [ ] Create interactive resume timeline
 
 ### SEO & Analytics

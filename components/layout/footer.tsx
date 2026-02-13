@@ -23,23 +23,30 @@ export default async function Footer() {
           <Link
             href="https://github.com/michaelmonetized"
             title="Michael Hurley on GitHub"
+            aria-label="GitHub profile"
           >
             <PiGithubLogoLight className="w-6 h-6 inline-block" />
           </Link>
           <Link
             href="https://www.linkedin.com/in/michaelchurley/"
             title="Michael Hurley on LinkedIn"
+            aria-label="LinkedIn profile"
           >
             <PiLinkedinLogoLight className="w-6 h-6 inline-block" />
           </Link>
           <Link
             href="https://instagram.com/michaelh_rley"
             title="Michael Hurley on Instagram"
+            aria-label="Instagram profile"
           >
             <PiInstagramLogoLight className="w-6 h-6 inline-block" />
           </Link>
-          <Link href="https://x.com/MichaelH_rley2" title="Michael Hurley on X">
-            <PiXLogoLight className="w-6 h-6  inline-block" />
+          <Link
+            href="https://x.com/MichaelH_rley2"
+            title="Michael Hurley on X"
+            aria-label="X profile"
+          >
+            <PiXLogoLight className="w-6 h-6 inline-block" />
           </Link>
         </p>
       </div>

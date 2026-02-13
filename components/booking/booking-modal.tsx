@@ -18,7 +18,7 @@ export default function BookingModal({ trigger, iconOnly }: BookingModalProps) {
       <DialogTrigger asChild>
         {trigger || (
           iconOnly ? (
-            <Button size="icon">
+            <Button size="icon" aria-label="Book a meeting">
               <PiCalendarPlusLight />
             </Button>
           ) : (

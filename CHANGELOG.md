@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Added
+- **Dark Mode Toggle** via next-themes (defaultTheme="dark", class-based)
+  - ThemeProvider wrapping the app with dark-first default
+  - ThemeToggle component in header (desktop + mobile)
+  - Removed `@media (prefers-color-scheme: dark)` in favor of `.dark` class
+
+### Changed
+- **proxy.ts**: Switched from `isPublicRoute` (enumerating every public route) to `isPrivateRoute` pattern per BUILDING.md Commandment II
+- **Booking form submit button**: Removed `w-full`, now content-width with bottom-right alignment
+- **Mobile menu buttons**: Removed `w-full` from "Email Me" and "Call or Text Me" buttons
+- **Contact form submit button**: Removed `w-full`, now self-end aligned
+
+### Fixed
+- **Accessibility**: Added `aria-label` attributes to all social icon links (header, footer, mobile menu), theme toggle, booking modal icon button, and navigation icon buttons
+- **Accessibility**: Added `role="alert"` to form error messages
+- **Tailwind dark mode**: Added `darkMode: "class"` to tailwind.config.ts for class-based toggling
+- **HTML**: Added `suppressHydrationWarning` to `<html>` tag for next-themes SSR compatibility
+
+### Previously Added
 - **Convex Backend Integration**
   - Set up Convex with schema for portfolio items, blog posts, and comments
   - Created CRUD operations for all content types

@@ -4,6 +4,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { ConvexClientProvider } from "@/components/providers/convex-client-provider";
 import { PostHogProvider } from "@/components/providers/posthog-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const siteUrl = "https://www.michaelchurley.com";
 const siteName = "Michael C. Hurley";
@@ -108,23 +109,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col items-stretch justify-start relative bg-background overflow-x-clip overflow-y-auto">
-        <PostHogProvider>
-          <ConvexClientProvider>
-            <a href="#main" className="sr-only focus:not-sr-only">
-              {"Skip to main content"}
-            </a>
-            <Header />
-            <main
-              id="main"
-              className="flex grow flex-col items-stretch justify-start"
-            >
-              {children}
-            </main>
-            <Footer />
-          </ConvexClientProvider>
-        </PostHogProvider>
+        <ThemeProvider>
+          <PostHogProvider>
+            <ConvexClientProvider>
+              <a href="#main" className="sr-only focus:not-sr-only">
+                {"Skip to main content"}
+              </a>
+              <Header />
+              <main
+                id="main"
+                className="flex grow flex-col items-stretch justify-start"
+              >
+                {children}
+              </main>
+              <Footer />
+            </ConvexClientProvider>
+          </PostHogProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
