@@ -520,7 +520,7 @@ export default function Home() {
               Schedule a 30-minute call to discuss your project, business needs, 
               or collaboration opportunities.
             </p>
-            <div className="flex flex-col flex-wrap wrap sm:flex-row items-center justify-center p-md text-xs grow w-full gap-md">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center p-md text-xs w-full max-w-2xl mx-auto gap-md">
               <Link
                 href="/book"
                 className="block border-gradient-animated"
