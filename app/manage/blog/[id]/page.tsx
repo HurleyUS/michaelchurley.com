@@ -242,7 +242,7 @@ export default function EditBlogPost() {
   // Handle invalid ID after hooks
   if (!rawId) {
     return (
-      <div className="max-w-4xl mx-auto py-8 px-4">
+      <div className="max-w-[56rem] mx-auto py-8 px-4">
         <p className="text-destructive">Invalid blog post ID</p>
         <Link href="/manage/blog" className="text-primary hover:underline">
           Back to Blog
@@ -253,7 +253,7 @@ export default function EditBlogPost() {
 
   if (post === undefined) {
     return (
-      <div className="max-w-4xl mx-auto py-8 px-4">
+      <div className="max-w-[56rem] mx-auto py-8 px-4">
         <div className="animate-pulse space-y-4">
           <div className="h-8 bg-muted rounded w-1/3"></div>
           <div className="h-12 bg-muted rounded"></div>
@@ -266,7 +266,7 @@ export default function EditBlogPost() {
 
   if (post === null) {
     return (
-      <div className="max-w-4xl mx-auto py-8 px-4">
+      <div className="max-w-[56rem] mx-auto py-8 px-4">
         <p className="text-destructive">Blog post not found</p>
         <Link href="/manage/blog" className="text-primary hover:underline">
           Back to Blog
@@ -276,7 +276,7 @@ export default function EditBlogPost() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto py-8 px-4">
+    <div className="max-w-[56rem] mx-auto py-8 px-4">
       <div className="flex items-center gap-4 mb-8">
         <Link
           href="/manage/blog"

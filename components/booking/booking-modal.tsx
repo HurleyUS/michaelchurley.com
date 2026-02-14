@@ -29,7 +29,7 @@ export default function BookingModal({ trigger, iconOnly }: BookingModalProps) {
           )
         )}
       </DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-[42rem] max-h-[90vh] overflow-y-auto">
         <VisuallyHidden>
           <DialogTitle>Book a Meeting</DialogTitle>
           <DialogDescription>Select a time slot and enter your details to book a meeting.</DialogDescription>

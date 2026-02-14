@@ -57,7 +57,7 @@ export default function BlogPostPage() {
       <ContainerBoxedCenter
         propsInner={{
           className:
-            "flex flex-col items-stretch justify-start gap-lg grow w-full max-w-4xl mx-auto",
+            "flex flex-col items-stretch justify-start gap-lg grow w-full max-w-[56rem] mx-auto",
         }}
       >
         {/* Back link */}

@@ -204,7 +204,7 @@ export default function NewBlogPost() {
   };
 
   return (
-    <div className="p-6 lg:p-8 max-w-5xl mx-auto">
+    <div className="p-6 lg:p-8 max-w-[64rem] mx-auto">
       <div className="flex items-center gap-4 mb-8">
         <Link
           href="/manage/blog"

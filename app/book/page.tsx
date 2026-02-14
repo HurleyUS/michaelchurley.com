@@ -20,13 +20,13 @@ export default function BookPage() {
             <h1 className="text-4xl md:text-5xl font-black tracking-tight">
               Book a Meeting
             </h1>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-[36rem] mx-auto">
               Schedule a 30-minute call to discuss business opportunities, 
               technology projects, or collaboration ideas.
             </p>
           </div>
           
-          <div className="w-full max-w-2xl bg-background/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-border/50">
+          <div className="w-full max-w-[42rem] bg-background/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-border/50">
             <BookingForm />
           </div>
 
