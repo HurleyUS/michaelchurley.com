@@ -13,6 +13,7 @@ import type * as bookings from "../bookings.js";
 import type * as comments from "../comments.js";
 import type * as lib_auth from "../lib/auth.js";
 import type * as migrations_clearOldImages from "../migrations/clearOldImages.js";
+import type * as migrations_insertBigCooldown from "../migrations/insertBigCooldown.js";
 import type * as portfolio from "../portfolio.js";
 import type * as storage from "../storage.js";
 
@@ -28,6 +29,7 @@ declare const fullApi: ApiFromModules<{
   comments: typeof comments;
   "lib/auth": typeof lib_auth;
   "migrations/clearOldImages": typeof migrations_clearOldImages;
+  "migrations/insertBigCooldown": typeof migrations_insertBigCooldown;
   portfolio: typeof portfolio;
   storage: typeof storage;
 }>;
