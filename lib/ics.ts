@@ -86,7 +86,7 @@ export function generateBookingICS(booking: {
     endTime,
     organizer: {
       name: 'Michael C. Hurley',
-      email: 'michaelmonetized@gmail.com',
+      email: process.env.ADMIN_EMAIL || 'michaelmonetized@gmail.com',
     },
     attendee: {
       name: booking.name,

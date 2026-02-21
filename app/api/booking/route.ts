@@ -7,11 +7,41 @@ const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
-const OWNER_EMAIL = 'michaelmonetized@gmail.com';
-const FROM_EMAIL = 'notify@uncap.us';
+const OWNER_EMAIL = process.env.ADMIN_EMAIL || 'michaelmonetized@gmail.com';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'notify@uncap.us';
+
+// Rate limiting: 5 bookings per hour per IP
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limit by IP
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || request.headers.get('x-real-ip')
+      || 'unknown';
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: 'Too many booking requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
+
     // Check if Resend is configured
     if (!resend) {
       return NextResponse.json(
