@@ -1,9 +1,11 @@
 import { mutation } from "../_generated/server";
+import { requireAdmin } from "../lib/auth";
 
 // One-time migration to clear old URL-based cover images
 export const clearOldCoverImages = mutation({
   args: {},
   handler: async (ctx) => {
+    await requireAdmin(ctx);
     // Clear blog posts
     const blogPosts = await ctx.db.query("blogPosts").collect();
     for (const post of blogPosts) {

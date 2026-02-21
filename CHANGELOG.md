@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Security
+- Added rate limiting to authentication endpoints to prevent brute-force attacks (#17)
+- Restricted admin email configuration to prevent unauthorized access (#17)
+- Added CSRF protection to auth flows (#17)
+
+### Fixed
+- Authentication bypass vulnerability in admin routes (#17)
+- Rate limiting middleware for login/signup endpoints (#17)
+
+### Changed
+- Admin email now validated against allowlist (#17)
+- Enhanced auth error messages for better security posture (#17)
+
 ### Added
 - **Dark Mode Toggle** via next-themes (defaultTheme="dark", class-based)
   - ThemeProvider wrapping the app with dark-first default

@@ -1,5 +1,6 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
+import { requireAdmin } from "./lib/auth";
 
 export const create = mutation({
   args: {
@@ -74,6 +75,7 @@ export const updateStatus = mutation({
     ),
   },
   handler: async (ctx, args) => {
+    await requireAdmin(ctx);
     return await ctx.db.patch(args.id, {
       status: args.status,
       updatedAt: Date.now(),

@@ -175,6 +175,7 @@ export const remove = mutation({
 // Cleanup expired pending comments (can be called via cron)
 export const cleanupExpired = mutation({
   handler: async (ctx) => {
+    await requireAdmin(ctx);
     const now = Date.now();
     const expired = await ctx.db
       .query("pendingComments")
