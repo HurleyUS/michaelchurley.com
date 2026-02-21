@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
+import { fetchQuery } from "convex/nextjs";
+import { api } from "@/convex/_generated/api";
 
 const BASE_URL = "https://www.michaelchurley.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 
-  // Static routes with their priorities and change frequencies
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -33,18 +34,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Note: For dynamic routes (blog posts, portfolio items), 
-  // consider implementing a build-time data fetch or using 
-  // generateSitemaps() for larger sites with 50k+ URLs.
-  // 
-  // Example for dynamic content (requires API endpoint or build-time fetch):
-  // const blogPosts = await fetchBlogPosts();
-  // const blogRoutes = blogPosts.map((post) => ({
-  //   url: `${BASE_URL}/blog/${post.slug}`,
-  //   lastModified: new Date(post.updatedAt),
-  //   changeFrequency: "weekly" as const,
-  //   priority: 0.7,
-  // }));
+  try {
+    const [blogPosts, portfolioItems] = await Promise.all([
+      fetchQuery(api.blog.list, { onlyPublished: true }),
+      fetchQuery(api.portfolio.list, { onlyPublished: true }),
+    ]);
 
-  return [...staticRoutes];
+    const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.updatedAt),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    }));
+
+    const portfolioRoutes: MetadataRoute.Sitemap = portfolioItems.map((item) => ({
+      url: `${BASE_URL}/portfolio/${item.slug}`,
+      lastModified: new Date(item.updatedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
+
+    return [...staticRoutes, ...blogRoutes, ...portfolioRoutes];
+  } catch (err) {
+    console.error("sitemap: failed to fetch dynamic routes", err);
+    return staticRoutes;
+  }
 }
