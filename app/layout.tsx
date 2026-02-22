@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { ConvexClientProvider } from "@/components/providers/convex-client-provider";
-import { PostHogProvider } from "@/components/providers/posthog-provider";
-import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const siteUrl = "https://www.michaelchurley.com";
 const siteName = "Michael C. Hurley";
@@ -111,9 +108,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col items-stretch justify-start relative bg-background overflow-x-clip overflow-y-auto">
-        <ThemeProvider>
-          <PostHogProvider>
-            <ConvexClientProvider>
+        <Providers>
               <a href="#main" className="sr-only focus:not-sr-only">
                 {"Skip to main content"}
               </a>
@@ -125,9 +120,7 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
-            </ConvexClientProvider>
-          </PostHogProvider>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
