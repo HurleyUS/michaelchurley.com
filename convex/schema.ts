@@ -16,8 +16,6 @@ export default defineSchema({
       v.literal("cancelled"),
       v.literal("completed")
     ),
-    createdAt: v.number(),
-    updatedAt: v.number(),
   })
     .index("by_date", ["date"])
     .index("by_status", ["status"])
@@ -37,8 +35,6 @@ export default defineSchema({
     featured: v.boolean(),
     published: v.boolean(),
     publishedAt: v.optional(v.number()),
-    createdAt: v.number(),
-    updatedAt: v.number(),
   })
     .index("by_slug", ["slug"])
     .index("by_published", ["published"])
@@ -56,8 +52,6 @@ export default defineSchema({
     published: v.boolean(),
     publishedAt: v.optional(v.number()),
     readingTime: v.optional(v.number()), // Minutes
-    createdAt: v.number(),
-    updatedAt: v.number(),
   })
     .index("by_slug", ["slug"])
     .index("by_published", ["published"])
@@ -82,9 +76,6 @@ export default defineSchema({
     // Status
     verified: v.boolean(), // True if user completed sign-in
     visible: v.boolean(), // Only visible if verified
-    
-    createdAt: v.number(),
-    updatedAt: v.number(),
   })
     .index("by_item", ["itemType", "itemId"])
     .index("by_author_email", ["authorEmail"])
@@ -97,7 +88,6 @@ export default defineSchema({
     email: v.string(),
     content: v.string(),
     sessionId: v.string(), // To link back after sign-in
-    createdAt: v.number(),
     expiresAt: v.number(), // Auto-expire after 24 hours
   })
     .index("by_session", ["sessionId"])

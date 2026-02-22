@@ -1,7 +1,5 @@
 "use client";
 
-export const dynamicRoute = "force-dynamic";
-
 import { useState, useRef, KeyboardEvent, DragEvent } from "react";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
