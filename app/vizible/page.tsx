@@ -106,25 +106,66 @@ const plans = [
   },
 ];
 
+const stackFeatures = [
+  {
+    name: "Local Search & SEO",
+    desc: "Listing management, keyword tracking, AI business profiles, 60+ directories.",
+  },
+  {
+    name: "Reputation Mgmt",
+    desc: "AI review monitoring, sentiment analysis, competitive benchmarking.",
+  },
+  {
+    name: "Social Media",
+    desc: "Scheduling, posting, engagement monitoring, AI sentiment analysis.",
+  },
+  {
+    name: "AI Assistant",
+    desc: "Web chat lead capture, Instagram/FB integration, SMS, shared inbox.",
+  },
+  {
+    name: "AI Phone Agent",
+    desc: "24/7 AI receptionist, multi-language, lead capture, call summaries.",
+  },
+  {
+    name: "Email & SMS",
+    desc: "AI email builder + SMS campaigns with 98% open rates.",
+  },
+  {
+    name: "Paid Advertising",
+    desc: "Managed local ads, multi-platform, performance tracking.",
+  },
+  {
+    name: "Website Design",
+    desc: "From $2,497 for 3-page sites to full e-commerce builds.",
+  },
+];
+
+const trustStats = [
+  { label: "30+ Years", sub: "Serving Small Biz" },
+  { label: "Zero Churn", sub: "Client Retention" },
+  { label: "No Contracts", sub: "Month to Month" },
+  { label: "Award-Winning", sub: "Platform" },
+];
+
 export default function ViziblePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section className="relative bg-gradient-to-b from-Base to-Crust overflow-hidden">
+      <section className="bg-gradient-to-b from-Base to-Crust">
         <ContainerBoxedCenter
           props={{ className: "max-w-[1170px] py-4xl" }}
           propsInner={{
-            className:
-              "grid gap-lg lg:grid-cols-2 lg:items-center w-full",
+            className: "grid gap-lg lg:grid-cols-2 lg:items-center w-full",
           }}
         >
           {/* Text column */}
           <div className="flex flex-col items-start gap-md order-2 lg:order-1">
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary border border-primary/30 rounded-full px-3 py-1">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary">
               Official Partnership
             </span>
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight">
+            <h1 className="text-xl font-black leading-tight">
               Marketing That Finally Works{" "}
               <span className="text-primary">
                 &amp; Grows Your Business
@@ -142,7 +183,7 @@ export default function ViziblePage() {
               />
             </div>
 
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-prose">
+            <p className="text-xs text-muted-foreground leading-relaxed max-w-prose">
               I partnered with Vizible because they solve the three problems
               every local business owner has — no strategy, no visibility, and
               no time. You get a Personal CMO, a real-time dashboard, and a CRM
@@ -156,24 +197,6 @@ export default function ViziblePage() {
               <Link href="#features">
                 <Button variant="outline">Explore Features</Button>
               </Link>
-            </div>
-
-            {/* Trust pills */}
-            <div className="flex flex-wrap gap-xs text-xs text-Overlay2 pt-xs">
-              {[
-                "30+ Years Serving Small Biz",
-                "Zero Client Churn",
-                "No Contracts",
-                "Award-Winning Platform",
-              ].map((t) => (
-                <span
-                  key={t}
-                  className="flex items-center gap-1 bg-Surface0/50 rounded-full px-2 py-0.5"
-                >
-                  <span className="h-1 w-1 rounded-full bg-Green" />
-                  {t}
-                </span>
-              ))}
             </div>
           </div>
 
@@ -192,17 +215,34 @@ export default function ViziblePage() {
         </ContainerBoxedCenter>
       </section>
 
+      {/* ── TRUST BAR ── */}
+      <section className="bg-Crust border-y border-Surface0">
+        <ContainerBoxedCenter props={{ className: "max-w-[1170px] py-md" }}>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-sm w-full">
+            {trustStats.map((s) => (
+              <div
+                key={s.label}
+                className="flex flex-col items-center text-center gap-0.5"
+              >
+                <span className="text-sm font-black text-Text">{s.label}</span>
+                <span className="text-xs text-Overlay1">{s.sub}</span>
+              </div>
+            ))}
+          </div>
+        </ContainerBoxedCenter>
+      </section>
+
       {/* ── THE BIG THREE ── */}
       <section
         id="features"
-        className="bg-Latte-Crust bg-gradient-to-b from-Latte-Crust to-Latte-Mantle dark:bg-Mocha-Crust dark:from-Mocha-Crust dark:to-Mocha-Mantle py-4xl"
+        className="bg-gradient-to-b from-Latte-Crust to-Latte-Mantle dark:from-Mocha-Crust dark:to-Mocha-Mantle py-4xl"
       >
         <ContainerBoxedCenter props={{ className: "max-w-[1170px]" }}>
           <div className="flex flex-col items-center text-center gap-md w-full">
             <h2 className="font-black text-lg">
               The Three Things That Convinced Me
             </h2>
-            <p className="text-sm text-muted-foreground max-w-prose">
+            <p className="text-xs text-muted-foreground max-w-prose">
               I&apos;ve built marketing tools. I&apos;ve managed campaigns.
               These are the three features that made Vizible different from
               everything else.
@@ -226,17 +266,17 @@ export default function ViziblePage() {
                 </p>
                 <ul className="text-xs text-Subtext1 space-y-1 mt-auto pt-sm">
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Custom marketing
+                    <span className="text-Green shrink-0">✓</span> Custom marketing
                     strategy
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Weekly data reviews
+                    <span className="text-Green shrink-0">✓</span> Weekly data reviews
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Brand development
+                    <span className="text-Green shrink-0">✓</span> Brand development
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> SEO, social, ads,
+                    <span className="text-Green shrink-0">✓</span> SEO, social, ads,
                     email expertise
                   </li>
                 </ul>
@@ -263,18 +303,18 @@ export default function ViziblePage() {
                 </p>
                 <ul className="text-xs text-Subtext1 space-y-1 mt-auto pt-sm">
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Real-time performance
+                    <span className="text-Green shrink-0">✓</span> Real-time performance
                     metrics
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Profile management
+                    <span className="text-Green shrink-0">✓</span> Profile management
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Client communication
+                    <span className="text-Green shrink-0">✓</span> Client communication
                     hub
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> AI content generation
+                    <span className="text-Green shrink-0">✓</span> AI content generation
                   </li>
                 </ul>
                 <blockquote className="border-l-2 border-primary pl-sm mt-sm">
@@ -300,18 +340,18 @@ export default function ViziblePage() {
                 </p>
                 <ul className="text-xs text-Subtext1 space-y-1 mt-auto pt-sm">
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Leads with full
+                    <span className="text-Green shrink-0">✓</span> Leads with full
                     history
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Task &amp; team
+                    <span className="text-Green shrink-0">✓</span> Task &amp; team
                     workflows
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Calendar scheduling
+                    <span className="text-Green shrink-0">✓</span> Calendar scheduling
                   </li>
                   <li className="flex gap-2">
-                    <span className="text-Green">✓</span> Pipeline analytics
+                    <span className="text-Green shrink-0">✓</span> Pipeline analytics
                   </li>
                 </ul>
                 <blockquote className="border-l-2 border-primary pl-sm mt-sm">
@@ -326,58 +366,27 @@ export default function ViziblePage() {
         </ContainerBoxedCenter>
       </section>
 
-      {/* ── FULL STACK ── */}
-      <section className="bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl">
+      {/* ── FULL MARKETING STACK ── */}
+      <section className="bg-gradient-to-b from-Latte-Mantle to-Latte-Base dark:from-Mocha-Mantle dark:to-Mocha-Base py-4xl">
         <ContainerBoxedCenter props={{ className: "max-w-[1170px]" }}>
           <div className="flex flex-col items-center text-center gap-md w-full">
             <h2 className="font-black text-lg">The Full Marketing Stack</h2>
-            <p className="text-sm text-muted-foreground max-w-prose">
+            <p className="text-xs text-muted-foreground max-w-prose">
               Beyond the big three, Vizible covers every channel your local
               business needs.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-sm w-full pt-md">
-            {[
-              {
-                n: "Local Search & SEO",
-                d: "Listing management, keyword tracking, AI business profiles, 60+ directories.",
-              },
-              {
-                n: "Reputation Mgmt",
-                d: "AI review monitoring, sentiment analysis, competitive benchmarking.",
-              },
-              {
-                n: "Social Media",
-                d: "Scheduling, posting, engagement monitoring, AI sentiment analysis.",
-              },
-              {
-                n: "AI Assistant",
-                d: "Web chat lead capture, Instagram/FB integration, SMS, shared inbox.",
-              },
-              {
-                n: "AI Phone Agent",
-                d: "24/7 AI receptionist, multi-language, lead capture, call summaries.",
-              },
-              {
-                n: "Email & SMS",
-                d: "AI email builder + SMS campaigns with 98% open rates.",
-              },
-              {
-                n: "Paid Advertising",
-                d: "Managed local ads, multi-platform, performance tracking.",
-              },
-              {
-                n: "Website Design",
-                d: "From $2,497 for 3-page sites to full e-commerce builds.",
-              },
-            ].map((f) => (
+            {stackFeatures.map((f) => (
               <div
-                key={f.n}
+                key={f.name}
                 className="flex flex-col gap-xs p-md rounded-lg bg-Surface0/30 border border-Surface0 hover:border-primary/30 transition-colors"
               >
-                <h3 className="text-xs font-bold text-Text">{f.n}</h3>
-                <p className="text-xs text-Overlay2 leading-relaxed">{f.d}</p>
+                <h3 className="text-xs font-bold text-Text">{f.name}</h3>
+                <p className="text-xs text-Overlay2 leading-relaxed">
+                  {f.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -385,7 +394,7 @@ export default function ViziblePage() {
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section className="bg-Latte-Crust bg-gradient-to-b from-Latte-Crust to-Latte-Base dark:bg-Mocha-Crust dark:from-Mocha-Crust dark:to-Mocha-Base py-4xl">
+      <section className="bg-gradient-to-b from-Latte-Base to-Latte-Crust dark:from-Mocha-Base dark:to-Mocha-Crust py-4xl">
         <ContainerBoxedCenter props={{ className: "max-w-[1170px]" }}>
           <h2 className="font-black text-lg text-center w-full">
             What Business Owners Say
@@ -420,12 +429,12 @@ export default function ViziblePage() {
       {/* ── PRICING ── */}
       <section
         id="pricing"
-        className="bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl"
+        className="bg-gradient-to-b from-Latte-Crust to-Latte-Mantle dark:from-Mocha-Crust dark:to-Mocha-Mantle py-4xl"
       >
         <ContainerBoxedCenter props={{ className: "max-w-[1170px]" }}>
           <div className="flex flex-col items-center text-center gap-md w-full">
             <h2 className="font-black text-lg">Plans &amp; Pricing</h2>
-            <p className="text-sm text-muted-foreground max-w-prose">
+            <p className="text-xs text-muted-foreground max-w-prose">
               Every plan includes Vizible&apos;s award-winning platform. No
               contracts — they earn your business every month.
             </p>
@@ -443,7 +452,7 @@ export default function ViziblePage() {
               >
                 <div className="flex flex-col gap-sm bg-background rounded-lg p-lg h-full relative">
                   {plan.highlighted && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold bg-primary text-primary-foreground rounded-full px-3 py-0.5">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold bg-primary text-primary-foreground rounded-full px-3 py-0.5 whitespace-nowrap">
                       Most Popular
                     </span>
                   )}
@@ -454,7 +463,7 @@ export default function ViziblePage() {
                     <p className="text-xs text-Overlay1">{plan.tagline}</p>
                   </div>
                   <p className="flex items-baseline gap-1">
-                    <span className="text-xl font-black text-Text">
+                    <span className="text-lg font-black text-Text">
                       {plan.price}
                     </span>
                     {plan.period && (
@@ -474,11 +483,9 @@ export default function ViziblePage() {
                   <div className="mt-auto pt-sm">
                     <Link
                       href="mailto:michael@hurleyus.com?subject=Vizible%20Inquiry"
-                      className="block"
                     >
                       <Button
                         variant={plan.highlighted ? "default" : "outline"}
-                        className="w-auto"
                       >
                         Get Started
                       </Button>
@@ -492,11 +499,11 @@ export default function ViziblePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-gradient-to-b from-Latte-Base to-Latte-Crust dark:from-Mocha-Base dark:to-Mocha-Crust py-4xl">
+      <section className="bg-gradient-to-b from-Latte-Mantle to-Latte-Crust dark:from-Mocha-Mantle dark:to-Mocha-Crust py-4xl">
         <ContainerBoxedCenter props={{ className: "max-w-[800px]" }}>
           <div className="flex flex-col items-center text-center gap-md w-full">
             <h2 className="font-black text-lg">Ready to Stop Guessing?</h2>
-            <p className="text-sm text-muted-foreground max-w-prose">
+            <p className="text-xs text-muted-foreground max-w-prose">
               Most marketing platforms give you a login and say good luck.
               Vizible gives you a person, a platform, and a plan.
             </p>
