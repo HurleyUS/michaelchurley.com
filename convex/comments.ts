@@ -18,7 +18,7 @@ export const listForItem = query({
       .filter((q) => q.eq(q.field("visible"), true))
       .collect();
     
-    return comments.sort((a, b) => a.createdAt - b.createdAt);
+    return comments.sort((a, b) => a._creationTime - b._creationTime);
   },
 });
 
@@ -47,7 +47,6 @@ export const createPending = mutation({
     
     return await ctx.db.insert("pendingComments", {
       ...args,
-      createdAt: now,
       expiresAt,
     });
   },
@@ -113,8 +112,6 @@ export const verifyAndPublish = mutation({
       content: pending.content,
       verified: true,
       visible: true,
-      createdAt: pending.createdAt,
-      updatedAt: now,
     });
     
     // Delete the pending comment
@@ -141,7 +138,7 @@ export const listAll = query({
       comments = comments.filter((c) => c.visible);
     }
     
-    return comments.sort((a, b) => b.createdAt - a.createdAt);
+    return comments.sort((a, b) => b._creationTime - a._creationTime);
   },
 });
 
@@ -157,7 +154,6 @@ export const toggleVisibility = mutation({
     
     await ctx.db.patch(args.id, {
       visible: !comment.visible,
-      updatedAt: Date.now(),
     });
   },
 });

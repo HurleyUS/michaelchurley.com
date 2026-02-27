@@ -1,30 +1,37 @@
-"use client";
-
-import { useQuery } from "convex/react";
+import { fetchQuery } from "convex/nextjs";
 import { api } from "@/convex/_generated/api";
-import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ContainerBoxedCenter } from "@/components/layout/containers";
+import type { Metadata } from "next";
 
-export default function BlogPage() {
-  const searchParams = useSearchParams();
-  const selectedTag = searchParams.get("tag");
-  
-  // Pass the tag to filter posts server-side
-  const blogPosts = useQuery(api.blog.list, { 
-    onlyPublished: true,
-    tag: selectedTag || undefined,
+export const metadata: Metadata = {
+  title: "Blog — Michael C. Hurley",
+  description: "Thoughts, tutorials, and insights from Michael C. Hurley.",
+};
+
+function formatDate(timestamp: number | undefined) {
+  if (!timestamp) return "";
+  return new Date(timestamp).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
-  const tags = useQuery(api.blog.getAllTags);
+}
 
-  const formatDate = (timestamp: number | undefined) => {
-    if (!timestamp) return "";
-    return new Date(timestamp).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
-  };
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tag?: string }>;
+}) {
+  const { tag: selectedTag } = await searchParams;
+
+  const [blogPosts, tags] = await Promise.all([
+    fetchQuery(api.blog.list, {
+      onlyPublished: true,
+      tag: selectedTag || undefined,
+    }),
+    fetchQuery(api.blog.getAllTags),
+  ]);
 
   return (
     <section className="flex flex-col py-4xl bg-gradient-to-b from-Base to-Crust">
@@ -44,12 +51,11 @@ export default function BlogPage() {
         {/* Tags */}
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap justify-center gap-2">
-            {/* All posts link */}
             <Link
               href="/blog"
               className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                !selectedTag 
-                  ? "bg-primary text-primary-foreground" 
+                !selectedTag
+                  ? "bg-primary text-primary-foreground"
                   : "bg-muted hover:bg-muted/80"
               }`}
             >
@@ -60,8 +66,8 @@ export default function BlogPage() {
                 key={tag}
                 href={`/blog?tag=${encodeURIComponent(tag)}`}
                 className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  selectedTag === tag 
-                    ? "bg-primary text-primary-foreground" 
+                  selectedTag === tag
+                    ? "bg-primary text-primary-foreground"
                     : "bg-muted hover:bg-muted/80"
                 }`}
               >
@@ -71,13 +77,12 @@ export default function BlogPage() {
           </div>
         )}
 
-        {/* Show active filter */}
         {selectedTag && (
           <div className="flex items-center justify-center gap-2">
             <span className="text-muted-foreground">Showing posts tagged:</span>
             <span className="font-medium">{selectedTag}</span>
-            <Link 
-              href="/blog" 
+            <Link
+              href="/blog"
               className="text-xs text-muted-foreground hover:text-foreground"
             >
               (clear)
@@ -85,11 +90,7 @@ export default function BlogPage() {
           </div>
         )}
 
-        {blogPosts === undefined ? (
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
-          </div>
-        ) : blogPosts.length === 0 ? (
+        {blogPosts.length === 0 ? (
           <div className="text-center py-12 text-muted-foreground">
             {selectedTag ? (
               <p>No posts found with tag &quot;{selectedTag}&quot;.</p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { Providers } from "@/providers";
 
 const siteUrl = "https://www.michaelchurley.com";
 const siteName = "Michael C. Hurley";

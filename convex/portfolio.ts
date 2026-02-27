@@ -21,8 +21,6 @@ async function resolveItemWithImages(
     featured: boolean;
     published: boolean;
     publishedAt?: number;
-    createdAt: number;
-    updatedAt: number;
   }
 ) {
   let coverImageUrl: string | null = null;
@@ -79,7 +77,7 @@ export const list = query({
       items = await ctx.db.query("portfolioItems").collect();
     }
 
-    items = items.sort((a, b) => b.createdAt - a.createdAt);
+    items = items.sort((a, b) => b._creationTime - a._creationTime);
 
     // Resolve all image URLs
     return Promise.all(items.map((item) => resolveItemWithImages(ctx, item)));
@@ -159,8 +157,6 @@ export const create = mutation({
     return await ctx.db.insert("portfolioItems", {
       ...args,
       publishedAt: args.published ? now : undefined,
-      createdAt: now,
-      updatedAt: now,
     });
   },
 });
@@ -203,7 +199,6 @@ export const update = mutation({
     const now = Date.now();
     const updateData: Record<string, unknown> = {
       ...updates,
-      updatedAt: now,
     };
 
     // Set publishedAt if publishing for the first time
@@ -239,7 +234,6 @@ export const clearCoverImage = mutation({
 
     await ctx.db.patch(args.id, {
       coverImage: undefined,
-      updatedAt: Date.now(),
     });
   },
 });

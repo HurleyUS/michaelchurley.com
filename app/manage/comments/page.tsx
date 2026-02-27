@@ -68,7 +68,7 @@ export default function ManageComments() {
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-lg">
-                        {(comment.authorName || comment.authorEmail)[0].toUpperCase()}
+                        {(comment.authorName || comment.authorEmail || "?")[0]?.toUpperCase()}
                       </span>
                     </div>
                   )}
@@ -78,7 +78,7 @@ export default function ManageComments() {
                         {comment.authorName || comment.authorEmail}
                       </span>
                       <span className="text-xs text-muted-foreground">
-                        {formatDate(comment.createdAt)}
+                        {formatDate(comment._creationTime)}
                       </span>
                     </div>
                     <p className="text-sm">{comment.content}</p>

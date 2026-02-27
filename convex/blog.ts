@@ -19,8 +19,6 @@ async function resolvePostWithImage(
     published: boolean;
     publishedAt?: number;
     readingTime?: number;
-    createdAt: number;
-    updatedAt: number;
   }
 ) {
   let coverImageUrl: string | null = null;
@@ -72,7 +70,7 @@ export const list = query({
     }
 
     // Sort by creation date
-    posts = posts.sort((a, b) => b.createdAt - a.createdAt);
+    posts = posts.sort((a, b) => b._creationTime - a._creationTime);
 
     // Resolve all cover image URLs
     return Promise.all(posts.map((post) => resolvePostWithImage(ctx, post)));
@@ -169,8 +167,6 @@ export const create = mutation({
       ...args,
       readingTime,
       publishedAt: args.published ? now : undefined,
-      createdAt: now,
-      updatedAt: now,
     });
   },
 });
@@ -211,7 +207,6 @@ export const update = mutation({
     const now = Date.now();
     const updateData: Record<string, unknown> = {
       ...updates,
-      updatedAt: now,
     };
 
     // Recalculate reading time if content changed (including empty content)
@@ -251,7 +246,7 @@ export const clearCoverImage = mutation({
       }
     }
 
-    await ctx.db.patch(args.id, { coverImage: undefined, updatedAt: Date.now() });
+    await ctx.db.patch(args.id, { coverImage: undefined });
   },
 });
 

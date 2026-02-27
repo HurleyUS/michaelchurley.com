@@ -73,8 +73,8 @@ export function generateBookingICS(booking: {
   const duration = booking.duration || 30;
   
   // Parse the date and time
-  const [year, month, day] = booking.date.split('-').map(Number);
-  const [hours, minutes] = booking.timeSlot.split(':').map(Number);
+  const [year = 2026, month = 1, day = 1] = booking.date.split('-').map(Number);
+  const [hours = 0, minutes = 0] = booking.timeSlot.split(':').map(Number);
   
   const startTime = new Date(year, month - 1, day, hours, minutes);
   const endTime = new Date(startTime.getTime() + duration * 60 * 1000);
