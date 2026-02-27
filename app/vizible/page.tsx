@@ -204,44 +204,60 @@ export default function ViziblePage() {
       <section className="relative overflow-hidden border-b border-Surface0">
         <div className="absolute inset-0 bg-gradient-to-b from-Crust to-Base" />
         <div className="relative mx-auto max-w-[72rem] px-6 py-24 sm:py-32">
-          <div className="mx-auto max-w-[48rem] text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
-              Official Partnership
-            </p>
-            <h1 className="text-4xl font-black tracking-tight text-Text sm:text-5xl lg:text-6xl">
-              Marketing That Finally Works{" "}
-              <span className="text-primary">
-                and Grows Your Business
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-Subtext0 sm:text-xl">
-              I partnered with Vizible Agency because they solve the three
-              problems every local business has: no strategy, no visibility, and
-              no time. You get a Personal CMO, a real-time dashboard, and a CRM
-              that actually fits your business.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <a
-                href="#pricing"
-                className="rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-primary-hover"
-              >
-                See Plans & Pricing
-              </a>
-              <a
-                href="#features"
-                className="rounded-lg border border-Surface1 bg-Surface0 px-8 py-3.5 text-base font-semibold text-Text shadow-sm transition hover:bg-Surface1"
-              >
-                Explore Features
-              </a>
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+            {/* Left col: text + buttons */}
+            <div className="order-2 lg:order-1">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
+                Official Partnership
+              </p>
+              <h1 className="text-4xl font-black tracking-tight text-Text sm:text-5xl lg:text-6xl">
+                Marketing That Finally Works{" "}
+                <span className="text-primary">
+                  and Grows Your Business
+                </span>
+              </h1>
+              {/* Mobile: video right after title, above the fold */}
+              <div className="mt-6 w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl border border-Surface0 lg:hidden">
+                <iframe
+                  src="https://www.youtube.com/embed/ofZP85rwgek"
+                  title="Vizible CMO - Your Personal Chief Marketing Officer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+              <p className="mt-6 text-lg leading-8 text-Subtext0 sm:text-xl">
+                I partnered with Vizible Agency because they solve the three
+                problems every local business has: no strategy, no visibility, and
+                no time. You get a Personal CMO, a real-time dashboard, and a CRM
+                that actually fits your business.
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-start">
+                <a
+                  href="#pricing"
+                  className="rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-primary-hover"
+                >
+                  See Plans & Pricing
+                </a>
+                <a
+                  href="#features"
+                  className="rounded-lg border border-Surface1 bg-Surface0 px-8 py-3.5 text-base font-semibold text-Text shadow-sm transition hover:bg-Surface1"
+                >
+                  Explore Features
+                </a>
+              </div>
             </div>
-            <div className="mt-12 w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl border border-Surface0">
-              <iframe
-                src="https://www.youtube.com/embed/ofZP85rwgek"
-                title="Vizible CMO - Your Personal Chief Marketing Officer"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
+            {/* Right col: video (desktop only) */}
+            <div className="order-1 lg:order-2 hidden lg:block">
+              <div className="w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl border border-Surface0">
+                <iframe
+                  src="https://www.youtube.com/embed/ofZP85rwgek"
+                  title="Vizible CMO - Your Personal Chief Marketing Officer"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
             </div>
           </div>
         </div>
