@@ -24,7 +24,7 @@ function generateTimeSlots(): string[] {
   }
   // Add 20:00 and 20:30 (8:00 PM and 8:30 PM)
   return slots.filter(s => {
-    const [hh, mm] = s.split(":").map(Number);
+    const [hh = 0, mm = 0] = s.split(":").map(Number);
     const minutes = hh * 60 + mm;
     return minutes >= 7 * 60 + 30 && minutes <= 20 * 60 + 30;
   });
@@ -33,14 +33,14 @@ function generateTimeSlots(): string[] {
 const ALL_TIME_SLOTS = generateTimeSlots();
 
 function formatTimeSlot(slot: string): string {
-  const [hours, minutes] = slot.split(":").map(Number);
+  const [hours = 0, minutes = 0] = slot.split(":").map(Number);
   const period = hours >= 12 ? "PM" : "AM";
   const displayHours = hours % 12 || 12;
   return `${displayHours}:${minutes.toString().padStart(2, "0")} ${period}`;
 }
 
 function formatDate(date: Date): string {
-  return date.toISOString().split("T")[0];
+  return date.toISOString().split("T")[0] ?? "";
 }
 
 function getDayName(date: Date): string {
@@ -63,7 +63,7 @@ function getAvailableSlotsForDate(date: Date, now: Date): string[] {
   const currentMinutes = now.getHours() * 60 + now.getMinutes() + 30;
   
   return ALL_TIME_SLOTS.filter(slot => {
-    const [hh, mm] = slot.split(":").map(Number);
+    const [hh = 0, mm = 0] = slot.split(":").map(Number);
     const slotMinutes = hh * 60 + mm;
     return slotMinutes > currentMinutes;
   });

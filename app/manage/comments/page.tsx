@@ -70,7 +70,7 @@ export default function ManageComments() {
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-lg">
-                        {(comment.authorName || comment.authorEmail)[0].toUpperCase()}
+                        {(comment.authorName || comment.authorEmail || "?")[0]?.toUpperCase()}
                       </span>
                     </div>
                   )}

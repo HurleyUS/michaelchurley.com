@@ -86,7 +86,7 @@ export const updateStatus = mutation({
 export const getUpcoming = query({
   args: {},
   handler: async (ctx) => {
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toISOString().split("T")[0] ?? "";
     const bookings = await ctx.db
       .query("bookings")
       .withIndex("by_status", (q) => q.eq("status", "confirmed"))

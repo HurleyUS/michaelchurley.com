@@ -146,7 +146,7 @@ export default function NewBlogPost() {
     const files = e.dataTransfer.files;
     if (files.length > 0) {
       const file = files[0];
-      if (file.type.startsWith("image/")) {
+      if (file && file.type.startsWith("image/")) {
         await handleCoverImageUpload(file);
       } else {
         setError("Please drop an image file");
