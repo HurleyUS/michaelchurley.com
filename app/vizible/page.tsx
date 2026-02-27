@@ -234,7 +234,7 @@ export default function ViziblePage() {
                 Explore Features
               </a>
             </div>
-            <div className="mt-12 mx-auto w-full max-w-[48rem] aspect-video rounded-xl overflow-hidden shadow-2xl border border-Surface0">
+            <div className="mt-12 w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl border border-Surface0">
               <iframe
                 src="https://www.youtube.com/embed/ofZP85rwgek"
                 title="Vizible CMO - Your Personal Chief Marketing Officer"
