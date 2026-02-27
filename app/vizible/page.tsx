@@ -192,22 +192,22 @@ const plans = [
 
 export default function ViziblePage() {
   return (
-    <main className="bg-white dark:bg-zinc-950">
+    <main className="bg-background text-foreground">
       {/* Hero */}
-      <section className="relative overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-cyan-50 dark:from-emerald-950/20 dark:via-zinc-950 dark:to-cyan-950/20" />
+      <section className="relative overflow-hidden border-b border-Surface0">
+        <div className="absolute inset-0 bg-gradient-to-b from-Crust to-Base" />
         <div className="relative mx-auto max-w-[72rem] px-6 py-24 sm:py-32">
           <div className="mx-auto max-w-[48rem] text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
               Official Partnership
             </p>
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-black tracking-tight text-Text sm:text-5xl lg:text-6xl">
               Marketing That Finally Works{" "}
-              <span className="text-emerald-600 dark:text-emerald-400">
+              <span className="text-primary">
                 and Grows Your Business
               </span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400 sm:text-xl">
+            <p className="mt-6 text-lg leading-8 text-Subtext0 sm:text-xl">
               I partnered with Vizible Agency because they solve the three
               problems every local business has: no strategy, no visibility, and
               no time. You get a Personal CMO, a real-time dashboard, and a CRM
@@ -216,13 +216,13 @@ export default function ViziblePage() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
                 href="#pricing"
-                className="rounded-lg bg-emerald-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+                className="rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-primary-hover"
               >
                 See Plans & Pricing
               </a>
               <a
                 href="#features"
-                className="rounded-lg border border-zinc-300 bg-white px-8 py-3.5 text-base font-semibold text-zinc-700 shadow-sm transition hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800"
+                className="rounded-lg border border-Surface1 bg-Surface0 px-8 py-3.5 text-base font-semibold text-Text shadow-sm transition hover:bg-Surface1"
               >
                 Explore Features
               </a>
@@ -232,35 +232,35 @@ export default function ViziblePage() {
       </section>
 
       {/* Trust Bar */}
-      <section className="border-b border-zinc-200 bg-zinc-50 py-6 dark:border-zinc-800 dark:bg-zinc-900">
-        <div className="mx-auto flex max-w-[72rem] flex-wrap items-center justify-center gap-x-12 gap-y-4 px-6 text-sm text-zinc-500 dark:text-zinc-400">
+      <section className="border-b border-Surface0 bg-Mantle py-6">
+        <div className="mx-auto flex max-w-[72rem] flex-wrap items-center justify-center gap-x-12 gap-y-4 px-6 text-sm text-Subtext0">
           <span className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="inline-block h-2 w-2 rounded-full bg-primary" />
             30+ Years Serving Small Business
           </span>
           <span className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="inline-block h-2 w-2 rounded-full bg-primary" />
             Award-Winning Platform
           </span>
           <span className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
+            <span className="inline-block h-2 w-2 rounded-full bg-primary" />
             Industry-Specific Strategies
           </span>
           <span className="flex items-center gap-2">
-            <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
-            AI-Powered Technology
+            <span className="inline-block h-2 w-2 rounded-full bg-primary" />
+            Zero Client Churn
           </span>
         </div>
       </section>
 
       {/* Top 3 Features */}
-      <section id="features" className="py-24">
+      <section id="features" className="py-24 bg-Base">
         <div className="mx-auto max-w-[72rem] px-6">
           <div className="mx-auto mb-16 max-w-[42rem] text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+            <h2 className="text-3xl font-black tracking-tight text-Text sm:text-4xl">
               The Three Things That Convinced Me
             </h2>
-            <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+            <p className="mt-4 text-lg text-Subtext0">
               I&apos;ve worked with a lot of marketing tools. I&apos;ve built
               marketing tools. These are the three features that made Vizible
               different.
@@ -274,16 +274,16 @@ export default function ViziblePage() {
                 className="grid gap-8 lg:grid-cols-2 lg:gap-16"
               >
                 <div>
-                  <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-sm font-bold text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300">
+                  <span className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/15 text-sm font-bold text-primary">
                     {feature.badge}
                   </span>
-                  <h3 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-zinc-50">
+                  <h3 className="mt-4 text-2xl font-bold text-Text">
                     {feature.title}
                   </h3>
-                  <p className="mt-1 text-base font-medium text-emerald-600 dark:text-emerald-400">
+                  <p className="mt-1 text-base font-medium text-primary">
                     {feature.subtitle}
                   </p>
-                  <p className="mt-4 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-4 text-base leading-7 text-Subtext0">
                     {feature.description}
                   </p>
                 </div>
@@ -292,18 +292,18 @@ export default function ViziblePage() {
                     {feature.highlights.map((h) => (
                       <li
                         key={h}
-                        className="flex items-start gap-3 text-base text-zinc-700 dark:text-zinc-300"
+                        className="flex items-start gap-3 text-base text-Subtext1"
                       >
-                        <span className="mt-1.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                        <span className="mt-1.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
                         {h}
                       </li>
                     ))}
                   </ul>
-                  <blockquote className="mt-8 border-l-2 border-emerald-500 pl-4">
-                    <p className="text-base italic text-zinc-600 dark:text-zinc-400">
+                  <blockquote className="mt-8 border-l-2 border-primary pl-4">
+                    <p className="text-base italic text-Overlay2">
                       &ldquo;{feature.testimonial.quote}&rdquo;
                     </p>
-                    <cite className="mt-2 block text-sm font-medium text-zinc-500 dark:text-zinc-500">
+                    <cite className="mt-2 block text-sm font-medium text-Overlay1">
                       &mdash; {feature.testimonial.attribution}
                     </cite>
                   </blockquote>
@@ -315,13 +315,13 @@ export default function ViziblePage() {
       </section>
 
       {/* Secondary Features Grid */}
-      <section className="border-y border-zinc-200 bg-zinc-50 py-24 dark:border-zinc-800 dark:bg-zinc-900/50">
+      <section className="border-y border-Surface0 bg-Mantle py-24">
         <div className="mx-auto max-w-[72rem] px-6">
           <div className="mx-auto mb-16 max-w-[42rem] text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+            <h2 className="text-3xl font-black tracking-tight text-Text sm:text-4xl">
               The Full Marketing Stack
             </h2>
-            <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+            <p className="mt-4 text-lg text-Subtext0">
               Beyond the big three, Vizible covers every channel your local
               business needs.
             </p>
@@ -330,12 +330,12 @@ export default function ViziblePage() {
             {secondaryFeatures.map((f) => (
               <div
                 key={f.title}
-                className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900"
+                className="rounded-xl border border-Surface0 bg-Base p-6 shadow-sm"
               >
-                <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-50">
+                <h3 className="text-base font-semibold text-Text">
                   {f.title}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                <p className="mt-2 text-sm leading-6 text-Subtext0">
                   {f.description}
                 </p>
               </div>
@@ -345,25 +345,25 @@ export default function ViziblePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24">
+      <section className="py-24 bg-Base">
         <div className="mx-auto max-w-[72rem] px-6">
-          <h2 className="mb-16 text-center text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h2 className="mb-16 text-center text-3xl font-black tracking-tight text-Text">
             What Business Owners Say
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="rounded-xl border border-zinc-200 p-8 dark:border-zinc-800"
+                className="rounded-xl border border-Surface0 bg-Crust p-8"
               >
-                <p className="text-base italic leading-7 text-zinc-600 dark:text-zinc-400">
+                <p className="text-base italic leading-7 text-Subtext0">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="mt-6 border-t border-zinc-100 pt-4 dark:border-zinc-800">
-                  <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
+                <div className="mt-6 border-t border-Surface0 pt-4">
+                  <p className="text-sm font-semibold text-Text">
                     {t.name}
                   </p>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-500">
+                  <p className="text-sm text-Overlay1">
                     {t.company} &middot; {t.location}
                   </p>
                 </div>
@@ -376,16 +376,16 @@ export default function ViziblePage() {
       {/* Pricing */}
       <section
         id="pricing"
-        className="border-y border-zinc-200 bg-zinc-50 py-24 dark:border-zinc-800 dark:bg-zinc-900/50"
+        className="border-y border-Surface0 bg-Mantle py-24"
       >
         <div className="mx-auto max-w-[72rem] px-6">
           <div className="mx-auto mb-16 max-w-[42rem] text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+            <h2 className="text-3xl font-black tracking-tight text-Text sm:text-4xl">
               Plans & Pricing
             </h2>
-            <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+            <p className="mt-4 text-lg text-Subtext0">
               Every plan includes access to Vizible&apos;s award-winning
-              platform. Setup fee applies.
+              platform. No contracts &mdash; they earn your business every month.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -394,27 +394,27 @@ export default function ViziblePage() {
                 key={plan.name}
                 className={`relative rounded-xl border p-8 ${
                   plan.highlighted
-                    ? "border-emerald-500 bg-white ring-1 ring-emerald-500 dark:bg-zinc-900"
-                    : "border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900"
+                    ? "border-primary bg-Base ring-1 ring-primary shadow-lg"
+                    : "border-Surface0 bg-Base"
                 }`}
               >
                 {plan.highlighted && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-emerald-600 px-3 py-1 text-xs font-semibold text-white">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                     Most Popular
                   </span>
                 )}
-                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-50">
+                <h3 className="text-lg font-bold text-Text">
                   {plan.name}
                 </h3>
-                <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                <p className="mt-1 text-sm text-Overlay1">
                   {plan.tagline}
                 </p>
                 <p className="mt-6 flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
+                  <span className="text-3xl font-bold text-Text">
                     {plan.price}
                   </span>
                   {plan.price !== "Custom" && (
-                    <span className="text-sm text-zinc-500 dark:text-zinc-400">
+                    <span className="text-sm text-Overlay1">
                       /month
                     </span>
                   )}
@@ -423,9 +423,9 @@ export default function ViziblePage() {
                   {plan.features.map((f) => (
                     <li
                       key={f}
-                      className="flex items-start gap-2 text-sm text-zinc-700 dark:text-zinc-300"
+                      className="flex items-start gap-2 text-sm text-Subtext1"
                     >
-                      <span className="mt-1 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                      <span className="mt-1 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
                       {f}
                     </li>
                   ))}
@@ -434,8 +434,8 @@ export default function ViziblePage() {
                   href="mailto:michael@hurleyus.com?subject=Vizible%20Inquiry"
                   className={`mt-8 block rounded-lg py-2.5 text-center text-sm font-semibold transition ${
                     plan.highlighted
-                      ? "bg-emerald-600 text-white hover:bg-emerald-500"
-                      : "border border-zinc-300 text-zinc-700 hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800"
+                      ? "bg-primary text-primary-foreground hover:bg-primary-primary-hover"
+                      : "border border-Surface1 text-Text hover:bg-Surface0"
                   }`}
                 >
                   Get Started
@@ -447,23 +447,23 @@ export default function ViziblePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
+      <section className="py-24 bg-Base">
         <div className="mx-auto max-w-[48rem] px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+          <h2 className="text-3xl font-black tracking-tight text-Text sm:text-4xl">
             Ready to Stop Guessing?
           </h2>
-          <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+          <p className="mt-4 text-lg text-Subtext0">
             Most marketing platforms give you a login and say good luck. Vizible
             gives you a person, a platform, and a plan. Let&apos;s talk about
             what that looks like for your business.
           </p>
           <a
             href="mailto:michael@hurleyus.com?subject=Vizible%20Partnership%20Inquiry"
-            className="mt-8 inline-flex rounded-lg bg-emerald-600 px-8 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-500"
+            className="mt-8 inline-flex rounded-lg bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-sm transition hover:bg-primary-primary-hover"
           >
             Get Started with Vizible
           </a>
-          <p className="mt-4 text-sm text-zinc-500 dark:text-zinc-500">
+          <p className="mt-4 text-sm text-Overlay1">
             Or email michael@hurleyus.com directly
           </p>
         </div>
