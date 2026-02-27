@@ -196,8 +196,8 @@ export default function ViziblePage() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-zinc-200 dark:border-zinc-800">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-cyan-50 dark:from-emerald-950/20 dark:via-zinc-950 dark:to-cyan-950/20" />
-        <div className="relative mx-auto max-w-6xl px-6 py-24 sm:py-32">
-          <div className="mx-auto max-w-3xl text-center">
+        <div className="relative mx-auto max-w-[72rem] px-6 py-24 sm:py-32">
+          <div className="mx-auto max-w-[48rem] text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">
               Official Partnership
             </p>
@@ -233,7 +233,7 @@ export default function ViziblePage() {
 
       {/* Trust Bar */}
       <section className="border-b border-zinc-200 bg-zinc-50 py-6 dark:border-zinc-800 dark:bg-zinc-900">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-12 gap-y-4 px-6 text-sm text-zinc-500 dark:text-zinc-400">
+        <div className="mx-auto flex max-w-[72rem] flex-wrap items-center justify-center gap-x-12 gap-y-4 px-6 text-sm text-zinc-500 dark:text-zinc-400">
           <span className="flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
             30+ Years Serving Small Business
@@ -255,8 +255,8 @@ export default function ViziblePage() {
 
       {/* Top 3 Features */}
       <section id="features" className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto max-w-[72rem] px-6">
+          <div className="mx-auto mb-16 max-w-[42rem] text-center">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
               The Three Things That Convinced Me
             </h2>
@@ -316,8 +316,8 @@ export default function ViziblePage() {
 
       {/* Secondary Features Grid */}
       <section className="border-y border-zinc-200 bg-zinc-50 py-24 dark:border-zinc-800 dark:bg-zinc-900/50">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto max-w-[72rem] px-6">
+          <div className="mx-auto mb-16 max-w-[42rem] text-center">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
               The Full Marketing Stack
             </h2>
@@ -346,7 +346,7 @@ export default function ViziblePage() {
 
       {/* Testimonials */}
       <section className="py-24">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-[72rem] px-6">
           <h2 className="mb-16 text-center text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
             What Business Owners Say
           </h2>
@@ -378,8 +378,8 @@ export default function ViziblePage() {
         id="pricing"
         className="border-y border-zinc-200 bg-zinc-50 py-24 dark:border-zinc-800 dark:bg-zinc-900/50"
       >
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto max-w-[72rem] px-6">
+          <div className="mx-auto mb-16 max-w-[42rem] text-center">
             <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
               Plans & Pricing
             </h2>
@@ -448,7 +448,7 @@ export default function ViziblePage() {
 
       {/* CTA */}
       <section className="py-24">
-        <div className="mx-auto max-w-3xl px-6 text-center">
+        <div className="mx-auto max-w-[48rem] px-6 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
             Ready to Stop Guessing?
           </h2>
