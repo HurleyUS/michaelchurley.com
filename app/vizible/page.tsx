@@ -16,24 +16,31 @@ export const metadata: Metadata = {
 const testimonials = [
   {
     quote:
-      "Since signing up for the Velocity plan my law firm has grown to the point where we\u2019ve brought on a partner to handle the case load and we\u2019re looking to add a second location. My client intake and prequalifications are handled over the phone, clients love the live chat on our website, and my Google ratings have been fixed with 5-star reviews rolling in. It\u2019s been a game changer for my work-life balance.",
-    name: "Jonathan",
-    company: "Song Law Firm",
-    location: "Client",
-  },
-  {
-    quote:
-      "More walk-ins in two weeks than ever before, with seven booked tours. We haven\u2019t even started paid ads yet \u2014 this is purely from the algorithmic optimization. We\u2019re already onboarding our second location.",
-    name: "Retirement Facility Owner",
-    company: "Senior Living",
-    location: "Client",
-  },
-  {
-    quote:
-      "I love the fact that I have a personal connection that helps guide me, strategize with me and then do the work for me. This truly is the best marketing technology.",
+      "I love the fact that I have a personal connection that helps guide me, strategize with me and then do the work for me. This truly is the best marketing technology and I want to be on the top of Google local search.",
     name: "Chauncey Porter",
     company: "Porter Insurance Group",
     location: "Memphis, TN",
+  },
+  {
+    quote:
+      "I love the communication I have with Matt C. my Chief Marketing Officer at Vizible. He has helped me gain more reviews, improve my ranking and I actually have had new customers say they chose me because of my reviews online.",
+    name: "Paula Marez",
+    company: "Flywheel Ventures",
+    location: "Santa Fe, NM",
+  },
+  {
+    quote:
+      "Finally I have found what I was looking for. A marketing relationship! My CMO is doing the work for me, keeps me in the loop and every month we discuss the results. Folks this is the real one!",
+    name: "Frankie V.",
+    company: "Full Screen Productions, LLC",
+    location: "Client",
+  },
+  {
+    quote:
+      "With the Vizible Marketing AI Assistant, we transformed our lead capture process. Its ability to engage with potential clients through web chat and Facebook Messenger has not only increased our response rate but also provided a seamless experience that turns leads into loyal customers. It\u2019s like having a 24/7 marketing team at our fingertips!",
+    name: "Jim S.",
+    company: "Dental Practice Owner",
+    location: "Sarasota, FL",
   },
 ];
 
@@ -359,7 +366,7 @@ export default function ViziblePage() {
           <h2 className="mb-16 text-center text-3xl font-black tracking-tight text-Text">
             What Business Owners Say
           </h2>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((t) => (
               <div
                 key={t.name}
