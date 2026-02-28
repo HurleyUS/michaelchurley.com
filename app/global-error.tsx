@@ -6,6 +6,7 @@ import Logo from "@/components/ui/logo";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { usePostHog } from "posthog-js/react";
 
 // Error boundaries must be Client Components
 
@@ -17,10 +18,24 @@ export default function GlobalError({
   reset: () => void;
 }) {
   const router = useRouter();
+  const posthog = usePostHog();
 
   useEffect(() => {
-    console.error(error);
-  }, [error]);
+    // Report critical error to PostHog with additional context
+    if (posthog) {
+      posthog.captureException(error, {
+        $error_digest: error.digest,
+        $error_boundary: "global",
+        $error_page: typeof window !== 'undefined' ? window.location.pathname : 'unknown',
+        $error_user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+        $error_timestamp: new Date().toISOString(),
+        $error_critical: true, // Mark as critical since it's global error boundary
+      });
+    } else {
+      // Fallback to console if PostHog isn't available
+      console.error("Global error boundary caught error:", error);
+    }
+  }, [error, posthog]);
 
   return (
     // global-error must include html and body tags
