@@ -5,6 +5,7 @@ import Logo from "@/components/ui/logo";
 import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 
 export default function Error({
   error,
@@ -14,11 +15,23 @@ export default function Error({
   reset: () => void;
 }) {
   const router = useRouter();
+  const posthog = usePostHog();
 
   useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(error);
-  }, [error]);
+    // Report error to PostHog with additional context
+    if (posthog) {
+      posthog.captureException(error, {
+        $error_digest: error.digest,
+        $error_boundary: "app",
+        $error_page: window.location.pathname,
+        $error_user_agent: navigator.userAgent,
+        $error_timestamp: new Date().toISOString(),
+      });
+    } else {
+      // Fallback to console if PostHog isn't available
+      console.error("Error boundary caught error:", error);
+    }
+  }, [error, posthog]);
 
   return (
     <div className="flex flex-col items-center justify-center gap-md p-md w-full max-w-[1170px] mx-auto text-center">
