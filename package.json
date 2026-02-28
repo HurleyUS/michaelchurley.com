@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "validate": "node scripts/validate-launch.js",
+    "launch-check": "bun tsc --noEmit && bun test && bun run lint && node scripts/validate-launch.js"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.37.2",
