@@ -19,7 +19,9 @@ export default function GlobalError({
   const router = useRouter();
 
   useEffect(() => {
-    console.error(error);
+    import("@/lib/error-reporting").then(({ reportClientError }) => {
+      reportClientError(error, { componentStack: error.digest });
+    });
   }, [error]);
 
   return (

@@ -17,7 +17,9 @@ export default function Error({
 
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error(error);
+    import("@/lib/error-reporting").then(({ reportClientError }) => {
+      reportClientError(error, { componentStack: error.digest });
+    });
   }, [error]);
 
   return (
