@@ -13,7 +13,7 @@ import { ReactNode } from "react";
 const ALLOWED_EMAIL =
   process.env.NEXT_PUBLIC_ADMIN_EMAIL || "michaelmonetized@gmail.com";
 
-export default function ManageLayout({ children }: { children: ReactNode }) {
+function ManageContent({ children }: { children: ReactNode }) {
   const { user, isLoaded, isSignedIn } = useUser();
   const pathname = usePathname();
 
@@ -113,4 +113,19 @@ export default function ManageLayout({ children }: { children: ReactNode }) {
       </main>
     </div>
   );
+}
+
+export default function ManageLayout({ children }: { children: ReactNode }) {
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] gap-4">
+        <h1 className="text-2xl font-bold">Admin auth unavailable</h1>
+        <p className="text-muted-foreground">
+          Configure NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY to access this area.
+        </p>
+      </div>
+    );
+  }
+
+  return <ManageContent>{children}</ManageContent>;
 }
