@@ -16,7 +16,7 @@ describe("Home Page", () => {
 
   test("displays main heading", () => {
     render(<Home />);
-    
+
     // Look for key elements that should be on the homepage
     const heading = screen.getByRole("heading", { level: 1 });
     expect(heading).toBeInTheDocument();
@@ -24,7 +24,7 @@ describe("Home Page", () => {
 
   test("has accessible content", () => {
     render(<Home />);
-    
+
     // Check for main landmarks
     const main = screen.getByRole("main");
     expect(main).toBeInTheDocument();
@@ -32,7 +32,7 @@ describe("Home Page", () => {
 
   test("contains contact information", () => {
     render(<Home />);
-    
+
     // Look for contact-related content (this might be a link or button)
     const contactElements = screen.queryAllByText(/contact/i);
     // We expect at least some contact information to be present
@@ -41,7 +41,7 @@ describe("Home Page", () => {
 
   test("has navigation elements", () => {
     render(<Home />);
-    
+
     // Check for navigation (might be in header)
     const navigation = screen.queryByRole("navigation");
     // Note: navigation might be in header component, so this could be null
@@ -50,7 +50,7 @@ describe("Home Page", () => {
 
   test("displays portfolio mention", () => {
     render(<Home />);
-    
+
     // Look for portfolio-related content
     const portfolioElements = screen.queryAllByText(/portfolio/i);
     expect(portfolioElements.length).toBeGreaterThan(0);

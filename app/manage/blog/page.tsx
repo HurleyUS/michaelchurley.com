@@ -17,11 +17,17 @@ export default function ManageBlog() {
     }
   };
 
-  const handleTogglePublish = async (id: Id<"blogPosts">, published: boolean) => {
+  const handleTogglePublish = async (
+    id: Id<"blogPosts">,
+    published: boolean,
+  ) => {
     await updatePost({ id, published: !published });
   };
 
-  const handleToggleFeatured = async (id: Id<"blogPosts">, featured: boolean) => {
+  const handleToggleFeatured = async (
+    id: Id<"blogPosts">,
+    featured: boolean,
+  ) => {
     await updatePost({ id, featured: !featured });
   };
 
@@ -47,7 +53,10 @@ export default function ManageBlog() {
       ) : blogPosts.length === 0 ? (
         <div className="text-center py-12 text-muted-foreground">
           <p>No blog posts yet.</p>
-          <Link href="/manage/blog/new" className="text-primary hover:underline">
+          <Link
+            href="/manage/blog/new"
+            className="text-primary hover:underline"
+          >
             Create your first blog post
           </Link>
         </div>
@@ -58,16 +67,25 @@ export default function ManageBlog() {
               <tr className="border-b bg-muted/50">
                 <th className="text-left p-4 font-medium w-20">Image</th>
                 <th className="text-left p-4 font-medium">Title</th>
-                <th className="text-left p-4 font-medium hidden md:table-cell">Slug</th>
-                <th className="text-left p-4 font-medium hidden lg:table-cell">Tags</th>
+                <th className="text-left p-4 font-medium hidden md:table-cell">
+                  Slug
+                </th>
+                <th className="text-left p-4 font-medium hidden lg:table-cell">
+                  Tags
+                </th>
                 <th className="text-left p-4 font-medium">Status</th>
-                <th className="text-left p-4 font-medium hidden sm:table-cell">Featured</th>
+                <th className="text-left p-4 font-medium hidden sm:table-cell">
+                  Featured
+                </th>
                 <th className="text-left p-4 font-medium">Actions</th>
               </tr>
             </thead>
             <tbody>
               {blogPosts.map((post) => (
-                <tr key={post._id} className="border-b last:border-b-0 hover:bg-muted/30">
+                <tr
+                  key={post._id}
+                  className="border-b last:border-b-0 hover:bg-muted/30"
+                >
                   <td className="p-4">
                     {post.coverImage ? (
                       <div className="relative w-16 h-12 rounded overflow-hidden bg-muted">
@@ -81,7 +99,9 @@ export default function ManageBlog() {
                       </div>
                     ) : (
                       <div className="w-16 h-12 rounded bg-muted flex items-center justify-center">
-                        <span className="text-xs text-muted-foreground">No image</span>
+                        <span className="text-xs text-muted-foreground">
+                          No image
+                        </span>
                       </div>
                     )}
                   </td>
@@ -93,7 +113,9 @@ export default function ManageBlog() {
                       {post.title}
                     </Link>
                   </td>
-                  <td className="p-4 text-muted-foreground hidden md:table-cell">{post.slug}</td>
+                  <td className="p-4 text-muted-foreground hidden md:table-cell">
+                    {post.slug}
+                  </td>
                   <td className="p-4 hidden lg:table-cell">
                     <div className="flex flex-wrap gap-1">
                       {post.tags.slice(0, 3).map((tag) => (
@@ -113,7 +135,9 @@ export default function ManageBlog() {
                   </td>
                   <td className="p-4">
                     <button
-                      onClick={() => handleTogglePublish(post._id, post.published)}
+                      onClick={() =>
+                        handleTogglePublish(post._id, post.published)
+                      }
                       className={`text-xs px-2 py-1 rounded cursor-pointer font-medium ${
                         post.published
                           ? "bg-Green/20 text-Green dark:bg-Green/20 dark:text-Green"
@@ -125,7 +149,9 @@ export default function ManageBlog() {
                   </td>
                   <td className="p-4 hidden sm:table-cell">
                     <button
-                      onClick={() => handleToggleFeatured(post._id, post.featured)}
+                      onClick={() =>
+                        handleToggleFeatured(post._id, post.featured)
+                      }
                       className={`text-xs px-2 py-1 rounded cursor-pointer font-medium ${
                         post.featured
                           ? "bg-Blue/20 text-Blue dark:bg-Blue/20 dark:text-Blue"
@@ -146,7 +172,8 @@ export default function ManageBlog() {
                       <Link
                         href={`/blog/${post.slug}`}
                         className="text-sm text-muted-foreground hover:underline"
-                        target="_blank" rel="noopener noreferrer"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         View
                       </Link>

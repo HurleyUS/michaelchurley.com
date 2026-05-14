@@ -13,15 +13,18 @@ interface ICSEvent {
 }
 
 function formatICSDate(date: Date): string {
-  return date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  return date
+    .toISOString()
+    .replace(/[-:]/g, "")
+    .replace(/\.\d{3}/, "");
 }
 
 function escapeICSText(text: string): string {
   return text
-    .replace(/\\/g, '\\\\')
-    .replace(/,/g, '\\,')
-    .replace(/;/g, '\\;')
-    .replace(/\n/g, '\\n');
+    .replace(/\\/g, "\\\\")
+    .replace(/,/g, "\\,")
+    .replace(/;/g, "\\;")
+    .replace(/\n/g, "\\n");
 }
 
 function generateUID(): string {
@@ -30,14 +33,14 @@ function generateUID(): string {
 
 export function generateICS(event: ICSEvent): string {
   const now = new Date();
-  
+
   const lines = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//Michael C. Hurley//Booking System//EN',
-    'CALSCALE:GREGORIAN',
-    'METHOD:REQUEST',
-    'BEGIN:VEVENT',
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Michael C. Hurley//Booking System//EN",
+    "CALSCALE:GREGORIAN",
+    "METHOD:REQUEST",
+    "BEGIN:VEVENT",
     `UID:${generateUID()}`,
     `DTSTAMP:${formatICSDate(now)}`,
     `DTSTART:${formatICSDate(event.startTime)}`,
@@ -52,14 +55,9 @@ export function generateICS(event: ICSEvent): string {
     lines.push(`LOCATION:${escapeICSText(event.location)}`);
   }
 
-  lines.push(
-    'STATUS:CONFIRMED',
-    'SEQUENCE:0',
-    'END:VEVENT',
-    'END:VCALENDAR'
-  );
+  lines.push("STATUS:CONFIRMED", "SEQUENCE:0", "END:VEVENT", "END:VCALENDAR");
 
-  return lines.join('\r\n');
+  return lines.join("\r\n");
 }
 
 export function generateBookingICS(booking: {
@@ -71,11 +69,11 @@ export function generateBookingICS(booking: {
   duration?: number; // minutes, default 30
 }): string {
   const duration = booking.duration || 30;
-  
+
   // Parse the date and time
-  const [year = 2026, month = 1, day = 1] = booking.date.split('-').map(Number);
-  const [hours = 0, minutes = 0] = booking.timeSlot.split(':').map(Number);
-  
+  const [year = 2026, month = 1, day = 1] = booking.date.split("-").map(Number);
+  const [hours = 0, minutes = 0] = booking.timeSlot.split(":").map(Number);
+
   const startTime = new Date(year, month - 1, day, hours, minutes);
   const endTime = new Date(startTime.getTime() + duration * 60 * 1000);
 
@@ -85,8 +83,8 @@ export function generateBookingICS(booking: {
     startTime,
     endTime,
     organizer: {
-      name: 'Michael C. Hurley',
-      email: process.env.ADMIN_EMAIL || 'michaelmonetized@gmail.com',
+      name: "Michael C. Hurley",
+      email: process.env.ADMIN_EMAIL || "michaelmonetized@gmail.com",
     },
     attendee: {
       name: booking.name,

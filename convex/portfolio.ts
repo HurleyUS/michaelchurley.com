@@ -21,16 +21,21 @@ async function resolveItemWithImages(
     featured: boolean;
     published: boolean;
     publishedAt?: number;
-  }
+  },
 ) {
   let coverImageUrl: string | null = null;
-  
+
   if (item.coverImage) {
     // Handle both old URL strings and new storage IDs
-    if (typeof item.coverImage === "string" && item.coverImage.startsWith("http")) {
+    if (
+      typeof item.coverImage === "string" &&
+      item.coverImage.startsWith("http")
+    ) {
       coverImageUrl = item.coverImage; // Legacy URL
     } else {
-      coverImageUrl = await ctx.storage.getUrl(item.coverImage as Id<"_storage">);
+      coverImageUrl = await ctx.storage.getUrl(
+        item.coverImage as Id<"_storage">,
+      );
     }
   }
 
@@ -41,7 +46,7 @@ async function resolveItemWithImages(
             return imgRef; // Legacy URL
           }
           return await ctx.storage.getUrl(imgRef as Id<"_storage">);
-        })
+        }),
       )
     : [];
 
@@ -65,7 +70,7 @@ export const list = query({
       items = await ctx.db
         .query("portfolioItems")
         .withIndex("by_featured", (q) =>
-          q.eq("featured", true).eq("published", true)
+          q.eq("featured", true).eq("published", true),
         )
         .collect();
     } else if (args.onlyPublished !== false) {
@@ -221,7 +226,9 @@ export const clearCoverImage = mutation({
 
     // Delete the old image from storage if it's a storage ID (not a legacy URL)
     if (item.coverImage) {
-      const isLegacyUrl = typeof item.coverImage === "string" && item.coverImage.startsWith("http");
+      const isLegacyUrl =
+        typeof item.coverImage === "string" &&
+        item.coverImage.startsWith("http");
       if (!isLegacyUrl) {
         try {
           await ctx.storage.delete(item.coverImage as Id<"_storage">);

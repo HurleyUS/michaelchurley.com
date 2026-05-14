@@ -9,16 +9,16 @@ export async function requireAdmin(ctx: QueryCtx | MutationCtx): Promise<{
   email: string;
 }> {
   const identity = await ctx.auth.getUserIdentity();
-  
+
   if (!identity) {
     throw new Error("Unauthorized: Not authenticated");
   }
-  
+
   const email = identity.email;
   if (!email || email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()) {
     throw new Error("Unauthorized: Admin access required");
   }
-  
+
   return {
     userId: identity.subject,
     email: email,
@@ -27,11 +27,11 @@ export async function requireAdmin(ctx: QueryCtx | MutationCtx): Promise<{
 
 export async function getAuthenticatedUser(ctx: QueryCtx | MutationCtx) {
   const identity = await ctx.auth.getUserIdentity();
-  
+
   if (!identity) {
     return null;
   }
-  
+
   return {
     userId: identity.subject,
     email: identity.email,

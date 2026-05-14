@@ -7,6 +7,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Current State
 
 ### Completed
+
 - ✅ Next.js 14 project setup
 - ✅ Basic UI components (Radix UI)
 - ✅ Tailwind CSS styling
@@ -15,11 +16,13 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 - ✅ Project structure
 
 ### In Progress
+
 - ⏳ Portfolio section enhancement
 - ⏳ Blog functionality
 - ⏳ Content updates
 
 ### Not Started
+
 - ⬜ Blog post management system
 - ⬜ CMS integration
 - ⬜ Contact form
@@ -30,6 +33,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Phase 1: Core Website (Weeks 1-2)
 
 ### Week 1: Content & Design
+
 - [ ] Update resume content
 - [ ] Enhance portfolio section
 - [ ] Add project case studies
@@ -38,6 +42,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 - [ ] Create compelling copy
 
 ### Week 2: Functionality
+
 - [ ] Implement contact form
 - [ ] Add email integration (Resend)
 - [ ] Create project detail pages
@@ -48,6 +53,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Phase 2: Blog & Content (Weeks 3-4)
 
 ### Week 3: Blog Setup
+
 - [ ] Design blog layout
 - [ ] Create blog post template
 - [ ] Implement blog listing page
@@ -56,6 +62,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 - [ ] Add search functionality
 
 ### Week 4: Content Management
+
 - [ ] Set up markdown processing
 - [ ] Create blog post creation workflow
 - [ ] Add image optimization
@@ -66,6 +73,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Phase 3: Enhancement (Weeks 5-6)
 
 ### Week 5: SEO & Analytics
+
 - [ ] Optimize meta tags
 - [ ] Add Open Graph tags
 - [ ] Create sitemap.xml
@@ -75,6 +83,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 - [ ] Add structured data
 
 ### Week 6: Performance & Polish
+
 - [ ] Optimize images
 - [ ] Implement lazy loading
 - [ ] Add caching strategies
@@ -86,6 +95,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Phase 4: Advanced Features (Weeks 7-8)
 
 ### Week 7: Interactive Features
+
 - [ ] Add dark mode toggle
 - [ ] Implement animations
 - [ ] Add interactive resume timeline
@@ -94,6 +104,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 - [ ] Implement social sharing
 
 ### Week 8: CMS Integration (Optional)
+
 - [ ] Evaluate CMS options (Sanity, Contentful, etc.)
 - [ ] Set up CMS
 - [ ] Migrate content to CMS
@@ -104,12 +115,14 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Success Metrics
 
 ### Technical Metrics
+
 - Page load time < 1.5 seconds
 - Lighthouse score > 90
 - Mobile-friendly score > 95
 - SEO score > 90
 
 ### Business Metrics
+
 - Resume views
 - Portfolio project views
 - Blog post engagement
@@ -119,12 +132,14 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Content Strategy
 
 ### Resume Section
+
 - Keep updated with latest experience
 - Highlight key achievements
 - Use metrics and numbers
 - Show progression and growth
 
 ### Portfolio Section
+
 - Showcase best projects
 - Include case studies
 - Demonstrate problem-solving
@@ -132,6 +147,7 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 - Include client testimonials
 
 ### Blog Section
+
 - Write about technical topics
 - Share learning experiences
 - Document projects
@@ -141,18 +157,21 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Technology Decisions
 
 ### Why Next.js?
+
 - Server-side rendering for SEO
 - Excellent performance
 - Great developer experience
 - Easy deployment on Vercel
 
 ### Why Tailwind CSS?
+
 - Rapid development
 - Consistent design system
 - Easy customization
 - Small bundle size
 
 ### Future Considerations
+
 - CMS for easier content management
 - Analytics for tracking engagement
 - Email newsletter integration
@@ -161,11 +180,13 @@ MichaelCHurley.com is a personal website serving as a professional resume, portf
 ## Risk Mitigation
 
 ### Content Risks
+
 - **Outdated content**: Schedule regular updates
 - **Low engagement**: Focus on valuable content
 - **SEO issues**: Follow best practices
 
 ### Technical Risks
+
 - **Performance issues**: Optimize from the start
 - **Deployment issues**: Use Vercel's reliable platform
 - **Maintenance burden**: Keep dependencies updated

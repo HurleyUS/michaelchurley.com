@@ -18,10 +18,16 @@ export const clearOldCoverImages = mutation({
     const portfolioItems = await ctx.db.query("portfolioItems").collect();
     for (const item of portfolioItems) {
       if (item.coverImage || item.images) {
-        await ctx.db.patch(item._id, { coverImage: undefined, images: undefined });
+        await ctx.db.patch(item._id, {
+          coverImage: undefined,
+          images: undefined,
+        });
       }
     }
 
-    return { blogPosts: blogPosts.length, portfolioItems: portfolioItems.length };
+    return {
+      blogPosts: blogPosts.length,
+      portfolioItems: portfolioItems.length,
+    };
   },
 });

@@ -1,21 +1,21 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
 
 // Only initialize Resend if API key is present
-const resend = process.env.RESEND_API_KEY 
+const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
-const OWNER_EMAIL = process.env.ADMIN_EMAIL || 'michaelmonetized@gmail.com';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'notify@uncap.us';
+const OWNER_EMAIL = process.env.ADMIN_EMAIL || "michaelmonetized@gmail.com";
+const FROM_EMAIL = process.env.FROM_EMAIL || "notify@uncap.us";
 
 export async function POST(request: NextRequest) {
   try {
     // Check if Resend is configured
     if (!resend) {
       return NextResponse.json(
-        { error: 'Email service not configured' },
-        { status: 503 }
+        { error: "Email service not configured" },
+        { status: 503 },
       );
     }
 
@@ -25,8 +25,8 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
-        { status: 400 }
+        { error: "Name, email, and message are required" },
+        { status: 400 },
       );
     }
 
@@ -34,8 +34,8 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Invalid email address' },
-        { status: 400 }
+        { error: "Invalid email address" },
+        { status: 400 },
       );
     }
 
@@ -44,14 +44,16 @@ export async function POST(request: NextRequest) {
       from: FROM_EMAIL,
       to: OWNER_EMAIL,
       replyTo: email,
-      subject: subject ? `Contact Form: ${subject}` : `New Contact from ${name}`,
+      subject: subject
+        ? `Contact Form: ${subject}`
+        : `New Contact from ${name}`,
       html: `
         <h1>New Contact Form Submission</h1>
         <h2>Contact Details</h2>
         <ul>
           <li><strong>Name:</strong> ${name}</li>
           <li><strong>Email:</strong> <a href="mailto:${email}">${email}</a></li>
-          ${subject ? `<li><strong>Subject:</strong> ${subject}</li>` : ''}
+          ${subject ? `<li><strong>Subject:</strong> ${subject}</li>` : ""}
         </ul>
         <h2>Message</h2>
         <p style="white-space: pre-wrap; background: #f5f5f5; padding: 16px; border-radius: 8px;">${message}</p>
@@ -66,7 +68,7 @@ export async function POST(request: NextRequest) {
     await resend.emails.send({
       from: FROM_EMAIL,
       to: email,
-      subject: 'Thanks for reaching out! - Michael C. Hurley',
+      subject: "Thanks for reaching out! - Michael C. Hurley",
       html: `
         <h1>Thanks for your message!</h1>
         <p>Hi ${name},</p>
@@ -88,10 +90,10 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Contact form error:', error);
+    console.error("Contact form error:", error);
     return NextResponse.json(
-      { error: 'Failed to send message' },
-      { status: 500 }
+      { error: "Failed to send message" },
+      { status: 500 },
     );
   }
 }

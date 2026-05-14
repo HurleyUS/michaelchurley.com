@@ -17,7 +17,7 @@ const Editor = nextDynamic(
     loading: () => (
       <div className="h-[400px] border rounded-lg animate-pulse bg-muted" />
     ),
-  }
+  },
 );
 
 // Import Toast UI Editor CSS
@@ -61,7 +61,11 @@ export default function NewPortfolioItem() {
     if (e.key === "," || e.key === "Enter" || e.key === "Tab") {
       e.preventDefault();
       addTech();
-    } else if (e.key === "Backspace" && techInput === "" && technologies.length > 0) {
+    } else if (
+      e.key === "Backspace" &&
+      techInput === "" &&
+      technologies.length > 0
+    ) {
       setTechnologies(technologies.slice(0, -1));
     }
   };
@@ -109,7 +113,9 @@ export default function NewPortfolioItem() {
     }
   };
 
-  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileInputChange = async (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const file = e.target.files?.[0];
     if (!file) return;
     await handleCoverImageUpload(file);
@@ -225,10 +231,14 @@ export default function NewPortfolioItem() {
             type="text"
             value={form.slug}
             onChange={(e) => setForm({ ...form, slug: e.target.value })}
-            placeholder={generateSlug(form.title) || "auto-generated-from-title"}
+            placeholder={
+              generateSlug(form.title) || "auto-generated-from-title"
+            }
             className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
           />
-          <p className="text-xs text-muted-foreground">Leave blank to auto-generate from title</p>
+          <p className="text-xs text-muted-foreground">
+            Leave blank to auto-generate from title
+          </p>
         </div>
 
         {/* Cover Image - Drop Zone */}
@@ -242,8 +252,8 @@ export default function NewPortfolioItem() {
               isDragging
                 ? "border-primary bg-primary/10 scale-[1.02]"
                 : form.coverImage
-                ? "border-border"
-                : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
+                  ? "border-border"
+                  : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
             }`}
           >
             {form.coverImage ? (
@@ -261,7 +271,9 @@ export default function NewPortfolioItem() {
                   <PiX size={16} />
                 </button>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-white text-sm">Drop new image to replace</p>
+                  <p className="text-white text-sm">
+                    Drop new image to replace
+                  </p>
                 </div>
               </div>
             ) : (
@@ -351,11 +363,15 @@ export default function NewPortfolioItem() {
               onChange={(e) => setTechInput(e.target.value)}
               onKeyDown={handleTechKeyDown}
               onBlur={addTech}
-              placeholder={technologies.length === 0 ? "React, Next.js, TypeScript..." : ""}
+              placeholder={
+                technologies.length === 0 ? "React, Next.js, TypeScript..." : ""
+              }
               className="flex-1 min-w-[150px] outline-none bg-transparent text-foreground placeholder:text-muted-foreground"
             />
           </div>
-          <p className="text-xs text-muted-foreground">Press comma, enter, or tab to add</p>
+          <p className="text-xs text-muted-foreground">
+            Press comma, enter, or tab to add
+          </p>
         </div>
 
         {/* URLs */}
@@ -397,7 +413,9 @@ export default function NewPortfolioItem() {
             <input
               type="checkbox"
               checked={form.published}
-              onChange={(e) => setForm({ ...form, published: e.target.checked })}
+              onChange={(e) =>
+                setForm({ ...form, published: e.target.checked })
+              }
               className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
             />
             <span className="text-sm font-medium">Publish immediately</span>

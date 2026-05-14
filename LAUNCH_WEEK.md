@@ -48,52 +48,61 @@ This document outlines the launch week improvements and how to validate readines
 ## Launch Validation
 
 ### Quick Check
+
 ```bash
 bun run launch-check
 ```
 
 This runs:
+
 1. TypeScript compilation check
 2. Test suite
 3. Linting
 4. Comprehensive launch validation
 
 ### Detailed Validation
+
 ```bash
 bun run validate
 ```
 
 Generates detailed reports in `launch-week/validation-reports/`:
+
 - JSON report with detailed results
 - Markdown report for documentation
 
 ### Manual Testing Checklist
 
 #### Security
+
 - [ ] HTTPS enabled in production
 - [ ] Security headers present (check browser dev tools)
 - [ ] No mixed content warnings
 - [ ] CSP violations checked and resolved
 
 #### Analytics
+
 - [ ] PostHog events firing in production dashboard
 - [ ] Page views tracking correctly
 - [ ] Conversion events (contact form, clicks) working
 - [ ] Event properties populated correctly
 
 #### Performance
+
 - [ ] Lighthouse score >90 on key pages
 - [ ] Core Web Vitals in green ranges
 - [ ] Images properly optimized and lazy loaded
 - [ ] No console errors in production
 
 #### UX/Accessibility
+
 - [ ] Keyboard navigation works throughout site
 - [ ] Screen reader compatibility verified
 - [ ] Mobile responsiveness tested
 - [ ] Color contrast meets WCAG AA
 
 #### Reliability
+
 - [ ] Error pages render correctly
 - [ ] Health check endpoint responding
 - [ ] Database connectivity verified
@@ -102,6 +111,7 @@ Generates detailed reports in `launch-week/validation-reports/`:
 ## Environment Configuration
 
 ### Required Environment Variables
+
 ```bash
 # Analytics
 NEXT_PUBLIC_POSTHOG_KEY=your_posthog_key
@@ -115,6 +125,7 @@ NEXT_PUBLIC_SITE_URL=https://www.michaelchurley.com
 ```
 
 ### Production Deployment Checklist
+
 - [ ] All environment variables configured
 - [ ] DNS records pointing to production
 - [ ] SSL certificate active
@@ -126,6 +137,7 @@ NEXT_PUBLIC_SITE_URL=https://www.michaelchurley.com
 ## Analytics Events
 
 ### Key Launch KPIs Tracked
+
 - **Page Views**: All page visits with metadata
 - **Contact Form**: View → Start → Submit → Success funnel
 - **Portfolio Engagement**: Views, clicks, demo/code links
@@ -133,6 +145,7 @@ NEXT_PUBLIC_SITE_URL=https://www.michaelchurley.com
 - **User Experience**: Scroll depth, session duration, navigation
 
 ### Viewing Analytics
+
 1. Log into PostHog dashboard
 2. Check custom events under "Events" tab
 3. Create funnels for conversion tracking
@@ -141,21 +154,25 @@ NEXT_PUBLIC_SITE_URL=https://www.michaelchurley.com
 ## Common Issues & Solutions
 
 ### Build Failures
+
 - Run `bun tsc --noEmit` to check TypeScript errors
 - Check `bun run lint` for code quality issues
 - Verify all environment variables are set
 
 ### Analytics Not Working
+
 - Check browser console for PostHog errors
 - Verify `NEXT_PUBLIC_POSTHOG_KEY` is set
 - Test in production environment (PostHog blocked in dev by some ad blockers)
 
 ### Security Header Issues
+
 - Check browser Network tab for header presence
 - Verify next.config.ts headers configuration
 - Test CSP with browser console warnings
 
 ### Performance Problems
+
 - Run bundle analyzer: `bun run build && bun run analyze`
 - Check image optimization and lazy loading
 - Verify Core Web Vitals in Lighthouse
@@ -163,6 +180,7 @@ NEXT_PUBLIC_SITE_URL=https://www.michaelchurley.com
 ## Support Contacts
 
 For issues with:
+
 - **Analytics**: Check PostHog dashboard and documentation
 - **Performance**: Use Lighthouse and Core Web Vitals tools
 - **Security**: Test with Mozilla Observatory and SecurityHeaders.com

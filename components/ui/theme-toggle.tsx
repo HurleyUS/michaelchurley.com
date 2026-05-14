@@ -15,12 +15,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button
-        variant="ghost"
-        size="icon"
-        aria-label="Toggle theme"
-        disabled
-      >
+      <Button variant="ghost" size="icon" aria-label="Toggle theme" disabled>
         <PiMoonLight className="w-5 h-5" />
       </Button>
     );

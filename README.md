@@ -85,6 +85,7 @@ The project is configured for deployment on Vercel. Connect your repository to V
 ## Content Management
 
 Currently, content is managed through code. Future plans include:
+
 - CMS integration
 - Blog post management
 - Dynamic portfolio updates

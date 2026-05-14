@@ -70,7 +70,13 @@ That\u2019s different. And that\u2019s why I\u2019m in.
 
 \u2014 Michael C. Hurley`,
   coverImage: undefined,
-  tags: ["partnership", "marketing", "vizible", "local-business", "announcement"],
+  tags: [
+    "partnership",
+    "marketing",
+    "vizible",
+    "local-business",
+    "announcement",
+  ],
   featured: true,
   published: true,
   publishedAt: now,
@@ -99,7 +105,7 @@ async function seed() {
   } catch (e) {
     console.error("Failed to create blog post:", e);
     console.log(
-      "\nIf the mutation doesn't exist, you may need to insert manually via the Convex dashboard."
+      "\nIf the mutation doesn't exist, you may need to insert manually via the Convex dashboard.",
     );
     console.log("Post data:", JSON.stringify(blogPost, null, 2));
   }

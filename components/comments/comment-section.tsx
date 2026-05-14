@@ -23,7 +23,10 @@ function getSessionId() {
   return sessionId;
 }
 
-export default function CommentSection({ itemType, itemId }: CommentSectionProps) {
+export default function CommentSection({
+  itemType,
+  itemId,
+}: CommentSectionProps) {
   const { user, isSignedIn } = useUser();
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
@@ -31,7 +34,7 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
   const [showSignInPrompt, setShowSignInPrompt] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
-  
+
   // Ref to prevent double-calling verifyAndPublish
   const isPublishing = useRef(false);
 
@@ -51,7 +54,7 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
     if (isSignedIn && user && pendingComment && !isPublishing.current) {
       // Mark as publishing to prevent race condition
       isPublishing.current = true;
-      
+
       verifyAndPublish({
         sessionId: getSessionId(),
       })
@@ -67,7 +70,9 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
           }
         })
         .catch((err) => {
-          setError(err instanceof Error ? err.message : "Failed to publish comment");
+          setError(
+            err instanceof Error ? err.message : "Failed to publish comment",
+          );
         })
         .finally(() => {
           // Reset after a delay to handle any delayed reactive updates
@@ -196,7 +201,8 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
                 required
               />
               <p className="text-xs text-muted-foreground">
-                You&apos;ll need to sign in with Google using this email to publish your comment
+                You&apos;ll need to sign in with Google using this email to
+                publish your comment
               </p>
             </div>
           )}
@@ -229,7 +235,11 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
             disabled={isSubmitting}
             className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 disabled:opacity-50"
           >
-            {isSubmitting ? "Submitting..." : isSignedIn ? "Post Comment" : "Continue"}
+            {isSubmitting
+              ? "Submitting..."
+              : isSignedIn
+                ? "Post Comment"
+                : "Continue"}
           </button>
         </form>
       )}
@@ -260,7 +270,9 @@ export default function CommentSection({ itemType, itemId }: CommentSectionProps
                 ) : (
                   <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
                     <span className="text-lg">
-                      {(comment.authorName || comment.authorEmail || "?")[0]?.toUpperCase()}
+                      {(comment.authorName ||
+                        comment.authorEmail ||
+                        "?")[0]?.toUpperCase()}
                     </span>
                   </div>
                 )}

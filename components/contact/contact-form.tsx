@@ -4,7 +4,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { PiPaperPlaneTilt, PiSpinner, PiCheckCircle, PiWarningCircle } from "react-icons/pi";
+import {
+  PiPaperPlaneTilt,
+  PiSpinner,
+  PiCheckCircle,
+  PiWarningCircle,
+} from "react-icons/pi";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -19,7 +24,7 @@ export function ContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -50,7 +55,7 @@ export function ContactForm() {
     } catch (error) {
       setStatus("error");
       setErrorMessage(
-        error instanceof Error ? error.message : "Something went wrong"
+        error instanceof Error ? error.message : "Something went wrong",
       );
     }
   };
@@ -79,7 +84,10 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-md w-full">
       {status === "error" && (
-        <div role="alert" className="flex items-center gap-sm p-md bg-red-50 dark:bg-red-950/20 rounded-lg border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300">
+        <div
+          role="alert"
+          className="flex items-center gap-sm p-md bg-red-50 dark:bg-red-950/20 rounded-lg border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300"
+        >
           <PiWarningCircle className="w-5 h-5 flex-shrink-0" />
           <p>{errorMessage}</p>
         </div>

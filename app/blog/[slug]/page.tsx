@@ -13,9 +13,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = await fetchQuery(api.blog.getBySlug, { slug }).catch(
-    () => null
-  );
+  const post = await fetchQuery(api.blog.getBySlug, { slug }).catch(() => null);
 
   if (!post || !post.published) {
     return { title: "Post Not Found" };
@@ -51,9 +49,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = await fetchQuery(api.blog.getBySlug, { slug }).catch(
-    () => null
-  );
+  const post = await fetchQuery(api.blog.getBySlug, { slug }).catch(() => null);
 
   if (!post || !post.published) {
     notFound();

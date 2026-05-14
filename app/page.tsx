@@ -475,7 +475,10 @@ export default function Home() {
         </ContainerBoxedCenter>
       </section>
       {/* Contact Form Section */}
-      <section id="book" className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl">
+      <section
+        id="book"
+        className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl"
+      >
         <ContainerBoxedCenter
           props={{
             className:
@@ -492,7 +495,7 @@ export default function Home() {
             </div>
             <h2 className="font-black">Book a Meeting</h2>
             <p className="text-muted-foreground max-w-[32rem]">
-              Schedule a 30-minute call to discuss business opportunities, 
+              Schedule a 30-minute call to discuss business opportunities,
               technology projects, or collaboration ideas.
             </p>
           </div>
@@ -517,14 +520,11 @@ export default function Home() {
           <div className="flex flex-col items-center justify-start text-xs sm:text-center gap-md grow w-full">
             <h2 className="font-black">Ready To Bring Me On Board?</h2>
             <p className="text-muted-foreground max-w-[32rem]">
-              Schedule a 30-minute call to discuss your project, business needs, 
+              Schedule a 30-minute call to discuss your project, business needs,
               or collaboration opportunities.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center p-md text-xs w-full max-w-[42rem] mx-auto gap-md">
-              <Link
-                href="/book"
-                className="block border-gradient-animated"
-              >
+              <Link href="/book" className="block border-gradient-animated">
                 <Button size="lg" className="gap-2">
                   <PiCalendarPlusLight className="w-5 h-5" />
                   Book a Meeting

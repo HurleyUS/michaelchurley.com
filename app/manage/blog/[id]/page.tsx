@@ -17,7 +17,7 @@ const Editor = nextDynamic(
     loading: () => (
       <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />
     ),
-  }
+  },
 );
 
 // Import Toast UI Editor CSS
@@ -140,7 +140,9 @@ export default function EditBlogPost() {
     }
   };
 
-  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileInputChange = async (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const file = e.target.files?.[0];
     if (!file) return;
     await handleCoverImageUpload(file);
@@ -327,8 +329,8 @@ export default function EditBlogPost() {
               isDragging
                 ? "border-primary bg-primary/10 scale-[1.02]"
                 : coverImageUrl
-                ? "border-border"
-                : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
+                  ? "border-border"
+                  : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
             }`}
           >
             {coverImageUrl ? (
@@ -341,13 +343,19 @@ export default function EditBlogPost() {
                 />
                 <button
                   type="button"
-                  onClick={post.coverImage ? handleClearCoverImage : handleRemoveCoverImage}
+                  onClick={
+                    post.coverImage
+                      ? handleClearCoverImage
+                      : handleRemoveCoverImage
+                  }
                   className="absolute top-2 right-2 p-2 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80 transition-colors"
                 >
                   <PiX size={16} />
                 </button>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-white text-sm">Drop new image to replace</p>
+                  <p className="text-white text-sm">
+                    Drop new image to replace
+                  </p>
                 </div>
               </div>
             ) : (

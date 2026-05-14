@@ -5,37 +5,44 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ### Security
+
 - Added rate limiting to authentication endpoints to prevent brute-force attacks (#17)
 - Restricted admin email configuration to prevent unauthorized access (#17)
 - Added CSRF protection to auth flows (#17)
 
 ### Fixed
+
 - Authentication bypass vulnerability in admin routes (#17)
 - Rate limiting middleware for login/signup endpoints (#17)
 
 ### Changed
+
 - Admin email now validated against allowlist (#17)
 - Enhanced auth error messages for better security posture (#17)
 
 ### Added
+
 - **Dark Mode Toggle** via next-themes (defaultTheme="dark", class-based)
   - ThemeProvider wrapping the app with dark-first default
   - ThemeToggle component in header (desktop + mobile)
   - Removed `@media (prefers-color-scheme: dark)` in favor of `.dark` class
 
 ### Changed
+
 - **proxy.ts**: Switched from `isPublicRoute` (enumerating every public route) to `isPrivateRoute` pattern per BUILDING.md Commandment II
 - **Booking form submit button**: Removed `w-full`, now content-width with bottom-right alignment
 - **Mobile menu buttons**: Removed `w-full` from "Email Me" and "Call or Text Me" buttons
 - **Contact form submit button**: Removed `w-full`, now self-end aligned
 
 ### Fixed
+
 - **Accessibility**: Added `aria-label` attributes to all social icon links (header, footer, mobile menu), theme toggle, booking modal icon button, and navigation icon buttons
 - **Accessibility**: Added `role="alert"` to form error messages
 - **Tailwind dark mode**: Added `darkMode: "class"` to tailwind.config.ts for class-based toggling
 - **HTML**: Added `suppressHydrationWarning` to `<html>` tag for next-themes SSR compatibility
 
 ### Previously Added
+
 - **Convex Backend Integration**
   - Set up Convex with schema for portfolio items, blog posts, and comments
   - Created CRUD operations for all content types
@@ -77,12 +84,14 @@ All notable changes to this project will be documented in this file.
   - Session-based pending comments (24hr expiry)
 
 ### Technical Details
+
 - Convex schema with proper indexes for performance
 - ConvexClientProvider wrapping the app with ClerkProvider
 - Clerk middleware protecting /manage routes
 - Real-time updates via Convex subscriptions
 
 ### Configuration Required
+
 1. Set up Clerk at https://dashboard.clerk.com
 2. Enable Google OAuth only
 3. Require email from Google sign-in
@@ -91,6 +100,7 @@ All notable changes to this project will be documented in this file.
    - `CLERK_SECRET_KEY`
 
 ### Dependencies Added
+
 - `convex` - Backend as a service
 - `@clerk/nextjs` - Authentication
 

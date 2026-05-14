@@ -34,19 +34,31 @@ export default function MenuTop() {
           <SheetContent className="p-0 bg-Base z-50 w-full h-dvh overflow-x-clip overflow-y-auto">
             <div className="flex flex-col items-stretch justify-start divide-y divide-y-foreground">
               <div className="flex items-center justify-between gap-md p-md w-full text-md">
-                <Link href="https://github.com/michaelmonetized" aria-label="GitHub profile">
+                <Link
+                  href="https://github.com/michaelmonetized"
+                  aria-label="GitHub profile"
+                >
                   <PiGithubLogoLight />
                 </Link>
 
-                <Link href="https://www.linkedin.com/in/michaelchurley/" aria-label="LinkedIn profile">
+                <Link
+                  href="https://www.linkedin.com/in/michaelchurley/"
+                  aria-label="LinkedIn profile"
+                >
                   <PiLinkedinLogoLight />
                 </Link>
 
-                <Link href="https://instagram.com/michaelh_rley" aria-label="Instagram profile">
+                <Link
+                  href="https://instagram.com/michaelh_rley"
+                  aria-label="Instagram profile"
+                >
                   <PiInstagramLogoLight />
                 </Link>
 
-                <Link href="https://x.com/MichaelH_rley2" aria-label="X profile">
+                <Link
+                  href="https://x.com/MichaelH_rley2"
+                  aria-label="X profile"
+                >
                   <PiXLogoLight />
                 </Link>
 
@@ -59,27 +71,33 @@ export default function MenuTop() {
 
               {/* Navigation Links */}
               <div className="flex flex-col gap-2 p-md">
-                <Link href="/portfolio" className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg">
+                <Link
+                  href="/portfolio"
+                  className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg"
+                >
                   <PiBriefcaseLight />
                   <span>Portfolio</span>
                 </Link>
-                <Link href="/blog" className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg">
+                <Link
+                  href="/blog"
+                  className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg"
+                >
                   <PiArticleLight />
                   <span>Blog</span>
                 </Link>
-                <BookingModal trigger={
-                  <button className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg text-left">
-                    <PiCalendarPlusLight />
-                    <span>Book a Meeting</span>
-                  </button>
-                } />
+                <BookingModal
+                  trigger={
+                    <button className="flex items-center gap-2 p-2 hover:bg-muted rounded-lg text-left">
+                      <PiCalendarPlusLight />
+                      <span>Book a Meeting</span>
+                    </button>
+                  }
+                />
               </div>
 
               <div className="flex items-center justify-end gap-md p-md">
                 <Link href="mailto:michaelhurley.pj@gmail.com">
-                  <Button variant="outline">
-                    Email Me
-                  </Button>
+                  <Button variant="outline">Email Me</Button>
                 </Link>
                 <Link href="tel:+18285931935">
                   <Button variant="secondary" className="font-black">
@@ -97,24 +115,39 @@ export default function MenuTop() {
           <NavigationMenuList>
             {/* Navigation Links */}
             <div className="flex items-center gap-4 mr-4">
-              <Link href="/portfolio" className="text-sm hover:text-primary transition-colors">
+              <Link
+                href="/portfolio"
+                className="text-sm hover:text-primary transition-colors"
+              >
                 Portfolio
               </Link>
-              <Link href="/blog" className="text-sm hover:text-primary transition-colors">
+              <Link
+                href="/blog"
+                className="text-sm hover:text-primary transition-colors"
+              >
                 Blog
               </Link>
             </div>
 
             <div className="flex items-center justify-between gap-md px-md w-full">
-              <Link href="https://github.com/michaelmonetized" aria-label="GitHub profile">
+              <Link
+                href="https://github.com/michaelmonetized"
+                aria-label="GitHub profile"
+              >
                 <PiGithubLogoLight />
               </Link>
 
-              <Link href="https://www.linkedin.com/in/michaelchurley/" aria-label="LinkedIn profile">
+              <Link
+                href="https://www.linkedin.com/in/michaelchurley/"
+                aria-label="LinkedIn profile"
+              >
                 <PiLinkedinLogoLight />
               </Link>
 
-              <Link href="https://instagram.com/michaelh_rley" aria-label="Instagram profile">
+              <Link
+                href="https://instagram.com/michaelh_rley"
+                aria-label="Instagram profile"
+              >
                 <PiInstagramLogoLight />
               </Link>
 

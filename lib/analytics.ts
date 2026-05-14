@@ -9,36 +9,36 @@ export enum LaunchEvents {
   // Page views
   PAGE_VIEW = "page_view",
   PAGE_LEAVE = "page_leave",
-  
+
   // Lead generation
   CONTACT_FORM_VIEW = "contact_form_view",
   CONTACT_FORM_START = "contact_form_start",
   CONTACT_FORM_SUBMIT = "contact_form_submit",
   CONTACT_FORM_SUCCESS = "contact_form_success",
-  
+
   // Portfolio engagement
   PORTFOLIO_VIEW = "portfolio_view",
   PORTFOLIO_ITEM_CLICK = "portfolio_item_click",
   PORTFOLIO_DEMO_CLICK = "portfolio_demo_click",
   PORTFOLIO_CODE_CLICK = "portfolio_code_click",
-  
+
   // Blog engagement
   BLOG_VIEW = "blog_view",
   BLOG_POST_VIEW = "blog_post_view",
   BLOG_POST_READ_TIME = "blog_post_read_time",
   BLOG_POST_SHARE = "blog_post_share",
-  
+
   // Conversions
   HIRE_INTEREST = "hire_interest",
   EMAIL_SIGNUP = "email_signup",
   PHONE_CALL_CLICK = "phone_call_click",
   EMAIL_CLICK = "email_click",
-  
-  // Technical engagement  
+
+  // Technical engagement
   GITHUB_CLICK = "github_click",
   LINKEDIN_CLICK = "linkedin_click",
   RESUME_DOWNLOAD = "resume_download",
-  
+
   // User experience
   SEARCH_PERFORMED = "search_performed",
   NAVIGATION_CLICK = "navigation_click",
@@ -108,7 +108,7 @@ export function useAnalytics() {
 
       posthog.capture(event, enhancedProperties);
     },
-    [posthog]
+    [posthog],
   );
 
   // Track page view with enhanced properties
@@ -116,22 +116,22 @@ export function useAnalytics() {
     (properties?: LaunchKPIProperties) => {
       trackEvent(LaunchEvents.PAGE_VIEW, properties);
     },
-    [trackEvent]
+    [trackEvent],
   );
 
   // Track contact form interactions
   const trackContactForm = useCallback(
     (
-      action: 
+      action:
         | LaunchEvents.CONTACT_FORM_VIEW
         | LaunchEvents.CONTACT_FORM_START
         | LaunchEvents.CONTACT_FORM_SUBMIT
         | LaunchEvents.CONTACT_FORM_SUCCESS,
-      properties?: ContactFormProperties
+      properties?: ContactFormProperties,
     ) => {
       trackEvent(action, properties);
     },
-    [trackEvent]
+    [trackEvent],
   );
 
   // Track portfolio interactions
@@ -142,11 +142,11 @@ export function useAnalytics() {
         | LaunchEvents.PORTFOLIO_ITEM_CLICK
         | LaunchEvents.PORTFOLIO_DEMO_CLICK
         | LaunchEvents.PORTFOLIO_CODE_CLICK,
-      properties?: PortfolioProperties
+      properties?: PortfolioProperties,
     ) => {
       trackEvent(action, properties);
     },
-    [trackEvent]
+    [trackEvent],
   );
 
   // Track blog interactions
@@ -157,11 +157,11 @@ export function useAnalytics() {
         | LaunchEvents.BLOG_POST_VIEW
         | LaunchEvents.BLOG_POST_READ_TIME
         | LaunchEvents.BLOG_POST_SHARE,
-      properties?: BlogProperties
+      properties?: BlogProperties,
     ) => {
       trackEvent(action, properties);
     },
-    [trackEvent]
+    [trackEvent],
   );
 
   // Track conversion events
@@ -175,11 +175,11 @@ export function useAnalytics() {
         | LaunchEvents.GITHUB_CLICK
         | LaunchEvents.LINKEDIN_CLICK
         | LaunchEvents.RESUME_DOWNLOAD,
-      properties?: LaunchKPIProperties
+      properties?: LaunchKPIProperties,
     ) => {
       trackEvent(action, properties);
     },
-    [trackEvent]
+    [trackEvent],
   );
 
   // Identify user for enhanced tracking
@@ -188,7 +188,7 @@ export function useAnalytics() {
       if (!posthog) return;
       posthog.identify(userId, properties);
     },
-    [posthog]
+    [posthog],
   );
 
   // Set user properties
@@ -197,7 +197,7 @@ export function useAnalytics() {
       if (!posthog) return;
       posthog.setPersonProperties(properties);
     },
-    [posthog]
+    [posthog],
   );
 
   return {
@@ -223,19 +223,33 @@ export function useScrollDepthTracking() {
     const handleScroll = () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = Math.round((scrollTop / docHeight) * 100);
 
         if (scrollPercent > maxScrollDepth) {
           maxScrollDepth = scrollPercent;
-          
+
           // Track scroll depth milestones
-          if (scrollPercent >= 25 && scrollPercent < 50 && maxScrollDepth < 25) {
+          if (
+            scrollPercent >= 25 &&
+            scrollPercent < 50 &&
+            maxScrollDepth < 25
+          ) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 25 });
-          } else if (scrollPercent >= 50 && scrollPercent < 75 && maxScrollDepth < 50) {
+          } else if (
+            scrollPercent >= 50 &&
+            scrollPercent < 75 &&
+            maxScrollDepth < 50
+          ) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 50 });
-          } else if (scrollPercent >= 75 && scrollPercent < 100 && maxScrollDepth < 75) {
+          } else if (
+            scrollPercent >= 75 &&
+            scrollPercent < 100 &&
+            maxScrollDepth < 75
+          ) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 75 });
           } else if (scrollPercent >= 100 && maxScrollDepth < 100) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 100 });
@@ -306,7 +320,7 @@ export function validateAnalyticsSetup(): {
 
     // Check if analytics is working
     try {
-      // @ts-ignore - posthog is global  
+      // @ts-ignore - posthog is global
       if (window.posthog && !window.posthog.__loaded) {
         issues.push("PostHog not loaded properly");
       }
@@ -320,7 +334,9 @@ export function validateAnalyticsSetup(): {
     const title = document.querySelector("title");
     const description = document.querySelector('meta[name="description"]');
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogDescription = document.querySelector(
+      'meta[property="og:description"]',
+    );
 
     if (!title) issues.push("Missing page title");
     if (!description) issues.push("Missing meta description");

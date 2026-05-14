@@ -75,7 +75,9 @@ describe("Validation utilities", () => {
     test("escapes HTML entities", () => {
       const input = '<script>alert("xss")</script>';
       const result = sanitizeHtml(input);
-      expect(result).toBe("&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;");
+      expect(result).toBe(
+        "&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;",
+      );
     });
 
     test("escapes ampersands", () => {
@@ -103,11 +105,11 @@ describe("Validation utilities", () => {
 
     test("blocks requests over limit", () => {
       const config = { windowMs: 60000, maxRequests: 2 };
-      
+
       // First two requests should be allowed
       checkRateLimit("test-key-2", config);
       checkRateLimit("test-key-2", config);
-      
+
       // Third request should be blocked
       const result = checkRateLimit("test-key-2", config);
       expect(result.allowed).toBe(false);
@@ -116,14 +118,14 @@ describe("Validation utilities", () => {
 
     test("resets after window expires", (done) => {
       const config = { windowMs: 100, maxRequests: 1 };
-      
+
       // Use up the limit
       checkRateLimit("test-key-3", config);
-      
+
       // Should be blocked immediately
       let result = checkRateLimit("test-key-3", config);
       expect(result.allowed).toBe(false);
-      
+
       // After window expires, should be allowed again
       setTimeout(() => {
         result = checkRateLimit("test-key-3", config);
@@ -137,7 +139,7 @@ describe("Validation utilities", () => {
     test("handles ValidationError", () => {
       const error = new ValidationError("Invalid input", "email");
       const result = handleApiError(error);
-      
+
       expect(result.message).toBe("Invalid input");
       expect(result.status).toBe(400);
     });
@@ -145,14 +147,14 @@ describe("Validation utilities", () => {
     test("handles RateLimitError", () => {
       const error = new RateLimitError("Too many requests", 60);
       const result = handleApiError(error);
-      
+
       expect(result.message).toBe("Too many requests");
       expect(result.status).toBe(429);
     });
 
     test("handles ZodError", () => {
       const schema = z.object({ name: z.string().min(1) });
-      
+
       try {
         schema.parse({ name: "" });
       } catch (error) {
@@ -165,14 +167,14 @@ describe("Validation utilities", () => {
     test("handles generic Error", () => {
       const error = new Error("Something went wrong");
       const result = handleApiError(error);
-      
+
       expect(result.message).toBe("Internal server error");
       expect(result.status).toBe(500);
     });
 
     test("handles unknown error", () => {
       const result = handleApiError("unknown error");
-      
+
       expect(result.message).toBe("Internal server error");
       expect(result.status).toBe(500);
     });

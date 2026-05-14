@@ -17,7 +17,7 @@ const Editor = nextDynamic(
     loading: () => (
       <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />
     ),
-  }
+  },
 );
 
 // Import Toast UI Editor CSS
@@ -49,7 +49,7 @@ export default function NewBlogPost() {
   // Separate state for cover image
   const [coverImageId, setCoverImageId] = useState<Id<"_storage"> | null>(null);
   const [coverImagePreview, setCoverImagePreview] = useState<string | null>(
-    null
+    null,
   );
 
   const generateSlug = (title: string) => {
@@ -117,7 +117,9 @@ export default function NewBlogPost() {
     }
   };
 
-  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileInputChange = async (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
     const file = e.target.files?.[0];
     if (!file) return;
     await handleCoverImageUpload(file);
@@ -261,8 +263,8 @@ export default function NewBlogPost() {
               isDragging
                 ? "border-primary bg-primary/10 scale-[1.02]"
                 : coverImagePreview
-                ? "border-border"
-                : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
+                  ? "border-border"
+                  : "border-muted-foreground/30 hover:border-primary hover:bg-primary/5"
             }`}
           >
             {coverImagePreview ? (
@@ -281,7 +283,9 @@ export default function NewBlogPost() {
                   <PiX size={16} />
                 </button>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-white text-sm">Drop new image to replace</p>
+                  <p className="text-white text-sm">
+                    Drop new image to replace
+                  </p>
                 </div>
               </div>
             ) : (

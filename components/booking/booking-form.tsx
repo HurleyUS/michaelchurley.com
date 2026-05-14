@@ -23,7 +23,7 @@ function generateTimeSlots(): string[] {
     }
   }
   // Add 20:00 and 20:30 (8:00 PM and 8:30 PM)
-  return slots.filter(s => {
+  return slots.filter((s) => {
     const [hh = 0, mm = 0] = s.split(":").map(Number);
     const minutes = hh * 60 + mm;
     return minutes >= 7 * 60 + 30 && minutes <= 20 * 60 + 30;
@@ -54,15 +54,15 @@ function getMonthDay(date: Date): string {
 // Get available time slots for a given date (only future times)
 function getAvailableSlotsForDate(date: Date, now: Date): string[] {
   const isToday = formatDate(date) === formatDate(now);
-  
+
   if (!isToday) {
     return ALL_TIME_SLOTS;
   }
-  
+
   // For today, filter out past times (with 30min buffer)
   const currentMinutes = now.getHours() * 60 + now.getMinutes() + 30;
-  
-  return ALL_TIME_SLOTS.filter(slot => {
+
+  return ALL_TIME_SLOTS.filter((slot) => {
     const [hh = 0, mm = 0] = slot.split(":").map(Number);
     const slotMinutes = hh * 60 + mm;
     return slotMinutes > currentMinutes;
@@ -70,11 +70,15 @@ function getAvailableSlotsForDate(date: Date, now: Date): string[] {
 }
 
 // Get next N weekdays (M-F) that have available slots
-function getWeekdaysWithSlots(startDate: Date, count: number, now: Date): Date[] {
+function getWeekdaysWithSlots(
+  startDate: Date,
+  count: number,
+  now: Date,
+): Date[] {
   const days: Date[] = [];
   const current = new Date(startDate);
   current.setHours(0, 0, 0, 0);
-  
+
   while (days.length < count) {
     const dayOfWeek = current.getDay();
     // Only M-F (1-5)
@@ -87,7 +91,7 @@ function getWeekdaysWithSlots(startDate: Date, count: number, now: Date): Date[]
     }
     current.setDate(current.getDate() + 1);
   }
-  
+
   return days;
 }
 
@@ -126,7 +130,7 @@ export default function BookingForm() {
     if (!now) return new Date();
     const date = new Date(now);
     date.setHours(0, 0, 0, 0);
-    
+
     // Skip forward by startOffset weekdays
     let skipped = 0;
     while (skipped < startOffset) {
@@ -140,7 +144,7 @@ export default function BookingForm() {
         }
       }
     }
-    
+
     return date;
   }, [startOffset, now]);
 
@@ -170,7 +174,7 @@ export default function BookingForm() {
 
   const handleBookNow = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!name.trim() || !email.trim()) {
       setError("Please fill in your name and email");
       return;
@@ -180,7 +184,7 @@ export default function BookingForm() {
       return;
     }
     if (!selectedDate || !selectedTime) return;
-    
+
     setIsSubmitting(true);
     setError(null);
 
@@ -237,7 +241,9 @@ export default function BookingForm() {
   if (!mounted || !now) {
     return (
       <div className="w-full flex items-center justify-center py-12">
-        <div className="animate-pulse text-muted-foreground">Loading available times...</div>
+        <div className="animate-pulse text-muted-foreground">
+          Loading available times...
+        </div>
       </div>
     );
   }
@@ -250,13 +256,23 @@ export default function BookingForm() {
         <div className="flex items-center justify-between mb-4">
           <div className="w-10">
             {canGoBack && (
-              <Button variant="ghost" size="icon" onClick={handlePrev} aria-label="Previous days">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handlePrev}
+                aria-label="Previous days"
+              >
                 <PiCaretLeftBold />
               </Button>
             )}
           </div>
           <h3 className="text-lg font-semibold">Select a Time</h3>
-          <Button variant="ghost" size="icon" onClick={handleNext} aria-label="Next days">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={handleNext}
+            aria-label="Next days"
+          >
             <PiCaretRightBold />
           </Button>
         </div>
@@ -272,7 +288,9 @@ export default function BookingForm() {
                 {/* Day header */}
                 <div className="text-center mb-2 pb-2 border-b">
                   <div className="font-semibold">{getDayName(date)}</div>
-                  <div className="text-sm text-muted-foreground">{getMonthDay(date)}</div>
+                  <div className="text-sm text-muted-foreground">
+                    {getMonthDay(date)}
+                  </div>
                 </div>
 
                 {/* Scrollable slots container */}
@@ -284,21 +302,23 @@ export default function BookingForm() {
                       className={cn(
                         "px-2 py-2 text-sm rounded-md border transition-all",
                         "hover:border-primary hover:bg-primary/5",
-                        "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1"
+                        "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1",
                       )}
                     >
                       {formatTimeSlot(slot)}
                     </button>
                   ))}
                   {/* Muted booked placeholders if less than 5 slots */}
-                  {emptySlots > 0 && slots.length < 5 && Array.from({ length: emptySlots }).map((_, i) => (
-                    <div
-                      key={`booked-${i}`}
-                      className="px-2 py-2 text-sm rounded-md border border-muted bg-muted/30 text-muted-foreground text-center"
-                    >
-                      Booked
-                    </div>
-                  ))}
+                  {emptySlots > 0 &&
+                    slots.length < 5 &&
+                    Array.from({ length: emptySlots }).map((_, i) => (
+                      <div
+                        key={`booked-${i}`}
+                        className="px-2 py-2 text-sm rounded-md border border-muted bg-muted/30 text-muted-foreground text-center"
+                      >
+                        Booked
+                      </div>
+                    ))}
                 </div>
               </div>
             );
@@ -322,13 +342,22 @@ export default function BookingForm() {
         >
           ← Back
         </button>
-        <h3 className="text-lg font-semibold text-center mb-1">Book Your Meeting</h3>
+        <h3 className="text-lg font-semibold text-center mb-1">
+          Book Your Meeting
+        </h3>
         <p className="text-sm text-muted-foreground text-center mb-4">
-          {selectedDate?.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })} at {selectedTime && formatTimeSlot(selectedTime)}
+          {selectedDate?.toLocaleDateString("en-US", {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+          })}{" "}
+          at {selectedTime && formatTimeSlot(selectedTime)}
         </p>
         <form onSubmit={handleBookNow} className="space-y-3">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">Name *</label>
+            <label htmlFor="name" className="block text-sm font-medium mb-1">
+              Name *
+            </label>
             <Input
               id="name"
               value={name}
@@ -338,7 +367,9 @@ export default function BookingForm() {
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone *</label>
+            <label htmlFor="phone" className="block text-sm font-medium mb-1">
+              Phone *
+            </label>
             <Input
               id="phone"
               type="tel"
@@ -349,7 +380,9 @@ export default function BookingForm() {
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">Email *</label>
+            <label htmlFor="email" className="block text-sm font-medium mb-1">
+              Email *
+            </label>
             <Input
               id="email"
               type="email"
@@ -359,7 +392,11 @@ export default function BookingForm() {
               required
             />
           </div>
-          {error && <p className="text-sm text-red-500" role="alert">{error}</p>}
+          {error && (
+            <p className="text-sm text-red-500" role="alert">
+              {error}
+            </p>
+          )}
           <div className="flex justify-end">
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Booking..." : "Book Now"}
@@ -378,7 +415,9 @@ export default function BookingForm() {
       <p className="text-muted-foreground mb-4">
         Check your email for the calendar invite.
       </p>
-      <Button onClick={handleReset} variant="outline">Book Another Meeting</Button>
+      <Button onClick={handleReset} variant="outline">
+        Book Another Meeting
+      </Button>
     </div>
   );
 }

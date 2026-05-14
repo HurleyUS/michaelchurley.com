@@ -9,15 +9,18 @@
 - **Priority:** MEDIUM
 
 ## What's Working
+
 - Modern stack setup
 - Project structure
 
 ## What's Broken/Missing
+
 - Content
 - Design finalization
 - Portfolio pieces
 
 ## Next Steps
+
 1. Finalize design
 2. Add portfolio content
 3. Deploy

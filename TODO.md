@@ -3,6 +3,7 @@
 ## High Priority
 
 ### Content Updates
+
 - [ ] Update resume with latest experience
 - [ ] Add recent projects to portfolio
 - [ ] Write compelling about section
@@ -13,6 +14,7 @@
 - [ ] Add social media links
 
 ### Portfolio Section
+
 - [x] Create portfolio project cards
 - [x] Add project detail pages
 - [x] Include project screenshots/images (via Convex)
@@ -23,6 +25,7 @@
 - [ ] Create case studies for key projects
 
 ### Contact & Engagement
+
 - [ ] Create contact form
 - [ ] Integrate Resend for email sending
 - [ ] Add form validation
@@ -35,6 +38,7 @@
 ## Medium Priority
 
 ### Blog Functionality
+
 - [x] Design blog layout
 - [x] Create blog listing page
 - [x] Create blog post template
@@ -49,6 +53,7 @@
 - [x] Create blog post creation workflow (via /manage)
 
 ### Design & UX
+
 - [ ] Improve homepage design
 - [ ] Enhance navigation
 - [ ] Add smooth scrolling
@@ -61,6 +66,7 @@
 - [ ] Create interactive resume timeline
 
 ### SEO & Analytics
+
 - [ ] Optimize meta tags for all pages
 - [ ] Add Open Graph tags
 - [ ] Add Twitter Card tags
@@ -75,6 +81,7 @@
 ## Low Priority
 
 ### Performance Optimization
+
 - [ ] Optimize images (use Next.js Image)
 - [ ] Implement lazy loading
 - [ ] Add caching strategies
@@ -85,6 +92,7 @@
 - [ ] Optimize fonts
 
 ### Advanced Features
+
 - [ ] Add testimonials section
 - [ ] Create skills visualization
 - [ ] Add certifications display
@@ -95,6 +103,7 @@
 - [ ] Implement print styles
 
 ### CMS Integration (Future)
+
 - [x] Evaluate CMS options (Convex selected)
 - [x] Set up chosen CMS (Convex)
 - [ ] Migrate content
@@ -103,6 +112,7 @@
 - [ ] Document CMS usage
 
 ### Testing & Quality
+
 - [ ] Set up testing framework
 - [ ] Write unit tests
 - [ ] Add integration tests
@@ -115,6 +125,7 @@
 ## Content Ideas
 
 ### Blog Posts
+
 - [ ] Technical tutorials
 - [ ] Project case studies
 - [ ] Learning experiences
@@ -124,6 +135,7 @@
 - [ ] Problem-solving stories
 
 ### Portfolio Projects
+
 - [ ] Highlight best work
 - [ ] Include variety of projects
 - [ ] Show technical diversity
@@ -134,6 +146,7 @@
 ## Maintenance
 
 ### Regular Tasks
+
 - [ ] Update resume quarterly
 - [ ] Add new projects as completed
 - [ ] Write blog posts monthly

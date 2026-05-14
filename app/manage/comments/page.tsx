@@ -34,7 +34,9 @@ export default function ManageComments() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold">Comments</h1>
-        <p className="text-muted-foreground">Manage user comments on blog posts and portfolio items.</p>
+        <p className="text-muted-foreground">
+          Manage user comments on blog posts and portfolio items.
+        </p>
       </div>
 
       {comments === undefined ? (
@@ -68,7 +70,9 @@ export default function ManageComments() {
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-lg">
-                        {(comment.authorName || comment.authorEmail || "?")[0]?.toUpperCase()}
+                        {(comment.authorName ||
+                          comment.authorEmail ||
+                          "?")[0]?.toUpperCase()}
                       </span>
                     </div>
                   )}
@@ -85,7 +89,9 @@ export default function ManageComments() {
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <span className="capitalize">{comment.itemType}</span>
                       <span>•</span>
-                      <span>{comment.verified ? "Verified" : "Unverified"}</span>
+                      <span>
+                        {comment.verified ? "Verified" : "Unverified"}
+                      </span>
                       <span>•</span>
                       <span>{comment.visible ? "Visible" : "Hidden"}</span>
                     </div>

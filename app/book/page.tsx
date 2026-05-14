@@ -4,7 +4,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Book a Meeting | Michael C. Hurley",
-  description: "Schedule a 30-minute meeting with Michael C. Hurley to discuss business, technology, or collaboration opportunities.",
+  description:
+    "Schedule a 30-minute meeting with Michael C. Hurley to discuss business, technology, or collaboration opportunities.",
 };
 
 export default function BookPage() {
@@ -13,7 +14,8 @@ export default function BookPage() {
       <section className="py-12 pt-24">
         <ContainerBoxedCenter
           propsInner={{
-            className: "flex flex-col items-center justify-center gap-md grow w-full",
+            className:
+              "flex flex-col items-center justify-center gap-md grow w-full",
           }}
         >
           <div className="text-center space-y-4 mb-8">
@@ -21,11 +23,11 @@ export default function BookPage() {
               Book a Meeting
             </h1>
             <p className="text-muted-foreground text-lg max-w-[36rem] mx-auto">
-              Schedule a 30-minute call to discuss business opportunities, 
+              Schedule a 30-minute call to discuss business opportunities,
               technology projects, or collaboration ideas.
             </p>
           </div>
-          
+
           <div className="w-full max-w-[42rem] bg-background/80 backdrop-blur-sm rounded-xl p-8 shadow-lg border border-border/50">
             <BookingForm />
           </div>

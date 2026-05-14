@@ -7,7 +7,8 @@ export default function Logo({ multiplier = 1 }: { multiplier?: number }) {
       href="/"
       title="Navigate to the homepage"
       rel="home"
-      className="block">
+      className="block"
+    >
       <LogoSVG
         width={(2802 / 25) * multiplier}
         height={(1674 / 25) * multiplier}

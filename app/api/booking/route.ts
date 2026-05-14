@@ -1,14 +1,14 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
-import { generateBookingICS } from '@/lib/ics';
+import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+import { generateBookingICS } from "@/lib/ics";
 
 // Only initialize Resend if API key is present
-const resend = process.env.RESEND_API_KEY 
+const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
-const OWNER_EMAIL = process.env.ADMIN_EMAIL || 'michaelmonetized@gmail.com';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'notify@uncap.us';
+const OWNER_EMAIL = process.env.ADMIN_EMAIL || "michaelmonetized@gmail.com";
+const FROM_EMAIL = process.env.FROM_EMAIL || "notify@uncap.us";
 
 // Rate limiting: 5 bookings per hour per IP
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
@@ -31,22 +31,23 @@ function isRateLimited(ip: string): boolean {
 export async function POST(request: NextRequest) {
   try {
     // Rate limit by IP
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
-      || request.headers.get('x-real-ip')
-      || 'unknown';
+    const ip =
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      request.headers.get("x-real-ip") ||
+      "unknown";
 
     if (isRateLimited(ip)) {
       return NextResponse.json(
-        { error: 'Too many booking requests. Please try again later.' },
-        { status: 429 }
+        { error: "Too many booking requests. Please try again later." },
+        { status: 429 },
       );
     }
 
     // Check if Resend is configured
     if (!resend) {
       return NextResponse.json(
-        { error: 'Email service not configured' },
-        { status: 503 }
+        { error: "Email service not configured" },
+        { status: 503 },
       );
     }
 
@@ -56,8 +57,8 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!name || !email || !date || !timeSlot) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
+        { error: "Missing required fields" },
+        { status: 400 },
       );
     }
 
@@ -65,30 +66,30 @@ export async function POST(request: NextRequest) {
     const icsContent = generateBookingICS({
       name,
       email,
-      message: message || 'No message provided',
+      message: message || "No message provided",
       date,
       timeSlot,
       duration: 30, // 30-minute meetings
     });
 
     // Format date for display
-    const displayDate = new Date(date).toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
+    const displayDate = new Date(date).toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
 
     // Convert 24h to 12h format for display
-    const [hours, minutes] = timeSlot.split(':').map(Number);
-    const period = hours >= 12 ? 'PM' : 'AM';
+    const [hours, minutes] = timeSlot.split(":").map(Number);
+    const period = hours >= 12 ? "PM" : "AM";
     const displayHours = hours % 12 || 12;
-    const displayTime = `${displayHours}:${minutes.toString().padStart(2, '0')} ${period}`;
+    const displayTime = `${displayHours}:${minutes.toString().padStart(2, "0")} ${period}`;
 
     // ICS attachment
     const icsAttachment = {
-      filename: 'meeting.ics',
-      content: Buffer.from(icsContent).toString('base64'),
+      filename: "meeting.ics",
+      content: Buffer.from(icsContent).toString("base64"),
     };
 
     // Send email to the person who booked
@@ -129,12 +130,12 @@ export async function POST(request: NextRequest) {
         <ul>
           <li><strong>Name:</strong> ${name}</li>
           <li><strong>Email:</strong> <a href="mailto:${email}">${email}</a></li>
-          ${phone ? `<li><strong>Phone:</strong> <a href="tel:${phone}">${phone}</a></li>` : ''}
+          ${phone ? `<li><strong>Phone:</strong> <a href="tel:${phone}">${phone}</a></li>` : ""}
           <li><strong>Date:</strong> ${displayDate}</li>
           <li><strong>Time:</strong> ${displayTime} (EST)</li>
           <li><strong>Duration:</strong> 30 minutes</li>
         </ul>
-        ${message ? `<h2>Message</h2><p>${message}</p>` : ''}
+        ${message ? `<h2>Message</h2><p>${message}</p>` : ""}
         <p>Calendar invite attached.</p>
       `,
       attachments: [icsAttachment],
@@ -142,10 +143,10 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Booking email error:', error);
+    console.error("Booking email error:", error);
     return NextResponse.json(
-      { error: 'Failed to process booking' },
-      { status: 500 }
+      { error: "Failed to process booking" },
+      { status: 500 },
     );
   }
 }

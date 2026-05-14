@@ -14,7 +14,7 @@ export default defineSchema({
       v.literal("pending"),
       v.literal("confirmed"),
       v.literal("cancelled"),
-      v.literal("completed")
+      v.literal("completed"),
     ),
   })
     .index("by_date", ["date"])
@@ -63,16 +63,16 @@ export default defineSchema({
     // Reference to parent item
     itemType: v.union(v.literal("blog"), v.literal("portfolio")),
     itemId: v.string(), // String ID for flexibility across blog/portfolio
-    
+
     // Author info
     authorEmail: v.string(), // Captured before sign-in
     authorName: v.optional(v.string()), // From Google sign-in
     authorClerkId: v.optional(v.string()), // Set after sign-in
     authorImage: v.optional(v.string()), // From Google sign-in
-    
+
     // Comment content
     content: v.string(),
-    
+
     // Status
     verified: v.boolean(), // True if user completed sign-in
     visible: v.boolean(), // Only visible if verified

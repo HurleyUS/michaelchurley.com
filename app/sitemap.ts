@@ -49,16 +49,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const portfolioRoutes: MetadataRoute.Sitemap = portfolioItems.map(
-    (item) => ({
-      url: `${BASE_URL}/portfolio/${item.slug}`,
-      lastModified: item.publishedAt
-        ? new Date(item.publishedAt)
-        : new Date(item._creationTime),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })
-  );
+  const portfolioRoutes: MetadataRoute.Sitemap = portfolioItems.map((item) => ({
+    url: `${BASE_URL}/portfolio/${item.slug}`,
+    lastModified: item.publishedAt
+      ? new Date(item.publishedAt)
+      : new Date(item._creationTime),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 
   return [...staticRoutes, ...blogRoutes, ...portfolioRoutes];
 }

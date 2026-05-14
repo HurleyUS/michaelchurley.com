@@ -12,12 +12,12 @@ export const listForItem = query({
     // Use index for efficient querying
     const comments = await ctx.db
       .query("comments")
-      .withIndex("by_item", (q) => 
-        q.eq("itemType", args.itemType).eq("itemId", args.itemId)
+      .withIndex("by_item", (q) =>
+        q.eq("itemType", args.itemType).eq("itemId", args.itemId),
       )
       .filter((q) => q.eq(q.field("visible"), true))
       .collect();
-    
+
     return comments.sort((a, b) => a._creationTime - b._creationTime);
   },
 });
@@ -34,17 +34,17 @@ export const createPending = mutation({
   handler: async (ctx, args) => {
     const now = Date.now();
     const expiresAt = now + 24 * 60 * 60 * 1000; // 24 hours
-    
+
     // Delete any existing pending comment for this session
     const existing = await ctx.db
       .query("pendingComments")
       .withIndex("by_session", (q) => q.eq("sessionId", args.sessionId))
       .first();
-    
+
     if (existing) {
       await ctx.db.delete(existing._id);
     }
-    
+
     return await ctx.db.insert("pendingComments", {
       ...args,
       expiresAt,
@@ -72,35 +72,39 @@ export const verifyAndPublish = mutation({
   handler: async (ctx, args) => {
     // Get authenticated user from Clerk
     const user = await getAuthenticatedUser(ctx);
-    
+
     if (!user || !user.email) {
       return { success: false, error: "Authentication required" };
     }
-    
+
     // Find pending comment
     const pending = await ctx.db
       .query("pendingComments")
       .withIndex("by_session", (q) => q.eq("sessionId", args.sessionId))
       .first();
-    
+
     if (!pending) {
       // Not necessarily an error - might already be published
       return { success: false, error: "No pending comment found" };
     }
-    
+
     // Check if expired
     if (pending.expiresAt < Date.now()) {
       await ctx.db.delete(pending._id);
       return { success: false, error: "Comment expired" };
     }
-    
+
     // Verify email matches (case insensitive)
     if (pending.email.toLowerCase() !== user.email.toLowerCase()) {
-      return { success: false, error: "Email mismatch - please sign in with the same email you entered" };
+      return {
+        success: false,
+        error:
+          "Email mismatch - please sign in with the same email you entered",
+      };
     }
-    
+
     const now = Date.now();
-    
+
     // Create the verified comment with server-verified user data
     await ctx.db.insert("comments", {
       itemType: pending.itemType,
@@ -113,10 +117,10 @@ export const verifyAndPublish = mutation({
       verified: true,
       visible: true,
     });
-    
+
     // Delete the pending comment
     await ctx.db.delete(pending._id);
-    
+
     return { success: true };
   },
 });
@@ -129,15 +133,15 @@ export const listAll = query({
   },
   handler: async (ctx, args) => {
     let comments = await ctx.db.query("comments").collect();
-    
+
     if (args.itemType) {
       comments = comments.filter((c) => c.itemType === args.itemType);
     }
-    
+
     if (!args.includeHidden) {
       comments = comments.filter((c) => c.visible);
     }
-    
+
     return comments.sort((a, b) => b._creationTime - a._creationTime);
   },
 });
@@ -148,10 +152,10 @@ export const toggleVisibility = mutation({
   handler: async (ctx, args) => {
     // Require admin authentication
     await requireAdmin(ctx);
-    
+
     const comment = await ctx.db.get(args.id);
     if (!comment) throw new Error("Comment not found");
-    
+
     await ctx.db.patch(args.id, {
       visible: !comment.visible,
     });
@@ -177,11 +181,11 @@ export const cleanupExpired = mutation({
       .query("pendingComments")
       .filter((q) => q.lt(q.field("expiresAt"), now))
       .collect();
-    
+
     for (const pending of expired) {
       await ctx.db.delete(pending._id);
     }
-    
+
     return { deleted: expired.length };
   },
 });

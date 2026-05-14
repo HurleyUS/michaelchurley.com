@@ -214,9 +214,7 @@ export default function ViziblePage() {
 
       {/* ── TRUST BAR ── */}
       <section className="bg-Latte-Crust dark:bg-Mocha-Crust border-y border-Surface0/30">
-        <ContainerBoxedCenter
-          propsInner={{ className: "py-lg w-full" }}
-        >
+        <ContainerBoxedCenter propsInner={{ className: "py-lg w-full" }}>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-md w-full">
             {trustStats.map((s) => (
               <div
@@ -278,8 +276,7 @@ export default function ViziblePage() {
                   "Client communication hub",
                   "AI content generation",
                 ],
-                quote:
-                  "I trust what I can see and it\u2019s all in one place.",
+                quote: "I trust what I can see and it\u2019s all in one place.",
               },
               {
                 num: "03",
@@ -333,9 +330,7 @@ export default function ViziblePage() {
             <span className="text-xs tracking-[0.25em] uppercase text-Overlay2 font-medium">
               Full Stack
             </span>
-            <h2 className="font-black text-lg">
-              Everything Else, Handled
-            </h2>
+            <h2 className="font-black text-lg">Everything Else, Handled</h2>
             <p className="text-xs text-Subtext0 leading-relaxed">
               Beyond the big three, Vizible covers every channel your local
               business needs.
@@ -369,9 +364,7 @@ export default function ViziblePage() {
             <span className="text-xs tracking-[0.25em] uppercase text-Overlay2 font-medium">
               Testimonials
             </span>
-            <h2 className="font-black text-lg">
-              What Business Owners Say
-            </h2>
+            <h2 className="font-black text-lg">What Business Owners Say</h2>
           </div>
 
           <div className="grid gap-sm md:grid-cols-2 w-full">
@@ -481,9 +474,7 @@ export default function ViziblePage() {
               "flex flex-col items-center text-center gap-md w-full max-w-prose mx-auto",
           }}
         >
-          <h2 className="font-black text-lg">
-            Ready to Stop Guessing?
-          </h2>
+          <h2 className="font-black text-lg">Ready to Stop Guessing?</h2>
           <p className="text-xs text-Subtext0 leading-relaxed">
             Most marketing platforms give you a login and say good luck. Vizible
             gives you a person, a platform, and a plan.

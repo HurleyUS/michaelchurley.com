@@ -13,7 +13,7 @@ export const create = mutation({
   },
   handler: async (ctx, args) => {
     const now = Date.now();
-    
+
     return await ctx.db.insert("bookings", {
       name: args.name,
       email: args.email,
@@ -28,23 +28,26 @@ export const create = mutation({
 
 export const list = query({
   args: {
-    status: v.optional(v.union(
-      v.literal("pending"),
-      v.literal("confirmed"),
-      v.literal("cancelled"),
-      v.literal("completed")
-    )),
+    status: v.optional(
+      v.union(
+        v.literal("pending"),
+        v.literal("confirmed"),
+        v.literal("cancelled"),
+        v.literal("completed"),
+      ),
+    ),
     limit: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
     let q = ctx.db.query("bookings").order("desc");
-    
+
     if (args.status) {
-      q = ctx.db.query("bookings")
+      q = ctx.db
+        .query("bookings")
         .withIndex("by_status", (q) => q.eq("status", args.status!))
         .order("desc");
     }
-    
+
     const bookings = await q.collect();
     return args.limit ? bookings.slice(0, args.limit) : bookings;
   },
@@ -69,7 +72,7 @@ export const updateStatus = mutation({
       v.literal("pending"),
       v.literal("confirmed"),
       v.literal("cancelled"),
-      v.literal("completed")
+      v.literal("completed"),
     ),
   },
   handler: async (ctx, args) => {
@@ -88,7 +91,7 @@ export const getUpcoming = query({
       .query("bookings")
       .withIndex("by_status", (q) => q.eq("status", "confirmed"))
       .collect();
-    
+
     // Filter for future dates and sort
     return bookings
       .filter((b) => b.date >= today)

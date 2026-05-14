@@ -18,7 +18,7 @@ export async function GET() {
 
     // Determine overall health
     const isHealthy = Object.values(checks.checks).every(
-      (check) => check.status === "healthy"
+      (check) => check.status === "healthy",
     );
 
     return NextResponse.json(checks, {
@@ -41,7 +41,7 @@ export async function GET() {
           "Cache-Control": "no-cache, no-store, must-revalidate",
           "Content-Type": "application/json",
         },
-      }
+      },
     );
   }
 }
@@ -51,10 +51,12 @@ async function checkDatabase() {
     // For now, just check if we can access environment variables
     // In a real app, you'd ping your database
     const hasDbUrl = !!process.env.CONVEX_DEPLOYMENT;
-    
+
     return {
       status: hasDbUrl ? "healthy" : "degraded",
-      message: hasDbUrl ? "Database accessible" : "Database connection not configured",
+      message: hasDbUrl
+        ? "Database accessible"
+        : "Database connection not configured",
       responseTime: 0,
     };
   } catch (error) {
@@ -70,7 +72,7 @@ function checkAPI() {
   try {
     // Check if basic API functionality is working
     const canRespond = typeof NextResponse !== "undefined";
-    
+
     return {
       status: canRespond ? "healthy" : "unhealthy",
       message: canRespond ? "API responding" : "API not responding",
@@ -91,10 +93,10 @@ function checkMemory() {
     const totalMemMB = Math.round(memUsage.rss / 1024 / 1024);
     const heapUsedMB = Math.round(memUsage.heapUsed / 1024 / 1024);
     const heapTotalMB = Math.round(memUsage.heapTotal / 1024 / 1024);
-    
+
     // Consider memory unhealthy if using more than 1GB RSS
     const isHealthy = totalMemMB < 1024;
-    
+
     return {
       status: isHealthy ? "healthy" : "degraded",
       message: `Memory usage: ${totalMemMB}MB RSS, ${heapUsedMB}MB/${heapTotalMB}MB heap`,

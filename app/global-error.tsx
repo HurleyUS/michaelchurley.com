@@ -26,8 +26,10 @@ export default function GlobalError({
       posthog.captureException(error, {
         $error_digest: error.digest,
         $error_boundary: "global",
-        $error_page: typeof window !== 'undefined' ? window.location.pathname : 'unknown',
-        $error_user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+        $error_page:
+          typeof window !== "undefined" ? window.location.pathname : "unknown",
+        $error_user_agent:
+          typeof navigator !== "undefined" ? navigator.userAgent : "unknown",
         $error_timestamp: new Date().toISOString(),
         $error_critical: true, // Mark as critical since it's global error boundary
       });

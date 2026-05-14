@@ -67,7 +67,10 @@ export default function ManageDashboard() {
           ) : (
             <ul className="space-y-2">
               {portfolioItems.slice(0, 5).map((item) => (
-                <li key={item._id} className="flex items-center justify-between">
+                <li
+                  key={item._id}
+                  className="flex items-center justify-between"
+                >
                   <span className="truncate">{item.title}</span>
                   <span
                     className={`text-xs px-2 py-1 rounded font-medium ${
@@ -94,7 +97,10 @@ export default function ManageDashboard() {
           ) : (
             <ul className="space-y-2">
               {blogPosts.slice(0, 5).map((post) => (
-                <li key={post._id} className="flex items-center justify-between">
+                <li
+                  key={post._id}
+                  className="flex items-center justify-between"
+                >
                   <span className="truncate">{post.title}</span>
                   <span
                     className={`text-xs px-2 py-1 rounded font-medium ${
