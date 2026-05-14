@@ -11,7 +11,10 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "validate": "node scripts/validate-launch.js",
-    "launch-check": "bun tsc --noEmit && bun test && bun run lint && node scripts/validate-launch.js"
+    "launch-check": "bun tsc --noEmit && bun test && bun run lint && node scripts/validate-launch.js",
+    "format": "bunx --bun prettier --write . --ignore-path .gitignore",
+    "typecheck": "tsc --noEmit",
+    "check": "bun run typecheck && bun run build"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.37.2",
