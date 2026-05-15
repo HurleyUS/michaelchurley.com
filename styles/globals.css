@@ -442,7 +442,7 @@
       opacity: 0.3;
       width: calc(100% + 32px);
       height: calc(100% + 32px);
-      @apply : rounded-xl;
+      @apply rounded-xl;
       filter: blur(32px);
     }
   }
