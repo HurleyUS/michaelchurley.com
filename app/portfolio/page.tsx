@@ -12,15 +12,12 @@ export default function PortfolioPage() {
     <section className="flex flex-col py-4xl bg-gradient-to-b from-Base to-Crust">
       <ContainerBoxedCenter
         propsInner={{
-          className:
-            "flex flex-col items-stretch justify-start gap-lg grow w-full",
+          className: "flex flex-col items-stretch justify-start gap-lg grow w-full",
         }}
       >
         <div className="text-center">
           <h1 className="text-2xl font-black">Portfolio</h1>
-          <p className="text-lg text-muted-foreground">
-            Explore my projects and work
-          </p>
+          <p className="text-lg text-muted-foreground">Explore my projects and work</p>
         </div>
 
         {portfolioItems === undefined ? (
@@ -53,15 +50,10 @@ export default function PortfolioPage() {
                   <h2 className="text-lg font-bold group-hover:text-primary transition-colors">
                     {item.title}
                   </h2>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {item.description}
-                  </p>
+                  <p className="text-sm text-muted-foreground line-clamp-2">{item.description}</p>
                   <div className="flex flex-wrap gap-1">
                     {item.technologies.slice(0, 4).map((tech) => (
-                      <span
-                        key={tech}
-                        className="text-xs px-2 py-0.5 bg-muted rounded"
-                      >
+                      <span key={tech} className="text-xs px-2 py-0.5 bg-muted rounded">
                         {tech}
                       </span>
                     ))}

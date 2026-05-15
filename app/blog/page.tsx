@@ -37,15 +37,12 @@ export default async function BlogPage({
     <section className="flex flex-col py-4xl bg-gradient-to-b from-Base to-Crust">
       <ContainerBoxedCenter
         propsInner={{
-          className:
-            "flex flex-col items-stretch justify-start gap-lg grow w-full",
+          className: "flex flex-col items-stretch justify-start gap-lg grow w-full",
         }}
       >
         <div className="text-center">
           <h1 className="text-2xl font-black">Blog</h1>
-          <p className="text-lg text-muted-foreground">
-            Thoughts, tutorials, and insights
-          </p>
+          <p className="text-lg text-muted-foreground">Thoughts, tutorials, and insights</p>
         </div>
 
         {/* Tags */}
@@ -54,9 +51,7 @@ export default async function BlogPage({
             <Link
               href="/blog"
               className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                !selectedTag
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted hover:bg-muted/80"
+                !selectedTag ? "bg-primary text-primary-foreground" : "bg-muted hover:bg-muted/80"
               }`}
             >
               All
@@ -81,10 +76,7 @@ export default async function BlogPage({
           <div className="flex items-center justify-center gap-2">
             <span className="text-muted-foreground">Showing posts tagged:</span>
             <span className="font-medium">{selectedTag}</span>
-            <Link
-              href="/blog"
-              className="text-xs text-muted-foreground hover:text-foreground"
-            >
+            <Link href="/blog" className="text-xs text-muted-foreground hover:text-foreground">
               (clear)
             </Link>
           </div>
@@ -128,15 +120,10 @@ export default async function BlogPage({
                   <h2 className="text-lg font-bold group-hover:text-primary transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {post.excerpt}
-                  </p>
+                  <p className="text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>
                   <div className="flex flex-wrap gap-1">
                     {post.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs px-2 py-0.5 bg-muted rounded"
-                      >
+                      <span key={tag} className="text-xs px-2 py-0.5 bg-muted rounded">
                         {tag}
                       </span>
                     ))}

@@ -22,8 +22,7 @@ export const phoneSchema = z
   .string()
   .optional()
   .refine(
-    (val) =>
-      !val || /^[\+]?[1-9][\d]{0,15}$/.test(val.replace(/[\s\-\(\)]/g, "")),
+    (val) => !val || /^[+]?[1-9][\d]{0,15}$/.test(val.replace(/[\s\-()]/g, "")),
     "Please enter a valid phone number",
   );
 
@@ -43,18 +42,12 @@ export type ContactFormData = z.infer<typeof contactFormSchema>;
 
 // Blog post validation
 export const blogPostSchema = z.object({
-  title: z
-    .string()
-    .min(1, "Title is required")
-    .max(200, "Title must be less than 200 characters"),
+  title: z.string().min(1, "Title is required").max(200, "Title must be less than 200 characters"),
   content: z
     .string()
     .min(1, "Content is required")
     .max(50000, "Content must be less than 50000 characters"),
-  excerpt: z
-    .string()
-    .max(500, "Excerpt must be less than 500 characters")
-    .optional(),
+  excerpt: z.string().max(500, "Excerpt must be less than 500 characters").optional(),
   tags: z.array(z.string()).max(10, "Maximum 10 tags allowed").optional(),
   published: z.boolean().optional(),
 });
@@ -63,10 +56,7 @@ export type BlogPostData = z.infer<typeof blogPostSchema>;
 
 // Portfolio item validation
 export const portfolioItemSchema = z.object({
-  title: z
-    .string()
-    .min(1, "Title is required")
-    .max(200, "Title must be less than 200 characters"),
+  title: z.string().min(1, "Title is required").max(200, "Title must be less than 200 characters"),
   description: z
     .string()
     .min(1, "Description is required")
@@ -76,16 +66,8 @@ export const portfolioItemSchema = z.object({
     .min(1, "At least one technology is required")
     .max(20, "Maximum 20 technologies allowed"),
   url: z.string().url("Please enter a valid URL").optional().or(z.literal("")),
-  githubUrl: z
-    .string()
-    .url("Please enter a valid GitHub URL")
-    .optional()
-    .or(z.literal("")),
-  imageUrl: z
-    .string()
-    .url("Please enter a valid image URL")
-    .optional()
-    .or(z.literal("")),
+  githubUrl: z.string().url("Please enter a valid GitHub URL").optional().or(z.literal("")),
+  imageUrl: z.string().url("Please enter a valid image URL").optional().or(z.literal("")),
   featured: z.boolean().optional(),
 });
 

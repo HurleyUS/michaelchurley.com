@@ -23,10 +23,7 @@ function getSessionId() {
   return sessionId;
 }
 
-export default function CommentSection({
-  itemType,
-  itemId,
-}: CommentSectionProps) {
+export default function CommentSection({ itemType, itemId }: CommentSectionProps) {
   const { user, isSignedIn } = useUser();
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
@@ -70,9 +67,7 @@ export default function CommentSection({
           }
         })
         .catch((err) => {
-          setError(
-            err instanceof Error ? err.message : "Failed to publish comment",
-          );
+          setError(err instanceof Error ? err.message : "Failed to publish comment");
         })
         .finally(() => {
           // Reset after a delay to handle any delayed reactive updates
@@ -169,9 +164,7 @@ export default function CommentSection({
       {/* Comment Form */}
       {showSignInPrompt ? (
         <div className="rounded-lg border bg-card p-6 text-center space-y-4">
-          <p className="text-muted-foreground">
-            Sign in with Google to publish your comment
-          </p>
+          <p className="text-muted-foreground">Sign in with Google to publish your comment</p>
           <p className="text-sm text-muted-foreground">
             Your email ({email}) must match your Google account
           </p>
@@ -201,8 +194,7 @@ export default function CommentSection({
                 required
               />
               <p className="text-xs text-muted-foreground">
-                You&apos;ll need to sign in with Google using this email to
-                publish your comment
+                You&apos;ll need to sign in with Google using this email to publish your comment
               </p>
             </div>
           )}
@@ -219,9 +211,7 @@ export default function CommentSection({
           </div>
 
           {error && (
-            <div className="p-3 bg-destructive/10 text-destructive text-sm rounded-md">
-              {error}
-            </div>
+            <div className="p-3 bg-destructive/10 text-destructive text-sm rounded-md">{error}</div>
           )}
 
           {success && (
@@ -235,11 +225,7 @@ export default function CommentSection({
             disabled={isSubmitting}
             className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 disabled:opacity-50"
           >
-            {isSubmitting
-              ? "Submitting..."
-              : isSignedIn
-                ? "Post Comment"
-                : "Continue"}
+            {isSubmitting ? "Submitting..." : isSignedIn ? "Post Comment" : "Continue"}
           </button>
         </form>
       )}
@@ -270,17 +256,13 @@ export default function CommentSection({
                 ) : (
                   <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
                     <span className="text-lg">
-                      {(comment.authorName ||
-                        comment.authorEmail ||
-                        "?")[0]?.toUpperCase()}
+                      {(comment.authorName || comment.authorEmail || "?")[0]?.toUpperCase()}
                     </span>
                   </div>
                 )}
                 <div className="flex-1 space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="font-medium">
-                      {comment.authorName || "Anonymous"}
-                    </span>
+                    <span className="font-medium">{comment.authorName || "Anonymous"}</span>
                     <span className="text-xs text-muted-foreground">
                       {formatDate(comment._creationTime)}
                     </span>

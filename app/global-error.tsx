@@ -26,10 +26,8 @@ export default function GlobalError({
       posthog.captureException(error, {
         $error_digest: error.digest,
         $error_boundary: "global",
-        $error_page:
-          typeof window !== "undefined" ? window.location.pathname : "unknown",
-        $error_user_agent:
-          typeof navigator !== "undefined" ? navigator.userAgent : "unknown",
+        $error_page: typeof window !== "undefined" ? window.location.pathname : "unknown",
+        $error_user_agent: typeof navigator !== "undefined" ? navigator.userAgent : "unknown",
         $error_timestamp: new Date().toISOString(),
         $error_critical: true, // Mark as critical since it's global error boundary
       });
@@ -48,10 +46,7 @@ export default function GlobalError({
         </a>
         <Header />
 
-        <section
-          id="top"
-          className="flex grow flex-col items-stretch justify-center overflow-auto"
-        >
+        <section id="top" className="flex grow flex-col items-stretch justify-center overflow-auto">
           <div className="flex flex-col items-center justify-center gap-md p-md w-full max-w-[1170px] mx-auto text-center">
             <Logo />
 

@@ -67,12 +67,9 @@ const nextConfig: NextConfig = {
           // Permissions Policy
           {
             key: "Permissions-Policy",
-            value: [
-              "camera=()",
-              "microphone=()",
-              "geolocation=()",
-              "interest-cohort=()",
-            ].join(", "),
+            value: ["camera=()", "microphone=()", "geolocation=()", "interest-cohort=()"].join(
+              ", ",
+            ),
           },
           // Cross-Origin policies
           {

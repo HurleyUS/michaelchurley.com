@@ -34,9 +34,7 @@ export default function ManageDashboard() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold">Dashboard</h1>
-        <p className="text-muted-foreground">
-          Manage your portfolio, blog, and comments.
-        </p>
+        <p className="text-muted-foreground">Manage your portfolio, blog, and comments.</p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
@@ -67,16 +65,11 @@ export default function ManageDashboard() {
           ) : (
             <ul className="space-y-2">
               {portfolioItems.slice(0, 5).map((item) => (
-                <li
-                  key={item._id}
-                  className="flex items-center justify-between"
-                >
+                <li key={item._id} className="flex items-center justify-between">
                   <span className="truncate">{item.title}</span>
                   <span
                     className={`text-xs px-2 py-1 rounded font-medium ${
-                      item.published
-                        ? "bg-Green/20 text-Green"
-                        : "bg-Yellow/20 text-Yellow"
+                      item.published ? "bg-Green/20 text-Green" : "bg-Yellow/20 text-Yellow"
                     }`}
                   >
                     {item.published ? "Published" : "Draft"}
@@ -97,16 +90,11 @@ export default function ManageDashboard() {
           ) : (
             <ul className="space-y-2">
               {blogPosts.slice(0, 5).map((post) => (
-                <li
-                  key={post._id}
-                  className="flex items-center justify-between"
-                >
+                <li key={post._id} className="flex items-center justify-between">
                   <span className="truncate">{post.title}</span>
                   <span
                     className={`text-xs px-2 py-1 rounded font-medium ${
-                      post.published
-                        ? "bg-Green/20 text-Green"
-                        : "bg-Yellow/20 text-Yellow"
+                      post.published ? "bg-Green/20 text-Green" : "bg-Yellow/20 text-Yellow"
                     }`}
                   >
                     {post.published ? "Published" : "Draft"}

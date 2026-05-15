@@ -16,8 +16,7 @@ export default function Zaxbys() {
             <strong>General Manager</strong>, 09/2024 - Present
           </p>
           <p>
-            Weekly Average Gross Revenue growth from: $25k -{" "}
-            <strong>$55k</strong>
+            Weekly Average Gross Revenue growth from: $25k - <strong>$55k</strong>
           </p>
           <ul className="list-disc ml-md">
             <li>

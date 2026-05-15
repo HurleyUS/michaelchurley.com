@@ -10,15 +10,10 @@ import nextDynamic from "next/dynamic";
 import { PiX, PiSpinner, PiUploadSimple } from "react-icons/pi";
 
 // Dynamically import Toast UI Editor (SSR not supported)
-const Editor = nextDynamic(
-  () => import("@toast-ui/react-editor").then((mod) => mod.Editor),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />
-    ),
-  },
-);
+const Editor = nextDynamic(() => import("@toast-ui/react-editor").then((mod) => mod.Editor), {
+  ssr: false,
+  loading: () => <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />,
+});
 
 // Import Toast UI Editor CSS
 import "@toast-ui/editor/dist/toastui-editor.css";
@@ -48,9 +43,7 @@ export default function NewBlogPost() {
 
   // Separate state for cover image
   const [coverImageId, setCoverImageId] = useState<Id<"_storage"> | null>(null);
-  const [coverImagePreview, setCoverImagePreview] = useState<string | null>(
-    null,
-  );
+  const [coverImagePreview, setCoverImagePreview] = useState<string | null>(null);
 
   const generateSlug = (title: string) => {
     return title
@@ -117,9 +110,7 @@ export default function NewBlogPost() {
     }
   };
 
-  const handleFileInputChange = async (
-    e: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     await handleCoverImageUpload(file);
@@ -242,14 +233,10 @@ export default function NewBlogPost() {
             type="text"
             value={form.slug}
             onChange={(e) => setForm({ ...form, slug: e.target.value })}
-            placeholder={
-              generateSlug(form.title) || "auto-generated-from-title"
-            }
+            placeholder={generateSlug(form.title) || "auto-generated-from-title"}
             className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
           />
-          <p className="text-xs text-muted-foreground">
-            Leave blank to auto-generate from title
-          </p>
+          <p className="text-xs text-muted-foreground">Leave blank to auto-generate from title</p>
         </div>
 
         {/* Cover Image - Drop Zone */}
@@ -283,9 +270,7 @@ export default function NewBlogPost() {
                   <PiX size={16} />
                 </button>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-white text-sm">
-                    Drop new image to replace
-                  </p>
+                  <p className="text-white text-sm">Drop new image to replace</p>
                 </div>
               </div>
             ) : (
@@ -305,9 +290,7 @@ export default function NewBlogPost() {
                     <span className="text-sm text-muted-foreground font-medium">
                       Drag & drop an image here
                     </span>
-                    <span className="text-xs text-muted-foreground mt-1">
-                      or click to browse
-                    </span>
+                    <span className="text-xs text-muted-foreground mt-1">or click to browse</span>
                   </>
                 )}
               </label>
@@ -325,9 +308,7 @@ export default function NewBlogPost() {
             placeholder="Brief summary for previews and SEO..."
             required
           />
-          <p className="text-xs text-muted-foreground">
-            {form.excerpt.length}/300 characters
-          </p>
+          <p className="text-xs text-muted-foreground">{form.excerpt.length}/300 characters</p>
         </div>
 
         {/* Content - Toast UI Editor */}
@@ -379,15 +360,11 @@ export default function NewBlogPost() {
               onChange={(e) => setTagInput(e.target.value)}
               onKeyDown={handleTagKeyDown}
               onBlur={addTag}
-              placeholder={
-                tags.length === 0 ? "Add tags (press comma or enter)" : ""
-              }
+              placeholder={tags.length === 0 ? "Add tags (press comma or enter)" : ""}
               className="flex-1 min-w-[150px] outline-none bg-transparent"
             />
           </div>
-          <p className="text-xs text-muted-foreground">
-            Press comma, enter, or tab to add a tag
-          </p>
+          <p className="text-xs text-muted-foreground">Press comma, enter, or tab to add a tag</p>
         </div>
 
         {/* Options */}
@@ -405,9 +382,7 @@ export default function NewBlogPost() {
             <input
               type="checkbox"
               checked={form.published}
-              onChange={(e) =>
-                setForm({ ...form, published: e.target.checked })
-              }
+              onChange={(e) => setForm({ ...form, published: e.target.checked })}
               className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
             />
             <span className="text-sm font-medium">Publish immediately</span>

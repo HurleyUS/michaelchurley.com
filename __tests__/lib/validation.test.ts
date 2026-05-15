@@ -75,9 +75,7 @@ describe("Validation utilities", () => {
     test("escapes HTML entities", () => {
       const input = '<script>alert("xss")</script>';
       const result = sanitizeHtml(input);
-      expect(result).toBe(
-        "&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;",
-      );
+      expect(result).toBe("&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;");
     });
 
     test("escapes ampersands", () => {

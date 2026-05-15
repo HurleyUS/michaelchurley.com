@@ -10,15 +10,10 @@ import nextDynamic from "next/dynamic";
 import { PiX, PiSpinner, PiUploadSimple } from "react-icons/pi";
 
 // Dynamically import Toast UI Editor (SSR not supported)
-const Editor = nextDynamic(
-  () => import("@toast-ui/react-editor").then((mod) => mod.Editor),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="h-[400px] border rounded-lg animate-pulse bg-muted" />
-    ),
-  },
-);
+const Editor = nextDynamic(() => import("@toast-ui/react-editor").then((mod) => mod.Editor), {
+  ssr: false,
+  loading: () => <div className="h-[400px] border rounded-lg animate-pulse bg-muted" />,
+});
 
 // Import Toast UI Editor CSS
 import "@toast-ui/editor/dist/toastui-editor.css";
@@ -80,11 +75,7 @@ export default function EditPortfolioItem() {
     if (e.key === "," || e.key === "Enter" || e.key === "Tab") {
       e.preventDefault();
       addTech();
-    } else if (
-      e.key === "Backspace" &&
-      techInput === "" &&
-      technologies.length > 0
-    ) {
+    } else if (e.key === "Backspace" && techInput === "" && technologies.length > 0) {
       setTechnologies(technologies.slice(0, -1));
     }
   };
@@ -132,9 +123,7 @@ export default function EditPortfolioItem() {
     }
   };
 
-  const handleFileInputChange = async (
-    e: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     await handleCoverImageUpload(file);
@@ -303,9 +292,7 @@ export default function EditPortfolioItem() {
                   <PiX size={16} />
                 </button>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-white text-sm">
-                    Drop new image to replace
-                  </p>
+                  <p className="text-white text-sm">Drop new image to replace</p>
                 </div>
               </div>
             ) : (
@@ -325,9 +312,7 @@ export default function EditPortfolioItem() {
                     <span className="text-sm text-muted-foreground font-medium">
                       Drag & drop an image here
                     </span>
-                    <span className="text-xs text-muted-foreground mt-1">
-                      or click to browse
-                    </span>
+                    <span className="text-xs text-muted-foreground mt-1">or click to browse</span>
                   </>
                 )}
               </label>
@@ -395,15 +380,11 @@ export default function EditPortfolioItem() {
               onChange={(e) => setTechInput(e.target.value)}
               onKeyDown={handleTechKeyDown}
               onBlur={addTech}
-              placeholder={
-                technologies.length === 0 ? "React, Next.js, TypeScript..." : ""
-              }
+              placeholder={technologies.length === 0 ? "React, Next.js, TypeScript..." : ""}
               className="flex-1 min-w-[150px] outline-none bg-transparent text-foreground placeholder:text-muted-foreground"
             />
           </div>
-          <p className="text-xs text-muted-foreground">
-            Press comma, enter, or tab to add
-          </p>
+          <p className="text-xs text-muted-foreground">Press comma, enter, or tab to add</p>
         </div>
 
         {/* URLs */}
@@ -443,9 +424,7 @@ export default function EditPortfolioItem() {
             <input
               type="checkbox"
               checked={form.published}
-              onChange={(e) =>
-                setForm({ ...form, published: e.target.checked })
-              }
+              onChange={(e) => setForm({ ...form, published: e.target.checked })}
               className="w-5 h-5 rounded border-2 text-primary focus:ring-primary"
             />
             <span className="text-sm font-medium">Published</span>

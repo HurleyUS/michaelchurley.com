@@ -31,9 +31,9 @@ export default function Home() {
             <div className="flex flex-col items-stretch justify-center grow w-full">
               <h1 className="text-xl font-black">Hire Michael C. Hurley</h1>
               <p className="text-lg">
-                I am a business operations and technology professional with over
-                20 years of experience in management, sales, marketing + growth,
-                graphic design, and software development.
+                I am a business operations and technology professional with over 20 years of
+                experience in management, sales, marketing + growth, graphic design, and software
+                development.
               </p>
             </div>
 
@@ -78,8 +78,8 @@ export default function Home() {
             <div className="flex flex-col items-stretch justify-start text-xs sm:text-center gap-md grow w-full bg-gradient-to-b from-background to-Latte-Crust dark:to-Mocha-Crust p-lg border-background rounded-lg">
               <h2 className="font-black">Proven Skills</h2>
               <p>
-                I have 10,000 - 52,000 hours of active, professional career
-                experience in management, technology, marketing and sales.
+                I have 10,000 - 52,000 hours of active, professional career experience in
+                management, technology, marketing and sales.
               </p>
               <div className="flex flex-col flex-wrap wrap sm:flex-row items-stretch justify-start sm:p-md gap-md sm:gap-0 text-xs grow w-full text-left">
                 <div className="flex flex-col items-stretch justify-start grow w-full sm:w-1/2 md:w-1/4">
@@ -145,9 +145,8 @@ export default function Home() {
                 Full-Stack Development + Sr. Level Software Engineering
               </h2>
               <p>
-                Proficient in C, C derivative languages, Scripting languages,
-                Web technologies, App development and tools associated with
-                these:
+                Proficient in C, C derivative languages, Scripting languages, Web technologies, App
+                development and tools associated with these:
               </p>
 
               <div className="flex flex-col md:flex-row items-stretch justify-start gap-md py-md text-xs grow w-full text-left">
@@ -159,8 +158,7 @@ export default function Home() {
                     </li>
                     <li>Python/Perl/Ruby</li>
                     <li>
-                      <strong>PHP</strong>/SQL/<strong>HTML</strong>/
-                      <strong>CSS</strong>
+                      <strong>PHP</strong>/SQL/<strong>HTML</strong>/<strong>CSS</strong>
                     </li>
                     <li>
                       Javascript/<strong>Typescript</strong>
@@ -228,9 +226,7 @@ export default function Home() {
               <div className="flex flex-col flex-wrap wrap sm:flex-row sm:flex-nowrap items-stretch justify-start gap-md sm:p-md text-xs grow w-full">
                 <div className="flex flex-col items-stretch justify-start w-full sm:w-1/2 border-gradient-grayscale hover:border-gradient-animated">
                   <div className="flex flex-col items-stretch justify-start w-full bg-background rounded-lg p-md">
-                    <h3 className="text-md font-bold">
-                      Trident Technical College
-                    </h3>
+                    <h3 className="text-md font-bold">Trident Technical College</h3>
                     <p>
                       <strong>A.A.</strong> Commercial Graphics, 2001 - 2003
                     </p>
@@ -475,10 +471,7 @@ export default function Home() {
         </ContainerBoxedCenter>
       </section>
       {/* Contact Form Section */}
-      <section
-        id="book"
-        className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl"
-      >
+      <section id="book" className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl">
         <ContainerBoxedCenter
           props={{
             className:
@@ -495,8 +488,8 @@ export default function Home() {
             </div>
             <h2 className="font-black">Book a Meeting</h2>
             <p className="text-muted-foreground max-w-[32rem]">
-              Schedule a 30-minute call to discuss business opportunities,
-              technology projects, or collaboration ideas.
+              Schedule a 30-minute call to discuss business opportunities, technology projects, or
+              collaboration ideas.
             </p>
           </div>
           <div className="w-full bg-background rounded-lg p-lg border border-border shadow-sm">
@@ -520,8 +513,8 @@ export default function Home() {
           <div className="flex flex-col items-center justify-start text-xs sm:text-center gap-md grow w-full">
             <h2 className="font-black">Ready To Bring Me On Board?</h2>
             <p className="text-muted-foreground max-w-[32rem]">
-              Schedule a 30-minute call to discuss your project, business needs,
-              or collaboration opportunities.
+              Schedule a 30-minute call to discuss your project, business needs, or collaboration
+              opportunities.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center p-md text-xs w-full max-w-[42rem] mx-auto gap-md">
               <Link href="/book" className="block border-gradient-animated">
@@ -530,10 +523,7 @@ export default function Home() {
                   Book a Meeting
                 </Button>
               </Link>
-              <Link
-                href="tel:+18285931935"
-                className="block border-gradient-animated"
-              >
+              <Link href="tel:+18285931935" className="block border-gradient-animated">
                 <Button variant="secondary">Call or Text Me</Button>
               </Link>
               <Link href="#contact" className="block">

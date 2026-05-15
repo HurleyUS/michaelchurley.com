@@ -32,10 +32,7 @@ export default function PortfolioItemPage() {
             <p className="text-muted-foreground mt-2">
               This project doesn&apos;t exist or isn&apos;t published yet.
             </p>
-            <Link
-              href="/portfolio"
-              className="text-primary hover:underline mt-4 inline-block"
-            >
+            <Link href="/portfolio" className="text-primary hover:underline mt-4 inline-block">
               ← Back to Portfolio
             </Link>
           </div>
@@ -82,10 +79,7 @@ export default function PortfolioItemPage() {
           {/* Technologies */}
           <div className="flex flex-wrap gap-2">
             {item.technologies.map((tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1 bg-muted rounded-full text-sm"
-              >
+              <span key={tech} className="px-3 py-1 bg-muted rounded-full text-sm">
                 {tech}
               </span>
             ))}

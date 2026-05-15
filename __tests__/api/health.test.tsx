@@ -36,9 +36,7 @@ describe("/api/health", () => {
   test("has proper cache headers", async () => {
     const response = await GET();
 
-    expect(response.headers.get("Cache-Control")).toBe(
-      "no-cache, no-store, must-revalidate",
-    );
+    expect(response.headers.get("Cache-Control")).toBe("no-cache, no-store, must-revalidate");
     expect(response.headers.get("Content-Type")).toBe("application/json");
   });
 

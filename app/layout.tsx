@@ -12,8 +12,7 @@ const siteDescription =
 export const metadata: Metadata = {
   // Basic metadata
   title: {
-    default:
-      "Michael C. Hurley | Business Operations & Technology Professional",
+    default: "Michael C. Hurley | Business Operations & Technology Professional",
     template: "%s | Michael C. Hurley",
   },
   description: siteDescription,
@@ -115,10 +114,7 @@ export default function RootLayout({
             {"Skip to main content"}
           </a>
           <Header />
-          <main
-            id="main"
-            className="flex grow flex-col items-stretch justify-start"
-          >
+          <main id="main" className="flex grow flex-col items-stretch justify-start">
             {children}
           </main>
           <Footer />

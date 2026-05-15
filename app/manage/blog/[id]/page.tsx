@@ -10,15 +10,10 @@ import nextDynamic from "next/dynamic";
 import { PiX, PiSpinner, PiUploadSimple } from "react-icons/pi";
 
 // Dynamically import Toast UI Editor (SSR not supported)
-const Editor = nextDynamic(
-  () => import("@toast-ui/react-editor").then((mod) => mod.Editor),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />
-    ),
-  },
-);
+const Editor = nextDynamic(() => import("@toast-ui/react-editor").then((mod) => mod.Editor), {
+  ssr: false,
+  loading: () => <div className="h-[500px] border rounded-lg animate-pulse bg-muted" />,
+});
 
 // Import Toast UI Editor CSS
 import "@toast-ui/editor/dist/toastui-editor.css";
@@ -140,9 +135,7 @@ export default function EditBlogPost() {
     }
   };
 
-  const handleFileInputChange = async (
-    e: React.ChangeEvent<HTMLInputElement>,
-  ) => {
+  const handleFileInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     await handleCoverImageUpload(file);
@@ -278,19 +271,14 @@ export default function EditBlogPost() {
   return (
     <div className="max-w-[56rem] mx-auto py-8 px-4">
       <div className="flex items-center gap-4 mb-8">
-        <Link
-          href="/manage/blog"
-          className="text-muted-foreground hover:text-foreground"
-        >
+        <Link href="/manage/blog" className="text-muted-foreground hover:text-foreground">
           ← Back
         </Link>
         <h1 className="text-3xl font-bold">Edit Blog Post</h1>
       </div>
 
       {error && (
-        <div className="mb-6 p-4 bg-destructive/10 text-destructive rounded-lg">
-          {error}
-        </div>
+        <div className="mb-6 p-4 bg-destructive/10 text-destructive rounded-lg">{error}</div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -343,19 +331,13 @@ export default function EditBlogPost() {
                 />
                 <button
                   type="button"
-                  onClick={
-                    post.coverImage
-                      ? handleClearCoverImage
-                      : handleRemoveCoverImage
-                  }
+                  onClick={post.coverImage ? handleClearCoverImage : handleRemoveCoverImage}
                   className="absolute top-2 right-2 p-2 bg-destructive text-destructive-foreground rounded-full hover:bg-destructive/80 transition-colors"
                 >
                   <PiX size={16} />
                 </button>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
-                  <p className="text-white text-sm">
-                    Drop new image to replace
-                  </p>
+                  <p className="text-white text-sm">Drop new image to replace</p>
                 </div>
               </div>
             ) : (
@@ -375,9 +357,7 @@ export default function EditBlogPost() {
                     <span className="text-sm text-muted-foreground font-medium">
                       Drag & drop an image here
                     </span>
-                    <span className="text-xs text-muted-foreground mt-1">
-                      or click to browse
-                    </span>
+                    <span className="text-xs text-muted-foreground mt-1">or click to browse</span>
                   </>
                 )}
               </label>
@@ -396,9 +376,7 @@ export default function EditBlogPost() {
             className="w-full px-4 py-3 border rounded-lg bg-background focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
             required
           />
-          <p className="text-xs text-muted-foreground">
-            {form.excerpt.length}/300 characters
-          </p>
+          <p className="text-xs text-muted-foreground">{form.excerpt.length}/300 characters</p>
         </div>
 
         {/* Tags */}
@@ -430,9 +408,7 @@ export default function EditBlogPost() {
               className="flex-1 min-w-[100px] outline-none bg-transparent text-foreground placeholder:text-muted-foreground"
             />
           </div>
-          <p className="text-xs text-muted-foreground">
-            Press comma, enter, or tab to add a tag
-          </p>
+          <p className="text-xs text-muted-foreground">Press comma, enter, or tab to add a tag</p>
         </div>
 
         {/* Content Editor */}
@@ -466,9 +442,7 @@ export default function EditBlogPost() {
             <input
               type="checkbox"
               checked={form.published}
-              onChange={(e) =>
-                setForm({ ...form, published: e.target.checked })
-              }
+              onChange={(e) => setForm({ ...form, published: e.target.checked })}
               className="w-4 h-4 rounded border-gray-300"
             />
             <span className="text-sm">Published</span>

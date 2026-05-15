@@ -25,15 +25,10 @@ async function resolvePostWithImage(
 
   if (post.coverImage) {
     // Handle both old URL strings and new storage IDs
-    if (
-      typeof post.coverImage === "string" &&
-      post.coverImage.startsWith("http")
-    ) {
+    if (typeof post.coverImage === "string" && post.coverImage.startsWith("http")) {
       coverImageUrl = post.coverImage; // Legacy URL
     } else {
-      coverImageUrl = await ctx.storage.getUrl(
-        post.coverImage as Id<"_storage">,
-      );
+      coverImageUrl = await ctx.storage.getUrl(post.coverImage as Id<"_storage">);
     }
   }
 
@@ -56,9 +51,7 @@ export const list = query({
     if (args.onlyFeatured) {
       posts = await ctx.db
         .query("blogPosts")
-        .withIndex("by_featured", (q) =>
-          q.eq("featured", true).eq("published", true),
-        )
+        .withIndex("by_featured", (q) => q.eq("featured", true).eq("published", true))
         .collect();
     } else if (args.onlyPublished !== false) {
       posts = await ctx.db
@@ -165,8 +158,7 @@ export const create = mutation({
     const now = Date.now();
 
     // Calculate reading time if not provided (avg 200 words per minute)
-    const readingTime =
-      args.readingTime ?? Math.ceil(args.content.split(/\s+/).length / 200);
+    const readingTime = args.readingTime ?? Math.ceil(args.content.split(/\s+/).length / 200);
 
     return await ctx.db.insert("blogPosts", {
       ...args,
@@ -240,9 +232,7 @@ export const clearCoverImage = mutation({
 
     // Delete the old image from storage if it's a storage ID (not a legacy URL)
     if (post.coverImage) {
-      const isLegacyUrl =
-        typeof post.coverImage === "string" &&
-        post.coverImage.startsWith("http");
+      const isLegacyUrl = typeof post.coverImage === "string" && post.coverImage.startsWith("http");
       if (!isLegacyUrl) {
         try {
           await ctx.storage.delete(post.coverImage as Id<"_storage">);

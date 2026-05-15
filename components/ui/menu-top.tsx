@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  NavigationMenu,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -34,10 +31,7 @@ export default function MenuTop() {
           <SheetContent className="p-0 bg-Base z-50 w-full h-dvh overflow-x-clip overflow-y-auto">
             <div className="flex flex-col items-stretch justify-start divide-y divide-y-foreground">
               <div className="flex items-center justify-between gap-md p-md w-full text-md">
-                <Link
-                  href="https://github.com/michaelmonetized"
-                  aria-label="GitHub profile"
-                >
+                <Link href="https://github.com/michaelmonetized" aria-label="GitHub profile">
                   <PiGithubLogoLight />
                 </Link>
 
@@ -48,17 +42,11 @@ export default function MenuTop() {
                   <PiLinkedinLogoLight />
                 </Link>
 
-                <Link
-                  href="https://instagram.com/michaelh_rley"
-                  aria-label="Instagram profile"
-                >
+                <Link href="https://instagram.com/michaelh_rley" aria-label="Instagram profile">
                   <PiInstagramLogoLight />
                 </Link>
 
-                <Link
-                  href="https://x.com/MichaelH_rley2"
-                  aria-label="X profile"
-                >
+                <Link href="https://x.com/MichaelH_rley2" aria-label="X profile">
                   <PiXLogoLight />
                 </Link>
 
@@ -115,25 +103,16 @@ export default function MenuTop() {
           <NavigationMenuList>
             {/* Navigation Links */}
             <div className="flex items-center gap-4 mr-4">
-              <Link
-                href="/portfolio"
-                className="text-sm hover:text-primary transition-colors"
-              >
+              <Link href="/portfolio" className="text-sm hover:text-primary transition-colors">
                 Portfolio
               </Link>
-              <Link
-                href="/blog"
-                className="text-sm hover:text-primary transition-colors"
-              >
+              <Link href="/blog" className="text-sm hover:text-primary transition-colors">
                 Blog
               </Link>
             </div>
 
             <div className="flex items-center justify-between gap-md px-md w-full">
-              <Link
-                href="https://github.com/michaelmonetized"
-                aria-label="GitHub profile"
-              >
+              <Link href="https://github.com/michaelmonetized" aria-label="GitHub profile">
                 <PiGithubLogoLight />
               </Link>
 
@@ -144,10 +123,7 @@ export default function MenuTop() {
                 <PiLinkedinLogoLight />
               </Link>
 
-              <Link
-                href="https://instagram.com/michaelh_rley"
-                aria-label="Instagram profile"
-              >
+              <Link href="https://instagram.com/michaelh_rley" aria-label="Instagram profile">
                 <PiInstagramLogoLight />
               </Link>
 
@@ -156,10 +132,7 @@ export default function MenuTop() {
               </Link>
             </div>
             <div className="flex items-center justify-between gap-md w-full text-xs">
-              <Link
-                href="mailto:michaelhurley.pj@gmail.com"
-                className="text-xs"
-              >
+              <Link href="mailto:michaelhurley.pj@gmail.com" className="text-xs">
                 <Button size="sm" variant="outline" className="text-xs">
                   <span className="text-[14px]">Email Me</span>
                 </Button>

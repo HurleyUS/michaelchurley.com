@@ -17,9 +17,7 @@ export async function GET() {
     };
 
     // Determine overall health
-    const isHealthy = Object.values(checks.checks).every(
-      (check) => check.status === "healthy",
-    );
+    const isHealthy = Object.values(checks.checks).every((check) => check.status === "healthy");
 
     return NextResponse.json(checks, {
       status: isHealthy ? 200 : 503,
@@ -54,9 +52,7 @@ async function checkDatabase() {
 
     return {
       status: hasDbUrl ? "healthy" : "degraded",
-      message: hasDbUrl
-        ? "Database accessible"
-        : "Database connection not configured",
+      message: hasDbUrl ? "Database accessible" : "Database connection not configured",
       responseTime: 0,
     };
   } catch (error) {

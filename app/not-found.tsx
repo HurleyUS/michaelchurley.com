@@ -1,12 +1,6 @@
 import { headers } from "next/headers";
 import Logo from "@/components/ui/logo";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import NotFoundFooterButtons from "@/components/layout/not-found-footer-buttons";
 
 export default async function NotFound() {
@@ -27,8 +21,8 @@ export default async function NotFound() {
         </CardHeader>
         <CardContent>
           <p>
-            We looked everywhere for {pathname}, unfortunately we were unable to
-            find the page you requested.
+            We looked everywhere for {pathname}, unfortunately we were unable to find the page you
+            requested.
           </p>
         </CardContent>
         <CardFooter>

@@ -31,37 +31,27 @@
 
 /* Main text color in editor */
 .dark .toastui-editor-dark-wrapper .toastui-editor-contents,
-.dark
-  .toastui-editor-dark-wrapper
-  .toastui-editor-md-container
-  .toastui-editor-md-preview,
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-preview,
 .dark .toastui-editor-dark-wrapper .ProseMirror {
   color: var(--Catppuccin-Mocha-Text);
 }
 
 @media (prefers-color-scheme: dark) {
   .toastui-editor-dark-wrapper .toastui-editor-contents,
-  .toastui-editor-dark-wrapper
-    .toastui-editor-md-container
-    .toastui-editor-md-preview,
+  .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-preview,
   .toastui-editor-dark-wrapper .ProseMirror {
     color: var(--Catppuccin-Mocha-Text);
   }
 }
 
 /* Markdown editor tab container */
-.dark
-  .toastui-editor-dark-wrapper
-  .toastui-editor-md-container
-  .toastui-editor-md-tab-container {
+.dark .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-tab-container {
   background-color: var(--Catppuccin-Mocha-Mantle);
   border-color: var(--Catppuccin-Mocha-Surface0);
 }
 
 @media (prefers-color-scheme: dark) {
-  .toastui-editor-dark-wrapper
-    .toastui-editor-md-container
-    .toastui-editor-md-tab-container {
+  .toastui-editor-dark-wrapper .toastui-editor-md-container .toastui-editor-md-tab-container {
     background-color: var(--Catppuccin-Mocha-Mantle);
     border-color: var(--Catppuccin-Mocha-Surface0);
   }
@@ -173,10 +163,7 @@
   border-color: transparent;
 }
 
-.dark
-  .toastui-editor-dark-wrapper
-  .toastui-editor-mode-switch
-  .tab-item.active {
+.dark .toastui-editor-dark-wrapper .toastui-editor-mode-switch .tab-item.active {
   color: var(--Catppuccin-Mocha-Text);
   background-color: var(--Catppuccin-Mocha-Surface0);
   border-color: var(--Catppuccin-Mocha-Surface1);

@@ -16,17 +16,11 @@ export default function ManagePortfolio() {
     }
   };
 
-  const handleTogglePublish = async (
-    id: Id<"portfolioItems">,
-    published: boolean,
-  ) => {
+  const handleTogglePublish = async (id: Id<"portfolioItems">, published: boolean) => {
     await updateItem({ id, published: !published });
   };
 
-  const handleToggleFeatured = async (
-    id: Id<"portfolioItems">,
-    featured: boolean,
-  ) => {
+  const handleToggleFeatured = async (id: Id<"portfolioItems">, featured: boolean) => {
     await updateItem({ id, featured: !featured });
   };
 
@@ -52,10 +46,7 @@ export default function ManagePortfolio() {
       ) : portfolioItems.length === 0 ? (
         <div className="text-center py-12 text-muted-foreground">
           <p>No portfolio items yet.</p>
-          <Link
-            href="/manage/portfolio/new"
-            className="text-primary hover:underline"
-          >
+          <Link href="/manage/portfolio/new" className="text-primary hover:underline">
             Create your first portfolio item
           </Link>
         </div>
@@ -85,13 +76,9 @@ export default function ManagePortfolio() {
                   <td className="p-4 text-muted-foreground">{item.slug}</td>
                   <td className="p-4">
                     <button
-                      onClick={() =>
-                        handleTogglePublish(item._id, item.published)
-                      }
+                      onClick={() => handleTogglePublish(item._id, item.published)}
                       className={`text-xs px-2 py-1 rounded cursor-pointer font-medium ${
-                        item.published
-                          ? "bg-Green/20 text-Green"
-                          : "bg-Yellow/20 text-Yellow"
+                        item.published ? "bg-Green/20 text-Green" : "bg-Yellow/20 text-Yellow"
                       }`}
                     >
                       {item.published ? "Published" : "Draft"}
@@ -99,13 +86,9 @@ export default function ManagePortfolio() {
                   </td>
                   <td className="p-4">
                     <button
-                      onClick={() =>
-                        handleToggleFeatured(item._id, item.featured)
-                      }
+                      onClick={() => handleToggleFeatured(item._id, item.featured)}
                       className={`text-xs px-2 py-1 rounded cursor-pointer font-medium ${
-                        item.featured
-                          ? "bg-Blue/20 text-Blue"
-                          : "bg-Overlay0/30 text-Subtext0"
+                        item.featured ? "bg-Blue/20 text-Blue" : "bg-Overlay0/30 text-Subtext0"
                       }`}
                     >
                       {item.featured ? "Featured" : "Not Featured"}

@@ -38,12 +38,8 @@ export function validatePerformance(): ValidationResult {
     });
 
     if (unoptimizedImages > 0) {
-      issues.push(
-        `${unoptimizedImages} images need optimization (loading="lazy", alt text)`,
-      );
-      recommendations.push(
-        "Optimize images with proper loading attributes and alt text",
-      );
+      issues.push(`${unoptimizedImages} images need optimization (loading="lazy", alt text)`);
+      recommendations.push("Optimize images with proper loading attributes and alt text");
       score -= 10;
     }
 
@@ -138,9 +134,7 @@ export function validateUX(): ValidationResult {
   }
 
   // Additional UX recommendations
-  recommendations.push(
-    "Test all interactive elements with keyboard navigation",
-  );
+  recommendations.push("Test all interactive elements with keyboard navigation");
   recommendations.push("Verify responsive design on mobile devices");
   recommendations.push("Test with screen reader");
 
@@ -296,9 +290,7 @@ export function validateAnalytics(): ValidationResult {
     // Check for proper meta tags for social sharing
     const ogImage = document.querySelector('meta[property="og:image"]');
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDescription = document.querySelector(
-      'meta[property="og:description"]',
-    );
+    const ogDescription = document.querySelector('meta[property="og:description"]');
 
     if (!ogImage) {
       issues.push("Missing Open Graph image");
@@ -335,20 +327,13 @@ export function validateLaunchReadiness(): LaunchValidationReport {
   const analytics = validateAnalytics();
 
   const overallScore = Math.round(
-    (performance.score +
-      ux.score +
-      reliability.score +
-      security.score +
-      analytics.score) /
-      5,
+    (performance.score + ux.score + reliability.score + security.score + analytics.score) / 5,
   );
 
   const overall: ValidationResult = {
     passed:
       overallScore >= 80 &&
-      [performance, ux, reliability, security, analytics].every(
-        (r) => r.passed,
-      ),
+      [performance, ux, reliability, security, analytics].every((r) => r.passed),
     score: overallScore,
     issues: [
       ...performance.issues,
@@ -377,9 +362,7 @@ export function validateLaunchReadiness(): LaunchValidationReport {
 }
 
 // Export validation report as markdown for documentation
-export function generateValidationReport(
-  report: LaunchValidationReport,
-): string {
+export function generateValidationReport(report: LaunchValidationReport): string {
   const sections = [
     {
       name: "Performance",

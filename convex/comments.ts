@@ -12,9 +12,7 @@ export const listForItem = query({
     // Use index for efficient querying
     const comments = await ctx.db
       .query("comments")
-      .withIndex("by_item", (q) =>
-        q.eq("itemType", args.itemType).eq("itemId", args.itemId),
-      )
+      .withIndex("by_item", (q) => q.eq("itemType", args.itemType).eq("itemId", args.itemId))
       .filter((q) => q.eq(q.field("visible"), true))
       .collect();
 
@@ -98,8 +96,7 @@ export const verifyAndPublish = mutation({
     if (pending.email.toLowerCase() !== user.email.toLowerCase()) {
       return {
         success: false,
-        error:
-          "Email mismatch - please sign in with the same email you entered",
+        error: "Email mismatch - please sign in with the same email you entered",
       };
     }
 

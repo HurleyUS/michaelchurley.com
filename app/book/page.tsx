@@ -14,17 +14,14 @@ export default function BookPage() {
       <section className="py-12 pt-24">
         <ContainerBoxedCenter
           propsInner={{
-            className:
-              "flex flex-col items-center justify-center gap-md grow w-full",
+            className: "flex flex-col items-center justify-center gap-md grow w-full",
           }}
         >
           <div className="text-center space-y-4 mb-8">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight">
-              Book a Meeting
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight">Book a Meeting</h1>
             <p className="text-muted-foreground text-lg max-w-[36rem] mx-auto">
-              Schedule a 30-minute call to discuss business opportunities,
-              technology projects, or collaboration ideas.
+              Schedule a 30-minute call to discuss business opportunities, technology projects, or
+              collaboration ideas.
             </p>
           </div>
 
@@ -33,21 +30,13 @@ export default function BookPage() {
           </div>
 
           <div className="text-center mt-8 space-y-2">
-            <p className="text-sm text-muted-foreground">
-              Prefer to reach out directly?
-            </p>
+            <p className="text-sm text-muted-foreground">Prefer to reach out directly?</p>
             <div className="flex items-center justify-center gap-4 text-sm">
-              <a
-                href="mailto:michaelhurley.pj@gmail.com"
-                className="text-primary hover:underline"
-              >
+              <a href="mailto:michaelhurley.pj@gmail.com" className="text-primary hover:underline">
                 Email
               </a>
               <span className="text-muted-foreground">•</span>
-              <a
-                href="tel:+18285931935"
-                className="text-primary hover:underline"
-              >
+              <a href="tel:+18285931935" className="text-primary hover:underline">
                 (828) 593-1935
               </a>
             </div>

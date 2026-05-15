@@ -20,10 +20,7 @@ export function ContainerBoxed({
       {...props}
     >
       <div
-        className={cn(
-          "flex flex-col items-stretch justify-start gap-md",
-          propsInner?.className,
-        )}
+        className={cn("flex flex-col items-stretch justify-start gap-md", propsInner?.className)}
         {...propsInner}
       >
         {children}

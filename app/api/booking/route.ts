@@ -3,9 +3,7 @@ import { Resend } from "resend";
 import { generateBookingICS } from "@/lib/ics";
 
 // Only initialize Resend if API key is present
-const resend = process.env.RESEND_API_KEY
-  ? new Resend(process.env.RESEND_API_KEY)
-  : null;
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 const OWNER_EMAIL = process.env.ADMIN_EMAIL || "michaelmonetized@gmail.com";
 const FROM_EMAIL = process.env.FROM_EMAIL || "notify@uncap.us";
@@ -45,10 +43,7 @@ export async function POST(request: NextRequest) {
 
     // Check if Resend is configured
     if (!resend) {
-      return NextResponse.json(
-        { error: "Email service not configured" },
-        { status: 503 },
-      );
+      return NextResponse.json({ error: "Email service not configured" }, { status: 503 });
     }
 
     const body = await request.json();
@@ -56,10 +51,7 @@ export async function POST(request: NextRequest) {
 
     // Validate required fields
     if (!name || !email || !date || !timeSlot) {
-      return NextResponse.json(
-        { error: "Missing required fields" },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
     // Generate ICS file content
@@ -144,9 +136,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Booking email error:", error);
-    return NextResponse.json(
-      { error: "Failed to process booking" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Failed to process booking" }, { status: 500 });
   }
 }

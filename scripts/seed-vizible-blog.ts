@@ -70,13 +70,7 @@ That\u2019s different. And that\u2019s why I\u2019m in.
 
 \u2014 Michael C. Hurley`,
   coverImage: undefined,
-  tags: [
-    "partnership",
-    "marketing",
-    "vizible",
-    "local-business",
-    "announcement",
-  ],
+  tags: ["partnership", "marketing", "vizible", "local-business", "announcement"],
   featured: true,
   published: true,
   publishedAt: now,

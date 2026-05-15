@@ -155,8 +155,7 @@ export default function ViziblePage() {
       <section className="bg-gradient-to-b from-Latte-Base to-Latte-Crust dark:from-Mocha-Base dark:to-Mocha-Crust">
         <ContainerBoxedCenter
           propsInner={{
-            className:
-              "grid gap-lg lg:grid-cols-2 lg:items-center w-full py-4xl",
+            className: "grid gap-lg lg:grid-cols-2 lg:items-center w-full py-4xl",
           }}
         >
           {/* Left — copy */}
@@ -165,9 +164,7 @@ export default function ViziblePage() {
               Official Partnership
             </span>
 
-            <h1 className="text-xl font-black">
-              A Quiet Revolution in Local Marketing
-            </h1>
+            <h1 className="text-xl font-black">A Quiet Revolution in Local Marketing</h1>
 
             {/* Mobile video — between title and description */}
             <div className="w-full aspect-[16/9] rounded-lg overflow-hidden lg:hidden border border-Surface0/50">
@@ -181,10 +178,9 @@ export default function ViziblePage() {
             </div>
 
             <p className="text-xs text-Subtext0 leading-relaxed">
-              I partnered with Vizible because they solve the three problems
-              every local business owner has — no strategy, no visibility, and
-              no time. You get a Personal CMO, a real-time dashboard, and a CRM
-              that actually fits your business. No contracts.
+              I partnered with Vizible because they solve the three problems every local business
+              owner has — no strategy, no visibility, and no time. You get a Personal CMO, a
+              real-time dashboard, and a CRM that actually fits your business. No contracts.
             </p>
 
             <div className="flex flex-wrap items-center gap-sm">
@@ -217,10 +213,7 @@ export default function ViziblePage() {
         <ContainerBoxedCenter propsInner={{ className: "py-lg w-full" }}>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-md w-full">
             {trustStats.map((s) => (
-              <div
-                key={s.label}
-                className="flex flex-col items-center text-center"
-              >
+              <div key={s.label} className="flex flex-col items-center text-center">
                 <span className="text-sm font-black text-Text">{s.label}</span>
                 <span className="text-xs text-Overlay1">{s.sub}</span>
               </div>
@@ -241,13 +234,10 @@ export default function ViziblePage() {
             <span className="text-xs tracking-[0.25em] uppercase text-Overlay2 font-medium">
               Core Platform
             </span>
-            <h2 className="font-black text-lg">
-              Three Things That Convinced Me
-            </h2>
+            <h2 className="font-black text-lg">Three Things That Convinced Me</h2>
             <p className="text-xs text-Subtext0 leading-relaxed">
-              I&apos;ve built marketing tools. I&apos;ve managed campaigns.
-              These are the three features that made Vizible different from
-              everything else.
+              I&apos;ve built marketing tools. I&apos;ve managed campaigns. These are the three
+              features that made Vizible different from everything else.
             </p>
           </div>
 
@@ -263,8 +253,7 @@ export default function ViziblePage() {
                   "Brand development",
                   "SEO, social, ads, email expertise",
                 ],
-                quote:
-                  "Matt my CMO takes me through the numbers and I finally get it.",
+                quote: "Matt my CMO takes me through the numbers and I finally get it.",
               },
               {
                 num: "02",
@@ -288,8 +277,7 @@ export default function ViziblePage() {
                   "Calendar scheduling",
                   "Pipeline analytics",
                 ],
-                quote:
-                  "Finally I have found what I was looking for. A marketing relationship!",
+                quote: "Finally I have found what I was looking for. A marketing relationship!",
               },
             ].map((card) => (
               <div key={card.num} className="border-gradient-animated">
@@ -298,9 +286,7 @@ export default function ViziblePage() {
                     {card.num}
                   </span>
                   <h3 className="text-md font-black">{card.title}</h3>
-                  <p className="text-xs text-Subtext0 leading-relaxed">
-                    {card.desc}
-                  </p>
+                  <p className="text-xs text-Subtext0 leading-relaxed">{card.desc}</p>
                   <ul className="text-xs text-Subtext1 space-y-1 mt-auto pt-sm">
                     {card.checks.map((c) => (
                       <li key={c} className="flex gap-2">
@@ -310,9 +296,7 @@ export default function ViziblePage() {
                     ))}
                   </ul>
                   <blockquote className="border-l-2 border-Surface0 pl-sm mt-sm">
-                    <p className="text-xs italic text-Overlay2">
-                      &ldquo;{card.quote}&rdquo;
-                    </p>
+                    <p className="text-xs italic text-Overlay2">&ldquo;{card.quote}&rdquo;</p>
                   </blockquote>
                 </div>
               </div>
@@ -332,8 +316,7 @@ export default function ViziblePage() {
             </span>
             <h2 className="font-black text-lg">Everything Else, Handled</h2>
             <p className="text-xs text-Subtext0 leading-relaxed">
-              Beyond the big three, Vizible covers every channel your local
-              business needs.
+              Beyond the big three, Vizible covers every channel your local business needs.
             </p>
           </div>
 
@@ -345,9 +328,7 @@ export default function ViziblePage() {
               >
                 <div className="flex flex-col gap-xs p-md rounded-lg bg-background h-full">
                   <h3 className="text-xs font-bold text-Text">{f.name}</h3>
-                  <p className="text-xs text-Overlay2 leading-relaxed">
-                    {f.desc}
-                  </p>
+                  <p className="text-xs text-Overlay2 leading-relaxed">{f.desc}</p>
                 </div>
               </div>
             ))}
@@ -405,8 +386,8 @@ export default function ViziblePage() {
             </span>
             <h2 className="font-black text-lg">Plans &amp; Pricing</h2>
             <p className="text-xs text-Subtext0 leading-relaxed">
-              Every plan includes Vizible&apos;s award-winning platform. No
-              contracts — they earn your business every month.
+              Every plan includes Vizible&apos;s award-winning platform. No contracts — they earn
+              your business every month.
             </p>
           </div>
 
@@ -415,9 +396,7 @@ export default function ViziblePage() {
               <div
                 key={plan.name}
                 className={
-                  plan.highlighted
-                    ? "border-gradient-animated"
-                    : "border-gradient-grayscale"
+                  plan.highlighted ? "border-gradient-animated" : "border-gradient-grayscale"
                 }
               >
                 <div className="flex flex-col gap-sm bg-background rounded-lg p-lg h-full relative">
@@ -427,20 +406,12 @@ export default function ViziblePage() {
                     </span>
                   )}
                   <div>
-                    <h3 className="text-sm font-black text-Text">
-                      {plan.name}
-                    </h3>
+                    <h3 className="text-sm font-black text-Text">{plan.name}</h3>
                     <p className="text-xs text-Overlay1">{plan.tagline}</p>
                   </div>
                   <p className="flex items-baseline gap-1">
-                    <span className="text-lg font-black text-Text">
-                      {plan.price}
-                    </span>
-                    {plan.period && (
-                      <span className="text-xs text-Overlay1">
-                        {plan.period}
-                      </span>
-                    )}
+                    <span className="text-lg font-black text-Text">{plan.price}</span>
+                    {plan.period && <span className="text-xs text-Overlay1">{plan.period}</span>}
                   </p>
                   <ul className="text-xs text-Subtext1 space-y-1 pt-xs">
                     {plan.features.map((f) => (
@@ -452,9 +423,7 @@ export default function ViziblePage() {
                   </ul>
                   <div className="mt-auto pt-sm">
                     <Link href="mailto:michael@hurleyus.com?subject=Vizible%20Inquiry">
-                      <Button
-                        variant={plan.highlighted ? "default" : "outline"}
-                      >
+                      <Button variant={plan.highlighted ? "default" : "outline"}>
                         Get Started
                       </Button>
                     </Link>
@@ -470,14 +439,13 @@ export default function ViziblePage() {
       <section className="bg-gradient-to-b from-Latte-Mantle to-Latte-Base dark:from-Mocha-Mantle dark:to-Mocha-Base py-4xl">
         <ContainerBoxedCenter
           propsInner={{
-            className:
-              "flex flex-col items-center text-center gap-md w-full max-w-prose mx-auto",
+            className: "flex flex-col items-center text-center gap-md w-full max-w-prose mx-auto",
           }}
         >
           <h2 className="font-black text-lg">Ready to Stop Guessing?</h2>
           <p className="text-xs text-Subtext0 leading-relaxed">
-            Most marketing platforms give you a login and say good luck. Vizible
-            gives you a person, a platform, and a plan.
+            Most marketing platforms give you a login and say good luck. Vizible gives you a person,
+            a platform, and a plan.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-sm">
             <Link href="mailto:michael@hurleyus.com?subject=Vizible%20Partnership%20Inquiry">
@@ -487,9 +455,7 @@ export default function ViziblePage() {
               <Button variant="outline">Call or Text Me</Button>
             </Link>
           </div>
-          <p className="text-xs text-Overlay1">
-            Or email michael@hurleyus.com directly
-          </p>
+          <p className="text-xs text-Overlay1">Or email michael@hurleyus.com directly</p>
         </ContainerBoxedCenter>
       </section>
     </>

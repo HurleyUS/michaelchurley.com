@@ -28,11 +28,7 @@ export function ThemeToggle() {
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
-      {theme === "dark" ? (
-        <PiSunLight className="w-5 h-5" />
-      ) : (
-        <PiMoonLight className="w-5 h-5" />
-      )}
+      {theme === "dark" ? <PiSunLight className="w-5 h-5" /> : <PiMoonLight className="w-5 h-5" />}
     </Button>
   );
 }

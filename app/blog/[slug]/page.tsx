@@ -26,9 +26,7 @@ export async function generateMetadata({
       title: post.title,
       description: post.excerpt || post.title,
       type: "article",
-      publishedTime: post.publishedAt
-        ? new Date(post.publishedAt).toISOString()
-        : undefined,
+      publishedTime: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined,
       ...(post.coverImage ? { images: [post.coverImage] } : {}),
     },
   };
@@ -43,11 +41,7 @@ function formatDate(timestamp: number | undefined) {
   });
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = await fetchQuery(api.blog.getBySlug, { slug }).catch(() => null);
 
@@ -74,11 +68,7 @@ export default async function BlogPostPage({
         {/* Cover image */}
         {post.coverImage && (
           <div className="aspect-video relative rounded-lg overflow-hidden">
-            <img
-              src={post.coverImage}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
+            <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
           </div>
         )}
 

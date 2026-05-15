@@ -70,9 +70,7 @@ export default function ManageComments() {
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-lg">
-                        {(comment.authorName ||
-                          comment.authorEmail ||
-                          "?")[0]?.toUpperCase()}
+                        {(comment.authorName || comment.authorEmail || "?")[0]?.toUpperCase()}
                       </span>
                     </div>
                   )}
@@ -89,9 +87,7 @@ export default function ManageComments() {
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <span className="capitalize">{comment.itemType}</span>
                       <span>•</span>
-                      <span>
-                        {comment.verified ? "Verified" : "Unverified"}
-                      </span>
+                      <span>{comment.verified ? "Verified" : "Unverified"}</span>
                       <span>•</span>
                       <span>{comment.visible ? "Visible" : "Hidden"}</span>
                     </div>
@@ -101,9 +97,7 @@ export default function ManageComments() {
                   <button
                     onClick={() => handleToggleVisibility(comment._id)}
                     className={`text-xs px-2 py-1 rounded font-medium ${
-                      comment.visible
-                        ? "bg-Yellow/20 text-Yellow"
-                        : "bg-Green/20 text-Green"
+                      comment.visible ? "bg-Yellow/20 text-Yellow" : "bg-Green/20 text-Green"
                     }`}
                   >
                     {comment.visible ? "Hide" : "Show"}

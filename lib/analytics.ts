@@ -223,33 +223,19 @@ export function useScrollDepthTracking() {
     const handleScroll = () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight =
-          document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = Math.round((scrollTop / docHeight) * 100);
 
         if (scrollPercent > maxScrollDepth) {
           maxScrollDepth = scrollPercent;
 
           // Track scroll depth milestones
-          if (
-            scrollPercent >= 25 &&
-            scrollPercent < 50 &&
-            maxScrollDepth < 25
-          ) {
+          if (scrollPercent >= 25 && scrollPercent < 50 && maxScrollDepth < 25) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 25 });
-          } else if (
-            scrollPercent >= 50 &&
-            scrollPercent < 75 &&
-            maxScrollDepth < 50
-          ) {
+          } else if (scrollPercent >= 50 && scrollPercent < 75 && maxScrollDepth < 50) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 50 });
-          } else if (
-            scrollPercent >= 75 &&
-            scrollPercent < 100 &&
-            maxScrollDepth < 75
-          ) {
+          } else if (scrollPercent >= 75 && scrollPercent < 100 && maxScrollDepth < 75) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 75 });
           } else if (scrollPercent >= 100 && maxScrollDepth < 100) {
             trackEvent(LaunchEvents.SCROLL_DEPTH, { depth_percent: 100 });
@@ -334,9 +320,7 @@ export function validateAnalyticsSetup(): {
     const title = document.querySelector("title");
     const description = document.querySelector('meta[name="description"]');
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDescription = document.querySelector(
-      'meta[property="og:description"]',
-    );
+    const ogDescription = document.querySelector('meta[property="og:description"]');
 
     if (!title) issues.push("Missing page title");
     if (!description) issues.push("Missing meta description");

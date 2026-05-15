@@ -80,10 +80,7 @@ function generateReport() {
   // Bundle analysis (if available)
   logStep("Checking bundle size...");
   try {
-    const bundleCheck = runCommand(
-      "bun run build && bun run analyze",
-      "Bundle analysis",
-    );
+    const bundleCheck = runCommand("bun run build && bun run analyze", "Bundle analysis");
     report.checks.bundle = bundleCheck;
   } catch {
     // Bundle analysis is optional
@@ -118,17 +115,10 @@ function generateReport() {
   // Check .env.example if it exists
   if (fs.existsSync(".env.example")) {
     const envExample = fs.readFileSync(".env.example", "utf8");
-    const missingEnvVars = requiredEnvVars.filter(
-      (envVar) => !envExample.includes(envVar),
-    );
+    const missingEnvVars = requiredEnvVars.filter((envVar) => !envExample.includes(envVar));
     if (missingEnvVars.length > 0) {
-      report.overall.issues.push(
-        `Missing env vars in .env.example: ${missingEnvVars.join(", ")}`,
-      );
-      logStep(
-        `Missing env vars in .env.example: ${missingEnvVars.join(", ")}`,
-        "warning",
-      );
+      report.overall.issues.push(`Missing env vars in .env.example: ${missingEnvVars.join(", ")}`);
+      logStep(`Missing env vars in .env.example: ${missingEnvVars.join(", ")}`, "warning");
     }
   }
 

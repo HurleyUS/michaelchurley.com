@@ -4,12 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  PiPaperPlaneTilt,
-  PiSpinner,
-  PiCheckCircle,
-  PiWarningCircle,
-} from "react-icons/pi";
+import { PiPaperPlaneTilt, PiSpinner, PiCheckCircle, PiWarningCircle } from "react-icons/pi";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -23,9 +18,7 @@ export function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -54,9 +47,7 @@ export function ContactForm() {
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       setStatus("error");
-      setErrorMessage(
-        error instanceof Error ? error.message : "Something went wrong",
-      );
+      setErrorMessage(error instanceof Error ? error.message : "Something went wrong");
     }
   };
 
@@ -64,17 +55,11 @@ export function ContactForm() {
     return (
       <div className="flex flex-col items-center justify-center gap-md p-lg text-center bg-green-50 dark:bg-green-950/20 rounded-lg border border-green-200 dark:border-green-800">
         <PiCheckCircle className="w-12 h-12 text-green-600 dark:text-green-400" />
-        <h3 className="text-lg font-bold text-green-800 dark:text-green-200">
-          Message Sent!
-        </h3>
+        <h3 className="text-lg font-bold text-green-800 dark:text-green-200">Message Sent!</h3>
         <p className="text-green-700 dark:text-green-300">
           Thanks for reaching out. I&apos;ll get back to you within 24-48 hours.
         </p>
-        <Button
-          variant="outline"
-          onClick={() => setStatus("idle")}
-          className="mt-md"
-        >
+        <Button variant="outline" onClick={() => setStatus("idle")} className="mt-md">
           Send Another Message
         </Button>
       </div>
@@ -157,12 +142,7 @@ export function ContactForm() {
         />
       </div>
 
-      <Button
-        type="submit"
-        size="lg"
-        disabled={status === "submitting"}
-        className="gap-2 self-end"
-      >
+      <Button type="submit" size="lg" disabled={status === "submitting"} className="gap-2 self-end">
         {status === "submitting" ? (
           <>
             <PiSpinner className="w-5 h-5 animate-spin" />

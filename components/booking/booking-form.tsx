@@ -70,11 +70,7 @@ function getAvailableSlotsForDate(date: Date, now: Date): string[] {
 }
 
 // Get next N weekdays (M-F) that have available slots
-function getWeekdaysWithSlots(
-  startDate: Date,
-  count: number,
-  now: Date,
-): Date[] {
+function getWeekdaysWithSlots(startDate: Date, count: number, now: Date): Date[] {
   const days: Date[] = [];
   const current = new Date(startDate);
   current.setHours(0, 0, 0, 0);
@@ -241,9 +237,7 @@ export default function BookingForm() {
   if (!mounted || !now) {
     return (
       <div className="w-full flex items-center justify-center py-12">
-        <div className="animate-pulse text-muted-foreground">
-          Loading available times...
-        </div>
+        <div className="animate-pulse text-muted-foreground">Loading available times...</div>
       </div>
     );
   }
@@ -256,23 +250,13 @@ export default function BookingForm() {
         <div className="flex items-center justify-between mb-4">
           <div className="w-10">
             {canGoBack && (
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handlePrev}
-                aria-label="Previous days"
-              >
+              <Button variant="ghost" size="icon" onClick={handlePrev} aria-label="Previous days">
                 <PiCaretLeftBold />
               </Button>
             )}
           </div>
           <h3 className="text-lg font-semibold">Select a Time</h3>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handleNext}
-            aria-label="Next days"
-          >
+          <Button variant="ghost" size="icon" onClick={handleNext} aria-label="Next days">
             <PiCaretRightBold />
           </Button>
         </div>
@@ -288,9 +272,7 @@ export default function BookingForm() {
                 {/* Day header */}
                 <div className="text-center mb-2 pb-2 border-b">
                   <div className="font-semibold">{getDayName(date)}</div>
-                  <div className="text-sm text-muted-foreground">
-                    {getMonthDay(date)}
-                  </div>
+                  <div className="text-sm text-muted-foreground">{getMonthDay(date)}</div>
                 </div>
 
                 {/* Scrollable slots container */}
@@ -342,9 +324,7 @@ export default function BookingForm() {
         >
           ← Back
         </button>
-        <h3 className="text-lg font-semibold text-center mb-1">
-          Book Your Meeting
-        </h3>
+        <h3 className="text-lg font-semibold text-center mb-1">Book Your Meeting</h3>
         <p className="text-sm text-muted-foreground text-center mb-4">
           {selectedDate?.toLocaleDateString("en-US", {
             weekday: "long",
@@ -412,9 +392,7 @@ export default function BookingForm() {
     <div className="text-center py-4">
       <div className="text-5xl mb-4">✓</div>
       <h3 className="text-xl font-semibold mb-2">Booking Confirmed!</h3>
-      <p className="text-muted-foreground mb-4">
-        Check your email for the calendar invite.
-      </p>
+      <p className="text-muted-foreground mb-4">Check your email for the calendar invite.</p>
       <Button onClick={handleReset} variant="outline">
         Book Another Meeting
       </Button>
