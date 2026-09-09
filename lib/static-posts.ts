@@ -4794,7 +4794,7 @@ I built **shagent**, public https://github.com/michaelmonetized/shagent. HEAD \`
 - Entry \`./shagent\` (\`#!/usr/bin/env bun\`): requires \`OPENROUTER_API_KEY\`; model \`SHAGENT_MODEL\` or **\`openrouter/free\`**
 - \`Shagent\` in \`src/controller/shagent.ts\` (~79 LOC): MCP \`Client\` + \`StdioClientTransport\` running \`npx -y @modelcontextprotocol/server-filesystem\` on \`process.cwd()\`
 - OpenRouter \`https://openrouter.ai/api/v1/chat/completions\` loop, **max 15** turns
-- System prompt forces JSON: \`{"action":"tool_name","args":{...}}\` or \`{"message":"..."}\`; regex scrape \`/\{.*?\}/gs\`; \`client.callTool\`
+- System prompt forces JSON: \`{"action":"tool_name","args":{...}}\` or \`{"message":"..."}\`; regex scrape \`/{.*?}/gs\`; \`client.callTool\`
 - Sibling probe \`src/controller/index.ts\` lists tools from \`npx -y chrome-devtools-mcp\`; that probe is **not** what the CLI entry wires
 
 ![Agent loop](/blog/shagent-bun-mcp-openrouter-after-zsh-harness-delete/screenshots/agent-loop.png)
@@ -8702,7 +8702,7 @@ export const staticPosts: StaticPost[] = [
   },
   {
     _id: "static:waynesville-zaxbys-single-store-ops-portal",
-    title: "modern-design-playground: I left agents running for ten hours and they rebuilt nine worlds",
+    title: "Waynesville Zaxby's: I built a single-store ops portal so Russ Avenue's public face and shift office share one origin",
     slug: "waynesville-zaxbys-single-store-ops-portal",
     excerpt:
       "I shipped waynesville.yourzaxbys.com as a Next.js 16 + Convex + Clerk single-store portal for 424 Russ Ave: public events/careers/community out front, live shift metrics, Steritech CAPs, hiring, training, and attendance behind the door. Package 0.1.0, 235 commits, HEAD c9f97b7. Not the franchise SaaS sibling.",
@@ -8935,7 +8935,7 @@ export const staticPosts: StaticPost[] = [
   },
   {
     _id: "static:omnux-report-one-command-diagnostics-redaction",
-    title: "WNC History Tours: I shipped the booking shell before the tour pages existed",
+    title: "omnux-report: I shipped one-command diagnostics with consent and redaction as the default",
     slug: "omnux-report-one-command-diagnostics-redaction",
     excerpt:
       "omnux-report is an offline MIT Shell diagnostics tool (HEAD f9729a6) that ships a consenting redacted .tar.zst + SHA256 for Omnux on Apple Silicon, with SEP structure only. Validated on a real M1 Pro Omarchy box plus a ten-check fixture harness; mx-mac packaging and owner release still open.",
