@@ -1252,11 +1252,13 @@ The playground is the product surface. Live circle. Live card. CIRCLE PROPS slid
 
 ## Where
 
-Live on Vercel: https://twelveux.vercel.app (playground, \`/og\`, \`/kit\`, and \`/r\` JSON).
+Home is https://www.michaelchurley.com/twelveux. Playground, \`/twelveux/og\`, \`/twelveux/kit\`, and registry JSON at \`/r\` plus \`/twelveux/r\`.
+
+The old Vercel app is still up at https://twelveux.vercel.app. That is a mirror, not the domain. twelveux.com was never the host. Do not claim it.
 
 Repo: https://github.com/michaelmonetized/twelveux
 
-\`registry.json\` still says homepage https://twelveux.com. That name has no public DNS as of this writing. The host that answers is the Vercel app.
+\`npx shadcn add https://www.michaelchurley.com/r/glass.json\`
 
 ![scene backdrop](https://raw.githubusercontent.com/michaelmonetized/twelveux/main/public/scene.jpg)
 
@@ -9017,7 +9019,7 @@ export const staticPosts: StaticPost[] = [
     title: "twelveux: I hosted a shadcn registry and shipped Glass in one afternoon",
     slug: "twelveux-hosted-shadcn-registry-glass",
     excerpt:
-      "I stood up twelveux: a hosted shadcn registry with Max, a phi Catppuccin theme, and pen.dev Glass. Playground on Vercel. Five commits. Same day.",
+      "I stood up twelveux: a hosted shadcn registry with Max, a phi Catppuccin theme, and pen.dev Glass. It lives at michaelchurley.com/twelveux. Five commits. Same day.",
     content: TWELVEUX_CONTENT,
     coverImage: TWELVEUX_COVER,
     tags: [

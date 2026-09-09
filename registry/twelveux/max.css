@@ -1,0 +1,127 @@
+@font-face {
+  font-family: max;
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max15.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max16.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max25.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max26.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max35.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max36.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max45.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max46.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max55.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max56.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max65.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max66.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max75.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max76.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("/max/max95.woff") format("woff");
+}
+
+@font-face {
+  font-family: max;
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+  src: url("/max/max96.woff") format("woff");
+}

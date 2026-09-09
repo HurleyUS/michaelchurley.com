@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { SiteChrome } from "@/components/layout/site-chrome";
 import { Providers } from "@/providers";
 
 const siteUrl = "https://www.michaelchurley.com";
@@ -110,14 +111,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col items-stretch justify-start relative bg-background overflow-x-clip overflow-y-auto">
         <Providers>
-          <a href="#main" className="sr-only focus:not-sr-only">
-            {"Skip to main content"}
-          </a>
-          <Header />
+          <SiteChrome>
+            <a href="#main" className="sr-only focus:not-sr-only">
+              {"Skip to main content"}
+            </a>
+            <Header />
+          </SiteChrome>
           <main id="main" className="flex grow flex-col items-stretch justify-start">
             {children}
           </main>
-          <Footer />
+          <SiteChrome>
+            <Footer />
+          </SiteChrome>
         </Providers>
       </body>
     </html>

@@ -15,9 +15,43 @@ const nextConfig: NextConfig = {
     // Also allow unoptimized for Convex storage
     unoptimized: false,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/twelveux/r/:path*",
+        destination: "/r/:path*",
+      },
+    ];
+  },
   // Security headers for Launch Week readiness
   async headers() {
     return [
+      {
+        source: "/r/:path*",
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600",
+          },
+        ],
+      },
+      {
+        source: "/twelveux/r/:path*",
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600",
+          },
+        ],
+      },
       {
         source: "/(.*)",
         headers: [

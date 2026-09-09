@@ -1,0 +1,221 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "twelveux",
+  "homepage": "https://www.michaelchurley.com/twelveux",
+  "items": [
+    {
+      "name": "max",
+      "type": "registry:style",
+      "title": "Max",
+      "description": "The Max typeface. Local faces, weights 100–900, roman and italic.",
+      "files": [
+        {
+          "path": "registry/twelveux/max.css",
+          "type": "registry:file",
+          "target": "styles/max.css"
+        },
+        {
+          "path": "public/max/max15.woff",
+          "type": "registry:file",
+          "target": "public/max/max15.woff"
+        },
+        {
+          "path": "public/max/max16.woff",
+          "type": "registry:file",
+          "target": "public/max/max16.woff"
+        },
+        {
+          "path": "public/max/max25.woff",
+          "type": "registry:file",
+          "target": "public/max/max25.woff"
+        },
+        {
+          "path": "public/max/max26.woff",
+          "type": "registry:file",
+          "target": "public/max/max26.woff"
+        },
+        {
+          "path": "public/max/max35.woff",
+          "type": "registry:file",
+          "target": "public/max/max35.woff"
+        },
+        {
+          "path": "public/max/max36.woff",
+          "type": "registry:file",
+          "target": "public/max/max36.woff"
+        },
+        {
+          "path": "public/max/max45.woff",
+          "type": "registry:file",
+          "target": "public/max/max45.woff"
+        },
+        {
+          "path": "public/max/max46.woff",
+          "type": "registry:file",
+          "target": "public/max/max46.woff"
+        },
+        {
+          "path": "public/max/max55.woff",
+          "type": "registry:file",
+          "target": "public/max/max55.woff"
+        },
+        {
+          "path": "public/max/max56.woff",
+          "type": "registry:file",
+          "target": "public/max/max56.woff"
+        },
+        {
+          "path": "public/max/max65.woff",
+          "type": "registry:file",
+          "target": "public/max/max65.woff"
+        },
+        {
+          "path": "public/max/max66.woff",
+          "type": "registry:file",
+          "target": "public/max/max66.woff"
+        },
+        {
+          "path": "public/max/max75.woff",
+          "type": "registry:file",
+          "target": "public/max/max75.woff"
+        },
+        {
+          "path": "public/max/max76.woff",
+          "type": "registry:file",
+          "target": "public/max/max76.woff"
+        },
+        {
+          "path": "public/max/max95.woff",
+          "type": "registry:file",
+          "target": "public/max/max95.woff"
+        },
+        {
+          "path": "public/max/max96.woff",
+          "type": "registry:file",
+          "target": "public/max/max96.woff"
+        }
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "twelveux theme",
+      "description": "Phi type and spacing, Catppuccin surfaces, Max as sans. Same system as uncap.us and hms.",
+      "registryDependencies": ["max"],
+      "files": [
+        {
+          "path": "registry/twelveux/theme.css",
+          "type": "registry:file",
+          "target": "styles/twelveux-theme.css"
+        }
+      ],
+      "cssVars": {
+        "light": {
+          "background": "#eff1f5",
+          "foreground": "#4c4f69",
+          "card": "#e6e9ef",
+          "card-foreground": "#4c4f69",
+          "popover": "#eff1f5",
+          "popover-foreground": "#4c4f69",
+          "primary": "#1e66f5",
+          "primary-foreground": "#eff1f5",
+          "secondary": "#ccd0da",
+          "secondary-foreground": "#4c4f69",
+          "muted": "#dce0e8",
+          "muted-foreground": "#6c6f85",
+          "accent": "#04a5e5",
+          "accent-foreground": "#eff1f5",
+          "destructive": "#d20f39",
+          "border": "#bcc0cc",
+          "input": "#ccd0da",
+          "ring": "#1e66f5",
+          "radius": "0.375rem"
+        },
+        "dark": {
+          "background": "#1e1e2e",
+          "foreground": "#cdd6f4",
+          "card": "#181825",
+          "card-foreground": "#cdd6f4",
+          "popover": "#181825",
+          "popover-foreground": "#cdd6f4",
+          "primary": "#89b4fa",
+          "primary-foreground": "#11111b",
+          "secondary": "#313244",
+          "secondary-foreground": "#cdd6f4",
+          "muted": "#313244",
+          "muted-foreground": "#a6adc8",
+          "accent": "#94e2d5",
+          "accent-foreground": "#11111b",
+          "destructive": "#f38ba8",
+          "border": "#45475a",
+          "input": "#313244",
+          "ring": "#89b4fa"
+        }
+      }
+    },
+    {
+      "name": "glass",
+      "type": "registry:ui",
+      "title": "Glass",
+      "description": "pen.dev liquid glass as a wrapper. Exact glass.glsl. Defaults from the glass circle.",
+      "dependencies": ["html-to-image"],
+      "files": [
+        {
+          "path": "registry/twelveux/glass/glass.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/glass/glass.tsx"
+        },
+        {
+          "path": "registry/twelveux/glass/defaults.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/defaults.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/sdf.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/sdf.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/shader.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/shader.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/webgl.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/webgl.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/capture.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/capture.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/radii.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/radii.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/use-glass.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/use-glass.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/text-sdf.ts",
+          "type": "registry:ui",
+          "target": "components/ui/glass/text-sdf.ts"
+        },
+        {
+          "path": "registry/twelveux/glass/glass-text.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/glass/glass-text.tsx"
+        },
+        {
+          "path": "registry/twelveux/glass/glass.glsl",
+          "type": "registry:file",
+          "target": "components/ui/glass/glass.glsl"
+        }
+      ]
+    }
+  ]
+}

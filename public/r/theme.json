@@ -1,0 +1,59 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "theme",
+  "type": "registry:theme",
+  "title": "twelveux theme",
+  "description": "Phi type and spacing, Catppuccin surfaces, Max as sans. Same system as uncap.us and hms.",
+  "registryDependencies": ["max"],
+  "files": [
+    {
+      "path": "registry/twelveux/theme.css",
+      "content": "@import \"./max.css\";\n\n@theme inline {\n  --phi: calc((1 + sqrt(5)) / 2);\n  --gwx: calc(var(--phi) - 1);\n  --gnx: calc(1 - var(--gwx));\n  --snx: calc(1 + var(--gnx));\n  --swx: var(--phi);\n\n  --font-sans: \"max\", ui-sans-serif, system-ui, sans-serif;\n  --font-mono: \"Source Code Pro\", ui-monospace, monospace;\n\n  --text-xs: calc(var(--text-md) * 0.98);\n  --text-sm: calc(var(--text-md) * 0.99);\n  --text-md: clamp(21px, calc(1dvw * var(--phi)), 28px);\n  --text-core: var(--text-md);\n  --text-lg: clamp(28px, calc(var(--text-md) * pow(var(--snx), 2)), 35px);\n  --text-xl: clamp(35px, calc(var(--text-md) * pow(var(--snx), 3)), 42px);\n  --text-2x: clamp(42px, calc(var(--text-md) * pow(var(--snx), 4)), 49px);\n  --text-3x: clamp(49px, calc(var(--text-md) * pow(var(--snx), 5)), 56px);\n  --text-4x: clamp(56px, calc(var(--text-md) * pow(var(--snx), 6)), 63px);\n  --text-5x: clamp(63px, calc(var(--text-md) * pow(var(--snx), 7)), 70px);\n  --text-6x: clamp(70px, calc(var(--text-md) * pow(var(--snx), 8)), 77px);\n  --text-7x: clamp(77px, calc(var(--text-md) * pow(var(--snx), 9)), 84px);\n  --text-8x: clamp(84px, calc(var(--text-md) * pow(var(--snx), 10)), 91px);\n  --text-9x: clamp(91px, calc(var(--text-md) * pow(var(--snx), 11)), 98px);\n  --line-height: clamp(1, var(--gnx), var(--gwx));\n\n  --spacing-base: clamp(4px, calc(1rem * var(--gnx) / var(--swx)), 6px);\n  --spacing-sm: clamp(2px, calc(var(--spacing-base) / var(--swx)), 4px);\n  --spacing-xs: clamp(1px, calc(var(--spacing-sm) / var(--swx)), 3px);\n  --spacing-md: clamp(var(--spacing-base), calc(var(--spacing-base) * var(--swx)), 28px);\n  --spacing-lg: clamp(var(--spacing-md), calc(var(--spacing-md) * var(--swx)), 35px);\n  --spacing-xl: clamp(var(--spacing-lg), calc(var(--spacing-lg) * var(--swx)), 42px);\n\n  --color-background: var(--background);\n  --color-foreground: var(--foreground);\n  --color-card: var(--card);\n  --color-card-foreground: var(--card-foreground);\n  --color-popover: var(--popover);\n  --color-popover-foreground: var(--popover-foreground);\n  --color-primary: var(--primary);\n  --color-primary-foreground: var(--primary-foreground);\n  --color-secondary: var(--secondary);\n  --color-secondary-foreground: var(--secondary-foreground);\n  --color-muted: var(--muted);\n  --color-muted-foreground: var(--muted-foreground);\n  --color-accent: var(--accent);\n  --color-accent-foreground: var(--accent-foreground);\n  --color-destructive: var(--destructive);\n  --color-border: var(--border);\n  --color-input: var(--input);\n  --color-ring: var(--ring);\n  --color-success: var(--success);\n  --color-warning: var(--warning);\n  --radius-sm: calc(var(--radius) * 0.6);\n  --radius-md: calc(var(--radius) * 0.8);\n  --radius-lg: var(--radius);\n  --radius-xl: calc(var(--radius) * 1.4);\n  --radius-2xl: calc(var(--radius) * 1.8);\n}\n\n:root {\n  color-scheme: light;\n  --radius: 0.375rem;\n  --background: #eff1f5;\n  --foreground: #4c4f69;\n  --card: #e6e9ef;\n  --card-foreground: #4c4f69;\n  --popover: #eff1f5;\n  --popover-foreground: #4c4f69;\n  --primary: #1e66f5;\n  --primary-foreground: #eff1f5;\n  --secondary: #ccd0da;\n  --secondary-foreground: #4c4f69;\n  --muted: #dce0e8;\n  --muted-foreground: #6c6f85;\n  --accent: #04a5e5;\n  --accent-foreground: #eff1f5;\n  --destructive: #d20f39;\n  --border: #bcc0cc;\n  --input: #ccd0da;\n  --ring: #1e66f5;\n  --success: #40a02b;\n  --warning: #df8e1d;\n}\n\n.dark {\n  color-scheme: dark;\n  --background: #1e1e2e;\n  --foreground: #cdd6f4;\n  --card: #181825;\n  --card-foreground: #cdd6f4;\n  --popover: #181825;\n  --popover-foreground: #cdd6f4;\n  --primary: #89b4fa;\n  --primary-foreground: #11111b;\n  --secondary: #313244;\n  --secondary-foreground: #cdd6f4;\n  --muted: #313244;\n  --muted-foreground: #a6adc8;\n  --accent: #94e2d5;\n  --accent-foreground: #11111b;\n  --destructive: #f38ba8;\n  --border: #45475a;\n  --input: #313244;\n  --ring: #89b4fa;\n  --success: #a6e3a1;\n  --warning: #f9e2af;\n}\n",
+      "type": "registry:file",
+      "target": "styles/twelveux-theme.css"
+    }
+  ],
+  "cssVars": {
+    "light": {
+      "background": "#eff1f5",
+      "foreground": "#4c4f69",
+      "card": "#e6e9ef",
+      "card-foreground": "#4c4f69",
+      "popover": "#eff1f5",
+      "popover-foreground": "#4c4f69",
+      "primary": "#1e66f5",
+      "primary-foreground": "#eff1f5",
+      "secondary": "#ccd0da",
+      "secondary-foreground": "#4c4f69",
+      "muted": "#dce0e8",
+      "muted-foreground": "#6c6f85",
+      "accent": "#04a5e5",
+      "accent-foreground": "#eff1f5",
+      "destructive": "#d20f39",
+      "border": "#bcc0cc",
+      "input": "#ccd0da",
+      "ring": "#1e66f5",
+      "radius": "0.375rem"
+    },
+    "dark": {
+      "background": "#1e1e2e",
+      "foreground": "#cdd6f4",
+      "card": "#181825",
+      "card-foreground": "#cdd6f4",
+      "popover": "#181825",
+      "popover-foreground": "#cdd6f4",
+      "primary": "#89b4fa",
+      "primary-foreground": "#11111b",
+      "secondary": "#313244",
+      "secondary-foreground": "#cdd6f4",
+      "muted": "#313244",
+      "muted-foreground": "#a6adc8",
+      "accent": "#94e2d5",
+      "accent-foreground": "#11111b",
+      "destructive": "#f38ba8",
+      "border": "#45475a",
+      "input": "#313244",
+      "ring": "#89b4fa"
+    }
+  }
+}

@@ -17,6 +17,8 @@ export default async function Footer() {
           {" | "}
           <Link href="mailto:michaelhurley.pj@gmail.com">michaelhurley.pj@gmail.com</Link>
           {" | "}
+          <Link href="/twelveux">twelveux</Link>
+          {" | "}
           <Link
             href="https://github.com/michaelmonetized"
             title="Michael Hurley on GitHub"
