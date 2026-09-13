@@ -259,7 +259,7 @@ export default function Gallery({ pieces, kind }: { pieces: Piece[]; kind?: stri
       )}
 
       <Dialog open={picked !== null} onOpenChange={(open) => !open && setPicked(null)}>
-        <DialogContent className="flex max-h-[92dvh] w-[min(96vw,80rem)] max-w-none flex-col gap-0 overflow-hidden p-0">
+        <DialogContent className="flex h-[100dvh] max-h-[100dvh] w-full max-w-none flex-col gap-0 overflow-hidden rounded-none p-0 sm:h-auto sm:max-h-[92dvh] sm:w-[min(96vw,80rem)] sm:rounded-lg">
           {picked ? (
             <>
               <div className="flex items-start justify-between gap-4 px-6 pb-2 pr-14 pt-6">
@@ -293,14 +293,35 @@ export default function Gallery({ pieces, kind }: { pieces: Piece[]; kind?: stri
                 ) : null}
               </div>
 
-              <div className="relative w-full bg-black px-4 py-6">
-                <Media piece={picked} active eager fit="contain" className="mx-auto max-w-5xl" />
+              <div className="relative flex min-h-[55dvh] w-full flex-1 items-center justify-center bg-black sm:min-h-[70dvh]">
+                {picked.src.endsWith(".mp4") ? (
+                  <video
+                    key={picked.src}
+                    src={picked.src}
+                    className="max-h-[70dvh] max-w-full object-contain"
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    controls
+                    preload="auto"
+                  />
+                ) : (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  // biome-ignore lint/performance/noImgElement: local work stills
+                  <img
+                    key={picked.src}
+                    src={picked.src}
+                    alt=""
+                    className="max-h-[70dvh] max-w-full object-contain"
+                  />
+                )}
                 {visible.length > 1 ? (
                   <>
                     <button
                       type="button"
                       aria-label="Previous"
-                      className="absolute left-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border bg-background/80 text-lg backdrop-blur-sm"
+                      className="absolute left-2 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border bg-background/80 text-lg backdrop-blur-sm"
                       onClick={() => go(-1)}
                     >
                       <PiCaretLeftLight />
@@ -308,7 +329,7 @@ export default function Gallery({ pieces, kind }: { pieces: Piece[]; kind?: stri
                     <button
                       type="button"
                       aria-label="Next"
-                      className="absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border bg-background/80 text-lg backdrop-blur-sm"
+                      className="absolute right-2 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border bg-background/80 text-lg backdrop-blur-sm"
                       onClick={() => go(1)}
                     >
                       <PiCaretRightLight />
