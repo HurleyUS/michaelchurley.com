@@ -39,11 +39,9 @@ export default async function NightlyDashboardPage() {
         <header className="ny-hero">
           <h1>Nightly</h1>
           <p className="ny-subtitle">
-            Michael Hurley · first-party ops dash on michaelchurley.com — productivity
-            and audience over time, plus the daily stand-up walkthrough (shipped /
-            landed / inbox / loops). Evidence-only JSON under{" "}
-            <code>data/nightly/</code>. CoS appends &amp; commits; Vercel redeploys.
-            Public Nightly is ships, social, and ops only.
+            Michael Hurley · daily stand-up: what shipped, how it landed, inbox
+            signal, and open loops — plus productivity and audience trends over
+            time.
           </p>
           <div className="ny-meta-grid">
             <div className="ny-metric">
@@ -68,7 +66,7 @@ export default async function NightlyDashboardPage() {
           <p className="ny-note" style={{ marginTop: 16 }}>
             Archive covers{" "}
             <strong style={{ color: "var(--ny-text)" }}>2026-09-03 → 2026-09-23</strong>{" "}
-            (5am–5am ET windows). Charts are productivity + audience only.
+            (5am–5am ET). Charts track productivity and audience.
           </p>
         </header>
 
@@ -77,7 +75,7 @@ export default async function NightlyDashboardPage() {
             <span className="num">01</span> Trends
           </h2>
           <p className="ny-lede">
-            Sparse by design. Charts render empty states until CoS appends metrics.
+            Productivity and audience over the archived window.
           </p>
           <div className="ny-charts">
             <ProductivityChart metrics={metrics} />
@@ -124,7 +122,7 @@ export default async function NightlyDashboardPage() {
               ) : null}
             </div>
           ) : (
-            <div className="ny-empty">No reports in data/nightly/reports yet.</div>
+            <div className="ny-empty">No reports yet.</div>
           )}
         </section>
 
@@ -132,9 +130,7 @@ export default async function NightlyDashboardPage() {
           <h2>
             <span className="num">03</span> Past reports
           </h2>
-          <p className="ny-lede">
-            One JSON file per day under data/nightly/reports/YYYY-MM-DD.json
-          </p>
+          <p className="ny-lede">Past daily stand-ups.</p>
           {dates.length ? (
             <ul className="ny-archive">
               {dates.map((d) => (
@@ -152,10 +148,7 @@ export default async function NightlyDashboardPage() {
         </section>
 
         <footer className="ny-footer">
-          <p>
-            Nightly v0 · sources land as committed JSON · auth (shared secret /
-            Clerk) TBD · path: <code>www.michaelchurley.com/nightly</code>
-          </p>
+          <p>Nightly · michaelchurley.com/nightly</p>
         </footer>
       </div>
     </>
