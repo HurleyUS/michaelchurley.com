@@ -37,11 +37,6 @@ export default async function NightlyDashboardPage() {
       </nav>
       <div className="ny-wrap">
         <header className="ny-hero">
-          <div className="ny-badge-row">
-            <span className="ny-badge">Nightly · Daily Stand Up</span>
-            <span className="ny-badge neutral">America/New_York</span>
-            <span className="ny-badge warn">v0 · no auth · robots noindex</span>
-          </div>
           <h1>Nightly</h1>
           <p className="ny-subtitle">
             Michael Hurley · first-party ops dash on michaelchurley.com — productivity

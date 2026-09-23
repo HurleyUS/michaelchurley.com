@@ -1,23 +1,23 @@
 {
   "date": "2026-09-21",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 20, 2026 \u00b7 5:00 AM EDT \u2192 Sep 21, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-20T09:00:00Z \u2192 2026-09-21T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
+    "windowEt": "Sep 20, 2026 · 5:00 AM EDT → Sep 21, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-20T09:00:00Z → 2026-09-21T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
     "xPostsMeasured": 1,
     "inboxSignalItems": 3,
-    "tldr": "Ships/index 9. Notable: omadesign \u00b7 v0.5.3; omadesign \u00b7 v0.5.4; omadesign \u00b7 v0.5.5-nightly.1. X: 1 post(s), 103 imp. Inbox signal 3.",
+    "tldr": "Ships/index 9. Notable: omadesign · v0.5.3; omadesign · v0.5.4; omadesign · v0.5.5-nightly.1. X: 1 post(s), 103 imp. Inbox signal 3.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "omadesign \u00b7 v0.5.3",
+      "title": "omadesign · v0.5.3",
       "kind": "shipped",
-      "summary": "v0.5.3 \u2014 Paste it onto the canvas.",
-      "when": "Sep 20 \u00b7 10:37 AM EDT",
+      "summary": "v0.5.3 — Paste it onto the canvas.",
+      "when": "Sep 20 · 10:37 AM EDT",
       "links": [
         {
           "label": "v0.5.3",
@@ -26,10 +26,10 @@
       ]
     },
     {
-      "title": "omadesign \u00b7 v0.5.4",
+      "title": "omadesign · v0.5.4",
       "kind": "shipped",
-      "summary": "0.5.4 \u2014 More control on the canvas",
-      "when": "Sep 20 \u00b7 1:45 PM EDT",
+      "summary": "0.5.4 — More control on the canvas",
+      "when": "Sep 20 · 1:45 PM EDT",
       "links": [
         {
           "label": "v0.5.4",
@@ -38,10 +38,10 @@
       ]
     },
     {
-      "title": "omadesign \u00b7 v0.5.5-nightly.1",
+      "title": "omadesign · v0.5.5-nightly.1",
       "kind": "shipped",
-      "summary": "0.5.5 Nightly \u2014 A clearer workspace",
-      "when": "Sep 20 \u00b7 6:00 PM EDT",
+      "summary": "0.5.5 Nightly — A clearer workspace",
+      "when": "Sep 20 · 6:00 PM EDT",
       "links": [
         {
           "label": "v0.5.5-nightly.1",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "title": "michaelmonetized/omadesign \u00b7 6 merged PRs",
+      "title": "michaelmonetized/omadesign · 6 merged PRs",
       "kind": "shipped",
       "summary": "6 PR(s) merged in window.",
       "bullets": [
@@ -61,7 +61,7 @@
         "#81 Record published 0.5.4 artifacts and production verification",
         "#82 Release 0.5.5 nightly workspace improvements"
       ],
-      "when": "Sep 20 \u00b7 10:35 AM EDT \u2192 Sep 20 \u00b7 5:59 PM EDT",
+      "when": "Sep 20 · 10:35 AM EDT → Sep 20 · 5:59 PM EDT",
       "links": [
         {
           "label": "#77",
@@ -88,7 +88,7 @@
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 1 post",
+      "title": "X · @MichaelH_rley · 1 post",
       "kind": "measured",
       "summary": "103 measured impressions across 1 own post(s). Top: 103 imp.",
       "quote": "Shipping on Omarchy today: keycastr replacement + OBS",
@@ -99,21 +99,15 @@
         "reposts": 1
       },
       "bullets": [
-        "Sep 20 \u00b7 10:21 AM EDT \u00b7 103 imp \u00b7 Shipping on Omarchy today: keycastr replacement + OBS"
+        "Sep 20 · 10:21 AM EDT · 103 imp · Shipping on Omarchy today: keycastr replacement + OBS"
       ],
-      "when": "Sep 20 \u00b7 10:21 AM EDT",
+      "when": "Sep 20 · 10:21 AM EDT",
       "links": [
         {
           "label": "Top post",
           "href": "https://x.com/MichaelH_rley/status/2101678033836896646"
         }
       ]
-    },
-    {
-      "title": "Calendar \u00b7 Monday Sales Huddle Meeting",
-      "kind": "calendar",
-      "summary": "Notable meeting on primary calendar.",
-      "when": "Sep 21 \u00b7 10:00 AM EDT"
     },
     {
       "title": "Product Hunt / Reddit / LinkedIn",
@@ -126,25 +120,25 @@
       "title": "Re: [michaelmonetized/omadesign] Release 0.5.3: native clipboard paste from the 0.5.2 nightly (PR #7",
       "kind": "action",
       "summary": "vercel[bot] left a comment (michaelmonetized/omadesign#78) The latest updates on your projects. Learn more about Vercel for GitHub. Project Deployment Actions Updated omadesign Error Error Sep 20, 202",
-      "when": "Sep 20 \u00b7 10:36 AM EDT"
+      "when": "Sep 20 · 10:36 AM EDT"
     },
     {
       "title": "GETATME-8 - Error: [CONVEX Q(users:getUserByHandle)] [Request ID: a09c59590b697740] Server Error",
       "kind": "alert",
       "summary": "New issue from getatme. Sentry Set up in Slack View on Sentry New issue We notified recently active members in the getatme project of this issue Issue Error /:handle [CONVEX Q(users:getUserByHandle)] ",
-      "when": "Sep 20 \u00b7 11:31 PM EDT"
+      "when": "Sep 20 · 11:31 PM EDT"
     },
     {
-      "title": "Make your Product Hub shine \u2728",
+      "title": "Make your Product Hub shine ✨",
       "kind": "ph",
-      "summary": "Product Hunt Monday, September 21 Make your Product Hub shine \u2728 Hi Michael, Hope you&#39;re still riding the launch day high! Now that you&#39;ve had a chance to catch your breath, it&#39;s time to",
-      "when": "Sep 21 \u00b7 4:00 AM EDT"
+      "summary": "Product Hunt Monday, September 21 Make your Product Hub shine ✨ Hi Michael, Hope you&#39;re still riding the launch day high! Now that you&#39;ve had a chance to catch your breath, it&#39;s time to",
+      "when": "Sep 21 · 4:00 AM EDT"
     }
   ],
   "loops": [
     {
-      "title": "Omadesign 0.5.3\u20130.5.5 ship train",
-      "detail": "Clipboard paste + graphics tools + nightly workspace \u2014 watch install regressions."
+      "title": "Omadesign 0.5.3–0.5.5 ship train",
+      "detail": "Clipboard paste + graphics tools + nightly workspace — watch install regressions."
     },
     {
       "title": "Follow up: GETATME-8 - Error: [CONVEX Q(users:getUserByHandle)] [Request ID: a09c59590b6977",

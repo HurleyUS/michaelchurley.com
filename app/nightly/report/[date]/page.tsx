@@ -19,7 +19,7 @@ export async function generateMetadata({
   const { date } = await params;
   return {
     title: `Stand Up · ${date}`,
-    robots: { index: false, follow: false },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -56,15 +56,6 @@ export default async function NightlyReportPage({
       </nav>
       <div className="ny-wrap">
         <header className="ny-hero">
-          <div className="ny-badge-row">
-            {report.label ? <span className="ny-badge">{report.label}</span> : null}
-            <span className="ny-badge neutral">
-              {report.timezone || "America/New_York"}
-            </span>
-            {report.meta.readOnly ? (
-              <span className="ny-badge warn">Read-only · no mutations</span>
-            ) : null}
-          </div>
           <h1>Daily Stand Up Report</h1>
           <p className="ny-subtitle">
             Michael Hurley · {formatDateLabel(date)}
