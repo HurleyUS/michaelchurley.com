@@ -1,73 +1,30 @@
 {
   "date": "2026-09-10",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 9, 2026 \u00b7 5:00 AM EDT \u2192 Sep 10, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-09T09:00:00Z \u2192 2026-09-10T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
-    "xPostsMeasured": 2,
-    "inboxSignalItems": 2,
-    "tldr": "Ships/index 3. Notable: omadesign \u00b7 v0.0.5-alpha; michaelmonetized/omadesign \u00b7 1 merged PR; HurleyUS/michaelchurley.com \u00b7 1 merged PR. X: 2 post(s), 378 imp. Inbox signal 2.",
+    "windowEt": "Sep 10, 2026 · 5:00 AM EDT → Sep 11, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-10T09:00:00Z → 2026-09-11T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 1,
+    "tldr": "Ships/index 0. Notable: HurleyUS/michaelchurley.com · commits; Hustle-Launch/migrate--www.hustlelaunch.com · commits. X: 1 post(s), 159 imp. Inbox signal 1.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "omadesign \u00b7 v0.0.5-alpha",
+      "title": "HurleyUS/michaelchurley.com · commits",
       "kind": "shipped",
-      "summary": "v0.0.5-alpha \u2014 Home is the install. GIMP comes with it.",
-      "when": "Sep 9 \u00b7 6:53 AM EDT",
-      "links": [
-        {
-          "label": "v0.0.5-alpha",
-          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.5-alpha"
-        }
-      ]
-    },
-    {
-      "title": "michaelmonetized/omadesign \u00b7 1 merged PR",
-      "kind": "shipped",
-      "summary": "1 PR(s) merged in window.",
+      "summary": "5 non-merge commit(s) in window.",
       "bullets": [
-        "#52 Home is the install. GIMP comes with it."
+        "c1fc44b Restore the de la Terre storefront clip and the real wordmark.",
+        "97edfe7 Replace the Jeep Decals portfolio clip with a clean live recording.",
+        "35ab222 Put marks first, fix Jeep/de la Terre, and add missing logos.",
+        "c15ce46 Preload the first four portfolio clips and lazy-load the rest.",
+        "98dc965 Rebuild /portfolio as a motion-only grid and drop unused stills."
       ],
-      "when": "Sep 9 \u00b7 6:47 AM EDT",
-      "links": [
-        {
-          "label": "#52",
-          "href": "https://github.com/michaelmonetized/omadesign/pull/52"
-        }
-      ]
-    },
-    {
-      "title": "HurleyUS/michaelchurley.com \u00b7 1 merged PR",
-      "kind": "shipped",
-      "summary": "1 PR(s) merged in window.",
-      "bullets": [
-        "#79 Add update: Naarchy 0.4.0 is tagged on GitHub"
-      ],
-      "when": "Sep 9 \u00b7 6:42 AM EDT",
-      "links": [
-        {
-          "label": "#79",
-          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/79"
-        }
-      ]
-    },
-    {
-      "title": "HurleyUS/michaelchurley.com \u00b7 commits",
-      "kind": "shipped",
-      "summary": "6 non-merge commit(s) in window.",
-      "bullets": [
-        "a40a9b7 Fix iOS gallery controls: compass yaw, swipe orbit, and a real fullscreen still.",
-        "0bfd81a Drop pink gallery overlays, lazy-load media after layout, and orbit on mouse move.",
-        "57d96b8 Fix Three.js gallery types so the production ship build can pass.",
-        "decd5bf Serve gallery media from /work so clips are not swallowed by /portfolio/[slug].",
-        "a9d0d7b Replace the Convex portfolio roll with on-site media and living design films.",
-        "dd67e07 Add update: Naarchy 0.4.0 is tagged on GitHub (#79)"
-      ],
-      "when": "Sep 9 \u00b7 10:41 PM EDT \u2192 Sep 9 \u00b7 6:42 AM EDT",
+      "when": "Sep 10 · 6:11 PM EDT → Sep 10 · 6:57 AM EDT",
       "links": [
         {
           "label": "repo",
@@ -76,14 +33,18 @@
       ]
     },
     {
-      "title": "Hustle-Launch/migrate--www.hustlelaunch.com \u00b7 commits",
+      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · commits",
       "kind": "shipped",
-      "summary": "2 non-merge commit(s) in window.",
+      "summary": "6 non-merge commit(s) in window.",
       "bullets": [
-        "fb29944 fix: rewrite /go as the offer, not the internal notes",
-        "a225c40 feat: ship /go lander with direct line 828-593-1935"
+        "27378b7 fix: price the /go offers and tighten the copy",
+        "ca4d34c feat: redesign /go landers that sell the offer above the fold",
+        "1edc3b5 feat: Imagine OG stills plus 15s 16:9 spots and 9:16 reels",
+        "dcfdbb4 fix: put /go on the real site chrome and in the first screen",
+        "6b5b2a9 feat: /go grid plus generated OG cards for each offer",
+        "374c053 feat: four /go offers — foundation, grow, saturate, wide"
       ],
-      "when": "Sep 9 \u00b7 12:06 PM EDT \u2192 Sep 9 \u00b7 11:58 AM EDT",
+      "when": "Sep 10 · 11:52 PM EDT → Sep 10 · 6:25 AM EDT",
       "links": [
         {
           "label": "repo",
@@ -94,25 +55,24 @@
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 2 posts",
+      "title": "X · @MichaelH_rley · 1 post",
       "kind": "measured",
-      "summary": "378 measured impressions across 2 own post(s). Top: 350 imp.",
-      "quote": "We\u2019re live on Product Hunt \u2014 omadesign",
+      "summary": "159 measured impressions across 1 own post(s). Top: 159 imp.",
+      "quote": "Please test and throw me an upvote or a bug report.",
       "metrics": {
-        "impressions": 378,
-        "likes": 12,
-        "replies": 10,
+        "impressions": 159,
+        "likes": 3,
+        "replies": 3,
         "reposts": 0
       },
       "bullets": [
-        "Sep 9 \u00b7 5:24 PM EDT \u00b7 28 imp \u00b7 Had to get this rant off my chest",
-        "Sep 10 \u00b7 3:38 AM EDT \u00b7 350 imp \u00b7 We\u2019re live on Product Hunt \u2014 omadesign"
+        "Sep 10 · 9:22 AM EDT · 159 imp · Please test and throw me an upvote or a bug report."
       ],
-      "when": "Sep 9 \u00b7 5:24 PM EDT \u2192 Sep 10 \u00b7 3:38 AM EDT",
+      "when": "Sep 10 · 9:22 AM EDT",
       "links": [
         {
           "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2097952900194373863"
+          "href": "https://x.com/MichaelH_rley/status/2098039502895722925"
         }
       ]
     },
@@ -124,16 +84,10 @@
   ],
   "inbox": [
     {
-      "title": "Hustle Launch & BirdEye - Weekly Check-In",
+      "title": "Quick SEO gap for omadesign",
       "kind": "action",
-      "summary": "Hustle Launch &amp; BirdEye - Weekly Check-In Hi Michael, we&#39;re here for the meeting, waiting for you to join Thanks John Join Zoom Meeting birdeye.zoom.us/j/83465705400?pw... ID: 83465705400",
-      "when": "Sep 9 \u00b7 11:05 AM EDT"
-    },
-    {
-      "title": "[Action Needed]: Google pages disconnected",
-      "kind": "action",
-      "summary": "Some Google pages are disconnected 1 disconnected page If social pages are disconnected, some features in Hustle Launch will not function properly. Learn more Download the file for details. Download I",
-      "when": "Sep 9 \u00b7 11:26 AM EDT"
+      "summary": "Hi there, Congrats on launching omadesign on Product Hunt. Your site covers the native Linux creative suite well, but the searches people make when choosing a design tool on Linux may not be covered",
+      "when": "Sep 11 · 3:06 AM EDT"
     }
   ],
   "loops": []

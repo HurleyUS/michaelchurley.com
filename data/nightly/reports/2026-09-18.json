@@ -1,74 +1,77 @@
 {
   "date": "2026-09-18",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 17, 2026 \u00b7 5:00 AM EDT \u2192 Sep 18, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-17T09:00:00Z \u2192 2026-09-18T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
-    "xPostsMeasured": 6,
-    "inboxSignalItems": 5,
-    "tldr": "Ships/index 2. Notable: Hustle-Launch/mission-control-os \u00b7 1 merged PR; HurleyUS/getat.me \u00b7 1 merged PR. X: 6 post(s), 202 imp. Inbox signal 5.",
+    "windowEt": "Sep 18, 2026 · 5:00 AM EDT → Sep 19, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-18T09:00:00Z → 2026-09-19T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
+    "xPostsMeasured": 20,
+    "inboxSignalItems": 4,
+    "tldr": "Ships/index 3. Notable: omadesign · v0.5.1; michaelmonetized/omadesign · 2 merged PRs. X: 20 post(s), 10687 imp. Inbox signal 4.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "Hustle-Launch/mission-control-os \u00b7 1 merged PR",
+      "title": "omadesign · v0.5.1",
       "kind": "shipped",
-      "summary": "1 PR(s) merged in window.",
-      "bullets": [
-        "#65 Ban 1m jobs:expireLeases cron (MC-OS call storm)"
-      ],
-      "when": "Sep 17 \u00b7 9:37 AM EDT",
+      "summary": "v0.5.1 — You can see the selection now.",
+      "when": "Sep 18 · 7:46 PM EDT",
       "links": [
         {
-          "label": "#65",
-          "href": "https://github.com/Hustle-Launch/mission-control-os/pull/65"
+          "label": "v0.5.1",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.1"
         }
       ]
     },
     {
-      "title": "HurleyUS/getat.me \u00b7 1 merged PR",
+      "title": "michaelmonetized/omadesign · 2 merged PRs",
       "kind": "shipped",
-      "summary": "1 PR(s) merged in window.",
+      "summary": "2 PR(s) merged in window.",
       "bullets": [
-        "#46 Fix getAllPosts egress fan-out (quiet-elephant-218)"
+        "#54 Make Pixel selections, smudge, clone, and eyedropper real",
+        "#55 Cut 0.5.1 and start a studio log"
       ],
-      "when": "Sep 17 \u00b7 5:09 AM EDT",
+      "when": "Sep 18 · 7:32 PM EDT → Sep 18 · 7:40 PM EDT",
       "links": [
         {
-          "label": "#46",
-          "href": "https://github.com/HurleyUS/getat.me/pull/46"
+          "label": "#54",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/54"
+        },
+        {
+          "label": "#55",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/55"
         }
       ]
     }
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 6 posts",
+      "title": "X · @MichaelH_rley · 20 posts",
       "kind": "measured",
-      "summary": "202 measured impressions across 6 own post(s). Top: 58 imp.",
-      "quote": "Press F, draw a frame, nest frames",
+      "summary": "10687 measured impressions across 20 own post(s). Top: 9702 imp.",
+      "quote": "Shipping Omadesign 0.5.0 on Product Hunt today",
       "metrics": {
-        "impressions": 202,
-        "likes": 3,
-        "replies": 4,
-        "reposts": 0
+        "impressions": 10687,
+        "likes": 83,
+        "replies": 13,
+        "reposts": 10
       },
       "bullets": [
-        "Sep 17 \u00b7 12:36 PM EDT \u00b7 22 imp \u00b7 pro audio/work product missing from Linux being built for omarchy",
-        "Sep 18 \u00b7 12:00 AM EDT \u00b7 46 imp \u00b7 Omadesign 0.5.0 just hit Product Hunt",
-        "Sep 18 \u00b7 1:00 AM EDT \u00b7 22 imp \u00b7 New in 0.5.0: Layout persona",
-        "Sep 18 \u00b7 2:00 AM EDT \u00b7 58 imp \u00b7 Press F, draw a frame, nest frames",
-        "Sep 18 \u00b7 3:00 AM EDT \u00b7 31 imp \u00b7 Auto-layout packs children with gap",
-        "Sep 18 \u00b7 4:00 AM EDT \u00b7 23 imp \u00b7 Layout constraints in Omadesign 0.5.0"
+        "Sep 18 · 5:00 AM EDT · 81 imp · Dashed image placeholders",
+        "Sep 18 · 6:00 AM EDT · 47 imp · Four starters: mobile, landing, dashboard, card",
+        "Sep 18 · 7:00 AM EDT · 39 imp · Export selected frame as PNG/SVG/HTML",
+        "Sep 18 · 8:00 AM EDT · 48 imp · Undo still undoes — Layout included",
+        "Sep 18 · 8:47 AM EDT · 26 imp · Omadesign #57 on ProductHunt",
+        "Sep 18 · 9:00 AM EDT · 34 imp · Built for Linux first. PH launch + Astra",
+        "…+14 more posts"
       ],
-      "when": "Sep 17 \u00b7 12:36 PM EDT \u2192 Sep 18 \u00b7 4:00 AM EDT",
+      "when": "Sep 18 · 5:00 AM EDT → Sep 18 · 8:00 PM EDT",
       "links": [
         {
           "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2100827164191187404"
+          "href": "https://x.com/MichaelH_rley/status/2100934112827576559"
         }
       ]
     },
@@ -80,48 +83,42 @@
   ],
   "inbox": [
     {
-      "title": "Re: [HurleyUS/getat.me] Fix getAllPosts egress fan-out (quiet-elephant-218) (PR #46)",
-      "kind": "action",
-      "summary": "chatgpt-codex-connector[bot] left a comment (HurleyUS/getat.me#46) You have reached your Codex usage limits for code reviews. You can see your limits in the Codex usage dashboard. \u2014 Reply to this emai",
-      "when": "Sep 17 \u00b7 5:08 AM EDT"
-    },
-    {
-      "title": "Re: [HurleyUS/getat.me] fix: stop SyncWorker egress bomb (1GB / 2 users) (PR #47)",
-      "kind": "action",
-      "summary": "chatgpt-codex-connector[bot] left a comment (HurleyUS/getat.me#47) You have reached your Codex usage limits for code reviews. You can see your limits in the Codex usage dashboard. \u2014 Reply to this emai",
-      "when": "Sep 17 \u00b7 5:14 AM EDT"
-    },
-    {
-      "title": "Hustle Launch & BirdEye - Follow up",
-      "kind": "action",
-      "summary": "Hi Michael, Hope you&#39;re having a great and productive week. We missed connecting with you on this week&#39;s call and wanted to check in to see if there&#39;s anything we can help you with or any",
-      "when": "Sep 17 \u00b7 12:34 PM EDT"
-    },
-    {
-      "title": "GETATME-6 - Error: [CONVEX Q(users:getUserByHandle)] [Request ID: 5ee19ead02b77561] Server Error",
-      "kind": "alert",
-      "summary": "New issue from getatme. Sentry Set up in Slack View on Sentry New issue We notified recently active members in the getatme project of this issue Issue Error /:handle [CONVEX Q(users:getUserByHandle)] ",
-      "when": "Sep 17 \u00b7 3:01 PM EDT"
-    },
-    {
-      "title": "Your launch doesn't have any shoutouts!",
+      "title": "Your Product Hunt launch is LIVE! 🎉",
       "kind": "ph",
-      "summary": "Product Hunt Friday, September 18 Your launch doesn&#39;t have any shoutouts! Show why omadesign is fast, easy, beautiful, or better thanks to the products that you used by adding some shoutouts!",
-      "when": "Sep 18 \u00b7 3:06 AM EDT"
+      "summary": "Product Hunt Friday, September 18 Your Product Hunt launch is LIVE! 🎉 Hi Michael, Congratulations! omadesign is now live on Product Hunt! Get Verified - Be sure to get verified to increase the weight",
+      "when": "Sep 18 · 7:01 AM EDT"
+    },
+    {
+      "title": "What's new in Birdeye: Weekly Product Release Notes | September 18, 2026",
+      "kind": "action",
+      "summary": "Weekly Product Release Notes | September 18, 2026 Hi, Here&#39;s your weekly look at what&#39;s new, improved, and updated in Birdeye: Weekly Product Release Notes |",
+      "when": "Sep 18 · 9:36 AM EDT"
+    },
+    {
+      "title": "GPT-6 Astra Challenge on Product Hunt 😸",
+      "kind": "ph",
+      "summary": "Thanks for launching and being a part of the GPT-6 Astra Challenge on Product Hunt! The day is far from over so be sure to: - Push your launch out across the social and community channels that matter",
+      "when": "Sep 18 · 1:52 PM EDT"
+    },
+    {
+      "title": "Keep your Product Hunt launch momentum going 🏎️💨",
+      "kind": "ph",
+      "summary": "Product Hunt Saturday, September 19 Keep your Product Hunt launch momentum going 🏎️💨 Hi Michael, Congratulations on an awesome launch! Now that your launch day is over, here&#39;s what happens next an",
+      "when": "Sep 19 · 4:01 AM EDT"
     }
   ],
   "loops": [
     {
-      "title": "Convex egress / getat.me fan-out",
-      "detail": "getAllPosts egress fix (#46) and SyncWorker follow-ups in window; GETATME Convex getUserByHandle errors in mail \u2014 confirm prod quiet."
+      "title": "Omadesign 0.5.0 Product Hunt launch day",
+      "detail": "Launch LIVE mail + amplify drip + AMA stream posts in this window (Sep 18 5am→Sep 19 5am ET). Top X post ~9.7k impressions. Keep maker presence honest — no invented upvote totals."
     },
     {
-      "title": "MC-OS call storm cooldown",
-      "detail": "Banned 1m jobs:expireLeases cron (#65) Sep 17 afternoon \u2014 monitor residual call spikes into this window."
+      "title": "getat.me Convex residuals",
+      "detail": "GETATME error mail may still appear; egress fixes merged prior window."
     },
     {
-      "title": "PH launch eve",
-      "detail": "Astra Challenge / shoutouts mail before 5am boundary; main amplify + LIVE landing fall into Sep 19 report (5am\u20135am)."
+      "title": "PH momentum",
+      "detail": "Badge / momentum / Forum mails — optional engagement; omit invented PH counts."
     }
   ]
 }

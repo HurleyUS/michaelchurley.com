@@ -1,30 +1,26 @@
 {
   "date": "2026-09-11",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 10, 2026 \u00b7 5:00 AM EDT \u2192 Sep 11, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-10T09:00:00Z \u2192 2026-09-11T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
-    "xPostsMeasured": 1,
-    "inboxSignalItems": 1,
-    "tldr": "Ships/index 0. Notable: HurleyUS/michaelchurley.com \u00b7 commits; Hustle-Launch/migrate--www.hustlelaunch.com \u00b7 commits. X: 1 post(s), 159 imp. Inbox signal 1.",
+    "windowEt": "Sep 11, 2026 · 5:00 AM EDT → Sep 12, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-11T09:00:00Z → 2026-09-12T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
+    "xPostsMeasured": 2,
+    "inboxSignalItems": 0,
+    "tldr": "Ships/index 0. Notable: HurleyUS/michaelchurley.com · commits; Hustle-Launch/migrate--www.hustlelaunch.com · commits. X: 2 post(s), 130 imp. Inbox signal 1.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "HurleyUS/michaelchurley.com \u00b7 commits",
+      "title": "HurleyUS/michaelchurley.com · commits",
       "kind": "shipped",
-      "summary": "5 non-merge commit(s) in window.",
+      "summary": "1 non-merge commit(s) in window.",
       "bullets": [
-        "c1fc44b Restore the de la Terre storefront clip and the real wordmark.",
-        "97edfe7 Replace the Jeep Decals portfolio clip with a clean live recording.",
-        "35ab222 Put marks first, fix Jeep/de la Terre, and add missing logos.",
-        "c15ce46 Preload the first four portfolio clips and lazy-load the rest.",
-        "98dc965 Rebuild /portfolio as a motion-only grid and drop unused stills."
+        "e40e89b Drop duplicate Get At Me and Hurley tiles, and remove Hustle Pay and Hustle Chat."
       ],
-      "when": "Sep 10 \u00b7 6:11 PM EDT \u2192 Sep 10 \u00b7 6:57 AM EDT",
+      "when": "Sep 11 · 6:55 AM EDT",
       "links": [
         {
           "label": "repo",
@@ -33,18 +29,17 @@
       ]
     },
     {
-      "title": "Hustle-Launch/migrate--www.hustlelaunch.com \u00b7 commits",
+      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · commits",
       "kind": "shipped",
-      "summary": "6 non-merge commit(s) in window.",
+      "summary": "5 non-merge commit(s) in window.",
       "bullets": [
-        "27378b7 fix: price the /go offers and tighten the copy",
-        "ca4d34c feat: redesign /go landers that sell the offer above the fold",
-        "1edc3b5 feat: Imagine OG stills plus 15s 16:9 spots and 9:16 reels",
-        "dcfdbb4 fix: put /go on the real site chrome and in the first screen",
-        "6b5b2a9 feat: /go grid plus generated OG cards for each offer",
-        "374c053 feat: four /go offers \u2014 foundation, grow, saturate, wide"
+        "0d3a882 feat: OG cards for the five /go offers",
+        "4fae454 fix: match /go offer pages to the hub voice",
+        "143d79d fix: restyle /go job cards",
+        "2282d0a fix: clear the /go hero",
+        "e21401e fix: strip copy-link chrome from /go"
       ],
-      "when": "Sep 10 \u00b7 11:52 PM EDT \u2192 Sep 10 \u00b7 6:25 AM EDT",
+      "when": "Sep 11 · 10:11 AM EDT → Sep 11 · 6:52 AM EDT",
       "links": [
         {
           "label": "repo",
@@ -55,24 +50,25 @@
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 1 post",
+      "title": "X · @MichaelH_rley · 2 posts",
       "kind": "measured",
-      "summary": "159 measured impressions across 1 own post(s). Top: 159 imp.",
-      "quote": "Please test and throw me an upvote or a bug report.",
+      "summary": "130 measured impressions across 2 own post(s). Top: 106 imp.",
+      "quote": "Official website coming soon with cloud collab",
       "metrics": {
-        "impressions": 159,
-        "likes": 3,
-        "replies": 3,
+        "impressions": 130,
+        "likes": 2,
+        "replies": 0,
         "reposts": 0
       },
       "bullets": [
-        "Sep 10 \u00b7 9:22 AM EDT \u00b7 159 imp \u00b7 Please test and throw me an upvote or a bug report."
+        "Sep 11 · 11:13 AM EDT · 24 imp · Who is working on pro video/audio/motion/vfx on omarchy now?",
+        "Sep 11 · 4:37 PM EDT · 106 imp · Official website coming soon with cloud collab"
       ],
-      "when": "Sep 10 \u00b7 9:22 AM EDT",
+      "when": "Sep 11 · 11:13 AM EDT → Sep 11 · 4:37 PM EDT",
       "links": [
         {
           "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2098039502895722925"
+          "href": "https://x.com/MichaelH_rley/status/2098511242612621394"
         }
       ]
     },
@@ -84,10 +80,9 @@
   ],
   "inbox": [
     {
-      "title": "Quick SEO gap for omadesign",
-      "kind": "action",
-      "summary": "Hi there, Congrats on launching omadesign on Product Hunt. Your site covers the native Linux creative suite well, but the searches people make when choosing a design tool on Linux may not be covered",
-      "when": "Sep 11 \u00b7 3:06 AM EDT"
+      "title": "Inbox signal · none",
+      "kind": "none",
+      "summary": "No non-financial product/ops signal threads matched in this window."
     }
   ],
   "loops": []

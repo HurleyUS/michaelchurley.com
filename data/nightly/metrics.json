@@ -1,177 +1,177 @@
 [
   {
-    "date": "2026-09-03",
+    "date": "2026-09-02",
     "productivity": 1,
     "audience": {
       "xImpressions": 28
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (1) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (0) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-04",
+    "date": "2026-09-03",
     "productivity": 0,
     "audience": {
       "xImpressions": 10
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-05",
+    "date": "2026-09-04",
     "productivity": 0,
     "audience": {},
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-06",
+    "date": "2026-09-05",
     "productivity": 7,
     "audience": {},
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (7) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (7) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-07",
+    "date": "2026-09-06",
     "productivity": 7,
     "audience": {
       "xImpressions": 39
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (5) + GitHub releases (2) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (5) + GitHub releases (2) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-08",
+    "date": "2026-09-07",
     "productivity": 12,
     "audience": {
       "xImpressions": 324
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (10) + GitHub releases (2) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (10) + GitHub releases (2) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-09",
+    "date": "2026-09-08",
     "productivity": 127,
     "audience": {
       "xImpressions": 137
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (127) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (127) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-10",
+    "date": "2026-09-09",
     "productivity": 3,
     "audience": {
       "xImpressions": 378
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (1) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (2) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-11",
+    "date": "2026-09-10",
     "productivity": 0,
     "audience": {
       "xImpressions": 159
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-12",
+    "date": "2026-09-11",
     "productivity": 0,
     "audience": {
       "xImpressions": 130
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-13",
+    "date": "2026-09-12",
     "productivity": 1,
     "audience": {},
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (1) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (1) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-14",
+    "date": "2026-09-13",
     "productivity": 0,
     "audience": {},
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-15",
+    "date": "2026-09-14",
     "productivity": 0,
     "audience": {
       "xImpressions": 25
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-16",
+    "date": "2026-09-15",
     "productivity": 5,
     "audience": {},
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (4) + GitHub releases (1) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (4) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-17",
+    "date": "2026-09-16",
     "productivity": 1,
     "audience": {},
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (1) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (1) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-18",
+    "date": "2026-09-17",
     "productivity": 2,
     "audience": {
       "xImpressions": 202
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (2) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-19",
+    "date": "2026-09-18",
     "productivity": 3,
     "audience": {
       "xImpressions": 10687
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (1) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (2) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-20",
+    "date": "2026-09-19",
     "productivity": 13,
     "audience": {},
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (13) + GitHub releases (0) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (13) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-21",
+    "date": "2026-09-20",
     "productivity": 9,
     "audience": {
       "xImpressions": 103
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (6) + GitHub releases (3) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (6) + GitHub releases (3) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-22",
+    "date": "2026-09-21",
     "productivity": 4,
     "audience": {
       "xImpressions": 102
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (2) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (2) + GitHub releases (2) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   },
   {
-    "date": "2026-09-23",
+    "date": "2026-09-22",
     "productivity": 2,
     "audience": {
       "xImpressions": 130
     },
     "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (1) + GitHub releases (1) in 5am\u20135am ET window. Vercel list_deployments 403 for hustle-launch team \u2014 deploy count unavailable; GitHub merge/release used as proxy."
+    "notes": "productivity = merged PRs (1) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
   }
 ]

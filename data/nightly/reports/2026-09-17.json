@@ -1,50 +1,76 @@
 {
   "date": "2026-09-17",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 16, 2026 \u00b7 5:00 AM EDT \u2192 Sep 17, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-16T09:00:00Z \u2192 2026-09-17T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
-    "xPostsMeasured": 0,
-    "inboxSignalItems": 4,
-    "tldr": "Ships/index 1. Notable: michaelmonetized/resend-listening-daemon \u00b7 1 merged PR. Inbox signal 6.",
+    "windowEt": "Sep 17, 2026 · 5:00 AM EDT → Sep 18, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-17T09:00:00Z → 2026-09-18T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
+    "xPostsMeasured": 6,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 2. Notable: Hustle-Launch/mission-control-os · 1 merged PR; HurleyUS/getat.me · 1 merged PR. X: 6 post(s), 202 imp. Inbox signal 5.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "michaelmonetized/resend-listening-daemon \u00b7 1 merged PR",
+      "title": "Hustle-Launch/mission-control-os · 1 merged PR",
       "kind": "shipped",
       "summary": "1 PR(s) merged in window.",
       "bullets": [
-        "#10 Listen path: Resend-only (drop Convex dual-write)"
+        "#65 Ban 1m jobs:expireLeases cron (MC-OS call storm)"
       ],
-      "when": "Sep 17 \u00b7 4:57 AM EDT",
+      "when": "Sep 17 · 9:37 AM EDT",
       "links": [
         {
-          "label": "#10",
-          "href": "https://github.com/michaelmonetized/resend-listening-daemon/pull/10"
+          "label": "#65",
+          "href": "https://github.com/Hustle-Launch/mission-control-os/pull/65"
         }
       ]
     },
     {
-      "title": "Near-miss \u00b7 Omadesign v0.5.0",
-      "kind": "outside",
-      "summary": "Published Sep 15 \u00b7 7:32 PM EDT \u2014 before this window. Context only; not counted.",
+      "title": "HurleyUS/getat.me · 1 merged PR",
+      "kind": "shipped",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#46 Fix getAllPosts egress fan-out (quiet-elephant-218)"
+      ],
+      "when": "Sep 17 · 5:09 AM EDT",
       "links": [
         {
-          "label": "v0.5.0",
-          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.0"
+          "label": "#46",
+          "href": "https://github.com/HurleyUS/getat.me/pull/46"
         }
       ]
     }
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley",
-      "kind": "none",
-      "summary": "No own posts measured in this window (API sampled; replies/retweets excluded from primary pull)."
+      "title": "X · @MichaelH_rley · 6 posts",
+      "kind": "measured",
+      "summary": "202 measured impressions across 6 own post(s). Top: 58 imp.",
+      "quote": "Press F, draw a frame, nest frames",
+      "metrics": {
+        "impressions": 202,
+        "likes": 3,
+        "replies": 4,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 17 · 12:36 PM EDT · 22 imp · pro audio/work product missing from Linux being built for omarchy",
+        "Sep 18 · 12:00 AM EDT · 46 imp · Omadesign 0.5.0 just hit Product Hunt",
+        "Sep 18 · 1:00 AM EDT · 22 imp · New in 0.5.0: Layout persona",
+        "Sep 18 · 2:00 AM EDT · 58 imp · Press F, draw a frame, nest frames",
+        "Sep 18 · 3:00 AM EDT · 31 imp · Auto-layout packs children with gap",
+        "Sep 18 · 4:00 AM EDT · 23 imp · Layout constraints in Omadesign 0.5.0"
+      ],
+      "when": "Sep 17 · 12:36 PM EDT → Sep 18 · 4:00 AM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2100827164191187404"
+        }
+      ]
     },
     {
       "title": "Product Hunt / Reddit / LinkedIn",
@@ -54,42 +80,48 @@
   ],
   "inbox": [
     {
-      "title": "Get ready for the GPT-6 Astra Challenge!",
-      "kind": "ph",
-      "summary": "Hey Michael, We&#39;re excited to have you launching as part of the GPT-6 Astra Challenge on Product Hunt this Friday, June 18th! To help you make the most of the day, we put together a short",
-      "when": "Sep 16 \u00b7 9:08 AM EDT"
-    },
-    {
-      "title": "Hustle Launch & BirdEye - Weekly Check-In",
+      "title": "Re: [HurleyUS/getat.me] Fix getAllPosts egress fan-out (quiet-elephant-218) (PR #46)",
       "kind": "action",
-      "summary": "Hustle Launch &amp; BirdEye - Weekly Check-In Hi Michael, We have our weekly meeting this time and are waiting for you to join. Let me know if there&#39;s a better time in case this doesn&#39;t work",
-      "when": "Sep 16 \u00b7 11:04 AM EDT"
+      "summary": "chatgpt-codex-connector[bot] left a comment (HurleyUS/getat.me#46) You have reached your Codex usage limits for code reviews. You can see your limits in the Codex usage dashboard. — Reply to this emai",
+      "when": "Sep 17 · 5:08 AM EDT"
     },
     {
-      "title": "[Action Needed]: Google pages disconnected",
+      "title": "Re: [HurleyUS/getat.me] fix: stop SyncWorker egress bomb (1GB / 2 users) (PR #47)",
       "kind": "action",
-      "summary": "Some Google pages are disconnected 1 disconnected page If social pages are disconnected, some features in Hustle Launch will not function properly. Learn more Download the file for details. Download I",
-      "when": "Sep 16 \u00b7 11:40 AM EDT"
+      "summary": "chatgpt-codex-connector[bot] left a comment (HurleyUS/getat.me#47) You have reached your Codex usage limits for code reviews. You can see your limits in the Codex usage dashboard. — Reply to this emai",
+      "when": "Sep 17 · 5:14 AM EDT"
     },
     {
-      "title": "Re: [michaelmonetized/resend-listening-daemon] Listen path: Resend-only (drop Convex dual-write) (PR",
+      "title": "Hustle Launch & BirdEye - Follow up",
+      "kind": "action",
+      "summary": "Hi Michael, Hope you&#39;re having a great and productive week. We missed connecting with you on this week&#39;s call and wanted to check in to see if there&#39;s anything we can help you with or any",
+      "when": "Sep 17 · 12:34 PM EDT"
+    },
+    {
+      "title": "GETATME-6 - Error: [CONVEX Q(users:getUserByHandle)] [Request ID: 5ee19ead02b77561] Server Error",
       "kind": "alert",
-      "summary": "chatgpt-codex-connector[bot] left a comment (michaelmonetized/resend-listening-daemon#10) You have reached your Codex usage limits for code reviews. You can see your limits in the Codex usage dashboar",
-      "when": "Sep 17 \u00b7 4:42 AM EDT"
+      "summary": "New issue from getatme. Sentry Set up in Slack View on Sentry New issue We notified recently active members in the getatme project of this issue Issue Error /:handle [CONVEX Q(users:getUserByHandle)] ",
+      "when": "Sep 17 · 3:01 PM EDT"
+    },
+    {
+      "title": "Your launch doesn't have any shoutouts!",
+      "kind": "ph",
+      "summary": "Product Hunt Friday, September 18 Your launch doesn&#39;t have any shoutouts! Show why omadesign is fast, easy, beautiful, or better thanks to the products that you used by adding some shoutouts!",
+      "when": "Sep 18 · 3:06 AM EDT"
     }
   ],
   "loops": [
     {
-      "title": "Convex egress / resource pressure",
-      "detail": "Convex usage alerts in window \u2014 treat as ops/egress watch (getat.me fan-out, cron storms). No plan/billing details on public Nightly."
+      "title": "Convex egress / getat.me fan-out",
+      "detail": "getAllPosts egress fix (#46) and SyncWorker follow-ups in window; GETATME Convex getUserByHandle errors in mail — confirm prod quiet."
     },
     {
-      "title": "MC-OS call storm",
-      "detail": "Banned 1m jobs:expireLeases cron (#65) \u2014 monitor for residual call spikes."
+      "title": "MC-OS call storm cooldown",
+      "detail": "Banned 1m jobs:expireLeases cron (#65) Sep 17 afternoon — monitor residual call spikes into this window."
     },
     {
-      "title": "Follow up: Re: [michaelmonetized/resend-listening-daemon] Listen path: Resend-only (drop Co",
-      "detail": "chatgpt-codex-connector[bot] left a comment (michaelmonetized/resend-listening-daemon#10) You have reached your Codex usage limits for code reviews. You can see your limits in the Codex usage dashboar"
+      "title": "PH launch eve",
+      "detail": "Astra Challenge / shoutouts mail before 5am boundary; main amplify + LIVE landing fall into Sep 19 report (5am–5am)."
     }
   ]
 }
