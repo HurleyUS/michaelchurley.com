@@ -1,0 +1,113 @@
+{
+  "date": "2026-09-07",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 6, 2026 \u00b7 5:00 AM EDT \u2192 Sep 7, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-06T09:00:00Z \u2192 2026-09-07T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 0,
+    "tldr": "Ships/index 7. Notable: omadesign \u00b7 v0.0.1-alpha; omadesign \u00b7 v0.0.2-alpha; michaelmonetized/omadesign \u00b7 5 merged PRs. X: 1 post(s), 39 imp.",
+    "readOnly": true,
+    "backfill": true
+  },
+  "shipped": [
+    {
+      "title": "omadesign \u00b7 v0.0.1-alpha",
+      "kind": "shipped",
+      "summary": "v0.0.1-alpha \u2014 The download caught up",
+      "when": "Sep 6 \u00b7 6:26 AM EDT",
+      "links": [
+        {
+          "label": "v0.0.1-alpha",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.1-alpha"
+        }
+      ]
+    },
+    {
+      "title": "omadesign \u00b7 v0.0.2-alpha",
+      "kind": "shipped",
+      "summary": "v0.0.2-alpha \u2014 Layers and originals",
+      "when": "Sep 6 \u00b7 9:30 PM EDT",
+      "links": [
+        {
+          "label": "v0.0.2-alpha",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.2-alpha"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omadesign \u00b7 5 merged PRs",
+      "kind": "shipped",
+      "summary": "5 PR(s) merged in window.",
+      "bullets": [
+        "#39 v0.0.1-alpha: the download catches up, and the website moves",
+        "#40 Add layered document interoperability and native group editing",
+        "#41 Add full-resolution camera RAW development",
+        "#42 Update website for layered files and RAW preview",
+        "#43 Release v0.0.2-alpha: layered files and RAW development"
+      ],
+      "when": "Sep 6 \u00b7 6:24 AM EDT \u2192 Sep 6 \u00b7 9:24 PM EDT",
+      "links": [
+        {
+          "label": "#39",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/39"
+        },
+        {
+          "label": "#40",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/40"
+        },
+        {
+          "label": "#41",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/41"
+        },
+        {
+          "label": "#42",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/42"
+        },
+        {
+          "label": "#43",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/43"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X \u00b7 @MichaelH_rley \u00b7 1 post",
+      "kind": "measured",
+      "summary": "39 measured impressions across 1 own post(s). Top: 39 imp.",
+      "quote": "Now creative professionals can confidently make the move to omarchy.",
+      "metrics": {
+        "impressions": 39,
+        "likes": 0,
+        "replies": 1,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 6 \u00b7 6:32 AM EDT \u00b7 39 imp \u00b7 Now creative professionals can confidently make the move to omarchy."
+      ],
+      "when": "Sep 6 \u00b7 6:32 AM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2096546992742600710"
+        }
+      ]
+    },
+    {
+      "title": "Product Hunt / Reddit / LinkedIn",
+      "kind": "unreachable",
+      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Inbox signal \u00b7 none",
+      "kind": "none",
+      "summary": "No non-financial product/ops signal threads matched in this window."
+    }
+  ],
+  "loops": []
+}

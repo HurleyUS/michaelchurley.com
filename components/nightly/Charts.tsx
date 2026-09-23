@@ -13,7 +13,6 @@ import type { DailyMetric } from "@/lib/nightly/types";
 
 const accent = "#5eead4";
 const blue = "#7dd3fc";
-const warn = "#fbbf24";
 const muted = "#71717a";
 const grid = "#27272a";
 const tooltipBg = "#16161a";
@@ -107,60 +106,6 @@ export function ProductivityChart({ metrics }: Props) {
   );
 }
 
-export function RevenueChart({ metrics }: Props) {
-  const data = metrics
-    .filter((m) => m.revenueUsd != null)
-    .map((m) => ({
-      date: m.date,
-      value: m.revenueUsd as number,
-      source: m.source,
-    }));
-  return (
-    <ChartShell
-      title="Revenue (USD)"
-      subtitle="Stripe live feeds not wired — null until CoS publishes real totals"
-      empty={!data.length}
-    >
-      <ResponsiveContainer>
-        <AreaChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
-          <defs>
-            <linearGradient id="nyRevFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor={warn} stopOpacity={0.3} />
-              <stop offset="100%" stopColor={warn} stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <CartesianGrid stroke={grid} strokeDasharray="3 3" />
-          <XAxis
-            dataKey="date"
-            tick={{ fill: muted, fontSize: 11 }}
-            tickFormatter={(v) => {
-              const [, m, d] = String(v).split("-");
-              return `${m}/${d}`;
-            }}
-          />
-          <YAxis tick={{ fill: muted, fontSize: 11 }} width={48} />
-          <Tooltip
-            contentStyle={{
-              background: tooltipBg,
-              border: `1px solid ${grid}`,
-              borderRadius: 10,
-              fontSize: 12,
-            }}
-            formatter={(v) => [`$${Number(v).toLocaleString()}`, "Revenue"]}
-          />
-          <Area
-            type="monotone"
-            dataKey="value"
-            name="Revenue"
-            stroke={warn}
-            fill="url(#nyRevFill)"
-            strokeWidth={2}
-          />
-        </AreaChart>
-      </ResponsiveContainer>
-    </ChartShell>
-  );
-}
 
 export function AudienceChart({ metrics }: Props) {
   const data = metrics

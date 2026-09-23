@@ -1,12 +1,3 @@
-export function formatUsd(n: number | null | undefined): string {
-  if (n == null) return "—";
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  }).format(n);
-}
-
 export function formatDateLabel(iso: string): string {
   const parts = iso.split("-").map(Number);
   const y = parts[0] ?? 1970;

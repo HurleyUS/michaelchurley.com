@@ -1,0 +1,112 @@
+{
+  "date": "2026-09-20",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 19, 2026 \u00b7 5:00 AM EDT \u2192 Sep 20, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-19T09:00:00Z \u2192 2026-09-20T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
+    "xPostsMeasured": 0,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 13. Notable: michaelmonetized/omadesign \u00b7 13 merged PRs. Inbox signal 7.",
+    "readOnly": true,
+    "backfill": true
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign \u00b7 13 merged PRs",
+      "kind": "shipped",
+      "summary": "13 PR(s) merged in window.",
+      "bullets": [
+        "#56 Add cloud waitlist with Omadesign reveal film and persistent signups",
+        "#57 Replace cloud section with fullscreen film takeover and corrected scope",
+        "#58 Keep the cloud film and waitlist usable on phones",
+        "#59 Use cover video background at every screen size",
+        "#60 Fix Safari cloud takeover playback initialization",
+        "#61 Feature Layout in the carousel and Studio tabs",
+        "#68 0.5.2 cloud foundation: identity, authorization and services",
+        "#69 0.5.2 cloud workspace: projects, flat review and public work",
+        "\u2026and 5 more merged PRs"
+      ],
+      "when": "Sep 19 \u00b7 7:25 AM EDT \u2192 Sep 19 \u00b7 12:30 PM EDT",
+      "links": [
+        {
+          "label": "#56",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/56"
+        },
+        {
+          "label": "#57",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/57"
+        },
+        {
+          "label": "#58",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/58"
+        },
+        {
+          "label": "#59",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/59"
+        },
+        {
+          "label": "#60",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/60"
+        }
+      ]
+    },
+    {
+      "title": "Near-miss \u00b7 Omadesign v0.5.1",
+      "kind": "outside",
+      "summary": "Published Sep 18 \u00b7 7:46 PM EDT \u2014 before this window. Context only; not counted.",
+      "links": [
+        {
+          "label": "v0.5.1",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.1"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X \u00b7 @MichaelH_rley",
+      "kind": "none",
+      "summary": "No own posts measured in this window (API sampled; replies/retweets excluded from primary pull)."
+    },
+    {
+      "title": "Product Hunt / Reddit / LinkedIn",
+      "kind": "unreachable",
+      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
+    }
+  ],
+  "inbox": [
+    {
+      "title": "You have been awarded a badge!",
+      "kind": "ph",
+      "summary": "Product Hunt Saturday, September 19 You have been awarded a badge! We want to share a token of our appreciation. Badges help people recognize the effort you put into helping this community, and we",
+      "when": "Sep 19 \u00b7 5:09 AM EDT"
+    },
+    {
+      "title": "Re: [michaelmonetized/omadesign] Add cloud waitlist with Omadesign reveal film and persistent signup",
+      "kind": "action",
+      "summary": "coderabbitai[bot] left a comment (michaelmonetized/omadesign#56) Review Change Stack Review Change Stack Note Currently processing new changes in this PR. This may take a few minutes, please wait... \u2699",
+      "when": "Sep 19 \u00b7 7:23 AM EDT"
+    },
+    {
+      "title": "Re: [michaelmonetized/omadesign] 0.5.2 native cloud: secure connection, project transfer and review ",
+      "kind": "action",
+      "summary": "vercel[bot] left a comment (michaelmonetized/omadesign#70) The latest updates on your projects. Learn more about Vercel for GitHub. Project Deployment Actions Updated omadesign Error Error Sep 19, 202",
+      "when": "Sep 19 \u00b7 11:21 AM EDT"
+    },
+    {
+      "title": "Re: [michaelmonetized/omadesign] 0.5.2 nightly: service verification, access boundaries and release ",
+      "kind": "action",
+      "summary": "vercel[bot] left a comment (michaelmonetized/omadesign#71) The latest updates on your projects. Learn more about Vercel for GitHub. Project Deployment Actions Updated omadesign Error Error Sep 19, 202",
+      "when": "Sep 19 \u00b7 11:37 AM EDT"
+    },
+    {
+      "title": "Connect with your new followers in omadesign\u2019s Forum \ud83d\udcac",
+      "kind": "ph",
+      "summary": "Product Hunt Sunday, September 20 Connect with your new followers in omadesign&#39;s Forum \ud83d\udcac Hi Michael, Have you checked out omadesign&#39;s dedicated forum yet? Engage Your Community - Your forum is",
+      "when": "Sep 20 \u00b7 4:00 AM EDT"
+    }
+  ],
+  "loops": []
+}

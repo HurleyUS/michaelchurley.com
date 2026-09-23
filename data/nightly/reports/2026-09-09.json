@@ -1,0 +1,164 @@
+{
+  "date": "2026-09-09",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 8, 2026 \u00b7 5:00 AM EDT \u2192 Sep 9, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-08T09:00:00Z \u2192 2026-09-09T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
+    "xPostsMeasured": 2,
+    "inboxSignalItems": 1,
+    "tldr": "Ships/index 127. Notable: Hustle-Launch/mission-control-os \u00b7 1 merged PR; michaelmonetized/hustlemail-com \u00b7 1 merged PR; HurleyUS/michaelchurley.com \u00b7 47 merged PRs. X: 2 post(s), 137 imp. Inbox signal 2.",
+    "readOnly": true,
+    "backfill": true
+  },
+  "shipped": [
+    {
+      "title": "Hustle-Launch/mission-control-os \u00b7 1 merged PR",
+      "kind": "shipped",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#64 fix(web): P0 E2E \u2014 agency OAuth session + select-agency (#50 #51)"
+      ],
+      "when": "Sep 8 \u00b7 9:48 PM EDT",
+      "links": [
+        {
+          "label": "#64",
+          "href": "https://github.com/Hustle-Launch/mission-control-os/pull/64"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/hustlemail-com \u00b7 1 merged PR",
+      "kind": "shipped",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#7 fix: ship honest linked routes and docs overview"
+      ],
+      "when": "Sep 8 \u00b7 10:36 PM EDT",
+      "links": [
+        {
+          "label": "#7",
+          "href": "https://github.com/michaelmonetized/hustlemail-com/pull/7"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com \u00b7 47 merged PRs",
+      "kind": "shipped",
+      "summary": "47 PR(s) merged in window.",
+      "bullets": [
+        "#32 Blog: searchable tag filter (replace chip wall)",
+        "#33 chore(blog): Design-signed OG covers (batch of 8)",
+        "#34 chore(blog): Design OG covers wave 2 (8)",
+        "#35 chore(blog): Design OG covers wave 3 (8)",
+        "#37 chore(blog): Design OG covers wave 4 (8)",
+        "#36 Editor proof: unslop twelveux, Sonny's Shining, Your ZAXBYS",
+        "#39 chore(blog): refresh OG covers wave 5 (8 Design YT)",
+        "#43 chore(blog): refresh OG covers wave 6 (8 Design YT)",
+        "\u2026and 39 more merged PRs"
+      ],
+      "when": "Sep 8 \u00b7 5:54 PM EDT \u2192 Sep 8 \u00b7 10:45 PM EDT",
+      "links": [
+        {
+          "label": "#32",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/32"
+        },
+        {
+          "label": "#33",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/33"
+        },
+        {
+          "label": "#34",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/34"
+        },
+        {
+          "label": "#35",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/35"
+        },
+        {
+          "label": "#37",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/37"
+        }
+      ]
+    },
+    {
+      "title": "Fleet honesty / docs \u00b7 78 merged PRs",
+      "kind": "shipped",
+      "summary": "Broad merge wave across client/org repos (honest landers, OG assets, LICENSE, status demotions).",
+      "bullets": [
+        "HurleyUS/s12.in: 4 PR(s) \u2014 e.g. #35 Fix LICENSE copyright author mismatch",
+        "HurleyUS/iPro-main-web: 4 PR(s) \u2014 e.g. #11 fix: replace Coming Soon waitlist shells with honest lander",
+        "michaelmonetized/shagent: 4 PR(s) \u2014 e.g. #7 docs: fill empty README with real usage",
+        "michaelmonetized/boilerplate: 4 PR(s) \u2014 e.g. #10 docs: PLAN parity vs HEAD",
+        "michaelmonetized/orclawstrator: 3 PR(s) \u2014 e.g. #5 Fix LICENSE copyright author mismatch",
+        "michaelmonetized/nvibe: 3 PR(s) \u2014 e.g. #21 Fix LICENSE copyright author mismatch",
+        "HurleyUS/ileague-app: 3 PR(s) \u2014 e.g. #9 Fix LICENSE copyright author mismatch",
+        "HurleyUS/www.mybathroomconversion.com: 2 PR(s) \u2014 e.g. #7 security: remove WP File Manager residue and Salespromis har",
+        "HurleyUS/itour.golf: 2 PR(s) \u2014 e.g. #53 docs: DEPLOY.md \u2014 production still on 2026; ship path for #4",
+        "michaelmonetized/WhisperCPPonEverything: 2 PR(s) \u2014 e.g. #5 Fix LICENSE copyright author mismatch"
+      ],
+      "when": "2026-09-09"
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com \u00b7 commits",
+      "kind": "shipped",
+      "summary": "79 non-merge commit(s) in window.",
+      "bullets": [
+        "266282f Add follow-up: vanity phones and fake metrics scrubbed across five repos",
+        "582c8dd chore(blog): refresh OG cover wave 18 (empty-README fleet)",
+        "b0cb5d1 Add follow-up: empty READMEs filled with real usage across three repos",
+        "cab90f1 chore(blog): refresh OG cover wave 17 (Coming Soon honesty fleet)",
+        "b81fbfe Add follow-up: Coming Soon shells replaced with honest status landers (#74)",
+        "b3b6b33 chore(blog): refresh OG cover wave 16 (LICENSE fleet)",
+        "\u2026+73 more commits"
+      ],
+      "when": "Sep 8 \u00b7 10:45 PM EDT \u2192 Sep 8 \u00b7 2:43 PM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/HurleyUS/michaelchurley.com"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X \u00b7 @MichaelH_rley \u00b7 2 posts",
+      "kind": "measured",
+      "summary": "137 measured impressions across 2 own post(s). Top: 81 imp.",
+      "quote": "Linux finally became my daily desktop \u2014 building Omadesign",
+      "metrics": {
+        "impressions": 137,
+        "likes": 0,
+        "replies": 2,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 8 \u00b7 3:02 PM EDT \u00b7 56 imp \u00b7 13 days. Rust + egui. Four alphas. Zero Electron.",
+        "Sep 8 \u00b7 7:22 PM EDT \u00b7 81 imp \u00b7 Linux finally became my daily desktop \u2014 building Omadesign"
+      ],
+      "when": "Sep 8 \u00b7 3:02 PM EDT \u2192 Sep 8 \u00b7 7:22 PM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2097465635785658638"
+        }
+      ]
+    },
+    {
+      "title": "Product Hunt / Reddit / LinkedIn",
+      "kind": "unreachable",
+      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Re: Weekly meeting - Follow up",
+      "kind": "action",
+      "summary": "Hi Michael, Thank you for your email. @Kevin Clark, if you can, please help Michael with his expansion plans. Thank you Easudass John Implementation Team Lead, Upmarket +1 (800) 561-3357 ext. 348",
+      "when": "Sep 8 \u00b7 4:58 PM EDT"
+    }
+  ],
+  "loops": []
+}
