@@ -8,7 +8,6 @@ export type AudienceMetrics = {
 export type DailyMetric = {
   date: string;
   productivity: number | null;
-  revenueUsd: number | null;
   audience: AudienceMetrics;
   source?: string;
   notes?: string;
@@ -39,6 +38,7 @@ export type DailyReport = {
   meta: {
     deploysInWindow?: number;
     example?: boolean;
+    backfill?: boolean;
     generatedEt?: string;
     inboxSignalItems?: number;
     readOnly?: boolean;

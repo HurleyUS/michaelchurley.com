@@ -1,181 +1,172 @@
 {
   "date": "2026-09-23",
-  "label": "EXAMPLE · last 24 hours",
+  "label": "5am\u20135am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 22, 2026 · 2:54 PM EDT → Sep 23, 2026 · 2:54 PM EDT",
-    "windowUtc": "2026-09-22T18:54:53Z → 2026-09-23T18:54:53Z",
-    "generatedEt": "Sep 23, 2026 · ~2:56 PM EDT",
-    "deploysInWindow": 15,
+    "windowEt": "Sep 22, 2026 \u00b7 5:00 AM EDT \u2192 Sep 23, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-22T09:00:00Z \u2192 2026-09-23T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
     "xPostsMeasured": 1,
-    "inboxSignalItems": 8,
-    "tldr": "Ships: Omadesign cloud-dreamscape + sitemap; HurleyUS sitemap fleet prod deploys; mission-control-os prod; editbay repo init. Social: 1 X post (15 impressions); 1 mention. Inbox signal (8). Open loops: BirdEye payment → GSC verify → reconnect Google page → RSVP BirdEye → start 0.5.8 tweet flurry.",
+    "inboxSignalItems": 3,
+    "tldr": "Ships/index 2. Notable: omadesign \u00b7 v0.5.8; michaelmonetized/omadesign \u00b7 1 merged PR; michaelmonetized/hustlemail \u00b7 commits. X: 1 post(s), 130 imp. Inbox signal 5.",
     "readOnly": true,
-    "example": true
+    "backfill": true
   },
   "shipped": [
     {
-      "title": "omadesign · cloud dreamscape + sitemap",
+      "title": "omadesign \u00b7 v0.5.8",
       "kind": "shipped",
-      "summary": "Preview branch preview/cloud-dreamscape landed interactive homepage dreamscape work and production verification. Separately, master got a crawlable public sitemaps fix.",
-      "bullets": [
-        "0335020 Replace homepage cloud video with interactive dreamscape preview",
-        "5482598 Keep homepage scroll reveals independent of dreamscape lifecycle",
-        "a85d51d Improve interactive cloud atmosphere / reveal invitation sooner",
-        "7089994 Record cloud dreamscape production deployment verification",
-        "b89ce07 fix: publish crawlable public sitemaps [skip ci]"
-      ],
-      "when": "Commits ~10:00–11:22 AM EDT Sep 23 · Vercel prod READY ~11:21 AM EDT",
-      "links": [{ "label": "repo", "href": "https://github.com/michaelmonetized/omadesign" }]
-    },
-    {
-      "title": "HurleyUS fleet · indexable sitemaps (production)",
-      "kind": "deploys",
-      "summary": "Batch of production Vercel deploys (~10:06–10:22 AM EDT) publishing crawlable sitemaps / robots metadata across client/org sites — aligns with GSC indexing mail.",
-      "bullets": [
-        "thenationalnc-com, uncap-us, santabox.org, coordinatorapp-com",
-        "ipro-golf, breazyapp-com, djsidethree-com, everythingmonetized-com, delaterrestore-com"
-      ],
-      "when": "Team hustle-launch · GitHub org HurleyUS · branch pattern fix/indexable-sitemap-20260923"
-    },
-    {
-      "title": "mission-control-os · production",
-      "kind": "deploy",
-      "summary": "Two READY production deploys for Hustle-Launch/mission-control-os — commit message: enterprise label no overflow (truncate / tighter tracking).",
-      "when": "~9:03–9:11 AM EDT Sep 23",
-      "links": [{ "label": "Vercel", "href": "https://vercel.com/hustle-launch/mission-control-os" }]
-    },
-    {
-      "title": "editbay · new repo init",
-      "kind": "new",
-      "summary": "Public repo michaelmonetized/editbay created with initial commit 61764c7 “init”.",
-      "when": "Created ~12:06 PM EDT Sep 23",
-      "links": [{ "label": "repo", "href": "https://github.com/michaelmonetized/editbay" }]
-    },
-    {
-      "title": "Omadesign 0.5.8 tweet flurry (internal)",
-      "kind": "internal",
-      "summary": "Internal markdown pack: omadesign-0.5.8-feature-tweets.md — 144 copy/paste feature tweets for “Make it your studio.” Not a public social ship.",
-      "when": "File mtime Sep 23 · 2:41 PM EDT"
-    },
-    {
-      "title": "Checked · no in-window activity",
-      "kind": "none",
-      "summary": "Channels checked with no in-window activity.",
-      "bullets": [
-        "Releases in window: None found (v0.5.8 published earlier — see near-miss).",
-        "Merged PRs in window: None found (omadesign #86 merged ~7:34 AM EDT Sep 22 — before window).",
-        "hustlemail / hustlemail-com: last hustlemail push Sep 22 11:52 AM EDT — outside window; hustlemail-com quiet since Sep 16.",
-        "getat-me / getat-me-restored: repos not found under michaelmonetized (404).",
-        "Hustle-Launch migrate site: production deploys ~12:19–12:26 PM EDT Sep 22 — outside window."
+      "summary": "0.5.8 \u00b7 Make it your studio",
+      "when": "Sep 22 \u00b7 7:28 AM EDT",
+      "links": [
+        {
+          "label": "v0.5.8",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.8"
+        }
       ]
     },
     {
-      "title": "Near-miss · Omadesign v0.5.8 “Make it your studio”",
+      "title": "michaelmonetized/omadesign \u00b7 1 merged PR",
+      "kind": "shipped",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#86 Release 0.5.8: Lua plugins, welcome polish and editable compound paths"
+      ],
+      "when": "Sep 22 \u00b7 7:34 AM EDT",
+      "links": [
+        {
+          "label": "#86",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/86"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/hustlemail \u00b7 commits",
+      "kind": "shipped",
+      "summary": "1 non-merge commit(s) in window.",
+      "bullets": [
+        "08d9398 Keep public HustleMail pages out of Clerk handshake [skip ci]"
+      ],
+      "when": "Sep 22 \u00b7 11:51 AM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/hustlemail"
+        }
+      ]
+    },
+    {
+      "title": "Hustle-Launch/migrate--www.hustlelaunch.com \u00b7 commits",
+      "kind": "shipped",
+      "summary": "5 non-merge commit(s) in window.",
+      "bullets": [
+        "2493635 fix: align case-study canonical URLs with live routes [skip ci]",
+        "19906fc fix: restore portfolio links and case-study discovery [skip ci]",
+        "70eecbe Remove nonexistent case studies from sitemap [skip ci]",
+        "44a0045 Allow Google to crawl public rendering assets [skip ci]",
+        "77d4bb6 fix(seo): keep public pages out of Clerk auth redirects"
+      ],
+      "when": "Sep 22 \u00b7 12:22 PM EDT \u2192 Sep 22 \u00b7 11:22 AM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com"
+        }
+      ]
+    },
+    {
+      "title": "Near-miss \u00b7 Omadesign v0.5.7",
       "kind": "outside",
-      "summary": "GitHub release v0.5.8 published Sep 22 · 7:28 AM EDT (11:28 UTC) — ~7.5h before this window. Lua plugins, editable compound paths, welcome polish. Noted for context only; not counted as a ship in this report.",
-      "links": [{ "label": "v0.5.8", "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.8" }]
+      "summary": "Published Sep 21 \u00b7 10:18 PM EDT \u2014 before this window. Context only; not counted.",
+      "links": [
+        {
+          "label": "v0.5.7",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.7"
+        }
+      ]
+    },
+    {
+      "title": "Near-miss \u00b7 Omadesign v0.5.6",
+      "kind": "outside",
+      "summary": "Published Sep 21 \u00b7 8:58 PM EDT \u2014 before this window. Context only; not counted.",
+      "links": [
+        {
+          "label": "v0.5.6",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.6"
+        }
+      ]
     }
   ],
   "landed": [
     {
-      "title": "X · @MichaelH_rley",
+      "title": "X \u00b7 @MichaelH_rley \u00b7 1 post",
       "kind": "measured",
-      "summary": "Status — frustration with Astra performance during urgent ship work.",
-      "quote": "Hitting a wholly unintelligent astra spike while you have critical work to ship urgently…",
-      "metrics": { "impressions": 15, "likes": 0, "replies": 0, "reposts": 0 },
-      "when": "Sep 23 · 9:40 AM EDT · 1 own post in window",
-      "links": [{ "label": "Status", "href": "https://x.com/MichaelH_rley/status/2102754924769488941" }]
+      "summary": "130 measured impressions across 1 own post(s). Top: 130 imp.",
+      "quote": "I don't think people truly understand just how determined I am at making Linux desktop the go to for creative professionals.",
+      "metrics": {
+        "impressions": 130,
+        "likes": 2,
+        "replies": 1,
+        "reposts": 1
+      },
+      "bullets": [
+        "Sep 22 \u00b7 10:56 AM EDT \u00b7 130 imp \u00b7 I don't think people truly understand just how determined I am at maki\u2026"
+      ],
+      "when": "Sep 22 \u00b7 10:56 AM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2102411655032279200"
+        }
+      ]
     },
     {
-      "title": "X · mentions",
-      "kind": "mention",
-      "summary": "@MichaelH_rley do they prefer caps<>caps",
-      "metrics": { "impressions": 19, "engagement": 0 },
-      "when": "Sep 22 · 4:07 PM EDT",
-      "links": [{ "label": "Mention", "href": "https://x.com/i/status/2102490052584751550" }]
-    },
-    {
-      "title": "Product Hunt",
-      "kind": "none",
-      "summary": "No PH API connector. Inbox shows maker presence tip email (~5 days since launch). Public upvote/comment counts for this window: None found."
-    },
-    {
-      "title": "Reddit · LinkedIn · Facebook",
+      "title": "Product Hunt / Reddit / LinkedIn",
       "kind": "unreachable",
-      "summary": "No MCP connectors authenticated for these channels. Metrics: None found / unreachable."
+      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
     }
   ],
   "inbox": [
     {
-      "title": "Search Console · omadesign.app indexing",
+      "title": " \ud83c\udd95\u00a0The AI Gateway is here",
       "kind": "action",
-      "summary": "New reasons: page with redirect / duplicate — pages not being indexed.",
-      "when": "Sep 23 · ~1:19 PM EDT · sc-noreply@google.com"
+      "summary": "All of the models, none of the keys \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff \ufeff",
+      "when": "Sep 22 \u00b7 1:23 PM EDT"
     },
     {
-      "title": "Search Console · getat.me indexing",
-      "kind": "action",
-      "summary": "New reasons: Not found (404) / page with redirect.",
-      "when": "Sep 23 · ~1:20 PM EDT · sc-noreply@google.com"
-    },
-    {
-      "title": "Hustle Launch · Google pages disconnected",
-      "kind": "action",
-      "summary": "1 disconnected Google page — social features may break until reconnected.",
-      "when": "Sep 23 · ~11:07 AM EDT · no-reply@dash.hustlelaunch.com"
-    },
-    {
-      "title": "BirdEye · payment follow-up (urgent tone)",
-      "kind": "reply",
-      "summary": "Kevin Clark: asking for update on initial payment; warning access may shut off without response.",
-      "when": "Sep 22 · ~4:37 PM EDT · kevin.clark@birdeye.com"
-    },
-    {
-      "title": "BirdEye · weekly check-in invite",
-      "kind": "calendar",
-      "summary": "John (BirdEye) weekly Zoom check-in for Hustle Launch account.",
-      "when": "Sep 23 · ~11:05 AM EDT"
-    },
-    {
-      "title": "Product Hunt · maker presence tips",
+      "title": "Maximize your maker presence on Product Hunt \ud83d\udc64",
       "kind": "ph",
-      "summary": "Maximize your maker presence — notes ~5 days since launch. Momentum tips, not a new ship reply.",
-      "when": "Sep 23 · ~4:02 AM EDT · hello@producthunt.com"
+      "summary": "Product Hunt Wednesday, September 23 Maximize your maker presence on Product Hunt \ud83d\udc64 Hi Michael, It&#39;s been 5 days since your launch! Here are some final tips to maintain your momentum on Product",
+      "when": "Sep 23 \u00b7 4:02 AM EDT"
     },
     {
-      "title": "Hustle Launch · daily message report",
-      "kind": "ops",
-      "summary": "Sep 22 report: 2 open messages.",
-      "when": "Sep 23 · ~1:12 AM EDT"
-    },
-    {
-      "title": "Mission Control OS · new device sign-in",
-      "kind": "security",
-      "summary": "accounts.dev notice: new device signed into Mission Control OS (Development).",
-      "when": "Sep 22 · ~5:38 PM EDT"
+      "title": "Search Console \u00b7 16 indexing/presence notices",
+      "kind": "action",
+      "summary": "Google Search Console notices in window (indexing / presence).",
+      "bullets": [
+        "Improve Google presence for everythingmonetized.com",
+        "Improve Google presence for getat.me",
+        "Improve Google presence for hurleyus.com",
+        "Improve Google presence for iconference.golf",
+        "Get started using Search Console with https://www.macksbbqshack.com/",
+        "Get started using Search Console with https://macksbbqshack.com/",
+        "Improve Google presence for ileague.golf",
+        "Improve Google presence for ipro.golf",
+        "Improve Google presence for itour.golf",
+        "Improve Google presence for merchwinner.com",
+        "\u2026+5 more"
+      ],
+      "when": "Sep 22 \u00b7 11:55 AM EDT"
     }
   ],
   "loops": [
     {
-      "title": "Answer BirdEye payment thread",
-      "detail": "Kevin Clark’s Sep 22 follow-up threatens access cutoff — highest-urgency inbox item; decide pay / pause / reply today."
+      "title": "0.5.8 in window",
+      "detail": "v0.5.8 Make it your studio published ~7:28 AM EDT Sep 22 \u2014 counted in this 5am\u20135am report."
     },
     {
-      "title": "Close GSC loops on omadesign.app + getat.me",
-      "detail": "Today’s sitemap/robots deploys should help — verify redirects/404s in Search Console and resubmit if needed."
-    },
-    {
-      "title": "Reconnect Hustle Launch Google page",
-      "detail": "Action-needed mail: 1 disconnected Google page blocking social features in the dash."
-    },
-    {
-      "title": "Confirm or decline BirdEye weekly Zoom",
-      "detail": "Invite landed this morning; pair with the payment conversation so ops isn’t left hanging."
-    },
-    {
-      "title": "Start posting from the 0.5.8 tweet flurry",
-      "detail": "144 ready tweets sit as an internal artifact — no public Omadesign amplification measured in-window; drip from T001+ if PH momentum tips still matter."
+      "title": "Nightly scaffolding",
+      "detail": "Daily Stand Up /nightly mount landed on site main around this period \u2014 keep backfill honest."
     }
   ]
 }

@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-03",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 2, 2026 \u00b7 5:00 AM EDT \u2192 Sep 3, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-02T09:00:00Z \u2192 2026-09-03T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 3,
+    "tldr": "Ships/index 1. Notable: omadesign \u00b7 v0.0.1-alpha.rc; HurleyUS/michaelchurley.com \u00b7 commits. X: 1 post(s), 28 imp. Inbox signal 3.",
+    "readOnly": true,
+    "backfill": true
+  },
+  "shipped": [
+    {
+      "title": "omadesign \u00b7 v0.0.1-alpha.rc",
+      "kind": "shipped",
+      "summary": "omadesign v0.0.1-alpha.rc",
+      "when": "Sep 2 \u00b7 10:56 AM EDT",
+      "links": [
+        {
+          "label": "v0.0.1-alpha.rc",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.1-alpha.rc"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com \u00b7 commits",
+      "kind": "shipped",
+      "summary": "4 non-merge commit(s) in window.",
+      "bullets": [
+        "66637c6 blog: Naarchy shots that don't have T3 Code in them",
+        "d5fe9e2 fix: loosen blog list types for static + Convex merge",
+        "738e729 fix: skip Convex comments on static blog posts",
+        "e5b6d23 blog: Naarchy 0.3 \u2014 Dynamic Island for Linux"
+      ],
+      "when": "Sep 3 \u00b7 12:29 AM EDT \u2192 Sep 3 \u00b7 12:12 AM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/HurleyUS/michaelchurley.com"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X \u00b7 @MichaelH_rley \u00b7 1 post",
+      "kind": "measured",
+      "summary": "28 measured impressions across 1 own post(s). Top: 28 imp.",
+      "quote": "Did I jump to an alternate universe or timeline?",
+      "metrics": {
+        "impressions": 28,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 2 \u00b7 1:13 PM EDT \u00b7 28 imp \u00b7 Did I jump to an alternate universe or timeline?"
+      ],
+      "when": "Sep 2 \u00b7 1:13 PM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2095198490158657552"
+        }
+      ]
+    },
+    {
+      "title": "Product Hunt / Reddit / LinkedIn",
+      "kind": "unreachable",
+      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
+    }
+  ],
+  "inbox": [
+    {
+      "title": "[Action Needed]: Google pages disconnected",
+      "kind": "action",
+      "summary": "Some Google pages are disconnected 1 disconnected page If social pages are disconnected, some features in Hustle Launch will not function properly. Learn more Download the file for details. Download I",
+      "when": "Sep 2 \u00b7 11:17 AM EDT"
+    },
+    {
+      "title": "Updated invitation: Hustle Launch & BirdEye - Check-In @ Weekly from 10am to 10:30am on Tuesday from",
+      "kind": "action",
+      "summary": "Hustle Launch &amp; BirdEye - Check-In Hi Michael, Here&#39;s the invite for our weekly meetings. Please accept the same. Thank you John This event has been updated Changed: time Join Zoom Meeting",
+      "when": "Sep 2 \u00b7 6:55 PM EDT"
+    },
+    {
+      "title": "Updated invitation: Hustle Launch & BirdEye - Weekly Check-In @ Weekly from 11am to 11:30am on Wedne",
+      "kind": "action",
+      "summary": "Hustle Launch &amp; BirdEye - Weekly Check-In Hi Michael, Here&#39;s the invite for our weekly meetings. Please accept the same. Thank you John This event has been updated Changed: title, time Join",
+      "when": "Sep 2 \u00b7 6:55 PM EDT"
+    }
+  ],
+  "loops": []
+}

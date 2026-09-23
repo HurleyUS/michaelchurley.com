@@ -2,7 +2,6 @@ import Link from "next/link";
 import {
   AudienceChart,
   ProductivityChart,
-  RevenueChart,
 } from "@/components/nightly/Charts";
 import { getLatestReport, getMetrics, listReportDates } from "@/lib/nightly/data";
 import { formatDateLabel } from "@/lib/nightly/format";
@@ -45,10 +44,11 @@ export default async function NightlyDashboardPage() {
           </div>
           <h1>Nightly</h1>
           <p className="ny-subtitle">
-            Michael Hurley · first-party ops dash on michaelchurley.com — productivity,
-            revenue, and audience over time, plus the daily stand-up walkthrough
-            (shipped / landed / inbox / loops). Evidence-only JSON under{" "}
+            Michael Hurley · first-party ops dash on michaelchurley.com — productivity
+            and audience over time, plus the daily stand-up walkthrough (shipped /
+            landed / inbox / loops). Evidence-only JSON under{" "}
             <code>data/nightly/</code>. CoS appends &amp; commits; Vercel redeploys.
+            Public Nightly is ships, social, and ops only.
           </p>
           <div className="ny-meta-grid">
             <div className="ny-metric">
@@ -63,12 +63,6 @@ export default async function NightlyDashboardPage() {
             </div>
             <div className="ny-metric">
               <div className="n">
-                {latestMetric?.revenueUsd != null ? `$${latestMetric.revenueUsd}` : "—"}
-              </div>
-              <div className="l">Latest revenue</div>
-            </div>
-            <div className="ny-metric">
-              <div className="n">
                 {latestMetric?.audience?.xImpressions ??
                   latestMetric?.audience?.totalReach ??
                   "—"}
@@ -77,10 +71,9 @@ export default async function NightlyDashboardPage() {
             </div>
           </div>
           <p className="ny-note" style={{ marginTop: 16 }}>
-            Seed includes the EXAMPLE last-24h report for{" "}
-            <strong style={{ color: "var(--ny-text)" }}>2026-09-23</strong> only.
-            Revenue chart stays empty until real Stripe totals are published — no
-            invented numbers.
+            Archive covers{" "}
+            <strong style={{ color: "var(--ny-text)" }}>2026-09-03 → 2026-09-23</strong>{" "}
+            (5am–5am ET windows). Charts are productivity + audience only.
           </p>
         </header>
 
@@ -93,7 +86,6 @@ export default async function NightlyDashboardPage() {
           </p>
           <div className="ny-charts">
             <ProductivityChart metrics={metrics} />
-            <RevenueChart metrics={metrics} />
             <AudienceChart metrics={metrics} />
           </div>
         </section>
