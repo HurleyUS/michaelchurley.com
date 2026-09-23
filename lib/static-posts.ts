@@ -1,3 +1,5 @@
+import { getOmaFeaturePosts } from "./oma-feature-posts";
+
 export type StaticPost = {
   _id: string;
   title: string;
@@ -5,6 +7,7 @@ export type StaticPost = {
   excerpt: string;
   content: string;
   coverImage?: string;
+  video?: string;
   tags: string[];
   featured: boolean;
   published: boolean;
@@ -9406,16 +9409,22 @@ export const staticPosts: StaticPost[] = [
   },
 ];
 
+function publishedStaticPosts() {
+  const seen = new Set(staticPosts.map((post) => post.slug));
+  const series = getOmaFeaturePosts().filter((post) => !seen.has(post.slug));
+  return [...staticPosts, ...series].filter((post) => post.published);
+}
+
 export function getStaticPosts(tag?: string) {
-  const posts = staticPosts.filter((p) => p.published);
+  const posts = publishedStaticPosts();
   if (!tag) return posts;
-  return posts.filter((p) => p.tags.includes(tag));
+  return posts.filter((post) => post.tags.includes(tag));
 }
 
 export function getStaticPostBySlug(slug: string) {
-  return staticPosts.find((p) => p.slug === slug && p.published) ?? null;
+  return publishedStaticPosts().find((post) => post.slug === slug) ?? null;
 }
 
 export function getStaticTags() {
-  return Array.from(new Set(staticPosts.flatMap((p) => p.tags))).sort();
+  return Array.from(new Set(publishedStaticPosts().flatMap((post) => post.tags))).sort();
 }
