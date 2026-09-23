@@ -1,0 +1,87 @@
+import fs from "node:fs";
+import path from "node:path";
+import type { StaticPost } from "./static-posts";
+
+type CatalogEntry = {
+  id: string;
+  n: number;
+  title: string;
+  slug: string;
+  tweet: string;
+  section: string;
+  video: string;
+  cover: string;
+  prev: string | null;
+  next: string | null;
+};
+
+const ROOT = path.join(process.cwd(), "content/blog/omadesign-0.5.8");
+
+let cache: StaticPost[] | null = null;
+
+function field(raw: string, key: string) {
+  const match = raw.match(new RegExp(`^${key}:\\s*(.*)$`, "m"));
+  return match?.[1]?.trim().replace(/^["']|["']$/g, "") ?? "";
+}
+
+function tags(raw: string) {
+  const value = field(raw, "tags");
+  if (!value.startsWith("[")) return ["omadesign", "0.5.8"];
+  return value
+    .slice(1, -1)
+    .split(",")
+    .map((tag) => tag.trim().replace(/^["']|["']$/g, ""))
+    .filter(Boolean);
+}
+
+function seriesNote(entry: CatalogEntry) {
+  const prev = entry.prev ? `[Previous](/blog/${entry.prev})` : "Start of the thread";
+  const next = entry.next ? `[Next](/blog/${entry.next})` : "End of the thread";
+  return `\n\n## The thread\n\nPart ${entry.n} of 144 in the Omadesign 0.5.8 feature thread.\n\n${prev} · ${next}\n`;
+}
+
+/**
+ * Omadesign 0.5.8 feature posts.
+ * Reads the markdown series from content/blog and attaches the film and OG image.
+ */
+export function getOmaFeaturePosts(): StaticPost[] {
+  if (cache) return cache;
+  if (!fs.existsSync(ROOT)) {
+    cache = [];
+    return cache;
+  }
+  const catalog = JSON.parse(
+    fs.readFileSync(path.join(ROOT, "catalog.json"), "utf8"),
+  ) as CatalogEntry[];
+  const bySlug = new Map(catalog.map((entry) => [entry.slug, entry]));
+  const posts: StaticPost[] = [];
+  for (const entry of catalog) {
+    const file = path.join(ROOT, `${entry.slug}.md`);
+    if (!fs.existsSync(file)) continue;
+    const raw = fs.readFileSync(file, "utf8");
+    if (!raw.startsWith("---")) continue;
+    const end = raw.indexOf("\n---", 3);
+    if (end < 0) continue;
+    const front = raw.slice(4, end);
+    const body = raw.slice(end + 4).replace(/^\n/, "");
+    const slug = field(front, "slug") || entry.slug;
+    const known = bySlug.get(slug) ?? entry;
+    const words = body.split(/\s+/).filter(Boolean).length;
+    posts.push({
+      _id: `static:${slug}`,
+      title: field(front, "title") || known.title,
+      slug,
+      excerpt: field(front, "excerpt") || known.tweet.slice(0, 220),
+      content: `${body.trim()}\n${seriesNote(known)}`,
+      coverImage: field(front, "coverImage") || known.cover,
+      video: field(front, "video") || known.video,
+      tags: tags(front),
+      featured: false,
+      published: true,
+      publishedAt: Date.parse("2026-09-23T18:00:00Z") - (known.n - 1) * 60_000,
+      readingTime: Math.max(1, Math.round(words / 220)),
+    });
+  }
+  cache = posts;
+  return posts;
+}
