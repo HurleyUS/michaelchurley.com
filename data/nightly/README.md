@@ -26,7 +26,11 @@ For report date `D` (America/New_York):
 - Prefer omit over invented follower counts.
 - Mark any chart filler with `"source": "seed-placeholder"`.
 - Productivity may be a simple ship/deploy (or merged PR + release) index.
-- `/nightly` is `noindex` until auth is added.
+- `/nightly` is indexable (`robots: index, follow`).
+- **Work only.** Nightly JSON is ships, audience, inbox ops, and loops.
+  Personal calendar/meetings MUST NOT appear in reports; CoS delivers those
+  only in chat with the report link. Do not include `kind: "calendar"` cards
+  or titles starting with `Calendar ·`.
 - Public charts: **productivity + audience only**.
 
 ## Publish checklist

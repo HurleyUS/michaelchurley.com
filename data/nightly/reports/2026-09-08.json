@@ -1,23 +1,23 @@
 {
   "date": "2026-09-08",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 7, 2026 \u00b7 5:00 AM EDT \u2192 Sep 8, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-07T09:00:00Z \u2192 2026-09-08T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
+    "windowEt": "Sep 7, 2026 · 5:00 AM EDT → Sep 8, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-07T09:00:00Z → 2026-09-08T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
     "xPostsMeasured": 3,
     "inboxSignalItems": 1,
-    "tldr": "Ships/index 12. Notable: omadesign \u00b7 v0.0.3-alpha; omadesign \u00b7 v0.0.4-alpha; michaelmonetized/omadesign \u00b7 5 merged PRs. X: 3 post(s), 324 imp. Inbox signal 4.",
+    "tldr": "Ships/index 12. Notable: omadesign · v0.0.3-alpha; omadesign · v0.0.4-alpha; michaelmonetized/omadesign · 5 merged PRs. X: 3 post(s), 324 imp. Inbox signal 4.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "omadesign \u00b7 v0.0.3-alpha",
+      "title": "omadesign · v0.0.3-alpha",
       "kind": "shipped",
-      "summary": "v0.0.3-alpha \u2014 One look, the whole shoot",
-      "when": "Sep 7 \u00b7 2:33 PM EDT",
+      "summary": "v0.0.3-alpha — One look, the whole shoot",
+      "when": "Sep 7 · 2:33 PM EDT",
       "links": [
         {
           "label": "v0.0.3-alpha",
@@ -26,10 +26,10 @@
       ]
     },
     {
-      "title": "omadesign \u00b7 v0.0.4-alpha",
+      "title": "omadesign · v0.0.4-alpha",
       "kind": "shipped",
-      "summary": "v0.0.4-alpha \u2014 The handles got the memo",
-      "when": "Sep 7 \u00b7 3:10 PM EDT",
+      "summary": "v0.0.4-alpha — The handles got the memo",
+      "when": "Sep 7 · 3:10 PM EDT",
       "links": [
         {
           "label": "v0.0.4-alpha",
@@ -38,9 +38,9 @@
       ]
     },
     {
-      "title": "Near-miss \u00b7 Omadesign v0.0.2-alpha",
+      "title": "Near-miss · Omadesign v0.0.2-alpha",
       "kind": "outside",
-      "summary": "Published Sep 6 \u00b7 9:30 PM EDT \u2014 before this window. Context only; not counted.",
+      "summary": "Published Sep 6 · 9:30 PM EDT — before this window. Context only; not counted.",
       "links": [
         {
           "label": "v0.0.2-alpha",
@@ -51,7 +51,7 @@
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 3 posts",
+      "title": "X · @MichaelH_rley · 3 posts",
       "kind": "measured",
       "summary": "324 measured impressions across 3 own post(s). Top: 162 imp.",
       "quote": "Now with raw photo development and legacy design file format support",
@@ -62,23 +62,17 @@
         "reposts": 1
       },
       "bullets": [
-        "Sep 7 \u00b7 10:14 AM EDT \u00b7 162 imp \u00b7 Now with raw photo development and legacy design file format support",
-        "Sep 7 \u00b7 1:20 PM EDT \u00b7 23 imp \u00b7 is it an IRL stream just bc I'm outside...",
-        "Sep 7 \u00b7 7:33 PM EDT \u00b7 139 imp \u00b7 Looking for 10 Linux designers to try Omadesign"
+        "Sep 7 · 10:14 AM EDT · 162 imp · Now with raw photo development and legacy design file format support",
+        "Sep 7 · 1:20 PM EDT · 23 imp · is it an IRL stream just bc I'm outside...",
+        "Sep 7 · 7:33 PM EDT · 139 imp · Looking for 10 Linux designers to try Omadesign"
       ],
-      "when": "Sep 7 \u00b7 10:14 AM EDT \u2192 Sep 7 \u00b7 7:33 PM EDT",
+      "when": "Sep 7 · 10:14 AM EDT → Sep 7 · 7:33 PM EDT",
       "links": [
         {
           "label": "Top post",
           "href": "https://x.com/MichaelH_rley/status/2096965429507813725"
         }
       ]
-    },
-    {
-      "title": "Calendar \u00b7 Michael H / Rob One on One",
-      "kind": "calendar",
-      "summary": "Notable meeting on primary calendar.",
-      "when": "Sep 8 \u00b7 10:00 AM EDT"
     },
     {
       "title": "Product Hunt / Reddit / LinkedIn",
@@ -91,13 +85,13 @@
       "title": "What's new in Birdeye: Weekly Product Release Notes | September 07, 2026",
       "kind": "action",
       "summary": "Weekly Product Release Notes | September 07, 2026 Hi, Here&#39;s your weekly look at what&#39;s new, improved, and updated in Birdeye: Weekly Product Release Notes |",
-      "when": "Sep 7 \u00b7 10:22 AM EDT"
+      "when": "Sep 7 · 10:22 AM EDT"
     }
   ],
   "loops": [
     {
       "title": "LeadMinerr in active sales mix",
-      "detail": "Self-mail Sep 8 ~1:06 AM EDT \u2014 verify outreach next steps; don't invent funnel metrics."
+      "detail": "Self-mail Sep 8 ~1:06 AM EDT — verify outreach next steps; don't invent funnel metrics."
     }
   ]
 }

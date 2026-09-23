@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Nightly · Daily Stand Up",
   description:
     "Michael Hurley’s nightly stand-up dashboard — ships, landing, inbox, open loops.",
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: { canonical: "https://www.michaelchurley.com/nightly" },
 };
 
