@@ -42,8 +42,7 @@ function ChartShell({
       </div>
       {empty ? (
         <div className="ny-empty" style={{ marginTop: 12 }}>
-          No data yet — charts fill as CoS appends{" "}
-          <code>data/nightly/metrics.json</code>
+          No data yet.
         </div>
       ) : (
         <div style={{ width: "100%", height: 220, marginTop: 8 }}>{children}</div>
@@ -63,7 +62,7 @@ export function ProductivityChart({ metrics }: Props) {
   return (
     <ChartShell
       title="Productivity index"
-      subtitle="Derived from in-window ships / deploys (evidence days only)"
+      subtitle="Ships and deploys in each day's window."
       empty={!data.length}
     >
       <ResponsiveContainer>
@@ -121,7 +120,7 @@ export function AudienceChart({ metrics }: Props) {
   return (
     <ChartShell
       title="Audience growth"
-      subtitle="X impressions / followers when measured — no invented counts"
+      subtitle="Reach and impressions when measured."
       empty={!data.length}
     >
       <ResponsiveContainer>

@@ -109,8 +109,7 @@ export default async function NightlyReportPage({
             <span className="num">01</span> What shipped
           </h2>
           <p className="ny-lede">
-            GitHub releases, merged PRs, notable commits, and Vercel deploys inside
-            the window.
+            Releases, merged PRs, notable commits, and deploys from the window.
           </p>
           <div className="ny-cards">
             {report.shipped.map((c) => (
@@ -123,7 +122,7 @@ export default async function NightlyReportPage({
           <h2>
             <span className="num">02</span> How it landed
           </h2>
-          <p className="ny-lede">Public distribution metrics — real numbers only.</p>
+          <p className="ny-lede">Public distribution metrics.</p>
           <div className="ny-grid-2">
             {report.landed.map((c) => (
               <ReportCardView key={c.title} card={c} />
@@ -135,7 +134,7 @@ export default async function NightlyReportPage({
           <h2>
             <span className="num">03</span> Inbox as a result
           </h2>
-          <p className="ny-lede">Ship/outreach signal from the window. Read-only.</p>
+          <p className="ny-lede">Signal from the window.</p>
           <div className="ny-cards">
             {report.inbox.map((c) => (
               <ReportCardView key={c.title} card={c} />
@@ -147,7 +146,7 @@ export default async function NightlyReportPage({
           <h2>
             <span className="num">04</span> Open loops
           </h2>
-          <p className="ny-lede">Concrete next moves grounded in the evidence above.</p>
+          <p className="ny-lede">Concrete next moves from the day above.</p>
           <ol className="ny-loops">
             {report.loops.map((l) => (
               <li key={l.title}>
@@ -164,10 +163,7 @@ export default async function NightlyReportPage({
           <p>
             <Link href="/nightly">← Back to Nightly dashboard</Link>
           </p>
-          <p style={{ marginTop: 6 }}>
-            Artifact date <code>{date}</code> · JSON source{" "}
-            <code>data/nightly/reports/{date}.json</code>
-          </p>
+          <p style={{ marginTop: 6 }}>{date}</p>
         </footer>
       </div>
     </>
