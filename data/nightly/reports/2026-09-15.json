@@ -3,48 +3,100 @@
   "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 14, 2026 · 5:00 AM EDT → Sep 15, 2026 · 5:00 AM EDT",
-    "windowUtc": "2026-09-14T09:00:00Z → 2026-09-15T09:00:00Z",
+    "windowEt": "Sep 15, 2026 · 5:00 AM EDT → Sep 16, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-15T09:00:00Z → 2026-09-16T09:00:00Z",
     "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 1,
-    "inboxSignalItems": 0,
-    "tldr": "Ships/index 0. X: 1 post(s), 25 imp. Inbox signal 1.",
+    "xPostsMeasured": 0,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 5. Notable: omadesign · v0.5.0; Hustle-Launch/hustlemail · 2 merged PRs; Hustle-Launch/migrate--www.hustlelaunch.com · 1 merged PR. Inbox signal 5.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "Checked · no in-window ships",
-      "kind": "none",
-      "summary": "No merged PRs, releases, or notable production commits found in this 5am–5am ET window.",
+      "title": "omadesign · v0.5.0",
+      "kind": "shipped",
+      "summary": "v0.5.0 — Layout, then show it.",
+      "when": "Sep 15 · 7:32 PM EDT",
+      "links": [
+        {
+          "label": "v0.5.0",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.0"
+        }
+      ]
+    },
+    {
+      "title": "Hustle-Launch/hustlemail · 2 merged PRs",
+      "kind": "shipped",
+      "summary": "2 PR(s) merged in window.",
       "bullets": [
-        "GitHub: scanned michaelmonetized / HurleyUS / Hustle-Launch",
-        "Vercel READY deploys: unavailable (team scope 403)"
+        "#1 Fix landing page horizontal overflow",
+        "#2 Rename marketing landing brand to HustleMail"
+      ],
+      "when": "Sep 16 · 12:42 AM EDT → Sep 16 · 3:36 AM EDT",
+      "links": [
+        {
+          "label": "#1",
+          "href": "https://github.com/Hustle-Launch/hustlemail/pull/1"
+        },
+        {
+          "label": "#2",
+          "href": "https://github.com/Hustle-Launch/hustlemail/pull/2"
+        }
+      ]
+    },
+    {
+      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · 1 merged PR",
+      "kind": "shipped",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#39 Proposal SPA: Melton Mountain Construction"
+      ],
+      "when": "Sep 15 · 11:50 AM EDT",
+      "links": [
+        {
+          "label": "#39",
+          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com/pull/39"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/hustlemail-com · 1 merged PR",
+      "kind": "shipped",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#8 fix: hustlelaunch.com subdomain as the real host"
+      ],
+      "when": "Sep 16 · 12:06 AM EDT",
+      "links": [
+        {
+          "label": "#8",
+          "href": "https://github.com/michaelmonetized/hustlemail-com/pull/8"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/hustlemail · commits",
+      "kind": "shipped",
+      "summary": "2 non-merge commit(s) in window.",
+      "bullets": [
+        "2ec04cf Rename marketing landing brand to HustleMail (#2)",
+        "d04332f Fix landing page horizontal overflow at 1280px (#1)"
+      ],
+      "when": "Sep 16 · 3:36 AM EDT → Sep 16 · 12:42 AM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/hustlemail"
+        }
       ]
     }
   ],
   "landed": [
     {
-      "title": "X · @MichaelH_rley · 1 post",
-      "kind": "measured",
-      "summary": "25 measured impressions across 1 own post(s). Top: 25 imp.",
-      "quote": "Fully embracing my inner hacker lately.",
-      "metrics": {
-        "impressions": 25,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 14 · 6:27 AM EDT · 25 imp · Fully embracing my inner hacker lately."
-      ],
-      "when": "Sep 14 · 6:27 AM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2099444935850086615"
-        }
-      ]
+      "title": "X · @MichaelH_rley",
+      "kind": "none",
+      "summary": "No own posts measured in this window (API sampled; replies/retweets excluded from primary pull)."
     },
     {
       "title": "Product Hunt / Reddit / LinkedIn",
@@ -54,19 +106,40 @@
   ],
   "inbox": [
     {
-      "title": "Inbox signal · none",
-      "kind": "none",
-      "summary": "No non-financial product/ops signal threads matched in this window."
+      "title": "Re: [Hustle-Launch/migrate--www.hustlelaunch.com] Proposal SPA: Melton Mountain Construction (PR #39",
+      "kind": "action",
+      "summary": "chatgpt-codex-connector[bot] left a comment (Hustle-Launch/migrate--www.hustlelaunch.com#39) You have reached your Codex usage limits for code reviews. You can see your limits in the Codex usage",
+      "when": "Sep 15 · 10:01 AM EDT"
+    },
+    {
+      "title": "Melton Masonry & Construction Website Redesign Proposal",
+      "kind": "action",
+      "summary": "Hey Jamie, Here is your website redesign proposal https://www.hustlelaunch.com/proposals/melton-masonry please follow that link to review and let me know if you have any questions. Thanks, talk soon…",
+      "when": "Sep 15 · 12:54 PM EDT"
+    },
+    {
+      "title": "10m discovery call?",
+      "kind": "reply",
+      "summary": "Hey Brian, David Reilly and I would like to hop on a quick discovery call with you to see if LeadMinerr is a good fit for your operations. Let me know what time is good for you. Thanks, talk soon…",
+      "when": "Sep 15 · 1:30 PM EDT"
+    },
+    {
+      "title": "Re: 10m discovery call?",
+      "kind": "reply",
+      "summary": "I&#39;ve routed your request to the appropriate team for further review and assistance. One of our specialists will be in touch with you soon. We appreciate your patience and will keep you updated as",
+      "when": "Sep 15 · 1:34 PM EDT"
+    },
+    {
+      "title": "Welcome to the GPT-6 Astra Challenge",
+      "kind": "ph",
+      "summary": "Product Hunt Tuesday, September 15 Welcome to the GPT-6 Astra Challenge Thanks for joining the GPT-6 Astra Challenge. You&#39;re invited to build and launch a product that uses Astra to handle a real,",
+      "when": "Sep 15 · 7:31 PM EDT"
     }
   ],
   "loops": [
     {
-      "title": "Convex egress / resource pressure",
-      "detail": "Convex usage alerts in window — treat as ops/egress watch (getat.me fan-out, cron storms). No plan/billing details on public Nightly."
-    },
-    {
-      "title": "Melton proposal in flight",
-      "detail": "Migrate site Melton proposal SPA commits landed Sep 15 afternoon — next window may merge."
+      "title": "LeadMinerr / Integrity Housing outreach",
+      "detail": "Memory lead — verify any Integrity Housing / LeadMinerr replies in inbox; no forged metrics."
     }
   ]
 }

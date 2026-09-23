@@ -1,22 +1,22 @@
 {
   "date": "2026-09-04",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 3, 2026 \u00b7 5:00 AM EDT \u2192 Sep 4, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-03T09:00:00Z \u2192 2026-09-04T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
-    "xPostsMeasured": 1,
+    "windowEt": "Sep 4, 2026 · 5:00 AM EDT → Sep 5, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-04T09:00:00Z → 2026-09-05T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
+    "xPostsMeasured": 0,
     "inboxSignalItems": 0,
-    "tldr": "Ships/index 0. X: 1 post(s), 10 imp.",
+    "tldr": "Quiet window.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "Checked \u00b7 no in-window ships",
+      "title": "Checked · no in-window ships",
       "kind": "none",
-      "summary": "No merged PRs, releases, or notable production commits found in this 5am\u20135am ET window.",
+      "summary": "No merged PRs, releases, or notable production commits found in this 5am–5am ET window.",
       "bullets": [
         "GitHub: scanned michaelmonetized / HurleyUS / Hustle-Launch",
         "Vercel READY deploys: unavailable (team scope 403)"
@@ -25,26 +25,9 @@
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 1 post",
-      "kind": "measured",
-      "summary": "10 measured impressions across 1 own post(s). Top: 10 imp.",
-      "quote": "yikes!!",
-      "metrics": {
-        "impressions": 10,
-        "likes": 0,
-        "replies": 0,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 3 \u00b7 10:49 AM EDT \u00b7 10 imp \u00b7 yikes!!"
-      ],
-      "when": "Sep 3 \u00b7 10:49 AM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2095524689556697580"
-        }
-      ]
+      "title": "X · @MichaelH_rley",
+      "kind": "none",
+      "summary": "No own posts measured in this window (API sampled; replies/retweets excluded from primary pull)."
     },
     {
       "title": "Product Hunt / Reddit / LinkedIn",
@@ -54,7 +37,7 @@
   ],
   "inbox": [
     {
-      "title": "Inbox signal \u00b7 none",
+      "title": "Inbox signal · none",
       "kind": "none",
       "summary": "No non-financial product/ops signal threads matched in this window."
     }

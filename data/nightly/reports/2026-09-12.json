@@ -1,76 +1,55 @@
 {
   "date": "2026-09-12",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 11, 2026 \u00b7 5:00 AM EDT \u2192 Sep 12, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-11T09:00:00Z \u2192 2026-09-12T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
-    "xPostsMeasured": 2,
+    "windowEt": "Sep 12, 2026 · 5:00 AM EDT → Sep 13, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-12T09:00:00Z → 2026-09-13T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
+    "xPostsMeasured": 0,
     "inboxSignalItems": 0,
-    "tldr": "Ships/index 0. Notable: HurleyUS/michaelchurley.com \u00b7 commits; Hustle-Launch/migrate--www.hustlelaunch.com \u00b7 commits. X: 2 post(s), 130 imp. Inbox signal 1.",
+    "tldr": "Ships/index 1. Notable: HurleyUS/bestwnc.com · 1 merged PR; HurleyUS/michaelchurley.com · commits. Inbox signal 1.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "HurleyUS/michaelchurley.com \u00b7 commits",
+      "title": "HurleyUS/bestwnc.com · 1 merged PR",
       "kind": "shipped",
-      "summary": "1 non-merge commit(s) in window.",
+      "summary": "Fix false inquiry conversions and contact submission failure",
       "bullets": [
-        "e40e89b Drop duplicate Get At Me and Hurley tiles, and remove Hustle Pay and Hustle Chat."
+        "#112 Fix false inquiry conversions and contact submission failure"
       ],
-      "when": "Sep 11 \u00b7 6:55 AM EDT",
+      "when": "Sep 12 · 7:01 AM EDT",
+      "links": [
+        {
+          "label": "#112",
+          "href": "https://github.com/HurleyUS/bestwnc.com/pull/112"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com · commits",
+      "kind": "shipped",
+      "summary": "2 non-merge commit(s) in window.",
+      "bullets": [
+        "23bff7c Add living marks, interface films, and a Jennings homepage scroll.",
+        "04407d0 Trim the portfolio grid: drop crossed-out marks, Mockup Gallery, and all Interfaces."
+      ],
+      "when": "Sep 12 · 10:44 PM EDT → Sep 12 · 5:23 AM EDT",
       "links": [
         {
           "label": "repo",
           "href": "https://github.com/HurleyUS/michaelchurley.com"
         }
       ]
-    },
-    {
-      "title": "Hustle-Launch/migrate--www.hustlelaunch.com \u00b7 commits",
-      "kind": "shipped",
-      "summary": "5 non-merge commit(s) in window.",
-      "bullets": [
-        "0d3a882 feat: OG cards for the five /go offers",
-        "4fae454 fix: match /go offer pages to the hub voice",
-        "143d79d fix: restyle /go job cards",
-        "2282d0a fix: clear the /go hero",
-        "e21401e fix: strip copy-link chrome from /go"
-      ],
-      "when": "Sep 11 \u00b7 10:11 AM EDT \u2192 Sep 11 \u00b7 6:52 AM EDT",
-      "links": [
-        {
-          "label": "repo",
-          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com"
-        }
-      ]
     }
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 2 posts",
-      "kind": "measured",
-      "summary": "130 measured impressions across 2 own post(s). Top: 106 imp.",
-      "quote": "Official website coming soon with cloud collab",
-      "metrics": {
-        "impressions": 130,
-        "likes": 2,
-        "replies": 0,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 11 \u00b7 11:13 AM EDT \u00b7 24 imp \u00b7 Who is working on pro video/audio/motion/vfx on omarchy now?",
-        "Sep 11 \u00b7 4:37 PM EDT \u00b7 106 imp \u00b7 Official website coming soon with cloud collab"
-      ],
-      "when": "Sep 11 \u00b7 11:13 AM EDT \u2192 Sep 11 \u00b7 4:37 PM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2098511242612621394"
-        }
-      ]
+      "title": "X · @MichaelH_rley",
+      "kind": "none",
+      "summary": "No own posts measured in this window (API sampled; replies/retweets excluded from primary pull)."
     },
     {
       "title": "Product Hunt / Reddit / LinkedIn",
@@ -80,7 +59,7 @@
   ],
   "inbox": [
     {
-      "title": "Inbox signal \u00b7 none",
+      "title": "Inbox signal · none",
       "kind": "none",
       "summary": "No non-financial product/ops signal threads matched in this window."
     }

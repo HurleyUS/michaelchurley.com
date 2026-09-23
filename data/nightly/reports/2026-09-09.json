@@ -1,148 +1,118 @@
 {
   "date": "2026-09-09",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 8, 2026 \u00b7 5:00 AM EDT \u2192 Sep 9, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-08T09:00:00Z \u2192 2026-09-09T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 \u00b7 ~5:30 PM EDT",
+    "windowEt": "Sep 9, 2026 · 5:00 AM EDT → Sep 10, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-09T09:00:00Z → 2026-09-10T09:00:00Z",
+    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
     "xPostsMeasured": 2,
-    "inboxSignalItems": 1,
-    "tldr": "Ships/index 127. Notable: Hustle-Launch/mission-control-os \u00b7 1 merged PR; michaelmonetized/hustlemail-com \u00b7 1 merged PR; HurleyUS/michaelchurley.com \u00b7 47 merged PRs. X: 2 post(s), 137 imp. Inbox signal 2.",
+    "inboxSignalItems": 2,
+    "tldr": "Ships/index 3. Notable: omadesign · v0.0.5-alpha; michaelmonetized/omadesign · 1 merged PR; HurleyUS/michaelchurley.com · 1 merged PR. X: 2 post(s), 378 imp. Inbox signal 2.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "Hustle-Launch/mission-control-os \u00b7 1 merged PR",
+      "title": "omadesign · v0.0.5-alpha",
+      "kind": "shipped",
+      "summary": "v0.0.5-alpha — Home is the install. GIMP comes with it.",
+      "when": "Sep 9 · 6:53 AM EDT",
+      "links": [
+        {
+          "label": "v0.0.5-alpha",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.5-alpha"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omadesign · 1 merged PR",
       "kind": "shipped",
       "summary": "1 PR(s) merged in window.",
       "bullets": [
-        "#64 fix(web): P0 E2E \u2014 agency OAuth session + select-agency (#50 #51)"
+        "#52 Home is the install. GIMP comes with it."
       ],
-      "when": "Sep 8 \u00b7 9:48 PM EDT",
+      "when": "Sep 9 · 6:47 AM EDT",
       "links": [
         {
-          "label": "#64",
-          "href": "https://github.com/Hustle-Launch/mission-control-os/pull/64"
+          "label": "#52",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/52"
         }
       ]
     },
     {
-      "title": "michaelmonetized/hustlemail-com \u00b7 1 merged PR",
+      "title": "HurleyUS/michaelchurley.com · 1 merged PR",
       "kind": "shipped",
       "summary": "1 PR(s) merged in window.",
       "bullets": [
-        "#7 fix: ship honest linked routes and docs overview"
+        "#79 Add update: Naarchy 0.4.0 is tagged on GitHub"
       ],
-      "when": "Sep 8 \u00b7 10:36 PM EDT",
+      "when": "Sep 9 · 6:42 AM EDT",
       "links": [
         {
-          "label": "#7",
-          "href": "https://github.com/michaelmonetized/hustlemail-com/pull/7"
+          "label": "#79",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/79"
         }
       ]
     },
     {
-      "title": "HurleyUS/michaelchurley.com \u00b7 47 merged PRs",
+      "title": "HurleyUS/michaelchurley.com · commits",
       "kind": "shipped",
-      "summary": "47 PR(s) merged in window.",
+      "summary": "6 non-merge commit(s) in window.",
       "bullets": [
-        "#32 Blog: searchable tag filter (replace chip wall)",
-        "#33 chore(blog): Design-signed OG covers (batch of 8)",
-        "#34 chore(blog): Design OG covers wave 2 (8)",
-        "#35 chore(blog): Design OG covers wave 3 (8)",
-        "#37 chore(blog): Design OG covers wave 4 (8)",
-        "#36 Editor proof: unslop twelveux, Sonny's Shining, Your ZAXBYS",
-        "#39 chore(blog): refresh OG covers wave 5 (8 Design YT)",
-        "#43 chore(blog): refresh OG covers wave 6 (8 Design YT)",
-        "\u2026and 39 more merged PRs"
+        "a40a9b7 Fix iOS gallery controls: compass yaw, swipe orbit, and a real fullscreen still.",
+        "0bfd81a Drop pink gallery overlays, lazy-load media after layout, and orbit on mouse move.",
+        "57d96b8 Fix Three.js gallery types so the production ship build can pass.",
+        "decd5bf Serve gallery media from /work so clips are not swallowed by /portfolio/[slug].",
+        "a9d0d7b Replace the Convex portfolio roll with on-site media and living design films.",
+        "dd67e07 Add update: Naarchy 0.4.0 is tagged on GitHub (#79)"
       ],
-      "when": "Sep 8 \u00b7 5:54 PM EDT \u2192 Sep 8 \u00b7 10:45 PM EDT",
-      "links": [
-        {
-          "label": "#32",
-          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/32"
-        },
-        {
-          "label": "#33",
-          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/33"
-        },
-        {
-          "label": "#34",
-          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/34"
-        },
-        {
-          "label": "#35",
-          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/35"
-        },
-        {
-          "label": "#37",
-          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/37"
-        }
-      ]
-    },
-    {
-      "title": "Fleet honesty / docs \u00b7 78 merged PRs",
-      "kind": "shipped",
-      "summary": "Broad merge wave across client/org repos (honest landers, OG assets, LICENSE, status demotions).",
-      "bullets": [
-        "HurleyUS/s12.in: 4 PR(s) \u2014 e.g. #35 Fix LICENSE copyright author mismatch",
-        "HurleyUS/iPro-main-web: 4 PR(s) \u2014 e.g. #11 fix: replace Coming Soon waitlist shells with honest lander",
-        "michaelmonetized/shagent: 4 PR(s) \u2014 e.g. #7 docs: fill empty README with real usage",
-        "michaelmonetized/boilerplate: 4 PR(s) \u2014 e.g. #10 docs: PLAN parity vs HEAD",
-        "michaelmonetized/orclawstrator: 3 PR(s) \u2014 e.g. #5 Fix LICENSE copyright author mismatch",
-        "michaelmonetized/nvibe: 3 PR(s) \u2014 e.g. #21 Fix LICENSE copyright author mismatch",
-        "HurleyUS/ileague-app: 3 PR(s) \u2014 e.g. #9 Fix LICENSE copyright author mismatch",
-        "HurleyUS/www.mybathroomconversion.com: 2 PR(s) \u2014 e.g. #7 security: remove WP File Manager residue and Salespromis har",
-        "HurleyUS/itour.golf: 2 PR(s) \u2014 e.g. #53 docs: DEPLOY.md \u2014 production still on 2026; ship path for #4",
-        "michaelmonetized/WhisperCPPonEverything: 2 PR(s) \u2014 e.g. #5 Fix LICENSE copyright author mismatch"
-      ],
-      "when": "2026-09-09"
-    },
-    {
-      "title": "HurleyUS/michaelchurley.com \u00b7 commits",
-      "kind": "shipped",
-      "summary": "79 non-merge commit(s) in window.",
-      "bullets": [
-        "266282f Add follow-up: vanity phones and fake metrics scrubbed across five repos",
-        "582c8dd chore(blog): refresh OG cover wave 18 (empty-README fleet)",
-        "b0cb5d1 Add follow-up: empty READMEs filled with real usage across three repos",
-        "cab90f1 chore(blog): refresh OG cover wave 17 (Coming Soon honesty fleet)",
-        "b81fbfe Add follow-up: Coming Soon shells replaced with honest status landers (#74)",
-        "b3b6b33 chore(blog): refresh OG cover wave 16 (LICENSE fleet)",
-        "\u2026+73 more commits"
-      ],
-      "when": "Sep 8 \u00b7 10:45 PM EDT \u2192 Sep 8 \u00b7 2:43 PM EDT",
+      "when": "Sep 9 · 10:41 PM EDT → Sep 9 · 6:42 AM EDT",
       "links": [
         {
           "label": "repo",
           "href": "https://github.com/HurleyUS/michaelchurley.com"
         }
       ]
+    },
+    {
+      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · commits",
+      "kind": "shipped",
+      "summary": "2 non-merge commit(s) in window.",
+      "bullets": [
+        "fb29944 fix: rewrite /go as the offer, not the internal notes",
+        "a225c40 feat: ship /go lander with direct line 828-593-1935"
+      ],
+      "when": "Sep 9 · 12:06 PM EDT → Sep 9 · 11:58 AM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com"
+        }
+      ]
     }
   ],
   "landed": [
     {
-      "title": "X \u00b7 @MichaelH_rley \u00b7 2 posts",
+      "title": "X · @MichaelH_rley · 2 posts",
       "kind": "measured",
-      "summary": "137 measured impressions across 2 own post(s). Top: 81 imp.",
-      "quote": "Linux finally became my daily desktop \u2014 building Omadesign",
+      "summary": "378 measured impressions across 2 own post(s). Top: 350 imp.",
+      "quote": "We’re live on Product Hunt — omadesign",
       "metrics": {
-        "impressions": 137,
-        "likes": 0,
-        "replies": 2,
+        "impressions": 378,
+        "likes": 12,
+        "replies": 10,
         "reposts": 0
       },
       "bullets": [
-        "Sep 8 \u00b7 3:02 PM EDT \u00b7 56 imp \u00b7 13 days. Rust + egui. Four alphas. Zero Electron.",
-        "Sep 8 \u00b7 7:22 PM EDT \u00b7 81 imp \u00b7 Linux finally became my daily desktop \u2014 building Omadesign"
+        "Sep 9 · 5:24 PM EDT · 28 imp · Had to get this rant off my chest",
+        "Sep 10 · 3:38 AM EDT · 350 imp · We’re live on Product Hunt — omadesign"
       ],
-      "when": "Sep 8 \u00b7 3:02 PM EDT \u2192 Sep 8 \u00b7 7:22 PM EDT",
+      "when": "Sep 9 · 5:24 PM EDT → Sep 10 · 3:38 AM EDT",
       "links": [
         {
           "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2097465635785658638"
+          "href": "https://x.com/MichaelH_rley/status/2097952900194373863"
         }
       ]
     },
@@ -154,10 +124,16 @@
   ],
   "inbox": [
     {
-      "title": "Re: Weekly meeting - Follow up",
+      "title": "Hustle Launch & BirdEye - Weekly Check-In",
       "kind": "action",
-      "summary": "Hi Michael, Thank you for your email. @Kevin Clark, if you can, please help Michael with his expansion plans. Thank you Easudass John Implementation Team Lead, Upmarket +1 (800) 561-3357 ext. 348",
-      "when": "Sep 8 \u00b7 4:58 PM EDT"
+      "summary": "Hustle Launch &amp; BirdEye - Weekly Check-In Hi Michael, we&#39;re here for the meeting, waiting for you to join Thanks John Join Zoom Meeting birdeye.zoom.us/j/83465705400?pw... ID: 83465705400",
+      "when": "Sep 9 · 11:05 AM EDT"
+    },
+    {
+      "title": "[Action Needed]: Google pages disconnected",
+      "kind": "action",
+      "summary": "Some Google pages are disconnected 1 disconnected page If social pages are disconnected, some features in Hustle Launch will not function properly. Learn more Download the file for details. Download I",
+      "when": "Sep 9 · 11:26 AM EDT"
     }
   ],
   "loops": []

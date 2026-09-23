@@ -12,11 +12,15 @@ Morning routine appends JSON here, commits, and pushes. Vercel redeploys
 
 ## Window
 
-For report date `D` (America/New_York):
+Report date `D` = the work day being summarized (America/New_York):
 
-- Start: `(D - 1 day) at 05:00:00 America/New_York`
-- End: `D at 05:00:00 America/New_York` (exclusive)
+- Start: `D at 05:00:00 America/New_York`
+- End: `(D + 1 day) at 05:00:00 America/New_York` (exclusive)
+- Published/read on the morning of `D + 1` (~4:50am)
 - Label: `5am–5am ET`
+
+Example: at ~4:50am on Sep 24, publish `reports/2026-09-23.json` for window
+Sep 23 5am → Sep 24 5am (overwrite if present).
 
 ## Rules
 

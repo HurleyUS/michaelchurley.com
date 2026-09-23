@@ -3,33 +3,81 @@
   "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 21, 2026 · 5:00 AM EDT → Sep 22, 2026 · 5:00 AM EDT",
-    "windowUtc": "2026-09-21T09:00:00Z → 2026-09-22T09:00:00Z",
+    "windowEt": "Sep 22, 2026 · 5:00 AM EDT → Sep 23, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-22T09:00:00Z → 2026-09-23T09:00:00Z",
     "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 2,
-    "inboxSignalItems": 2,
-    "tldr": "Ships/index 4. Notable: omadesign · v0.5.6; omadesign · v0.5.7; michaelmonetized/omadesign · 2 merged PRs. X: 2 post(s), 102 imp. Inbox signal 2.",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 3,
+    "tldr": "Ships/index 2. Notable: omadesign · v0.5.8; michaelmonetized/omadesign · 1 merged PR; michaelmonetized/hustlemail · commits. X: 1 post(s), 130 imp. Inbox signal 5.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "omadesign · v0.5.6",
+      "title": "omadesign · v0.5.8",
       "kind": "shipped",
-      "summary": "0.5.6 — Your work, ready when you are",
-      "when": "Sep 21 · 8:58 PM EDT",
+      "summary": "0.5.8 · Make it your studio",
+      "when": "Sep 22 · 7:28 AM EDT",
       "links": [
         {
-          "label": "v0.5.6",
-          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.6"
+          "label": "v0.5.8",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.8"
         }
       ]
     },
     {
-      "title": "omadesign · v0.5.7",
+      "title": "michaelmonetized/omadesign · 1 merged PR",
       "kind": "shipped",
-      "summary": "Omadesign 0.5.7 — A new mark, a new cut",
-      "when": "Sep 21 · 10:18 PM EDT",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#86 Release 0.5.8: Lua plugins, welcome polish and editable compound paths"
+      ],
+      "when": "Sep 22 · 7:34 AM EDT",
+      "links": [
+        {
+          "label": "#86",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/86"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/hustlemail · commits",
+      "kind": "shipped",
+      "summary": "1 non-merge commit(s) in window.",
+      "bullets": [
+        "08d9398 Keep public HustleMail pages out of Clerk handshake [skip ci]"
+      ],
+      "when": "Sep 22 · 11:51 AM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/hustlemail"
+        }
+      ]
+    },
+    {
+      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · commits",
+      "kind": "shipped",
+      "summary": "5 non-merge commit(s) in window.",
+      "bullets": [
+        "2493635 fix: align case-study canonical URLs with live routes [skip ci]",
+        "19906fc fix: restore portfolio links and case-study discovery [skip ci]",
+        "70eecbe Remove nonexistent case studies from sitemap [skip ci]",
+        "44a0045 Allow Google to crawl public rendering assets [skip ci]",
+        "77d4bb6 fix(seo): keep public pages out of Clerk auth redirects"
+      ],
+      "when": "Sep 22 · 12:22 PM EDT → Sep 22 · 11:22 AM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com"
+        }
+      ]
+    },
+    {
+      "title": "Near-miss · Omadesign v0.5.7",
+      "kind": "outside",
+      "summary": "Published Sep 21 · 10:18 PM EDT — before this window. Context only; not counted.",
       "links": [
         {
           "label": "v0.5.7",
@@ -38,58 +86,37 @@
       ]
     },
     {
-      "title": "michaelmonetized/omadesign · 2 merged PRs",
-      "kind": "shipped",
-      "summary": "2 PR(s) merged in window.",
-      "bullets": [
-        "#84 Release 0.5.6: local work, projects, and agent welcome screen",
-        "#85 Release 0.5.7 with the official mark and a 120 BPM product film"
-      ],
-      "when": "Sep 21 · 9:04 PM EDT → Sep 21 · 10:26 PM EDT",
-      "links": [
-        {
-          "label": "#84",
-          "href": "https://github.com/michaelmonetized/omadesign/pull/84"
-        },
-        {
-          "label": "#85",
-          "href": "https://github.com/michaelmonetized/omadesign/pull/85"
-        }
-      ]
-    },
-    {
-      "title": "Near-miss · Omadesign v0.5.5-nightly.1",
+      "title": "Near-miss · Omadesign v0.5.6",
       "kind": "outside",
-      "summary": "Published Sep 20 · 6:00 PM EDT — before this window. Context only; not counted.",
+      "summary": "Published Sep 21 · 8:58 PM EDT — before this window. Context only; not counted.",
       "links": [
         {
-          "label": "v0.5.5-nightly.1",
-          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.5-nightly.1"
+          "label": "v0.5.6",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.6"
         }
       ]
     }
   ],
   "landed": [
     {
-      "title": "X · @MichaelH_rley · 2 posts",
+      "title": "X · @MichaelH_rley · 1 post",
       "kind": "measured",
-      "summary": "102 measured impressions across 2 own post(s). Top: 69 imp.",
-      "quote": "Omadesign UI/UX Redesign LIVE",
+      "summary": "130 measured impressions across 1 own post(s). Top: 130 imp.",
+      "quote": "I don't think people truly understand just how determined I am at making Linux desktop the go to for creative professionals.",
       "metrics": {
-        "impressions": 102,
-        "likes": 3,
-        "replies": 0,
-        "reposts": 0
+        "impressions": 130,
+        "likes": 2,
+        "replies": 1,
+        "reposts": 1
       },
       "bullets": [
-        "Sep 21 · 9:01 AM EDT · 69 imp · Omadesign UI/UX Redesign LIVE",
-        "Sep 21 · 7:22 PM EDT · 33 imp · Fresh logo for omadesign, designed in omadesign."
+        "Sep 22 · 10:56 AM EDT · 130 imp · I don't think people truly understand just how determined I am at maki…"
       ],
-      "when": "Sep 21 · 9:01 AM EDT → Sep 21 · 7:22 PM EDT",
+      "when": "Sep 22 · 10:56 AM EDT",
       "links": [
         {
           "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2102020341618844016"
+          "href": "https://x.com/MichaelH_rley/status/2102411655032279200"
         }
       ]
     },
@@ -101,26 +128,45 @@
   ],
   "inbox": [
     {
-      "title": "p/producthunt - \"Product Hunt Teams Up With OpenAIDevs for the GPT-6 Astra Challenge!\"",
-      "kind": "ph",
-      "summary": "Product Hunt Monday, September 21 p/producthunt - &quot;Product Hunt Teams Up With OpenAIDevs for the GPT-6 Astra Challenge!&quot; As a Maker who&#39;s built with OpenAI, the community would love to",
-      "when": "Sep 21 · 8:32 AM EDT"
+      "title": " 🆕 The AI Gateway is here",
+      "kind": "action",
+      "summary": "All of the models, none of the keys ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿",
+      "when": "Sep 22 · 1:23 PM EDT"
     },
     {
-      "title": "Re: [michaelmonetized/omadesign] Release 0.5.6: local work, projects, and agent welcome screen (PR #",
+      "title": "Maximize your maker presence on Product Hunt 👤",
+      "kind": "ph",
+      "summary": "Product Hunt Wednesday, September 23 Maximize your maker presence on Product Hunt 👤 Hi Michael, It&#39;s been 5 days since your launch! Here are some final tips to maintain your momentum on Product",
+      "when": "Sep 23 · 4:02 AM EDT"
+    },
+    {
+      "title": "Search Console · 16 indexing/presence notices",
       "kind": "action",
-      "summary": "vercel[bot] left a comment (michaelmonetized/omadesign#84) The latest updates on your projects. Learn more about Vercel for GitHub. Project Deployment Actions Updated omadesign Ready Ready Preview Sep",
-      "when": "Sep 21 · 8:41 PM EDT"
+      "summary": "Google Search Console notices in window (indexing / presence).",
+      "bullets": [
+        "Improve Google presence for everythingmonetized.com",
+        "Improve Google presence for getat.me",
+        "Improve Google presence for hurleyus.com",
+        "Improve Google presence for iconference.golf",
+        "Get started using Search Console with https://www.macksbbqshack.com/",
+        "Get started using Search Console with https://macksbbqshack.com/",
+        "Improve Google presence for ileague.golf",
+        "Improve Google presence for ipro.golf",
+        "Improve Google presence for itour.golf",
+        "Improve Google presence for merchwinner.com",
+        "…+5 more"
+      ],
+      "when": "Sep 22 · 11:55 AM EDT"
     }
   ],
   "loops": [
     {
-      "title": "Omadesign 0.5.6 / 0.5.7 mark + film",
-      "detail": "Official mark + product film shipped overnight into this window."
+      "title": "0.5.8 in window",
+      "detail": "v0.5.8 Make it your studio published ~7:28 AM EDT Sep 22 — counted in this 5am–5am report."
     },
     {
-      "title": "Citations sheet / morning 0.5.8",
-      "detail": "Memory lead: citations sheet + 0.5.8 morning release — 0.5.8 lands early next window."
+      "title": "Nightly scaffolding",
+      "detail": "Daily Stand Up /nightly mount landed on site main around this period — keep backfill honest."
     }
   ]
 }

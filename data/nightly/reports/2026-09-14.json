@@ -3,37 +3,48 @@
   "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 13, 2026 · 5:00 AM EDT → Sep 14, 2026 · 5:00 AM EDT",
-    "windowUtc": "2026-09-13T09:00:00Z → 2026-09-14T09:00:00Z",
+    "windowEt": "Sep 14, 2026 · 5:00 AM EDT → Sep 15, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-14T09:00:00Z → 2026-09-15T09:00:00Z",
     "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 0,
+    "xPostsMeasured": 1,
     "inboxSignalItems": 0,
-    "tldr": "Ships/index 0. Notable: HurleyUS/michaelchurley.com · commits. Inbox signal 2.",
+    "tldr": "Ships/index 0. X: 1 post(s), 25 imp. Inbox signal 1.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "HurleyUS/michaelchurley.com · commits",
-      "kind": "shipped",
-      "summary": "1 non-merge commit(s) in window.",
+      "title": "Checked · no in-window ships",
+      "kind": "none",
+      "summary": "No merged PRs, releases, or notable production commits found in this 5am–5am ET window.",
       "bullets": [
-        "05e2bac Make portfolio lightbox media fill the screen on iOS."
-      ],
-      "when": "Sep 13 · 6:39 PM EDT",
-      "links": [
-        {
-          "label": "repo",
-          "href": "https://github.com/HurleyUS/michaelchurley.com"
-        }
+        "GitHub: scanned michaelmonetized / HurleyUS / Hustle-Launch",
+        "Vercel READY deploys: unavailable (team scope 403)"
       ]
     }
   ],
   "landed": [
     {
-      "title": "X · @MichaelH_rley",
-      "kind": "none",
-      "summary": "No own posts measured in this window (API sampled; replies/retweets excluded from primary pull)."
+      "title": "X · @MichaelH_rley · 1 post",
+      "kind": "measured",
+      "summary": "25 measured impressions across 1 own post(s). Top: 25 imp.",
+      "quote": "Fully embracing my inner hacker lately.",
+      "metrics": {
+        "impressions": 25,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 14 · 6:27 AM EDT · 25 imp · Fully embracing my inner hacker lately."
+      ],
+      "when": "Sep 14 · 6:27 AM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2099444935850086615"
+        }
+      ]
     },
     {
       "title": "Product Hunt / Reddit / LinkedIn",
@@ -48,5 +59,14 @@
       "summary": "No non-financial product/ops signal threads matched in this window."
     }
   ],
-  "loops": []
+  "loops": [
+    {
+      "title": "Convex egress / resource pressure",
+      "detail": "Convex usage alerts in window — treat as ops/egress watch (getat.me fan-out, cron storms). No plan/billing details on public Nightly."
+    },
+    {
+      "title": "Melton proposal in flight",
+      "detail": "Migrate site Melton proposal SPA commits landed Sep 15 afternoon — next window may merge."
+    }
+  ]
 }

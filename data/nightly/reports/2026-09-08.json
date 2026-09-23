@@ -3,74 +3,146 @@
   "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 7, 2026 · 5:00 AM EDT → Sep 8, 2026 · 5:00 AM EDT",
-    "windowUtc": "2026-09-07T09:00:00Z → 2026-09-08T09:00:00Z",
+    "windowEt": "Sep 8, 2026 · 5:00 AM EDT → Sep 9, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-08T09:00:00Z → 2026-09-09T09:00:00Z",
     "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 3,
+    "xPostsMeasured": 2,
     "inboxSignalItems": 1,
-    "tldr": "Ships/index 12. Notable: omadesign · v0.0.3-alpha; omadesign · v0.0.4-alpha; michaelmonetized/omadesign · 5 merged PRs. X: 3 post(s), 324 imp. Inbox signal 4.",
+    "tldr": "Ships/index 127. Notable: Hustle-Launch/mission-control-os · 1 merged PR; michaelmonetized/hustlemail-com · 1 merged PR; HurleyUS/michaelchurley.com · 47 merged PRs. X: 2 post(s), 137 imp. Inbox signal 2.",
     "readOnly": true,
     "backfill": true
   },
   "shipped": [
     {
-      "title": "omadesign · v0.0.3-alpha",
+      "title": "Hustle-Launch/mission-control-os · 1 merged PR",
       "kind": "shipped",
-      "summary": "v0.0.3-alpha — One look, the whole shoot",
-      "when": "Sep 7 · 2:33 PM EDT",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#64 fix(web): P0 E2E — agency OAuth session + select-agency (#50 #51)"
+      ],
+      "when": "Sep 8 · 9:48 PM EDT",
       "links": [
         {
-          "label": "v0.0.3-alpha",
-          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.3-alpha"
+          "label": "#64",
+          "href": "https://github.com/Hustle-Launch/mission-control-os/pull/64"
         }
       ]
     },
     {
-      "title": "omadesign · v0.0.4-alpha",
+      "title": "michaelmonetized/hustlemail-com · 1 merged PR",
       "kind": "shipped",
-      "summary": "v0.0.4-alpha — The handles got the memo",
-      "when": "Sep 7 · 3:10 PM EDT",
+      "summary": "1 PR(s) merged in window.",
+      "bullets": [
+        "#7 fix: ship honest linked routes and docs overview"
+      ],
+      "when": "Sep 8 · 10:36 PM EDT",
       "links": [
         {
-          "label": "v0.0.4-alpha",
-          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.4-alpha"
+          "label": "#7",
+          "href": "https://github.com/michaelmonetized/hustlemail-com/pull/7"
         }
       ]
     },
     {
-      "title": "Near-miss · Omadesign v0.0.2-alpha",
-      "kind": "outside",
-      "summary": "Published Sep 6 · 9:30 PM EDT — before this window. Context only; not counted.",
+      "title": "HurleyUS/michaelchurley.com · 47 merged PRs",
+      "kind": "shipped",
+      "summary": "47 PR(s) merged in window.",
+      "bullets": [
+        "#32 Blog: searchable tag filter (replace chip wall)",
+        "#33 chore(blog): Design-signed OG covers (batch of 8)",
+        "#34 chore(blog): Design OG covers wave 2 (8)",
+        "#35 chore(blog): Design OG covers wave 3 (8)",
+        "#37 chore(blog): Design OG covers wave 4 (8)",
+        "#36 Editor proof: unslop twelveux, Sonny's Shining, Your ZAXBYS",
+        "#39 chore(blog): refresh OG covers wave 5 (8 Design YT)",
+        "#43 chore(blog): refresh OG covers wave 6 (8 Design YT)",
+        "…and 39 more merged PRs"
+      ],
+      "when": "Sep 8 · 5:54 PM EDT → Sep 8 · 10:45 PM EDT",
       "links": [
         {
-          "label": "v0.0.2-alpha",
-          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.0.2-alpha"
+          "label": "#32",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/32"
+        },
+        {
+          "label": "#33",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/33"
+        },
+        {
+          "label": "#34",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/34"
+        },
+        {
+          "label": "#35",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/35"
+        },
+        {
+          "label": "#37",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/37"
+        }
+      ]
+    },
+    {
+      "title": "Fleet honesty / docs · 78 merged PRs",
+      "kind": "shipped",
+      "summary": "Broad merge wave across client/org repos (honest landers, OG assets, LICENSE, status demotions).",
+      "bullets": [
+        "HurleyUS/s12.in: 4 PR(s) — e.g. #35 Fix LICENSE copyright author mismatch",
+        "HurleyUS/iPro-main-web: 4 PR(s) — e.g. #11 fix: replace Coming Soon waitlist shells with honest lander",
+        "michaelmonetized/shagent: 4 PR(s) — e.g. #7 docs: fill empty README with real usage",
+        "michaelmonetized/boilerplate: 4 PR(s) — e.g. #10 docs: PLAN parity vs HEAD",
+        "michaelmonetized/orclawstrator: 3 PR(s) — e.g. #5 Fix LICENSE copyright author mismatch",
+        "michaelmonetized/nvibe: 3 PR(s) — e.g. #21 Fix LICENSE copyright author mismatch",
+        "HurleyUS/ileague-app: 3 PR(s) — e.g. #9 Fix LICENSE copyright author mismatch",
+        "HurleyUS/www.mybathroomconversion.com: 2 PR(s) — e.g. #7 security: remove WP File Manager residue and Salespromis har",
+        "HurleyUS/itour.golf: 2 PR(s) — e.g. #53 docs: DEPLOY.md — production still on 2026; ship path for #4",
+        "michaelmonetized/WhisperCPPonEverything: 2 PR(s) — e.g. #5 Fix LICENSE copyright author mismatch"
+      ],
+      "when": "2026-09-09"
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com · commits",
+      "kind": "shipped",
+      "summary": "79 non-merge commit(s) in window.",
+      "bullets": [
+        "266282f Add follow-up: vanity phones and fake metrics scrubbed across five repos",
+        "582c8dd chore(blog): refresh OG cover wave 18 (empty-README fleet)",
+        "b0cb5d1 Add follow-up: empty READMEs filled with real usage across three repos",
+        "cab90f1 chore(blog): refresh OG cover wave 17 (Coming Soon honesty fleet)",
+        "b81fbfe Add follow-up: Coming Soon shells replaced with honest status landers (#74)",
+        "b3b6b33 chore(blog): refresh OG cover wave 16 (LICENSE fleet)",
+        "…+73 more commits"
+      ],
+      "when": "Sep 8 · 10:45 PM EDT → Sep 8 · 2:43 PM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/HurleyUS/michaelchurley.com"
         }
       ]
     }
   ],
   "landed": [
     {
-      "title": "X · @MichaelH_rley · 3 posts",
+      "title": "X · @MichaelH_rley · 2 posts",
       "kind": "measured",
-      "summary": "324 measured impressions across 3 own post(s). Top: 162 imp.",
-      "quote": "Now with raw photo development and legacy design file format support",
+      "summary": "137 measured impressions across 2 own post(s). Top: 81 imp.",
+      "quote": "Linux finally became my daily desktop — building Omadesign",
       "metrics": {
-        "impressions": 324,
-        "likes": 3,
-        "replies": 1,
-        "reposts": 1
+        "impressions": 137,
+        "likes": 0,
+        "replies": 2,
+        "reposts": 0
       },
       "bullets": [
-        "Sep 7 · 10:14 AM EDT · 162 imp · Now with raw photo development and legacy design file format support",
-        "Sep 7 · 1:20 PM EDT · 23 imp · is it an IRL stream just bc I'm outside...",
-        "Sep 7 · 7:33 PM EDT · 139 imp · Looking for 10 Linux designers to try Omadesign"
+        "Sep 8 · 3:02 PM EDT · 56 imp · 13 days. Rust + egui. Four alphas. Zero Electron.",
+        "Sep 8 · 7:22 PM EDT · 81 imp · Linux finally became my daily desktop — building Omadesign"
       ],
-      "when": "Sep 7 · 10:14 AM EDT → Sep 7 · 7:33 PM EDT",
+      "when": "Sep 8 · 3:02 PM EDT → Sep 8 · 7:22 PM EDT",
       "links": [
         {
           "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2096965429507813725"
+          "href": "https://x.com/MichaelH_rley/status/2097465635785658638"
         }
       ]
     },
@@ -82,16 +154,11 @@
   ],
   "inbox": [
     {
-      "title": "What's new in Birdeye: Weekly Product Release Notes | September 07, 2026",
+      "title": "Re: Weekly meeting - Follow up",
       "kind": "action",
-      "summary": "Weekly Product Release Notes | September 07, 2026 Hi, Here&#39;s your weekly look at what&#39;s new, improved, and updated in Birdeye: Weekly Product Release Notes |",
-      "when": "Sep 7 · 10:22 AM EDT"
+      "summary": "Hi Michael, Thank you for your email. @Kevin Clark, if you can, please help Michael with his expansion plans. Thank you Easudass John Implementation Team Lead, Upmarket +1 (800) 561-3357 ext. 348",
+      "when": "Sep 8 · 4:58 PM EDT"
     }
   ],
-  "loops": [
-    {
-      "title": "LeadMinerr in active sales mix",
-      "detail": "Self-mail Sep 8 ~1:06 AM EDT — verify outreach next steps; don't invent funnel metrics."
-    }
-  ]
+  "loops": []
 }

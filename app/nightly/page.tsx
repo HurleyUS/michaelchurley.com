@@ -65,7 +65,7 @@ export default async function NightlyDashboardPage() {
           </div>
           <p className="ny-note" style={{ marginTop: 16 }}>
             Archive covers{" "}
-            <strong style={{ color: "var(--ny-text)" }}>2026-09-03 → 2026-09-23</strong>{" "}
+            <strong style={{ color: "var(--ny-text)" }}>2026-09-02 → 2026-09-22</strong>{" "}
             (5am–5am ET). Charts track productivity and audience.
           </p>
         </header>
