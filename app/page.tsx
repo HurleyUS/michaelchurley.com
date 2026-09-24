@@ -9,6 +9,7 @@ import Link from "next/link";
 import { PiCalendarPlusLight } from "react-icons/pi";
 import BookingForm from "@/components/booking/booking-form";
 import BookingModal from "@/components/booking/booking-modal";
+import ProductHuntOmadesignEmbed from "@/components/product-hunt-omadesign-embed";
 
 export default function Home() {
   return (
@@ -64,38 +65,7 @@ export default function Home() {
         </ContainerBoxedCenter>
       </section>
 
-      <section className="flex flex-col bg-Latte-Mantle dark:bg-Mocha-Mantle py-4xl">
-        <ContainerBoxedCenter
-          propsInner={{
-            className:
-              "flex flex-col items-center justify-center gap-md grow w-full text-center",
-          }}
-        >
-          <h2 className="font-black">Featured on Product Hunt</h2>
-          <p className="text-muted-foreground max-w-[32rem]">
-            Omadesign — native Linux studio for design, paint, photo & motion. Support the launch on Product Hunt.
-          </p>
-          <div className="w-full max-w-[500px] mx-auto overflow-hidden rounded-xl border border-border bg-background shadow-sm">
-            <iframe
-              title="Omadesign on Product Hunt"
-              src="https://cards.producthunt.com/cards/products/omadesign"
-              width={500}
-              height={405}
-              style={{ border: "none", width: "100%", maxWidth: 500, height: 405 }}
-              loading="lazy"
-              allowFullScreen
-            />
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-md text-xs">
-            <Link href="https://www.producthunt.com/products/omadesign" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline">View on Product Hunt</Button>
-            </Link>
-            <Link href="https://omadesign.app" target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary">omadesign.app</Button>
-            </Link>
-          </div>
-        </ContainerBoxedCenter>
-      </section>
+      <ProductHuntOmadesignEmbed />
       <section className="flex flex-col bg-Latte-Crust bg-gradient-to-b from-Latte-Crust to-Latte-Mantle dark:bg-Mocha-Crust dark:from-Mocha-Crust dark:to-Mocha-Mantle py-4xl">
         <ContainerBoxedCenter
           props={{
