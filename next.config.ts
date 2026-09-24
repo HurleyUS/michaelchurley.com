@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: https: *.convex.cloud *.convex.site",
               "font-src 'self' data:",
               "connect-src 'self' https://api.clerk.com https://clerk.michaelchurley.com https://app.posthog.com *.convex.cloud *.convex.site wss:",
-              "frame-src 'self' https://accounts.google.com",
+              "frame-src 'self' https://accounts.google.com https://cards.producthunt.com https://www.producthunt.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
