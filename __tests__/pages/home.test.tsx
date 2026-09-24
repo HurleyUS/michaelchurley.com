@@ -3,6 +3,10 @@ import { expect, test, describe, jest } from "@jest/globals";
 import Home from "@/app/page";
 import "@testing-library/jest-dom";
 
+jest.mock("@/components/omadesign-counts", () => ({
+  default: () => null,
+}));
+
 // Mock the providers
 jest.mock("@/providers", () => ({
   Providers: ({ children }: { children: React.ReactNode }) => children,
