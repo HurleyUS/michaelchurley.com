@@ -5,12 +5,20 @@ type Chip = {
   display: string | null;
   href: string;
   title: string;
+  color?: string;
+};
+
+const COLORS: Record<string, string> = {
+  downloads: "007ec6",
+  users: "2ea44f",
+  upvotes: "e05d44",
+  stars: "dfb317",
 };
 
 /**
- * The omadesign count row under the Product Hunt badges.
- * Reads the public counts from omadesign.app. Missing counts stay off the row.
- * @returns The chip row, or nothing when the counts cannot be read.
+ * The omadesign count shields under the Product Hunt badges.
+ * Same two-tone chips as a GitHub README: name on the left, number on the right.
+ * @returns The shield row, or nothing when the counts cannot be read.
  */
 export default async function OmadesignCounts() {
   let chips: Chip[] = [];
@@ -33,9 +41,12 @@ export default async function OmadesignCounts() {
           title={chip.title}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[11px] leading-none text-Subtext0 hover:text-Blue"
+          className="inline-flex h-5 overflow-hidden rounded-[3px] font-[Verdana,Geneva,DejaVu_Sans,sans-serif] text-[11px] leading-5 text-white"
         >
-          [ {chip.display} | {chip.label} ]
+          <span className="bg-[#555] px-1.5">{chip.label}</span>
+          <span className="px-1.5" style={{ background: `#${chip.color || COLORS[chip.key] || "007ec6"}` }}>
+            {chip.display}
+          </span>
         </a>
       ))}
     </nav>
