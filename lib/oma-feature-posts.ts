@@ -41,16 +41,13 @@ function publishedAt(front: string, entry: CatalogEntry) {
   return Date.parse("2026-09-23T18:00:00Z") - (entry.n - 1) * 60_000;
 }
 
-const PUBLIC = path.join(process.cwd(), "public");
-
 /**
- * Drops an empty media path, or a site-absolute one whose file is missing from public/.
- * If public/ isn't on disk (for example, a serverless runtime), the path is kept as-is.
+ * Treats an empty media path as absent, so a post with no film renders without a player.
+ * (No filesystem check against public/: that would make Next trace every public asset
+ * into the blog function bundle.)
  */
 function localAsset(src: string) {
-  if (!src) return undefined;
-  if (!src.startsWith("/") || !fs.existsSync(PUBLIC)) return src;
-  return fs.existsSync(path.join(PUBLIC, src)) ? src : undefined;
+  return src.trim() ? src : undefined;
 }
 
 function seriesNote(entry: CatalogEntry, part: number, total: number) {
