@@ -11,39 +11,39 @@ coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-move-tool/og.png
 
 ## The habit
 
-`V` is the way back to a calm hand. In Illustrator, Selection is `V`, Direct Selection is `A`, and you live on `V` until a point is wrong. Drag moves. Shift constrains. Alt-drag or Option-drag clones. The bounding box has eight handles. The rotate cursor lives just outside, or on a handle, depending on how close you are and which version trained you. Corner widgets round a rectangle without converting it to a path, until you expand it on purpose.
+`V` is the key you go back to when you want a steady hand. In Illustrator, Selection is `V` and Direct Selection is `A`, and you stay on `V` until a point is wrong. Drag moves, Shift constrains, and Alt-drag or Option-drag clones. The bounding box has eight handles. The rotate cursor appears just outside a handle, or on it, depending on how close you are and which version you learned on. Corner widgets round a rectangle without converting it to a path, until you expand it on purpose.
 
-Affinity Designer's Move tool is the same grip. Scale from the handles. Hold Shift for aspect or for a constrained move. The clone is a modifier you trust more than a menu called Duplicate. Photoshop's Move tool is the cousin on pixels: drag the layer, arrows nudge, Alt duplicates. You bring that hand to a vector app and you want the object, not the layer thumbnail, to be what moves.
+Affinity Designer's Move tool works the same way. You scale from the handles, hold Shift for aspect ratio or a constrained move, and use a modifier to clone because it's faster than a Duplicate menu. Photoshop's Move tool is the pixel version: drag the layer, nudge with arrows, Alt to duplicate. When you bring those habits to a vector app, you want the object to move, not a layer thumbnail.
 
-The habit includes multi-select. Shift-click adds. Shift-click again removes. A marquee adds when Shift is down and replaces when it is not. Groups move together until you double-click to go inside. If any of those are "somewhere in a preferences checkbox," the tool is not finished.
+Multi-select is part of the habit. Shift-click adds, and Shift-click again removes. A marquee adds when Shift is down and replaces the selection when it isn't. Groups move together until you double-click to go inside. If any of that is hidden behind a preferences checkbox, the tool isn't finished.
 
 ## The constraint
 
-One `.oma`, one undo step per edit, objects that stay live. Move is the tool that has to honor that. Scaling type with the bounding box cannot outline the glyphs. Rounding a corner cannot run **Object → Break path** under you. A clone is a new object in the same layer stack, one undo back to the single original, not a "duplicate file" dialog.
+One `.oma`, one undo step per edit, and objects that stay live. Move has to respect all three. Scaling type with the bounding box can't outline the glyphs. Rounding a corner can't run **Object > Break path** behind your back. A clone is a new object in the same layer stack, one undo away from the single original, with no "duplicate file" dialog.
 
-The persona is Design for this key as the primary select tool, and `V` is also the select key the shortcut table maps before the persona check. If the tool is not in the persona you are in, the key does not switch. In Design, `V` is home. Layout still has frames you move. The manual hangs the full Move paragraph on the Design chapter: click, drag, eight handles, the handle above the box, Shift-click, Shift-drag, Alt-drag, corner dots.
+In the Design persona, `V` is the primary selection tool, and the shortcut table maps it before the persona check. If a tool isn't in the persona you're in, its key doesn't switch to it. In Design, `V` is home base. Layout still has frames you move. The manual puts the full Move description in the Design chapter: click, drag, eight handles, the handle above the box, Shift-click, Shift-drag, Alt-drag and corner dots.
 
-Snapping and Shift have to cooperate with the rest of the studio. Snapping catches object and artboard edges and centers, guides, the grid, and equal spacing. `Ctrl+Shift+;` toggles it. Hold Ctrl during the drag to flip that choice for the length of the drag, then release to return. Shift constrains the move to horizontal, vertical, or 45 degrees, and it constrains pen and brush the same way. Alt-drag clones. Alt with Shift is a constrained copy. Move cannot invent a private constraint system or the HUD would be lying when it shows those gestures.
+Snapping and Shift have to work the same way here as in the rest of the app. Snapping catches object and artboard edges and centers, guides, the grid and equal spacing. `Ctrl+Shift+;` toggles it. Hold Ctrl during a drag to flip that setting for the length of the drag, and release to go back. Shift constrains the move to horizontal, vertical or 45 degrees, and constrains the pen and brush the same way. Alt-drag clones, and Alt with Shift makes a constrained copy. If Move had its own private constraint rules, the HUD would be wrong when it shows those gestures.
 
-Selection and layer reorder share chords on purpose, with a boundary. `Ctrl+[` and `Ctrl+]` reorder when a layer row is selected. Click an object on the canvas and those chords return to object stacking. Move's click is that return. The tool that selects on the canvas is the tool that hands the bracket keys back to stacking. One undo per reorder stays true. One undo per move stays true. They are different steps.
+Selection and layer reordering share shortcuts on purpose, with a clear boundary. `Ctrl+[` and `Ctrl+]` reorder when a layer row is selected. Click an object on the canvas and those shortcuts go back to object stacking. Move's click is what switches them back. A reorder is one undo and a move is one undo, as separate steps.
 
-Free transform, `Ctrl+T`, puts the current selection into Move with the scale and rotation handles ready. Move is the body. Free transform is the door. Parameters stay editable either way.
+Free transform, `Ctrl+T`, switches the current selection into Move with the scale and rotation handles ready. Move does the work and Free transform is a shortcut into it. Parameters stay editable either way.
 
 ## What landed
 
-**Move** is `V`. This is the manual's behavior in 0.5.8.
+**Move** is `V`. This is how the manual describes it.
 
-Click an object to select it. Drag to move it. The bounding box has eight handles and they scale. The handle above the box rotates. You do not hunt a rotate mode in a menu.
+Click an object to select it and drag to move it. The bounding box has eight handles that scale, and the handle above the box rotates, so there's no separate rotate mode to find in a menu.
 
-Shift-click adds an object to the selection or removes it if it was already in. Shift-drag draws a selection box that adds objects. Dragging an already selected object moves the whole selection. Shift during that move constrains it.
+Shift-click adds an object to the selection, or removes it if it was already selected. Shift-drag draws a selection box that adds objects. Dragging an object that's already selected moves the whole selection, and holding Shift during that move constrains it.
 
-Alt-drag clones. The clone is a real object. `Ctrl+Z` removes the clone and leaves the original where it was. `Super+D` duplicates in place when you want a copy and no offset. Alt-drag is the copy that follows the mouse.
+Alt-drag clones. The clone is a real object, and `Ctrl+Z` removes it and leaves the original where it was. `Super+D` duplicates in place when you want a copy with no offset. Alt-drag gives you a copy that follows the mouse.
 
-Corner dots round a rectangle. The radius is a parameter. Transform also holds corner radius, along with polygon sides and star inner radius when those shapes are what you selected. Ellipse is `O`, polygon `Y`, star `S`, line `L`. You draw them with their own keys. You adjust them with Move and the inspector.
+Corner dots round a rectangle, and the radius stays a parameter. Transform also holds the corner radius, plus polygon sides and star inner radius when those are the shapes you selected. Ellipse is `O`, polygon `Y`, star `S` and line `L`. You draw each with its own key and adjust it with Move and the inspector.
 
-Groups select, move, duplicate, and align as units. Double-click an item to edit it alone until you select something else or deselect. The group's children come along when the group moves. That matches the layer rule: groups move with their children.
+Groups select, move, duplicate and align as units. Double-click an item to edit it alone until you select something else or deselect. When the group moves, its children move with it, which matches the layer rule.
 
-`Ctrl+T` lands in this same handle set from the keyboard or from the Object menu. Press `V` and select the object and you are already there. Same handles. Same live text. Same rectangle parameters.
+`Ctrl+T` brings up the same handles from the keyboard or the Object menu. If you pressed `V` and selected the object, you're already there, with the same handles, the same live text and the same rectangle parameters.
 
 ## In the hand
 
@@ -53,34 +53,32 @@ Open a Design document.
 R
 ```
 
-Drag a rectangle. Press `V` if the rectangle key did not leave you in Move. Click the rectangle. Eight handles appear. Drag a corner handle. The shape scales. Drag the handle above the box. It rotates. `Ctrl+Z` steps back one of those edits.
+Drag a rectangle. Press `V` if drawing didn't leave you in Move, and click the rectangle. Eight handles appear. Drag a corner handle and the shape scales. Drag the handle above the box and it rotates. `Ctrl+Z` undoes one of those edits.
 
-Drag a corner dot toward the inside of the rectangle. The corners round. The object is still a rectangle. Look at Transform if you want the radius as a number. You have not created a path.
+Drag a corner dot toward the inside of the rectangle and the corners round. The object is still a rectangle, not a path. Check Transform if you want the radius as a number.
 
-Hold Shift and drag the object sideways. The motion stays horizontal, vertical, or at 45 degrees, whichever your drag is closest to. Release. Hold Alt and drag. A second rectangle appears. Release Alt and the drag. Click the original, then Shift-click the clone, so both are selected. Drag. Both move. Shift-click the clone again. It leaves the selection.
+Hold Shift and drag the object sideways. It moves horizontally, vertically or at 45 degrees, whichever is closest to your drag. Release, then hold Alt and drag, and a second rectangle appears. Click the original and Shift-click the clone so both are selected, then drag, and both move. Shift-click the clone again to take it out of the selection.
 
-Hold Shift and drag a box around several objects to add them. Release. Drag one selected object. The set moves.
+Hold Shift and drag a box around several objects to add them. Release, then drag one of the selected objects, and the whole set moves.
 
 ```text
 Ctrl+T
 ```
 
-You are in Move with the handles ready, which is where `V` already put you. Scale the type you placed with `T`. Double-click it and the characters are still characters. The scale did not run **Convert to path**.
+You're in Move with the handles ready, which is where `V` had already put you. Scale some type you placed with `T`, then double-click it. The characters are still characters, because scaling didn't run **Convert to path**.
 
-`Ctrl+Shift+;` toggles snapping if the equal-spacing lines are in your way. Or hold Ctrl for one drag and let go. The HUD will show that modifier while it is down, at the same strip height.
+If the equal-spacing lines get in your way, press `Ctrl+Shift+;` to toggle snapping, or hold Ctrl for one drag. The HUD shows the modifier while it's held.
 
-Double-click into a group when one child has to move alone. Click outside, or select another object, when you want the group to behave as a unit again. `Ctrl+G` groups the current selection. `Ctrl+Shift+G` ungroups. Neither chord is required to use Move. They change what "the object" is.
+Double-click into a group when one child has to move on its own. Click outside or select another object to make the group act as a unit again. `Ctrl+G` groups the selection and `Ctrl+Shift+G` ungroups. You don't need either to use Move, but they change what counts as "the object."
 
-Save with `Ctrl+S`. Reopen. The radius, the rotation, and the clone are still in the `.oma`.
+Save with `Ctrl+S` and reopen. The radius, the rotation and the clone are all still in the `.oma`.
 
 ## The edge
 
-Corner dots round a rectangle. They do not convert it to a path. Node tool edits do that conversion the first time you edit the shape as points. **Object → Break path** is the explicit command. Move refuses that conversion so a radius stays a radius you can change again tomorrow.
+Corner dots round a rectangle without converting it to a path. The Node tool converts it the first time you edit the shape as points, and **Object > Break path** is the explicit command. Move doesn't convert, so the radius stays a value you can change later.
 
-Move does not outline live text. Scale and rotate leave the text object editable. **Object → Convert to path** is how you ask for outlines, and undo restores the text. Free transform shares this refusal. Reshape is the mode that converts a live shape or live text when you move the first cage handle. That is a different tool, under **Object → Reshape**.
+Move doesn't outline live text. Scaling and rotating leave the text editable. **Object > Convert to path** is how you ask for outlines, and undo restores the text. Free transform follows the same rule. Reshape, under **Object > Reshape**, is the separate tool that converts a live shape or live text when you move the first cage handle.
 
-A click on the canvas returns `Ctrl+[` and `Ctrl+]` to object stacking. Those chords reorder layers while a layer row is the selection target. Click the layer row when you want reorder.
+A click on the canvas switches `Ctrl+[` and `Ctrl+]` back to object stacking. Those shortcuts reorder layers while a layer row is the target, so click the row when you want to reorder.
 
-Selecting a path does not by itself create an undo step. Moving, scaling, rotating, cloning, and rounding do. Undo matches those edits, one step each.
-
-Press `V`. Drag. Hold Shift to constrain. Hold Alt and drag when you want the clone.
+Selecting a path doesn't create an undo step. Moving, scaling, rotating, cloning and rounding do, one step each.

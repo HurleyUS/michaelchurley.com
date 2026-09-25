@@ -11,109 +11,178 @@ coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-adobe-familiar-tool-keys/og.pn
 
 ## The habit
 
-Your left hand already knows the letters. `V` selects. `A` is the direct selection or node tool, depending on which app taught you. `P` is the pen. `T` is type. `B` is the brush. `I` is the eyedropper. `Z` is zoom. `H` is the hand. Illustrator, Photoshop, and Affinity do not agree on every letter. They agree on enough of them that a new tool with a cute letter is a tax. `R` for rectangle and `O` for ellipse are in your hand from Illustrator. `J` for clone and `Shift+J` for the healing brush are in your hand from Photoshop. You want those letters on day one, and you want a strip on screen that tells you the rest without a trip to a PDF.
+If you have used Adobe or Affinity tools, you already know the letters. `V` selects. `A` is direct selection or the node tool, depending on which app taught you. `P` is the pen, `T` is type, `B` is the brush, `I` is the eyedropper, `Z` is zoom, and `H` is the hand. Illustrator, Photoshop, and Affinity don't agree on every letter, but they agree on enough that a new tool with an unusual letter costs people time. `R` for rectangle and `O` for ellipse come from Illustrator. `J` for clone and `Shift+J` for the healing brush come from Photoshop. You want those letters on day one, plus a strip on screen that shows the rest without opening a PDF.
 
-You also know the letters lie when the persona changes. Photoshop's `J` does nothing useful in Illustrator. The letter can stay. The tool it calls has to match the room you are in.
+You also know the letters change meaning between contexts. Photoshop's `J` does nothing useful in Illustrator. The letter can stay the same, but the tool it calls has to fit the persona you are in.
+
+Zoom has its own habits. `Z` is zoom. You drag a box around the detail you need to see and the view becomes that box. You click to step in and Alt-click to step out. Illustrator, Affinity, and Photoshop all do this, and have since the tool had a magnifying glass icon. Fit is the other half. When you get lost at 1600% and need the page back, Ctrl-click with the zoom tool fits the artboard. A modified click fits the selection when you are working on one mark on a huge artboard. With nothing selected, that same modified click fits every object, so a stray path out on the pasteboard is included and you can see why the fit looked wrong. `Ctrl+0` fits, `Ctrl+1` is actual pixels, and plus and minus zoom in and out.
+
+The scroll wheel is where apps get it wrong. You scroll to move down the page and the whole window, panels included, changes size. Or you pinch the trackpad and the sidebars grow until the canvas is a stamp in the middle. Zoom belongs to the canvas. The panels, tool strip, and inspector are the desk, the canvas is the paper, and only the paper should zoom. Scroll-wheel zoom has never been consistent between apps either. Some want Ctrl and the wheel, some want Alt, and a trackpad wants a pinch. You may use all three in the same week, moving between a mouse at the desk and a laptop on the couch. Middle-drag is another habit, from apps that treat the wheel button as the hand. Two-finger scroll pans in some tools and zooms in others, and you find out which by losing your place in the picture.
+
+Panning is Space, held, in every drawing app you already use, and `H` is the hand you can leave selected. You hold Space while a shape tool is active, drag the paper, release Space, and you are back on the rectangle. If Space stayed stuck as the hand, the next drag would pan by accident. After Effects and Photoshop both use Space for the hand while you are looking, and for play once a timeline has focus. You already live with that double meaning, so the rule has to be obvious: it depends on which persona has the playhead.
+
+Photo work adds a few more habits. A grade can't be trusted until you have seen the eyelashes at full size. Photoshop taught this long ago: hold Space, the cursor becomes the hand, drag, let go, and you are back on your tool. `Ctrl+1` is actual pixels and `Ctrl+0` fits the window. Affinity Photo uses the same pair, and the Hand tool is still `H` when you want it to stay selected. Lightroom's develop view is the same idea with different controls: click the loupe, drag, fit, 1:1. In Omadesign, Photo has another reason to keep navigation cheap. The first thing you see is a preview, and full resolution appears when you zoom in. You have to be able to pan and zoom while that loads, or a big RAW becomes a frozen window with a spinner.
+
+The file and edit chords are just as ingrained. `Ctrl+Z` undoes and `Ctrl+Shift+Z` redoes. `Ctrl+S` saves. `Ctrl+C`, `Ctrl+V`, and `Ctrl+X` move objects through the clipboard. `Ctrl+A` selects everything, `Ctrl+N` makes a new document, and `Ctrl+O` opens one. `Ctrl+D` duplicates, except in Photoshop, where `Ctrl+D` drops a selection and duplicating uses a different chord. Many people have both habits. A Linux app that picks one and says nothing about the other will either drop a marquee the first time you try to duplicate a layer, or duplicate an object the first time you try to drop the marching ants. Save As is `Ctrl+Shift+S` in most people's heads, even when a cheat sheet writes it as Shift+S next to a Ctrl that already means Save. Place and Export need chords too, because you use them with the picture still open.
+
+Arranging has habits as well. In Illustrator, `Ctrl+G` groups and `Ctrl+Shift+G` ungroups. Pathfinder and the compound path command use different keys, because a group is a container you can still open and a compound is one path with holes. Photoshop's `Ctrl+G` groups layers too. Affinity keeps the same split between container and boolean. You reach for `Ctrl+]` and `Ctrl+Shift+]` to move through the stack, for `Ctrl+T` when you want the box with rotate and scale, and for a guides toggle you can press mid-drag. A cheat sheet that says "Ctrl+G combine" merges the container and the boolean into one chord. You then group when you meant to punch a hole, or look for Ungroup when releasing the hole uses a different key. The labels have to say which job each chord does.
+
+On a timeline, `K` or a diamond plants a key, and Home and End jump to the ends of the clip. Delete on a selected key removes the key. Delete on a layer removes the animation and leaves the drawing, and a second Delete removes the object. You never want the first Delete to throw away the poster.
 
 ## The constraint
 
-One binary, five personas, one key table. Design, Layout, Pixel, Photo, and Motion share the process and the `.oma`, except Photo's develop session which keeps its own history beside the camera file. If each persona shipped a private keymap, muscle memory would reset every time you pressed the persona you needed for the next ten minutes. The letters stay. The table refuses a letter that has no tool in that persona, so `S` does not invent a star in a room that has no star, and Photo does not turn `P` into a pen over a RAW file.
+Omadesign is one binary with five personas and one key table. Design, Layout, Pixel, Photo, and Motion share the process and the `.oma`, except that Photo's develop session keeps its own history beside the camera file. If each persona had a private keymap, your habits would reset every time you switched personas for the next ten minutes of work. So the letters stay the same, and the table ignores a letter that has no tool in the current persona. `S` doesn't create a star in a persona without one, and Photo doesn't turn `P` into a pen over a RAW file.
 
-The teacher has to stay out of the way. A shortcut overlay that takes keyboard focus steals the next letter from the tool you just asked about. The HUD is a strip. Hints are informational. Text editing and menus get their own context. `F1` opens the full list when the strip is not enough.
+The shortcut reminder has to stay out of the way. An overlay that takes keyboard focus would steal the next letter from the tool you just asked about. The HUD is a strip, its hints are informational only, and text editing and menus get their own context. `F1` opens the full list when the strip isn't enough.
+
+The studio is one window, shared by document tabs, the tool strip, the layers, the inspector, and the canvas. A zoom that scaled egui's interface would resize the very controls you need to zoom back out. So Ctrl with the scroll wheel, Alt with the scroll wheel, `Ctrl++`, `Ctrl+-`, and a trackpad pinch all zoom the canvas and never the panels. A `Ctrl++` that scaled the panels would wreck the HUD and the inspectors every time you framed a logo. The keys list states this explicitly because the mistake is so common. The Zoom tool can be more specific, because you chose it by pressing `Z`.
+
+Fit has two jobs, and they can't share one click. The artboard is the page and the selection is the work. Ctrl-click with `Z` fits the artboard. Ctrl+Shift-click fits the selection, or every object when nothing is selected. `Ctrl+0` is Fit in the shortcut list, and `Ctrl+1` is 100%, actual size, which is the only reliable view for judging type. Those chords work while you are on other tools, because making someone switch to `Z` just to reach 100% is how the wrong size ships.
+
+Space can't mean both pan and play in the same persona. Motion uses Space as a play toggle, and every other persona, including Photo, uses it as a held pan. The key table stays one table, and the persona decides which meaning applies. The hand key has to stay a pan everywhere, because Space changes meaning by persona, so you learn `H` once and it still moves the paper while you animate. In Photo there is no clip to play, so Space belongs to the hand, as it does in Photoshop when you retouch. You never hold a modifier to tell the app which Space you meant.
+
+Photo doesn't get its own zoom language either. `Ctrl+0` fits a Design artboard and fits a photo, and `Ctrl+1` is 100% in both. The keys list is one list, `F1` shows it, and the Shortcut HUD shows the tool you are holding. If Photo used some other chord for Fit, you would have to relearn the studio every time you switched tabs. Photo pans with Space or Hand, middle-drag, and two-finger scroll, and zooms with pinch, Ctrl+scroll, and Alt+scroll. The Design page uses the artboard as its fit target, and Photo uses the photograph. The fingers are the same, and the target is whatever is in front of you.
+
+The Photo view is not a develop control. Panning and zooming can't write a sidecar, crop, or add an undo step you would have to undo before reaching a real exposure change. Crop is its own tool, `C`. Enter applies a crop drag, and Esc cancels it with a status message saying the crop was cancelled. Navigation never commits anything. The preview is also size-limited so the interface stays responsive. The first display preview has a maximum edge of 1600 pixels. When you zoom in, full-resolution detail is prepared in the background and shown as tiles for the area you can see, and panning and zooming keep working while those tiles arrive. A navigation gesture that waited for the full decode would defeat its own purpose.
+
+One `.oma` has one view. Fit and 100% get you back to a known magnification, and the artwork's history is still where you undo edits.
+
+The key table is one function. Ctrl, or the command modifier, is the prefix, and Shift picks the alternate on the same letter. The table can't treat duplicate differently in every persona without breaking the single keymap, and it can't ignore the Photoshop habit on a pixel selection without training you to undo duplicates you didn't want. So duplicate is the D chord, and Pixel adds one condition. If a pixel selection is active and the chord is Ctrl without Super, `Ctrl+D` clears the marching ants and doesn't duplicate. `Super+D` always duplicates in place, including in Pixel while ants are active. The canvas menu labels **Duplicate** as Super+D so the label matches the chord that always duplicates. The manual states both: Duplicate is Super+D, and a pixel selection clears on Ctrl+D.
+
+Redo has two chords because people already use both: `Ctrl+Shift+Z` and `Ctrl+Y`. The manual lists the Shift chord, and the key table accepts both.
+
+File chords are global, so they still work when an inspector field has focus. Edit chords aren't global. A text box keeps its letters, and pasting while editing text inserts into the text.
+
+The object-editing personas share one key table, and Photo doesn't group vectors, so those chords do nothing there. Everywhere else, the table keeps four operations on four chords. Group creates an editable layer group. Ungroup releases that group and never runs a boolean. Compound builds one compound shape, and Release compound takes it apart. Each is one undo step, like a nudge.
+
+Guides and snapping are view settings, so they need chords you can press during a drag without opening the View menu. Snapping in particular has to invert for a single gesture. The common case is that snapping is on, one drop needs to ignore it, and snapping should come back when you let go. That temporary invert is holding Ctrl during the drag. It uses the same Ctrl people know from other apps, and it doesn't stick after you release the mouse.
+
+Free transform has to put you in the Move tool with live handles while keeping text and shape parameters editable. A transform that outlined type would be a different command, and that command already exists as Convert to path.
+
+Delete on the timeline follows an order, because one key does three jobs. A selected diamond comes first. If no diamond is selected and the object has animation, the animation goes and the drawing stays. If the object has no animation, Delete removes the object, the same Delete the rest of the studio uses. Motion doesn't get a private Delete that skips that order.
 
 ## What landed
 
+### Tool letters
+
 These are the tool letters, with no modifier, from the manual and the key table:
 
-`V` Move. Click selects, drag moves, eight handles scale, the handle above the box rotates. Shift-click adds or removes. Alt-drag clones.
+`V` Move. Click selects, drag moves, eight handles scale, and the handle above the box rotates. Shift-click adds or removes. Alt-drag clones.
 
 `A` Node. Points and Bézier handles. Shift-click adds a node to the selection. Alt-click toggles corner and smooth. Alt-drag breaks a handle. Delete removes selected points.
 
-`P` Pen. Click a corner, click-drag a smooth point. Shift constrains to 45 degrees. Enter or double-click finishes an open path. Escape drops the last point, then cancels. Click the first point to close.
+`P` Pen. Click for a corner, click-drag for a smooth point. Shift constrains to 45 degrees. Enter or double-click finishes an open path. Escape drops the last point, then cancels. Click the first point to close.
 
-`N` Pencil. `R` Rectangle. `O` Ellipse. `Y` Polygon. `S` Star, in Design and Layout. `L` Line. Shift constrains. Corner radius, sides, and inner radius sit in Transform.
+`N` Pencil. `R` Rectangle. `O` Ellipse. `Y` Polygon. `S` Star, in Design and Layout. `L` Line. Shift constrains. Corner radius, sides, and inner radius are in Transform.
 
-`T` Type. Click, type, Enter for a new line, Escape or a click away to finish. Double-click existing type to edit it.
+`T` Type. Click, type, press Enter for a new line, and press Escape or click away to finish. Double-click existing type to edit it.
 
-`G` Gradient, dragged across a selected shape. The active Fill or Stroke row in Appearance chooses which paint you are editing. Stops you already made stay.
+`G` Gradient, dragged across a selected shape. The active Fill or Stroke row in Appearance decides which paint you are editing, and stops you already made stay.
 
-`I` Eyedropper. `U` Trace, raster to vector on the active pixel layer. `B` Brush. `E` Eraser. `K` Fill. `J` Clone, Alt-click to set the source. `Shift+J` Healing brush in Pixel, Alt-click clean texture, then paint. `M` Smudge in Pixel. `C` Crop. `W` Wand. `H` Hand. `Z` Zoom.
+`I` Eyedropper. `U` Trace, raster to vector on the active pixel layer. `B` Brush. `E` Eraser. `K` Fill. `J` Clone, with Alt-click to set the source. `Shift+J` Healing brush in Pixel: Alt-click clean texture, then paint. `M` Smudge in Pixel. `C` Crop. `W` Wand. `H` Hand. `Z` Zoom.
 
-A few letters sit next to that set because the same table owns them. `F` is Frame in Layout. `Q` is the lasso. `Shift+O` is the Artboard tool in Design, and the elliptical marquee in Pixel. `Shift+M` is the rectangular marquee in Pixel. `Shift+A` toggles auto-layout on a Layout selection. Photo's letter tools are Hand, Zoom, Crop, and Eyedropper. The other letters do nothing there.
+A few more letters live in the same table. `F` is Frame in Layout. `Q` is the lasso. `Shift+O` is the Artboard tool in Design and the elliptical marquee in Pixel. `Shift+M` is the rectangular marquee in Pixel. `Shift+A` toggles auto layout on a Layout selection. Photo's letter tools are Hand, Zoom, Crop, and Eyedropper, and the other letters do nothing there.
 
-`[` and `]` change brush size. `Shift+[` and `Shift+]` change hardness. Those are plain keys. With Ctrl they belong to stacking, which is a different chord.
+`[` and `]` change brush size, and `Shift+[` and `Shift+]` change hardness. Those are plain keys. With Ctrl, the brackets control stacking instead.
 
-The Shortcut HUD sits on the bottom of the window. The upper row follows the current tool. The lower row shows letter keys. Hold Ctrl, Shift, Alt, or a combination and the strip shows the matching commands. It keeps its height so a drag does not jump. Hover **+ more** when the window is too narrow for every hint. `Ctrl+/` or **View → Shortcut HUD** shows or hides it. `F1` opens the full shortcut list, and the same key closes it.
+The Shortcut HUD sits at the bottom of the window. The upper row follows the current tool and the lower row shows letter keys. Hold Ctrl, Shift, Alt, or a combination, and the strip shows the matching commands. It keeps a fixed height so the canvas doesn't jump during a drag. Hover **+ more** when the window is too narrow for every hint. `Ctrl+/` or **View > Shortcut HUD** shows or hides it. `F1` opens the full shortcut list, and the same key closes it.
 
-While you are editing text, letters go into the text. A field in the inspector swallows non-global shortcuts. Save, open, and the HUD toggle still work. The tool letter does not.
+While you are editing text, letters go into the text. A focused inspector field takes all shortcuts except the global ones. Save, open, and the HUD toggle still work there, and tool letters don't.
+
+### Zoom, fit, and pan
+
+Press `Z` and drag a box, and the view becomes that area. Click to zoom in one step and Alt-click to zoom out one step. Ctrl-click fits the artboard. Ctrl+Shift-click fits the selection, or every object if nothing is selected.
+
+Pinch the trackpad to zoom the canvas. `Ctrl++` zooms in and `Ctrl+-` zooms out. The key table treats `=` as plus, so the chord works without Shift on a US layout and with Shift where plus is the shifted key. Ctrl+scroll and Alt+scroll zoom the canvas, and with the Zoom tool selected, two-finger scroll zooms too. That is the trackpad version of "I am on the zoom tool, so the gesture zooms." Pinch zooms the canvas even when you aren't on `Z`. None of these resize the interface.
+
+Press `H`, or hold Space, and drag to pan. This works in Design, Layout, Pixel, and Photo, as long as you aren't editing text. When you release Space, you are back on the previous tool. Leave `H` selected when you are only navigating.
+
+`Ctrl+0` fits and `Ctrl+1` is 100%. You can use them, along with the zoom chords, while a shape tool is active, so you never have to put the rectangle down to see it larger. The stacking chords and the rest of the Ctrl chords keep their own meanings.
+
+In Motion, Space plays, and Home and End jump. The hand tool is still how you pan when play has the spacebar. If you try to pan and a clip starts instead, you are in Motion, so press `H` and drag.
+
+Zooming doesn't change snapping or guides. You see more or less of the same canvas, and `Ctrl+;` still shows or hides guides. A zoomed-in node edit uses the same Node tool with the points on the artwork. You are closer, in the same document.
+
+In Photo, hold **Space** and drag the photo, then release Space to get your previous tool back. Press **H** and the Hand tool stays selected until you pick something else, which suits spending a while in one corner of the file. The Photo tool keys are **H**, **Z** (Zoom), **C** (Crop), and **I** (the eyedropper). Middle-drag pans, and so does two-finger scroll, so you can move through a frame with the wheel button held or with the trackpad gesture you use to scroll a page. Pinch, **Ctrl+scroll**, and **Alt+scroll** all zoom. Both modifier-scroll habits work here, so habits from other apps carry over.
+
+```
+Ctrl+0    fit the photo
+Ctrl+1    100%
+```
+
+In Photo, **Ctrl+0** fits the photo in the view and clears the pan, so you see the whole frame instead of whatever corner you had dragged to. **Ctrl+1** shows the photo at 100% and clears the pan the same way, so you land on actual pixels, centered. That is the view for checking sharpening, noise, and whether Detail was a good idea. **Ctrl++** and **Ctrl+-** are the keyboard zoom steps, the same chords as the rest of the studio, and they scale the Photo view while you are in the persona. Scroll and pinch are for when your hand is on the pointing device, and the keys are for when it isn't.
+
+None of this writes `.omaphoto` or moves a develop slider. The view only lets you inspect the grade you set. Zoom in far enough and the full-resolution tiles fill in behind the magnifier while the preview stays responsive, so you can grade a large RAW without the window locking up to build a full-size bitmap you didn't need yet.
+
+### File and edit chords
+
+`Ctrl+Z` undoes. `Ctrl+Shift+Z` redoes, and so does `Ctrl+Y`.
+
+`Ctrl+S` saves, and `Ctrl+Shift+S` is Save As. The save dialog is the native file dialog, filtered to `.oma`, with the document name filled in.
+
+`Ctrl+O` opens. The dialog's filters are All supported, omadesign, Photo settings, Camera RAW, Layered documents, Images, and Vector. `Ctrl+N` opens a new tab. `Ctrl+Shift+P` places: the file loads in the background, then you click or drag to set it down. Enter places at the center and Escape cancels. Nested layers and masks travel together, and Undo removes the placement in one step.
+
+`Ctrl+E` exports. The export dialog suggests a filename of `export` plus the suffix of the format you are writing.
+
+`Ctrl+A` selects all. In Photo, `Ctrl+A` selects all loaded photos in the library, which is the selection paste adjustments uses. It doesn't select vector objects there, because Photo doesn't have those tools.
+
+`Ctrl+C` copies, and the status bar says `copied N object` or `copied N objects`. Objects copied inside Omadesign paste at their original positions, including onto another artboard. `Ctrl+X` copies and then deletes, and the status bar says `cut` when the copy succeeded. `Ctrl+V` pastes, and the status bar says `pasted` plus the count. Alt-drag clones under the pointer. The menu's Duplicate and `Super+D` clone in place.
+
+`Ctrl+V` also accepts a screenshot, an image copied from a browser, a copied image file, plain text, and SVG source or an SVG file. External content lands in the center of the visible canvas. Images become pixel layers, text becomes an editable text layer, and SVG becomes vectors. Command+V works through Omarchy's universal paste, and Shift+Insert from the Alt+V clipboard history picker pastes too. Pasting during a text edit inserts into that text.
+
+`Ctrl+Alt+C` copies style and `Ctrl+Alt+V` pastes style. The status line says `style copied` when the copy works.
+
+In Pixel, with a marquee, lasso, or wand selection active, `Ctrl+D` clears it and `Super+D` duplicates the object in place. With no pixel selection, `Ctrl+D` duplicates, as in the other personas. In Design, Layout, and Motion, `Ctrl+D` duplicates.
+
+Photo doesn't use the object copy, cut, paste, or duplicate chords. Copy adjustments is `Ctrl+Shift+C` and Paste adjustments is `Ctrl+Shift+V`. After a copy, the status line says the adjustments were copied and that crop and rotation are excluded. Those two chords move a look between pictures. They are documented with the Photo tools, and the key table only enables them in that persona.
+
+### Arrange, transform, and guides
+
+The key table and the manual agree, and the canvas menu shows the same chords.
+
+`Ctrl+G` groups, and the menu says **Group**. The selection becomes an editable layer group, and you can still double-click in to edit a child. `Ctrl+Shift+G` ungroups, and the menu says **Ungroup**. The children come out, and their paths aren't combined.
+
+`Ctrl+8` makes a compound. The menu says **Compound shape**, and the item stays disabled until at least two objects are selected. `Ctrl+Shift+8` releases the compound. With Shift held, the window system can report the number-row 8 as a punctuation key, so the handler treats that physical key as 8 and the chord still works.
+
+Combine and Release keep guide state, rotation, stacking, and gradient endpoints, in one undo step. They require either all artwork or all guides, never a mix. Shape gradients follow the resulting silhouette. Pathfinder, under **Object > Pathfinder**, is the separate boolean set: Union, Subtract, Intersect, XOR, and Divide. Those are menu operations on two or more vectors on the same layer. Divide makes separate pieces and keeps holes. Each is one undo, and none of them use the G chord.
+
+For stacking, select a layer row. `Ctrl+]` moves it forward, `Ctrl+[` moves it backward, `Ctrl+Shift+]` sends it to the front of its group, and `Ctrl+Shift+[` sends it to the back. The menu items **Bring to front** and **Send to back** run the Shift chords. Click an object on the canvas and the same shortcuts apply to object stacking. Each reorder undoes in one step. Without Ctrl, `[` and `]` control brush size, so the modifier is the only difference.
+
+`Ctrl+T` is free transform, also under Object. The selection goes to the Move tool with scale and rotate handles ready. Live text stays live text and shape parameters stay parameters. Flip is in the right-click and Object menus, horizontal or vertical, and it follows the canvas axes after rotation. Live text has to be converted to a path before a flip will outline it, and Undo restores the text.
+
+`Ctrl+;` shows or hides ruler guides and object guides. `Ctrl+Shift+;` toggles snapping. Hold Ctrl during a drag to reverse snapping for that drag only, and release Ctrl to get your saved setting back. The View menu still has the individual snapping switches. Guides start locked. **View > Guides** has Lock all guides and a separate command that clears every lock. The ruler menu and **Object > Guides** offer lock, clear all, and the same unlock command.
+
+`Ctrl+/` toggles the Shortcut HUD. `F1` opens the full list and closes it again.
+
+### Motion keys
+
+In Motion, Space doesn't pan. It toggles playback, and the status line says `play` or `pause`. `K` writes keys for X, Y, rotation, and scale on the selection, with ease-in-out. Diamonds appear on the row, and you drag a diamond to retime it. Home sets the playhead to 0 and stops. End sets the playhead to the clip duration and stops. Looping uses the repeat icon and has no key.
+
+Delete in Motion: click a diamond and press Delete, and that key goes. The status says `key removed`, and the object and its other keys stay. Click the object name on the timeline, or leave the diamonds unselected, and Delete removes the animation from the selected artwork. The status says `animation removed`, and the drawing stays. Press Delete again and the object itself goes, because with the animation gone, Delete falls through to the normal object delete.
+
+Dragging a shape in Motion writes keys at the playhead. The first key at a time past zero also plants the rest pose at 0, so the motion starts from where you drew the shape. Presets in the inspector (Draw stroke, Pop in, Slam, Shake, Fill up, the slides, Fly, Zoom, Buzz, Fade in) become ordinary keys, and each application has its own Undo. Space previews. Incompatible, locked, hidden, and guide objects are skipped. Draw stroke needs a visible stroke, and Fill up needs a closed shape with a fill.
+
+The drawing is the rest pose, and Motion never changes it. PNG, JPEG, and static SVG export the rest pose, and the clip lives in the `.oma`. **File > Export animated SVG…** writes transforms plus stroke and fill reveals. **File > Export Lottie…** writes Bodymovin 5 shape animation. Pixel layers, layer masks, and effects make the Lottie export fail with a clear error, so use animated SVG for those. **Import Lottie…** brings a shape-layer Lottie onto the timeline, as a basic subset. The `.oma` keeps the full edit.
 
 ## In the hand
 
-Open a blank vector document. The default persona is Design. Press `R` and drag a rectangle. Press `P` and draw a short path. Press `T`, click, and type. Press `V` and move the rectangle. Press `A` and drag a point. That is the first minute the manual describes.
+Open a blank vector document, which starts in the Design persona. Press `R` and drag a rectangle. Press `P` and draw a short path. Press `T`, click, and type. Press `V` and move the rectangle. Press `A` and drag a point. That is the first minute the manual describes.
 
-Press `B`. If you are still on vectors only, add a pixel layer before you expect paint. Press `[` twice and watch the brush shrink. Press `E` and erase. Press `I` and sample. Press `Z` and click to zoom in, Alt-click to zoom out, or drag a box. Press `H` and pan. Space does the same pan while you hold it, as long as you are not in Motion.
+Press `B`. If the document only has vectors, add a pixel layer before you expect paint. Press `[` twice and watch the brush shrink. Press `E` and erase, then `I` and sample.
 
-Switch to Layout. Press `F` and drag a frame. `R` and `T` still work. Press `S`. The star is legal here. Switch to Pixel. Press `J`, Alt-click a source, and clone. Press `Shift+J` and heal. Press `M` and smudge. Press `W` and drag the wand. Press `Q` and draw a lasso.
+Switch to Layout and press `F` to drag a frame. `R` and `T` still work, and `S` draws a star here. Switch to Pixel. Press `J`, Alt-click a source, and clone. Press `Shift+J` and heal, `M` and smudge, `W` and drag the wand, and `Q` to draw a lasso.
 
-Switch to Photo and open a picture. Press `C` and crop. Press `I`. Press `Z`. Press `H`. Press `P`. Nothing arms a pen. The letter is reserved, and this persona does not have that tool.
+Switch to Photo and open a picture. Press `C` and crop, then try `I`, `Z`, and `H`. Press `P` and nothing happens. The letter is reserved, and this persona has no pen.
 
-Press `F1` whenever a letter fails you. The list is the same table. Press `Ctrl+/` if the strip is in the way, and press it again when you want it back. Hold Shift while the strip is visible and read the constrained gestures before you drag.
+Press `F1` whenever a letter doesn't do what you expect, because the list is the same table. Press `Ctrl+/` if the strip is in the way, and again to bring it back. Hold Shift while the strip is visible to read the constrained gestures before you drag.
 
-## The edge
+Now zoom. Open a poster in Design. Press `Ctrl+0` and the artboard fits. Press `Ctrl+1` and you are at 100%, which is the view to use before you call a body size done. Press `Ctrl++` twice and `Ctrl+-` once. Press `Z` and drag a box around a wordmark, and the view fills with it. Click once for one more step. Alt-click until the poster is back to a size you can judge, or Ctrl-click to fit the artboard in one move.
 
-A letter that the persona does not implement does not fall through to a different tool. Photo keeps four tool letters. Star stays in Design and Layout. Smudge and the healing brush stay in Pixel. Text editing eats the letter until you leave the text. The HUD never takes focus, so reading a hint does not steal the next key.
+Select one icon, press `Z`, and Ctrl+Shift-click. The view fits that icon. Deselect and Ctrl+Shift-click again, and the view fits every object, including the one you left off the board. That is how you find it.
 
-Press `V`, then `F1` if you want the rest of the table in front of you.
+Hold Space while you are on the pen and drag the canvas until the next point is in view. Release Space and click the point. The pen was the tool the whole time, and the spacebar only borrowed the hand. Try it with `V`, `P`, or `T` selected. Space never switches tools. It only pans while held.
 
-## Zoom and hand
-
-### The habit
-
-Z is zoom. You drag a box around the knot you need to see, and the view becomes that box. You click to step in. You Alt-click to step out. Illustrator does this. Affinity does this. Photoshop does this. The hand has done it since the tool had a magnifying glass icon. You do not want a tour of the zoom menu. You want the knot.
-
-Fit is the other half. You get lost at 1600% and you need the page back. Ctrl-click with the zoom tool fits the artboard. A modified click fits the selection when you are working on one mark and the artboard is huge. If nothing is selected, that same modified click fits every object, so a stray path off in the pasteboard still gets included and you can see why the fit felt wrong.
-
-The wheel is where apps embarrass themselves. You scroll to move down the page and the entire window, panels included, changes size. Or you pinch the trackpad and the sidebars grow until the canvas is a stamp in the middle. Zoom belongs to the canvas. The chrome stays put. Panels, tool strip, inspector: they are the desk. The canvas is the paper. Only the paper zooms.
-
-Pan is Space, held, in every drawing app you already use. H is the hand you can leave selected. You hold Space while a shape tool is active, you drag the paper, you release Space, and you are back on the rectangle. If Space stuck as the hand, you would draw a pan by accident on the next drag.
-
-### The constraint
-
-The studio is one window. Document tabs, the tool strip, the layers, the inspector, and the canvas share it. A zoom that scaled egui's chrome would resize the controls you need in order to zoom back, which is a trap. Ctrl and the scroll wheel, Alt and the scroll wheel, Ctrl++, Ctrl+-, and a trackpad pinch all zoom the canvas. The keys say so because the mistake is so common.
-
-Fit has two jobs and they cannot share one click. The artboard is the page. The selection is the work. Ctrl-click on Z fits the artboard. Ctrl+Shift-click fits the selection, or every object when the selection is empty. Ctrl+0 is Fit from the shortcut list. Ctrl+1 is 100%, actual size, which is the only honest answer when you are judging type. Those chords stay available while you are on other tools, because making someone switch to Z to hit 100% is how people ship the wrong size.
-
-Space pans in Design. H pans. In Motion, Space plays the timeline. The hand key has to remain a pan, because Space's meaning follows the persona. You learn H once and it still moves the paper when you are animating. Photo uses Space or Hand to drag the view, middle-drag and two-finger scroll to pan, and pinch, Ctrl+scroll, and Alt+scroll to zoom. Ctrl+0 fits the photo there. Ctrl+1 is 100%. The Design page uses the artboard as its fit target. The photograph uses the photograph. Same fingers, the object in front of you.
-
-With Z selected, two-finger scroll zooms. That is the trackpad version of "I am in the zoom tool, so the gesture zooms." Pinch zooms the canvas even when you are not on Z.
-
-One `.oma`, one view of it. Fit and 100% are how you get back to a known magnification. History on the artwork stays the place you undo edits.
-
-### What landed
-
-Press Z. Drag a box. The view becomes that area. Click to zoom in one step. Alt-click to zoom out one step. Ctrl-click fits the artboard. Ctrl+Shift-click fits the selection. If nothing is selected, Ctrl+Shift-click fits every object.
-
-Pinch the trackpad to zoom the canvas. Ctrl++ zooms in. Ctrl+- zooms out. The plus key on the chord also accepts the equals key, the one you actually hit without hunting for plus. Ctrl+scroll zooms the canvas. Alt+scroll zooms the canvas. With Z selected, two-finger scroll zooms. None of these resize the chrome.
-
-Press H, or hold Space, and drag to pan. Release Space and the previous tool is what you are holding. Leave H selected when you are only navigating.
-
-Ctrl+0 fits. Ctrl+1 is 100%. Front and back and the rest of the Ctrl chords stay themselves. Zoom in and out are the plus and minus chords above. You can run them while a shape tool is active. You do not park the rectangle to see it larger.
-
-In Motion, Space plays. Home and End jump. The hand tool is still how you pan when play owns the spacebar. In Photo, Space pans, because there is no timeline play on that spacebar. If a pan does nothing useful and a clip starts, you are in Motion. Press H and drag.
-
-Snapping and guides are unchanged by zoom. You see more or less of the same canvas. Ctrl+; still shows or hides guides. A zoomed-in node edit is the same Node tool. The points stay on the artwork. You got closer. You did not switch documents.
-
-### In the hand
-
-Press Z. Drag a box around a wordmark. The view fills with it. Click once if you need one more step. Alt-click until the poster is back to a size you can judge. Or Ctrl-click to fit the artboard in one move.
-
-Select one icon. Press Z and Ctrl+Shift-click. The view fits that icon. Deselect, Ctrl+Shift-click again, and the view fits every object, including the one you left off the board. That is how you find it.
-
-Press Ctrl+1 before you call a body size done. 100% is the shortcut. Press Ctrl+0 when you want Fit and your hand is not on Z.
-
-Hold Space while you are on the pen. Drag the canvas until the next point is in view. Release Space. Click the point. The pen was the tool the whole time. The spacebar borrowed the hand.
-
-On a trackpad, pinch. The canvas zooms. The layers stay the width they were. If you are on Z, a two-finger scroll zooms as well.
+On a trackpad, pinch, and the canvas zooms while the layers panel stays the same width. If you are on `Z`, a two-finger scroll zooms as well.
 
 ```
 Z                  Zoom
@@ -128,62 +197,15 @@ Ctrl+1             100%
 H  or  Space       Pan
 ```
 
-The scroll chords are Ctrl+scroll and Alt+scroll. They zoom the canvas. Pinch does the same. The panels stay put, which is the entire point of aiming the gesture at the paper.
+The scroll chords are Ctrl+scroll and Alt+scroll. They zoom the canvas, and so does pinch. The panels stay put, which is the point of aiming the gesture at the paper.
 
-### The edge
-
-Zoom refuses the chrome. Panels, the tool strip, and the inspector keep their size. The canvas takes Ctrl++, Ctrl+-, Ctrl+scroll, Alt+scroll, pinch, and the Z tool. A wheel gesture that resized the whole window is the bug this binding is there to prevent.
-
-Space pans the Design canvas. In Motion, Space plays the clip. H is the pan that stays a pan.
-
-Press Z, drag a box around the knot, and hold Space when you need to slide the paper without leaving the tool in your other hand.
-
-## Photo navigation
-
-### The habit
-
-The grade is a lie until you have seen the eyelashes. Photoshop trained the hand a long time ago. Hold Space, the cursor becomes the hand, you drag, you let go, and you are back on the tool you were using. Ctrl+1 is actual pixels. Ctrl+0 fits the window. Affinity Photo uses the same pair, and the Hand tool is still H when you want it latched. Lightroom's develop view is the same idea with a different set of reminders: click the loupe, drag, fit, 1:1.
-
-Scroll-wheel zoom never agreed with itself. Some apps want Ctrl and the wheel. Some want Alt. A trackpad wants a pinch. You have all three habits in the same week, because you move between a mouse at the desk and a laptop on the couch. Middle-drag is the other one, from the apps that treat the wheel button as the hand. Two-finger scroll on a trackpad is pan in some tools and zoom in others. You find out by ruining your place in the picture.
-
-Photo in this studio has one more reason to keep the view cheap. The first thing you see is a preview. The full resolution shows up when you go looking for it. The hand has to be able to pan and zoom while that work happens, or a big RAW is a frozen window with a spinner where the eye should be.
-
-### The constraint
-
-One binary means Photo does not get its own zoom language. **Ctrl+0** fits a Design artboard. **Ctrl+0** fits a photo. **Ctrl+1** is 100% in both places. The keys list is one list. **F1** shows it. The Shortcut HUD shows the tool you are holding. A photo persona that invented Fit as Ctrl+9 would be a studio you have to relearn every time you switch tabs.
-
-Space is already spoken for in Motion, where Space plays. In Photo there is no clip to play. Space belongs to the hand, the way it belongs to the hand in Photoshop when you are retouching. The persona is the switch. You do not hold a modifier to tell the app which Space you meant. You are in Photo, so Space drags.
-
-The view is not a develop slider. Panning and zooming cannot write a sidecar, cannot crop, and cannot become an undo step you have to peel off before you can undo a real exposure change. Crop is its own tool, **C**. Enter applies a crop drag. Esc cancels it and the status says the crop was cancelled. Navigation stays off that commit.
-
-The preview underneath is bounded so the UI can stay live. The first display preview has a maximum edge of 1600 pixels. Zoom in and the full-resolution detail is prepared in the background and shown as the tiles you can see. The pan and the zoom have to keep working while those tiles arrive. A navigation gesture that waits for the full decode has failed the reason it exists.
-
-### What landed
-
-Hold **Space** and drag the photo. Release Space and the previous tool is yours again. Press **H** and the Hand tool stays down until you pick something else. **Z** is Zoom. **C** is Crop. **I** is the eyedropper. Those are the Photo tool keys. Hand is the one that matches a latched pan when you are going to be in the corner of the file for a while.
-
-Middle-drag pans. Two-finger scroll pans. You can move through a frame with the wheel button held, or with the trackpad gesture you already use to move a page. Pinch zooms. **Ctrl+scroll** zooms. **Alt+scroll** zooms. Both modifier-scroll habits do the same job here, so the week you spent in the other app still works.
-
-```
-Ctrl+0    fit the photo
-Ctrl+1    100%
-```
-
-**Ctrl+0** fits the photo in the view and clears the pan, so you are looking at the whole frame and not at whatever corner you had dragged into. **Ctrl+1** shows the photo at 100% and clears the pan the same way. You land on actual pixels, centered, which is the check for sharpening, noise, and whether Detail was a good idea.
-
-**Ctrl++** and **Ctrl+-** are the keyboard zoom steps, the same chords as the rest of the studio. They scale the Photo view while you are in the persona. Scroll and pinch are there when the hand is already on the pointing device. The keys are there when it is not.
-
-None of this writes `.omaphoto`. None of this moves a develop slider. The grade you set is the grade you set. The view is how you inspect it. Zoom in far enough and the full-resolution tiles fill in behind the magnifying glass while the preview stays responsive. You can grade a large RAW without the window locking up to prepare a private full-size bitmap you did not need yet.
-
-### In the hand
-
-Open a RAW. The viewer shows the preview, max edge 1600. Fit it if the window has you cropped by accident.
+In Photo, open a RAW. The viewer shows the preview, with a maximum edge of 1600 pixels. If the window has you cropped by accident, fit it.
 
 ```
 Ctrl+0
 ```
 
-Hold Space. Drag until the eye, or the label, or the edge of the product is in the middle. Let go of Space. You are back on the tool you had, sliders still the sliders. If you want the hand to stay, press **H** and drag without holding Space. Pick another Photo tool when you are done panning. **Z** zooms. **C** crops. **I** samples. Release Space and you are back on the tool you were holding.
+Hold Space and drag until the eye, the label, or the edge of the product is in the middle. Let go of Space, and you are back on your previous tool with the sliders unchanged. If you want the hand to stay, press **H** and drag without holding Space, then pick another Photo tool when you are done: **Z** zooms, **C** crops, and **I** samples.
 
 Zoom into the detail:
 
@@ -191,184 +213,56 @@ Zoom into the detail:
 Ctrl+1
 ```
 
-That is 100%, pan cleared. Drag again with Space, or middle-drag, or a two-finger scroll, to walk the frame at actual pixels. Pinch, or hold Ctrl and roll the wheel, or hold Alt and roll the wheel, to go further. The tiles for the full image prepare in the background. The view keeps moving while they land. You can see which parts are still the preview and which parts have caught up, because the detail arrives as visible tiles.
+That is 100% with the pan cleared. Drag with Space, middle-drag, or two-finger scroll to move around the frame at actual pixels. Pinch, or hold Ctrl or Alt and roll the wheel, to go further. The full-image tiles prepare in the background and the view keeps moving while they arrive. You can see which parts are still the preview and which have caught up, because the detail arrives as visible tiles.
 
-Press **Ctrl+0** when you need the whole picture again. The pan offset goes away with the fit. Decide about the grade from the whole frame, then come back to 100% before you trust Detail.
+Press **Ctrl+0** when you need the whole picture again, and the pan offset resets with the fit. Judge the grade from the whole frame, then come back to 100% before you trust Detail.
 
-Crop is a different gesture. Press **C**, drag, Enter to commit, Esc to cancel. Fitting the view never commits a crop. A sidecar appears when you save settings, not when you drag the picture around.
+Crop is a separate gesture. Press **C**, drag, press Enter to commit, or Esc to cancel. Fitting the view never commits a crop, and a sidecar only appears when you save settings.
 
-### The edge
+For the file and edit chords, draw two rectangles, press `Ctrl+A`, then `Ctrl+C`, and read the status bar. Press `Ctrl+N`, then `Ctrl+V` in the new tab, and the rectangles land at the same positions. Press `Ctrl+Z` to remove them in one step.
 
-Navigation refuses to become an edit. Fit, 100%, pan, and zoom do not write a `.omaphoto`, do not change crop or rotation, and do not take a step on the Photo undo stack. The camera file stays as it was. The sliders stay as you left them.
+Press `Ctrl+Alt+C` on a styled shape, select another, and press `Ctrl+Alt+V`. The fill, stroke, and effects that style copy carries move across, and the geometry stays.
 
-Space in this persona refuses to play anything. There is no timeline under a photograph. Hold Space and you drag the view. Play is what Space does after you switch to Motion, on a clip that actually exists.
+Press `Ctrl+S` and pick a folder in the native dialog, and the file is a `.oma`. Press `Ctrl+Shift+S` when you want a second file. The first file keeps its path.
 
-Press Ctrl+1, hold Space, and drag across the real pixels before you trust the grade.
+Press `Ctrl+Shift+P`, choose a PNG or an SVG, and click the canvas. Press Escape if the preview is wrong, or Enter to place at the center. `Ctrl+Z` removes the placement.
 
-## File and edit keys
+Switch to Pixel and drag a marquee. Press `Ctrl+D` and the ants clear, with no new layer. Press `Super+D` and a duplicate appears in place. Press `Ctrl+D` again with the ants already gone, and that one duplicates.
 
-### The habit
+Open Photo and develop a frame. Press `Ctrl+Shift+C`, select other thumbnails, and press `Ctrl+Shift+V`. Crop stays put unless you turn that category on. Pressing `Ctrl+S` there writes `.omaphoto` sidecars, which is the photo save, separate from the poster save.
 
-`Ctrl+Z` undoes. `Ctrl+Shift+Z` redos. `Ctrl+S` saves. `Ctrl+C`, `Ctrl+V`, `Ctrl+X` move objects through the clipboard. `Ctrl+A` selects everything you meant. `Ctrl+N` is a new document. `Ctrl+O` opens one. `Ctrl+D` duplicates, except in Photoshop, where `Ctrl+D` drops a selection and you duplicate with a different chord. You have both habits in the same hand. A Linux app that picks one and stays silent about the other will eat a marquee the first time you try to copy a layer, or it will clone an object the first time you try to drop ants.
+While a text layer is in edit mode, `Ctrl+V` types the clipboard into the paragraph. Press Escape to finish the edit, and `Ctrl+V` pastes objects again.
 
-Save As is `Ctrl+Shift+S` in your head even when a cheat sheet writes it as Shift+S next to a Ctrl that already covers Save. Place and Export need chords too, because those are file operations you do with the picture still open.
+To try arranging, draw three rectangles and press `Ctrl+G`. They move as a group. Double-click one and nudge it. Press `Ctrl+Shift+G` and you have three objects again. Press `Ctrl+Z` and the group returns, because ungrouping was one step.
 
-### The constraint
+Select two of them and press `Ctrl+8` to make one compound, and look at the holes if they overlap. Press `A` and the contours are still editable. Press `Ctrl+Shift+8` to get two shapes back, then `Ctrl+Z`, and the compound returns in one step, with gradient endpoints included if you had painted a gradient.
 
-The key table is one function. Ctrl or the command modifier is the prefix. Shift picks the alternate on the same letter. The table cannot special-case "duplicate" differently in every persona without breaking the one keymap, and it cannot ignore the Photoshop habit on a pixel selection without training you to undo a clone you did not want.
+Select a layer row and press `Ctrl+Shift+]`, and it moves to the front of its group. Press `Ctrl+[` and it steps back one. Press `Ctrl+Z` twice and you are back where you started.
 
-So duplicate is the D chord, and Pixel adds one gate. If a pixel selection is up and the chord is Ctrl without Super, `Ctrl+D` clears the marching ants and does not clone. `Super+D` duplicates in place, including in Pixel, including while ants are up. The canvas menu prints **Duplicate** as Super+D so the label matches the chord that always means duplicate. The manual states both: Duplicate is Super+D, and a pixel selection clears on Ctrl+D.
+Press `Ctrl+T` on live text and scale the box. The characters are still characters. Press Escape or click away, then press `T` and double-click to keep typing. Press `Ctrl+T` on a rectangle and drag a corner, and the rectangle's parameters survive.
 
-Redo has two chords because both are already in people's hands: `Ctrl+Shift+Z` and `Ctrl+Y`. The manual lists the Shift chord. The key table accepts both.
+Drag a guide out of the top ruler. Press `Ctrl+;` and it hides, and press it again to show it. Press `Ctrl+Shift+;` and drag an object toward the guide, and the snap line appears or not depending on the toggle. Hold Ctrl mid-drag and the snap setting flips for that gesture. Let go of Ctrl before you release the mouse if you want the saved setting back for the drop.
 
-File chords stay global. They still fire when an inspector field is focused. Edit chords do not. A text box keeps its letters. Paste while you are editing text inserts into the text.
+Press `Ctrl+/` to hide the HUD while you judge spacing, and `F1` when you need the whole table. If you prefer to see labels, right-click the canvas with several objects selected. Group, Ungroup, and Compound shape are listed there with their keys, and Compound shape is grayed out until two objects are selected.
 
-### What landed
+For Motion, switch personas and select a rectangle. Press `K`, and diamonds appear for position, rotation, and scale. Move the playhead and drag the rectangle to add more keys. Press Space and the status says `play`, and press it again for `pause`. Press Home to go to the start with playback stopped, and End to go to the end, stopped.
 
-`Ctrl+Z` undoes. `Ctrl+Shift+Z` redos. `Ctrl+Y` redos as well.
+Click one diamond and press Delete. That key is gone and the shape is still on the canvas. Press Delete with no diamond selected, and the animation goes while the shape stays at the rest pose. Press Delete once more if you meant to remove the shape too. `Ctrl+Z` steps back through those deletes one at a time.
 
-`Ctrl+S` saves. `Ctrl+Shift+S` is Save As. The save dialog is the native file dialog, filtered to `.oma`, with the document name filled in.
+Apply **Fade in** from the inspector and press Space. The preset became keys, and `Ctrl+Z` removes that application. If the frame is all vectors, export Lottie from the File menu. If a pixel layer is in the way, the exporter tells you, and animated SVG is the export that keeps masks and effects.
 
-`Ctrl+O` opens. The dialog's filters are All supported, omadesign, Photo settings, Camera RAW, Layered documents, Images, and Vector. `Ctrl+N` is a new tab. `Ctrl+Shift+P` places. The file loads in the background, then you click or drag to set it down. Enter places at the center. Escape cancels. Nested layers and masks travel together, and Undo removes the placement in one step.
+## The edge
 
-`Ctrl+E` exports. The export dialog asks for a filename of the form `export` plus the suffix you are writing.
+A letter the current persona doesn't implement never falls through to a different tool. Photo keeps four tool letters. Star stays in Design and Layout. Smudge and the healing brush stay in Pixel. Text editing takes the letter until you leave the text. The HUD never takes focus, so reading a hint never steals the next key.
 
-`Ctrl+A` selects all. In Photo, `Ctrl+A` selects all loaded photos in the library, which is the selection paste-adjustments uses. It does not select vector objects, because you are not in that tool set.
+Zoom never touches the interface. Panels, the tool strip, and the inspector keep the UI scale you set, while the canvas responds to `Ctrl++`, `Ctrl+-`, Ctrl+scroll, Alt+scroll, pinch, and the `Z` tool. This binding exists to prevent the bug where a wheel gesture resizes the whole window.
 
-`Ctrl+C` copies. The status bar says `copied N object` or `copied N objects`. Objects copied inside Omadesign paste at their original positions, including onto another artboard. `Ctrl+X` copies and then deletes. The status bar says `cut` when the copy succeeded. `Ctrl+V` pastes. The status bar says `pasted` plus the count. Alt-drag clones under the pointer. The menu's duplicate and `Super+D` clone in place.
+Space pans everywhere except Motion. In Motion it plays and pauses the clip and never drags the canvas, and `H` is the pan that always stays a pan. In Photo, Space never plays anything, because there is no timeline under a photograph.
 
-`Ctrl+V` also accepts a screenshot, an image copied from a browser, a copied image file, plain text, and SVG source or an SVG file. External content lands in the center of the visible canvas. Images become pixel layers. Text becomes an editable text layer. SVG becomes vectors. Command+V works through Omarchy's universal paste. Shift+Insert from the Alt+V clipboard-history picker pastes too. Paste during text edit inserts into that text.
+Navigation is never an edit. Fit, 100%, pan, and zoom don't write a `.omaphoto`, change crop or rotation, or add a step to the Photo undo stack. The camera file stays as it was and the sliders stay where you left them.
 
-`Ctrl+Alt+C` copies style. `Ctrl+Alt+V` pastes style. The status line says `style copied` when the copy lands.
+Once a pixel selection exists, `Ctrl+D` clears it and `Super+D` duplicates. Photo's clipboard chords are the adjustment pair, `Ctrl+Shift+C` and `Ctrl+Shift+V`. A paste into live text stays in the text. The file dialog is the desktop's own dialog, and the chords above open it.
 
-In Pixel, with a marquee, lasso, or wand selection active, `Ctrl+D` clears it. `Super+D` duplicates the object in place. With no pixel selection, `Ctrl+D` duplicates, same as the other personas. In Design, Layout, and Motion, `Ctrl+D` duplicates.
+`Ctrl+G` groups. It never builds a compound, and `Ctrl+Shift+G` never releases one. The boolean pair is `Ctrl+8` and `Ctrl+Shift+8`, and Combine rejects a mix of artwork and guides. Holding Ctrl reverses snapping only for the drag in progress. Photo ignores the group chords, and brush size keeps the bare bracket keys.
 
-Photo does not use the object copy, cut, paste, or duplicate chords. Copy adjustments is `Ctrl+Shift+C`. Paste adjustments is `Ctrl+Shift+V`. The status line on a copy says the adjustments were copied and that crop and rotation are excluded. Those two chords are how a look moves between pictures. They are documented with the Photo tools, and the key table only enables them in that persona.
-
-### In the hand
-
-Draw two rectangles. Press `Ctrl+A`. Press `Ctrl+C`. Read the status bar. Press `Ctrl+N`, then `Ctrl+V` in the new tab. The rectangles land at the same positions. Press `Ctrl+Z` if you want them gone in one step.
-
-Press `Ctrl+Alt+C` on a styled shape. Select another. Press `Ctrl+Alt+V`. Fill, stroke, and effects that style copy carries move across. The geometry stays.
-
-Press `Ctrl+S`. Pick a folder in the native dialog. The file is a `.oma`. Press `Ctrl+Shift+S` when you want a second file. The first path stays the first path.
-
-Press `Ctrl+Shift+P`, choose a PNG or an SVG, and click the canvas. Escape if the ghost is wrong. Enter if you want the center. `Ctrl+Z` lifts the placement.
-
-Switch to Pixel. Drag a marquee. Press `Ctrl+D`. The ants clear. The layer count does not change. Press `Super+D`. A duplicate appears in place. Press `Ctrl+D` with the ants already gone. That one duplicates.
-
-Open Photo. Develop a frame. Press `Ctrl+Shift+C`. Select other thumbnails. Press `Ctrl+Shift+V`. Crop stays put unless you turn that category on. Press `Ctrl+S` there to write `.omaphoto` sidecars. That save is the photo save, not the poster save.
-
-While a text layer is in edit mode, `Ctrl+V` types the clipboard into the paragraph. Escape finishes the edit. Then `Ctrl+V` pastes objects again.
-
-### The edge
-
-Once a pixel selection exists, `Ctrl+D` clears it and `Super+D` duplicates. Photo's clipboard chords are the adjustment pair, `Ctrl+Shift+C` and `Ctrl+Shift+V`. Paste into live text stays in the text. The file dialog is the desktop's dialog, and the chords above are what open it.
-
-Press `Ctrl+S` when the picture is the one you mean to keep.
-
-## Arrange and transform keys
-
-### The habit
-
-In Illustrator, `Ctrl+G` groups and `Ctrl+Shift+G` ungroups. The Pathfinder and the compound-path command are different keys, because a group is a container you can still open and a compound is one path with holes. Photoshop's `Ctrl+G` is a group too, once you are in layers. Affinity keeps the same split between the container and the boolean. Your hand already reaches for `Ctrl+]` and `Ctrl+Shift+]` to walk the stack, for `Ctrl+T` when you want the box with rotate and scale, and for a guides toggle you can hit without leaving the drag.
-
-A cheat sheet that writes "Ctrl+G combine" collapses the container and the boolean into one chord. You will group when you meant to punch a hole, or you will look for Ungroup when the command that releases the hole is a different key. The labels have to say which job the chord does.
-
-### The constraint
-
-One key table, shared by the personas that edit objects. Photo does not group vectors, so those chords stay dark there. Everywhere else the table has to keep four operations on four chords. Group creates an editable layer group. Ungroup releases that group and does not run a boolean. Compound builds one compound shape. Release compound takes it apart. Each of those is one undo step, same as a nudge.
-
-Guides and snapping are view state. They need chords you can hit during a drag without opening View. Snapping in particular has to invert for one gesture, because the classic move is: snapping is on, this one drop has to ignore it, then snapping returns when you let go. That temporary invert is hold Ctrl during the drag, and it has to be the same Ctrl you already trust from other apps, without sticking after the mouse comes up.
-
-Free transform has to land you in the move tool with the handles live, and it has to leave text and shape parameters editable. A transform that outlines type on the way in is a different command, and that command already exists as Convert to path.
-
-### What landed
-
-The key table and the manual agree, and the canvas menu prints the same chords.
-
-`Ctrl+G` groups. The menu says **Group**. The selection becomes an editable layer group. You can still double-click in to edit a child. `Ctrl+Shift+G` ungroups. The menu says **Ungroup**. Children come out. Paths are not combined.
-
-`Ctrl+8` is compound. The menu says **Compound shape** and the item stays disabled until at least two objects are selected. `Ctrl+Shift+8` releases the compound. Shift on the number row can look like a punctuation key to the window system. The handler treats that physical 8 as 8, so the chord still resolves.
-
-Combine and Release keep guide state, rotation, stacking, and gradient endpoints, in one undo step. They want either artwork or guides, with no mixture. Shape gradients follow the silhouette that results. Pathfinder, under **Object → Pathfinder**, is the other boolean set: Union, Subtract, Intersect, XOR, and Divide. Those are menu operations on two or more vectors on the same layer. Divide makes separate pieces and keeps holes. Each one is one undo. They are not the G chord.
-
-Stacking: select a layer row and `Ctrl+]` moves it forward, `Ctrl+[` moves it backward, `Ctrl+Shift+]` sends it to the front of its group, `Ctrl+Shift+[` sends it to the back. The menu items **Bring to front** and **Send to back** call the Shift chords. Click an object on the canvas and the same shortcuts apply to object stacking. Each reorder undoes in one step. With no Ctrl, `[` and `]` belong to brush size. The modifier is the whole difference.
-
-`Ctrl+T` is free transform. The selection goes to the Move tool with scale and rotate handles ready. It is also under Object. Live text stays live text. Shape parameters stay parameters. Flip is the right-click or Object menu, horizontal or vertical, and it follows the canvas axes after rotation. Live text has to be converted to a path before a flip will outline it. Undo restores the text.
-
-`Ctrl+;` shows or hides ruler guides and object guides. `Ctrl+Shift+;` toggles snapping. Hold Ctrl during a drag to reverse snapping for that drag only. Release Ctrl and the toggle you saved comes back. View still has the individual snapping switches. Guides start locked. **View → Guides** has Lock all guides and a separate command that clears every lock. The ruler menu and **Object → Guides** offer lock, clear-all, and that same release.
-
-`Ctrl+/` toggles the Shortcut HUD. `F1` opens the full list and closes it again.
-
-### In the hand
-
-Draw three rectangles. Press `Ctrl+G`. They move as a group. Double-click one and nudge it. Press `Ctrl+Shift+G`. Three objects again. Press `Ctrl+Z` and the group returns, because ungroup was one step.
-
-Select two of them. Press `Ctrl+8`. One compound. Look at the holes if they overlap. Press `A` and the contours are still editable. Press `Ctrl+Shift+8`. Two shapes. Press `Ctrl+Z`. The compound returns in one step, gradient endpoints included if you had painted one.
-
-Select a layer row. Press `Ctrl+Shift+]`. It sits at the front of its group. Press `Ctrl+[` and it steps back one. Press `Ctrl+Z` twice. You are where you started.
-
-Press `Ctrl+T` on live text. Scale the box. The characters are still characters. Press Escape or click away, then `T` and double-click to keep typing. Press `Ctrl+T` on a rectangle and drag a corner. The rectangle's parameters survive.
-
-Drag a guide out of the top ruler. Press `Ctrl+;`. It hides. Press the chord again. It shows. Press `Ctrl+Shift+;` and drag an object toward the guide. The snap line appears, or it does not, depending on the toggle. Hold Ctrl mid-drag. The snap decision flips for that gesture. Let go of Ctrl before you let go of the mouse if you want the saved mode back for the drop.
-
-Press `Ctrl+/` if you want the HUD gone while you judge spacing. Press `F1` when you need the whole table, including the chords this page is about.
-
-Right-click the canvas on a multi-selection if you would rather see the labels. Group, Ungroup, and Compound shape are printed there with the keys. Compound shape is grey until two objects are selected.
-
-### The edge
-
-`Ctrl+G` groups. It does not build a compound, and `Ctrl+Shift+G` does not release one. The boolean pair is `Ctrl+8` and `Ctrl+Shift+8`. Combine refuses a mixture of artwork and guides. Holding Ctrl reverses snapping for the drag under your hand and then gives the toggle back. Photo does not take the group chords. Brush size keeps the bare bracket keys.
-
-Select two shapes and press `Ctrl+8` when you want one compound. Press `Ctrl+G` when you want a group.
-
-## View and motion keys
-
-### The habit
-
-`Ctrl+0` fits the artboard. `Ctrl+1` is actual pixels. Plus zooms in, minus zooms out. Space grabs the canvas and pans, and you expect to keep holding it while the other hand clicks. A trackpad pinch does the same zoom. After Effects and Photoshop both use Space for the hand while you are looking, and both use Space again for play once a timeline has focus. You already live with that overload. The rule has to be obvious: which room has the playhead.
-
-On a timeline, `K` or a diamond is how you plant a key. Home and End jump the clip. Delete on a selected key removes the key. Delete on the layer removes the animation and leaves the drawing, and a second Delete removes the object. You do not want the first Delete to throw away the poster.
-
-### The constraint
-
-The view chords are global enough to share, and they have to zoom the canvas, not the widget chrome. A Ctrl+plus that scaled the panels would wreck the HUD and the inspectors every time you framed a logo. Pinch, Ctrl-scroll, and Alt-scroll follow the same rule. The Zoom tool is allowed to be more specific, because you opted into it with `Z`.
-
-Space cannot mean pan and play in the same persona at the same moment. Motion owns Space as a toggle. Every other persona owns Space as a held pan, including Photo. The key table stays one table. The persona decides which interpretation runs. That is the "one keymap" in practice: the same letters, gated by where you are, not a second scheme you memorize for the timeline.
-
-Delete on the timeline has an order, because one key is doing three jobs. A selected diamond wins. If no diamond is selected and the object has animation, the animation goes and the drawing stays. If the object has no animation, Delete removes the object, which is the same Delete the rest of the studio uses. Motion does not get a private Delete that skips that order.
-
-### What landed
-
-`Ctrl+0` fits. `Ctrl+1` is 100 percent. `Ctrl++` zooms in. The key table treats `=` as plus, so the chord works without Shift on a US layout and with Shift where plus is the shifted key. `Ctrl+-` zooms out. Pinch the trackpad. Ctrl-scroll and Alt-scroll zoom the canvas. With the Zoom tool selected, two-finger scroll zooms too.
-
-`Z` is the tool. Drag a box to fill the view with that box. Click zooms in one step. Alt-click zooms out one step. Ctrl-click fits the artboard. Ctrl+Shift-click fits the selection, or every object if nothing is selected.
-
-`H` is the hand. Hold Space and the canvas pans, in Design, Layout, Pixel, and Photo, as long as you are not editing text. Photo also pans on middle-drag and two-finger scroll. `Ctrl+0` fits the photo. `Ctrl+1` shows it at 100 percent. The same zoom chords apply.
-
-In Motion, Space does not pan. Space toggles playback. The status line says `play` or `pause`. `K` writes keys for X, Y, rotation, and scale on the selection, with ease-in-out on that command. Diamonds appear on the row. Drag a diamond to retime. Home sets the playhead to 0 and stops. End sets the playhead to the clip duration and stops. The loop control is the repeat icon, not a key.
-
-Delete in Motion: click a diamond, press Delete, and that key goes. The status says `key removed`. The object stays, and any other keys stay. Click the object name on the timeline, or leave the diamonds unselected, and Delete removes the animation from the selected artwork. The status says `animation removed`. The drawing stays. Delete again and the object itself goes, because the animation is already gone and Delete falls through to the normal object delete.
-
-Dragging a shape in Motion writes keys at the playhead. The first key at a time past zero also plants the rest pose at 0, so the motion starts from where you drew it. Presets in the inspector, Draw stroke, Pop in, Slam, Shake, Fill up, the slides, Fly, Zoom, Buzz, Fade in, become ordinary keys. Each application has its own Undo. Space previews. Incompatible, locked, hidden, and guide objects are skipped. Draw stroke wants a visible stroke. Fill up wants a closed shape with a fill.
-
-The drawing is the rest pose. Motion does not rewrite it. PNG, JPEG, and static SVG export the rest pose. The clip lives in the `.oma`. **File → Export animated SVG…** writes transforms plus stroke and fill reveals. **File → Export Lottie…** writes Bodymovin 5 shape animation. Pixel layers, layer masks, and effects make the Lottie export fail with a clear error. Use animated SVG for those. **Import Lottie…** brings a shape-layer Lottie onto the timeline. It is a basic subset. The `.oma` keeps the full edit.
-
-### In the hand
-
-Open a poster in Design. Press `Ctrl+0`. The artboard fits. Press `Ctrl+1`. You are at 100 percent. Press `Ctrl++` twice and `Ctrl+-` once. Hold Space and drag. Let go. The tool you had, `V` or `P` or `T`, is still the tool. Space did not switch tools. It panned while it was down.
-
-Press `Z`. Drag a box around the wordmark. Alt-click once to step out. Ctrl-click to fit the board again.
-
-Switch to Motion. Select a rectangle. Press `K`. Diamonds show for position, rotation, and scale. Move the playhead and drag the rectangle. More keys. Press Space. The status says `play`. Press Space again. `pause`. Press Home. You are at the start and playback is stopped. Press End. You are at the end, stopped.
-
-Click one diamond. Press Delete. That key is gone. The shape is still on the canvas. Press Delete with no diamond selected. The animation leaves. The shape remains at the rest pose. Press Delete once more if you meant to remove the shape too. Press `Ctrl+Z` to walk that backward one decision at a time.
-
-Apply **Fade in** from the inspector. Press Space. The preset became keys. `Ctrl+Z` removes that application. Export Lottie from the File menu if the frame is vectors. If a pixel layer is in the way, the exporter tells you, and animated SVG is the path that keeps masks and effects.
-
-### The edge
-
-Space pans everywhere except Motion. In Motion it plays and pauses, and it will not drag the canvas. Delete removes the selected key first, the animation second, the object third. It does not skip to deleting the drawing while keys or an animation are still selected. Lottie export refuses pixel layers, masks, and effects. The view chords zoom the canvas. They leave the panels at the UI scale you set.
-
-Switch to Motion and press Space. The playhead moves. Press `K` on the selection when you want keys at this frame.
+In Motion, Delete removes the selected key first, then the animation, then the object. It never skips ahead to deleting the drawing while a key or an animation is still there. Lottie export rejects pixel layers, masks, and effects.

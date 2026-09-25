@@ -11,47 +11,75 @@ coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-pen-tool/og.png
 
 ## The habit
 
-The pen is the tool you judge a drawing program by. Illustrator's Pen is P. Affinity's is P. You click a corner. You click and drag a smooth point, and two handles come out. You hold Shift when the next segment has to sit on a horizontal, a vertical, or a diagonal. You hold Alt when one handle has to break away from its twin so the curve can change direction without a cusp you did not want, or with a cusp you did.
+People judge a drawing program by its pen. Illustrator's Pen is P, and so is Affinity's. You click to place a corner. You click and drag to place a smooth point, and two handles come out. You hold Shift when the next segment has to sit on a horizontal, a vertical or a diagonal. You hold Alt when one handle has to break away from its twin, so the curve can change direction with or without a cusp, whichever you intended.
 
-You also know the small humiliations. A nervous click, two pixels of movement, and the tool lays down a smooth point with tiny handles. You spend the next minute deleting them. Esc nukes the entire path when you only wanted the last point back. Closing the path requires a ritual hover over the first point, and continuing an open path means hunting a command named Join after you have already left the tool.
+You also know the small annoyances. A nervous click moves two pixels, and the tool lays down a smooth point with tiny handles that you then spend a minute deleting. Esc deletes the entire path when you only wanted the last point back. Closing the path takes a careful hover over the first point, and continuing an open path means finding a command called Join after you have already left the tool.
 
-The cubic has to appear while you draw. If the curve shows up only after you release the path, you are drawing blind and correcting from memory. Anyone who has cut a logotype out of a scan knows that delay in their wrist.
+The cubic curve has to appear while you draw. If it only shows up after you release the path, you are drawing blind and correcting from memory. Anyone who has cut a logotype out of a scan knows that delay.
+
+Sometimes the pen is too careful for the job. You know the silhouette: a quick leaf, a hand-drawn underline, a wiggly rule under a headline, or a signature that has to sit in the poster as vectors. In Illustrator that is the Pencil, on N. Affinity Designer's Pencil tool does the same job, a freehand stroke that becomes a curve. You draw it the way you would on paper, then edit the points if a bump is wrong.
+
+Photoshop's brush looks similar but works differently. It lays down pixels that you smudge, erase and live with at a fixed resolution. A vector pencil has to end as a path, because the mark still needs a stroke width, a fill and anchors.
+
+Halfway through a loose stroke, you may need one segment to be exactly horizontal. In the apps you trust, Shift does that. It is the same Shift you hold to drag a shape in a straight line or to put a pen point on a diagonal. If the pencil had its own "straighten" modifier, you would forget it, and the stroke would wander on the one part that had to be exact.
+
+Freehand strokes often get lost in a separate sketching app. You draw them there, export an SVG, place the SVG, and the anchors come in as plain geometry. A pencil in the studio you already use keeps the stroke in the poster.
 
 ## The constraint
 
-The pen writes a path into the same `.oma` as the rectangles, the type, and the artboard. There is no sketch file beside the poster and no ink layer that has to be traced later by a different persona. A point you place is a point Node can edit, and a point you undo is one step.
+The pen and the pencil write paths into the same `.oma` as the rectangles, the type and the artboard. There is no separate sketch file and no ink layer that another persona has to trace later. Pencil is a Design tool on N, next to Pen on P in the same strip. Node can edit any point you place, the stroke inspector can style the curve, and Expand stroke can turn it into fills later if a vendor needs outlines. Undo is one step, so a point or a stroke you don't like is one Ctrl+Z. There is no history panel with a whole drawing session collapsed into one entry you can't partly keep.
 
-The gesture language has to match Node, because you switch between them every few seconds. Click, click-drag, Alt-drag, and Shift cannot mean one thing while the pen is down and another thing once the path exists. A designer who learns two dialects for the same handles will hit the wrong one under a deadline. The manual lists them in one table so the hand can memorize a single row.
+The pen's gestures have to match Node, because you switch between them every few seconds. Click, click-drag, Alt-drag and Shift have to mean the same thing while the pen is down and after the path exists. A designer who has to learn two sets of gestures for the same handles will use the wrong one under a deadline. The manual lists them in one table so there is only one set to memorize.
 
-Shift is already the constraint key for moves, for pencil strokes, and for artboard drags: horizontal, vertical, or 45 degrees. The pen uses that same key for points and handles. A special pen-only modifier would mean the left hand changes jobs every time the tool changes. One binary, one document, one modifier for "make this straight."
+Shift has one meaning across the drawing tools. The manual says it in one sentence: hold Shift to constrain pen points and handles, pencil and brush strokes, and object or artboard movement to horizontal, vertical or 45 degrees. Neither the pen nor the pencil gets its own modifier, so your left hand stays on Shift whether the tool is N, P or V.
 
-A twitch has to stay a corner. The threshold is a distance, 3 pixels, because a click is never perfectly still on a real mouse or a real trackpad. If every tremble became a curve, the corner tool would be a rumor.
+For the pencil, that constraint is the whole precision model. The pencil has no documented smoothing dialog and no separate sketch persona with a looser grid. The stroke is as exact as your use of Shift. Having the pencil guess a cleaner curve would mean storing a second version inside the stroke, so the studio keeps the curve you dragged.
+
+Brush strokes have an extra rule the pencil doesn't share. During a brush stroke, pressing Shift anchors the constraint at the last free point. The pencil follows the shared rule: horizontal, vertical or 45 degrees.
+
+A twitch has to stay a corner. The threshold is a distance of 3 pixels, because a click is never perfectly still on a real mouse or trackpad. If every tremble became a curve, you could never place a clean corner.
 
 ## What landed
 
-Press P. Click to place a corner. Click and drag to place a smooth point. If the drag moves less than 3 pixels, the point stays a corner. That twitch rule is the whole difference between a clean polygon and a path covered in accidental handles.
+### Pen
 
-Shift constrains the pen to 45 degrees. That covers the segment you are placing and the handles you are dragging. Alt-drag breaks handle symmetry, on the pen and later on the node. The cubic is drawn as you go, so the curve on screen is the curve in the path.
+Press P. Click to place a corner, or click and drag to place a smooth point. If the drag moves less than 3 pixels, the point stays a corner. That rule is the difference between a clean polygon and a path covered in accidental handles.
 
-Enter finishes an open path. Double-click finishes an open path. You use this when the stroke is a line that should not close: a tick, a divider, an arrow shaft. Esc removes the last point. Esc again cancels. The first press is an undo of the point. The path you still want stays on the canvas.
+Shift constrains the pen to 45 degrees, both for the segment you are placing and for the handles you are dragging. Alt-drag breaks handle symmetry, on the pen and later on the node. The cubic draws as you go, so the curve on screen is the curve in the path.
 
-Click the first point to close. The path becomes a closed shape you can fill.
+Enter or a double-click finishes an open path. Use this when the stroke should stay open, like a tick, a divider or an arrow shaft. Esc removes the last point, and a second Esc cancels the path. The first press only undoes the point, so the rest of the path stays on the canvas.
 
-Click an open endpoint to continue that path, or to join it to the path you are drawing. You do not leave the tool, copy both paths, and run a separate join command. The open end is a target.
+Click the first point to close the path into a shape you can fill.
 
-While you place points, snapping can see object edges, artboard edges, centers, guides, the grid, and equal spacing between nearby objects. Alignment lines and gap measurements show up as you move. Pen placement can use those repeated and balanced gaps, and Shift still constrains while it does. Ctrl+Shift+; toggles snapping. Hold Ctrl during the drag to reverse snapping for that drag, then release Ctrl and the previous choice returns.
+Click an open endpoint to continue that path, or to join it to the path you are drawing. You don't have to leave the tool, copy both paths and run a separate join command.
 
-Open paths take a centered stroke. Closed paths can use inside, center, or outside placement, and the stroke width field accepts values above 64 pixels. Those stroke decisions stay in the inspector. The pen does not bake them into anchors.
+### Pencil
+
+Press N and drag to get a freehand curve on the canvas with everything else you drew. Hold Shift while you drag and the stroke constrains to horizontal, vertical or 45 degrees, the same three directions Pen and Move use.
+
+The curve is path data. Switch to Node (A) and the points and handles are there to drag, insert, delete and convert between corner and smooth. Switch to Move (V) and the curve scales and rotates as an object, with the top handle for rotation and the eight handles for scale. Alt-drag clones it, and adding Shift to that Alt-drag keeps the copy on a constrained line.
+
+A freehand curve is usually open. If you need to close it, press P and click the endpoint to continue it with the pen. That works because the pencil leaves a real path with real ends.
+
+Brush is a different tool. B paints pixels on a pixel layer, with size on `[` and `]`. Pencil draws a curve, and it works in a vector-only document.
+
+### Shared by both
+
+While you draw, snapping can use object edges, artboard edges, centers, guides, the grid, and equal spacing between nearby objects. Alignment lines and gap measurements show up as you move. Pen placement can use repeated and balanced gaps, and Shift still constrains while it does. Ctrl+Shift+; toggles snapping. Hold Ctrl during a drag to reverse snapping for that drag, and the previous setting returns when you release Ctrl. A loose pencil line can land on a guide when you want it to, and ignore the guide when you hold Ctrl.
+
+Open paths take a centered stroke. Closed paths can use inside, center or outside placement, and the stroke width field accepts values above 64 pixels. Stroke settings stay in the inspector. The pen doesn't bake them into anchors.
 
 ## In the hand
 
-Press P. Click once where the mark should start. That is a corner. Move to the right, hold Shift, and click again. The segment locks to the horizontal. Release Shift. Click and drag at the shoulder of the curve. Handles appear, and the cubic bends while the mouse button is down. If the drag was a shiver and the point came out as a corner, that is the 3 pixel rule working. Click-drag again with a real pull.
+### Pen
 
-At the next change of direction, place the point, then Alt-drag one handle away from the other. The twin stays. The curve can come into the point from one angle and leave on another.
+Press P and click once where the mark should start. That places a corner. Move to the right, hold Shift and click again, and the segment locks to the horizontal. Release Shift. Click and drag at the shoulder of the curve. Handles appear, and the cubic bends while the mouse button is down. If your drag was a small shake and the point came out as a corner, that is the 3 pixel rule. Click and drag again with a real pull.
 
-Wrong point? Press Esc once. That point is gone. The earlier points remain. Press Esc again only when you mean to drop the in-progress path.
+At the next change of direction, place the point, then Alt-drag one handle away from the other. The other handle stays where it is, so the curve can come into the point from one angle and leave at another.
 
-To leave the path open, press Enter, or double-click. To close it, bring the pen back to the first point and click it. To extend a path you finished earlier, press P and click the open end, then keep drawing. Click the open end of a second path if the job is to join them.
+If you placed a point in the wrong spot, press Esc once. That point is gone and the earlier points remain. Press Esc again only when you want to drop the path in progress.
+
+To leave the path open, press Enter or double-click. To close it, bring the pen back to the first point and click. To extend a path you finished earlier, press P, click the open end and keep drawing. To join two paths, click the open end of the second one.
 
 ```
 P                 Pen
@@ -65,65 +93,21 @@ Esc               Drop the last point, then cancel
 Click first point Close
 ```
 
-Switch to A when the path is done and you need to move a point you already placed. The same Alt-drag breaks a handle. The same Shift holds a handle at 45 degrees. You are editing the path the pen just wrote.
+Switch to A when the path is done and you need to move a point. Alt-drag still breaks a handle and Shift still holds a handle at 45 degrees, because you are editing the path the pen just wrote.
 
-Ctrl+Z takes the last pen step back. Because undo is one step, you can walk a bad curve off the page point by point without a history branch named "pen session."
+Ctrl+Z takes back the last pen step. Because each step is one undo, you can remove a bad curve point by point.
 
-## The edge
+### Pencil
 
-A drag under 3 pixels refuses to become a curve. The point stays a corner. If you wanted handles, you drag them on purpose, far enough that the tool can tell.
+Press N. Put the cursor where the underline should start, drag the stroke in one motion, and let go. Look at it at the zoom you will present at. If it is wrong, press Ctrl+Z and drag again. Undo removes the whole stroke.
 
-Esc refuses to throw away the whole path on the first press. It removes the last point. The next Esc cancels. You always get one chance to keep the work that was already good.
+When the last third of the gesture has to be flat, hold Shift for that part of the drag, and the stroke locks to horizontal, vertical or 45 degrees. Release Shift and keep holding the button if you want the line to wander again. Shift only offers those three directions, so a 10 degree rise is something you draw without Shift.
 
-Press P, click the corner, and drag the smooth point far enough that the handles are the ones you meant.
+Press A to clean up a bump by dragging the point. If a handle is fighting you, Alt-drag to break symmetry, or Alt-click the point to switch between corner and smooth. Delete any point the freehand gesture doubled up. At this point you are using the node tool, because the pencil's job ended when you released the mouse.
 
-## Pencil freehand
+Give the curve a stroke color. X swaps fill and stroke if you are painting the wrong one, and D restores the default fill and stroke. Those are color keys, and they work on this curve because it is ordinary artwork.
 
-### The habit
-
-Sometimes the pen is the wrong kind of careful. You know the silhouette. A quick leaf, a hand-drawn underline, a wiggly rule under a headline, the gesture of a signature that has to sit in the poster as vectors. In Illustrator that is the Pencil, and the key is N. In Affinity Designer it is the Pencil tool, same job, a freehand stroke that becomes a curve. You draw it the way you would draw it on paper, and then you edit the points if a bump is wrong.
-
-Photoshop's brush is a different habit wearing a similar icon. The brush lays down pixels. You smudge them, you erase them, you live with resolution. The vector pencil has to end as a path, because the thing you are making is a mark that still has a stroke width, a fill, and anchors.
-
-The other habit is the constraint. Halfway through a loose stroke you need one segment to be actually horizontal. In the apps you trust, Shift does that. It is the same Shift you hold to drag a shape in a straight line, and the same Shift you hold so a pen point sits on a diagonal. If the pencil invented its own "straighten" modifier, you would forget it, and the stroke would wander on the one part that had to be strict.
-
-A separate sketching app is how these strokes usually get orphaned. You draw them somewhere else, you export an SVG, you place the SVG, and the anchors come in dumb. The pencil in the studio you are already using keeps the stroke in the poster.
-
-### The constraint
-
-Omadesign has one canvas for the drawing. Pencil is a Design tool, key N, next to Pen P in the same strip. The curve it writes is a path in the `.oma`. Node can take it. The stroke inspector can take it. Expand stroke can turn it into fills later if a vendor needs outlines. None of that requires a second file or a second program.
-
-Undo is one step, so a stroke you hate is Ctrl+Z, not a trip into a history panel with a pencil session collapsed into one opaque blob you cannot partially keep. You draw, you look, you undo, you draw again.
-
-Shift has one meaning across the drawing tools. The manual states it in a single sentence: hold Shift to constrain pen points and handles, pencil and brush strokes, and object or artboard movement to horizontal, vertical, or 45 degrees. The pencil does not get a private dialect. Your left hand stays on Shift whether the tool is N, P, or V.
-
-That constraint is the whole precision model. There is no smoothing dialog documented on the pencil, and there is no second "sketch persona" with a looser grid. The stroke is as exact as the Shift key you did or did not hold. People who want the pencil to guess a cleaner curve are asking for a second document living inside the stroke. This studio keeps the curve you dragged.
-
-Brush strokes have an extra rule the pencil does not borrow. During a brush stroke, pressing Shift anchors the constraint at the last free point. That sentence is about the brush. The pencil's documented deal is the shared one: horizontal, vertical, or 45 degrees.
-
-### What landed
-
-Press N. Drag. You get a freehand curve. It lives on the canvas with everything else you drew. Hold Shift while you drag and the stroke constrains to horizontal, vertical, or 45 degrees, the same three directions Pen and Move already use.
-
-The curve is path data. Switch to Node, A, and the points and handles are there to drag, insert, delete, and convert between corner and smooth. Switch to Move, V, and the curve scales and rotates as an object, with the top handle for rotation and the eight handles for scale. Alt-drag clones it, and Shift with that Alt-drag keeps the copy on a constrained line. Those are the object gestures, and the pencil's output is an object.
-
-Stroke settings apply. Open paths use a centered stroke. You can set a width, including a width above 64 pixels. A freehand curve is usually open. If you need it closed, the pen can continue an open end: press P and click the endpoint. That join is a pen feature, and it works because the pencil left a real path with real ends.
-
-Snapping still applies while you work. Object and artboard edges and centers, guides, the grid, and equal spacing are the targets. Alignment lines and gap measurements appear as you move. Ctrl+Shift+; toggles snapping. Hold Ctrl during a drag to reverse snapping until you release it. A loose pencil line can still land on a guide when you want it to, and it can ignore the guide when Ctrl says so.
-
-Brush is a different tool. B paints pixels on a pixel layer, with size on `[` and `]`. Pencil draws a curve. A vector-only document still takes N.
-
-### In the hand
-
-Press N. Put the cursor where the underline should start. Drag the shape of the stroke in one motion. Let go. Look at it at the zoom you will actually present. If it is wrong, Ctrl+Z and drag again. The undo is the stroke.
-
-When the last third of the gesture has to be flat, hold Shift for that part of the drag. The stroke locks to horizontal, vertical, or 45 degrees under the constraint. Release Shift when you want the line to wander again, and keep drawing if you are still holding the button. The directions available under Shift are only those three. A 10 degree rise is a stroke you draw without Shift.
-
-Press A. Clean up one bump. Drag the point. If a handle is fighting you, Alt-drag to break symmetry, or Alt-click the point to switch corner and smooth. Delete a point that the freehand gesture doubled up. You are in the node tool now. The pencil's job ended when you released the mouse.
-
-Give it a stroke color. X swaps fill and stroke if you are painting the wrong one. D restores the default fill and stroke. Those keys are the color studio's, and they apply to this curve because the curve is ordinary artwork.
-
-Duplicate a stroke you like with the duplicate shortcut, Super+D. Nudge the copy. A family of hand-drawn rules should be copies of a good one, edited, not six unrelated drags you then try to match by eye.
+Duplicate a stroke you like with Super+D and nudge the copy. A set of hand-drawn rules works better as edited copies of one good stroke than as six separate drags you try to match by eye.
 
 ```
 N            Pencil
@@ -134,12 +118,12 @@ A            Edit the points
 P            Continue an open end if you need to
 ```
 
-Save the `.oma`. The curve is in the project with the type and the rectangles. You do not export a sketch and place it back into the poster to keep it.
+Save the `.oma`. The curve is in the project with the type and the rectangles, so you never export a sketch and place it back into the poster.
 
-### The edge
+## The edge
 
-Shift refuses a free angle. While it is held, the pencil stroke is horizontal, vertical, or 45 degrees. That is the same rule as the pen and the move tool. The pencil will not keep a gentle diagonal and also call it constrained.
+A drag under 3 pixels won't become a curve, so the point stays a corner. If you want handles, drag far enough that the tool can tell.
 
-The stroke is the curve you dragged. You edit it with A. Nothing beside it gets generated and silently substituted.
+The first Esc won't throw away the whole path. It removes the last point, and only the next Esc cancels. You always get a chance to keep the part of the path that was already good.
 
-Press N, drag the mark, and hold Shift on the part that has to be straight.
+Shift doesn't allow a free angle. While you hold it, a pencil stroke is horizontal, vertical or 45 degrees, the same rule as the pen and the move tool. The stroke is the curve you dragged, and nothing gets generated or substituted for it. You edit it with A.

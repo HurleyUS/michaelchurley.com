@@ -11,47 +11,47 @@ coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-flip-horizontal-vertical/og.pn
 
 ## The habit
 
-Flip is one of the oldest gestures in the vector apps. Illustrator puts Flip Horizontal and Flip Vertical on the Transform panel and on the right-click menu. Affinity puts them on the same menu you use when a logo faces the wrong way. Photoshop flips a layer or a selection from Image or from Free Transform. The hand already knows the job. The mark points left. The layout needs it pointing right. You do not redraw it.
+Flip is one of the oldest commands in vector apps. Illustrator puts Flip Horizontal and Flip Vertical on the Transform panel and the right-click menu. Affinity has them on the menu you reach for when a logo faces the wrong way. Photoshop flips a layer or a selection from Image or from Free Transform. The job is always the same. The mark points left, the layout needs it pointing right, and you don't want to redraw it.
 
-The part that goes wrong is the axis. You rotated the wordmark twelve degrees so it would sit on a diagonal rule. Then you flip it. A lot of software mirrors the object in its own local box, or mirrors the unrotated geometry and leaves the angle looking inverted in a way you did not order. Gradients slide off the stroke. A dashed border mirrors in the bounding box and the dashes land on the wrong side of the corner. Uneven corner radii swap in local space and the heavy corner is suddenly on the wrong visual edge.
+What usually goes wrong is the axis. Say you rotated a wordmark twelve degrees to sit on a diagonal rule, then flipped it. A lot of software mirrors the object in its own local box, or mirrors the unrotated geometry, and the angle comes out inverted in a way you didn't ask for. Gradients slide off the stroke. A dashed border mirrors inside its bounding box and the dashes land on the wrong side of the corner. Uneven corner radii swap in local space, so the heavy corner ends up on the wrong visual edge.
 
-The other failure is type. You flip a live text frame and the letters either refuse, or they turn into something you can no longer retype. You wanted a mirrored outline for a foil stamp. You still wanted the headline editable on the version that is not stamped. Those are two different objects, and the habit has been to duplicate first and hope you remember which copy is still text.
+Type is the other problem. Flip a live text frame and the letters either refuse or turn into something you can't retype. Maybe you wanted a mirrored outline for a foil stamp and an editable headline on the unstamped version. Those are two different objects, and the usual workaround is to duplicate first and hope you remember which copy is still text.
 
 ## The constraint
 
-One `.oma` holds the poster. One undo step has to put the whole flip back: geometry, the angle you already applied, a linear gradient, a dashed stroke, the individual corner radii on a rectangle. If the flip rewrote a hidden unrotated copy and left the on-screen angle alone, undo would restore the wrong picture.
+One `.oma` holds the poster, and one undo step has to put the whole flip back: the geometry, the angle you already applied, a linear gradient, a dashed stroke, and the individual corner radii on a rectangle. If the flip rewrote a hidden unrotated copy and left the on-screen angle alone, undo would restore the wrong picture.
 
-The axes are the canvas axes you can see. Horizontal means left and right on the page. Vertical means top and bottom on the page. A rotated path does not get a private horizon. The same rule that keeps node handles on the visible artwork keeps the mirror on the visible artwork. Otherwise the file contains two orientations and the screen has to pick one.
+The axes are the canvas axes you can see. Horizontal means left and right on the page, and vertical means top and bottom on the page. A rotated path doesn't get its own private horizon. The same rule keeps node handles on the visible artwork and keeps the mirror there too. Otherwise the file would hold two orientations and the screen would have to pick one.
 
-Live text stays text until you say otherwise. A flip that silently converted every headline into outlines would destroy the thing the Type tool is for, and the single undo step would be the only way back to the words. The conversion is a separate command, with its own undo, so a mirror of letterforms is a decision you can see yourself make.
+Live text stays text until you say otherwise. If a flip silently turned every headline into outlines, it would break what the Type tool is for, and undo would be the only way back to the words. So conversion is a separate command with its own undo, and mirroring letterforms is a choice you make on purpose.
 
-Locked objects and hidden objects are out of reach. A flip that grabbed them anyway would change art you had already taken off the table. The command has to leave them alone.
+Locked and hidden objects are out of reach. You took them off the table, so the flip leaves them alone.
 
 ## What landed
 
-Right-click the artwork, or right-click its object row, and choose Flip horizontal or Flip vertical. Flip horizontal is left and right. Flip vertical is top and bottom. The same two commands live under Object and in the inspector. Arrange, Align, Flip H, and Flip V sit in that right-hand inspector, so you can run the mirror without leaving the selection you already have.
+Right-click the artwork or its object row and choose Flip horizontal or Flip vertical. Flip horizontal mirrors left and right. Flip vertical mirrors top and bottom. The same two commands are under Object and in the right-hand inspector, next to Arrange and Align, so you can flip without changing your selection.
 
-The flip follows the visible canvas axes after rotation. A card at fifteen degrees mirrors across the page, and the fifteen degrees stay part of the result you see. Linear gradients mirror with the art. Dashed strokes mirror. Individual rectangle corners mirror, so the heavy corner stays on the visual corner you intended after the flip.
+The flip follows the visible canvas axes after rotation. A card at fifteen degrees mirrors across the page, and the fifteen degrees stay part of what you see. Linear gradients, dashed strokes and individual rectangle corners mirror with the art, so the heavy corner stays on the visual corner you meant.
 
-Dashed rectangles and dashed ellipses become paths. A dash pattern is a placement along the outline, and a parameter shape cannot always mirror that placement and still be the same parameter shape. The conversion is there so the dashes land on the mirrored outline. Undo restores the original shape parameters. You get the rectangle back, dash and all, in one step.
+Dashed rectangles and dashed ellipses become paths when you flip them. A dash pattern is a placement along the outline, and a parameter shape can't always mirror that placement and stay the same parameter shape. Converting to a path puts the dashes on the mirrored outline. Undo restores the original shape in one step, dash and all.
 
-Right-click behavior follows the selection you actually have. Right-click another object and that object is the target. Right-click a member that is already inside the selection and the whole selection flips. You do not lose a multi-selection because you aimed at one of its pieces.
+Right-click follows the selection you have. Right-click an object outside the selection and that object is the target. Right-click a member of the current selection and the whole selection flips, so aiming at one piece doesn't drop the rest.
 
 Locked and hidden objects are left alone.
 
-Live text does not flip in place. Choose Object → Convert to path first. That conversion keeps the letter outlines and the holes inside letters such as a, e, o, and 8. It replaces editable text. Undo restores the text. After the outlines exist, Flip horizontal or Flip vertical mirrors them like any other path. The holes stay holes.
+Live text doesn't flip in place. Choose Object > Convert to path first. The conversion keeps the letter outlines and the holes inside letters such as a, e, o and 8, and it replaces the editable text. Undo brings the text back. Once the outlines exist, Flip horizontal or Flip vertical mirrors them like any other path, and the holes stay holes.
 
-Undo of the flip itself restores the artwork. You do not rebuild the gradient by hand.
+Undoing the flip restores the artwork, gradient included. You don't rebuild anything by hand.
 
 ## In the hand
 
-Select the wordmark with V. If it is still live text and you need a mirrored outline, choose Object → Convert to path before anything else. Look at a counter, the inside of an o, and confirm the hole is still open. Press Ctrl+Z if you converted too early. The words come back.
+Select the wordmark with V. If it's still live text and you need a mirrored outline, choose Object > Convert to path first. Check a counter, like the inside of an o, to confirm the hole is still open. If you converted too early, press Ctrl+Z and the words come back.
 
-With the path selected, right-click it on the canvas. Choose Flip horizontal. The mark faces the other way across the page. If the path was rotated, the tilt is still the tilt you see, mirrored on the canvas axis. Open the inspector and hit Flip V if the job was top to bottom. Or use the Object menu. The three entrances run the same flip.
+With the path selected, right-click it on the canvas and choose Flip horizontal. The mark now faces the other way across the page. If the path was rotated, the tilt you see is mirrored on the canvas axis. For top to bottom, use Flip V in the inspector or the Object menu. All three run the same flip.
 
-Now a dashed rounded rectangle. Rotate it first. Right-click the object row in the layer list, not the canvas, and choose Flip horizontal. The dashes move to the mirrored side. The corner weights follow. Press Ctrl+Z. The rectangle's parameters come back, including the dash, because undo restores that shape.
+Next, try a dashed rounded rectangle. Rotate it, then right-click its row in the layer list instead of the canvas, and choose Flip horizontal. The dashes move to the mirrored side and the corner weights follow. Press Ctrl+Z and the rectangle's parameters come back, dash included.
 
-Try the selection rule. Shift-click two icons so both are selected. Right-click one of them. Both flip. Click empty canvas, select a third icon alone, right-click that one. The pair you flipped stays where you left it.
+To test the selection rule, Shift-click two icons and right-click one of them. Both flip. Click empty canvas, select a third icon alone and right-click it. The pair you flipped stays as it was.
 
 ```
 V                              Select
@@ -61,12 +61,10 @@ Right-click → Flip vertical    Top / bottom on the canvas
 Ctrl+Z                         Restore
 ```
 
-A linear gradient on the rotated card flips with the card. You should see the light end and the dark end trade places across the page axis, staying on the object. If that is wrong for the poster, Ctrl+Z is the whole gradient as well as the geometry.
+A linear gradient on a rotated card flips with the card. The light and dark ends trade places across the page axis and stay on the object. If that's wrong for the poster, one Ctrl+Z restores the gradient and the geometry together.
 
 ## The edge
 
-Flip refuses live text. The letters stay editable, and the command will not turn them into outlines as a side effect of a mirror. Object → Convert to path is the door. It keeps counters, it removes editing, and undo gives the text back. After that, flip works on the outlines.
+Flip refuses live text. It won't turn letters into outlines as a side effect. Object > Convert to path is the way through. It keeps the counters, removes editing, and undo gives the text back. After that, flip works on the outlines.
 
-Locked and hidden objects stay out. A flip aimed near them does not drag them into the mirror.
-
-Right-click the artwork or the object row, choose Flip horizontal or Flip vertical, and press Ctrl+Z if the axis was the wrong one.
+Locked and hidden objects stay out, even when the flip is aimed near them.

@@ -11,49 +11,49 @@ coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-compound-paths-0-5-8/og.png
 
 ## The habit
 
-A letterform, a donut, a window in a building, a logo with the counter knocked out of the bowl of the mark. You build it with Union and Subtract. In Illustrator the result is a compound path, and you can still direct-select the hole. Sometimes. After enough booleans the compound collapses into a single outline that filled the counter back in, or into a group of scraps you have to reassemble. Affinity's geometry operations have the same cliff. The first subtract looks right. The twentieth union, done because a client added another circle, welds the hole shut or refuses to let you grab the inner contour.
+A letterform, a donut, a window in a building, a logo with the counter knocked out of the bowl of the mark: you build all of these with Union and Subtract. In Illustrator the result is a compound path, and sometimes you can still direct-select the hole. After enough booleans, though, the compound can collapse into a single outline that fills the counter back in, or into a group of scraps you have to reassemble. Affinity's geometry operations hit the same wall. The first subtract looks right, and the twentieth union, added because a client wanted another circle, welds the hole shut or won't let you grab the inner contour.
 
-You learn to expand, ungroup, and rebuild. You also learn to keep a hidden copy of the circles off to the side of the artboard, because the boolean result is a dead end. That hidden copy is an apology. The live object should have been the counters.
+So you learn to expand, ungroup, and rebuild. You also learn to keep a hidden copy of the circles off to the side of the artboard, because the boolean result can't be edited further. That hidden copy is a workaround. The live object should have kept the counters.
 
-Double-click to dive inside is the other habit. Illustrator uses it on groups and on clipping sets. You want it on the compound. Select or the node tool, double-click, edit the hole, click out. You should not have to release the compound into twenty pieces, edit one, and combine them again hoping the hole remembers its job.
+The other habit is double-clicking to go inside. Illustrator does this on groups and clipping sets, and you want it on compounds too: select with Move or Node, double-click, edit the hole, click out. You shouldn't have to release the compound into twenty pieces, edit one, and combine them again hoping the hole survives.
 
 ## The constraint
 
-Repeated booleans have to stay one object with several contours. The hole is data. If each union flattened the silhouette into a single filled outline, the counter would be gone and no undo except the immediate one could bring it back. 0.5.8 keeps the contours. A subtraction followed by a long run of unions still has the hole. The release checks that case: one subtraction, then twenty-four unions, the picture identical after conversion, the hole still there, and the nodes editable with the pointer.
+Repeated booleans have to stay one object with several contours, and the hole has to be stored as data. If each union flattened the silhouette into a single filled outline, the counter would be gone, and only an immediate undo could bring it back. 0.5.8 keeps the contours, so a subtraction followed by a long run of unions still has its hole. The release tests that case: one subtraction, then twenty-four unions, with the picture identical after conversion, the hole still present, and the nodes editable with the pointer.
 
-Undo is normal. A point move, an inserted point, a deleted point, a broken contour: each one comes back with Ctrl+Z the way a simple path's edit comes back. A special compound history would mean you learn two undos. You learn one.
+Undo works normally. A point move, an inserted point, a deleted point, and a broken contour each come back with Ctrl+Z, the same as edits on a simple path. There is no separate compound history to learn.
 
-Save and reopen have to keep the contours. An `.oma` that wrote a baked fill and dropped the hole on the way to disk would look right until tomorrow. SVG export has to keep the hole too, because the picture you hand someone is part of the test. The release covers native save and reopen, undo and redo, and SVG export, along with node movement, handles, insertion, deletion, and breaking a contour.
+Save and reopen have to keep the contours. An `.oma` that wrote a baked fill and dropped the hole on the way to disk would look fine until the next day. SVG export has to keep the hole too, because the file you hand someone is part of the test. The release covers native save and reopen, undo and redo, and SVG export, along with moving nodes, pulling handles, inserting, deleting, and breaking a contour.
 
-Double-click is the door in. Move is the selection tool, V. Node is A. You already know both. The compound does not demand a third tool called Compound Editor. You double-click with the tool you use to select or the tool you use to edit points.
+Double-click is how you get inside. Move is the selection tool (V) and Node is A, and you already know both. There is no third tool for editing compounds. You double-click with the tool you select with or the tool you edit points with.
 
-This is the boolean result. A group is a different object, made with Ctrl+G, and it does not fuse contours. The compound is what repeated unions and subtractions produce. You edit the contours in place.
+This applies to boolean results. A group is a different object, made with Ctrl+G, and it doesn't fuse contours. Repeated unions and subtractions produce a compound, and you edit its contours in place.
 
 ## What landed
 
-Run unions and subtractions more than once and the result is an editable compound path. The holes stay intact. The contours stay independently editable. You can do this across a stack of operations and the counters remain counters.
+Run unions and subtractions more than once and the result is an editable compound path. The holes stay intact and each contour stays independently editable, so the counters survive a whole stack of operations.
 
-Double-click with Select or with Node to edit. Select here is Move, V, the tool you already click with. Node is A. Inside the compound, the node edits you know still apply across it. Move points. Pull Bézier handles. Insert a point on a curve. Delete points. Break a contour. Those gestures work on the compound, not only on a path that has a single outline.
+Double-click with Select or Node to edit. Select here means Move (V), the tool you already click with, and Node is A. Inside the compound, the usual node edits apply across all contours. You can move points, pull Bézier handles, insert a point on a curve, delete points, and break a contour, on a compound as well as on a single-outline path.
 
-Corner radii stay editable after the repeated operations. Node shows corner-radius handles on paths. Alt-drag changes every corner on the path. A Shift-selected set changes together. A compound you have been booleaning does not lose that.
+Corner radii stay editable after repeated operations. Node shows corner-radius handles on paths. Alt-drag changes every corner on the path, and a Shift-selected set changes together. A compound built from many booleans keeps that ability.
 
-Convert to paths, or double-click with Select or Node, and the contours and holes are still there. You are not punished for leaving the boolean result and going to points. The geometry you see is the geometry you edit.
+After Convert to paths, or after double-clicking with Select or Node, the contours and holes are still there. Leaving the boolean result and working with points costs you nothing. You edit exactly the geometry you see.
 
-The release exercise is the one to remember when a file gets large. Subtract, then union two dozen more shapes. The render matches after conversion. The hole remains. You can grab a node with the pointer and move it. That is the floor. A logo with a counter and a pile of extra parts stays a logo with a counter.
+The release test is worth remembering when a file gets large. Subtract, then union two dozen more shapes, and the render still matches after conversion, the hole remains, and you can grab a node with the pointer and move it. That is the minimum guarantee: a logo with a counter and a pile of extra parts stays a logo with a counter.
 
-Undo and redo are the normal chords. Ctrl+Z, Ctrl+Shift+Z, Ctrl+Y. Save the `.oma`. Open it. The compound is still a compound. Export SVG and the hole is part of the picture you exported.
+Undo and redo use the normal chords: Ctrl+Z, Ctrl+Shift+Z, and Ctrl+Y. Save the `.oma` and open it again, and the compound is still a compound. Export SVG and the hole is part of the exported picture.
 
-Groups still exist for art that should move together and stay separate objects. If you wanted a group, you wanted Ctrl+G. If the counters have to be holes in one fill, you wanted the boolean, and 0.5.8 leaves you a compound you can keep editing.
+Groups still exist for art that should move together as separate objects, and for that you use Ctrl+G. If the counters have to be holes in one fill, you want the boolean, and 0.5.8 gives you a compound you can keep editing.
 
 ## In the hand
 
-Draw a filled circle with O. Draw a smaller circle on top of it. Select both. They have to be vector objects on the same layer for a Pathfinder op. Choose Object → Pathfinder → Subtract. You get a ring. The hole is the smaller circle.
+Draw a filled circle with O, draw a smaller circle on top of it, and select both. They have to be vector objects on the same layer for a Pathfinder operation. Choose Object > Pathfinder > Subtract. You get a ring, and the hole is the smaller circle.
 
-Draw more shapes that should join the outer contour. Select the ring and the new shapes. Union. Do it again when the next piece arrives. The hole stays. You can keep going. The case worth trusting is a hole that survives a subtraction and then many unions, on the order of a couple of dozen, and still takes a pointer edit.
+Draw more shapes that should join the outer contour, select the ring and the new shapes, and Union. Do it again when the next piece arrives. The hole stays, and you can keep going. The tested case is a hole that survives a subtraction followed by a couple of dozen unions and still accepts a pointer edit.
 
-Press V. Double-click the compound. You are in it. Switch to A if you came in with Move and you need points. Or double-click with A in the first place. Drag a node on the outer contour. The hole stays put. Drag a node on the hole. The outer contour stays put. Click a curve to insert. Select a point and Delete. If a contour needs to open, break it. Ctrl+Z returns that edit. The rest of the compound stays.
+Press V and double-click the compound to go inside. Switch to A if you came in with Move and need points, or double-click with A to begin with. Drag a node on the outer contour and the hole stays put. Drag a node on the hole and the outer contour stays put. Click a curve to insert a point, or select a point and press Delete. If a contour needs to open, break it. Ctrl+Z reverts that one edit and leaves the rest of the compound alone.
 
-Alt-drag a corner-radius handle if the outer shape has corners that should match. The radius edit is the Node tool's, and it still applies once these contours are paths.
+Alt-drag a corner-radius handle if the outer shape has corners that should match. The radius edit belongs to the Node tool, and it still works once these contours are paths.
 
 ```
 Object → Pathfinder → Subtract   Knock the hole
@@ -63,14 +63,12 @@ Drag a node                      That contour moves
 Ctrl+Z                           One step back
 ```
 
-Click out, or select something else, when you are done inside. The compound is one object again in the layer list. Move it with V. It moves as one piece, hole included. Save. Reopen when you want the proof. The counter is still open.
+Click out, or select something else, when you are done inside. The compound is one object again in the layer list, and moving it with V moves it as one piece, hole included. Save, and reopen if you want to check. The counter is still open.
 
-SVG export writes the artwork with that hole. If you are also sending a Lottie later, remember effects and pixel layers have their own limits. The compound's geometry is the Design object you just edited.
+SVG export writes the artwork with the hole. If you are also sending a Lottie later, remember that effects and pixel layers have their own limits there. The compound's geometry is the Design object you just edited.
 
 ## The edge
 
-Further unions refuse to paint the hole shut. The contour you subtracted stays a hole through the repeated booleans that follow. A subtraction plus a long run of unions is still a compound with that hole, and the nodes on it still move.
+Further unions won't fill the hole. The contour you subtracted stays a hole through every boolean that follows, and its nodes still move.
 
-Release is a different command, Ctrl+Shift+8, for the day you want the contours as separate artwork again. Until you release, double-click and edit. The compound does not make you flatten it to change one point.
-
-Double-click the compound with V or with A, and drag the node on the contour you mean to change.
+Release is a separate command, Ctrl+Shift+8, for when you want the contours as separate artwork again. Until then, you can double-click and edit, and you never have to flatten the compound to change one point.

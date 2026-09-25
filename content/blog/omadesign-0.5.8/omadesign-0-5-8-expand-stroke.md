@@ -11,49 +11,49 @@ coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-expand-stroke/og.png
 
 ## The habit
 
-Expand Stroke is the command you run at the end, when a vendor, a cutter, or a decade-old RIP needs fills and will not stroke a path. In Illustrator it is Object → Path → Outline Stroke. Affinity has an equivalent expand. The stroke width, the cap, the join, and the dash pattern become shapes. A round cap becomes a round end. A miter becomes a point. A dashed line becomes a row of filled marks. You do this once, late, because after it the width is no longer a number you can type.
+Expand Stroke is the command you run at the end, when a vendor, a cutter, or a decade-old RIP needs fills and won't stroke a path. In Illustrator it is Object > Path > Outline Stroke, and Affinity has an equivalent expand. The stroke width, cap, join, and dash pattern become shapes. A round cap becomes a round end, a miter becomes a point, and a dashed line becomes a row of filled marks. You do this once, late, because afterward the width is no longer a number you can type.
 
-The bug you remember is the fill. Outline Stroke in a hurry replaces the object with the outline and the fill you wanted is gone, or the outline arrives and the fill is a separate object you did not ask to manage. The correct result keeps the fill where it was and puts the new outline geometry with it. The stroke you saw is the geometry you get. A heavier stroke becomes a heavier shape. An inside stroke on a closed path becomes the band inside the path. An outside stroke becomes the band outside it.
+The bug people remember involves the fill. A rushed Outline Stroke replaces the object with the outline and the fill you wanted is gone, or the outline arrives and the fill becomes a separate object you never asked to manage. The correct result keeps the fill where it was and adds the new outline geometry with it, matching the stroke you saw. A heavier stroke becomes a heavier shape. An inside stroke on a closed path becomes the band inside the path, and an outside stroke becomes the band outside it.
 
-Dashes are the test. A dashed rounded rectangle, rotated, should outline into pieces that sit where the dashes sat, not into a solid band with the dash painted on as a lie. Rotation has to be respected. The pieces land on the ink.
+Dashes are the first test. A dashed, rotated rounded rectangle should outline into pieces that sit exactly where the dashes were, instead of a solid band with the dashes faked on top. Rotation has to be respected so the pieces land on the visible stroke.
 
-Compound strokes are the other test. A ring with a hole, stroked, outlines into a compound. The hole stays. If you need to nudge the inner and outer contours together, you want a reshape that moves them as a set, not a node drag that tears one side of the ring.
+Compound strokes are the second test. A stroked ring with a hole should outline into a compound, and the hole should stay. If you then need to nudge the inner and outer contours together, you want a reshape that moves them as a set, because a node drag would tear one side of the ring.
 
 ## The constraint
 
-The visible stroke is the only honest source. Omadesign already stores width, and on a closed path it stores inside, center, or outside placement. Open paths use a centered stroke. Widths above 64 pixels are allowed. Expand reads that visible result, including caps, joins, and dashes, and writes filled geometry. A second approximation, "width times two, rectangle along the path," would miss miters and dashes and would disagree with the canvas you approved.
+The visible stroke is the only reliable source. Omadesign already stores the width, and on a closed path it also stores inside, center, or outside placement. Open paths use a centered stroke. Widths above 64 pixels are allowed. Expand reads that visible result, including caps, joins, and dashes, and writes filled geometry. A cruder approximation, such as twice the width as a rectangle along the path, would miss miters and dashes and wouldn't match the canvas you approved.
 
-The existing fill stays beneath the new outline. One object relationship, one command. You do not lose the fill and then paste it back from a hidden copy. The outline is the stroke, promoted. The fill is the fill, left in place under it. Undo of the command returns the stroke, which is why you can expand late and still walk back if the vendor's requirement was a rumor.
+The existing fill stays beneath the new outline, all in one command. You never lose the fill and have to paste it back from a hidden copy. The stroke becomes an outline and the fill stays in place under it. Undoing the command brings the stroke back, so you can expand late and still reverse it if the vendor's requirement turns out to be wrong.
 
-Layer order is respected. The new geometry does not leap to the top of the document or sink under an unrelated layer. It stays where that object's stroke was, in the stack you were looking at.
+Layer order is respected. The new geometry doesn't jump to the top of the document or sink under an unrelated layer. It stays where the object's stroke was in the stack.
 
-Compound outlines keep their holes. A stroked counter that became a filled disk would be a different logo. Reshape is how those contours move together after the expand. The expand itself does not invent a live stroke on top of the outlines. The stroke is the geometry now.
+Compound outlines keep their holes, because a stroked counter that turned into a filled disk would be a different logo. Reshape moves those contours together after the expand. The expand doesn't add a live stroke on top of the outlines, because the stroke is now geometry.
 
-One `.oma`. The outlined result saves in the project. You are not required to outline a copy in Illustrator and place the SVG back. If you still want the live stroke, you undo, or you duplicate before you expand and keep the duplicate with its stroke.
+It all happens in one `.oma`, and the outlined result saves in the project. You don't need to outline a copy in Illustrator and place the SVG back. If you still want the live stroke, undo, or duplicate before expanding and keep the duplicate with its stroke.
 
 ## What landed
 
-Select the stroked artwork. Choose Object → Expand stroke to outline.
+Select the stroked artwork and choose Object > Expand stroke to outline.
 
-The visible stroke becomes filled geometry. Caps are in that geometry. Joins are in it. Dashes are in it. A dashed stroke becomes the dash shapes you were looking at, not a continuous ribbon. Rotation is respected, so a turned path outlines where it appears. The layer order you had is the layer order of the result.
+The visible stroke becomes filled geometry, including caps, joins, and dashes. A dashed stroke becomes the dash shapes you were looking at, with no continuous ribbon underneath. Rotation is respected, so a rotated path outlines where it appears, and the result keeps the layer order you had.
 
-The fill that was already on the object stays in place, beneath the new outline. A filled circle with a heavy stroke becomes the fill you had, with the stroke's band as filled geometry along it. You can still select and recolor those pieces after the command. What you cannot do is type a new stroke width and expect the band to grow. The width was consumed into the shape of the fill.
+The fill already on the object stays in place beneath the new outline. A filled circle with a heavy stroke becomes the same fill with the stroke's band as filled geometry around it. You can still select and recolor those pieces after the command. You can't type a new stroke width and expect the band to grow, because the width has become part of the shape.
 
-Compound outlines retain their holes. A compound path with a stroke keeps the counters in the outlined result. To move those contours together, use Object → Reshape. Distort, skew, perspective, and the warp mesh operate on the vector artwork, and a reshape moves the outlined contours as a set instead of leaving you to drag one side of a ring and hope the other side follows. The first reshape handle you move will convert remaining parameter shapes and live text, which is a different decision. On an outline you just made, you are already in geometry.
+Compound outlines keep their holes, so a stroked compound path keeps its counters in the outlined result. To move those contours together, use Object > Reshape. Distort, skew, perspective, and the warp mesh all operate on vector artwork, and a reshape moves the outlined contours as a set, so you never have to drag one side of a ring and hope the other follows. The first reshape handle you move converts any remaining parameter shapes and live text, which is a separate decision. An outline you just made is already plain geometry.
 
-Closed paths remember inside, center, and outside in the stroke you see, so the outline matches that placement. Open paths were centered, so their outline is the centered band. A line you drew with L, given a 40 pixel stroke, outlines as a 40 pixel band along that line, caps included.
+Closed paths store inside, center, or outside placement in the stroke you see, and the outline matches that placement. Open paths use a centered stroke, so their outline is a centered band. A line drawn with L and given a 40 pixel stroke outlines as a 40 pixel band along that line, caps included.
 
-Pathfinder welds areas. Expand stroke promotes the stroke. Run the outline when the silhouette is final and the file has to be fills.
+Pathfinder welds areas together, while Expand stroke turns the stroke into a shape. Run the outline when the silhouette is final and the file has to be all fills.
 
 ## In the hand
 
-Draw a rounded rectangle. Give it a fill and a dashed stroke. Rotate it with the top handle so you can see that placement matters. Choose Object → Expand stroke to outline.
+Draw a rounded rectangle, give it a fill and a dashed stroke, and rotate it with the top handle so you can see that placement matters. Choose Object > Expand stroke to outline.
 
-Look at the dashes. They should sit on the rotated corners where the dashes were. Look under them. The fill is still there, beneath the new outline. The stroke you saw is filled geometry now. The interior you had was not discarded to make room for it.
+Look at the dashes. They should sit on the rotated corners where the dashes were. Look underneath and the fill is still there, beneath the new outline. The stroke is now filled geometry, and the interior wasn't discarded to make room for it.
 
-Press Ctrl+Z. The stroke is a stroke again. The dash field is back. Change the width. Expand again if the new width is the one you want committed.
+Press Ctrl+Z. The stroke is a stroke again and the dash field is back. Change the width, and expand again if you want to commit the new width.
 
-Try a compound. Subtract a hole from a shape, give the result a stroke, and expand. The hole remains. If the inner and outer bands need to shift together, choose Object → Reshape → Distort, or whichever mode matches the shift, and move the cage. Esc cancels a bad drag. Enter finishes. Each completed drag is one undo.
+Now try a compound. Subtract a hole from a shape, give the result a stroke, and expand. The hole remains. If the inner and outer bands need to shift together, choose Object > Reshape > Distort, or whichever mode fits the change, and move the cage. Esc cancels a bad drag and Enter finishes. Each completed drag is one undo.
 
 ```
 Object → Expand stroke to outline
@@ -64,14 +64,12 @@ Object → Reshape             Move outlined contours together
 Ctrl+Z                       The stroke returns
 ```
 
-Duplicate first, Super+D, when you need both a live stroke and an outline in the same file. Expand the copy. The original keeps its width field. Duplication stays in place, so the copy sits on the original until you move it.
+When you need both a live stroke and an outline in the same file, duplicate first with Super+D and expand the copy. The original keeps its width field. The duplicate lands in place on top of the original until you move it.
 
-Save. The outlined geometry is ordinary vector in the `.oma`. SVG export will see fills. A shop that rejects strokes can take the export. You still have the project if the live stroke has to come back from an undo you have not overwritten, or from the duplicate you kept.
+Save. The outlined geometry is ordinary vector data in the `.oma`, and SVG export sees fills, so a shop that rejects strokes can take the export. You can still get the live stroke back from an undo you haven't overwritten, or from the duplicate you kept.
 
 ## The edge
 
-Expand refuses to throw away the fill. Existing fills stay beneath the new outline. The stroke becomes filled geometry on top of that relationship. You do not rebuild the interior from memory after the command.
+Expand never throws away the fill. Existing fills stay beneath the new outline, and the stroke becomes filled geometry on top, so you never rebuild the interior from memory.
 
-Compound outlines refuse to fill their holes. The counters stay. Reshape is how you move those contours together. A single-node nudge is the wrong tool when the ring has to stay a ring.
-
-Choose Object → Expand stroke to outline when the stroke you can see is the shape you need to keep.
+Compound outlines never fill their holes. The counters stay, and Reshape is the way to move those contours together. A single-node nudge is the wrong tool when the ring has to stay a ring.
