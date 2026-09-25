@@ -1,0 +1,193 @@
+{
+  "date": "2026-09-24",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 24, 2026 \u00b7 5:00 AM EDT \u2192 Sep 25, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-24T09:00:00Z \u2192 2026-09-25T09:00:00Z",
+    "generatedEt": "Sep 25, 2026 \u00b7 ~4:51 AM EDT",
+    "xPostsMeasured": 9,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 13. Omadesign 0.5.9 released + 8 omadesign PRs; site PH badges + public counts (#86\u2013#89). X: 9 posts, 1,328 imp (theo reply 783). Inbox: Thumbtack leads, Expertise listing decline, GoDaddy contact verify, GSC impression collection across fleet, PH maker sweep quiet.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign \u00b7 Release 0.5.9 + 8 merged PRs",
+      "kind": "shipped",
+      "summary": "8 PR(s) merged + GitHub release v0.5.9 \u201c0.5.9 \u00b7 Click the pixel you mean\u201d in window \u2014 PH embed, CI ubuntu-latest, public counts, README shields, dilate/erode cutout, Release 0.5.9.",
+      "bullets": [
+        "#87 Add Product Hunt product embed to homepage",
+        "#88 fix(ci): run Ship on ubuntu-latest while Blacksmith is stuck",
+        "#89 Show public download, follower, upvote, and star counts",
+        "#90 Show public download, follower, upvote, and star counts",
+        "#91 Use README shields, a shorter bar, and a section ruler",
+        "#92 Use flat shields on the README",
+        "#107 Keep dilate and erode on a hard cutout",
+        "#114 Release 0.5.9",
+        "Release v0.5.9 \u00b7 Click the pixel you mean"
+      ],
+      "when": "Sep 24 \u00b7 6:18 AM EDT \u2192 Sep 24 \u00b7 7:59 PM EDT",
+      "links": [
+        {
+          "label": "#87",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/87"
+        },
+        {
+          "label": "#88",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/88"
+        },
+        {
+          "label": "#89",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/89"
+        },
+        {
+          "label": "#90",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/90"
+        },
+        {
+          "label": "#91",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/91"
+        },
+        {
+          "label": "#92",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/92"
+        },
+        {
+          "label": "#107",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/107"
+        },
+        {
+          "label": "#114",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/114"
+        },
+        {
+          "label": "v0.5.9",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.9"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com \u00b7 4 merged PRs",
+      "kind": "shipped",
+      "summary": "4 PR(s) merged in window \u2014 Product Hunt embed \u2192 official SVG badges \u2192 omadesign public counts \u2192 shields match.",
+      "bullets": [
+        "#86 Add Omadesign Product Hunt embed to homepage",
+        "#87 Replace Product Hunt iframe with official omadesign SVG badges",
+        "#88 Show omadesign counts under the Product Hunt badges",
+        "#89 Match the count row to GitHub shields"
+      ],
+      "when": "Sep 24 \u00b7 6:18 AM EDT \u2192 Sep 24 \u00b7 10:22 AM EDT",
+      "links": [
+        {
+          "label": "#86",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/86"
+        },
+        {
+          "label": "#87",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/87"
+        },
+        {
+          "label": "#88",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/88"
+        },
+        {
+          "label": "#89",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/89"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X \u00b7 @MichaelH_rley \u00b7 9 posts",
+      "kind": "measured",
+      "summary": "1,328 measured impressions across 9 own post(s). Top: 783 imp (reply to @theo).",
+      "quote": "@theo All clowns! Let em keep their half-baked tinker toy sandbox full of cat shit we\u2019re building things above and beyond their comprehension.",
+      "metrics": {
+        "impressions": 1328,
+        "likes": 3,
+        "replies": 1,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 24 \u00b7 5:47 PM EDT \u00b7 783 imp \u00b7 @theo All clowns!\u2026",
+        "Sep 24 \u00b7 6:47 PM EDT \u00b7 349 imp \u00b7 @thdxr Nice sweater @kitlangton\u2026",
+        "Sep 24 \u00b7 6:45 PM EDT \u00b7 91 imp \u00b7 @thdxr I know that guy!",
+        "Sep 24 \u00b7 11:56 AM EDT \u00b7 39 imp \u00b7 Omadesign Tutorial For Beginners Live",
+        "Sep 24 \u00b7 remainder \u00b7 66 imp across 5 smaller posts"
+      ],
+      "when": "Sep 24 \u00b7 11:52 AM EDT \u2192 Sep 24 \u00b7 6:52 PM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2103239904436396334"
+        },
+        {
+          "label": "Sweater reply",
+          "href": "https://x.com/MichaelH_rley/status/2103254993323409822"
+        }
+      ]
+    },
+    {
+      "title": "Product Hunt maker presence",
+      "kind": "ops",
+      "summary": "Weekday Omadesign PH byline/forum sweep (~10:15 AM ET): signed in as Michael; no unreplied Omadesign items; nothing posted.",
+      "when": "Sep 24 \u00b7 ~10:15 AM EDT"
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Thumbtack \u00b7 web design / social media leads",
+      "kind": "ops",
+      "summary": "Multiple inbound lead pings (Salt Lake City, Westminster CO, Baltimore, Federal Way remote, Greensboro NC, Newport Coast remote). Triage when ready.",
+      "when": "Sep 24 \u00b7 through day EDT"
+    },
+    {
+      "title": "Expertise.com \u00b7 listing request declined",
+      "kind": "ops",
+      "summary": "Case# 00311759: not processing external listing requests at this time. Path closed from their side.",
+      "when": "Sep 24 \u00b7 3:17 PM EDT"
+    },
+    {
+      "title": "GoDaddy \u00b7 verify domain contact info",
+      "kind": "action",
+      "summary": "Action required: confirm or correct domain contact information.",
+      "when": "Sep 24 \u00b7 11:06 AM EDT"
+    },
+    {
+      "title": "Search Console \u00b7 impression collection started",
+      "kind": "ops",
+      "summary": "GSC confirmed Search impressions collection started Sep 22 for a fleet batch (omadesign.app, getat.me, thenationalnc.com, ipro.golf, bestwnc.com, cravees.com, itour.golf, bestjeepdecals.com, kingsroofingnc.com, delaterrestore.com, coordinatorapp.com, macksbbqshack.com, appestatesales.com, and more).",
+      "when": "Sep 24 \u00b7 ~10:26\u201310:52 AM EDT"
+    },
+    {
+      "title": "Google Analytics \u00b7 Aug 28\u2013Sep 24 performance report",
+      "kind": "ops",
+      "summary": "Periodic GA performance digest landed for the trailing window (traffic/engagement signal only).",
+      "when": "Sep 24 \u00b7 afternoon EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Omadesign 0.5.9 shipped",
+      "detail": "Release live: eyedropper / Alt-subtract / vector filters and related cutout work. Site + app PH badges and public counts are live."
+    },
+    {
+      "title": "PH maker sweep quiet",
+      "detail": "No unreplied Omadesign PH items this weekday sweep; no maker replies posted."
+    },
+    {
+      "title": "Thumbtack leads to triage",
+      "detail": "Several web-design / social-media lead pings in the window \u2014 decide which to chase."
+    },
+    {
+      "title": "GoDaddy contact verify",
+      "detail": "Domain contact info action email \u2014 confirm or correct when convenient."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation. Expertise listing path closed."
+    }
+  ]
+}
