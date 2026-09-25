@@ -3,6 +3,7 @@ id: T124
 title: Canvas tool plugins
 slug: omadesign-0-5-8-canvas-tool-plugins
 excerpt: A tool plugin arms with Activate tool. The drag previews as a line. Editable artwork appears on release. Escape exits. Pixel filters and brush presets still need a raster layer.
+publishedAt: 2026-09-22T11:35:56Z
 tags: [omadesign, 0.5.8, tools]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-canvas-tool-plugins/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-canvas-tool-plugins/og.png

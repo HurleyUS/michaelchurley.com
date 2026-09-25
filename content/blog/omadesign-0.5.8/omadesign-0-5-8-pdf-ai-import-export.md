@@ -3,6 +3,7 @@ id: T109
 title: PDF AI import export
 slug: omadesign-0-5-8-pdf-ai-import-export
 excerpt: PDF pages open as artboards with paths, supported text, images, and optional-content layers. Export writes pages, vectors, and that layer metadata. An .ai contributes its PDF-compatible artwork. Private Illustrator data stays unrebuilt.
+publishedAt: 2026-09-07T01:44:01Z
 tags: [omadesign, 0.5.8, pdf]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-pdf-ai-import-export/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-pdf-ai-import-export/og.png

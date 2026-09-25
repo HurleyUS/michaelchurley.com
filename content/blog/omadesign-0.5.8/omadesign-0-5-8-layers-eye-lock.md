@@ -3,6 +3,7 @@ id: T045
 title: Layers eye lock
 slug: omadesign-0-5-8-layers-eye-lock
 excerpt: Layers expand to the objects on them. The eye and the lock work per object. Click a name to select it on the canvas. A group expands, renames, hides, locks, and reorders as one unit.
+publishedAt: 2026-09-07T01:31:01Z
 tags: [omadesign, 0.5.8, layers]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-layers-eye-lock/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-layers-eye-lock/og.png

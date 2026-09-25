@@ -3,6 +3,7 @@ id: T030
 title: Shape tools
 slug: omadesign-0-5-8-shape-tools
 excerpt: Rectangle R, ellipse O, polygon Y, star S, and line L drag on like any shape tool you already know. Shift constrains. Radius, sides, and inner radius stay in Transform until you edit nodes.
+publishedAt: 2026-08-29T16:30:47Z
 tags: [omadesign, 0.5.8, shapes]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-shape-tools/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-shape-tools/og.png

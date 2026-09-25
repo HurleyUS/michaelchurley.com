@@ -3,6 +3,7 @@ id: T120
 title: Manage plugins
 slug: omadesign-0-5-8-manage-plugins
 excerpt: Plugins → Manage plugins installs a .lua file, a folder with main.lua, or an .omaplug bundle. Each plugin has an Enable checkbox. An update keeps a hidden backup of the previous folder. Reload after you edit.
+publishedAt: 2026-09-22T11:32:56Z
 tags: [omadesign, 0.5.8, plugins]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-manage-plugins/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-manage-plugins/og.png

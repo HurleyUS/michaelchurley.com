@@ -3,6 +3,7 @@ id: T035
 title: Trace raster to vector
 slug: omadesign-0-5-8-trace-raster-to-vector
 excerpt: Trace is U. It turns the active pixel layer into vectors, with threshold, color count, and smoothness in the Trace studio. Object → Trace to vector runs the same command without switching tools.
+publishedAt: 2026-09-06T10:32:01Z
 tags: [omadesign, 0.5.8, trace]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-trace-raster-to-vector/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-trace-raster-to-vector/og.png

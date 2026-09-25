@@ -3,6 +3,7 @@ id: T038
 title: Compound paths 0.5.8
 slug: omadesign-0-5-8-compound-paths-0-5-8
 excerpt: In 0.5.8, repeated unions and subtractions stay editable compound paths. Holes stay holes. Double-click with Move or Node and you can move points, pull handles, insert, delete, and break a contour.
+publishedAt: 2026-09-22T11:30:56Z
 tags: [omadesign, 0.5.8, paths]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-compound-paths-0-5-8/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-compound-paths-0-5-8/og.png

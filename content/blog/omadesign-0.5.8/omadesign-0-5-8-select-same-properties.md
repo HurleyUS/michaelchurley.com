@@ -3,6 +3,7 @@ id: T037
 title: Select same properties
 slug: omadesign-0-5-8-select-same-properties
 excerpt: Select gathers All, None, Invert, Same Fill, Same Stroke, Same Effects, and objects with or without those properties. A match is the whole property. Hidden and locked objects stay out.
+publishedAt: 2026-09-06T10:33:01Z
 tags: [omadesign, 0.5.8, selection]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-select-same-properties/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-select-same-properties/og.png

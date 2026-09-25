@@ -3,6 +3,7 @@ id: T028
 title: Artboard tool
 slug: omadesign-0-5-8-artboard-tool
 excerpt: Artboard is Shift+O. Draw a board, drag to move it, scale from the handles, rotate from the top handle. Alt-drag clones. Rename it in Transform.
+publishedAt: 2026-08-29T16:29:47Z
 tags: [omadesign, 0.5.8, artboards]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-artboard-tool/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-artboard-tool/og.png

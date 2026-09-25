@@ -3,6 +3,7 @@ id: T024
 title: Node tool
 slug: omadesign-0-5-8-node-tool
 excerpt: "Node is A. Drag points and Bézier handles, Shift-click to add, Alt-click to convert corner and smooth, Alt-drag to break symmetry, Delete to remove points."
+publishedAt: 2026-08-29T16:27:47Z
 tags: [omadesign, 0.5.8, vectors]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-node-tool/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-node-tool/og.png

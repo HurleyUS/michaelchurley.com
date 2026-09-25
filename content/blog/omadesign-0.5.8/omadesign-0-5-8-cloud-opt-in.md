@@ -3,6 +3,7 @@ id: T113
 title: Cloud opt-in
 slug: omadesign-0-5-8-cloud-opt-in
 excerpt: Cloud stays off until you opt in. The .oma remains on disk. File → Sign in is the browser approval. Push project + review export is the upload. Unpublished work stays out of the gallery.
+publishedAt: 2026-09-15T23:40:15Z
 tags: [omadesign, 0.5.8, cloud]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-cloud-opt-in/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-cloud-opt-in/og.png

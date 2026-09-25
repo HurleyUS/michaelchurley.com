@@ -3,6 +3,7 @@ id: T104
 title: Drop to open or place
 slug: omadesign-0-5-8-drop-to-open-or-place
 excerpt: Drop a layered document on the canvas or the welcome screen to open it. Ordinary images place. A .oma opens. Lottie imports. The status bar confirms copy, cut, and paste. Copy style is Ctrl+Alt+C. Paste style is Ctrl+Alt+V.
+publishedAt: 2026-09-07T01:39:01Z
 tags: [omadesign, 0.5.8, place]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-drop-to-open-or-place/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-drop-to-open-or-place/og.png

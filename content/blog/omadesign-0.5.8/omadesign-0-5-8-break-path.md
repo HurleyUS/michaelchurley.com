@@ -3,6 +3,7 @@ id: T025
 title: Break path
 slug: omadesign-0-5-8-break-path
 excerpt: Object → Break path turns a live shape into points that sit on the rotated artwork. The first node edit converts the same way. Selecting the path writes no undo.
+publishedAt: 2026-09-06T10:31:01Z
 tags: [omadesign, 0.5.8, paths]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-break-path/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-break-path/og.png

@@ -3,6 +3,7 @@ id: T055
 title: Auto-layout stack
 slug: omadesign-0-5-8-auto-layout-stack
 excerpt: Select a frame and turn on Stack children. The inspector checkbox reads Arrange children automatically. Direction, gap, padding, and layer order do the packing.
+publishedAt: 2026-09-15T23:35:15Z
 tags: [omadesign, 0.5.8, layout]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-auto-layout-stack/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-auto-layout-stack/og.png

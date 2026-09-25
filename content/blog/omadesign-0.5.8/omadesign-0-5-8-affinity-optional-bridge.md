@@ -3,6 +3,7 @@ id: T108
 title: Affinity optional bridge
 slug: omadesign-0-5-8-affinity-optional-bridge
 excerpt: Affinity files open through the optional converter from setup-affinity-import.sh. Vectors, text, pixels, groups, masks, and artboards can come across. Adjustments and history often do not. The app does not download the converter.
+publishedAt: 2026-09-07T01:43:01Z
 tags: [omadesign, 0.5.8, affinity]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-affinity-optional-bridge/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-affinity-optional-bridge/og.png

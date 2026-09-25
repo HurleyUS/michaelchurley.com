@@ -3,6 +3,7 @@ id: T084
 title: Export animated SVG
 slug: omadesign-0-5-8-export-animated-svg
 excerpt: File → Export animated SVG… writes animated transforms and stroke and fill reveals, and it keeps masks and effects. Text is outlined in that file. The .oma text stays editable.
+publishedAt: 2026-09-02T14:59:58Z
 tags: [omadesign, 0.5.8, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-export-animated-svg/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-export-animated-svg/og.png

@@ -3,6 +3,7 @@ id: T125
 title: Opt-in behaviors
 slug: omadesign-0-5-8-opt-in-behaviors
 excerpt: Document and selection behaviors ship off. One checkbox opts in, remembers the choice, and a behavior’s own output does not fire itself again.
+publishedAt: 2026-09-22T11:36:56Z
 tags: [omadesign, 0.5.8, plugins]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-opt-in-behaviors/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-opt-in-behaviors/og.png

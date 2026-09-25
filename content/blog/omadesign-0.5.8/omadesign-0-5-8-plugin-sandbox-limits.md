@@ -3,6 +3,7 @@ id: T129
 title: Plugin sandbox limits
 slug: omadesign-0-5-8-plugin-sandbox-limits
 excerpt: A plugin cannot run programs, open the network, or read arbitrary files. The caps are 15 seconds, 64 MiB of Lua heap, and 20,000 edits. This release has no plugin marketplace.
+publishedAt: 2026-09-22T11:39:56Z
 tags: [omadesign, 0.5.8, plugins]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-plugin-sandbox-limits/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-plugin-sandbox-limits/og.png

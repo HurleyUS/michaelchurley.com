@@ -3,6 +3,7 @@ id: T068
 title: Develop panel groups
 slug: omadesign-0-5-8-develop-panel-groups
 excerpt: Develop is three groups: Light, Color, and Detail. Tone curve, color mixer, and color grading stay collapsed until you open them. Before is the default development. Auto light sets exposure from the preview.
+publishedAt: 2026-09-06T10:42:01Z
 tags: [omadesign, 0.5.8, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-develop-panel-groups/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-develop-panel-groups/og.png

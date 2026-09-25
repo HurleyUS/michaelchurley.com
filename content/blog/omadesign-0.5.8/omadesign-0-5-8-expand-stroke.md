@@ -3,6 +3,7 @@ id: T041
 title: Expand stroke
 slug: omadesign-0-5-8-expand-stroke
 excerpt: Object → Expand stroke to outline turns the visible stroke into filled geometry, including caps, joins, and dashes. The fill you already had stays beneath. Compound outlines keep their holes.
+publishedAt: 2026-09-06T10:34:01Z
 tags: [omadesign, 0.5.8, strokes]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-expand-stroke/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-expand-stroke/og.png

@@ -3,6 +3,7 @@ id: T085
 title: Export Lottie
 slug: omadesign-0-5-8-export-lottie
 excerpt: Export Lottie… writes a Bodymovin 5.x shape animation with trim paths and fill masks. Pixel layers, layer masks, and effects stop the export with a clear error. Use animated SVG for those.
+publishedAt: 2026-09-02T15:00:58Z
 tags: [omadesign, 0.5.8, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-export-lottie/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-export-lottie/og.png

@@ -3,6 +3,7 @@ id: T075
 title: omapreset library
 slug: omadesign-0-5-8-omapreset-library
 excerpt: Save a named Photo look, filter the library, and move it as a .omapreset file. The preset keeps development values and categories, and a name clash keeps both.
+publishedAt: 2026-09-07T18:36:51Z
 tags: [omadesign, 0.5.8, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-omapreset-library/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-omapreset-library/og.png

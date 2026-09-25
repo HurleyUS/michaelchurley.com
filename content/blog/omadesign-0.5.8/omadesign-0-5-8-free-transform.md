@@ -3,6 +3,7 @@ id: T023
 title: Free transform
 slug: omadesign-0-5-8-free-transform
 excerpt: "Ctrl+T puts the selection into Move with scale and rotation handles ready. Live text stays live. Shape parameters stay editable. The command is also under Object."
+publishedAt: 2026-09-06T10:30:01Z
 tags: [omadesign, 0.5.8, vectors]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-free-transform/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-free-transform/og.png

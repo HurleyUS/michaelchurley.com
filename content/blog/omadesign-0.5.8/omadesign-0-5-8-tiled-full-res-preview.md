@@ -3,6 +3,7 @@ id: T072
 title: Tiled full-res preview
 slug: omadesign-0-5-8-tiled-full-res-preview
 excerpt: The first view is a preview whose long edge is at most 1600 pixels. Zoom in and full-resolution tiles fill in from a background develop. The preview stays up until those tiles exist.
+publishedAt: 2026-09-07T01:37:01Z
 tags: [omadesign, 0.5.8, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-tiled-full-res-preview/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-tiled-full-res-preview/og.png

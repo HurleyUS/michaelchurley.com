@@ -3,6 +3,7 @@ id: T122
 title: Plugin undo safety
 slug: omadesign-0-5-8-plugin-undo-safety
 excerpt: A plugin runs off the UI thread. A finished document action is one Undo step. Errors, Cancel, and a document you edited mid-run leave the artwork untouched.
+publishedAt: 2026-09-22T11:34:56Z
 tags: [omadesign, 0.5.8, undo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-plugin-undo-safety/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-plugin-undo-safety/og.png

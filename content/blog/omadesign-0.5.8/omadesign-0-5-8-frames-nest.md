@@ -3,6 +3,7 @@ id: T054
 title: Frames nest
 slug: omadesign-0-5-8-frames-nest
 excerpt: Press F and drag a frame. Draw another inside it and it nests. Wrap a selection, or drop an image fill, in the same .oma as the drawing.
+publishedAt: 2026-09-15T23:34:15Z
 tags: [omadesign, 0.5.8, layout]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-frames-nest/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-frames-nest/og.png

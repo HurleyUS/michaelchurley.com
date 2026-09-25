@@ -3,6 +3,7 @@ id: T022
 title: Layer reorder shortcuts
 slug: omadesign-0-5-8-layer-reorder-shortcuts
 excerpt: "Select a layer row, then Ctrl+[ or Ctrl+] to reorder it. Add Shift to send it to the back or front of its group. Each reorder is one undo."
+publishedAt: 2026-09-07T18:34:51Z
 tags: [omadesign, 0.5.8, vectors]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-layer-reorder-shortcuts/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-layer-reorder-shortcuts/og.png

@@ -3,6 +3,7 @@ id: T040
 title: Combine and release
 slug: omadesign-0-5-8-combine-and-release
 excerpt: Group is Ctrl+G. Ungroup is Ctrl+Shift+G, and it does not fuse paths. Combine into a compound is Ctrl+8. Release compound is Ctrl+Shift+8. Artwork and guides do not mix in one combine.
+publishedAt: 2026-08-29T16:35:47Z
 tags: [omadesign, 0.5.8, compounds]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-combine-and-release/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-combine-and-release/og.png

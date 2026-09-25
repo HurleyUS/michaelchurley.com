@@ -3,6 +3,7 @@ id: T071
 title: Photo export bit depth
 slug: omadesign-0-5-8-photo-export-bit-depth
 excerpt: Export JPEG, PNG, or TIFF in the background at full developed size, crop and rotation included. RAW PNG and TIFF keep 16-bit channels. Place in Design adds an 8-bit pixel layer and one undo.
+publishedAt: 2026-09-07T01:36:01Z
 tags: [omadesign, 0.5.8, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-photo-export-bit-depth/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-photo-export-bit-depth/og.png

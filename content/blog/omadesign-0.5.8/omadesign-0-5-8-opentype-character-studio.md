@@ -3,6 +3,7 @@ id: T033
 title: OpenType character studio
 slug: omadesign-0-5-8-opentype-character-studio
 excerpt: Character studio sets kerning, ligatures, tabular figures, and small caps on the text you already have. Project fonts from Brand → Typography show up in the font picker without a system install.
+publishedAt: 2026-08-29T16:32:47Z
 tags: [omadesign, 0.5.8, type]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-opentype-character-studio/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-opentype-character-studio/og.png

@@ -3,6 +3,7 @@ id: T066
 title: Open photos folder
 slug: omadesign-0-5-8-open-photos-folder
 excerpt: Open a photo, browse a folder, drop files, or load samples. The library shows camera metadata when the file has it. Imports run in the background while you grade.
+publishedAt: 2026-09-07T01:33:01Z
 tags: [omadesign, 0.5.8, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-open-photos-folder/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-open-photos-folder/og.png

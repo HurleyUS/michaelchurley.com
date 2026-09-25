@@ -3,6 +3,7 @@ id: T116
 title: Publish to showcase
 slug: omadesign-0-5-8-publish-to-showcase
 excerpt: Publish selected export is a separate owner step. /showcase lists public flat images. /showcase/:id shows one. Source files, assets, and private review threads stay out. Unpublished and private ids stay off the gallery.
+publishedAt: 2026-09-15T23:42:15Z
 tags: [omadesign, 0.5.8, showcase]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/og.png

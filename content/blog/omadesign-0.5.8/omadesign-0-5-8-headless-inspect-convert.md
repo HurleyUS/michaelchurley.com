@@ -3,6 +3,7 @@ id: T111
 title: Headless inspect convert
 slug: omadesign-0-5-8-headless-inspect-convert
 excerpt: omadesign --inspect reports a PSD, Affinity file, XCF, NEF, or .omaphoto as JSON. --convert writes .oma, SVG, PNG, JPEG, PSD, PSB, PDF, or OpenRaster. The CLI uses the desktop readers. Converting a file onto itself is refused.
+publishedAt: 2026-09-07T01:45:01Z
 tags: [omadesign, 0.5.8, cli]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-headless-inspect-convert/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-headless-inspect-convert/og.png

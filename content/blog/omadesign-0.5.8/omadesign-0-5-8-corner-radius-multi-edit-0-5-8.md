@@ -3,6 +3,7 @@ id: T031
 title: Corner radius multi-edit 0.5.8
 slug: omadesign-0-5-8-corner-radius-multi-edit-0-5-8
 excerpt: In 0.5.8, Alt-drag a corner-radius handle with the Node tool and every corner on the path changes. Shift-select a set of corners, then drag one selected handle, and that set moves together.
+publishedAt: 2026-09-22T11:29:56Z
 tags: [omadesign, 0.5.8, corners]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-corner-radius-multi-edit-0-5-8/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-corner-radius-multi-edit-0-5-8/og.png

@@ -3,6 +3,7 @@ id: T057
 title: Export frame
 slug: omadesign-0-5-8-export-frame
 excerpt: File → Export frame PNG, SVG, or HTML writes the selected frame and its children. The rest of the artboard stays in the .oma.
+publishedAt: 2026-09-15T23:37:15Z
 tags: [omadesign, 0.5.8, layout]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-export-frame/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-export-frame/og.png

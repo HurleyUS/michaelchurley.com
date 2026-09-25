@@ -3,6 +3,7 @@ id: T010
 title: Document tabs
 slug: omadesign-0-5-8-document-tabs
 excerpt: "Document tabs sit above the canvas. Ctrl+N starts a tab, Ctrl+O opens another, and a close on unsaved work asks Save, Discard, or Cancel."
+publishedAt: 2026-09-06T10:28:01Z
 tags: [omadesign, 0.5.8, tabs]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-document-tabs/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-document-tabs/og.png
