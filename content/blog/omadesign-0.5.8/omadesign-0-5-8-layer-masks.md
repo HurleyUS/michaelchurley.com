@@ -4,7 +4,7 @@ title: Layer masks
 slug: omadesign-0-5-8-layer-masks
 excerpt: Add a layer mask from the layer menu or the Pixel inspector. Reveal all, hide all, or start from the selection. Black hides. White reveals. The pixels stay put.
 publishedAt: 2026-09-06T10:41:01Z
-tags: [omadesign, 0.5.8, masks]
+tags: [omadesign, 0.0.1-alpha, masks]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-layer-masks/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-layer-masks/og.png
 ---

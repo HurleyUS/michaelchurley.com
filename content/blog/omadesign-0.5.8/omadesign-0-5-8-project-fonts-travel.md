@@ -4,7 +4,7 @@ title: Project fonts travel
 slug: omadesign-0-5-8-project-fonts-travel
 excerpt: Move the project and native .oma text stays editable, including new characters. Saving into another folder copies the faces that artwork uses. SVG export outlines project-font text. The .oma keeps the live text.
 publishedAt: 2026-09-06T10:49:01Z
-tags: [omadesign, 0.5.8, typography]
+tags: [omadesign, 0.0.1-alpha, typography]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-project-fonts-travel/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-project-fonts-travel/og.png
 ---

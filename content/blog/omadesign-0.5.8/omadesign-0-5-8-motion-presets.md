@@ -4,7 +4,7 @@ title: Motion presets
 slug: omadesign-0-5-8-motion-presets
 excerpt: Select vectors and apply Draw stroke, Pop in, Slam, Shake, Fill up, the four Slides, Fly, Zoom, Buzz, or Fade in. Locked, hidden, and guide objects are skipped.
 publishedAt: 2026-09-06T10:43:01Z
-tags: [omadesign, 0.5.8, motion]
+tags: [omadesign, 0.0.1-alpha, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-motion-presets/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-motion-presets/og.png
 ---

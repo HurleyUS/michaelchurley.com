@@ -4,7 +4,7 @@ title: Pass through blending
 slug: omadesign-0-5-8-pass-through-blending
 excerpt: Pass through lets child blend modes reach the backdrop outside an explicit group. Turn it off and the group isolates. Regular layers and Layout frames isolate on their own.
 publishedAt: 2026-09-07T01:32:01Z
-tags: [omadesign, 0.5.8, blending]
+tags: [omadesign, 0.0.2-alpha, blending]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-pass-through-blending/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-pass-through-blending/og.png
 ---

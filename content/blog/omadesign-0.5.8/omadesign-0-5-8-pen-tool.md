@@ -4,7 +4,7 @@ title: Pen tool
 slug: omadesign-0-5-8-pen-tool
 excerpt: Pen is P. Click for a corner, click-drag for a smooth point, and a twitch under 3px stays a corner. Shift holds 45°. Esc drops the last point, then cancels.
 publishedAt: 2026-08-29T16:28:47Z
-tags: [omadesign, 0.5.8, pen, drawing]
+tags: [omadesign, 0.0.0.0alpha-rc, pen, drawing]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-pen-tool/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-pen-tool/og.png
 ---

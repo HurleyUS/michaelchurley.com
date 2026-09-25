@@ -4,7 +4,7 @@ title: Frame constraints
 slug: omadesign-0-5-8-frame-constraints
 excerpt: A child of a frame pins with Min, Max, Stretch, Center, or Scale. The pins are stored on the object in the .oma and run when you resize the parent.
 publishedAt: 2026-09-15T23:36:15Z
-tags: [omadesign, 0.5.8, layout]
+tags: [omadesign, 0.5.0, layout]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-frame-constraints/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-frame-constraints/og.png
 ---

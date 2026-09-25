@@ -4,7 +4,7 @@ title: Move tool
 slug: omadesign-0-5-8-move-tool
 excerpt: "Move is V. Click selects, drag moves, eight handles scale, the top handle rotates. Shift adds or constrains. Alt-drag clones. Corner dots round a rectangle."
 publishedAt: 2026-08-29T16:26:47Z
-tags: [omadesign, 0.5.8, vectors]
+tags: [omadesign, 0.0.0.0alpha-rc, vectors]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-move-tool/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-move-tool/og.png
 ---

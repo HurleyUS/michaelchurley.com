@@ -4,7 +4,7 @@ title: Snapping system
 slug: omadesign-0-5-8-snapping-system
 excerpt: Snap to edges, centers, guides, the grid, and equal gaps. Ctrl+Shift+; toggles. Hold Ctrl during a drag to reverse that choice, then let go.
 publishedAt: 2026-09-06T10:39:01Z
-tags: [omadesign, 0.5.8, snapping, modifiers]
+tags: [omadesign, 0.0.1-alpha, snapping, modifiers]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-snapping-system/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-snapping-system/og.png
 ---

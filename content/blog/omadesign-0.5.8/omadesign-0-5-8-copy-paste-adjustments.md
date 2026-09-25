@@ -4,7 +4,7 @@ title: Copy paste adjustments
 slug: omadesign-0-5-8-copy-paste-adjustments
 excerpt: Copy a developed look with Ctrl+Shift+C and paste it onto a Library selection with Ctrl+Shift+V. Crop and rotation stay off unless you turn them on.
 publishedAt: 2026-09-07T18:35:51Z
-tags: [omadesign, 0.5.8, photo]
+tags: [omadesign, 0.0.3-alpha, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-copy-paste-adjustments/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-copy-paste-adjustments/og.png
 ---

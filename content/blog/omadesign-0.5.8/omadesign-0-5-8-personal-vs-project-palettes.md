@@ -4,7 +4,7 @@ title: Personal vs project palettes
 slug: omadesign-0-5-8-personal-vs-project-palettes
 excerpt: Palettes are Personal across your work or Project in the current folder. Name a palette, filter it, add the current color, the selection, or a hex including #RRGGBBAA, then click a swatch onto Fill or Stroke.
 publishedAt: 2026-09-06T10:46:01Z
-tags: [omadesign, 0.5.8, palettes]
+tags: [omadesign, 0.0.1-alpha, palettes]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-personal-vs-project-palettes/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-personal-vs-project-palettes/og.png
 ---

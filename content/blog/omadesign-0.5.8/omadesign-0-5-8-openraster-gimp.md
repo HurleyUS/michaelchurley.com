@@ -4,7 +4,7 @@ title: OpenRaster GIMP
 slug: omadesign-0-5-8-openraster-gimp
 excerpt: OpenRaster imports and exports layers, stack.xml, a merged preview, and a thumbnail. GIMP .xcf opens in a native reader and does not write back. Text and effects arrive as pixels. Keep the .oma. Send ORA or PSD back.
 publishedAt: 2026-09-09T10:55:53Z
-tags: [omadesign, 0.5.8, openraster]
+tags: [omadesign, 0.0.5-alpha, openraster]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-openraster-gimp/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-openraster-gimp/og.png
 ---

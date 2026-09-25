@@ -4,7 +4,7 @@ title: Whole folder apply
 slug: omadesign-0-5-8-whole-folder-apply
 excerpt: Browse a folder, apply a copied look or a preset to the whole folder, and write one .omaphoto per photo in the background. Pixels stay untouched. Subfolders stay out.
 publishedAt: 2026-09-07T18:37:51Z
-tags: [omadesign, 0.5.8, photo]
+tags: [omadesign, 0.0.3-alpha, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-whole-folder-apply/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-whole-folder-apply/og.png
 ---

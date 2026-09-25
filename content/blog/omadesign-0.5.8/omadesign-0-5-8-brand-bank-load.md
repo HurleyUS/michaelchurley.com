@@ -4,7 +4,7 @@ title: Brand bank load
 slug: omadesign-0-5-8-brand-bank-load
 excerpt: Brand → Load bank… opens a project folder or its .omabrand directory. Create bank, name it, and Save. Add assets… copies files in. The originals stay where they were.
 publishedAt: 2026-09-06T10:47:01Z
-tags: [omadesign, 0.5.8, brand]
+tags: [omadesign, 0.0.1-alpha, brand]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-brand-bank-load/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-brand-bank-load/og.png
 ---

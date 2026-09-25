@@ -4,7 +4,7 @@ title: omaphoto sidecars
 slug: omadesign-0-5-8-omaphoto-sidecars
 excerpt: Save settings writes photo.png.omaphoto beside the original. Open either file to resume. The pair is name, size, and modification time. The camera file is never rewritten.
 publishedAt: 2026-09-07T01:35:01Z
-tags: [omadesign, 0.5.8, photo]
+tags: [omadesign, 0.0.2-alpha, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-omaphoto-sidecars/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-omaphoto-sidecars/og.png
 ---

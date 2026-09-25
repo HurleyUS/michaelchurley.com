@@ -26,7 +26,7 @@ function field(raw: string, key: string) {
 
 function tags(raw: string) {
   const value = field(raw, "tags");
-  if (!value.startsWith("[")) return ["omadesign", "0.5.8"];
+  if (!value.startsWith("[")) return ["omadesign"];
   return value
     .slice(1, -1)
     .split(",")
@@ -44,11 +44,11 @@ function publishedAt(front: string, entry: CatalogEntry) {
 function seriesNote(entry: CatalogEntry, part: number, total: number) {
   const prev = entry.prev ? `[Previous](/blog/${entry.prev})` : "Start of the thread";
   const next = entry.next ? `[Next](/blog/${entry.next})` : "End of the thread";
-  return `\n\n## The thread\n\nPart ${part} of ${total} in the Omadesign 0.5.8 feature thread.\n\n${prev} · ${next}\n`;
+  return `\n\n## The thread\n\nPart ${part} of ${total} in the Omadesign feature thread.\n\n${prev} · ${next}\n`;
 }
 
 /**
- * Omadesign 0.5.8 feature posts.
+ * Omadesign feature thread posts.
  * Reads the markdown series from content/blog and attaches the film and OG image.
  */
 export function getOmaFeaturePosts(): StaticPost[] {

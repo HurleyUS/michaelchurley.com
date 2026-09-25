@@ -4,7 +4,7 @@ title: Brush eraser fill
 slug: omadesign-0-5-8-brush-eraser-fill
 excerpt: Brush is B. Size is the bracket keys. Hardness is Shift plus the brackets. Eraser E, Fill K, Clone J, Smudge M. Alt-click sets the clone source.
 publishedAt: 2026-08-29T16:36:47Z
-tags: [omadesign, 0.5.8, pixel]
+tags: [omadesign, 0.0.0.0alpha-rc, pixel]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-brush-eraser-fill/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-brush-eraser-fill/og.png
 ---

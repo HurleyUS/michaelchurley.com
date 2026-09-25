@@ -4,7 +4,7 @@ title: RAW headless develop
 slug: omadesign-0-5-8-raw-headless-develop
 excerpt: omadesign --convert photograph.dng --output photograph.tif develops a full-resolution 16-bit file through the Photo pipeline. JPEG is 8-bit. A matching .omaphoto is applied on its own. The camera file is never overwritten.
 publishedAt: 2026-09-07T01:46:01Z
-tags: [omadesign, 0.5.8, raw]
+tags: [omadesign, 0.0.2-alpha, raw]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-raw-headless-develop/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-raw-headless-develop/og.png
 ---

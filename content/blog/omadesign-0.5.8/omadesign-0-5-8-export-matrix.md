@@ -4,7 +4,7 @@ title: Export matrix
 slug: omadesign-0-5-8-export-matrix
 excerpt: Export writes PNG at 1×, 2×, and 3×, plus JPEG, SVG, animated SVG, Lottie JSON, layered PSD and PSB, PDF, and OpenRaster. Layers a format cannot keep may become pixel layers, with notes. There is no native .af or .ai writer.
 publishedAt: 2026-09-07T01:41:01Z
-tags: [omadesign, 0.5.8, export]
+tags: [omadesign, 0.0.2-alpha, export]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-export-matrix/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-export-matrix/og.png
 ---

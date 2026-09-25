@@ -4,7 +4,7 @@ title: Collaborator project view
 slug: omadesign-0-5-8-collaborator-project-view
 excerpt: /project/:id opens the signed-in workspace for that project. Pin, reply, and resolve on a flat export. Layout pins on the canvas stay with the frame. Without OMADESIGN_CLOUD_URL the desktop keeps ~/.local/share/omadesign/cloud-store.json.
 publishedAt: 2026-09-15T23:43:15Z
-tags: [omadesign, 0.5.8, cloud]
+tags: [omadesign, 0.5.0, cloud]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/og.png
 ---

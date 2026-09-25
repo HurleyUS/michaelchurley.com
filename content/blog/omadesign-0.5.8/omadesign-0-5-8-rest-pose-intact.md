@@ -4,7 +4,7 @@ title: Rest pose intact
 slug: omadesign-0-5-8-rest-pose-intact
 excerpt: The artboard you drew is the rest pose. Motion keeps a clip of tracks in the .oma and does not rewrite that drawing. Still PNG, JPEG, and SVG export the rest pose.
 publishedAt: 2026-09-02T14:57:58Z
-tags: [omadesign, 0.5.8, motion]
+tags: [omadesign, 0.0.1-alpha.rc, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-rest-pose-intact/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-rest-pose-intact/og.png
 ---

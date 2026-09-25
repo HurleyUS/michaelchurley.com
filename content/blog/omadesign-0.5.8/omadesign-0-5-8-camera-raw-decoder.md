@@ -4,7 +4,7 @@ title: Camera RAW decoder
 slug: omadesign-0-5-8-camera-raw-decoder
 excerpt: LibRaw 0.22.2 is in the binary. DNG, CR2, CR3, NEF, ARW, RAF, ORF, RW2, and the rest of the recognized families decode to 16-bit linear sRGB. No converter download. The camera file stays put.
 publishedAt: 2026-09-07T01:34:01Z
-tags: [omadesign, 0.5.8, raw]
+tags: [omadesign, 0.0.2-alpha, raw]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-camera-raw-decoder/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-camera-raw-decoder/og.png
 ---

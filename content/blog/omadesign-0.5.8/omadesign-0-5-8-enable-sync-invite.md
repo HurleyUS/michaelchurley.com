@@ -4,7 +4,7 @@ title: Enable sync invite
 slug: omadesign-0-5-8-enable-sync-invite
 excerpt: Push project + review export uploads a versioned .oma and a flat PNG, then you save so the cloud link stays in the file. Owners invite a verified email as editor or reviewer. Other drafts on disk stay local.
 publishedAt: 2026-09-15T23:41:15Z
-tags: [omadesign, 0.5.8, cloud]
+tags: [omadesign, 0.5.0, cloud]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/og.png
 ---

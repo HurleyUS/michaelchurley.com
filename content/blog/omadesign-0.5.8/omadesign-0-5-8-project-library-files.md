@@ -4,7 +4,7 @@ title: Project library files
 slug: omadesign-0-5-8-project-library-files
 excerpt: Project kits sit beside the work as .omacolors, .omatype, and .omabrand/. A saved document uses the nearest enclosing folder that has any of them, or starts beside the document.
 publishedAt: 2026-09-06T10:45:01Z
-tags: [omadesign, 0.5.8, palettes, project-kit]
+tags: [omadesign, 0.0.1-alpha, palettes, project-kit]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-project-library-files/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-project-library-files/og.png
 ---

@@ -4,7 +4,7 @@ title: Conversion notes
 slug: omadesign-0-5-8-conversion-notes
 excerpt: View → Document conversion notes lists what an import dropped or converted. The notes stay in the .oma. Affinity-only features, live Photoshop type, smart objects, effects, and private Illustrator data stay unrebuilt.
 publishedAt: 2026-09-07T01:40:01Z
-tags: [omadesign, 0.5.8, import]
+tags: [omadesign, 0.0.2-alpha, import]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-conversion-notes/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-conversion-notes/og.png
 ---

@@ -4,7 +4,7 @@ title: Shortcut HUD
 slug: omadesign-0-5-8-shortcut-hud
 excerpt: "The Shortcut HUD sits on the bottom edge. The upper row follows the tool. The lower row lists letter keys. Hold Ctrl, Shift, or Alt to see those commands. Ctrl+/ toggles it."
 publishedAt: 2026-09-06T10:29:01Z
-tags: [omadesign, 0.5.8, shortcuts]
+tags: [omadesign, 0.0.1-alpha, shortcuts]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-shortcut-hud/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-shortcut-hud/og.png
 ---

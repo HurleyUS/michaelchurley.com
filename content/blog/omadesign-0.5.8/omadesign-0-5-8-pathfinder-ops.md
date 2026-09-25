@@ -4,7 +4,7 @@ title: Pathfinder ops
 slug: omadesign-0-5-8-pathfinder-ops
 excerpt: Object → Pathfinder runs Union, Subtract, Intersect, XOR, and Divide on two or more vectors on the same layer. Stacking order matters. Each operation is one undo. Holes survive Divide.
 publishedAt: 2026-08-29T16:34:47Z
-tags: [omadesign, 0.5.8, pathfinder]
+tags: [omadesign, 0.0.0.0alpha-rc, pathfinder]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-pathfinder-ops/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-pathfinder-ops/og.png
 ---

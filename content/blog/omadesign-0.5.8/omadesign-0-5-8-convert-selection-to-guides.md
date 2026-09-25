@@ -4,7 +4,7 @@ title: Convert selection to guides
 slug: omadesign-0-5-8-convert-selection-to-guides
 excerpt: Object → Guides → Convert selection to guides turns vectors into non-printing contours you can still edit. Curves, compounds, shapes, and live text keep their data. Release guides restores the artwork.
 publishedAt: 2026-09-06T10:38:01Z
-tags: [omadesign, 0.5.8, guides]
+tags: [omadesign, 0.0.1-alpha, guides]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-convert-selection-to-guides/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-convert-selection-to-guides/og.png
 ---

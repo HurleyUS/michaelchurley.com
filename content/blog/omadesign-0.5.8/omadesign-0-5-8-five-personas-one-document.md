@@ -4,7 +4,7 @@ title: Five personas one document
 slug: omadesign-0-5-8-five-personas-one-document
 excerpt: "Design, Layout, Pixel, Photo, and Motion share one Linux binary, one .oma, and one layer stack. You change the tool well, not the file."
 publishedAt: 2026-09-15T23:33:15Z
-tags: [omadesign, 0.5.8, personas, design, layout, pixel, photo, motion]
+tags: [omadesign, 0.5.0, personas, design, layout, pixel, photo, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-five-personas-one-document/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-five-personas-one-document/og.png
 ---

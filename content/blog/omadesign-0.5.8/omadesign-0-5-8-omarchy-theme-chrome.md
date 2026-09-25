@@ -4,7 +4,7 @@ title: Omarchy theme chrome
 slug: omadesign-0-5-8-omarchy-theme-chrome
 excerpt: "Studio chrome follows Omarchy theme colors and the desktop font. Icons are Phosphor Light. Point OMADESIGN_FONT at a .ttf when you want a different UI face."
 publishedAt: 2026-08-29T16:25:47Z
-tags: [omadesign, 0.5.8, theme]
+tags: [omadesign, 0.0.0.0alpha-rc, theme]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-omarchy-theme-chrome/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-omarchy-theme-chrome/og.png
 ---

@@ -4,7 +4,7 @@ title: Healing brush
 slug: omadesign-0-5-8-healing-brush
 excerpt: Shift+J. Alt-click clean texture, then paint the blemish. The dab blends that texture into the local color. The source stays fixed for the stroke. Undo restores the whole stroke.
 publishedAt: 2026-09-06T10:40:01Z
-tags: [omadesign, 0.5.8, pixel]
+tags: [omadesign, 0.0.1-alpha, pixel]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-healing-brush/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-healing-brush/og.png
 ---

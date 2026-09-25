@@ -4,7 +4,7 @@ title: Canvas comments
 slug: omadesign-0-5-8-canvas-comments
 excerpt: Write a note, pin it on the canvas, and resolve it. The pin is stored in the .oma. The inspector shows how many are still open on the frame.
 publishedAt: 2026-09-15T23:38:15Z
-tags: [omadesign, 0.5.8, layout]
+tags: [omadesign, 0.5.0, layout]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-canvas-comments/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-canvas-comments/og.png
 ---

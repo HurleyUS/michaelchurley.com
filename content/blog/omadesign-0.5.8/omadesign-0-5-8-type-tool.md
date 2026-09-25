@@ -4,7 +4,7 @@ title: Type tool
 slug: omadesign-0-5-8-type-tool
 excerpt: Type is T. Click, and the first keystroke replaces the word Type. Enter starts a new line. Esc or a click away finishes. Double-click comes back to edit.
 publishedAt: 2026-08-29T16:31:47Z
-tags: [omadesign, 0.5.8, type]
+tags: [omadesign, 0.0.0.0alpha-rc, type]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-type-tool/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-type-tool/og.png
 ---

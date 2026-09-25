@@ -4,7 +4,7 @@ title: Place command
 slug: omadesign-0-5-8-place-command
 excerpt: File → Place… is Ctrl+Shift+P. The artwork loads in the background, then you click or drag to place it. Nested layers and masks come along. Undo removes the placement in one step. Enter places at center. Esc cancels.
 publishedAt: 2026-09-06T10:50:01Z
-tags: [omadesign, 0.5.8, place]
+tags: [omadesign, 0.0.1-alpha, place]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-place-command/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-place-command/og.png
 ---

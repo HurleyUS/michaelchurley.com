@@ -4,7 +4,7 @@ title: Brand typography kit
 slug: omadesign-0-5-8-brand-typography-kit
 excerpt: Add fonts… copies TTF and OTF files into the project. Name the kit, save roles such as Heading and Body, and Apply them to text. The faces work inside Omadesign with no system install.
 publishedAt: 2026-09-06T10:48:01Z
-tags: [omadesign, 0.5.8, typography]
+tags: [omadesign, 0.0.1-alpha, typography]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-brand-typography-kit/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-brand-typography-kit/og.png
 ---

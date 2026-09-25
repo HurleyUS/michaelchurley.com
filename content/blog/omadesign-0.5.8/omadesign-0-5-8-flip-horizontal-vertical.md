@@ -4,7 +4,7 @@ title: Flip horizontal vertical
 slug: omadesign-0-5-8-flip-horizontal-vertical
 excerpt: Flip horizontal and Flip vertical mirror across the canvas axes you can see, rotation included. Undo restores the art. Live text needs Convert to path first.
 publishedAt: 2026-09-07T19:11:26Z
-tags: [omadesign, 0.5.8, vectors]
+tags: [omadesign, 0.0.4-alpha, vectors]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-flip-horizontal-vertical/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-flip-horizontal-vertical/og.png
 ---

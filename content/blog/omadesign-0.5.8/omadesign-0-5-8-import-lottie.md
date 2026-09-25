@@ -4,7 +4,7 @@ title: Import Lottie
 slug: omadesign-0-5-8-import-lottie
 excerpt: Import Lottie… places a shape-layer Lottie on the timeline. The importer covers a basic shape subset. Keep the .oma for the full editable animation. Still exports remain the rest pose.
 publishedAt: 2026-09-02T15:01:58Z
-tags: [omadesign, 0.5.8, motion]
+tags: [omadesign, 0.0.1-alpha.rc, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-import-lottie/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-import-lottie/og.png
 ---

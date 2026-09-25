@@ -4,7 +4,7 @@ title: Native oma format
 slug: omadesign-0-5-8-native-oma-format
 excerpt: A .oma is JSON, PNG-packed rasters, and a motion clip in one file. Version 5 carries frames, auto-layout, constraints, and opt-in cloud metadata. Save imports as .oma to keep the editable document and the conversion notes.
 publishedAt: 2026-09-15T23:39:15Z
-tags: [omadesign, 0.5.8, oma]
+tags: [omadesign, 0.5.0, oma]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-native-oma-format/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-native-oma-format/og.png
 ---

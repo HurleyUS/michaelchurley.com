@@ -4,7 +4,7 @@ title: SVG FX stack
 slug: omadesign-0-5-8-svg-fx-stack
 excerpt: The FX studio stacks SVG filters on the selection, then on the layer underneath. Blur, shadow, offset, color, turbulence, displacement. The parameters are the SVG parameters.
 publishedAt: 2026-09-06T10:36:01Z
-tags: [omadesign, 0.5.8, effects, svg]
+tags: [omadesign, 0.0.1-alpha, effects, svg]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-svg-fx-stack/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-svg-fx-stack/og.png
 ---

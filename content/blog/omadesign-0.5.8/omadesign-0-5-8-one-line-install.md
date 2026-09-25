@@ -4,7 +4,7 @@ title: One-line install
 slug: omadesign-0-5-8-one-line-install
 excerpt: "One command installs omadesign to ~/.local/bin and a desktop entry under your home directory. Nothing is written to /usr."
 publishedAt: 2026-09-09T10:54:53Z
-tags: [omadesign, 0.5.8, install, binaries, welcome]
+tags: [omadesign, 0.0.5-alpha, install, binaries, welcome]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-one-line-install/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-one-line-install/og.png
 ---

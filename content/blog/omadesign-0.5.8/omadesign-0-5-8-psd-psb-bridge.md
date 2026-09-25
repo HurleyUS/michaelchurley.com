@@ -4,7 +4,7 @@ title: PSD PSB bridge
 slug: omadesign-0-5-8-psd-psb-bridge
 excerpt: PSD and PSB open through a native layered reader and export as RGB 8-bit layers. Groups, names, masks, blends, and supported Normal color overlays can survive. Text and smart objects arrive as saved pixels.
 publishedAt: 2026-09-07T01:42:01Z
-tags: [omadesign, 0.5.8, psd]
+tags: [omadesign, 0.0.2-alpha, psd]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-psd-psb-bridge/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-psd-psb-bridge/og.png
 ---

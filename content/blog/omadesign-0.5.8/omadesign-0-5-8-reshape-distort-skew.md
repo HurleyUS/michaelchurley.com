@@ -4,7 +4,7 @@ title: Reshape distort skew
 slug: omadesign-0-5-8-reshape-distort-skew
 excerpt: Object → Reshape opens Distort, Skew, Perspective, or a nine-handle Warp mesh. Shift constrains. Ctrl reverses snapping. Enter finishes. The first handle you move converts live text and parameter shapes to paths.
 publishedAt: 2026-09-06T10:35:01Z
-tags: [omadesign, 0.5.8, reshape]
+tags: [omadesign, 0.0.1-alpha, reshape]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-reshape-distort-skew/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-reshape-distort-skew/og.png
 ---

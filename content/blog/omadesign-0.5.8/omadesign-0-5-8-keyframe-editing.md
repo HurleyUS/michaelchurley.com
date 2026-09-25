@@ -4,7 +4,7 @@ title: Keyframe editing
 slug: omadesign-0-5-8-keyframe-editing
 excerpt: Drag a shape to write keys at the playhead. The first key after zero also plants the rest pose at zero. K keys X, Y, rotation, and scale. Delete peels a key, then the animation, then the object.
 publishedAt: 2026-09-02T14:58:58Z
-tags: [omadesign, 0.5.8, motion]
+tags: [omadesign, 0.0.1-alpha.rc, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-keyframe-editing/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-keyframe-editing/og.png
 ---

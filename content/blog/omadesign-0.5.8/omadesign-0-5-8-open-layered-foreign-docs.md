@@ -4,7 +4,7 @@ title: Open layered foreign docs
 slug: omadesign-0-5-8-open-layered-foreign-docs
 excerpt: File → Open reads layered PSD, PSB, XCF, every PDF page, PDF-compatible AI, OpenRaster, SVG, and Affinity via the optional bridge. Each file opens in its own tab at its size. Save writes a .oma and leaves the source.
 publishedAt: 2026-09-07T01:38:01Z
-tags: [omadesign, 0.5.8, import]
+tags: [omadesign, 0.0.2-alpha, import]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-open-layered-foreign-docs/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-open-layered-foreign-docs/og.png
 ---

@@ -4,7 +4,7 @@ title: Selections pixel
 slug: omadesign-0-5-8-selections-pixel
 excerpt: Marquee is Shift+M, elliptical marquee is Shift+O, lasso is Q, wand is W. Tolerance sits in Brush. Ants stay until Esc. Paint stays inside the selection.
 publishedAt: 2026-09-18T23:47:50Z
-tags: [omadesign, 0.5.8, pixel]
+tags: [omadesign, 0.5.1, pixel]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-selections-pixel/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-selections-pixel/og.png
 ---
