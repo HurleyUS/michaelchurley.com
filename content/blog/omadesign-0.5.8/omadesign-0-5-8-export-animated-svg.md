@@ -3,61 +3,60 @@ id: T084
 title: Export animated SVG
 slug: omadesign-0-5-8-export-animated-svg
 excerpt: File → Export animated SVG… writes animated transforms and stroke and fill reveals, and it keeps masks and effects. Text is outlined in that file. The .oma text stays editable.
-tags: [omadesign, 0.5.8, motion]
+publishedAt: 2026-09-02T14:59:58Z
+tags: [omadesign, 0.0.1-alpha.rc, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-export-animated-svg/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-export-animated-svg/og.png
 ---
 
 ## The habit
 
-You need the animation on a page. After Effects will give you a render, a Lottie from a plugin, or an SVG if you have done the extra dance with an extension. The SVG you get from a static Illustrator export is the art, dead. A developer who asks for "the SVG, but moving" usually receives a video, or a Lottie JSON, or a static file plus an apology. Photoshop's timeline export is a movie. It is the wrong file for a mark that was vectors this morning.
+You need the animation on a web page. After Effects gives you a render, a Lottie from a plugin, or an SVG if you go through the extra steps with an extension. A static Illustrator export gives you the art with no motion. A developer who asks for "the SVG, but moving" usually gets a video, a Lottie JSON, or a static file with an apology. Photoshop's timeline exports a movie, which is the wrong file for a mark that was vectors this morning.
 
-The hand wants one menu item. The file should carry the transforms you keyed, the stroke that draws on, the fill that rises. If the artboard uses a mask, the mask should still be a mask in the SVG. If an effect is on the object, the effect should survive that export. Text is the sharp edge. A live font in an SVG depends on the font being installed on the visitor's machine. A reveal that follows glyph shapes depends on those shapes being in the file. You have been burned by a headline that falls back to a default face and a reveal that no longer matches the letters.
+I wanted one menu item that produces a file carrying the transforms you keyed, the stroke that draws on, and the fill that rises. If the artboard uses a mask, the mask should still be a mask in the SVG, and an effect on an object should survive the export. Text is the tricky part. A live font in an SVG depends on the font being installed on the visitor's machine, and a reveal that follows glyph shapes depends on those shapes being in the file. You have probably seen a headline fall back to a default face with a reveal that no longer matches the letters.
 
-You also want the source. Outlining type in the working document is a door you cannot open again. The export can outline. The `.oma` must not.
+You also want to keep the source editable. Outlining type in the working document can't be undone later. The export can outline, and the `.oma` must not.
 
 ## The constraint
 
-The clip and the drawing live in one `.oma`. The rest pose stays the rest pose. A still PNG, JPEG, or static SVG is that pose, on purpose, so a casual export cannot become a random frame. The animated file has to be its own command. **File → Export animated SVG…** is that command. It has to write the channels the timeline actually has: animated transforms, stroke reveal, fill reveal. Inventing a second animation model at export time is how the preview and the file diverge.
+The clip and the drawing live in one `.oma`, and the rest pose stays the rest pose. A still PNG, JPEG, or static SVG exports that pose on purpose, so a casual export never captures a random frame. The animated file therefore needs its own command, **File > Export animated SVG…**. It has to write the channels the timeline actually has: animated transforms, stroke reveal, and fill reveal. Inventing a second animation model at export time is how the preview and the file drift apart.
 
-Masks and effects are part of the composition you can already see. Dropping them silently would ship a cleaner file than the one you approved. This export keeps them. Lottie, beside it in the File menu, cannot keep pixel layers, layer masks, and effects, and it says so with an error. The SVG path is the one that holds those compositions. The split is the constraint of the two formats, made visible as two commands.
+Masks and effects are part of the composition you can already see. Dropping them silently would ship a simpler file than the one you approved, so this export keeps them. Lottie, next to it in the File menu, can't hold pixel layers, layer masks, or effects, and it reports an error when it meets them. The SVG export is the one that holds those compositions. Having two commands makes the difference between the two formats visible.
 
-Text has to match the canvas in the exported file. Glyph geometry and reveals have to agree. The way to guarantee that, without a network and without embedding a font you may not have the right to embed, is to outline the text in the export. The source text in the `.oma` stays editable. Project fonts, when you use them, already outline on SVG export for the same reason: the shared file keeps its appearance, the document keeps its carets.
+Text in the exported file has to match the canvas, with glyph geometry and reveals in agreement. The way to guarantee that, without a network and without embedding a font you may not have the right to embed, is to outline the text in the export. The source text in the `.oma` stays editable. Project fonts already outline on SVG export for the same reason: the shared file keeps its appearance, and the document keeps editable text.
 
-Native file dialogs are the save UI everywhere else. This export asks for a path the same way. It does not upload the SVG anywhere.
+This export uses the native file dialog to ask for a path, like every other save, and never uploads the SVG anywhere.
 
 ## What landed
 
-**File → Export animated SVG…** writes an SVG with the animated transforms and the stroke and fill reveals. X, Y, rotation, scale, and opacity travel as the transforms you keyed. Stroke reveal travels as the draw-on. Fill reveal travels as the fill coming up. The native canvas, this SVG, and Lottie share those reveal channels, so a Draw stroke you previewed with Space is the Draw stroke in the file. A Fill up from the bottom is the Fill up in the file.
+**File > Export animated SVG…** writes an SVG with the animated transforms and the stroke and fill reveals. X, Y, rotation, scale, and opacity carry over as the transforms you keyed. Stroke reveal becomes the draw-on, and fill reveal becomes the fill rising. The native canvas, this SVG, and Lottie share the same reveal channels, so a Draw stroke you previewed with Space is the same Draw stroke in the file, and a Fill up from the bottom behaves the same way.
 
-Masks stay. Effects stay. A composition that depends on them does not get simplified into naked shapes. You approved the masked mark. The SVG is the masked mark, moving.
+Masks and effects stay. A composition that depends on them isn't reduced to bare shapes, so the SVG shows the same masked mark you approved, now moving.
 
-Text is outlined in the exported file. The glyphs become geometry, and the reveals follow that geometry, so the letters on the page match the letters on your artboard. The font does not have to be installed on the machine that displays the SVG. The source text in the `.oma` is untouched. Open the document, double-click the type, and you are editing text. The outline existed in the export, for the export.
+Text is outlined in the exported file. The glyphs become geometry and the reveals follow that geometry, so the letters on the page match the letters on your artboard, and the font doesn't need to be installed on the machine that displays the SVG. The source text in the `.oma` is untouched. Open the document, double-click the type, and you are editing text. The outlines exist only in the export.
 
-The `.oma` remains the complete editable animation. Tracks, rest pose, live type, the layer stack. The SVG is a delivery file. Edit in the document. Export again when the edit is real. You do not round-trip the SVG back into the source to keep working. Import paths exist for Lottie and for static SVG as artwork. The working clip is the document you saved.
+The `.oma` stays the complete editable animation, with tracks, rest pose, live type, and the layer stack. The SVG is a delivery file. Edit in the document and export again when the edit is final. You never import the SVG back into the source to keep working. Import exists for Lottie and for static SVG as artwork, but the working clip is the document you saved.
 
-A static SVG export is still the rest pose. If the menu you hit does not say animated, you asked for the still. Use the animated command when the page needs the clip.
+A static SVG export still gives you the rest pose. If the menu item you chose doesn't say animated, you get the still. Use the animated command when the page needs the clip.
 
 ## In the hand
 
-Finish the move in Motion. Space to preview. Home to see the rest pose. The keys you mean are on the timeline. Save the `.oma` first, the way you save before any export that leaves the machine.
+Finish the motion in the Motion persona. Press Space to preview and Home to see the rest pose, and check that the keys you want are on the timeline. Save the `.oma` first, as you would before any export that leaves the machine.
 
 ```
 File → Export animated SVG…
 ```
 
-The native file dialog asks where the SVG goes. Name it for the page, not for the working file. Write it.
+The native file dialog asks where the SVG should go. Name it for the page it will live on instead of after the working file, and write it.
 
-Open that SVG where you will use it. The transforms play. A stroked path draws on if you used stroke reveal. A closed fill rises if you used fill reveal. Masks you set are still masking. Effects you set are still in the file. Headlines are outlines. They match the glyph shapes you saw on the canvas, including the way a reveal crosses those shapes.
+Open the SVG where you plan to use it. The transforms play. A stroked path draws on if you used stroke reveal, and a closed fill rises if you used fill reveal. Your masks still mask, and your effects are still in the file. Headlines are outlines that match the glyph shapes you saw on the canvas, including where a reveal crosses them.
 
-Go back to the `.oma`. Click the type with the Type tool. The caret is there. Change a word. The change is in the document. The SVG you already wrote still has the old word, outlined, which is what an export is. Export animated SVG again when the new word should ship. The new file outlines the new glyphs. The document still has text.
+Go back to the `.oma` and click the type with the Type tool. The caret is there. Change a word, and the change is in the document. The SVG you already wrote still has the old word, outlined, as any export would. Export animated SVG again when the new word should ship. The new file outlines the new glyphs, and the document still has live text.
 
-If the composition has pixel layers, layer masks, or effects and someone asks for Lottie, this SVG is the file that can hold them. Lottie will stop on those and tell you. You already have the command that does not have to stop.
+If the composition has pixel layers, layer masks, or effects and someone asks for Lottie, this SVG can hold them. Lottie will stop and tell you it can't.
 
 ## The edge
 
-The export refuses to outline the source. Text becomes geometry in the SVG so the glyphs and the reveals match a machine that does not have your fonts. The `.oma` keeps the text editable. You can export ten times and the type tool still edits type.
+The export never outlines the source. Text becomes geometry in the SVG so the glyphs and reveals match on a machine without your fonts, and the `.oma` keeps the text editable. You can export ten times and the type tool still edits type.
 
-It also refuses to drop masks and effects on the way out. Those stay in the animated SVG. A still export remains a different file: PNG, JPEG, and static SVG stay the rest pose, playhead or not.
-
-Choose File → Export animated SVG… when the page needs the clip and the `.oma` needs to keep the words.
+The export also keeps masks and effects in the animated SVG. Still exports are separate files: PNG, JPEG, and static SVG always show the rest pose, wherever the playhead is.

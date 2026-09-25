@@ -3,52 +3,53 @@ id: T063
 title: Selections pixel
 slug: omadesign-0-5-8-selections-pixel
 excerpt: Marquee is Shift+M, elliptical marquee is Shift+O, lasso is Q, wand is W. Tolerance sits in Brush. Ants stay until Esc. Paint stays inside the selection.
-tags: [omadesign, 0.5.8, pixel]
+publishedAt: 2026-09-18T23:47:50Z
+tags: [omadesign, 0.5.1, pixel]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-selections-pixel/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-selections-pixel/og.png
 ---
 
 ## The habit
 
-Photoshop selections are a dialect. You drag a marquee, the ants march, Shift adds, Delete clears the pixels inside, and Esc or Ctrl+D drops the ants and leaves the picture. The selection is a fence for the next brush, the next fill, the next heal. It is a pixel fence. A path is a different command.
+Photoshop selections have their own conventions. You drag a marquee and the marching ants appear. Shift adds, Delete clears the pixels inside, and Esc or Ctrl+D drops the ants and leaves the picture. The selection is a fence for the next brush stroke, fill or heal. It fences pixels, and a path is a different command.
 
-Affinity's marching ants are the same fence. Illustrator's selection is a different animal. You click objects. You do not drag a dotted rectangle across a photograph and expect the pixels inside to become the only paintable region. When both kinds of work live in one file, the hand has to know which selection it is holding. Object selection moves shapes. Pixel selection fences samples.
+Affinity's marching ants work the same way. Illustrator's selection is different. You click objects, and you wouldn't expect dragging a dotted rectangle across a photograph to make the pixels inside the only paintable region. When both kinds of work live in one file, you have to know which selection you are holding. Object selection moves shapes, and pixel selection fences samples.
 
-The wand's tolerance is the argument you always have. Too low and you click forty times. Too high and the background eats the hair. The number has to sit somewhere you can change without a modal. Next to the brush, because the wand is a pixel tool and the brush studio is already open in that persona.
+The magic wand's tolerance is a constant argument. Too low and you click forty times. Too high and the background swallows the hair. The number has to be somewhere you can change without a modal dialog, next to the brush, because the wand is a pixel tool and the brush studio is already open in that persona.
 
 ## The constraint
 
-Pixel selection lives beside vector tools in one `.oma`. The same keyboard has to serve both. In Design, Shift+O is the artboard tool. In Pixel, Shift+O is the elliptical marquee. Shift+M in Pixel is the rectangular marquee. `Q` is the lasso. `W` is the wand. `M` without Shift, in Pixel, is Smudge. The persona is what makes the letter safe. You switch to Pixel before those chords mean selections. You switch to Design and Shift+O draws a board again.
+Pixel selection lives beside vector tools in one `.oma`, so the same keyboard has to serve both. In Design, Shift+O is the artboard tool. In Pixel, Shift+O is the elliptical marquee and Shift+M is the rectangular marquee. `Q` is the lasso and `W` is the wand. `M` without Shift, in Pixel, is Smudge. The persona decides what the letter does. Switch to Pixel and those keys mean selections. Switch to Design and Shift+O draws an artboard again.
 
-The ants are document state for the pixel edit, stored with the session. They are not a path in the layer tree. Save keeps the pixels you changed. The fence is how you limit the edit. Drag to select. The ants stay until Esc. Shift adds to the selection. Delete clears the selected pixels on the target layer. Brush, fill, clone, heal, and smudge stay inside the fence. A filter or effect from Raster studio also limits itself to a marquee, lasso, or wand selection, and the Strength slider blends that result back toward the source where the selection only partly covers a pixel.
+The ants are document state for the pixel edit, stored with the session. They aren't a path in the layer tree. Save keeps the pixels you changed, and the fence limits where edits go. Drag to select, and the ants stay until Esc. Shift adds to the selection, and Delete clears the selected pixels on the target layer. Brush, fill, clone, heal and smudge stay inside the fence. Filters and effects from Raster studio also limit themselves to a marquee, lasso or wand selection, and where the selection only partly covers a pixel, the Strength slider blends the result back toward the source.
 
-`Ctrl+D` in Pixel clears the pixel selection. The manual is blunt about this because `Ctrl+D` is duplicate in a lot of other software, and in this studio duplicate is `Super+D`. Press the wrong one and you will think the selection "did nothing" when it actually dropped the ants. Read the status of the canvas. Ants gone means Ctrl+D worked.
+In Pixel, `Ctrl+D` clears the pixel selection. The manual stresses this because `Ctrl+D` means duplicate in a lot of other software, and in this studio duplicate is `Super+D`. If you press the wrong one, you might think the selection did nothing when it actually dropped the ants. Look at the canvas. If the ants are gone, Ctrl+D worked.
 
-The wand reads tolerance from the Brush studio. One place for the number. You do not hunt a hidden options bar. Eyedropper `I` still samples color to the sidebar, which is how you check what the wand is about to consider.
+The wand reads its tolerance from the Brush studio, so the number lives in one place and you don't have to find a hidden options bar. The Eyedropper (`I`) still samples color to the sidebar, which is how you check what the wand is about to consider.
 
-There is no dialog that converts the selection into a vector as a side effect. If you wanted paths, Trace is the path tool. The selection stays a pixel fence. Object selection, Move `V`, still selects shapes when you are on vectors. The two selections are neighbors. They are not the same click.
+No dialog converts the selection into a vector as a side effect. If you want paths, use Trace. The selection stays a pixel fence. On vectors, Move (`V`) still selects shapes. The two kinds of selection sit side by side, and they are different clicks.
 
 ## What landed
 
-Four tools. Marquee, Shift+M. Elliptical marquee, Shift+O. Lasso, `Q`. Wand, `W`. All in Pixel, all aimed at an unlocked visible pixel layer. If the layer is wrong, the status line says "Choose an unlocked pixel layer to select." Fix the row, then drag.
+There are four tools: Marquee (Shift+M), Elliptical marquee (Shift+O), Lasso (`Q`) and Wand (`W`). All of them work in Pixel on an unlocked, visible pixel layer. If the target layer is wrong, the status line says "Choose an unlocked pixel layer to select." Fix the layer row, then drag.
 
-Drag the marquee or the ellipse. Draw the lasso. Click the wand. Ants march around the result. Shift and drag or Shift and click adds. Esc removes the ants and leaves the pixels. Delete removes the pixels inside the ants. `Ctrl+Z` can bring those pixels back, because the clear is an edit. Esc is not an edit. Esc only drops the fence.
+Drag the marquee or the ellipse, draw the lasso or click the wand, and ants march around the result. Shift-drag or Shift-click adds to it. Esc removes the ants and leaves the pixels. Delete removes the pixels inside the ants, and `Ctrl+Z` can bring them back because the clear is an edit. Esc isn't an edit. It only drops the fence.
 
-Paint with `B` and the dab clips to the ants. Fill with `K` and the bucket stays inside. Clone and heal stay inside. Smudge stays inside. This is how you recolor a shirt without painting the wall, and how you heal a face without smearing the background. Drop the ants with Esc when the next stroke should be free.
+Paint with `B` and the brush clips to the ants. Fill with `K` and the bucket stays inside. Clone, heal and smudge stay inside too. That is how you recolor a shirt without painting the wall, or heal a face without smearing the background. Press Esc to drop the ants when the next stroke should go anywhere.
 
-Wand tolerance is in Brush. Raise it when the click only caught a speck. Lower it when the click leaped a boundary. Click again. The previous ants are replaced or added depending on Shift. The number is the same brush panel you use for size and hardness, so it stays on screen while you work. You do not close a tool options popover to paint, then reopen it to change tolerance.
+Wand tolerance is in Brush. Raise it when a click only caught a speck, and lower it when a click jumped a boundary, then click again. Depending on Shift, the new ants replace or add to the previous ones. The tolerance sits in the same brush panel as size and hardness, so it stays on screen while you work, and you never close a tool options popover to paint and reopen it to change tolerance.
 
-Raster studio → Filters or Effects honor the same fence. Choose Mask first when the filter should hit the mask. Leave it on the image when the filter should hit the picture. Partial coverage plus Strength blends. Cancel leaves the document untouched. Apply runs at full resolution in the background and creates one undo step. The selection is the limit. The filter dialog is not a second document.
+Raster studio > Filters or Effects respect the same fence. Choose Mask first when the filter should affect the mask, or leave the image targeted when it should affect the picture. Partial coverage blends with Strength. Cancel leaves the document untouched. Apply runs at full resolution in the background and creates one undo step. The selection sets the limit, and the filter dialog works on the same document.
 
-In the layer list, Ctrl-click an item in Pixel to select its rendered outline. That selection stays in document coordinates when you switch targets. It is another way to fence pixels using something you already drew. Mask from item… on the layer menu can turn a chosen outline into a mask on a target. That is the mask feature. The ants themselves remain the pixel selection until you dismiss them.
+In Pixel, Ctrl-click an item in the layer list to select its rendered outline. That selection stays in document coordinates when you switch targets, so you can fence pixels using something you already drew. Mask from item… on the layer menu turns a chosen outline into a mask on a target layer. That is the mask feature, and the ants stay the pixel selection until you dismiss them.
 
-Vector tools do not consume this fence as a path. Move `V` still selects shapes. The pixels you already edited stay on the pixel layer either way. Drag a new fence when the next edit needs one.
+Vector tools don't use this fence as a path. Move (`V`) still selects shapes, and pixels you already edited stay on the pixel layer either way. Drag a new fence when the next edit needs one.
 
 ## In the hand
 
-Pixel persona. Pixel layer selected. A product shot, white background, object in the middle.
+Switch to the Pixel persona and select a pixel layer. Say it is a product shot with a white background and the object in the middle.
 
-Press `W`. Set tolerance in Brush until a click on the white selects the white and stops at the product. Shift-click the remaining white bays. Press Delete. The white is gone. The product remains. Esc. The ants are gone. The transparency stays.
+Press `W`. Set tolerance in Brush until a click on the white selects the white and stops at the product. Shift-click the remaining patches of white, then press Delete. The white is gone and the product remains. Press Esc. The ants are gone and the transparency stays.
 
 ```
 Shift+M   marquee          (Pixel)
@@ -60,18 +61,18 @@ Ctrl+D    drop the ants in Pixel
 Delete    clear selected pixels
 ```
 
-Press Shift+M. Drag a rectangle around a label you want to recolor. Press `B`. Paint. The paint stops at the rectangle. Press `E` if you overshot inside the fence. You cannot overshoot outside it. Esc. Paint a shadow that should extend past the label. It can, because the fence is gone.
+Press Shift+M and drag a rectangle around a label you want to recolor. Press `B` and paint, and the paint stops at the rectangle. Press `E` if you overshot inside the fence. You can't overshoot outside it. Press Esc, then paint a shadow that should extend past the label. It can, because the fence is gone.
 
-Press `Q`. Draw a loose loop around a strand of hair the wand ate. Shift was up, so this is the selection now. Or hold Shift as you draw if you meant to add. Heal inside that loop with Shift+J. The repair does not spill.
+Press `Q` and draw a loose loop around a strand of hair the wand swallowed. Without Shift, this becomes the new selection. Hold Shift while you draw if you meant to add to it. Heal inside the loop with Shift+J, and the repair stays inside it.
 
-Press `I` and click a color you might fill. Press `K`. The fill uses the current color, inside the ants.
+Press `I` and click a color you might fill with. Press `K`, and the fill uses the current color inside the ants.
 
-Remember Design. Shift+O over there is an artboard. If a board appeared, you were not in Pixel. Switch persona. Shift+O again. You get the ellipse.
+Remember that in Design, Shift+O is the artboard tool. If an artboard appeared, you weren't in Pixel. Switch persona and press Shift+O again to get the ellipse.
 
-`Super+D` if you meant to duplicate a layer object. `Ctrl+D` if you meant to deselect. Say them apart once and the rest of the day is quiet.
+Press `Super+D` to duplicate a layer object and `Ctrl+D` to deselect. Once you keep those two apart, the rest goes smoothly.
 
 ## The edge
 
-A pixel selection refuses to be a path. It fences brush, fill, clone, heal, smudge, and the raster filters. It does not convert the logo to outlines, and it does not move vector objects. Esc and `Ctrl+D` drop the fence without requiring you to paint.
+A pixel selection is never a path. It fences brush, fill, clone, heal, smudge and the raster filters. It doesn't convert a logo to outlines or move vector objects. Esc and `Ctrl+D` drop the fence without you having to paint.
 
-The tools also refuse a layer that is not an unlocked visible pixel layer. "Choose an unlocked pixel layer to select." Point them at the row that holds the samples. The ants belong on those samples, in the same document as the paths, which keep their own selection, the object one, on `V`.
+The tools only work on an unlocked, visible pixel layer, and otherwise they report "Choose an unlocked pixel layer to select." Point them at the layer that holds the pixels. The ants sit on those pixels, in the same document as the paths, which keep their own object selection on `V`.
