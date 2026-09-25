@@ -34,10 +34,10 @@ function tags(raw: string) {
     .filter(Boolean);
 }
 
-function seriesNote(entry: CatalogEntry) {
+function seriesNote(entry: CatalogEntry, part: number, total: number) {
   const prev = entry.prev ? `[Previous](/blog/${entry.prev})` : "Start of the thread";
   const next = entry.next ? `[Next](/blog/${entry.next})` : "End of the thread";
-  return `\n\n## The thread\n\nPart ${entry.n} of 144 in the Omadesign 0.5.8 feature thread.\n\n${prev} · ${next}\n`;
+  return `\n\n## The thread\n\nPart ${part} of ${total} in the Omadesign 0.5.8 feature thread.\n\n${prev} · ${next}\n`;
 }
 
 /**
@@ -55,7 +55,7 @@ export function getOmaFeaturePosts(): StaticPost[] {
   ) as CatalogEntry[];
   const bySlug = new Map(catalog.map((entry) => [entry.slug, entry]));
   const posts: StaticPost[] = [];
-  for (const entry of catalog) {
+  for (const [index, entry] of catalog.entries()) {
     const file = path.join(ROOT, `${entry.slug}.md`);
     if (!fs.existsSync(file)) continue;
     const raw = fs.readFileSync(file, "utf8");
@@ -72,7 +72,7 @@ export function getOmaFeaturePosts(): StaticPost[] {
       title: field(front, "title") || known.title,
       slug,
       excerpt: field(front, "excerpt") || known.tweet.slice(0, 220),
-      content: `${body.trim()}\n${seriesNote(known)}`,
+      content: `${body.trim()}\n${seriesNote(known, index + 1, catalog.length)}`,
       coverImage: field(front, "coverImage") || known.cover,
       video: field(front, "video") || known.video,
       tags: tags(front),

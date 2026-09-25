@@ -33,66 +33,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-first-five-minutes/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-first-five-minutes/og.png",
     "prev": "omadesign-0-5-8-portable-arm64-and-x86-64",
-    "next": "omadesign-0-5-8-welcome-logo-0-5-8"
-  },
-  {
-    "id": "T004",
-    "n": 4,
-    "title": "Welcome logo 0.5.8",
-    "section": "Welcome & first open",
-    "tweet": "0.5.8 welcome: corrected transparent logo, 25% larger, on a dark background. Browser panels and creation buttons fade from the lighter theme color into that dark chrome.",
-    "slug": "omadesign-0-5-8-welcome-logo-0-5-8",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-welcome-logo-0-5-8/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-welcome-logo-0-5-8/og.png",
-    "prev": "omadesign-0-5-8-first-five-minutes",
-    "next": "omadesign-0-5-8-welcome-segmented-buttons"
-  },
-  {
-    "id": "T005",
-    "n": 5,
-    "title": "Welcome segmented buttons",
-    "section": "Welcome & first open",
-    "tweet": "0.5.8 welcome polish: segmented buttons use gradients, utility links use Phosphor icons, project folders get a squarer rounded outline. Make it your studio, not a stub.",
-    "slug": "omadesign-0-5-8-welcome-segmented-buttons",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-welcome-segmented-buttons/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-welcome-segmented-buttons/og.png",
-    "prev": "omadesign-0-5-8-welcome-logo-0-5-8",
-    "next": "omadesign-0-5-8-persistent-title-bar"
-  },
-  {
-    "id": "T006",
-    "n": 6,
-    "title": "Persistent title bar",
-    "section": "Welcome & first open",
-    "tweet": "0.5.8 keeps the title bar visible so open-document thumbnails stay put when you start working. Menu uses the Omadesign wordmark \u2014 no duplicate Open/Preferences noise.",
-    "slug": "omadesign-0-5-8-persistent-title-bar",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-persistent-title-bar/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-persistent-title-bar/og.png",
-    "prev": "omadesign-0-5-8-welcome-segmented-buttons",
-    "next": "omadesign-0-5-8-filter-icon-states"
-  },
-  {
-    "id": "T007",
-    "n": 7,
-    "title": "Filter icon states",
-    "section": "Welcome & first open",
-    "tweet": "0.5.8 welcome filter icon has no button background: hover turns it blue; an active filter turns it red. Small chrome detail that actually reads while you hunt projects.",
-    "slug": "omadesign-0-5-8-filter-icon-states",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-filter-icon-states/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-filter-icon-states/og.png",
-    "prev": "omadesign-0-5-8-persistent-title-bar",
-    "next": "omadesign-0-5-8-template-chooser-width"
-  },
-  {
-    "id": "T008",
-    "n": 8,
-    "title": "Template chooser width",
-    "section": "Welcome & first open",
-    "tweet": "0.5.8 template chooser opens at its final width and stays there as the pointer moves in. No layout jump while you browse the 52 starters.",
-    "slug": "omadesign-0-5-8-template-chooser-width",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-template-chooser-width/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-template-chooser-width/og.png",
-    "prev": "omadesign-0-5-8-filter-icon-states",
     "next": "omadesign-0-5-8-crash-recovery-swap"
   },
   {
@@ -104,7 +44,7 @@
     "slug": "omadesign-0-5-8-crash-recovery-swap",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/og.png",
-    "prev": "omadesign-0-5-8-template-chooser-width",
+    "prev": "omadesign-0-5-8-first-five-minutes",
     "next": "omadesign-0-5-8-document-tabs"
   },
   {
@@ -1401,18 +1341,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/og.png",
     "prev": "omadesign-0-5-8-publish-to-showcase",
-    "next": "omadesign-0-5-8-compete-waitlist"
-  },
-  {
-    "id": "T118",
-    "n": 118,
-    "title": "Compete waitlist",
-    "section": "Cloud (sign-in, sync, invite, showcase)",
-    "tweet": "omadesign.app/compete \u2014 rules plus a waitlist. Entries not required on day one. /account for sign-in identity. /api/cloud for sync, publish, waitlist (last-write-wins).",
-    "slug": "omadesign-0-5-8-compete-waitlist",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-compete-waitlist/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-compete-waitlist/og.png",
-    "prev": "omadesign-0-5-8-collaborator-project-view",
     "next": "omadesign-0-5-8-lua-5-4-embedded"
   },
   {
@@ -1424,7 +1352,7 @@
     "slug": "omadesign-0-5-8-lua-5-4-embedded",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-lua-5-4-embedded/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-lua-5-4-embedded/og.png",
-    "prev": "omadesign-0-5-8-compete-waitlist",
+    "prev": "omadesign-0-5-8-collaborator-project-view",
     "next": "omadesign-0-5-8-manage-plugins"
   },
   {
@@ -1605,18 +1533,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-view-and-motion-keys/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-view-and-motion-keys/og.png",
     "prev": "omadesign-0-5-8-arrange-and-transform-keys",
-    "next": "omadesign-0-5-8-native-dialogs-context"
-  },
-  {
-    "id": "T135",
-    "n": 135,
-    "title": "Native dialogs context",
-    "section": "Keys & workflow polish",
-    "tweet": "Native file dialogs. Right-click canvas for Place, Trace, and the same edits. Status bar reports copy/cut/paste. No Electron file picker tax.",
-    "slug": "omadesign-0-5-8-native-dialogs-context",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-native-dialogs-context/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-native-dialogs-context/og.png",
-    "prev": "omadesign-0-5-8-view-and-motion-keys",
     "next": "omadesign-0-5-8-plugins-offline-docs"
   },
   {
@@ -1628,7 +1544,7 @@
     "slug": "omadesign-0-5-8-plugins-offline-docs",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-plugins-offline-docs/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-plugins-offline-docs/og.png",
-    "prev": "omadesign-0-5-8-native-dialogs-context",
+    "prev": "omadesign-0-5-8-view-and-motion-keys",
     "next": "omadesign-0-5-8-one-binary-not-three-apps"
   },
   {
