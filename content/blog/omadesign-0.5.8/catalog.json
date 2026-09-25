@@ -765,6 +765,18 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-openraster-gimp/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-openraster-gimp/og.png",
     "prev": "omadesign-0-5-8-one-line-install",
+    "next": "omadesign-0-5-0-layout-and-opt-in-cloud"
+  },
+  {
+    "id": "R050-01",
+    "n": 145,
+    "title": "Layout mode and opt-in cloud",
+    "section": "Release 0.5.0",
+    "tweet": "0.5.0 added Layout as a fifth mode (frames, auto-layout, constraints, frame export) and a cloud layer that stays off until you turn it on. The .oma format moved to version 5.",
+    "slug": "omadesign-0-5-0-layout-and-opt-in-cloud",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-0/omadesign-0-5-0-layout-and-opt-in-cloud/og.png",
+    "prev": "omadesign-0-5-8-openraster-gimp",
     "next": "omadesign-0-5-8-five-personas-one-document"
   },
   {
@@ -776,7 +788,7 @@
     "slug": "omadesign-0-5-8-five-personas-one-document",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-five-personas-one-document/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-five-personas-one-document/og.png",
-    "prev": "omadesign-0-5-8-openraster-gimp",
+    "prev": "omadesign-0-5-0-layout-and-opt-in-cloud",
     "next": "omadesign-0-5-8-frames-nest"
   },
   {
@@ -897,6 +909,18 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/og.png",
     "prev": "omadesign-0-5-8-publish-to-showcase",
+    "next": "omadesign-0-5-1-pixel-mode-finished"
+  },
+  {
+    "id": "R051-01",
+    "n": 146,
+    "title": "Pixel mode, finished enough to use",
+    "section": "Release 0.5.1",
+    "tweet": "0.5.1 made Pixel mode selections real. Marquee, ellipse, lasso and wand now leave a mask that paint respects. The eyedropper shows its color, smudge smears, and clone tracks its source.",
+    "slug": "omadesign-0-5-1-pixel-mode-finished",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-1/omadesign-0-5-1-pixel-mode-finished/og.png",
+    "prev": "omadesign-0-5-8-collaborator-project-view",
     "next": "omadesign-0-5-8-selections-pixel"
   },
   {
@@ -908,7 +932,115 @@
     "slug": "omadesign-0-5-8-selections-pixel",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-selections-pixel/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-selections-pixel/og.png",
-    "prev": "omadesign-0-5-8-collaborator-project-view",
+    "prev": "omadesign-0-5-1-pixel-mode-finished",
+    "next": "omadesign-0-5-2-cloud-projects-and-review"
+  },
+  {
+    "id": "R052-01",
+    "n": 147,
+    "title": "Cloud gets real: projects, roles, review snapshots",
+    "section": "Release 0.5.2",
+    "tweet": "The 0.5.2 nightly replaced the 0.5.0 cloud hooks with verified sign-in, explicit project push and pull, owner/editor/reviewer roles, and comments pinned to versioned flat snapshots.",
+    "slug": "omadesign-0-5-2-cloud-projects-and-review",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-2/omadesign-0-5-2-cloud-projects-and-review/og.png",
+    "prev": "omadesign-0-5-8-selections-pixel",
+    "next": "omadesign-0-5-3-paste-onto-the-canvas"
+  },
+  {
+    "id": "R053-01",
+    "n": 148,
+    "title": "Paste anything onto the canvas",
+    "section": "Release 0.5.3",
+    "tweet": "0.5.3 fixed external paste. Ctrl+V takes screenshots, browser images, copied image files, text and SVG, and drops them at the center of the canvas you are looking at, as one Undo.",
+    "slug": "omadesign-0-5-3-paste-onto-the-canvas",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-3/omadesign-0-5-3-paste-onto-the-canvas/og.png",
+    "prev": "omadesign-0-5-2-cloud-projects-and-review",
+    "next": "omadesign-0-5-4-chroma-key-and-raster-banks"
+  },
+  {
+    "id": "R054-01",
+    "n": 149,
+    "title": "Chroma key and 30 raster treatments in Pixel",
+    "section": "Release 0.5.4",
+    "tweet": "0.5.4 put chroma key in Pixel mode, inside a bank of 17 raster filters and 13 raster effects. Each one previews on a checkerboard, applies at full resolution in the background, and undoes in one step.",
+    "slug": "omadesign-0-5-4-chroma-key-and-raster-banks",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-4/omadesign-0-5-4-chroma-key-and-raster-banks/og.png",
+    "prev": "omadesign-0-5-3-paste-onto-the-canvas",
+    "next": "omadesign-0-5-4-gradients-and-color"
+  },
+  {
+    "id": "R054-02",
+    "n": 150,
+    "title": "Gradients for fills and strokes, and a color picker that remembers",
+    "section": "Release 0.5.4",
+    "tweet": "0.5.4 added linear, radial, shape and conic gradients to both fill and stroke, a color picker with Current and Previous chips and alpha everywhere, and per-object opacity and blend.",
+    "slug": "omadesign-0-5-4-gradients-and-color",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-4/omadesign-0-5-4-gradients-and-color/og.png",
+    "prev": "omadesign-0-5-4-chroma-key-and-raster-banks",
+    "next": "omadesign-0-5-4-responsive-layout"
+  },
+  {
+    "id": "R054-03",
+    "n": 151,
+    "title": "Layout goes responsive: Stack, Wrap, Grid, breakpoints, components",
+    "section": "Release 0.5.4",
+    "tweet": "0.5.4 grew Layout from frames and a vertical stack into Stack, Wrap and Grid with Fixed/Hug/Fill sizing, Phone and Tablet breakpoints, document-local components with variants, and color and number variables.",
+    "slug": "omadesign-0-5-4-responsive-layout",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-4/omadesign-0-5-4-responsive-layout/og.png",
+    "prev": "omadesign-0-5-4-gradients-and-color",
+    "next": "omadesign-0-5-4-present-and-html-export"
+  },
+  {
+    "id": "R054-04",
+    "n": 152,
+    "title": "Present: prototype interactions and responsive HTML export",
+    "section": "Release 0.5.4",
+    "tweet": "0.5.4 added Present to Layout. Click, Hover and Press trigger navigation, overlays and variant changes with Instant, Dissolve or Slide transitions, and a frame exports as standalone responsive HTML.",
+    "slug": "omadesign-0-5-4-present-and-html-export",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-4/omadesign-0-5-4-present-and-html-export/og.png",
+    "prev": "omadesign-0-5-4-responsive-layout",
+    "next": "omadesign-0-5-5-no-more-freeze-prompts"
+  },
+  {
+    "id": "R055-01",
+    "n": 153,
+    "title": "No more Hyprland freeze prompts, and Photo or Layout without an artboard",
+    "section": "Release 0.5.5",
+    "tweet": "The 0.5.5 nightly moved native file choosers off the event loop, so Hyprland stops asking to kill Omadesign while Open or Save is up. Photo and Layout also open straight from the start screen, no artboard.",
+    "slug": "omadesign-0-5-5-no-more-freeze-prompts",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-5/omadesign-0-5-5-no-more-freeze-prompts/og.png",
+    "prev": "omadesign-0-5-4-present-and-html-export",
+    "next": "omadesign-0-5-6-welcome-finds-your-work"
+  },
+  {
+    "id": "R056-01",
+    "n": 154,
+    "title": "The welcome screen finds your work and projects",
+    "section": "Release 0.5.6",
+    "tweet": "0.5.6 replaced the welcome page with a local browser. It finds every .oma under your home directory, finds .omabrand projects at any depth, and shows shared Team projects only when you are signed in.",
+    "slug": "omadesign-0-5-6-welcome-finds-your-work",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-6/omadesign-0-5-6-welcome-finds-your-work/og.png",
+    "prev": "omadesign-0-5-5-no-more-freeze-prompts",
+    "next": "omadesign-0-5-6-ask-your-agent"
+  },
+  {
+    "id": "R056-02",
+    "n": 155,
+    "title": "Ask your agent: bundled docs and the omadesign-create skill",
+    "section": "Release 0.5.6",
+    "tweet": "0.5.6 ships version-matched Markdown docs and an omadesign-create skill inside the package. Learn with AI and Create with agent hand them to your configured Omarchy agent from the welcome screen.",
+    "slug": "omadesign-0-5-6-ask-your-agent",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-6/omadesign-0-5-6-ask-your-agent/og.png",
+    "prev": "omadesign-0-5-6-welcome-finds-your-work",
     "next": "omadesign-0-5-8-corner-radius-multi-edit-0-5-8"
   },
   {
@@ -920,7 +1052,7 @@
     "slug": "omadesign-0-5-8-corner-radius-multi-edit-0-5-8",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-corner-radius-multi-edit-0-5-8/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-corner-radius-multi-edit-0-5-8/og.png",
-    "prev": "omadesign-0-5-8-selections-pixel",
+    "prev": "omadesign-0-5-6-ask-your-agent",
     "next": "omadesign-0-5-8-compound-paths-0-5-8"
   },
   {
@@ -1065,6 +1197,102 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-one-binary-not-three-apps/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-one-binary-not-three-apps/og.png",
     "prev": "omadesign-0-5-8-adobe-familiar-tool-keys",
+    "next": "omadesign-0-5-9-click-the-pixel-you-mean"
+  },
+  {
+    "id": "R059-01",
+    "n": 156,
+    "title": "Click the pixel you mean: a screen-wide eyedropper and six fixes in 0.5.9",
+    "section": "Release 0.5.9",
+    "tweet": "0.5.9 passed QA on 24 September. The eyedropper now reaches any pixel on screen, and six fixes land with it, from Alt-subtract on pixel selections and dilate/erode to the pen's open end.",
+    "slug": "omadesign-0-5-9-click-the-pixel-you-mean",
+    "video": "",
+    "cover": "/blog/omadesign-0-5-9/omadesign-0-5-9-click-the-pixel-you-mean/og.png",
+    "prev": "omadesign-0-5-8-one-binary-not-three-apps",
+    "next": "omadesign-0-6-0-motion-keys"
+  },
+  {
+    "id": "R060-01",
+    "n": 157,
+    "title": "Motion keys the design you already made",
+    "section": "Release 0.6.0",
+    "tweet": "0.6.0 widens what Motion can key. Width and height key separately, and fill color, stroke width, gradient angle, dash, gap and dash length key too. Blend mode stays a design edit.",
+    "slug": "omadesign-0-6-0-motion-keys",
+    "video": "",
+    "cover": "/blog/omadesign-0-6-0/omadesign-0-6-0-motion-keys/og.png",
+    "prev": "omadesign-0-5-9-click-the-pixel-you-mean",
+    "next": "omadesign-0-6-0-brush-edge-and-clone"
+  },
+  {
+    "id": "R060-02",
+    "n": 158,
+    "title": "A brush edge on the canvas, and a clone brush with real controls",
+    "section": "Release 0.6.0",
+    "tweet": "0.6.0 draws the brush edge on the canvas for brush, eraser, clone, heal and smudge, sized to the brush and the zoom. The clone brush gets size, edge, opacity, flow and Aligned.",
+    "slug": "omadesign-0-6-0-brush-edge-and-clone",
+    "video": "",
+    "cover": "/blog/omadesign-0-6-0/omadesign-0-6-0-brush-edge-and-clone/og.png",
+    "prev": "omadesign-0-6-0-motion-keys",
+    "next": "omadesign-0-6-0-transform-a-selection"
+  },
+  {
+    "id": "R060-03",
+    "n": 159,
+    "title": "Move, resize, feather and distort a pixel selection",
+    "section": "Release 0.6.0",
+    "tweet": "In 0.6.0 a pixel selection is no longer fixed once drawn. Move it, resize it, feather it or distort it from the paint inspector, and nudge it with the arrow keys while a selection tool is active.",
+    "slug": "omadesign-0-6-0-transform-a-selection",
+    "video": "",
+    "cover": "/blog/omadesign-0-6-0/omadesign-0-6-0-transform-a-selection/og.png",
+    "prev": "omadesign-0-6-0-brush-edge-and-clone",
+    "next": "omadesign-0-6-0-apple-glass"
+  },
+  {
+    "id": "R060-04",
+    "n": 160,
+    "title": "Apple glass: displacement through a turbulence map",
+    "section": "Release 0.6.0",
+    "tweet": "0.6.0 adds Apple glass to the FX stack. It displaces the picture through a turbulence map, on the canvas and in exported SVG as feTurbulence plus feDisplacementMap. The existing Displacement effect is unchanged.",
+    "slug": "omadesign-0-6-0-apple-glass",
+    "video": "",
+    "cover": "/blog/omadesign-0-6-0/omadesign-0-6-0-apple-glass/og.png",
+    "prev": "omadesign-0-6-0-transform-a-selection",
+    "next": "omadesign-0-6-0-simplify"
+  },
+  {
+    "id": "R060-05",
+    "n": 161,
+    "title": "Simplify after a boolean subtract",
+    "section": "Release 0.6.0",
+    "tweet": "0.6.0 adds Simplify next to Pathfinder. It drops the extra nodes a boolean subtract leaves on a straight edge, keeps nodes that bend a curve, and leaves corner handles alone.",
+    "slug": "omadesign-0-6-0-simplify",
+    "video": "",
+    "cover": "/blog/omadesign-0-6-0/omadesign-0-6-0-simplify/og.png",
+    "prev": "omadesign-0-6-0-apple-glass",
+    "next": "omadesign-0-6-0-eyedropper-in-every-picker"
+  },
+  {
+    "id": "R060-06",
+    "n": 162,
+    "title": "An eyedropper in every color picker",
+    "section": "Release 0.6.0",
+    "tweet": "0.6.0 puts an eyedropper in every color picker. The sampled pixel goes back to the picker that asked for it, whether that is a gradient stop, an effect color or a fill. The hex field copies and pastes.",
+    "slug": "omadesign-0-6-0-eyedropper-in-every-picker",
+    "video": "",
+    "cover": "/blog/omadesign-0-6-0/omadesign-0-6-0-eyedropper-in-every-picker/og.png",
+    "prev": "omadesign-0-6-0-simplify",
+    "next": "omadesign-0-6-0-library-thumbnails"
+  },
+  {
+    "id": "R060-07",
+    "n": 163,
+    "title": "Thumbnails in the shape, icon and photo libraries",
+    "section": "Release 0.6.0",
+    "tweet": "0.6.0 shows a preview in the shape and icon library rows, with Phosphor drawing the real glyph, and loads free-photo thumbnails while the browser is open. Both libraries now sit at the bottom of the tool stack.",
+    "slug": "omadesign-0-6-0-library-thumbnails",
+    "video": "",
+    "cover": "/blog/omadesign-0-6-0/omadesign-0-6-0-library-thumbnails/og.png",
+    "prev": "omadesign-0-6-0-eyedropper-in-every-picker",
     "next": null
   }
 ]

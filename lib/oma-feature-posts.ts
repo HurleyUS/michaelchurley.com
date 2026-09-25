@@ -41,6 +41,18 @@ function publishedAt(front: string, entry: CatalogEntry) {
   return Date.parse("2026-09-23T18:00:00Z") - (entry.n - 1) * 60_000;
 }
 
+const PUBLIC = path.join(process.cwd(), "public");
+
+/**
+ * Drops an empty media path, or a site-absolute one whose file is missing from public/.
+ * If public/ isn't on disk (for example, a serverless runtime), the path is kept as-is.
+ */
+function localAsset(src: string) {
+  if (!src) return undefined;
+  if (!src.startsWith("/") || !fs.existsSync(PUBLIC)) return src;
+  return fs.existsSync(path.join(PUBLIC, src)) ? src : undefined;
+}
+
 function seriesNote(entry: CatalogEntry, part: number, total: number) {
   const prev = entry.prev ? `[Previous](/blog/${entry.prev})` : "Start of the thread";
   const next = entry.next ? `[Next](/blog/${entry.next})` : "End of the thread";
@@ -80,8 +92,8 @@ export function getOmaFeaturePosts(): StaticPost[] {
       slug,
       excerpt: field(front, "excerpt") || known.tweet.slice(0, 220),
       content: `${body.trim()}\n${seriesNote(known, index + 1, catalog.length)}`,
-      coverImage: field(front, "coverImage") || known.cover,
-      video: field(front, "video") || known.video,
+      coverImage: localAsset(field(front, "coverImage") || known.cover),
+      video: localAsset(field(front, "video") || known.video),
       tags: tags(front),
       featured: false,
       published: true,
