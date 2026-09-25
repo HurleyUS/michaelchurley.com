@@ -34,6 +34,13 @@ function tags(raw: string) {
     .filter(Boolean);
 }
 
+/** Frontmatter `publishedAt` (ISO 8601) wins; otherwise the original thread timestamp. */
+function publishedAt(front: string, entry: CatalogEntry) {
+  const parsed = Date.parse(field(front, "publishedAt"));
+  if (Number.isFinite(parsed)) return parsed;
+  return Date.parse("2026-09-23T18:00:00Z") - (entry.n - 1) * 60_000;
+}
+
 function seriesNote(entry: CatalogEntry, part: number, total: number) {
   const prev = entry.prev ? `[Previous](/blog/${entry.prev})` : "Start of the thread";
   const next = entry.next ? `[Next](/blog/${entry.next})` : "End of the thread";
@@ -78,7 +85,7 @@ export function getOmaFeaturePosts(): StaticPost[] {
       tags: tags(front),
       featured: false,
       published: true,
-      publishedAt: Date.parse("2026-09-23T18:00:00Z") - (known.n - 1) * 60_000,
+      publishedAt: publishedAt(front, known),
       readingTime: Math.max(1, Math.round(words / 220)),
     });
   }
