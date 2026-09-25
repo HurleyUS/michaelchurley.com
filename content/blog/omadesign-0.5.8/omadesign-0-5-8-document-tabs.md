@@ -2,7 +2,7 @@
 id: T010
 title: Document tabs
 slug: omadesign-0-5-8-document-tabs
-excerpt: "Document tabs sit above the canvas. Ctrl+N starts a tab, Ctrl+O opens another, and a close on unsaved work asks Save, Discard, or Cancel."
+excerpt: "Every open document gets its own tab. Ctrl+N starts a tab, Ctrl+O opens another, and a close on unsaved work asks Save, Discard, or Cancel."
 publishedAt: 2026-09-06T10:28:01Z
 tags: [omadesign, 0.0.1-alpha, tabs]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-document-tabs/film.mp4
@@ -21,7 +21,7 @@ Badly built tabs copy the whole document, pixels and undo, on every frame so the
 
 One binary, one window, and one `.oma` per tab. Each tab owns its document and its undo, so undoing a step in the poster never undoes a step in the reference. Close is the dangerous action, so unsaved work has to ask first. The answers are Save, Discard, and Cancel. Cancel leaves the tab open. Discard is the only answer that throws away unsaved changes. Save writes `.oma` and, if the document had an idle swap, deletes `~/.local/share/omadesign/<id>.oma.swp`.
 
-The tabs sit above the canvas, as the manual describes. The title bar stays visible so open-document thumbnails don't jump when you leave the welcome screen and start working. The tab strip and the title bar have to stay still. A chooser that reflows, or a welcome screen that hides the bar, would defeat the purpose of tabs, which is to show which document your keystrokes will go to.
+The tabs started as a strip above the canvas. As of 0.5.5, they're live 64 × 64 thumbnails in a vertical rail against the left edge of the window (the manual still says "above the canvas"). The title bar stays visible so open-document thumbnails don't jump when you leave the welcome screen and start working. The tab rail and the title bar have to stay still. A chooser that reflows, or a welcome screen that hides the bar, would defeat the purpose of tabs, which is to show which document your keystrokes will go to.
 
 `Ctrl+N` and `Ctrl+O` are global document commands, with the same chords as the shortcut table. They have to work when the canvas has focus and stay out of the way when you are typing in a text object. A new tab is either empty and ready to draw in, or it holds the file you picked at that file's size. Imported PSD, PSB, XCF, PDF, SVG, OpenRaster, and supported Affinity documents each open in their own tab at their original dimensions. Save still writes `.oma` and leaves the source file on disk unchanged.
 
@@ -29,7 +29,7 @@ Templates follow the same rule. **Use this template** starts a fresh unsaved doc
 
 ## What landed
 
-Document tabs sit above the canvas. This post describes the tabs as they work in 0.5.8, whose release notes don't claim the tabs are new. Those notes do say the title bar stays up so the thumbnails of open documents stay put, and that bar is part of the chrome around the tab strip.
+As of 0.5.5, document tabs sit in a thumbnail rail on the left edge of the window. This post describes the tabs as they work in 0.5.8, whose release notes don't claim the tabs are new. Those notes do say the title bar stays up so the thumbnails of open documents stay put, and that bar is part of the chrome around the tab strip.
 
 `Ctrl+N` creates a new tab, and `Ctrl+O` opens another file in another tab. Close a tab with its close button or its right-click menu. If the document has unsaved work, the dialog offers Save, Discard, or Cancel, the same prompt Affinity users know, in a native Linux window, for one `.oma`.
 
@@ -60,7 +60,7 @@ omadesign
 Ctrl+N
 ```
 
-A new tab appears above the canvas. Press `R` and draw, and that rectangle belongs to the new tab.
+A new tab appears in the rail. Press `R` and draw, and that rectangle belongs to the new tab.
 
 ```text
 Ctrl+O

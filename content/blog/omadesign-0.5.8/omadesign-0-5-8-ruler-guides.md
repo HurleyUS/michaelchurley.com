@@ -3,8 +3,8 @@ id: T047
 title: Ruler guides
 slug: omadesign-0-5-8-ruler-guides
 excerpt: Drag a horizontal guide from the top ruler and a vertical guide from the left. Delete, drag off the canvas, or use the context menu to remove one. Ctrl+; shows or hides ruler and object guides.
-publishedAt: 2026-09-06T10:37:01Z
-tags: [omadesign, 0.0.1-alpha, guides, rulers]
+publishedAt: 2026-09-22T11:42:56Z
+tags: [omadesign, 0.5.8, guides, rulers]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-ruler-guides/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-ruler-guides/og.png
 ---

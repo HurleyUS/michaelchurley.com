@@ -29,7 +29,7 @@ Locked and hidden objects are out of reach. You took them off the table, so the 
 
 ## What landed
 
-Right-click the artwork or its object row and choose Flip horizontal or Flip vertical. Flip horizontal mirrors left and right. Flip vertical mirrors top and bottom. The same two commands are under Object and in the right-hand inspector, next to Arrange and Align, so you can flip without changing your selection.
+Right-click the artwork or its object row and choose Flip horizontal or Flip vertical. Flip horizontal mirrors left and right. Flip vertical mirrors top and bottom. The same two commands are under Object. As of 0.5.5, they're also in the right-hand inspector, next to Arrange and Align, so you can flip without changing your selection.
 
 The flip follows the visible canvas axes after rotation. A card at fifteen degrees mirrors across the page, and the fifteen degrees stay part of what you see. Linear gradients, dashed strokes and individual rectangle corners mirror with the art, so the heavy corner stays on the visual corner you meant.
 
@@ -47,7 +47,7 @@ Undoing the flip restores the artwork, gradient included. You don't rebuild anyt
 
 Select the wordmark with V. If it's still live text and you need a mirrored outline, choose Object > Convert to path first. Check a counter, like the inside of an o, to confirm the hole is still open. If you converted too early, press Ctrl+Z and the words come back.
 
-With the path selected, right-click it on the canvas and choose Flip horizontal. The mark now faces the other way across the page. If the path was rotated, the tilt you see is mirrored on the canvas axis. For top to bottom, use Flip V in the inspector or the Object menu. All three run the same flip.
+With the path selected, right-click it on the canvas and choose Flip horizontal. The mark now faces the other way across the page. If the path was rotated, the tilt you see is mirrored on the canvas axis. For top to bottom, use Flip V in the inspector (0.5.5 and later) or the Object menu. All three run the same flip.
 
 Next, try a dashed rounded rectangle. Rotate it, then right-click its row in the layer list instead of the canvas, and choose Flip horizontal. The dashes move to the mirrored side and the corner weights follow. Press Ctrl+Z and the rectangle's parameters come back, dash included.
 

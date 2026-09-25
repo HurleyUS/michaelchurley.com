@@ -3,8 +3,8 @@ id: T087
 title: Fifty-two templates
 slug: omadesign-0-5-8-fifty-two-templates
 excerpt: Templates · 52 opens from the welcome screen or File → Template library. Search by name or idea, filter nine categories, and pick a built-in size or a custom width, height, and DPI.
-publishedAt: 2026-09-06T10:44:01Z
-tags: [omadesign, 0.0.1-alpha, templates]
+publishedAt: 2026-09-20T17:53:29Z
+tags: [omadesign, 0.5.4, templates]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-fifty-two-templates/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-fifty-two-templates/og.png
 ---

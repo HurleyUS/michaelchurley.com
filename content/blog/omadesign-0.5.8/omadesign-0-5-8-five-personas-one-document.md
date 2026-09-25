@@ -31,7 +31,7 @@ Omadesign is one native binary. The document is one `.oma`, with one layer stack
 
 That rules out a handoff format between drawing and painting. Raster lives on a pixel layer in the same `.oma` as the vectors, and Layout frames live in the same document as the poster. Motion keys refer to the artboard you drew, and the rest pose stays the drawing. Photo can grade a camera file and writes a `.omaphoto` next to the original. **Place in Design** brings an 8-bit developed layer into the document. The `.oma` save doesn't swallow the RAW, and Design doesn't rewrite the camera file. That's exactly where the persona boundary sits. The capture's source of truth stays outside the design file, and everything you built lives in the `.oma`. A design save that embedded every RAW you ever placed would turn a poster into a disk, and one that rewrote the RAW to remember the grade would destroy the capture.
 
-There are five tool sets in one process, with no Creative Cloud session between them and no second window needed to press `B` after `T`. Compact windows get a persona picker so the choice still fits. The title bar has mode tabs with Phosphor icons (the curve, the brush, layout, images and the running figure), and hover text shows the mode name. From **omadesign > Config** you can have the next launch open in a remembered mode, or always start from the welcome screen.
+There are five tool sets in one process, with no Creative Cloud session between them and no second window needed to press `B` after `T`. Compact windows get a persona picker so the choice still fits. As of 0.5.5, the title bar has mode tabs with Phosphor icons (the curve, the brush, layout, images and the running figure), and hover text shows the mode name. From **omadesign > Config** you can have the next launch open in a remembered mode, or always start from the welcome screen.
 
 Plugins, cloud and export stay optional. File > Sign in is there when you want a review upload, and the personas don't wait on it. PNG, JPEG, SVG, animated SVG, Lottie, PSD, PDF and OpenRaster are exports, not how you move work between Design and Pixel.
 
@@ -61,7 +61,7 @@ The manual lists the five personas like this:
 | **Photo** | grading a photograph | Crop `C`, develop sliders, Place in Design |
 | **Motion** | animating the artboard | Space play, `K` key, File > Lottie |
 
-Design is the default when you open a vector document or a template. On the welcome screen, Vector leads to Design and Raster leads to Pixel. **+ Layout** leads to frames, and **+ Photo** opens the photo workspace, a folder or a file. Motion has no empty-workspace button. You open it once the canvas has something to move.
+Design is the default when you open a vector document or a template. As of 0.5.6, on the welcome screen, Vector leads to Design and Raster leads to Pixel. **+ Layout** leads to frames, and **+ Photo** opens the photo workspace, a folder or a file. Motion has no empty-workspace button. You open it once the canvas has something to move.
 
 The layer stack is shared. Eye and lock work per object. A pixel layer is a layer, a frame is in the document and a group moves with its children. Opacity and blend on a vector object live in the transform inspector, and placed images use the layer opacity and blend controls above the Layers tree. A frame's opacity applies to its whole subtree. Pass through on a group decides whether child blends reach the backdrop. None of that is stored per persona. You change persona and the stack is still the same stack.
 
@@ -99,7 +99,7 @@ Layout is the persona for a screen, a landing page or a dashboard, with Frame `F
 
 **Comments.** Write a note, pin it on the canvas and resolve it when it's done. Open counts show on the frame in the inspector.
 
-Photo and Layout can open from the start screen without creating an artboard, and a saved artboard-less Layout document stays that way when you reopen it.
+As of 0.5.5, Photo and Layout can open from the start screen without creating an artboard, and a saved artboard-less Layout document stays that way when you reopen it.
 
 ### Pixel
 
@@ -131,7 +131,7 @@ The Raster studio's filters and effects are the committed version of these tools
 
 Photo is the persona for grading a photograph. Its first tools are Crop `C` and the develop sliders, then **Place in Design**.
 
-You can open a photo, browse a folder, drop files or load samples. **+ Photo** on the welcome screen opens the workspace, the folder icon chooses a folder and the image icon chooses a file. Imports and folder scans run in the background, and the library shows camera metadata when it has it. The first display preview is at most 1600 pixels on its long edge. When you zoom in, full-resolution tiles load in the background while the current preview stays up, and results for an older photo or adjustment are discarded.
+You can open a photo, browse a folder, drop files or load samples. As of 0.5.6, **+ Photo** on the welcome screen opens the workspace, the folder icon chooses a folder and the image icon chooses a file. Imports and folder scans run in the background, and the library shows camera metadata when it has it. The first display preview is at most 1600 pixels on its long edge. When you zoom in, full-resolution tiles load in the background while the current preview stays up, and results for an older photo or adjustment are discarded.
 
 The Develop panel groups **Light**, **Color** and **Detail**, and tone curve, color mixer and color grading expand when you need them. **Before** compares against the default development. For a RAW, that's the default camera-balanced development, with the embedded JPEG left out of the comparison. **Auto light** balances exposure and contrast. RAW exposure and white balance use the 16-bit linear source.
 

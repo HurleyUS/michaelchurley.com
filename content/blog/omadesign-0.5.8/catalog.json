@@ -81,30 +81,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-type-tool/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-type-tool/og.png",
     "prev": "omadesign-0-5-8-shape-tools",
-    "next": "omadesign-0-5-8-opentype-character-studio"
-  },
-  {
-    "id": "T033",
-    "n": 33,
-    "title": "OpenType character studio",
-    "section": "Design tools & vectors",
-    "tweet": "Character studio OpenType: kerning, ligatures, tabular figures, small caps. Project fonts from Brand \u2192 Typography also appear in the font picker \u2014 kit fonts without system install.",
-    "slug": "omadesign-0-5-8-opentype-character-studio",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-opentype-character-studio/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-opentype-character-studio/og.png",
-    "prev": "omadesign-0-5-8-type-tool",
-    "next": "omadesign-0-5-8-gradient-eyedropper"
-  },
-  {
-    "id": "T034",
-    "n": 34,
-    "title": "Gradient eyedropper",
-    "section": "Design tools & vectors",
-    "tweet": "Gradient G \u2014 drag across a selected shape. Eyedropper I samples fill. Color studio: HSV, hex, swatches, recent. X swaps fill/stroke. D restores defaults.",
-    "slug": "omadesign-0-5-8-gradient-eyedropper",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-gradient-eyedropper/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-gradient-eyedropper/og.png",
-    "prev": "omadesign-0-5-8-opentype-character-studio",
     "next": "omadesign-0-5-8-pathfinder-ops"
   },
   {
@@ -116,19 +92,7 @@
     "slug": "omadesign-0-5-8-pathfinder-ops",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-pathfinder-ops/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-pathfinder-ops/og.png",
-    "prev": "omadesign-0-5-8-gradient-eyedropper",
-    "next": "omadesign-0-5-8-combine-and-release"
-  },
-  {
-    "id": "T040",
-    "n": 40,
-    "title": "Combine and release",
-    "section": "Pathfinder, reshape, FX, layers",
-    "tweet": "Combine Ctrl+G / Release Ctrl+Shift+G preserve guide state, rotation, stacking and linear gradients in one undo. Combine and Pathfinder need artwork OR guides \u2014 no mixture.",
-    "slug": "omadesign-0-5-8-combine-and-release",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-combine-and-release/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-combine-and-release/og.png",
-    "prev": "omadesign-0-5-8-pathfinder-ops",
+    "prev": "omadesign-0-5-8-type-tool",
     "next": "omadesign-0-5-8-brush-eraser-fill"
   },
   {
@@ -140,7 +104,7 @@
     "slug": "omadesign-0-5-8-brush-eraser-fill",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-brush-eraser-fill/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-brush-eraser-fill/og.png",
-    "prev": "omadesign-0-5-8-combine-and-release",
+    "prev": "omadesign-0-5-8-pathfinder-ops",
     "next": "omadesign-0-5-8-rest-pose-intact"
   },
   {
@@ -201,18 +165,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-import-lottie/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-import-lottie/og.png",
     "prev": "omadesign-0-5-8-export-lottie",
-    "next": "omadesign-0-5-8-crash-recovery-swap"
-  },
-  {
-    "id": "T009",
-    "n": 9,
-    "title": "Crash recovery swap",
-    "section": "Welcome & first open",
-    "tweet": "Idle a second and Omadesign writes ~/.local/share/omadesign/<id>.oma.swp. Save deletes it. Splash Recovered tab lists crash leftovers. Recents lists .oma files you actually opened.",
-    "slug": "omadesign-0-5-8-crash-recovery-swap",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/og.png",
-    "prev": "omadesign-0-5-8-import-lottie",
     "next": "omadesign-0-5-8-document-tabs"
   },
   {
@@ -224,7 +176,7 @@
     "slug": "omadesign-0-5-8-document-tabs",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-document-tabs/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-document-tabs/og.png",
-    "prev": "omadesign-0-5-8-crash-recovery-swap",
+    "prev": "omadesign-0-5-8-import-lottie",
     "next": "omadesign-0-5-8-shortcut-hud"
   },
   {
@@ -321,18 +273,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-svg-fx-stack/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-svg-fx-stack/og.png",
     "prev": "omadesign-0-5-8-reshape-distort-skew",
-    "next": "omadesign-0-5-8-ruler-guides"
-  },
-  {
-    "id": "T047",
-    "n": 47,
-    "title": "Ruler guides",
-    "section": "Guides, rulers, snapping",
-    "tweet": "Drag from top ruler \u2192 horizontal guide; left ruler \u2192 vertical. Drag to move. Delete / drag off canvas / context menu to remove. View \u2192 Clear ruler guides. Ctrl+; shows/hides ruler and object guides.",
-    "slug": "omadesign-0-5-8-ruler-guides",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-ruler-guides/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-ruler-guides/og.png",
-    "prev": "omadesign-0-5-8-svg-fx-stack",
     "next": "omadesign-0-5-8-convert-selection-to-guides"
   },
   {
@@ -344,7 +284,7 @@
     "slug": "omadesign-0-5-8-convert-selection-to-guides",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-convert-selection-to-guides/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-convert-selection-to-guides/og.png",
-    "prev": "omadesign-0-5-8-ruler-guides",
+    "prev": "omadesign-0-5-8-svg-fx-stack",
     "next": "omadesign-0-5-8-snapping-system"
   },
   {
@@ -405,18 +345,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-motion-presets/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-motion-presets/og.png",
     "prev": "omadesign-0-5-8-develop-panel-groups",
-    "next": "omadesign-0-5-8-fifty-two-templates"
-  },
-  {
-    "id": "T087",
-    "n": 87,
-    "title": "Fifty-two templates",
-    "section": "Templates (52)",
-    "tweet": "Templates \u00b7 52 on welcome or File \u2192 Template library. Search by name/idea, filter nine categories, pick built-in size or custom W/H/DPI. Previews adapt to proportions. Use this template or double-click.",
-    "slug": "omadesign-0-5-8-fifty-two-templates",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-fifty-two-templates/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-fifty-two-templates/og.png",
-    "prev": "omadesign-0-5-8-motion-presets",
     "next": "omadesign-0-5-8-project-library-files"
   },
   {
@@ -428,7 +356,7 @@
     "slug": "omadesign-0-5-8-project-library-files",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-project-library-files/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-project-library-files/og.png",
-    "prev": "omadesign-0-5-8-fifty-two-templates",
+    "prev": "omadesign-0-5-8-motion-presets",
     "next": "omadesign-0-5-8-personal-vs-project-palettes"
   },
   {
@@ -489,17 +417,17 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-place-command/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-place-command/og.png",
     "prev": "omadesign-0-5-8-project-fonts-travel",
-    "next": "omadesign-0-5-8-layers-eye-lock"
+    "next": "omadesign-0-5-8-opentype-character-studio"
   },
   {
-    "id": "T045",
-    "n": 45,
-    "title": "Layers eye lock",
-    "section": "Pathfinder, reshape, FX, layers",
-    "tweet": "Layers expand to show objects. Eye and lock work per object. Click a name to select it on the canvas. Groups expand, rename, hide, lock, reorder as units.",
-    "slug": "omadesign-0-5-8-layers-eye-lock",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-layers-eye-lock/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-layers-eye-lock/og.png",
+    "id": "T033",
+    "n": 33,
+    "title": "OpenType character studio",
+    "section": "Design tools & vectors",
+    "tweet": "Character studio OpenType: kerning, ligatures, tabular figures, small caps. Project fonts from Brand \u2192 Typography also appear in the font picker \u2014 kit fonts without system install.",
+    "slug": "omadesign-0-5-8-opentype-character-studio",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-opentype-character-studio/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-opentype-character-studio/og.png",
     "prev": "omadesign-0-5-8-place-command",
     "next": "omadesign-0-5-8-pass-through-blending"
   },
@@ -512,7 +440,7 @@
     "slug": "omadesign-0-5-8-pass-through-blending",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-pass-through-blending/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-pass-through-blending/og.png",
-    "prev": "omadesign-0-5-8-layers-eye-lock",
+    "prev": "omadesign-0-5-8-opentype-character-studio",
     "next": "omadesign-0-5-8-open-photos-folder"
   },
   {
@@ -573,18 +501,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-tiled-full-res-preview/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-tiled-full-res-preview/og.png",
     "prev": "omadesign-0-5-8-photo-export-bit-depth",
-    "next": "omadesign-0-5-8-open-layered-foreign-docs"
-  },
-  {
-    "id": "T102",
-    "n": 102,
-    "title": "Open layered foreign docs",
-    "section": "Files, import/export, Affinity/PSD bridge",
-    "tweet": "File \u2192 Open: layered PSD/PSB, GIMP .xcf, every PDF page + PDF-compatible AI, OpenRaster, SVG/SVGZ, Affinity via optional bridge. Imports open in their own tab at original dimensions. Save \u2192 .oma, source preserved.",
-    "slug": "omadesign-0-5-8-open-layered-foreign-docs",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-open-layered-foreign-docs/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-open-layered-foreign-docs/og.png",
-    "prev": "omadesign-0-5-8-tiled-full-res-preview",
     "next": "omadesign-0-5-8-drop-to-open-or-place"
   },
   {
@@ -596,7 +512,7 @@
     "slug": "omadesign-0-5-8-drop-to-open-or-place",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-drop-to-open-or-place/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-drop-to-open-or-place/og.png",
-    "prev": "omadesign-0-5-8-open-layered-foreign-docs",
+    "prev": "omadesign-0-5-8-tiled-full-res-preview",
     "next": "omadesign-0-5-8-conversion-notes"
   },
   {
@@ -681,18 +597,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-raw-headless-develop/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-raw-headless-develop/og.png",
     "prev": "omadesign-0-5-8-headless-inspect-convert",
-    "next": "omadesign-0-5-8-layer-reorder-shortcuts"
-  },
-  {
-    "id": "T022",
-    "n": 22,
-    "title": "Layer reorder shortcuts",
-    "section": "Design tools & vectors",
-    "tweet": "Select a layer row \u2192 Ctrl+[ / Ctrl+] reorder; +Shift sends back/front of its group. Drag a layer name onto an insertion line. Groups move with children. Each reorder = one undo.",
-    "slug": "omadesign-0-5-8-layer-reorder-shortcuts",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-layer-reorder-shortcuts/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-layer-reorder-shortcuts/og.png",
-    "prev": "omadesign-0-5-8-raw-headless-develop",
     "next": "omadesign-0-5-8-copy-paste-adjustments"
   },
   {
@@ -704,7 +608,7 @@
     "slug": "omadesign-0-5-8-copy-paste-adjustments",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-copy-paste-adjustments/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-copy-paste-adjustments/og.png",
-    "prev": "omadesign-0-5-8-layer-reorder-shortcuts",
+    "prev": "omadesign-0-5-8-raw-headless-develop",
     "next": "omadesign-0-5-8-omapreset-library"
   },
   {
@@ -765,6 +669,18 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-openraster-gimp/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-openraster-gimp/og.png",
     "prev": "omadesign-0-5-8-one-line-install",
+    "next": "omadesign-0-5-8-open-layered-foreign-docs"
+  },
+  {
+    "id": "T102",
+    "n": 102,
+    "title": "Open layered foreign docs",
+    "section": "Files, import/export, Affinity/PSD bridge",
+    "tweet": "File \u2192 Open: layered PSD/PSB, GIMP .xcf, every PDF page + PDF-compatible AI, OpenRaster, SVG/SVGZ, Affinity via optional bridge. Imports open in their own tab at original dimensions. Save \u2192 .oma, source preserved.",
+    "slug": "omadesign-0-5-8-open-layered-foreign-docs",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-open-layered-foreign-docs/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-open-layered-foreign-docs/og.png",
+    "prev": "omadesign-0-5-8-openraster-gimp",
     "next": "omadesign-0-5-0-layout-and-opt-in-cloud"
   },
   {
@@ -776,7 +692,7 @@
     "slug": "omadesign-0-5-0-layout-and-opt-in-cloud",
     "video": "",
     "cover": "/blog/omadesign-0-5-0/omadesign-0-5-0-layout-and-opt-in-cloud/og.png",
-    "prev": "omadesign-0-5-8-openraster-gimp",
+    "prev": "omadesign-0-5-8-open-layered-foreign-docs",
     "next": "omadesign-0-5-8-five-personas-one-document"
   },
   {
@@ -861,54 +777,6 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-native-oma-format/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-native-oma-format/og.png",
     "prev": "omadesign-0-5-8-canvas-comments",
-    "next": "omadesign-0-5-8-cloud-opt-in"
-  },
-  {
-    "id": "T113",
-    "n": 113,
-    "title": "Cloud opt-in",
-    "section": "Cloud (sign-in, sync, invite, showcase)",
-    "tweet": "Cloud is opt-in. Document stays on disk until File \u2192 Enable cloud sync. Unpublished files never appear in the gallery. Local-first for people who hate forced SaaS.",
-    "slug": "omadesign-0-5-8-cloud-opt-in",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-cloud-opt-in/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-cloud-opt-in/og.png",
-    "prev": "omadesign-0-5-8-native-oma-format",
-    "next": "omadesign-0-5-8-enable-sync-invite"
-  },
-  {
-    "id": "T115",
-    "n": 115,
-    "title": "Enable sync invite",
-    "section": "Cloud (sign-in, sync, invite, showcase)",
-    "tweet": "File \u2192 Enable cloud sync attaches a project id to the .oma. File \u2192 Invite collaborator\u2026 adds an email to that document. Sync without uploading every private draft by default.",
-    "slug": "omadesign-0-5-8-enable-sync-invite",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/og.png",
-    "prev": "omadesign-0-5-8-cloud-opt-in",
-    "next": "omadesign-0-5-8-publish-to-showcase"
-  },
-  {
-    "id": "T116",
-    "n": 116,
-    "title": "Publish to showcase",
-    "section": "Cloud (sign-in, sync, invite, showcase)",
-    "tweet": "File \u2192 Publish to showcase\u2026 is a second, explicit opt-in. /showcase is the public gallery (seeded with 0.5.0 Layout starters). /showcase/:id for one published project; private ids stay dark.",
-    "slug": "omadesign-0-5-8-publish-to-showcase",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/og.png",
-    "prev": "omadesign-0-5-8-enable-sync-invite",
-    "next": "omadesign-0-5-8-collaborator-project-view"
-  },
-  {
-    "id": "T117",
-    "n": 117,
-    "title": "Collaborator project view",
-    "section": "Cloud (sign-in, sync, invite, showcase)",
-    "tweet": "/project/:id collaborator view: pin, reply, resolve. Layout inspector pins match canvas comments. Without OMADESIGN_CLOUD_URL the desktop keeps a local store under ~/.local/share/omadesign/cloud-store.json.",
-    "slug": "omadesign-0-5-8-collaborator-project-view",
-    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/film.mp4",
-    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/og.png",
-    "prev": "omadesign-0-5-8-publish-to-showcase",
     "next": "omadesign-0-5-1-pixel-mode-finished"
   },
   {
@@ -920,7 +788,7 @@
     "slug": "omadesign-0-5-1-pixel-mode-finished",
     "video": "",
     "cover": "/blog/omadesign-0-5-1/omadesign-0-5-1-pixel-mode-finished/og.png",
-    "prev": "omadesign-0-5-8-collaborator-project-view",
+    "prev": "omadesign-0-5-8-native-oma-format",
     "next": "omadesign-0-5-8-selections-pixel"
   },
   {
@@ -957,6 +825,54 @@
     "video": "",
     "cover": "/blog/omadesign-0-5-3/omadesign-0-5-3-paste-onto-the-canvas/og.png",
     "prev": "omadesign-0-5-2-cloud-projects-and-review",
+    "next": "omadesign-0-5-8-cloud-opt-in"
+  },
+  {
+    "id": "T113",
+    "n": 113,
+    "title": "Cloud opt-in",
+    "section": "Cloud (sign-in, sync, invite, showcase)",
+    "tweet": "Cloud is opt-in. Document stays on disk until File \u2192 Enable cloud sync. Unpublished files never appear in the gallery. Local-first for people who hate forced SaaS.",
+    "slug": "omadesign-0-5-8-cloud-opt-in",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-cloud-opt-in/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-cloud-opt-in/og.png",
+    "prev": "omadesign-0-5-3-paste-onto-the-canvas",
+    "next": "omadesign-0-5-8-enable-sync-invite"
+  },
+  {
+    "id": "T115",
+    "n": 115,
+    "title": "Enable sync invite",
+    "section": "Cloud (sign-in, sync, invite, showcase)",
+    "tweet": "File \u2192 Enable cloud sync attaches a project id to the .oma. File \u2192 Invite collaborator\u2026 adds an email to that document. Sync without uploading every private draft by default.",
+    "slug": "omadesign-0-5-8-enable-sync-invite",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/og.png",
+    "prev": "omadesign-0-5-8-cloud-opt-in",
+    "next": "omadesign-0-5-8-collaborator-project-view"
+  },
+  {
+    "id": "T117",
+    "n": 117,
+    "title": "Collaborator project view",
+    "section": "Cloud (sign-in, sync, invite, showcase)",
+    "tweet": "/project/:id collaborator view: pin, reply, resolve. Layout inspector pins match canvas comments. Without OMADESIGN_CLOUD_URL the desktop keeps a local store under ~/.local/share/omadesign/cloud-store.json.",
+    "slug": "omadesign-0-5-8-collaborator-project-view",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-collaborator-project-view/og.png",
+    "prev": "omadesign-0-5-8-enable-sync-invite",
+    "next": "omadesign-0-5-8-publish-to-showcase"
+  },
+  {
+    "id": "T116",
+    "n": 116,
+    "title": "Publish to showcase",
+    "section": "Cloud (sign-in, sync, invite, showcase)",
+    "tweet": "File \u2192 Publish to showcase\u2026 is a second, explicit opt-in. /showcase is the public gallery (seeded with 0.5.0 Layout starters). /showcase/:id for one published project; private ids stay dark.",
+    "slug": "omadesign-0-5-8-publish-to-showcase",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/og.png",
+    "prev": "omadesign-0-5-8-collaborator-project-view",
     "next": "omadesign-0-5-4-chroma-key-and-raster-banks"
   },
   {
@@ -968,7 +884,7 @@
     "slug": "omadesign-0-5-4-chroma-key-and-raster-banks",
     "video": "",
     "cover": "/blog/omadesign-0-5-4/omadesign-0-5-4-chroma-key-and-raster-banks/og.png",
-    "prev": "omadesign-0-5-3-paste-onto-the-canvas",
+    "prev": "omadesign-0-5-8-publish-to-showcase",
     "next": "omadesign-0-5-4-gradients-and-color"
   },
   {
@@ -1005,6 +921,66 @@
     "video": "",
     "cover": "/blog/omadesign-0-5-4/omadesign-0-5-4-present-and-html-export/og.png",
     "prev": "omadesign-0-5-4-responsive-layout",
+    "next": "omadesign-0-5-8-gradient-eyedropper"
+  },
+  {
+    "id": "T034",
+    "n": 34,
+    "title": "Gradient eyedropper",
+    "section": "Design tools & vectors",
+    "tweet": "Gradient G \u2014 drag across a selected shape. Eyedropper I samples fill. Color studio: HSV, hex, swatches, recent. X swaps fill/stroke. D restores defaults.",
+    "slug": "omadesign-0-5-8-gradient-eyedropper",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-gradient-eyedropper/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-gradient-eyedropper/og.png",
+    "prev": "omadesign-0-5-4-present-and-html-export",
+    "next": "omadesign-0-5-8-layer-reorder-shortcuts"
+  },
+  {
+    "id": "T022",
+    "n": 22,
+    "title": "Layer reorder shortcuts",
+    "section": "Design tools & vectors",
+    "tweet": "Select a layer row \u2192 Ctrl+[ / Ctrl+] reorder; +Shift sends back/front of its group. Drag a layer name onto an insertion line. Groups move with children. Each reorder = one undo.",
+    "slug": "omadesign-0-5-8-layer-reorder-shortcuts",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-layer-reorder-shortcuts/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-layer-reorder-shortcuts/og.png",
+    "prev": "omadesign-0-5-8-gradient-eyedropper",
+    "next": "omadesign-0-5-8-layers-eye-lock"
+  },
+  {
+    "id": "T045",
+    "n": 45,
+    "title": "Layers eye lock",
+    "section": "Pathfinder, reshape, FX, layers",
+    "tweet": "Layers expand to show objects. Eye and lock work per object. Click a name to select it on the canvas. Groups expand, rename, hide, lock, reorder as units.",
+    "slug": "omadesign-0-5-8-layers-eye-lock",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-layers-eye-lock/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-layers-eye-lock/og.png",
+    "prev": "omadesign-0-5-8-layer-reorder-shortcuts",
+    "next": "omadesign-0-5-8-combine-and-release"
+  },
+  {
+    "id": "T040",
+    "n": 40,
+    "title": "Combine and release",
+    "section": "Pathfinder, reshape, FX, layers",
+    "tweet": "Combine Ctrl+G / Release Ctrl+Shift+G preserve guide state, rotation, stacking and linear gradients in one undo. Combine and Pathfinder need artwork OR guides \u2014 no mixture.",
+    "slug": "omadesign-0-5-8-combine-and-release",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-combine-and-release/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-combine-and-release/og.png",
+    "prev": "omadesign-0-5-8-layers-eye-lock",
+    "next": "omadesign-0-5-8-fifty-two-templates"
+  },
+  {
+    "id": "T087",
+    "n": 87,
+    "title": "Fifty-two templates",
+    "section": "Templates (52)",
+    "tweet": "Templates \u00b7 52 on welcome or File \u2192 Template library. Search by name/idea, filter nine categories, pick built-in size or custom W/H/DPI. Previews adapt to proportions. Use this template or double-click.",
+    "slug": "omadesign-0-5-8-fifty-two-templates",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-fifty-two-templates/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-fifty-two-templates/og.png",
+    "prev": "omadesign-0-5-8-combine-and-release",
     "next": "omadesign-0-5-5-no-more-freeze-prompts"
   },
   {
@@ -1016,7 +992,7 @@
     "slug": "omadesign-0-5-5-no-more-freeze-prompts",
     "video": "",
     "cover": "/blog/omadesign-0-5-5/omadesign-0-5-5-no-more-freeze-prompts/og.png",
-    "prev": "omadesign-0-5-4-present-and-html-export",
+    "prev": "omadesign-0-5-8-fifty-two-templates",
     "next": "omadesign-0-5-6-welcome-finds-your-work"
   },
   {
@@ -1041,6 +1017,18 @@
     "video": "",
     "cover": "/blog/omadesign-0-5-6/omadesign-0-5-6-ask-your-agent/og.png",
     "prev": "omadesign-0-5-6-welcome-finds-your-work",
+    "next": "omadesign-0-5-8-crash-recovery-swap"
+  },
+  {
+    "id": "T009",
+    "n": 9,
+    "title": "Crash recovery swap",
+    "section": "Welcome & first open",
+    "tweet": "Idle a second and Omadesign writes ~/.local/share/omadesign/<id>.oma.swp. Save deletes it. Splash Recovered tab lists crash leftovers. Recents lists .oma files you actually opened.",
+    "slug": "omadesign-0-5-8-crash-recovery-swap",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/og.png",
+    "prev": "omadesign-0-5-6-ask-your-agent",
     "next": "omadesign-0-5-8-corner-radius-multi-edit-0-5-8"
   },
   {
@@ -1052,7 +1040,7 @@
     "slug": "omadesign-0-5-8-corner-radius-multi-edit-0-5-8",
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-corner-radius-multi-edit-0-5-8/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-corner-radius-multi-edit-0-5-8/og.png",
-    "prev": "omadesign-0-5-6-ask-your-agent",
+    "prev": "omadesign-0-5-8-crash-recovery-swap",
     "next": "omadesign-0-5-8-compound-paths-0-5-8"
   },
   {
@@ -1197,6 +1185,18 @@
     "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-one-binary-not-three-apps/film.mp4",
     "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-one-binary-not-three-apps/og.png",
     "prev": "omadesign-0-5-8-adobe-familiar-tool-keys",
+    "next": "omadesign-0-5-8-ruler-guides"
+  },
+  {
+    "id": "T047",
+    "n": 47,
+    "title": "Ruler guides",
+    "section": "Guides, rulers, snapping",
+    "tweet": "Drag from top ruler \u2192 horizontal guide; left ruler \u2192 vertical. Drag to move. Delete / drag off canvas / context menu to remove. View \u2192 Clear ruler guides. Ctrl+; shows/hides ruler and object guides.",
+    "slug": "omadesign-0-5-8-ruler-guides",
+    "video": "/blog/omadesign-0-5-8/omadesign-0-5-8-ruler-guides/film.mp4",
+    "cover": "/blog/omadesign-0-5-8/omadesign-0-5-8-ruler-guides/og.png",
+    "prev": "omadesign-0-5-8-one-binary-not-three-apps",
     "next": "omadesign-0-5-9-click-the-pixel-you-mean"
   },
   {
@@ -1208,7 +1208,7 @@
     "slug": "omadesign-0-5-9-click-the-pixel-you-mean",
     "video": "",
     "cover": "/blog/omadesign-0-5-9/omadesign-0-5-9-click-the-pixel-you-mean/og.png",
-    "prev": "omadesign-0-5-8-one-binary-not-three-apps",
+    "prev": "omadesign-0-5-8-ruler-guides",
     "next": "omadesign-0-6-0-motion-keys"
   },
   {

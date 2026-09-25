@@ -41,7 +41,7 @@ Omadesign processes rotated artwork where it appears on the canvas, so the overl
 
 An empty intersection stays empty. If the shapes don't overlap, Intersect doesn't invent a sliver. A hole subtracts area, so the counter stays open. Repeated booleans share one geometry path, so the fifth union works the same way as the first. As of 0.5.8, those repeated unions and subtractions stay editable compounds. Contours and holes stay editable, you can double-click with Move or Node, and the node gestures work across the compound. You build the compound with Pathfinder and edit it afterward.
 
-Compound shape and release sit next to this menu as keys. Ctrl+8 combines objects into a compound and Ctrl+Shift+8 releases it. Group is Ctrl+G and doesn't combine paths. Ungroup is Ctrl+Shift+G. Use Pathfinder for a boolean, Ctrl+8 for a compound and Ctrl+G for a group. Each gives a different result.
+As of 0.5.4, compound shape and release sit next to this menu as keys. Ctrl+8 combines objects into a compound and Ctrl+Shift+8 releases it. Group is Ctrl+G and doesn't combine paths. Ungroup is Ctrl+Shift+G. Use Pathfinder for a boolean, Ctrl+8 for a compound and Ctrl+G for a group. Each gives a different result.
 
 The new outline, including holes, drives a shape gradient. Older two-color radials follow the resulting bounds until you edit them in Appearance and take the multi-stop upgrade.
 

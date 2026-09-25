@@ -3,8 +3,8 @@ id: T034
 title: Gradient eyedropper
 slug: omadesign-0-5-8-gradient-eyedropper
 excerpt: Gradient is G. Drag across a selected shape and the active fill or stroke keeps its stops. Eyedropper is I and samples the fill. X swaps fill and stroke. D restores defaults.
-publishedAt: 2026-08-29T16:33:47Z
-tags: [omadesign, 0.0.0.0alpha-rc, color]
+publishedAt: 2026-09-20T17:49:29Z
+tags: [omadesign, 0.5.4, color]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-gradient-eyedropper/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-gradient-eyedropper/og.png
 ---

@@ -35,7 +35,7 @@ The file that stores all this is `.oma` format 5 or newer. Format 5 added frames
 
 Switch to the Layout persona. The first tools are Frame `F`, Rectangle `R` and Type `T`. Press `F` and drag to make a frame. Press `F` again and drag inside the first one, and the new frame nests. Nesting is only the parent link. The parent clips its children only if you turn on Clip content, a checkbox on the frame that stays off until you want children masked to the bounds.
 
-With nothing selected, the inspector says "Start with a frame" and reminds you that F draws a frame, T adds text and Shift+A arranges. Phone at 390 × 844, Tablet at 768 × 1024 and Desktop at 1440 × 900 insert a named blank frame. Open Fieldwork starter builds a responsive prototype at 1280 × 900, 96 DPI, as its own unsaved document. The size buttons give you blank frames, and Fieldwork is a template.
+As of 0.5.4, with nothing selected, the inspector says "Start with a frame" and reminds you that F draws a frame, T adds text and Shift+A arranges. Phone at 390 × 844, Tablet at 768 × 1024 and Desktop at 1440 × 900 insert a named blank frame. Open Fieldwork starter builds a responsive prototype at 1280 × 900, 96 DPI, as its own unsaved document. The size buttons give you blank frames, and Fieldwork is a template.
 
 Object > Wrap selection in frame puts a frame around the current selection. The menu item is enabled when the selection can be wrapped, and the children keep their layer order. You can drag objects between sidebar rows, or onto the center of a group or Layout frame, to change their parent. Shift-click object rows to select several before wrapping.
 

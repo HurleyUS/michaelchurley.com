@@ -3,8 +3,8 @@ id: T116
 title: Publish to showcase
 slug: omadesign-0-5-8-publish-to-showcase
 excerpt: Publish selected export is a separate owner step. /showcase lists public flat images. /showcase/:id shows one. Source files, assets, and private review threads stay out. Unpublished and private ids stay off the gallery.
-publishedAt: 2026-09-15T23:42:15Z
-tags: [omadesign, 0.5.0, showcase]
+publishedAt: 2026-09-20T14:41:28Z
+tags: [omadesign, 0.5.3, showcase]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-publish-to-showcase/og.png
 ---
@@ -17,7 +17,7 @@ The careful habit treats publishing as a separate step. Finish the piece, export
 
 ## The constraint
 
-Omadesign already separates the local `.oma`, the push and the public gallery. A push uploads a versioned source and a review PNG for project members. That PNG is for the people on the project and doesn't go to `/showcase`. Publishing is a separate owner action. The short description calls it File > Publish to showcase… and describes it as a second, explicit opt-in. The cloud guide names the control Publish selected export, available in the desktop app or the web workspace. You select a finished flat export, add a title and a description, and publish it. The opt-in is real, and the control's label is Publish selected export.
+Omadesign already separates the local `.oma`, the push and the public gallery. A push uploads a versioned source and a review PNG for project members. That PNG is for the people on the project and doesn't go to `/showcase`. Publishing is a separate owner action. In the desktop app, File > Publish to showcase… opens the Publish finished work dialog, and the button in its Public showcase section is Publish selected export. The web workspace has the same Publish selected export control. You select a finished flat export, add a title and a description, and publish it. The opt-in is real: nothing reaches `/showcase` until you press that button.
 
 The public page has to show only the flat image. Source files, assets and private review threads are excluded. A gallery that served the `.oma` would also serve the edit history, the notes and any layer you only hid. Flat means the pixels you already rendered. `/showcase` is the list and `/showcase/:id` is one published project. A private id stays private, so guessing a project id doesn't reveal an unpublished file.
 

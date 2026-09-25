@@ -25,7 +25,7 @@ An empty body is refused, and the status line says "Type a comment first." A pin
 
 The frame link comes from the frame you have selected, if any. Otherwise the pin attaches to the frame that contains the click. The inspector shows the open count, meaning the unresolved pins on that frame. Resolving a pin lowers the count. The pin is still drawn and is not deleted.
 
-Cloud review deliberately uses a different store. File > Push project + review export uploads a versioned `.oma` and a flat snapshot. Reviewers mark up that snapshot in the browser, or you load the same threads with Review annotations in the desktop app. Those threads stay on the snapshot they were written on, and a later push does not move them onto the new pixels. Resolve and Reopen in that window call the cloud and then tell you to refresh. That path needs the account, the membership, and the network. The canvas pin needs none of them.
+Cloud review deliberately uses a different store. File > Push project + review export uploads a versioned `.oma` and a flat snapshot. Reviewers mark up that snapshot in the browser, or, as of 0.5.3, you load the same threads with Review cloud annotations… in the desktop app. Those threads stay on the snapshot they were written on, and a later push does not move them onto the new pixels. Resolve and Reopen in that window call the cloud and then tell you to refresh. That path needs the account, the membership, and the network. The canvas pin needs none of them.
 
 Frame export shows the split. Export frame PNG, SVG, or HTML removes comments from the snapshot document, because the rails and pins are studio state and the delivered file is only the frame. Your `.oma` still has the pins after the export. Exporting does not resolve them.
 
@@ -39,7 +39,7 @@ The inspector's open count is the number of unresolved pins on the frame. Resolv
 
 The pins sit with the document, beside the frames. They are marks. They aren't layer rows you can group with `Ctrl+G`, and they aren't snap targets.
 
-The cloud window is the other review tool, and it is opt-in. You sign in, choose Push project + review export, and invite a reviewer if the work is shared. Review annotations loads the threads for a chosen export version, showing author, open or resolved state, body, and replies. Resolve or Reopen updates that thread, and the button label follows the state. The status line says "Thread updated. Refresh to load the latest review." None of that writes a canvas pin, and canvas pins don't appear in that list. Push the project when you want a snapshot. Pin on the canvas when the note is for you, in the file, while the frame is still changing.
+The cloud window is the other review tool, and it is opt-in. You sign in, choose Push project + review export, and invite a reviewer if the work is shared. Review cloud annotations… loads the threads for a chosen export version, showing author, open or resolved state, body, and replies. Resolve or Reopen updates that thread, and the button label follows the state. The status line says "Thread updated. Refresh to load the latest review." None of that writes a canvas pin, and canvas pins don't appear in that list. Push the project when you want a snapshot. Pin on the canvas when the note is for you, in the file, while the frame is still changing.
 
 Publishing to the showcase is a separate owner action that sends a flat export and a title, and private pins stay out of that gallery. If you never sign in to the cloud, canvas pins still save in the `.oma`.
 
@@ -59,7 +59,7 @@ Resolve when the frame is done
 
 Save with `Ctrl+S`. The pins are in the project file with the frames, and they are left out of the PNG you export with File > Export frame PNG. Open that PNG and there are no orange marks. Open the `.oma` and the marks are there. That way a client sees a clean screen and you still see your questions.
 
-If the note is for someone else, on a version you are willing to freeze, use the cloud path. Choose File > Sign in and approve the code the desktop app shows. Choose Push project + review export. The reviewer marks up the flat snapshot. You open Review annotations, read the thread, click Resolve or Reopen, and refresh. Keep using canvas pins for questions about the live file. The two never collide, because they are separate lists.
+If the note is for someone else, on a version you are willing to freeze, use the cloud path. Choose File > Sign in and approve the code the desktop app shows. Choose Push project + review export. The reviewer marks up the flat snapshot. You open Review cloud annotations…, read the thread, click Resolve or Reopen, and refresh. Keep using canvas pins for questions about the live file. The two never collide, because they are separate lists.
 
 Reply on a local pin when the note needs a second sentence. The pin reopens and the count goes back up. Resolve it when that sentence is handled. Undo still steps back through those edits one at a time.
 

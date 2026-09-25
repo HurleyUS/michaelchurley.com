@@ -3,8 +3,8 @@ id: T115
 title: Enable sync invite
 slug: omadesign-0-5-8-enable-sync-invite
 excerpt: Push project + review export uploads a versioned .oma and a flat PNG, then you save so the cloud link stays in the file. Owners invite a verified email as editor or reviewer. Other drafts on disk stay local.
-publishedAt: 2026-09-15T23:41:15Z
-tags: [omadesign, 0.5.0, cloud]
+publishedAt: 2026-09-20T14:39:28Z
+tags: [omadesign, 0.5.3, cloud]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-enable-sync-invite/og.png
 ---
@@ -27,7 +27,7 @@ The short description says File > Sign in… writes an identity file at `~/.conf
 
 A name or an email alone never grants cloud access. Someone who can read a string on disk doesn't become a member of your project. Membership comes from an invitation to a verified email, accepted after sign-in. Desktop credentials expire after 30 days. You can revoke them from `/account` or disconnect in the app. Waiting out the month works, but revoking is what you do when a laptop leaves your hands.
 
-The short description also says File > Enable cloud sync attaches a project id to the `.oma` and File > Invite collaborator… adds an email to that document. The manual and the cloud guide use the commands that exist now, and those are stricter than just adding an email.
+The short description also says File > Enable cloud sync attaches a project id to the `.oma` and File > Invite collaborator… adds an email to that document. Those were the 0.5.0 commands. The 0.5.2 nightly replaced them, and the replacements reached the public release in 0.5.3. The manual and the cloud guide use the commands that exist now, and those are stricter than just adding an email.
 
 The upload is File > Push project + review export. It uploads a versioned `.oma` and a PNG of the current document. Project fonts go with the project, and raster pixels stay embedded in the design file. After the first push, you save the local `.oma`. That save stores the cloud link in the document, which is how the file remembers which remote project its uploads belong to. Every later push adds files, and comments stay attached to the snapshot they were written on. A local edit never uploads silently or overwrites another designer's version.
 
@@ -35,7 +35,7 @@ The invite is an owner action on a verified email. The owner chooses editor or r
 
 Nothing in this flow looks through the rest of your directories. The only thing shared is the project you pushed, and private drafts in other tabs stay private.
 
-The welcome screen stays useful when you are signed out. Team appears there only while you are signed in to cloud and shared team projects are available. The file browser doesn't add a Team tab to push you toward an account.
+As of 0.5.6, the welcome screen stays useful when you are signed out. Team appears there only while you are signed in to cloud and shared team projects are available. The file browser doesn't add a Team tab to push you toward an account.
 
 ## What landed
 

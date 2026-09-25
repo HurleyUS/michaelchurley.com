@@ -3,8 +3,8 @@ id: T009
 title: Crash recovery swap
 slug: omadesign-0-5-8-crash-recovery-swap
 excerpt: "Idle a second and Omadesign writes ~/.local/share/omadesign/<id>.oma.swp. Save deletes it. The Recovered tab lists the leftovers. Recents lists files you opened."
-publishedAt: 2026-09-06T10:27:01Z
-tags: [omadesign, 0.0.1-alpha, recovery]
+publishedAt: 2026-09-22T01:00:50Z
+tags: [omadesign, 0.5.6, recovery]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-crash-recovery-swap/og.png
 ---

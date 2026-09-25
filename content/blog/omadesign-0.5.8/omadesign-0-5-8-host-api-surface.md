@@ -90,7 +90,7 @@ To recolor a selection, loop over `ctx.selection` and call `oma.set_fill` or `om
 
 To read pixels without feedback, call `oma.pixel` from inside `oma.map_pixels`. The source stays the same for the whole pass. Return alpha on purpose. Out-of-bounds reads are transparent black, so an edge kernel doesn't invent color.
 
-To browse by category, open **Plugins > Manage plugins**, leave the dropdown on **All categories** and scroll through Studio starter. You should see ten rows if you count the two brushes and the two behaviors inside the twelve, each prefixed with its category. Switch the dropdown to **Filters** and only Midnight duotone remains. **Brushes** leaves Soft ink and Dry marker. **Behaviors** leaves Selection count and Document dimensions. The plugin's enable checkbox is above those rows, and a disabled plugin doesn't offer its buttons.
+To browse by category, open **Plugins > Manage plugins**, leave the dropdown on **All categories** and scroll through Studio starter. You should see twelve rows, one button per action, each labeled with its category and name (for example "Filters · Midnight duotone"). Switch the dropdown to **Filters** and only Midnight duotone remains. **Brushes** leaves Soft ink brush and Dry marker brush. **Behaviors** leaves Selection count and Document dimensions. The plugin's enable checkbox is above those rows, and a disabled plugin doesn't offer its buttons.
 
 Pick the row that matches the artwork you have:
 

@@ -45,7 +45,7 @@ Clerk owns identity. Convex owns project authorization, data and storage. Resend
 | Editor | Source and asset downloads, uploads, comments, replies, resolving threads |
 | Reviewer | Flat exports, pins, rectangular annotations, comments and replies |
 
-**Review.** Pick an export version in the web project, click to pin or drag a rectangular annotation, and post the thread. The desktop's Review annotations… window loads the same versioned exports and threads, with reply and resolve/reopen.
+**Review.** Pick an export version in the web project, click to pin or drag a rectangular annotation, and post the thread. The desktop's Review cloud annotations… window loads the same versioned exports and threads, with reply and resolve/reopen.
 
 **Access.** Private downloads recheck membership on every request. Revoking a member or a desktop blocks future requests. PR #71 also removed the old local-only review demo and added immediate removal of a publication image.
 

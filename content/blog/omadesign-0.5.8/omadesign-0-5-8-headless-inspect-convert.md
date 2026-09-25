@@ -27,7 +27,7 @@ The desktop still owns the brushes. Headless covers open, inspect, convert and t
 
 ## What landed
 
-`--inspect` reads a file and writes JSON. The short list of useful inputs is a PSD, an Affinity file, an XCF, a NEF and a `.omaphoto`, and the flag works on anything else the desktop opens because the readers are shared. Affinity inspect needs the optional bridge installed, the same as File > Open. A NEF inspect includes camera metadata, source dimensions, precision and saved development settings when a sidecar applies. A `.omaphoto` inspect describes the settings file and its original.
+`--inspect` reads a file and writes JSON. The short list of useful inputs is a PSD, an Affinity file, an XCF (as of 0.0.5-alpha), a NEF and a `.omaphoto`, and the flag works on anything else the desktop opens because the readers are shared. Affinity inspect needs the optional bridge installed, the same as File > Open. A NEF inspect includes camera metadata, source dimensions, precision and saved development settings when a sidecar applies. A `.omaphoto` inspect describes the settings file and its original.
 
 ```sh
 omadesign --inspect artwork.afdesign

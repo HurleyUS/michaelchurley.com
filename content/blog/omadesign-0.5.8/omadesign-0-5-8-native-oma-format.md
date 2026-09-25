@@ -41,7 +41,7 @@ Headless conversion can write `.oma` like any other supported output. `omadesign
 
 Open a PSD, PDF or SVG with Ctrl+O. It opens in its own tab at its original dimensions, as unsaved work. Read the conversion notes if the import quality matters. Press Ctrl+Shift+S and name a `.oma`. The foreign file stays untouched in its original folder, and the new file is what Omadesign reopens with the layer tree and notes.
 
-Reopen that `.oma` the next day with Ctrl+O, or click it in Your Work on the welcome screen. The welcome screen finds `.oma` files under your home directory, skips hidden directories, Trash and symlinks, and sorts by modification time. The document opens locally with no account.
+Reopen that `.oma` the next day with Ctrl+O, or, as of 0.5.6, click it in Your Work on the welcome screen. The welcome screen finds `.oma` files under your home directory, skips hidden directories, Trash and symlinks, and sorts by modification time. The document opens locally with no account.
 
 If the piece uses frames, turn on Stack children for auto-layout or pin a child with constraints, then save. That file is version 5, and an older app that only reads formats 1 through 4 won't open it. If the piece uses an object mask or an inside or outside stroke, the save is format 6. Keep this build, or any build that reads format 6, for that file. A build that stops at format 5 will refuse it, which is the point. The mask stays in a file you can still open here.
 

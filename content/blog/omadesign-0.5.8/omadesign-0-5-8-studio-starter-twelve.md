@@ -109,7 +109,7 @@ For the palette, choose **Swatches · Night studio swatches** and press **Run**.
 
 For the nudge, select vectors, choose **Batch · Translate selection** and press **Run**. They move 16 pixels on x unless you changed Horizontal. The command id is `nudge`.
 
-Leave the behavior checkbox off until you want the status line reporting. Its label is **Run enabled plugins' document and selection behaviors**. The setting is written to `behaviors.json` in the plugin folder and read back on the next launch.
+Leave the behavior checkbox off until you want the status line reporting. Its label is **Run enabled plugins’ document and selection behaviors**. The setting is written to `behaviors.json` in the plugin folder and read back on the next launch.
 
 ### Making your own copy
 

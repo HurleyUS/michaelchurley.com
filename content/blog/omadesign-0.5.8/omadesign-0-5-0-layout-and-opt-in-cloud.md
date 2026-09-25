@@ -65,6 +65,6 @@ I listed the limits in the release, and they still apply to 0.5.0 as shipped:
 - HTML export is a snapshot. It does not build a website.
 - Cloud without Clerk/Convex keys is local-plus-HTTP.
 
-The 0.5.0 cloud hooks were a first pass. The 0.5.2 nightly replaced them with authenticated, persisted project sharing and snapshot review. The 0.5.4 release grew Layout into responsive Stack/Wrap/Grid with components. Those changes have their own posts.
+The 0.5.0 cloud hooks were a first pass. The 0.5.2 nightly replaced them with authenticated, persisted project sharing and snapshot review, which reached the public release in 0.5.3. The 0.5.4 release grew Layout into responsive Stack/Wrap/Grid with components. Those changes have their own posts.
 
 Full notes are on the [v0.5.0 release](https://github.com/michaelmonetized/omadesign/releases/tag/v0.5.0).

@@ -19,7 +19,7 @@ Those rules have to live on the object in the file. If a prototype player forget
 
 ## The constraint
 
-Omadesign stores the pin on the child, in the `.oma`, next to the parent link. Format 5 is the document version that added frames, auto-layout and constraints. The pin isn't a mode you switch on before presenting. Present is a separate button that opens an interactive responsive preview. The pins already work on the canvas when you drag the parent's handles.
+Omadesign stores the pin on the child, in the `.oma`, next to the parent link. Format 5 is the document version that added frames, auto-layout and constraints. The pin isn't a mode you switch on before presenting. As of 0.5.4, Present is a separate button that opens an interactive responsive preview. The pins already work on the canvas when you drag the parent's handles.
 
 Horizontal and Vertical are independent, so a button can pin to the right and to the top. The inspector shows the choices under Position in frame, and only when the object has a parent frame. The menu names are Min, Max, Stretch, Center and Scale. The manual calls them min, max, both edges, center or scale. Stretch is the both-edges pin.
 
@@ -47,7 +47,7 @@ Sizing is a separate set of controls. Fixed, Hug and Fill describe how a stacked
 
 Min and max sizes on the child still clamp the result, so a Stretch pin won't produce a zero-sized box. Hug measures the child from its contents and ignores absolute and hidden children, so a corner badge doesn't inflate a card's hug size.
 
-Responsive frame offers Phone, Tablet and Desktop width jumps of 390, 768 and 1440, keeping the current height. + Phone and + Tablet add breakpoints at 600 and 1024. The pins decide what the children do when that width changes, and dragging a handle runs the same pins.
+As of 0.5.4, Responsive frame offers Phone, Tablet and Desktop width jumps of 390, 768 and 1440, keeping the current height. + Phone and + Tablet add breakpoints at 600 and 1024. The pins decide what the children do when that width changes, and dragging a handle runs the same pins.
 
 The pins save with the shape. Reopen the `.oma`, select the child, and the menus still show what you set. Drag the parent and the insets hold.
 

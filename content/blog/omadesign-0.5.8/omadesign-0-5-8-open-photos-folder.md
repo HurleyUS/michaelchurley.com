@@ -21,7 +21,7 @@ Samples are for learning the sliders before you point the app at a client's fold
 
 ## The constraint
 
-Photo is a persona in the same binary as Design, not a second install. The welcome screen has + Photo for the workspace, a folder icon for the folder chooser and an image icon for a single file. File > Open, a drop and the system Open With action all land here for photographs and camera RAW. The installed desktop entry is the same `omadesign.desktop` the `.oma` files use.
+Photo is a persona in the same binary as Design, not a second install. As of 0.5.6, the welcome screen has + Photo for the workspace, a folder icon for the folder chooser and an image icon for a single file. File > Open, a drop and the system Open With action all land here for photographs and camera RAW. The installed desktop entry is the same `omadesign.desktop` the `.oma` files use.
 
 Imports and folder scans run on background workers, so the frame loop keeps drawing the photo you're grading and a slow RAW doesn't freeze the sliders. That's what a single UI thread requires. Decoding happens off to the side. Metadata appears when the decoder actually read it, and nothing is invented when a file has no ISO, lens or shutter.
 
