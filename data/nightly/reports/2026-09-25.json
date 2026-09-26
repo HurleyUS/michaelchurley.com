@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-25",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 25, 2026 · 5:00 AM EDT → Sep 26, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-25T09:00:00Z → 2026-09-26T09:00:00Z",
+    "generatedEt": "Sep 26, 2026 · ~4:56 AM EDT",
+    "xPostsMeasured": 11,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 4. Omadesign 0.6.0 released + 3 PRs (cloud shader/navbar restore, 0.6.0 QA fix). X: 11 posts, 1,160 imp (pnpm reply 717). Inbox: Thumbtack leads, PH forum/follower, prospect SMS, r/omadesign. PH maker sweep ran.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · Release 0.6.0 + 3 merged PRs",
+      "kind": "shipped",
+      "summary": "3 PR(s) merged + GitHub release v0.6.0 “0.6.0 · Key the design you already made” in window — cloud shader/navbar restore, then 0.6.0 QA fix pack (eyedropper, glass, motion export, Lottie).",
+      "bullets": [
+        "#126 Restore the scroll-driven cloud shader and the desktop section ruler",
+        "#127 Restore the short navbar and the shield counts",
+        "#141 Fix the 0.6.0 QA failures",
+        "Release v0.6.0 · Key the design you already made"
+      ],
+      "when": "Sep 25 · 5:15 AM EDT → Sep 25 · 5:09 PM EDT",
+      "links": [
+        {
+          "label": "#126",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/126"
+        },
+        {
+          "label": "#127",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/127"
+        },
+        {
+          "label": "#141",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/141"
+        },
+        {
+          "label": "v0.6.0",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.6.0"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · @MichaelH_rley · 11 posts",
+      "kind": "measured",
+      "summary": "1,160 measured impressions across 11 own post(s). Top: 717 imp (reply to @pnpmjs).",
+      "quote": "@pnpmjs Made my week reading this and I relearned how to walk yesterday without assistance. Maybe that made my week and this was a cherry on top if I’m being totally honest.",
+      "metrics": {
+        "impressions": 1160,
+        "likes": 4,
+        "replies": 3,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 25 · 8:09 AM EDT · 717 imp · @pnpmjs Made my week…",
+        "Sep 25 · 1:05 PM EDT · 190 imp · @mark_k Omarchy tools / join reply",
+        "Sep 25 · 5:48 AM EDT · 97 imp · @peduarte open-source triage",
+        "Sep 25 · remainder · 156 imp across 8 smaller posts (PH upvote pushes, install one-liner, stolinski reply)"
+      ],
+      "when": "Sep 25 · 5:00 AM EDT → Sep 25 · 1:19 PM EDT",
+      "links": [
+        {
+          "label": "Top post",
+          "href": "https://x.com/MichaelH_rley/status/2103456880316092697"
+        },
+        {
+          "label": "Omarchy join",
+          "href": "https://x.com/MichaelH_rley/status/2103531263336632385"
+        }
+      ]
+    },
+    {
+      "title": "Product Hunt maker presence",
+      "kind": "ops",
+      "summary": "Weekday Omadesign PH byline/forum sweep (~9:44 AM ET): ran as scheduled. Forum thread “omadesign relaunches tomorrow…” approved; Jared Coleman followed; mention notification on the relaunch thread.",
+      "when": "Sep 25 · ~9:44 AM EDT"
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Thumbtack · design / web / software leads",
+      "kind": "ops",
+      "summary": "Multiple inbound lead pings in-window (logo remote Oakland/Orlando/Altamonte; web North Augusta SC; social Ann Arbor + Houston; software Shelby NC + Defiance OH overnight). Triage when ready.",
+      "when": "Sep 25 · through day EDT"
+    },
+    {
+      "title": "Google Voice · (828) 399-1641 prospect reply",
+      "kind": "action",
+      "summary": "Starred SMS: prospect leaning toward a fixed monthly retainer plus ad-spend model and noted another vendor constraint. Follow up when ready.",
+      "when": "Sep 25 · 5:17–5:37 AM EDT"
+    },
+    {
+      "title": "Product Hunt · forum + follower",
+      "kind": "ops",
+      "summary": "p/omadesign forum thread approved; Jared Coleman followed; mention on the Omadesign relaunch forum thread.",
+      "when": "Sep 25 · ~5:09 AM–7:42 AM EDT"
+    },
+    {
+      "title": "Reddit · r/omadesign reminder bot",
+      "kind": "ops",
+      "summary": "timee_bot replied on the r/omadesign welcome/relaunch post (clocked the then-scheduled 12:01 AM PT slot).",
+      "when": "Sep 25 · 5:10 AM EDT"
+    },
+    {
+      "title": "Greptile · review tiers product mail",
+      "kind": "ops",
+      "summary": "Product update on Base/Plus/Apex review tiers — noise unless you’re evaluating the tool.",
+      "when": "Sep 25 · 5:13 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Omadesign 0.6.0 shipped",
+      "detail": "Release live: motion keys, brush edge, selection transforms; follow-up QA PR #141 landed eyedropper/glass/Lottie/SVG/motion-export fixes."
+    },
+    {
+      "title": "PH relaunch timing",
+      "detail": "Friday prep and forum/X pushes ran against a Sat 12:01 AM PT plan; later same day the relaunch was postponed to Wed Sep 30 12:01 AM PT — keep calendars and bots aligned."
+    },
+    {
+      "title": "Thumbtack leads to triage",
+      "detail": "Several design / web / social / software lead pings in the window — decide which to chase."
+    },
+    {
+      "title": "Voice prospect follow-up",
+      "detail": "(828) 399-1641 replied overnight leaning fixed retainer + ad spend — answer when ready."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    }
+  ]
+}
