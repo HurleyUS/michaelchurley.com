@@ -1,18 +1,10 @@
-import { getLlmsPosts, llmsHeader } from "@/lib/llms";
-import { SITE_URL } from "@/lib/site-profile";
+import { fullSiteMarkdown } from "@/lib/page-markdown";
 
-/** llms-full.txt: llms.txt header plus the full Markdown of every published post. */
+/** llms-full.txt: the whole site as Markdown (resume, pages, portfolio, every published post). */
 export const revalidate = 3600;
 
 export async function GET() {
-  const posts = await getLlmsPosts();
-  const full = posts
-    .map((post) => {
-      const date = post.publishedAt ? new Date(post.publishedAt).toISOString().slice(0, 10) : "";
-      return `---\n\nSource: ${SITE_URL}/blog/${post.slug}\nPublished: ${date}\n\n${post.content.trim()}\n`;
-    })
-    .join("\n");
-  return new Response(`${llmsHeader()}\n## Posts\n\n${full}`, {
+  return new Response(await fullSiteMarkdown(), {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });
 }
