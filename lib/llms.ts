@@ -44,7 +44,10 @@ export const MACHINE_ENDPOINTS = [
     "/llms-full.txt",
     "The whole site as Markdown: resume, every page, portfolio, and every blog post",
   ],
-  ["/agents.md", "Usage guide for AI agents: endpoints, .md routes, WebMCP tools, contact"],
+  [
+    "/agents.md",
+    "Usage guide for AI agents: endpoints, .md routes, MCP and WebMCP tools, booking, contact",
+  ],
   ["/resume.json", "Resume in JSON Resume (jsonresume.org) format"],
   ["/portfolio.json", "Portfolio pieces with titles, categories, media, and live links"],
   ["/blog.json", "Blog posts with title, slug, URL, date, description, tags, and Markdown link"],

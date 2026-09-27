@@ -7,13 +7,16 @@ import { SITE_URL } from "@/lib/site-profile";
  */
 export const revalidate = 3600;
 
+/** Markdown-only documents whose canonical is not an HTML page of the same path. */
+const CANONICAL: Record<string, string> = { resume: "/", index: "/", agents: "/agents.md" };
+
 export async function GET(_request: Request, { params }: { params: Promise<{ path?: string[] }> }) {
   const { path = [] } = await params;
   const segments = path.map((segment) => decodeURIComponent(segment));
   const body = await pageMarkdown(segments);
   const headers = {
     "Content-Type": "text/markdown; charset=utf-8",
-    Link: `<${SITE_URL}/${segments.join("/")}>; rel="canonical"`,
+    Link: `<${SITE_URL}${CANONICAL[segments.join("/")] ?? `/${segments.join("/")}`}>; rel="canonical"`,
   };
   if (body === null) {
     return new Response(
