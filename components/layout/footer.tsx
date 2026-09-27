@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { FooterAgentLinks } from "@/components/layout/footer-agent-links";
+import { PROFILE } from "@/lib/site-profile";
 import {
   PiGithubLogoLight,
   PiInstagramLogoLight,
@@ -13,9 +15,9 @@ export default async function Footer() {
         <p>
           © {new Date().getFullYear()} {"Michael C. Hurley"}, <em>All Rights Reserved</em>
           {" | "}
-          <Link href="tel:+18283073591">(828) 307-3591</Link>
+          <Link href={PROFILE.telephoneHref}>{PROFILE.telephoneDisplay}</Link>
           {" | "}
-          <Link href="mailto:michaelhurley.pj@gmail.com">michaelhurley.pj@gmail.com</Link>
+          <Link href={`mailto:${PROFILE.email}`}>{PROFILE.email}</Link>
           {" | "}
           <Link
             href="https://github.com/michaelmonetized"
@@ -39,13 +41,14 @@ export default async function Footer() {
             <PiInstagramLogoLight className="w-6 h-6 inline-block" />
           </Link>
           <Link
-            href="https://x.com/MichaelH_rley2"
+            href="https://x.com/michaelh_rley"
             title="Michael Hurley on X"
             aria-label="X profile"
           >
             <PiXLogoLight className="w-6 h-6 inline-block" />
           </Link>
         </p>
+        <FooterAgentLinks />
       </div>
     </footer>
   );

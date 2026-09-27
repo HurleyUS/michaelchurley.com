@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog — Michael C. Hurley",
   description: "Thoughts, tutorials, and insights from Michael C. Hurley.",
+  alternates: { canonical: "/blog" },
 };
 
 function formatDate(timestamp: number | undefined) {

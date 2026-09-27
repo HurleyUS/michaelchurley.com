@@ -18,7 +18,8 @@
     "check": "bun lint",
     "lint:fix": "bun scripts/lint.mts",
     "tsc": "tsgo --noEmit",
-    "ship": "bun scripts/ship.mts"
+    "ship": "bun scripts/ship.mts",
+    "indexnow": "bun scripts/indexnow.mts"
   },
   "dependencies": {
     "@clerk/nextjs": "^6.37.2",

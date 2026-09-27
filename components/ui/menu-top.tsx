@@ -84,7 +84,7 @@ export default function MenuTop() {
               </div>
 
               <div className="flex items-center justify-end gap-md p-md">
-                <Link href="mailto:michaelhurley.pj@gmail.com">
+                <Link href="mailto:michaelmonetized@gmail.com">
                   <Button variant="outline">Email Me</Button>
                 </Link>
                 <Link href="tel:+18285931935">
@@ -132,7 +132,7 @@ export default function MenuTop() {
               </Link>
             </div>
             <div className="flex items-center justify-between gap-md w-full text-xs">
-              <Link href="mailto:michaelhurley.pj@gmail.com" className="text-xs">
+              <Link href="mailto:michaelmonetized@gmail.com" className="text-xs">
                 <Button size="sm" variant="outline" className="text-xs">
                   <span className="text-[14px]">Email Me</span>
                 </Button>

@@ -3,32 +3,40 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Providers } from "@/providers";
+import { JsonLd } from "@/components/seo/json-ld";
+import { siteGraph } from "@/lib/structured-data";
+import { PROFILE } from "@/lib/site-profile";
+import { WebMcpTools } from "@/components/agents/webmcp-tools";
+import { MarkdownAlternateLink } from "@/components/seo/markdown-alternate-link";
 
 const siteUrl = "https://www.michaelchurley.com";
 const siteName = "Michael C. Hurley";
+const siteTitle = `Michael C. Hurley | ${PROFILE.headline}`;
 const siteDescription =
-  "Business operations and technology professional with 20+ years of experience in management, sales, marketing, graphic design, and software development. Available for hire.";
+  "Michael C. Hurley: 20 years of SEO, now focused on AEO and GEO. Director at Hustle Launch; builds production Next.js, Convex, and Stripe sites plus AI agent tooling in Canton, NC.";
 
 export const metadata: Metadata = {
   // Basic metadata
   title: {
-    default: "Michael C. Hurley | Business Operations & Technology Professional",
+    default: siteTitle,
     template: "%s | Michael C. Hurley",
   },
   description: siteDescription,
   keywords: [
     "Michael C. Hurley",
-    "business operations",
-    "technology consultant",
-    "software developer",
-    "full-stack developer",
-    "project manager",
-    "CTO",
-    "web development",
-    "React",
+    "SEO",
+    "AEO",
+    "GEO",
+    "answer engine optimization",
+    "generative engine optimization",
+    "technical SEO",
+    "llms.txt",
+    "structured data",
+    "local SEO",
+    "AI agents",
     "Next.js",
-    "hire developer",
-    "freelance developer",
+    "Convex",
+    "Hustle Launch",
     "North Carolina",
   ],
   authors: [{ name: "Michael C. Hurley", url: siteUrl }],
@@ -37,9 +45,6 @@ export const metadata: Metadata = {
 
   // Canonical URL
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: "/",
-  },
 
   // Open Graph
   openGraph: {
@@ -47,14 +52,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: siteName,
-    title: "Michael C. Hurley | Business Operations & Technology Professional",
+    title: siteTitle,
     description: siteDescription,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Michael C. Hurley - Business Operations & Technology Professional",
+        alt: siteTitle,
       },
     ],
   },
@@ -62,10 +67,11 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Michael C. Hurley | Business Operations & Technology Professional",
+    title: siteTitle,
     description: siteDescription,
     images: ["/og-image.png"],
-    creator: "@michaelchurley",
+    site: "@michaelh_rley",
+    creator: "@michaelh_rley",
   },
 
   // Robots
@@ -90,8 +96,8 @@ export const metadata: Metadata = {
   // Icons
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
   },
 
   // Manifest
@@ -109,7 +115,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col items-stretch justify-start relative bg-background overflow-x-clip overflow-y-auto">
+        <JsonLd data={siteGraph()} />
         <Providers>
+          <MarkdownAlternateLink />
+          <WebMcpTools />
           <a href="#main" className="sr-only focus:not-sr-only">
             {"Skip to main content"}
           </a>

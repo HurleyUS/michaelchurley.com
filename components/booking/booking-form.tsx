@@ -7,30 +7,7 @@ import { cn } from "@/lib/utils";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
-
-// Generate time slots from 7:30 AM to 8:30 PM (30-min intervals)
-function generateTimeSlots(): string[] {
-  const slots: string[] = [];
-  // 7:30 AM = 7.5 hours, 8:30 PM = 20.5 hours
-  for (let h = 7; h <= 20; h++) {
-    if (h === 7) {
-      slots.push("07:30");
-    } else {
-      slots.push(`${h.toString().padStart(2, "0")}:00`);
-      if (h < 20 || (h === 20 && true)) {
-        slots.push(`${h.toString().padStart(2, "0")}:30`);
-      }
-    }
-  }
-  // Add 20:00 and 20:30 (8:00 PM and 8:30 PM)
-  return slots.filter((s) => {
-    const [hh = 0, mm = 0] = s.split(":").map(Number);
-    const minutes = hh * 60 + mm;
-    return minutes >= 7 * 60 + 30 && minutes <= 20 * 60 + 30;
-  });
-}
-
-const ALL_TIME_SLOTS = generateTimeSlots();
+import { ALL_TIME_SLOTS, submitBooking, validateBookingRequest } from "@/lib/booking";
 
 function formatTimeSlot(slot: string): string {
   const [hours = 0, minutes = 0] = slot.split(":").map(Number);
@@ -171,43 +148,25 @@ export default function BookingForm() {
   const handleBookNow = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name.trim() || !email.trim()) {
-      setError("Please fill in your name and email");
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError("Please enter a valid email address");
-      return;
-    }
     if (!selectedDate || !selectedTime) return;
+    const request = {
+      name,
+      email,
+      phone,
+      date: formatDate(selectedDate),
+      timeSlot: selectedTime,
+    };
+    const invalid = validateBookingRequest(request);
+    if (invalid) {
+      setError(invalid);
+      return;
+    }
 
     setIsSubmitting(true);
     setError(null);
 
     try {
-      await createBooking({
-        name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim(),
-        date: formatDate(selectedDate),
-        timeSlot: selectedTime,
-      });
-
-      const response = await fetch("/api/booking", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          phone: phone.trim(),
-          date: formatDate(selectedDate),
-          timeSlot: selectedTime,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to send confirmation emails");
-      }
+      await submitBooking(request, createBooking);
 
       setStep("success");
     } catch (err) {

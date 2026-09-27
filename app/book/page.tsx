@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Book a Meeting | Michael C. Hurley",
   description:
     "Schedule a 30-minute meeting with Michael C. Hurley to discuss business, technology, or collaboration opportunities.",
+  alternates: { canonical: "/book" },
 };
 
 export default function BookPage() {
@@ -32,7 +33,7 @@ export default function BookPage() {
           <div className="text-center mt-8 space-y-2">
             <p className="text-sm text-muted-foreground">Prefer to reach out directly?</p>
             <div className="flex items-center justify-center gap-4 text-sm">
-              <a href="mailto:michaelhurley.pj@gmail.com" className="text-primary hover:underline">
+              <a href="mailto:michaelmonetized@gmail.com" className="text-primary hover:underline">
                 Email
               </a>
               <span className="text-muted-foreground">•</span>

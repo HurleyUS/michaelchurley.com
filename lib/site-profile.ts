@@ -1,0 +1,40 @@
+/** Canonical facts about Michael C. Hurley shared by robots.txt, llms.txt, JSON-LD, and the resume. */
+export const SITE_URL = "https://www.michaelchurley.com";
+
+export const PROFILE = {
+  name: "Michael C. Hurley",
+  alternateName: "Michael Monetized",
+  url: SITE_URL,
+  image: `${SITE_URL}/headshot-full.jpg`,
+  headline: "20 Years of SEO, Now AEO/GEO · Technical Web · AI Agent Tooling",
+  jobTitle: "Director",
+  employer: { name: "Hustle Launch", url: "https://www.hustlelaunch.com" },
+  email: "michaelmonetized@gmail.com",
+  telephone: "+1-828-593-1935",
+  telephoneDisplay: "828-593-1935",
+  telephoneHref: "tel:+18285931935",
+  locality: "Canton",
+  region: "NC",
+  country: "US",
+  bookingUrl: `${SITE_URL}/book`,
+  fieldGuideUrl: "https://hustle-revenue-path.michaelh-rley.chatgpt.site/field-guide",
+  sameAs: [
+    "https://github.com/michaelmonetized",
+    "https://x.com/michaelh_rley",
+    "https://www.linkedin.com/in/michaelchurley",
+  ],
+  knowsAbout: [
+    "Search Engine Optimization",
+    "Technical SEO",
+    "Answer Engine Optimization",
+    "Generative Engine Optimization",
+    "llms.txt",
+    "Structured data",
+    "Local SEO",
+    "AI agents",
+    "Model Context Protocol",
+    "Next.js",
+    "Convex",
+    "Stripe",
+  ],
+} as const;

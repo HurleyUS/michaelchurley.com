@@ -20,6 +20,7 @@ export async function generateMetadata({
   return {
     title: `Stand Up · ${date}`,
     robots: { index: true, follow: true },
+    alternates: { canonical: `https://www.michaelchurley.com/nightly/report/${date}` },
   };
 }
 

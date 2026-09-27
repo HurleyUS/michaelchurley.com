@@ -1,4 +1,4 @@
-import { mutation, query } from "./_generated/server";
+import { internalQuery, mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import { requireAdmin } from "./lib/auth";
 
@@ -12,8 +12,6 @@ export const create = mutation({
     timeSlot: v.string(), // HH:MM format
   },
   handler: async (ctx, args) => {
-    const now = Date.now();
-
     return await ctx.db.insert("bookings", {
       name: args.name,
       email: args.email,
@@ -39,6 +37,7 @@ export const list = query({
     limit: v.optional(v.number()),
   },
   handler: async (ctx, args) => {
+    await requireAdmin(ctx);
     let q = ctx.db.query("bookings").order("desc");
 
     if (args.status) {
@@ -53,7 +52,11 @@ export const list = query({
   },
 });
 
-export const getByDate = query({
+/**
+ * Full booking records for one date. Internal only: records hold visitors'
+ * names, emails, phones, and messages, so they are never exposed publicly.
+ */
+export const getByDate = internalQuery({
   args: {
     date: v.string(),
   },
@@ -62,6 +65,22 @@ export const getByDate = query({
       .query("bookings")
       .withIndex("by_date", (q) => q.eq("date", args.date))
       .collect();
+  },
+});
+
+/** Public: only the HH:MM slots already taken on a date. No personal details. */
+export const takenSlots = query({
+  args: {
+    date: v.string(),
+  },
+  handler: async (ctx, args): Promise<string[]> => {
+    const bookings = await ctx.db
+      .query("bookings")
+      .withIndex("by_date", (q) => q.eq("date", args.date))
+      .collect();
+    return [
+      ...new Set(bookings.filter((b) => b.status !== "cancelled").map((b) => b.timeSlot)),
+    ].sort();
   },
 });
 
@@ -86,6 +105,7 @@ export const updateStatus = mutation({
 export const getUpcoming = query({
   args: {},
   handler: async (ctx) => {
+    await requireAdmin(ctx);
     const today = new Date().toISOString().split("T")[0] ?? "";
     const bookings = await ctx.db
       .query("bookings")
