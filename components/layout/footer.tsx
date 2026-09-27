@@ -41,7 +41,7 @@ export default async function Footer() {
             <PiInstagramLogoLight className="w-6 h-6 inline-block" />
           </Link>
           <Link
-            href="https://x.com/MichaelH_rley2"
+            href="https://x.com/michaelh_rley"
             title="Michael Hurley on X"
             aria-label="X profile"
           >

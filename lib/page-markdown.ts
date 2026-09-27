@@ -304,6 +304,7 @@ Without WebMCP, send the visitor to ${PROFILE.bookingUrl}: pick a day and time (
 - Call or text: ${PROFILE.telephoneDisplay}
 - LinkedIn: https://www.linkedin.com/in/michaelchurley
 - GitHub: https://github.com/michaelmonetized
+- X: https://x.com/michaelh_rley
 `;
 }
 

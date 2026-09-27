@@ -70,7 +70,8 @@ export const metadata: Metadata = {
     title: siteTitle,
     description: siteDescription,
     images: ["/og-image.png"],
-    creator: "@michaelchurley",
+    site: "@michaelh_rley",
+    creator: "@michaelh_rley",
   },
 
   // Robots
