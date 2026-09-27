@@ -7,15 +7,15 @@ import { PROFILE, SITE_URL } from "@/lib/site-profile";
  * Speaks the 2026-07-28 revision (per-request _meta, server/discover) and answers the legacy
  * initialize handshake for 2025-03-26 through 2025-11-25 clients.
  */
-export const MODERN_VERSION = "2026-07-28";
-export const LEGACY_VERSIONS = ["2025-11-25", "2025-06-18", "2025-03-26"];
-export const SUPPORTED_VERSIONS = [MODERN_VERSION, ...LEGACY_VERSIONS];
+const MODERN_VERSION = "2026-07-28";
+const LEGACY_VERSIONS = ["2025-11-25", "2025-06-18", "2025-03-26"];
+const SUPPORTED_VERSIONS = [MODERN_VERSION, ...LEGACY_VERSIONS];
 export const SERVER_INFO = {
   name: "michaelchurley.com",
   title: "Michael C. Hurley",
   version: "1.0.0",
 };
-export const INSTRUCTIONS = `Tools for ${PROFILE.name}'s site: resume, portfolio, blog, page Markdown, search, and scheduling a 30-minute call (get_booking_options -> get_availability -> book_meeting). Guide: ${SITE_URL}/agents.md`;
+const INSTRUCTIONS = `Tools for ${PROFILE.name}'s site: resume, portfolio, blog, page Markdown, search, and scheduling a 30-minute call (get_booking_options -> get_availability -> book_meeting). Guide: ${SITE_URL}/agents.md`;
 
 type JsonRpcRequest = {
   jsonrpc: "2.0";

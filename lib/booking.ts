@@ -22,12 +22,12 @@ export const ALL_TIME_SLOTS: string[] = Array.from(
   (_, i) => minutesToSlot(FIRST_SLOT_MINUTES + i * 30),
 );
 
-export function slotMinutes(slot: string) {
+function slotMinutes(slot: string) {
   const [hh = 0, mm = 0] = slot.split(":").map(Number);
   return hh * 60 + mm;
 }
 
-export const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export type BookingRequest = {
   name: string;

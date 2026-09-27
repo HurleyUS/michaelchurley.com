@@ -66,7 +66,7 @@ function blogIndexMarkdown(posts: SitePost[]) {
 }
 
 /** A single post as Markdown with a small metadata header. */
-export function postMarkdown(post: SitePost) {
+function postMarkdown(post: SitePost) {
   const body = post.content.trim();
   const title = body.startsWith("# ") ? "" : `# ${post.title}\n\n`;
   const meta = [
@@ -208,7 +208,7 @@ ${loops}
 }
 
 /** Usage guide for AI agents, served at /agents.md. */
-export function agentsMarkdown() {
+function agentsMarkdown() {
   const endpoints = MACHINE_ENDPOINTS.map(([path, desc]) => `| \`${path}\` | ${desc} |`).join("\n");
   return `# Agents: how to use michaelchurley.com
 

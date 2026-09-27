@@ -17,9 +17,9 @@ export type ResumeWork = {
   earlier?: boolean;
 };
 
-export type ResumeSkill = { name: string; keywords: string[] };
+type ResumeSkill = { name: string; keywords: string[] };
 
-export type ResumeEducation = {
+type ResumeEducation = {
   institution: string;
   studyType: string;
   area: string;

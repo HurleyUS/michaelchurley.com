@@ -41,8 +41,8 @@ export type AgentTool = {
   execute: (args: Record<string, unknown>) => Promise<unknown>;
 };
 
-export const MEETING_TYPE = "intro-call";
-export const BOOKING_PAGE = "https://www.michaelchurley.com/book";
+const MEETING_TYPE = "intro-call";
+const BOOKING_PAGE = "https://www.michaelchurley.com/book";
 
 const str = (value: unknown) => (typeof value === "string" ? value : "");
 const READ_ONLY = { readOnlyHint: true, openWorldHint: false } as const;
@@ -91,7 +91,7 @@ function normalizePath(value: unknown) {
   return path.replace(/\.md$/, "").replace(/\/index$/, "/");
 }
 
-export function bookingOptions() {
+function bookingOptions() {
   return {
     meeting_types: [
       {

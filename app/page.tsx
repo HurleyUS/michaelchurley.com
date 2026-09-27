@@ -41,8 +41,13 @@ export default function Home() {
               <p className="text-lg font-bold">{RESUME.headline}</p>
               <p className="text-sm">
                 {RESUME.location} ·{" "}
-                <Link href={PROFILE.telephoneHref}>{PROFILE.telephoneDisplay}</Link> ·{" "}
-                <Link href={`mailto:${PROFILE.email}`}>{PROFILE.email}</Link>
+                <Link href={PROFILE.telephoneHref} className="underline">
+                  {PROFILE.telephoneDisplay}
+                </Link>{" "}
+                ·{" "}
+                <Link href={`mailto:${PROFILE.email}`} className="underline">
+                  {PROFILE.email}
+                </Link>
               </p>
             </div>
 
