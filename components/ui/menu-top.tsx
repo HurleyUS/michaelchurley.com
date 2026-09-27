@@ -46,7 +46,7 @@ export default function MenuTop() {
                   <PiInstagramLogoLight />
                 </Link>
 
-                <Link href="https://x.com/MichaelH_rley2" aria-label="X profile">
+                <Link href="https://x.com/michaelh_rley" aria-label="X profile">
                   <PiXLogoLight />
                 </Link>
 
@@ -127,7 +127,7 @@ export default function MenuTop() {
                 <PiInstagramLogoLight />
               </Link>
 
-              <Link href="https://x.com/MichaelH_rley2" aria-label="X profile">
+              <Link href="https://x.com/michaelh_rley" aria-label="X profile">
                 <PiXLogoLight />
               </Link>
             </div>
