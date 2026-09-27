@@ -3,6 +3,8 @@ import "@/styles/globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Providers } from "@/providers";
+import { JsonLd } from "@/components/seo/json-ld";
+import { siteGraph } from "@/lib/structured-data";
 
 const siteUrl = "https://www.michaelchurley.com";
 const siteName = "Michael C. Hurley";
@@ -109,6 +111,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="flex min-h-dvh flex-col items-stretch justify-start relative bg-background overflow-x-clip overflow-y-auto">
+        <JsonLd data={siteGraph()} />
         <Providers>
           <a href="#main" className="sr-only focus:not-sr-only">
             {"Skip to main content"}

@@ -7,6 +7,8 @@ import CommentSection from "@/components/comments/comment-section";
 import { getStaticPostBySlug } from "@/lib/static-posts";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/seo/json-ld";
+import { blogPostingSchema } from "@/lib/structured-data";
 
 export async function generateMetadata({
   params,
@@ -15,8 +17,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post =
-    getStaticPostBySlug(slug) ??
-    (await fetchQuery(api.blog.getBySlug, { slug }).catch(() => null));
+    getStaticPostBySlug(slug) ?? (await fetchQuery(api.blog.getBySlug, { slug }).catch(() => null));
 
   if (!post || !post.published) {
     return { title: "Post Not Found" };
@@ -47,8 +48,7 @@ function formatDate(timestamp: number | undefined) {
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post =
-    getStaticPostBySlug(slug) ??
-    (await fetchQuery(api.blog.getBySlug, { slug }).catch(() => null));
+    getStaticPostBySlug(slug) ?? (await fetchQuery(api.blog.getBySlug, { slug }).catch(() => null));
 
   if (!post || !post.published) {
     notFound();
@@ -56,6 +56,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <section className="flex flex-col py-4xl bg-gradient-to-b from-Base to-Crust">
+      <JsonLd data={blogPostingSchema(post)} />
       <ContainerBoxedCenter
         propsInner={{
           className:
