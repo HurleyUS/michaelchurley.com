@@ -15,6 +15,8 @@ export function FooterAgentLinks() {
       <a href="/agents.md" type="text/markdown">
         Agents: read /agents.md for usage
       </a>
+      {" · "}
+      <a href="/aeo">How this site is built for AI search</a>
     </p>
   );
 }

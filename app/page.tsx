@@ -11,10 +11,16 @@ import BookingModal from "@/components/booking/booking-modal";
 import ProductHuntOmadesignEmbed from "@/components/product-hunt-omadesign-embed";
 import { formatWorkDates, RESUME } from "@/lib/resume";
 import { PROFILE } from "@/lib/site-profile";
+import type { Metadata } from "next";
+import { JsonLd } from "@/components/seo/json-ld";
+import { profilePageSchema } from "@/lib/structured-data";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={profilePageSchema()} />
       <section className="flex flex-col bg-gradient-to-b from-Base to-Crust static">
         <Image
           src="/hero-bg.png"

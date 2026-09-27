@@ -27,6 +27,9 @@ export type ResumeEducation = {
   endDate: string;
 };
 
+/** Date the resume content was last revised (used for lastmod and dateModified). */
+export const RESUME_UPDATED = "2026-09-27";
+
 export const RESUME = {
   location: `${PROFILE.locality}, ${PROFILE.region}`,
   headline: PROFILE.headline,

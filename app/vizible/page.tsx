@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Vizible Agency Partnership | Digital Marketing for Local Businesses",
   description:
     "Michael C. Hurley has partnered with Vizible Agency to bring local businesses a Personal CMO, real-time Business Dashboard, and an All-in-One CRM.",
+  alternates: { canonical: "/vizible" },
   openGraph: {
     title: "Vizible Agency Partnership | Michael C. Hurley",
     description:

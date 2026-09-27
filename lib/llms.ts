@@ -49,6 +49,14 @@ export const MACHINE_ENDPOINTS = [
   ["/portfolio.json", "Portfolio pieces with titles, categories, media, and live links"],
   ["/blog.json", "Blog posts with title, slug, URL, date, description, tags, and Markdown link"],
   ["/resume.md", "Resume as Markdown"],
+  ["/feed.xml", "Blog as RSS 2.0"],
+  ["/feed.json", "Blog as JSON Feed 1.1"],
+  [
+    "/openapi.json",
+    "OpenAPI 3.1 description of the JSON endpoints, Markdown routes, booking API, and MCP endpoint",
+  ],
+  ["/mcp", "Remote MCP server (Streamable HTTP, POST JSON-RPC); Server Card at /mcp/server-card"],
+  ["/aeo", "How this site is built for AI search and agents (case study with live links)"],
 ] as const;
 
 /** llms.txt: the resume in llms.txt Markdown format plus links to the site and its endpoints. */
@@ -69,12 +77,14 @@ ${resumeSectionsMarkdown()}
 - [Book a call](${PROFILE.bookingUrl}): Schedule a 30-minute call with Michael
 - [Portfolio](${SITE_URL}/portfolio): Sites, interfaces, and marks
 - [Blog](${SITE_URL}/blog): Build logs and notes on web development, SEO, and AI agents
+- [How this site is built for AI search and agents](${SITE_URL}/aeo): Every machine-readable surface, with live links and why each exists
 - [Technical SEO Field Guide](${PROFILE.fieldGuideUrl}): Technical SEO in the Age of Agentic AI (68 pages, workbook, toolkit)
 
 ## Machine-readable
 
 ${endpoints}
-- Markdown for any page: append \`.md\` to its path (for example ${SITE_URL}/index.md, ${SITE_URL}/blog.md, ${SITE_URL}/portfolio.md)
+- Markdown for any page: append \`.md\` to its path (for example ${SITE_URL}/index.md, ${SITE_URL}/blog.md, ${SITE_URL}/portfolio.md) or send \`Accept: text/markdown\`
+- Agent tools: the MCP server at ${SITE_URL}/mcp and in-browser WebMCP expose resume, portfolio, blog, page Markdown, search, and booking tools (get_booking_options, get_availability, book_meeting). See ${SITE_URL}/agents.md
 
 ## Optional
 

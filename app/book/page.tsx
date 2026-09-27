@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Book a Meeting | Michael C. Hurley",
   description:
     "Schedule a 30-minute meeting with Michael C. Hurley to discuss business, technology, or collaboration opportunities.",
+  alternates: { canonical: "/book" },
 };
 
 export default function BookPage() {

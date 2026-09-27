@@ -45,9 +45,6 @@ export const metadata: Metadata = {
 
   // Canonical URL
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: "/",
-  },
 
   // Open Graph
   openGraph: {

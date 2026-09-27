@@ -1,3 +1,4 @@
+import { AEO_FAQ, AEO_GROUPS, AEO_INTRO } from "@/lib/aeo";
 import { getLlmsPosts, getSitePost, MACHINE_ENDPOINTS, postDate, type SitePost } from "@/lib/llms";
 import { getLatestReport, getMetrics, getReport, listReportDates } from "@/lib/nightly/data";
 import type { ReportCard } from "@/lib/nightly/types";
@@ -221,7 +222,8 @@ This is the personal site of ${PROFILE.name} (${PROFILE.headline}). It holds his
 | --- | --- |
 ${endpoints}
 | \`/robots.txt\` | Crawler policy with Content-Signal |
-| \`/sitemap.xml\` | Sitemap of public pages |
+| \`/sitemap.xml\` | Sitemap of public pages with lastmod |
+| \`/.well-known/ai-catalog.json\` | AI Catalog pointing to the MCP Server Card |
 
 All \`.md\` and \`.txt\` endpoints return \`text/markdown\` or \`text/plain\` (UTF-8). JSON endpoints return \`application/json\`.
 
@@ -234,13 +236,33 @@ Append \`.md\` to any page path to get that page's content as Markdown, generate
 - \`/blog\` -> \`/blog.md\`, \`/blog/<slug>\` -> \`/blog/<slug>.md\`
 - \`/portfolio\` -> \`/portfolio.md\`
 - \`/book\` -> \`/book.md\`, \`/vizible\` -> \`/vizible.md\`, \`/omadesign\` -> \`/omadesign.md\`
+- \`/aeo\` -> \`/aeo.md\`
 - \`/nightly\` -> \`/nightly.md\`, \`/nightly/report/<YYYY-MM-DD>\` -> \`/nightly/report/<YYYY-MM-DD>.md\`
 
-Every page footer also has a "Markdown" link to its \`.md\` version. Unknown paths return 404.
+Or request any page URL with \`Accept: text/markdown\`. HTML pages advertise their Markdown twin with a \`Link: <...md>; rel="alternate"; type="text/markdown"\` header and a matching \`<link rel="alternate">\` tag. Every page footer also has a "Markdown" link to its \`.md\` version. Unknown paths return 404.
+
+## Remote MCP server
+
+\`POST ${SITE_URL}/mcp\`: a Model Context Protocol server over Streamable HTTP. It is stateless and answers with \`application/json\` (no SSE stream; \`GET /mcp\` returns 405). No authentication.
+
+- Protocol versions: \`2026-07-28\` (per-request \`_meta\`, \`server/discover\`, \`MCP-Protocol-Version\` / \`Mcp-Method\` / \`Mcp-Name\` headers validated) and the legacy \`initialize\` handshake for \`2025-11-25\`, \`2025-06-18\`, and \`2025-03-26\`.
+- Methods: \`server/discover\`, \`initialize\`, \`ping\`, \`tools/list\`, \`tools/call\`.
+- Results: \`content\` (text) plus \`structuredContent\` for JSON results; tool errors come back with \`isError: true\`.
+- Discovery: Server Card at \`/mcp/server-card\` (also \`/.well-known/mcp/server-card.json\` and \`/.well-known/mcp.json\`), AI Catalog at \`/.well-known/ai-catalog.json\`.
+
+Example (legacy handshake, then a call):
+
+\`\`\`bash
+curl -s ${SITE_URL}/mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' \\
+  -H 'MCP-Protocol-Version: 2025-11-25' \\
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_booking_options","arguments":{}}}'
+\`\`\`
 
 ## WebMCP tools
 
-When the browser supports WebMCP, every page registers tools with \`document.modelContext.registerTool()\` (falling back to \`navigator.modelContext\` in older previews). Browsers without WebMCP are unaffected. Every tool returns a string: JSON text or Markdown. Errors are thrown with a plain-English message.
+When the browser supports WebMCP, every page registers the same tools with \`document.modelContext.registerTool()\` (falling back to \`navigator.modelContext\` in older previews). Browsers without WebMCP are unaffected. WebMCP results are strings: Markdown, or JSON text.
+
+The MCP server and WebMCP share one implementation (\`lib/agent-tools.ts\`), so names, inputs, and outputs are identical.
 
 ### Read-only tools
 
@@ -277,7 +299,7 @@ Without WebMCP, send the visitor to ${PROFILE.bookingUrl}: pick a day and time (
 
 ## Contact or book Michael
 
-- Book a 30-minute call: ${PROFILE.bookingUrl}
+- Book a 30-minute call: the booking tools above, or ${PROFILE.bookingUrl}
 - Email: ${PROFILE.email}
 - Call or text: ${PROFILE.telephoneDisplay}
 - LinkedIn: https://www.linkedin.com/in/michaelchurley
@@ -285,7 +307,17 @@ Without WebMCP, send the visitor to ${PROFILE.bookingUrl}: pick a day and time (
 `;
 }
 
+function aeoMarkdown() {
+  const groups = AEO_GROUPS.map(
+    (g) =>
+      `## ${g.title}\n\n${g.surfaces.map((s) => `- **[${s.name}](${SITE_URL}${s.href})**: ${s.what} Why: ${s.why}`).join("\n")}`,
+  ).join("\n\n");
+  const faq = AEO_FAQ.map((f) => `### ${f.question}\n\n${f.answer}`).join("\n\n");
+  return `# How this site is built for AI search and agents\n\n${source("/aeo")}\n\n${AEO_INTRO}\n\n${groups}\n\n## FAQ\n\n${faq}\n`;
+}
+
 const STATIC_PAGES: Record<string, () => string> = {
+  aeo: aeoMarkdown,
   "": indexMarkdown,
   index: indexMarkdown,
   resume: resumeMarkdown,
@@ -327,6 +359,7 @@ export async function fullSiteMarkdown() {
     portfolioMarkdown(),
     vizibleMarkdown(),
     omadesignMarkdown(),
+    aeoMarkdown(),
     await nightlyMarkdown(),
     agentsMarkdown(),
     blogIndexMarkdown(posts),

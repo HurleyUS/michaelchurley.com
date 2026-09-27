@@ -8,7 +8,7 @@ import { getStaticPostBySlug } from "@/lib/static-posts";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
-import { blogPostingSchema } from "@/lib/structured-data";
+import { blogPostingSchema, breadcrumbSchema } from "@/lib/structured-data";
 
 export async function generateMetadata({
   params,
@@ -26,6 +26,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} — Michael C. Hurley`,
     description: post.excerpt || post.title,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt || post.title,
@@ -57,6 +58,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <section className="flex flex-col py-4xl bg-gradient-to-b from-Base to-Crust">
       <JsonLd data={blogPostingSchema(post)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          ["Blog", "/blog"],
+          [post.title, `/blog/${post.slug}`],
+        ])}
+      />
       <ContainerBoxedCenter
         propsInner={{
           className:
