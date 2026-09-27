@@ -1,0 +1,114 @@
+{
+  "date": "2026-09-26",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 26, 2026 · 5:00 AM EDT → Sep 27, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-26T09:00:00Z → 2026-09-27T09:00:00Z",
+    "generatedEt": "Sep 27, 2026 · ~4:56 AM EDT",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 0. Omadesign master: changelog backfill for 0.6.0 QA #128–#140 + closed matching issues. X: 1 post, 5 imp. Inbox: 4 Thumbtack leads, estate-sale form (client declined off-site), Vercel domain misconfigs, Macks reviews.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · changelog + QA issue close-out",
+      "kind": "shipped",
+      "summary": "Direct push to master (no merged PR / no new release in window): backfilled 0.5.6–0.5.8 changelog and listed all thirteen 0.6.0 QA fixes (#128–#140). Closed related issues #129, #136, #138, #139, #140 as done.",
+      "bullets": [
+        "a4d5b2f Backfill the 0.5.6 to 0.5.8 changelog and list every 0.6.0 fix",
+        "Closed #129 Free transform does not work",
+        "Closed #136 Layer reorder shortcuts don't move objects across layers",
+        "Closed #138 Lottie import/export format mismatch",
+        "Closed #139 Ruler guides should snap while dragging",
+        "Closed #140 Add video/raster animation export"
+      ],
+      "when": "Sep 26 · 10:04–10:15 AM EDT",
+      "links": [
+        {
+          "label": "commit",
+          "href": "https://github.com/michaelmonetized/omadesign/commit/a4d5b2faa2df976bfad164658a3732fd058d78d6"
+        },
+        {
+          "label": "#140",
+          "href": "https://github.com/michaelmonetized/omadesign/issues/140"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · @MichaelH_rley · 1 post",
+      "kind": "measured",
+      "summary": "5 measured impressions across 1 own post (short reply).",
+      "quote": "@mark_k Sent",
+      "metrics": {
+        "impressions": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      },
+      "bullets": [
+        "Sep 26 · 9:23 AM EDT · 5 imp · @mark_k Sent"
+      ],
+      "when": "Sep 26 · 9:23 AM EDT",
+      "links": [
+        {
+          "label": "Post",
+          "href": "https://x.com/MichaelH_rley/status/2103837788122542166"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Thumbtack · software / logo leads",
+      "kind": "ops",
+      "summary": "Four starred lead pings in-window: software Liberty NY, logo remote Alderson WV, software Montgomery AL, software remote Manahawkin NJ (overnight). Triage when ready.",
+      "when": "Sep 26 · 1:50 PM–11:06 PM EDT"
+    },
+    {
+      "title": "Appalachian Estate Sales · Karen Dell form",
+      "kind": "ops",
+      "summary": "Off-site contents/estate evaluation inquiry. Client (appalachianestatesales) replied that they only do onsite and referred Mike & Connie Guyor for off-site — closed from their side.",
+      "when": "Sep 26 · 11:55 AM EDT (reply Sep 27 · 4:19 AM EDT)"
+    },
+    {
+      "title": "Vercel · Hustle Launch domain misconfigs",
+      "kind": "action",
+      "summary": "8 domains need configuration across 5 projects on the Hustle Launch team. Update or remove when ready.",
+      "when": "Sep 26 · 2:48 PM EDT"
+    },
+    {
+      "title": "Macks Shack BBQ · new reviews",
+      "kind": "ops",
+      "summary": "Google Business: 2 new reviews ping; Hustle Launch dash: 5-star from Patrick Lee (brisket/wings).",
+      "when": "Sep 26 · ~12:12–1:13 PM EDT"
+    },
+    {
+      "title": "Hustle Launch · daily message report",
+      "kind": "ops",
+      "summary": "Daily message report for Sep 26: 2 open messages in the dash.",
+      "when": "Sep 27 · 12:36 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Omadesign PH relaunch Sep 30",
+      "detail": "Wed Sep 30 12:01 AM PT (3:01 AM ET) still the target; keep launch plan/copy review and QA footage (Select submenu, feature clips) on track — no blitz without Michael’s sign-off."
+    },
+    {
+      "title": "Thumbtack leads to triage",
+      "detail": "Four software/logo pings in this window (Liberty NY, Alderson WV, Montgomery AL, Manahawkin NJ remote)."
+    },
+    {
+      "title": "Vercel domain cleanup",
+      "detail": "8 misconfigured domains across 5 Hustle Launch projects — fix or remove."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    }
+  ]
+}
