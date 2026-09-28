@@ -1,11 +1,11 @@
 {
   "date": "2026-09-27",
-  "label": "5am\u20135am ET",
+  "label": "5am–5am ET",
   "timezone": "America/New_York",
   "meta": {
-    "windowEt": "Sep 27, 2026 \u00b7 5:00 AM EDT \u2192 Sep 28, 2026 \u00b7 5:00 AM EDT",
-    "windowUtc": "2026-09-27T09:00:00Z \u2192 2026-09-28T09:00:00Z",
-    "generatedEt": "Sep 28, 2026 \u00b7 ~4:55 AM EDT",
+    "windowEt": "Sep 27, 2026 · 5:00 AM EDT → Sep 28, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-27T09:00:00Z → 2026-09-28T09:00:00Z",
+    "generatedEt": "Sep 28, 2026 · ~4:55 AM EDT",
     "xPostsMeasured": 0,
     "inboxSignalItems": 6,
     "tldr": "Ships/index 2. michaelchurley.com AEO PR #91 merged (+ nav X-handle fix). Omadesign: Real-ESRGAN model assets prerelease + 13 issues / 13 open PRs filed (text, inspector, offline AI). X: 0 posts. Inbox: Thumbtack software lead, estate-sale valuation follow-up, Macks reviews, Cloudflare cert alert, Sunday Club live.",
@@ -13,7 +13,7 @@
   },
   "shipped": [
     {
-      "title": "HurleyUS/michaelchurley.com \u00b7 AEO PR #91 + follow-ups",
+      "title": "HurleyUS/michaelchurley.com · AEO PR #91 + follow-ups",
       "kind": "shipped",
       "summary": "1 PR merged in window: answer-engine robots, llms.txt, JSON-LD, resume-driven .md/JSON routes, remote MCP/OpenAPI/feeds, privacy booking scrub, and X handle michaelh_rley. Direct follow-up commit fixed the header menu handle.",
       "bullets": [
@@ -23,7 +23,7 @@
         "fix(privacy): stop exposing booking details; X handle michaelh_rley",
         "f2d1be2 fix(nav): X handle michaelh_rley in the header menu"
       ],
-      "when": "Sep 27 \u00b7 3:18\u20136:00 PM EDT",
+      "when": "Sep 27 · 3:18–6:00 PM EDT",
       "links": [
         {
           "label": "#91",
@@ -36,17 +36,17 @@
       ]
     },
     {
-      "title": "michaelmonetized/omadesign \u00b7 upscale-models-v1 + backlog wave",
+      "title": "michaelmonetized/omadesign · upscale-models-v1 + backlog wave",
       "kind": "shipped",
-      "summary": "GitHub prerelease upscale-models-v1 (Real-ESRGAN ONNX assets for #145; model-only, not an app release). Also filed 13 issues and opened 13 PRs spanning offline AI (#144/#145 \u2192 #146/#147), text (#148\u2013#152 \u2192 #163\u2013#167), inspector (#153\u2013#156 \u2192 #159\u2013#162), agent paste (#157 \u2192 #168), and performance baseline (#158). PR #142 (live agents) still open; #143 closed without merge.",
+      "summary": "GitHub prerelease upscale-models-v1 (Real-ESRGAN ONNX assets for #145; model-only, not an app release). Also filed 13 issues and opened 13 PRs spanning offline AI (#144/#145 → #146/#147), text (#148–#152 → #163–#167), inspector (#153–#156 → #159–#162), agent paste (#157 → #168), and performance baseline (#158). PR #142 (live agents) still open; #143 closed without merge.",
       "bullets": [
-        "Release upscale-models-v1 \u00b7 Real-ESRGAN ONNX model assets v1 (prerelease)",
+        "Release upscale-models-v1 · Real-ESRGAN ONNX model assets v1 (prerelease)",
         "Opened #146/#147 offline Pixel bg-removal + Real-ESRGAN export dialog",
-        "Opened #159\u2013#168 inspector/text/agent PRs (Flip, Align, blend, OpenType, path/area text, agent attachments)",
-        "Filed #144\u2013#158 (text, inspector, offline AI, agent paste, performance baseline)",
-        "#142 Add live agents and selection handles \u2014 still open"
+        "Opened #159–#168 inspector/text/agent PRs (Flip, Align, blend, OpenType, path/area text, agent attachments)",
+        "Filed #144–#158 (text, inspector, offline AI, agent paste, performance baseline)",
+        "#142 Add live agents and selection handles — still open"
       ],
-      "when": "Sep 27 \u00b7 10:16 AM\u20136:09 PM EDT",
+      "when": "Sep 27 · 10:16 AM–6:09 PM EDT",
       "links": [
         {
           "label": "upscale-models-v1",
@@ -69,66 +69,66 @@
   ],
   "landed": [
     {
-      "title": "Sunday Club \u00b7 omadesign live",
+      "title": "Sunday Club · omadesign live",
       "kind": "ops",
       "summary": "Overnight confirmation that omadesign is live on Sunday Club (starred).",
-      "when": "Sep 28 \u00b7 2:00 AM EDT"
+      "when": "Sep 28 · 2:00 AM EDT"
     }
   ],
   "inbox": [
     {
-      "title": "Thumbtack \u00b7 software lead (remote)",
+      "title": "Thumbtack · software lead (remote)",
       "kind": "ops",
       "summary": "One in-window lead: A. A. needs Software Development, North Haven CT (remote). Triage when ready.",
-      "when": "Sep 27 \u00b7 3:08 PM EDT"
+      "when": "Sep 27 · 3:08 PM EDT"
     },
     {
-      "title": "Appalachian Estate Sales \u00b7 Karen Dell follow-up",
+      "title": "Appalachian Estate Sales · Karen Dell follow-up",
       "kind": "ops",
-      "summary": "After the off-site decline, Karen asked whether they can still provide a contents valuation for her lawyer. Client-side loop; Michael is CC\u2019d on the lead alias.",
-      "when": "Sep 27 \u00b7 7:20 AM EDT"
+      "summary": "After the off-site decline, Karen asked whether they can still provide a contents valuation for her lawyer. Client-side loop; Michael is CC’d on the lead alias.",
+      "when": "Sep 27 · 7:20 AM EDT"
     },
     {
-      "title": "Macks Shack BBQ \u00b7 new reviews",
+      "title": "Macks Shack BBQ · new reviews",
       "kind": "ops",
       "summary": "Google Business: Patrick review ping. Hustle Launch dash: 4-star from Gregory Jakes (wings/brisket/pulled pork spread) and 5-star from Lindsay Dunbar.",
-      "when": "Sep 27 \u00b7 5:13 AM\u20136:49 PM EDT"
+      "when": "Sep 27 · 5:13 AM–6:49 PM EDT"
     },
     {
-      "title": "Cloudflare \u00b7 hustlelaunch.com certificate alert",
+      "title": "Cloudflare · hustlelaunch.com certificate alert",
       "kind": "action",
-      "summary": "New certificate activity flagged as outside routine Cloudflare types \u2014 review and take action if needed.",
-      "when": "Sep 27 \u00b7 6:53 PM EDT"
+      "summary": "New certificate activity flagged as outside routine Cloudflare types — review and take action if needed.",
+      "when": "Sep 27 · 6:53 PM EDT"
     },
     {
-      "title": "T3 Code \u00b7 new device sign-in",
+      "title": "T3 Code · new device sign-in",
       "kind": "action",
       "summary": "Starred security notice: new device signed in to the T3 Code account. Confirm it was you.",
-      "when": "Sep 27 \u00b7 2:55 PM EDT"
+      "when": "Sep 27 · 2:55 PM EDT"
     },
     {
-      "title": "Hustle Launch \u00b7 daily message report",
+      "title": "Hustle Launch · daily message report",
       "kind": "ops",
       "summary": "Daily message report for Sep 27: 2 open messages in the dash.",
-      "when": "Sep 27 \u00b7 9:20 PM EDT"
+      "when": "Sep 27 · 9:20 PM EDT"
     }
   ],
   "loops": [
     {
       "title": "Omadesign PH relaunch Sep 30",
-      "detail": "Wed Sep 30 12:01 AM PT (3:01 AM ET) still the target; keep launch plan/copy review and QA footage on track \u2014 no blitz without Michael\u2019s sign-off."
+      "detail": "Wed Sep 30 12:01 AM PT (3:01 AM ET) still the target; keep launch plan/copy review and QA footage on track — no blitz without Michael’s sign-off."
     },
     {
       "title": "Omadesign open PR / issue stack",
-      "detail": "13 open PRs (#142, #146\u2013#147, #159\u2013#168) and matching issues (#144\u2013#158) filed this window \u2014 merge/review before launch where it matters; #142 live agents still the base for offline AI work."
+      "detail": "13 open PRs (#142, #146–#147, #159–#168) and matching issues (#144–#158) filed this window — merge/review before launch where it matters; #142 live agents still the base for offline AI work."
     },
     {
       "title": "Thumbtack A. A. to triage",
-      "detail": "Remote software development lead (North Haven CT) \u2014 decide whether to quote."
+      "detail": "Remote software development lead (North Haven CT) — decide whether to quote."
     },
     {
       "title": "Cloudflare cert review",
-      "detail": "hustlelaunch.com certificate activity outside routine types \u2014 confirm expected or revoke."
+      "detail": "hustlelaunch.com certificate activity outside routine types — confirm expected or revoke."
     },
     {
       "title": "BirdEye / Sinclair holds",
