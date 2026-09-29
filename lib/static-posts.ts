@@ -6600,7 +6600,84 @@ Checkboxes that leave TrustIndex and login handoff open are more honest than a f
 Would you move NS off Bluehost next, or fix homepage GA injection and kill the About Partners lorem first?
 `;
 
+const RENTED_PIPELINE_COVER =
+  "/blog/when-ai-answers-move-rented-lead-sources/cover.png";
+
+const RENTED_PIPELINE_CONTENT = `Josh Ries published a clean diagnosis on Inman today: [Why lead source dependence is killing real estate businesses](https://www.inman.com/2026/09/29/lead-source-dependence/). One portal, one paid ZIP, one referral feed. It feels like a system until the price moves, the inventory thins, or the platform changes the rules. Then you learn you were renting opportunity instead of owning pipeline.
+
+I agree with the thesis. I want to push it one layer further from the operator seat. Lead-source dependence does not only break when a portal raises rates. It breaks when **answers and local intent move**, and they are already moving.
+
+## Who
+
+This is for agents and team leads who can name their primary lead source in one word, and who quietly worry what happens if that word stops producing.
+
+Not a growth-hack audience. Operators who care about cost per closing, message control, and whether next month's pipeline exists if one vendor disappears.
+
+## What
+
+Ries's three failure modes still hold. You lose control of strategy, profitability, and scale when one company owns the opportunity layer. The fix he names is a **lead generation portfolio**: channels with different jobs (now business, future pipeline, trust, retargeting, database presence).
+
+The durable layer under that portfolio is boring on purpose:
+
+- an **owned site** you control (pages, offers, schema, speed, forms)
+- **structured content** that search engines and answer engines can actually use (local pages, FAQ blocks, entity-clear service and area copy, not blog sludge)
+- a **CRM + nurture path** that keeps the lead after the click, so follow-up is yours
+
+Portals and paid can still sit in the mix if the unit economics work. They just stop being the operating system.
+
+## Where
+
+Dependence shows up in the stack, not the slogan:
+
+- Google Business Profile and local pack presence you can update without a vendor ticket
+- site + local SEO that maps to real markets and inventory conditions (Ries's point: Oregon and New York do not need the same message)
+- AEO / GEO inputs you can inspect (crawlable HTML, clear answers, supported claims, structured data) without pretending anyone can guarantee an AI citation
+- reviews and listing reputation surfaced where buyers already compare (Birdeye is one reviews and listings tool some teams use; the work is still yours to run)
+- CRM stages that separate "now business" from "future pipeline" so every month does not restart at zero
+
+If your "marketing system" is a login to someone else's dashboard, that is access. It is not a system you own.
+
+## When
+
+The pressure increases when buyers ask answer engines and local surfaces first, and when portal economics tighten after you are dependent. Ries already lived the ZIP-availability ceiling: growth limited by what the platform would sell, not by what the team could execute.
+
+You do not wait for a price hike to diversify. You assign roles while the rented channel still pays, so a change is a reweight instead of a crisis.
+
+## Why
+
+Portals optimize for their marketplace. Answer engines optimize for a synthesized reply. Neither is obligated to protect your margin.
+
+Owned site + structured content + CRM is the layer that still compounds when:
+
+- a portal reprices or throttles inventory
+- an AI overview steals the click you used to buy
+- local intent shifts toward GBP, maps, and short answer-shaped pages
+
+Performance-priced pipeline work (pay for outcomes you can measure, not vibes) only works if you can see cost per closing across channels. One rented source gives you an invoice, not a comparison set.
+
+Diversification means knowing which channel buys closings this month, which builds the database, and which earns trust, then instrumenting each one honestly. If a metric is not measured, it is \`null\`. It is not a story.
+
+---
+
+If your top lead source vanished on Friday, which owned asset would still produce a conversation next week (site, GBP, database, or reviews), and what is missing from that list?
+`;
+
 export const staticPosts: StaticPost[] = [
+  {
+    _id: "static:when-ai-answers-move-rented-lead-sources",
+    title: 'When AI answers move, rented lead sources stop being a strategy',
+    slug: "when-ai-answers-move-rented-lead-sources",
+    excerpt:
+      'Josh Ries is right that lead-source dependence kills real estate businesses. The durable fix is an owned site, structured content, and a CRM that still works when AI answers and local intent shift.',
+    content: RENTED_PIPELINE_CONTENT,
+    coverImage: RENTED_PIPELINE_COVER,
+    tags: ['AEO', 'GEO', 'SEO', 'real-estate', 'lead-generation', 'owned-media'],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-09-29T14:00:00Z"),
+    readingTime: 3,
+  },
+
   {
     _id: "static:monarch-mountain-foundations-wordpress-to-next-dns-still-php",
     title: "Monarch Mountain Foundations: I migrated WordPress to Next — DNS still serves PHP",
