@@ -1,0 +1,130 @@
+{
+  "date": "2026-09-28",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 28, 2026 · 5:00 AM EDT → Sep 29, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-09-28T09:00:00Z → 2026-09-29T09:00:00Z",
+    "generatedEt": "Sep 29, 2026 · ~4:57 AM EDT",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 1. yourzaxbys.com PR #26 merged (contract/product-demo copy). Omadesign: opened #169 interaction/motion perf stack (fleet evidence). X: 1 quote-post, 40 impressions. Inbox: Search Console Profile dateModified, LinkedIn Jonus ping, omnux-gpu volunteer, Omadesign new-device sign-in, Berry AI weekly.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "HurleyUS/www.yourzaxbys.com · PR #26 contract/demo copy",
+      "kind": "shipped",
+      "summary": "1 PR merged in window: replaces live “unpaid showcase” framing with neutral contract/product-demo wording (sample data labels kept). Touched home, about, testimonials, and README.",
+      "bullets": [
+        "#26 Replace unpaid-showcase wording with contract/product-demo copy",
+        "Home/about/testimonials: sample-data + under-contract notes",
+        "README: live demo link + same demo disclaimer"
+      ],
+      "when": "Sep 28 · 9:11–9:12 PM EDT",
+      "links": [
+        {
+          "label": "#26",
+          "href": "https://github.com/HurleyUS/www.yourzaxbys.com/pull/26"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omadesign · PR #169 interaction latency",
+      "kind": "shipped",
+      "summary": "Opened #169 (still open) on perf/issue-158-interaction-latency stacked above #168: bounded render/effect/mask reuse, motion playback cuts, font-search focus fix, pixel-selection preserve on new layers, plus three-host fleet evidence (~2.9–3.0× brush UI median).",
+      "bullets": [
+        "#169 Improve playback and canvas performance; fix font search and selection",
+        "Fleet paired evidence vs production baseline on m1pro16 / hpeliteclient / intelpro",
+        "Refs #158; stacked on feat/issue-157-agent-attachments (#168)"
+      ],
+      "when": "Sep 28 · 5:09 PM–12:36 AM EDT",
+      "links": [
+        {
+          "label": "#169",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/169"
+        },
+        {
+          "label": "#158",
+          "href": "https://github.com/michaelmonetized/omadesign/issues/158"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · quote post",
+      "kind": "audience",
+      "summary": "1 quote-post in window (40 impressions, 1 like). No other posts measured.",
+      "when": "Sep 28 · 4:39 PM EDT",
+      "links": [
+        {
+          "label": "post",
+          "href": "https://x.com/MichaelH_rley/status/2104672347382763905"
+        }
+      ]
+    },
+    {
+      "title": "omnux-gpu · hardware volunteer",
+      "kind": "ops",
+      "summary": "garymeyerca offered to help with T8122/M3 MacBook Air (Omarchy/Asahi) evidence on issue #1 (trace capture harness).",
+      "when": "Sep 28 · 10:25 PM EDT",
+      "links": [
+        {
+          "label": "#1",
+          "href": "https://github.com/michaelmonetized/omnux-gpu/issues/1"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Search Console · Profile dateModified",
+      "kind": "action",
+      "summary": "Non-critical Profile page structured data issue on michaelchurley.com: invalid datetime value for dateModified. Fix when convenient.",
+      "when": "Sep 29 · 4:04 AM EDT"
+    },
+    {
+      "title": "LinkedIn · Jonus messaged",
+      "kind": "ops",
+      "summary": "Digest: Jonus Pittman + 3 new messages awaiting response.",
+      "when": "Sep 29 · 12:26 AM EDT"
+    },
+    {
+      "title": "Omadesign · new device sign-in",
+      "kind": "action",
+      "summary": "New device signed in to the Omadesign account (paired with a verification code). Confirm it was you.",
+      "when": "Sep 28 · 1:35 PM EDT"
+    },
+    {
+      "title": "Berry AI · Waynesville drive-thru weekly",
+      "kind": "ops",
+      "summary": "Weekly drive-thru service report for Waynesville 22703 attached — review when useful.",
+      "when": "Sep 28 · 9:10 AM EDT"
+    },
+    {
+      "title": "omnux-gpu · volunteer reply",
+      "kind": "ops",
+      "summary": "Same hardware-volunteer comment as landed card — keep the loop warm if you want Asahi/M3 traces.",
+      "when": "Sep 28 · 10:25 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Omadesign PH relaunch Sep 30",
+      "detail": "Wed Sep 30 12:01 AM PT (3:01 AM ET) still the target; keep launch plan/copy review and QA footage on track — no blitz without Michael’s sign-off."
+    },
+    {
+      "title": "Omadesign #169 + open PR stack",
+      "detail": "#169 interaction/motion perf is open on top of #168; review/merge before launch where it matters, alongside the earlier #142/#146–#147/#159–#168 stack."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified — quick schema fix on michaelchurley.com."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    }
+  ]
+}
