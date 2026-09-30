@@ -1,0 +1,172 @@
+{
+  "date": "2026-09-29",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 29, 2026 \u00b7 5:00 AM EDT \u2192 Sep 30, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-29T09:00:00Z \u2192 2026-09-30T09:00:00Z",
+    "generatedEt": "Sep 30, 2026 \u00b7 ~4:58 AM EDT",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 18. Omadesign: v0.6.1 released + 17 PRs merged (live agents, offline AI, typography/inspector stack, perf, site promo film + Agent harness copy). michaelchurley.com: Inman-reaction blog live. Product Hunt relaunch went live ~3:01 AM ET; X launch post (44 impressions, 2 likes, 3 replies) + 2 launch mentions. Inbox: Stripe AEO ack, Mack\u2019s contacts, Charter unblocked omadesign.app, Hustle Launch daily (2 open).",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign \u00b7 v0.6.1 + 17 merged PRs",
+      "kind": "shipped",
+      "summary": "Stable release 0.6.1 (More control. Less waiting.) plus 17 PRs merged in-window: the open feature/perf stack (#142/#146\u2013#147/#159\u2013#169), release packaging (#170), release verification + site runner policy (#171), homepage 0.6.1 promo film (#172), and a follow-up site commit refreshing Agent harness copy and native demo media.",
+      "bullets": [
+        "Release v0.6.1 \u00b7 offline bg-removal + AI upscale, live agents, fuller typography, faster brush/motion",
+        "Merged #142/#146\u2013#147/#159\u2013#169 (agents, offline AI, Flip/Align/blend/Fit, text/OpenType/path/area, agent attachments, interaction perf)",
+        "#170 Release Omadesign 0.6.1 \u00b7 versioned downloads + notes",
+        "#171 Record 0.6.1 release verification and enforce the site runner policy",
+        "#172 Publish the 0.6.1 homepage promo film \u00b7 55s promo + marquee recordings",
+        "b54f80d Refresh 0.6.1 Agent harness copy and native demo media (drops outdated \u201cno AI chat panel\u201d claim)"
+      ],
+      "when": "Sep 29 \u00b7 6:56 AM\u201310:39 PM EDT",
+      "links": [
+        {
+          "label": "v0.6.1",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.6.1"
+        },
+        {
+          "label": "#170",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/170"
+        },
+        {
+          "label": "#172",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/172"
+        },
+        {
+          "label": "site",
+          "href": "https://omadesign.app/"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com \u00b7 Inman-reaction blog",
+      "kind": "shipped",
+      "summary": "Published \u201cwhen AI answers move, rented lead sources stop being a strategy\u201d \u2014 owned site + structured content + CRM as the durable layer when answers and local intent shift. YT-style cover included.",
+      "bullets": [
+        "e8338d2 Publish: when AI answers move, rented lead sources stop being a strategy",
+        "Cover at /blog/when-ai-answers-move-rented-lead-sources/cover.png"
+      ],
+      "when": "Sep 29 \u00b7 10:04 AM EDT",
+      "links": [
+        {
+          "label": "post",
+          "href": "https://www.michaelchurley.com/blog/when-ai-answers-move-rented-lead-sources"
+        },
+        {
+          "label": "commit",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/commit/e8338d2"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "Product Hunt \u00b7 Omadesign relaunch live",
+      "kind": "audience",
+      "summary": "Hypership-slotted relaunch hit Wed Sep 30 12:01 AM PT (3:01 AM ET). PH post redirects to the live Omadesign product launch page; X launch post + early maker replies landed in-window.",
+      "when": "Sep 30 \u00b7 ~3:01 AM EDT",
+      "links": [
+        {
+          "label": "PH",
+          "href": "https://www.producthunt.com/posts/omadesign-native-linux-creative-suite-2"
+        },
+        {
+          "label": "X launch",
+          "href": "https://x.com/MichaelH_rley/status/2105200291142578361"
+        }
+      ]
+    },
+    {
+      "title": "X \u00b7 PH launch post + mentions",
+      "kind": "audience",
+      "summary": "1 original post in window (44 impressions, 2 likes, 3 replies) announcing Omadesign live on Product Hunt. 2 mentions: PH upvote well-wish + Vibepodium maker offer to list Omadesign free.",
+      "when": "Sep 30 \u00b7 3:37\u20134:52 AM EDT",
+      "links": [
+        {
+          "label": "post",
+          "href": "https://x.com/MichaelH_rley/status/2105200291142578361"
+        },
+        {
+          "label": "upvote mention",
+          "href": "https://x.com/i/status/2105207406146011433"
+        },
+        {
+          "label": "Vibepodium mention",
+          "href": "https://x.com/i/status/2105219256325714244"
+        }
+      ]
+    },
+    {
+      "title": "Charter \u00b7 omadesign.app unblocked",
+      "kind": "ops",
+      "summary": "Spectrum/Charter confirmed https://omadesign.app/ was incorrectly blocked and is now unblocked (plus a parallel unblock for jenningscustomhomes.com).",
+      "when": "Sep 29 \u00b7 11:31 AM EDT"
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Stripe \u00b7 AEO/GEO application received",
+      "kind": "ops",
+      "summary": "Thanks-for-applying ack for the AEO and GEO Marketing Manager role \u2014 recruiting will review.",
+      "when": "Sep 29 \u00b7 7:44 AM EDT"
+    },
+    {
+      "title": "Mack\u2019s Shack \u00b7 birthday party inquiry",
+      "kind": "action",
+      "summary": "Petter Baldridge asked whether Mack\u2019s can host a surprise birthday party (CC\u2019d on lead alias).",
+      "when": "Sep 29 \u00b7 3:22 PM EDT"
+    },
+    {
+      "title": "Mack\u2019s Shack \u00b7 gift certificates",
+      "kind": "action",
+      "summary": "Christine Ayoung asked if gift certificates are available \u2014 reply when ready.",
+      "when": "Sep 29 \u00b7 8:45 PM EDT"
+    },
+    {
+      "title": "Hustle Launch \u00b7 daily message report",
+      "kind": "ops",
+      "summary": "Daily message report for Sep 29: 2 open messages in the dash.",
+      "when": "Sep 30 \u00b7 12:15 AM EDT"
+    },
+    {
+      "title": "OpenAI \u00b7 Pro plan notice",
+      "kind": "ops",
+      "summary": "Starred Pro-plan updates email (plus overnight credits-available notice). Review when useful; no public money framing.",
+      "when": "Sep 29 \u00b7 4:44 PM\u2013Sep 30 \u00b7 2:21 AM EDT"
+    },
+    {
+      "title": "Cloudflare \u00b7 reaferral.com SSL nag",
+      "kind": "ops",
+      "summary": "Validate-domain nag for reaferral.com SSL renewal \u2014 known intentional ignore.",
+      "when": "Sep 29 \u00b7 6:27 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Omadesign PH launch day",
+      "detail": "Relaunch is live (Hypership slot). Keep maker engagement warm on PH/X; reply to Vibepodium listing offer if wanted; watch upvote spam/outreach noise."
+    },
+    {
+      "title": "Stripe AEO/GEO application",
+      "detail": "Submitted; waiting on Stripe recruiting review \u2014 no chase unless Michael asks."
+    },
+    {
+      "title": "Mack\u2019s contact replies",
+      "detail": "Birthday-party host ask (Petter) + gift-certificates ask (Christine) still need responses."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified \u2014 still open from prior window."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    }
+  ]
+}
