@@ -1,0 +1,195 @@
+{
+  "date": "2026-09-30",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Sep 30, 2026 \u00b7 5:00 AM EDT \u2192 Oct 1, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-09-30T09:00:00Z \u2192 2026-10-01T09:00:00Z",
+    "generatedEt": "Oct 1, 2026 \u00b7 ~4:58 AM EDT",
+    "xPostsMeasured": 20,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 16. Omadesign: v0.6.2 + v0.6.3 released and 14 PRs merged (cloud review stamps, Wayland CJK/IME, export/artboard/motion/agent stack, Welcome workspace browsing). Closed #62/#67/#83/#144/#158/#73/#178. omatainer published public MIT. Audience: PH launch-day X saturation (20 posts, 1,143 impressions) + 3 mentions; AlternativeTo live; The Runway listing. Inbox: Hustle Launch daily (2 open), GSC hurleyus.com impressions started, Upvote/Jennings noise.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign \u00b7 v0.6.2 + v0.6.3 + 14 merged PRs",
+      "kind": "shipped",
+      "summary": "Two stable releases in-window after Hypership launch day: 0.6.2 (cloud review + Wayland IME + compose/export stack) and 0.6.3 (Welcome as a movable workspace). Fourteen PRs merged (#179\u2013#187, #189\u2013#193), closing the cloud/Wayland blockers and shipping site/delivery verification for 0.6.3.",
+      "bullets": [
+        "Release v0.6.2 \u00b7 Review, compose, and keep moving \u2014 cloud review stamps/highlighter/brush, Wayland CJK/IME, raster motion keys, agent resume, clipboard canvases, export/artboard controls",
+        "Release v0.6.3 \u00b7 A workspace that moves with you \u2014 Welcome document browser (scrub/select/open/templates), typography sidebar tab, rainbow mode controls",
+        "Merged #179\u2013#186 feature/fix stack (raster motion keys, agent all-modes, agent resume #178, clipboard canvas, document previews, motion playback, artboard options, export options)",
+        "#187 Prepare integrated 0.6.2 local QA candidate",
+        "#189 Finish cloud review and Wayland IME release blockers (closes #62/#67/#83)",
+        "#190\u2013#193 Release 0.6.3 + site Product Hunt embed/updates index + public delivery + final site verification",
+        "Issues closed in-window: #144 (bg removal), #158 (fleet baseline), #73 (AUR not planned), #178 (agent resume \u2014 filed and fixed same day)"
+      ],
+      "when": "Sep 30 \u00b7 4:09 PM\u2013Oct 1 \u00b7 1:09 AM EDT",
+      "links": [
+        {
+          "label": "v0.6.2",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.6.2"
+        },
+        {
+          "label": "v0.6.3",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.6.3"
+        },
+        {
+          "label": "#189",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/189"
+        },
+        {
+          "label": "#190",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/190"
+        },
+        {
+          "label": "site",
+          "href": "https://omadesign.app/"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omatainer \u00b7 public MIT launch",
+      "kind": "shipped",
+      "summary": "Published omatainer as a public MIT FOSS repo \u2014 Omarchy-native DAW + live DJ surface. Initial commit landed in-window; a large open PR stack followed overnight (not yet merged).",
+      "bullets": [
+        "cae546c Initial public release of omatainer",
+        "Repo public at github.com/michaelmonetized/omatainer (MIT)"
+      ],
+      "when": "Sep 30 \u00b7 3:26 PM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omatainer"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X \u00b7 PH launch-day + 0.6.2 Hypership posts",
+      "kind": "audience",
+      "summary": "20 posts measured in-window (1,143 organic impressions): Product Hunt upvote saturation, maker thread replies, omarchy/design-suite quotes, and three 0.6.2 ship posts overnight. 3 mentions (PH congrats/upvote + native-Linux praise).",
+      "when": "Sep 30 \u00b7 7:03 AM\u2013Oct 1 \u00b7 12:44 AM EDT",
+      "links": [
+        {
+          "label": "0.6.2 ship",
+          "href": "https://x.com/MichaelH_rley/status/2105488926010200100"
+        },
+        {
+          "label": "PH upvote (350 imp)",
+          "href": "https://x.com/MichaelH_rley/status/2105443743033676238"
+        },
+        {
+          "label": "PH AMA",
+          "href": "https://x.com/MichaelH_rley/status/2105340900385636796"
+        },
+        {
+          "label": "mention",
+          "href": "https://x.com/i/status/2105242915765420425"
+        }
+      ]
+    },
+    {
+      "title": "AlternativeTo \u00b7 Omadesign listing live",
+      "kind": "audience",
+      "summary": "Listing submitted during launch saturation was approved \u2014 Omadesign is live on AlternativeTo.",
+      "when": "Oct 1 \u00b7 4:45 AM EDT",
+      "links": [
+        {
+          "label": "AlternativeTo",
+          "href": "https://alternativeto.net/software/omadesign/"
+        }
+      ]
+    },
+    {
+      "title": "The Runway \u00b7 Omadesign listing live",
+      "kind": "audience",
+      "summary": "Launchfree confirmed Omadesign passed review and is live on The Runway directory.",
+      "when": "Sep 30 \u00b7 8:26 PM EDT",
+      "links": [
+        {
+          "label": "Launchfree",
+          "href": "https://launchfree.io/"
+        }
+      ]
+    },
+    {
+      "title": "Product Hunt \u00b7 launch-day follow-through",
+      "kind": "audience",
+      "summary": "Day-of Hypership relaunch continued past the prior window\u2019s 3:01 AM ET go-live: maker/X saturation, Upvote Network badge-lock ping, and site PH embed restored with the 0.6.3 updates index.",
+      "when": "Sep 30 \u00b7 all day",
+      "links": [
+        {
+          "label": "PH",
+          "href": "https://www.producthunt.com/posts/omadesign-native-linux-creative-suite-2"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Hustle Launch \u00b7 daily message report",
+      "kind": "ops",
+      "summary": "Daily message report for Sep 30: 2 open messages in the dash (Mack\u2019s contacts still outstanding from prior window).",
+      "when": "Oct 1 \u00b7 1:48 AM EDT"
+    },
+    {
+      "title": "Google Search Console \u00b7 hurleyus.com impressions",
+      "kind": "ops",
+      "summary": "GSC confirmed it started collecting Google Search impressions for hurleyus.com as of Sep 28.",
+      "when": "Sep 30 \u00b7 10:16 AM EDT"
+    },
+    {
+      "title": "AlternativeTo \u00b7 listing approved",
+      "kind": "ops",
+      "summary": "Approval email for the Omadesign AlternativeTo listing.",
+      "when": "Oct 1 \u00b7 4:45 AM EDT"
+    },
+    {
+      "title": "Launchfree \u00b7 The Runway live",
+      "kind": "ops",
+      "summary": "Julie James confirmed Omadesign is live on The Runway after review.",
+      "when": "Sep 30 \u00b7 8:26 PM EDT"
+    },
+    {
+      "title": "Upvote Network \u00b7 PH badge lock",
+      "kind": "ops",
+      "summary": "Leaderboard-locked / badges-tonight ping for omadesign on Product Hunt \u2014 treat as launch noise unless Michael asks to engage.",
+      "when": "Oct 1 \u00b7 12:08 AM EDT"
+    },
+    {
+      "title": "Jennings \u00b7 spam lead (Gary Miller)",
+      "kind": "ops",
+      "summary": "Hustle Launch form spam pitching keyword/SEO alternatives to Jennings Custom Homes \u2014 ignore.",
+      "when": "Sep 30 \u00b7 9:17 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Omadesign PH launch follow-through",
+      "detail": "Hypership day wrapped with 0.6.2/0.6.3 ships + directory listings. Watch PH badges/staff highlights; keep maker replies warm if traffic continues."
+    },
+    {
+      "title": "Mack\u2019s contact replies",
+      "detail": "Birthday-party host ask (Petter) + gift-certificates ask (Christine) still show in the 2 open Hustle Launch messages."
+    },
+    {
+      "title": "Stripe AEO/GEO application",
+      "detail": "Submitted earlier; waiting on Stripe recruiting review \u2014 no chase unless Michael asks."
+    },
+    {
+      "title": "omatainer open PR stack",
+      "detail": "Public MIT repo is live; many feature PRs opened overnight (#437+) remain unmerged \u2014 merge/review when ready."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified \u2014 still open from prior windows."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    }
+  ]
+}
