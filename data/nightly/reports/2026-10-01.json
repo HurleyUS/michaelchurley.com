@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-01",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 1, 2026 · 5:00 AM EDT → Oct 2, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-01T09:00:00Z → 2026-10-02T09:00:00Z",
+    "generatedEt": "Oct 2, 2026 · ~4:55 AM EDT",
+    "xPostsMeasured": 2,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 0. No merges/releases in-window (0.6.2/0.6.3 counted last night). omatainer: 12 feature PRs opened (#456–#467) still unmerged. Audience: 2 Omadesign Live X posts (224 impressions) + DEV Writing Debut badge. Inbox: Product Hunt denied the Omadesign relaunch (six-month rule; earliest plain re-post Mar 18 2027); Spectrum unblocked clerk.omadesign.app; GSC started impressions for s12.in; Softaculous backup fail on salespromis.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omatainer · 12-PR feature stack opened",
+      "kind": "shipped",
+      "summary": "No merges or releases landed on main in-window. Parallel agents opened twelve feature PRs (#456–#467) covering key lock, sampler banks, support/recovery, offline QA, track analysis, nested crates, DJ session history, folder import, missing-media search, audio metadata, piano roll, and SMF import/export — all still open.",
+      "bullets": [
+        "#456 Qualify bounded stereo key lock and disclose musical limits",
+        "#457 Load user samples into persistent DJ sampler banks (#101)",
+        "#458 Export private support reports + recovery-safe startup (#102)",
+        "#459 Qualify offline workflows and network-denied performance (#103)",
+        "#460 Persistent background track analysis (#104)",
+        "#461 Persistent nested crates with manual track ordering (#105)",
+        "#462 Record durable DJ performance sessions / deck history",
+        "#463 Import/watch music folders with removable-volume identity",
+        "#464 Search and review missing-media replacements (#108)",
+        "#465 Read/edit real audio metadata (#109)",
+        "#466 Accessible piano-roll editing (#110)",
+        "#467 Import/export exact Standard MIDI Files (#111)"
+      ],
+      "when": "Oct 1 · 5:15 AM–Oct 2 · 2:52 AM EDT",
+      "links": [
+        {
+          "label": "#456",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/456"
+        },
+        {
+          "label": "#462",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/462"
+        },
+        {
+          "label": "#467",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/467"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omatainer"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com · nightly 2026-09-30",
+      "kind": "shipped",
+      "summary": "Published prior stand-up (metrics + report) at window open — not counted in productivity index (direct push, not a merged PR/release).",
+      "bullets": [
+        "aa3a09e nightly: 2026-09-30"
+      ],
+      "when": "Oct 1 · 5:00 AM EDT",
+      "links": [
+        {
+          "label": "report",
+          "href": "https://www.michaelchurley.com/nightly/report/2026-09-30"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · @michaelh_rley · Omadesign Live motion posts",
+      "kind": "audience",
+      "summary": "2 posts measured in-window (224 organic impressions): pair of Omadesign Live clips demonstrating motion graphics. 0 mentions.",
+      "when": "Oct 1 · 12:26–12:31 PM EDT",
+      "links": [
+        {
+          "label": "motion (199 imp)",
+          "href": "https://x.com/michaelh_rley/status/2105697073391599952"
+        },
+        {
+          "label": "motion (25 imp)",
+          "href": "https://x.com/michaelh_rley/status/2105695760633459185"
+        }
+      ]
+    },
+    {
+      "title": "DEV Community · Writing Debut badge",
+      "kind": "audience",
+      "summary": "DEV awarded the Writing Debut badge for publishing a first post.",
+      "when": "Oct 1 · 10:03 PM EDT",
+      "links": [
+        {
+          "label": "DEV",
+          "href": "https://dev.to/"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Product Hunt · Omadesign relaunch not approved",
+      "kind": "ops",
+      "summary": "PH rejected the request to post omadesign again less than six months after the prior launch. Without significant changes, next allowed date is Mar 18, 2027. Staged Hypership / Oct 2 12:01 AM PT slot did not go live.",
+      "when": "Oct 1 · 12:02 PM EDT"
+    },
+    {
+      "title": "Spectrum · clerk.omadesign.app unblocked",
+      "kind": "ops",
+      "summary": "Charter/Spectrum approved the unblock request for clerk.omadesign.app (incorrectly blocked; marked safe).",
+      "when": "Oct 1 · 11:43 AM EDT"
+    },
+    {
+      "title": "Google Search Console · s12.in impressions",
+      "kind": "ops",
+      "summary": "GSC confirmed it started collecting Google Search impressions for s12.in as of Sep 29.",
+      "when": "Oct 1 · 11:49 AM EDT"
+    },
+    {
+      "title": "Softaculous · salespromis.hustlelaunch.com backup fail",
+      "kind": "ops",
+      "summary": "WP plugin/theme auto-upgrade skipped because the Dropbox backup for salespromis.hustlelaunch.com failed (Dropbox account full).",
+      "when": "Oct 1 · 12:54 PM EDT"
+    },
+    {
+      "title": "Warmerly · hustlelaunch.com email auth pitch",
+      "kind": "ops",
+      "summary": "Cold note claiming Google Workspace DMARC is watch-only for hustlelaunch.com. Treat as vendor outreach — verify DNS yourself before engaging.",
+      "when": "Oct 1 · 12:17 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Omadesign Product Hunt path",
+      "detail": "Relaunch request denied under the six-month rule. Options: ship a significant-update case to PH, wait until Mar 18 2027, or focus energy on AlternativeTo/The Runway/X/DEV instead."
+    },
+    {
+      "title": "omatainer open PR stack",
+      "detail": "Twelve new PRs (#456–#467) plus earlier overnight stack remain unmerged — merge/review when ready."
+    },
+    {
+      "title": "Mack’s contact replies",
+      "detail": "No new Hustle Launch daily for Oct 1 in-window yet; Petter + Christine asks from prior windows likely still open."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Free Dropbox space (or retarget backup) so Softaculous can resume plugin/theme auto-upgrades for salespromis.hustlelaunch.com."
+    },
+    {
+      "title": "Stripe AEO/GEO application",
+      "detail": "Submitted earlier; waiting on Stripe recruiting review — no chase unless Michael asks."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified — still open from prior windows."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    }
+  ]
+}
