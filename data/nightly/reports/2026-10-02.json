@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-02",
+  "label": "5am\u20135am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 2, 2026 \u00b7 5:00 AM EDT \u2192 Oct 3, 2026 \u00b7 5:00 AM EDT",
+    "windowUtc": "2026-10-02T09:00:00Z \u2192 2026-10-03T09:00:00Z",
+    "generatedEt": "Oct 3, 2026 \u00b7 ~4:55 AM EDT",
+    "xPostsMeasured": 1,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 1 (omacut v0.4.1-preview.1). No merges. omatainer: 17 more feature PRs opened (#468\u2013#484) still unmerged. Audience: 1 X post on omadesign 0.6.3 features (393 impressions). Inbox: Mack\u2019s 5\u2605 review + 2 open HL messages; getat.me Sentry GETATME-9; Vercel free Deployment Storage at 75%; Crowdo PH-congrats outreach (replied); CodeRabbit OSS review limit hit.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omacut \u00b7 v0.4.1-preview.1",
+      "kind": "shipped",
+      "summary": "Published preview release: open local paths/file URIs with visible errors, accept dropped videos, keep editing while exports run in a cancellable queue, leave video MIME defaults to the configured player, plus proposed ARM64 PKGBUILD / release-build workflow. Counts as the window\u2019s one release in the productivity index.",
+      "bullets": [
+        "Open local paths and file URIs with visible errors",
+        "Accept dropped videos; export queue with cancellation",
+        "Desktop entry leaves video defaults to the configured player",
+        "ARM64 PKGBUILD support + release-build workflow (CI emails showed Linux release-build failures during the cut)"
+      ],
+      "when": "Oct 2 \u00b7 1:23 PM EDT",
+      "links": [
+        {
+          "label": "v0.4.1-preview.1",
+          "href": "https://github.com/michaelmonetized/omacut/releases/tag/v0.4.1-preview.1"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omacut"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omatainer \u00b7 17-PR feature stack opened",
+      "kind": "shipped",
+      "summary": "No merges on main in-window. Parallel agents opened seventeen more feature PRs (#468\u2013#484) on top of the prior overnight stack \u2014 MIDI routing, large sessions, Docker media mounts, tempo/meter edits, source recovery, portable projects, templates, accessibility/contrast, OSC automation, licensed providers, ratings/annotations \u2014 all still open.",
+      "bullets": [
+        "#468 Route MIDI by fixed track, port, channel and type (#112)",
+        "#469 Manage stable 128-track and 512-scene sessions (#113)",
+        "#470 Keep media discovery working with Docker namespace mounts",
+        "#471 Edit tempo ramps, changing meters and count-in (#114)",
+        "#472\u2013#473 Recover / protect project sources and drafts (#114/#115)",
+        "#474 Collect and import portable native projects (#116)",
+        "#475 Review both project drafts only for active preparations",
+        "#476\u2013#477 Save reusable project/track templates (#117)",
+        "#478\u2013#479 Scale layouts, contrast, reduced-motion; light-contrast cursor",
+        "#480 Versioned automation + authenticated loopback OSC",
+        "#481\u2013#482 Licensed provider contracts / Free To Use previews + offline guards",
+        "#483\u2013#484 Durable track ratings/colors/annotations + search predicates"
+      ],
+      "when": "Oct 2 \u00b7 7:22 AM\u2013Oct 3 \u00b7 2:14 AM EDT",
+      "links": [
+        {
+          "label": "#468",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/468"
+        },
+        {
+          "label": "#476",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/476"
+        },
+        {
+          "label": "#484",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/484"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omatainer"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com \u00b7 Node 24 engines bump",
+      "kind": "shipped",
+      "summary": "Direct push requiring Node 24.x so Vercel production deploys of Nightly keep working after Node 20 discontinuation \u2014 not counted in the productivity index (not a merged PR/release).",
+      "bullets": [
+        "34d32c1 chore: require Node 24.x for Vercel builds"
+      ],
+      "when": "Oct 2 \u00b7 5:25 AM EDT",
+      "links": [
+        {
+          "label": "commit",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/commit/34d32c1"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X \u00b7 @michaelh_rley \u00b7 omadesign 0.6.3 feature list",
+      "kind": "audience",
+      "summary": "1 post measured in-window (393 organic impressions, 2 likes): bullet list of what\u2019s new in omadesign 0.6.3 (work browser, templates, agent harness, Lua plugins, Boolean contours, guides). 0 mentions measured.",
+      "when": "Oct 2 \u00b7 7:18 PM EDT",
+      "links": [
+        {
+          "label": "0.6.3 features (393 imp)",
+          "href": "https://x.com/michaelh_rley/status/2106161846365327650"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Hustle Launch \u00b7 Mack\u2019s Shack BBQ 5\u2605 review",
+      "kind": "ops",
+      "summary": "Artem Bilous left a new 5-star Google review for Mack\u2019s Shack BBQ (Canton, NC). Dash + Google Business Profile both notified \u2014 worth a reply from Mack\u2019s side.",
+      "when": "Oct 2 \u00b7 6:45 PM EDT"
+    },
+    {
+      "title": "Hustle Launch \u00b7 daily message report (Oct 2)",
+      "kind": "ops",
+      "summary": "Dash daily summary: 2 open messages still waiting.",
+      "when": "Oct 2 \u00b7 8:36 PM EDT"
+    },
+    {
+      "title": "Sentry \u00b7 getat.me GETATME-9",
+      "kind": "ops",
+      "summary": "New issue: Convex query posts:getAllPosts server error (Request ID 8eac23d55e464795).",
+      "when": "Oct 2 \u00b7 6:28 AM EDT"
+    },
+    {
+      "title": "Vercel \u00b7 hustle-launch free Deployment Storage 75%",
+      "kind": "ops",
+      "summary": "Free team hustle-launch hit 75% of included free-tier Deployment Storage (10 GB). Ops watch \u2014 upgrade/cleanup before disruption.",
+      "when": "Oct 2 \u00b7 7:56 PM EDT"
+    },
+    {
+      "title": "Crowdo \u00b7 PH-congrats outreach (Anni)",
+      "kind": "ops",
+      "summary": "Cold note congratulating a Product Hunt launch for Omadesign; Michael replied asking for their setup page. Prior window: PH denied the relaunch under the six-month rule \u2014 treat as vendor outreach, not a live PH listing.",
+      "when": "Oct 2 \u00b7 10:36 PM EDT"
+    },
+    {
+      "title": "CodeRabbit \u00b7 free OSS review limit",
+      "kind": "ops",
+      "summary": "CodeRabbit hit the free OSS review limit across several omatainer PRs in-window \u2014 bot reviews paused until the free quota resets.",
+      "when": "Oct 2\u20133 overnight"
+    }
+  ],
+  "loops": [
+    {
+      "title": "omatainer open PR stack",
+      "detail": "Seventeen new PRs (#468\u2013#484) plus earlier overnight stack (#456+) remain unmerged \u2014 merge/review when ready."
+    },
+    {
+      "title": "Omadesign Product Hunt path",
+      "detail": "Relaunch still blocked under the six-month rule (earliest plain re-post Mar 18 2027 unless a significant-update case lands). Crowdo outreach does not change that."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error \u2014 triage when free."
+    },
+    {
+      "title": "Vercel hustle-launch Deployment Storage",
+      "detail": "Free tier at 75% of 10 GB \u2014 clean old deployments or plan Pro before hard limit."
+    },
+    {
+      "title": "Mack\u2019s reviews + open messages",
+      "detail": "New 5\u2605 from Artem Bilous needs a reply; Dash still shows 2 open messages."
+    },
+    {
+      "title": "omacut preview CI",
+      "detail": "v0.4.1-preview.1 published; Linux release-build workflow emails showed failures during the cut \u2014 confirm ARM64 artifacts are what you want before calling it done."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    },
+    {
+      "title": "Stripe AEO/GEO application",
+      "detail": "Submitted earlier; waiting on Stripe recruiting review \u2014 no chase unless Michael asks."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Still needs free Dropbox space (or retarget) so Softaculous can resume plugin/theme auto-upgrades."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified \u2014 still open from prior windows."
+    }
+  ]
+}
