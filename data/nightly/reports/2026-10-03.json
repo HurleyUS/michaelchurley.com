@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-03",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 3, 2026 · 5:00 AM EDT → Oct 4, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-03T09:00:00Z → 2026-10-04T09:00:00Z",
+    "generatedEt": "Oct 4, 2026 · ~4:55 AM EDT",
+    "xPostsMeasured": 0,
+    "inboxSignalItems": 5,
+    "tldr": "Ships/index 0 (no merges/releases). Parallel agents opened 22 omatainer feature PRs (#485–#506), spun up michaelmonetized/editbay with 6 open R0–R2 PRs (#1–#6), and opened omadesign #194 (OmaStore listing). Waynesville portal: 4 main pushes; Ship CI failed 4×. Audience: no X posts in-window. Inbox: HL Dash still 2 open messages; Sentry weekly for Hustle Launch; Crowdo account welcome; Clerk new-device alert.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omatainer · 22-PR feature stack opened",
+      "kind": "shipped",
+      "summary": "No merges on main in-window. Parallel agents opened twenty-two more feature PRs (#485–#506) on top of the prior overnight stack — native video scoring, import/versioning, localization, touch/performance gestures, workspaces, audio graph routing, JACK/PipeWire, tempo mapping — all still open.",
+      "bullets": [
+        "#485–#486 Native video scoring + final status after cancel (#video)",
+        "#487–#491 Import/versioning: undo import, metadata limits, named versions, worker settle",
+        "#492–#495 Localization + portable shortcut bindings + bindings-only import validation",
+        "#496–#498 Touch: pad pressure, independent gestures, native mouse release coords",
+        "#499–#501 Named workspaces/panels; consolidate backlog; retain projects / recover audio",
+        "#502–#506 Audio graph taps, live-deck guards, background media queue, JACK/PipeWire, in-track tempo"
+      ],
+      "when": "Oct 3 · 7:38 AM–Oct 4 · 4:21 AM EDT",
+      "links": [
+        {
+          "label": "#485",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/485"
+        },
+        {
+          "label": "#500",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/500"
+        },
+        {
+          "label": "#506",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/506"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omatainer"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/editbay · new repo · 6 open R0–R2 PRs",
+      "kind": "shipped",
+      "summary": "New native video/edit workspace repo appeared in-window. Six open PRs (#1–#6) cover R0 recovery/release gates, GPU audio/export feasibility, video segmentation/matting, scoped document automation, R1 Omarchy workspace delivery, and R2 typed media/composition docs — none merged yet.",
+      "bullets": [
+        "#1 R0: preserve Rust project recovery and define release gates",
+        "#2 R0: prove native media GPU audio and export feasibility",
+        "#3 R0: add verified native video segmentation and matting",
+        "#4 R0: complete references and scoped native document automation",
+        "#5 R1: Deliver and qualify the native Omarchy workspace",
+        "#6 R2: typed media and composition documents with safe migration"
+      ],
+      "when": "Oct 3 · 4:09 PM–11:17 PM EDT",
+      "links": [
+        {
+          "label": "#1",
+          "href": "https://github.com/michaelmonetized/editbay/pull/1"
+        },
+        {
+          "label": "#6",
+          "href": "https://github.com/michaelmonetized/editbay/pull/6"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/editbay"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omadesign · #194 OmaStore listing",
+      "kind": "shipped",
+      "summary": "Open PR adds omastore.toml so omadesign can appear in OmaStore (Omarchy app store). Not merged — not counted in the productivity index.",
+      "bullets": [
+        "Root omastore.toml opt-in for KitsuneForgering/OmaStore",
+        "Repo already has the omarchy topic for discovery"
+      ],
+      "when": "Oct 3 · 8:28 AM EDT",
+      "links": [
+        {
+          "label": "#194",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/194"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omadesign"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/waynesville.yourzaxbys.com · portal pushes + Ship CI red",
+      "kind": "shipped",
+      "summary": "Four direct main commits restored portal links/sign-in, held automatic production promotion, made Sentry token config explicit, and documented portal exports/tests. Ship workflow failed on all four runs in-window — not counted in productivity index (not a merged PR/release).",
+      "bullets": [
+        "1956f6e Restore Waynesville portal links and sign-in on permanent domain",
+        "43cec26 Fix Ship formatting and hold automatic production promotion",
+        "c9f1abd Make Sentry token configuration explicit and document login route",
+        "ef4d0e2 Document portal exports and verify executed tests without relaxing review",
+        "Ship CI: 4 consecutive failures on main"
+      ],
+      "when": "Oct 3 · 5:30 PM–9:00 PM EDT",
+      "links": [
+        {
+          "label": "repo",
+          "href": "https://github.com/HurleyUS/waynesville.yourzaxbys.com"
+        },
+        {
+          "label": "Ship run",
+          "href": "https://github.com/HurleyUS/waynesville.yourzaxbys.com/actions/runs/37166716032"
+        }
+      ]
+    }
+  ],
+  "landed": [],
+  "inbox": [
+    {
+      "title": "Hustle Launch · daily message report (Oct 3)",
+      "kind": "ops",
+      "summary": "Dash daily summary: 2 open messages still waiting.",
+      "when": "Oct 3 · 8:37 PM EDT"
+    },
+    {
+      "title": "Sentry · Hustle Launch weekly report",
+      "kind": "ops",
+      "summary": "Weekly digest for Hustle Launch (Sep 25–Oct 2) landed — skim for regressions when free; no new single-issue alert called out beyond the digest.",
+      "when": "Oct 3 · 2:50 PM EDT"
+    },
+    {
+      "title": "Crowdo · account welcome",
+      "kind": "ops",
+      "summary": "Crowdo.net welcome/login mail after signup (PH-adjacent tooling). Treat as vendor account setup, not a live Product Hunt listing change.",
+      "when": "Oct 3 · 1:53 PM EDT"
+    },
+    {
+      "title": "Clerk · new device signed in",
+      "kind": "ops",
+      "summary": "Clerk alert: a new device signed into the account. Confirm it was you; otherwise rotate sessions.",
+      "when": "Oct 3 · 5:21 PM EDT"
+    },
+    {
+      "title": "Waynesville · Ship CI failing on main",
+      "kind": "ops",
+      "summary": "Four Ship workflow failures on HurleyUS/waynesville.yourzaxbys.com main after portal/Sentry/docs pushes — production promotion still held; unblock when ready.",
+      "when": "Oct 3 · 5:30 PM–9:00 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "omatainer open PR stack",
+      "detail": "Twenty-two new PRs (#485–#506) plus earlier overnight stack (#456+) remain unmerged — merge/review when ready."
+    },
+    {
+      "title": "editbay R0–R2 PR stack",
+      "detail": "New repo with six open PRs (#1–#6). Review/merge gates before calling a first release."
+    },
+    {
+      "title": "omadesign #194 OmaStore",
+      "detail": "omaStore.toml listing PR open — merge when you want omadesign discoverable in OmaStore."
+    },
+    {
+      "title": "Waynesville Ship CI",
+      "detail": "Ship workflow red on main (4 fails) after portal restore + Sentry token docs — fix before relying on auto-promote."
+    },
+    {
+      "title": "Omadesign Product Hunt path",
+      "detail": "Relaunch still blocked under the six-month rule (earliest plain re-post Mar 18 2027 unless a significant-update case lands). Crowdo account does not change that."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error — triage when free."
+    },
+    {
+      "title": "Vercel hustle-launch Deployment Storage",
+      "detail": "Free tier previously at 75% of 10 GB — clean old deployments or plan Pro before hard limit."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "Dash still shows 2 open messages; prior 5★ from Artem Bilous may still need a reply from Mack’s side."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
+    },
+    {
+      "title": "Stripe AEO/GEO application",
+      "detail": "Submitted earlier; waiting on Stripe recruiting review — no chase unless Michael asks."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Still needs free Dropbox space (or retarget) so Softaculous can resume plugin/theme auto-upgrades."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified — still open from prior windows."
+    }
+  ]
+}
