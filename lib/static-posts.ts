@@ -1,4 +1,5 @@
 import { getOmaFeaturePosts } from "./oma-feature-posts";
+import { codexBudgetPost } from "./codex-budget-post";
 
 export type StaticPost = {
   _id: string;
@@ -6663,6 +6664,7 @@ If your top lead source vanished on Friday, which owned asset would still produc
 `;
 
 export const staticPosts: StaticPost[] = [
+  codexBudgetPost,
   {
     _id: "static:when-ai-answers-move-rented-lead-sources",
     title: 'When AI answers move, rented lead sources stop being a strategy',
