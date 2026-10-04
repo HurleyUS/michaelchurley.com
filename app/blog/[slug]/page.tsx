@@ -2,6 +2,7 @@ import { fetchQuery } from "convex/nextjs";
 import { api } from "@/convex/_generated/api";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 import CommentSection from "@/components/comments/comment-section";
 import { getStaticPostBySlug } from "@/lib/static-posts";
@@ -124,8 +125,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         {/* Content */}
-        <article className="prose dark:prose-invert max-w-none">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+        <article className="prose dark:prose-invert min-w-0 max-w-none [overflow-wrap:anywhere]">
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              table: ({ node: _node, ...props }) => (
+                <div className="my-6 max-w-full overflow-x-auto">
+                  <table {...props} className="my-0 min-w-lg" />
+                </div>
+              ),
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </article>
 
         {!String(post._id).startsWith("static:") && (

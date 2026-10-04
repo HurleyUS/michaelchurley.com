@@ -1,0 +1,72 @@
+# Where the 29k-token statement came from
+
+Checked October 4, 2026, against live GitHub main branches, local configuration, saved Codex sessions, and T3's saved timeline.
+
+The evidence places the 29k statement in model-generated reasoning summaries. No corresponding 29k instruction or task limit was found in the public Codex instructions, T3's Codex prompt assembly, or the recorded local instructions. It was not the remaining weekly allowance or remaining context window.
+
+The most plausible explanation is the model referring to a per-generation reasoning/output allocation. This is an inference, not a confirmed 29,000-token backend setting. The client source and saved sessions do not expose the server's complete prompt or inference configuration; they cannot distinguish a real server-side allocation from the model's own mistaken estimate.
+
+A recent [public Codex issue](https://github.com/openai/codex/issues/49735) reports similar generated budget estimates and premature stopping with the same model label. This is a user observation and proposed investigation, not confirmation of the backend cause.
+
+## Sources and versions
+
+| Source | Version inspected | Finding |
+| --- | --- | --- |
+| OpenAI Codex upstream | [c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73](https://github.com/openai/codex/commit/c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73), October 4, 16:57 UTC | Latest main at the time of retrieval. |
+| T3 Code upstream | [4ee6bfd50ef4a089440d5c3662db2298da9cc50e](https://github.com/pingdotgg/t3code/commit/4ee6bfd50ef4a089440d5c3662db2298da9cc50e), October 4, 12:20 UTC | Latest main at the time of retrieval. |
+| Current T3 service | `0.0.46-nightly.20261004.2648` | Obtained from the live environment tool. |
+| Current Codex binaries | `0.160.0` | Both the standalone and Codex Desktop executables report this version. |
+| Earlier EditBay session | `0.159.3`, originator `T3 Code` | Its saved base instructions exactly match the latest upstream and current cached model instruction template. |
+| Local T3 checkout | `3b357f61646eee1a032376fad2bfce44f598a409`, September 1 | Older checkout; not used as evidence of current upstream behavior. The fork's main is older still. |
+
+## Codex instructions and request code
+
+The relevant model instructions are in [models-manager/models.json](https://github.com/openai/codex/blob/c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73/codex-rs/models-manager/models.json#L251), under `gpt-6.1-sol.model_messages.instructions_template`. Searching only the older generic `prompt.md` would miss the instructions actually used by this model.
+
+The saved base instruction text in the inspected sessions is 21,769 characters, with SHA-256 `e1bdd4f8f0df4b20f4a0ffc8a861ce819df45325d8cecdfb92e80379cf8d142e`. It exactly matches both the current local catalog and the latest upstream template. It contains no 29k budget instruction. It expressly requires completing the user's task and continuing after compaction, rather than leaving work incomplete to save tokens.
+
+Codex has two separate client-side budget mechanisms:
+
+- [Remaining context messages](https://github.com/openai/codex/blob/c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73/codex-rs/core/src/context/token_budget_context.rs#L173) report tokens remaining in the context window. The model catalog sets `token_budget.enabled` to false locally and upstream, and the inspected sessions contain no recorded context-budget messages.
+- [Shared session budget messages](https://github.com/openai/codex/blob/c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73/codex-rs/core/src/context/rollout_budget.rs#L23) report weighted tokens in a configured session budget. The `rollout_budget` feature defaults to false, no corresponding local configuration was found, and no such recorded messages appeared in the inspected sessions.
+
+The [model request structure](https://github.com/openai/codex/blob/c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73/codex-rs/codex-api/src/common.rs#L279) has no numeric 29k output-budget field. Its [reasoning settings](https://github.com/openai/codex/blob/c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73/codex-rs/codex-api/src/common.rs#L158) contain effort, summary, and context settings. This does not establish what limits the backend applies after receiving the request.
+
+## T3 Code
+
+[CodexAdapterV2.ts](https://github.com/pingdotgg/t3code/blob/4ee6bfd50ef4a089440d5c3662db2298da9cc50e/apps/server/src/orchestration-v2/Adapters/CodexAdapterV2.ts#L727) builds requests with the selected model, reasoning effort, mode, service tier, permissions, and app context. Its [thread configuration](https://github.com/pingdotgg/t3code/blob/4ee6bfd50ef4a089440d5c3662db2298da9cc50e/apps/server/src/orchestration-v2/Adapters/CodexAdapterV2.ts#L1193) enables the checklist tool and supplies the T3 MCP connection. No 29k generation or task limit was found.
+
+[CodexDeveloperInstructions.ts](https://github.com/pingdotgg/t3code/blob/4ee6bfd50ef4a089440d5c3662db2298da9cc50e/apps/server/src/provider/CodexDeveloperInstructions.ts#L206), [RuntimeInstructions.ts](https://github.com/pingdotgg/t3code/blob/4ee6bfd50ef4a089440d5c3662db2298da9cc50e/apps/server/src/provider/RuntimeInstructions.ts), and [T3OrchestrationInstructions.ts](https://github.com/pingdotgg/t3code/blob/4ee6bfd50ef4a089440d5c3662db2298da9cc50e/apps/server/src/provider/T3OrchestrationInstructions.ts) contain mode, model identity, tool, PR, and delegation guidance, with no 29k budget instruction.
+
+Current live thread configuration selects `gpt-6.1-sol` with `xhigh` reasoning effort and the default service tier. No budget-related arguments were present in the running Codex process command lines.
+
+## Local files and recorded inputs
+
+Inspected `/home/michael/.codex/config.toml`, `/home/michael/.codex/AGENTS.md`, its prior backup, `/home/michael/Projects/editbay/AGENTS.md`, `/home/michael/.codex/models_cache.json`, and the T3 provider settings in `/home/michael/.t3/userdata/settings.json`.
+
+The current global `AGENTS.md` is exactly contained in the recorded inputs for this session and the LAN Mouse session. The prior global version, preserved as `AGENTS.md.~1~`, is exactly contained in the earlier EditBay session. Its recorded user instructions also include EditBay project instructions; those have changed since that session. Neither the current global/project files nor the recorded earlier inputs contain a 29k instruction.
+
+Recorded initial developer and user inputs were searched as well as the saved base instructions. This covers the actual recorded instruction content, including injected memory/skill guidance and T3 app context, rather than assuming that today's files reproduce an older run. None of the initial developer messages in the three inspected sessions mentions 29k. This session's user request naturally does mention it.
+
+The earlier EditBay 29k mention occurred before any tool call or tool result. A file read during that task therefore cannot explain its initial appearance.
+
+## Saved run evidence
+
+| Recovered session | First recorded 29k summary mention | Input tokens immediately before it | Effective context window | Weekly usage then |
+| --- | --- | --- | --- | --- |
+| Build Enterprise Media Production Suite / EditBay | October 3, 20:04:59 UTC | 25,912 | 258,400 | 7% used, 93% left |
+| LAN Mouse Clipboard Sharing Support | October 4, 13:56:17 UTC | 42,200 | 258,400 | 20% used, 80% left |
+
+These values are separate recorded fields. The rate-limit window is 10,080 minutes, or one week. The model's local catalog advertises 272,000 context tokens, with a 95% effective window producing 258,400.
+
+At the start of this investigation, October 4 at 17:25:54 UTC, the recorded weekly usage was 22%, leaving 78%. This newer reading does not change the finding: weekly headroom was substantial.
+
+The exact supplied sentence was not recovered verbatim from the searchable sessions or T3 timeline. Related 29k statements were recovered in the two sessions above. The findings establish the source category and eliminate the inspected local/client instructions; they do not claim to have identified the precise quoted item.
+
+Sanitized metadata, hashes, and usage evidence are in [evidence.json](./evidence.json). It contains no reasoning text or copied developer prompt text. Upstream source snapshots are under `upstream/` and ignored by `.gitignore`.
+
+## Meaning for future work
+
+[OpenAI's conversation-state documentation](https://developers.openai.com/api/docs/guides/conversation-state) distinguishes the context window and output limits of a request. [Its reasoning documentation](https://developers.openai.com/api/docs/guides/reasoning) explains that generated reasoning also consumes output tokens. Those limits are different from a subscription's weekly usage allowance.
+
+There is no supported local 29k setting identified here to remove. A generated token-budget estimate should not be used to reduce the scope of authorized work. Continue through tool calls and compaction until the task is complete, and report a real enforced limit only when there is evidence of one.

@@ -1,0 +1,355 @@
+{
+  "checkedAt": "2026-10-04T17:37:01.846Z",
+  "upstream": {
+    "codex": "c2f7fe89d87ce853900d0b5cb1f5dc4863e44d73",
+    "t3code": "4ee6bfd50ef4a089440d5c3662db2298da9cc50e"
+  },
+  "model": {
+    "slug": "gpt-6.1-sol",
+    "cachedContextWindow": 272000,
+    "effectiveContextWindow": 258400,
+    "cachedTokenBudgetFeatureEnabled": false,
+    "upstreamTokenBudgetFeatureEnabled": false
+  },
+  "sessions": [
+    {
+      "file": "/home/michael/.codex/sessions/2026/10/03/rollout-2026-10-03T16-04-34-01a1035e-4ffd-7602-b174-ee9c0eaa3452.jsonl",
+      "instructionMessages": [
+        {
+          "line": 3,
+          "role": "developer",
+          "chars": 37256,
+          "sha256": "6255fe7672ac6f71ffa98de0ef451322cb0bf0864a3503b39cb825717ee7cdb0",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 4,
+          "role": "developer",
+          "chars": 2429,
+          "sha256": "47091490938505958b0c22ff42db6fd79b272a2af6923166f4c2cc53c4fe0df4",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 5,
+          "role": "developer",
+          "chars": 271,
+          "sha256": "6ded806e3cdbb35599ecaf8742574bc5274908472b1729090010c404c2151e8e",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 6,
+          "role": "user",
+          "chars": 5185,
+          "sha256": "fbd21bb5377900be1f502af1afb826fc32e5cbfc62963411db66b7359364f61c",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 9,
+          "role": "developer",
+          "chars": 4069,
+          "sha256": "cb7db66a6f32dfd6e511a163497fb65e6058e2513dfbe568342412e92de133f0",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 10,
+          "role": "developer",
+          "chars": 1126,
+          "sha256": "ebef666d4d21689ca1a30180f4509b8ce842fa8cb7d5ec67d255b3861de57278",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 11,
+          "role": "developer",
+          "chars": 1121,
+          "sha256": "acdab8533f204c4dffb1fb170e5fb81c893e5d20c508a9f8d5b89e2699449265",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 12,
+          "role": "user",
+          "chars": 1141,
+          "sha256": "31f32e4d3f8a7174d2c0f852fac44ef5b4d8248ca454bef47f14320efe5d5a88",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        }
+      ],
+      "budgetSummaryCount": 1,
+      "exactSuppliedQuoteFound": false,
+      "budgetInputMarkers": [],
+      "session": {
+        "id": "01a1035e-4ffd-7602-b174-ee9c0eaa3452",
+        "cwd": "/home/michael/Projects/editbay",
+        "originator": "T3 Code",
+        "cliVersion": "0.159.3"
+      },
+      "baseInstructions": {
+        "sha256": "e1bdd4f8f0df4b20f4a0ffc8a861ce819df45325d8cecdfb92e80379cf8d142e",
+        "chars": 21769,
+        "budgetText": false,
+        "matchesCachedTemplate": true,
+        "matchesLatestUpstreamTemplate": true
+      },
+      "context": {
+        "model": "gpt-6.1-sol",
+        "effort": "xhigh"
+      },
+      "firstUsage": {
+        "line": 21,
+        "timestamp": "2026-10-03T20:04:54.538Z",
+        "modelContextWindow": 258400,
+        "lastInputTokens": 25912,
+        "weeklyUsedPercent": 7,
+        "rateLimitWindowMinutes": 10080
+      },
+      "firstBudgetSummary": {
+        "line": 23,
+        "timestamp": "2026-10-03T20:04:59.886Z",
+        "precedingUsage": {
+          "line": 21,
+          "timestamp": "2026-10-03T20:04:54.538Z",
+          "modelContextWindow": 258400,
+          "lastInputTokens": 25912,
+          "weeklyUsedPercent": 7,
+          "rateLimitWindowMinutes": 10080
+        }
+      }
+    },
+    {
+      "file": "/home/michael/.codex/sessions/2026/10/04/rollout-2026-10-04T09-50-59-01a1072e-a4cf-7952-9582-3e4ea06f7d8b.jsonl",
+      "instructionMessages": [
+        {
+          "line": 3,
+          "role": "developer",
+          "chars": 38975,
+          "sha256": "ed931b440a1c94e7dd6a403fb77f3f8181d4c7943863e367e0009671f042d348",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 4,
+          "role": "developer",
+          "chars": 2429,
+          "sha256": "47091490938505958b0c22ff42db6fd79b272a2af6923166f4c2cc53c4fe0df4",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 5,
+          "role": "developer",
+          "chars": 271,
+          "sha256": "6ded806e3cdbb35599ecaf8742574bc5274908472b1729090010c404c2151e8e",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 6,
+          "role": "user",
+          "chars": 3962,
+          "sha256": "ca3ea834c7ea7ba6225e562f6abf4d3a6a0f17a4b7c2ca093d1740db24db5a46",
+          "containsGlobalAgents": true,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 9,
+          "role": "developer",
+          "chars": 4069,
+          "sha256": "2b9b54b352e75f29bccd224c98c89fd23147ad96f4435337c4767b273376e62b",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 10,
+          "role": "developer",
+          "chars": 1360,
+          "sha256": "5eb7d46b6d45c6b530c5b12554c3f523d09d0a7f9590d28b46a9ff6ee5516147",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 11,
+          "role": "developer",
+          "chars": 2039,
+          "sha256": "40d7f513fade67af6fd64df48ae08ac5c21e7a4e097fd2f213cdc6a08886f33d",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 12,
+          "role": "user",
+          "chars": 41,
+          "sha256": "cb72864a71eaea5b3c27ec64202aa823e4492bf7df157dee338db39696cafff0",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        }
+      ],
+      "budgetSummaryCount": 1,
+      "exactSuppliedQuoteFound": false,
+      "budgetInputMarkers": [],
+      "session": {
+        "id": "01a1072e-a4cf-7952-9582-3e4ea06f7d8b",
+        "cwd": "/home/michael",
+        "originator": "Codex Desktop",
+        "cliVersion": "0.160.0"
+      },
+      "baseInstructions": {
+        "sha256": "e1bdd4f8f0df4b20f4a0ffc8a861ce819df45325d8cecdfb92e80379cf8d142e",
+        "chars": 21769,
+        "budgetText": false,
+        "matchesCachedTemplate": true,
+        "matchesLatestUpstreamTemplate": true
+      },
+      "context": {
+        "model": "gpt-6.1-sol",
+        "effort": "low"
+      },
+      "firstUsage": {
+        "line": 20,
+        "timestamp": "2026-10-04T13:51:05.291Z",
+        "modelContextWindow": 258400,
+        "lastInputTokens": 26100,
+        "weeklyUsedPercent": 20,
+        "rateLimitWindowMinutes": 10080
+      },
+      "firstBudgetSummary": {
+        "line": 50,
+        "timestamp": "2026-10-04T13:56:17.411Z",
+        "precedingUsage": {
+          "line": 48,
+          "timestamp": "2026-10-04T13:56:10.509Z",
+          "modelContextWindow": 258400,
+          "lastInputTokens": 42200,
+          "weeklyUsedPercent": 20,
+          "rateLimitWindowMinutes": 10080
+        }
+      }
+    },
+    {
+      "file": "/home/michael/.codex/sessions/2026/10/04/rollout-2026-10-04T13-25-44-01a107f3-3e1d-7ac2-b2a4-95ad1b49db9e.jsonl",
+      "instructionMessages": [
+        {
+          "line": 3,
+          "role": "developer",
+          "chars": 21996,
+          "sha256": "3413d0bd1256abde130a0daa27dcedf11cbaac7bc91d3a32931a0b9071127986",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 4,
+          "role": "developer",
+          "chars": 2429,
+          "sha256": "47091490938505958b0c22ff42db6fd79b272a2af6923166f4c2cc53c4fe0df4",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 5,
+          "role": "developer",
+          "chars": 271,
+          "sha256": "6ded806e3cdbb35599ecaf8742574bc5274908472b1729090010c404c2151e8e",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 6,
+          "role": "user",
+          "chars": 3962,
+          "sha256": "ca3ea834c7ea7ba6225e562f6abf4d3a6a0f17a4b7c2ca093d1740db24db5a46",
+          "containsGlobalAgents": true,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 9,
+          "role": "developer",
+          "chars": 4069,
+          "sha256": "2b9b54b352e75f29bccd224c98c89fd23147ad96f4435337c4767b273376e62b",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 10,
+          "role": "developer",
+          "chars": 1362,
+          "sha256": "3fd49a6813971353054f11e10cc2c8b9e6d7ddbade7482b8694b0e9008b7da9c",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 11,
+          "role": "developer",
+          "chars": 2039,
+          "sha256": "40d7f513fade67af6fd64df48ae08ac5c21e7a4e097fd2f213cdc6a08886f33d",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": false
+        },
+        {
+          "line": 12,
+          "role": "user",
+          "chars": 569,
+          "sha256": "4bbf9c1e92d3176cd9e5742d0f19d809dccfd2a4766a2fd6f20c012ff03ef646",
+          "containsGlobalAgents": false,
+          "budgetMarker": false,
+          "mentions29000": true
+        }
+      ],
+      "budgetSummaryCount": 0,
+      "exactSuppliedQuoteFound": false,
+      "budgetInputMarkers": [],
+      "session": {
+        "id": "01a107f3-3e1d-7ac2-b2a4-95ad1b49db9e",
+        "cwd": "/home/michael",
+        "originator": "Codex Desktop",
+        "cliVersion": "0.160.0"
+      },
+      "baseInstructions": {
+        "sha256": "e1bdd4f8f0df4b20f4a0ffc8a861ce819df45325d8cecdfb92e80379cf8d142e",
+        "chars": 21769,
+        "budgetText": false,
+        "matchesCachedTemplate": true,
+        "matchesLatestUpstreamTemplate": true
+      },
+      "context": {
+        "model": "gpt-6.1-sol",
+        "effort": "xhigh"
+      },
+      "firstUsage": {
+        "line": 21,
+        "timestamp": "2026-10-04T17:25:54.916Z",
+        "modelContextWindow": 258400,
+        "lastInputTokens": 21921,
+        "weeklyUsedPercent": 22,
+        "rateLimitWindowMinutes": 10080
+      }
+    }
+  ]
+}
