@@ -3,65 +3,64 @@ id: T085
 title: Export Lottie
 slug: omadesign-0-5-8-export-lottie
 excerpt: Export Lottie… writes a Bodymovin 5.x shape animation with trim paths and fill masks. Pixel layers, layer masks, and effects stop the export with a clear error. Use animated SVG for those.
-tags: [omadesign, 0.5.8, motion]
+publishedAt: 2026-09-02T15:00:58Z
+tags: [omadesign, 0.0.1-alpha.rc, motion]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-export-lottie/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-export-lottie/og.png
 ---
 
 ## The habit
 
-A developer asks for Lottie. In After Effects that means Bodymovin, a plugin, a composition that has already been beaten into shape layers, and a JSON file the player on the site can read. You learn the unsupported list by shipping a JSON that plays nothing like the comp. Expressions dropped. Effects dropped. A mask that was a layer mask becomes a blank. Sometimes the plugin warns. Sometimes the player warns. Sometimes the homepage is simply wrong until somebody notices.
+A developer asks for Lottie. In After Effects that means Bodymovin, a plugin, a composition already forced into shape layers, and a JSON file the site's player can read. You learn what isn't supported by shipping a JSON that plays nothing like the comp: expressions dropped, effects dropped, a layer mask turned into a blank. Sometimes the plugin warns, sometimes the player warns, and sometimes the homepage is just wrong until somebody notices.
 
-Illustrator does not export that JSON. Photoshop does not. The habit those apps trained is: go to AE, convert, pray, export. Affinity does not sit in that pipeline either. So the hand that lives in a design tool still ends the week in a different tool, rechecking trim paths, because trim paths are how a stroke "draws on" in the Lottie world, and fill masks are how a fill reveals.
+Illustrator doesn't export that JSON, and neither does Photoshop. The workflow those apps taught is to go to After Effects, convert, hope, and export. Affinity isn't part of that pipeline either. So even if you design in another tool, you still end the week in After Effects checking trim paths, because in Lottie a stroke draws on through trim paths and a fill reveals through fill masks.
 
-You want the menu here, and you want it to fail in words when the file cannot tell the truth. A quiet drop of the pixel layer is worse than a hard stop. You can choose another export. You cannot guess which half of the comp survived.
+I wanted the export in Omadesign's menu, and I wanted it to fail with a clear message when the file can't represent the composition accurately. Silently dropping a pixel layer is worse than stopping. After a stop you can choose another export. After a silent drop you can't tell which half of the comp survived.
 
 ## The constraint
 
-The clip in the `.oma` can hold tracks on vector artwork: X, Y, rotation, scale, opacity, stroke reveal, fill reveal. It can also sit in a document that has pixel layers, layer masks, and effects, because the studio is one document. Design, Pixel, and Motion share the file. A Lottie exporter that pretends to carry all of that will lie. Bodymovin shape animation has a shape it can carry. Pixels and layer masks and effects are outside that shape for this exporter.
+The clip in the `.oma` can hold tracks on vector artwork: X, Y, rotation, scale, opacity, stroke reveal, and fill reveal. Because the studio is one document shared by Design, Pixel, and Motion, that clip can also sit alongside pixel layers, layer masks, and effects. A Lottie exporter that claimed to carry all of that would be lying. Bodymovin shape animation can represent a certain set of things, and for this exporter, pixels, layer masks, and effects fall outside it.
 
-The honest constraint is a clear error. The export does not half-apply. It does not write a JSON that plays the vectors and omits the pixels without telling you. It stops, and it says why. The other command, **File → Export animated SVG…**, retains masks and effects. That is the door for the compositions this exporter cannot preserve. Two commands, two ceilings, both visible.
+So the export stops with a clear error. It doesn't partly apply, and it doesn't write a JSON that plays the vectors and omits the pixels without telling you. It stops and says why. The other command, **File > Export animated SVG…**, keeps masks and effects, and it is the route for compositions this exporter can't preserve. Each command has its own visible limits.
 
-What Lottie can take should match the preview. Stroke reveal becomes trim paths. Fill reveal becomes fill masks. The same Draw stroke and Fill up you played with Space are the channels in the JSON. The version target is Bodymovin 5.x shape animation, the dialect players already speak. You do not get a private JSON that only this app can read.
+What Lottie can carry should match the preview. Stroke reveal becomes trim paths, and fill reveal becomes fill masks, so the same Draw stroke and Fill up you played with Space end up as the channels in the JSON. The target is Bodymovin 5.x shape animation, the format players already support, so you never get a private JSON that only this app can read.
 
-The rest pose stays in the document. Exporting Lottie does not bake the playhead into the artboard, and it does not outline the working text inside the `.oma`. The JSON is a delivery file. The `.oma` is the editable animation, and for anything beyond the basic shape subset you keep the `.oma` anyway.
+The rest pose stays in the document. Exporting Lottie doesn't bake the playhead into the artboard or outline the working text inside the `.oma`. The JSON is a delivery file. The `.oma` is the editable animation, and you keep it for anything beyond the basic shape subset anyway.
 
 ## What landed
 
-**Export Lottie…** writes Bodymovin 5.x shape animation. Trim paths carry the stroke reveals. Fill masks carry the fill reveals. Transforms on the vector shapes travel with them. A mark built from shapes, with a draw-on stroke and a fill that rises, is the file this command is for. Preview it in Motion. Export it. The player that speaks Bodymovin 5.x is the audience.
+**Export Lottie…** writes Bodymovin 5.x shape animation. Trim paths carry the stroke reveals, fill masks carry the fill reveals, and transforms on the vector shapes travel with them. The command is meant for a mark built from shapes, with a draw-on stroke and a rising fill. Preview it in Motion, export it, and hand it to a player that supports Bodymovin 5.x.
 
-Pixel layers cannot be preserved by this exporter. Layer masks cannot. Effects cannot. The export produces a clear error. You are told. You do not receive a partial JSON that looks successful and plays incomplete. Take that composition to animated SVG, which keeps masks and effects and writes the animated transforms and reveals there.
+This exporter can't preserve pixel layers, layer masks, or effects. When it meets one, it produces a clear error, so you never receive a partial JSON that looks successful and plays incomplete. Take that composition to animated SVG, which keeps masks and effects and writes the animated transforms and reveals.
 
-The error is the feature. A batch of homepage icons that are pure shapes should export. A poster that is a photograph with a vector headline animated on top should not sneak out as a Lottie of the headline alone. The photograph is part of what you approved. The exporter refuses to ship the headline as if it were the whole composition. You pick SVG, or you rebuild the motion from shapes if Lottie is a hard requirement from the developer.
+The error is deliberate. A batch of homepage icons made purely of shapes should export. A poster that is a photograph with an animated vector headline on top should not slip out as a Lottie of the headline alone, because the photograph is part of what you approved. You either choose SVG, or rebuild the motion from shapes if the developer strictly needs Lottie.
 
-Still exports stay on their own road. PNG, JPEG, and static SVG remain the rest pose. Lottie is the clip. You do not use it as a still, and you do not use a still as a stand-in for the JSON.
+Still exports are separate. PNG, JPEG, and static SVG always show the rest pose, and Lottie is always the clip. Neither is a substitute for the other.
 
-Import is the return path for a shape-layer Lottie, and it is a basic subset. The complete editable animation is still the `.oma` you saved before you exported. Treat the JSON as something you hand over. Treat the document as the place you keep working.
+Import brings back a shape-layer Lottie, but only a basic subset. The complete editable animation is still the `.oma` you saved before exporting. Treat the JSON as a handoff file and the document as the place you keep working.
 
 ## In the hand
 
-Build the motion from vector shapes. Draw stroke on a path that has a visible stroke. Fill up on a closed shape that has a fill. Transforms on the same objects if they need to move. Space to preview. Save the `.oma`.
+Build the motion from vector shapes. Put Draw stroke on a path with a visible stroke, Fill up on a closed shape with a fill, and transforms on the same objects if they need to move. Press Space to preview, then save the `.oma`.
 
 ```
 Export Lottie…
 ```
 
-If the document is shapes and the tracks are the tracks this exporter knows, you get a JSON in the Bodymovin 5.x shape form. Trim paths are the stroke reveals. Fill masks are the fill reveals. Hand that file to the page.
+If the document contains only shapes and the tracks are ones this exporter supports, you get a JSON in Bodymovin 5.x shape format, with trim paths for the stroke reveals and fill masks for the fill reveals. Hand that file to the page.
 
-If the document contains a pixel layer, a layer mask, or an effect, the export stops with a clear error. Read it. The `.oma` is unchanged. The rest pose is unchanged. Nothing was half-written into a JSON you might accidentally commit.
+If the document contains a pixel layer, a layer mask, or an effect, the export stops with a clear error. Read it. The `.oma` and the rest pose are unchanged, and nothing was half-written into a JSON you might commit by accident.
 
 ```
 File → Export animated SVG…
 ```
 
-Use that command for the composition the error named. Masks and effects stay. Text in that SVG is outlined so the glyphs match, and the source text in the document stays editable. The developer gets an animated SVG. You keep the file you can still edit.
+Use that command for the composition the error named. Masks and effects stay. Text in the SVG is outlined so the glyphs match, and the source text in the document stays editable. The developer gets an animated SVG, and you keep a file you can still edit.
 
-When the developer insists on Lottie and the error was a pixel layer you do not need in the motion file, duplicate the idea into a shape-only document, or remove the offending layer from a copy, and export Lottie from the composition that qualifies. Do not argue the original poster into a silent strip. The error was the correct result on the file that had the pixels.
+If the developer insists on Lottie and the error was about a pixel layer the motion file doesn't need, rebuild the idea in a shape-only document, or remove the offending layer from a copy, and export Lottie from a composition that qualifies. Don't strip the original poster to force it through. The error was the correct result for a file with pixels in it.
 
 ## The edge
 
-This exporter refuses to preserve pixel layers, layer masks, and effects. It does not drop them and continue. It stops with a clear error, and the document stays as it was. Animated SVG is the export that can carry those compositions.
+This exporter can't preserve pixel layers, layer masks, or effects. It never drops them and continues. It stops with a clear error and leaves the document as it was. Animated SVG is the export that can carry those compositions.
 
-It also refuses to be the home of the editable animation. The JSON is Bodymovin 5.x for delivery. The full clip, including anything outside the shape subset, stays in the `.oma`.
-
-Export Lottie… when the art is shapes. Read the error when it is not, and export animated SVG for that file.
+The JSON is also never the home of the editable animation. It is Bodymovin 5.x for delivery, and the full clip, including anything outside the shape subset, stays in the `.oma`.
