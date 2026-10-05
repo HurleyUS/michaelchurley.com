@@ -1,0 +1,247 @@
+{
+  "date": "2026-10-04",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 4, 2026 · 5:00 AM EDT → Oct 5, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-04T09:00:00Z → 2026-10-05T09:00:00Z",
+    "generatedEt": "Oct 5, 2026 · ~5:05 AM EDT",
+    "xPostsMeasured": 9,
+    "inboxSignalItems": 7,
+    "tldr": "Ships/index 3: omadesign merged #195 (install-or-update before launch) and #194 (OmaStore launch via the official installer); michaelchurley.com merged #93 publishing the Codex 29k token-budget audit. New repo flea-omadesign (native .oma thumbnails + Quick Look for Flea, PR #2 open). editbay opened 6 more R2 PRs (#7–#19) plus 7 R2 issues. omatainer #507 opened and closed unmerged. Audience: 9 X posts, ~2.5k public impressions. Inbox: Mack’s Shack BBQ live on Bing Places; two new uncap Sentry issues; Hustle Launch Vercel deployment storage and GitHub Actions storage both at 100%.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · #195 + #194 merged (installer + OmaStore)",
+      "kind": "shipped",
+      "summary": "Two merged PRs on main. #195 adds a version-aware installer launch mode so omadesign installs or updates before launching; #194 (community contribution from KitsuneSemCalda) ships the OmaStore manifest stacked on top of it so OmaStore launches omadesign through the official installer.",
+      "bullets": [
+        "Version-aware installer launch mode; verify archive version before replacing an installed app",
+        "Repair missing plugin files and check every bundled starter file before fast launch",
+        "Package the official OmaStore launch-and-install entry (omastore.toml)",
+        "Repair packaged installs and close launch review gaps"
+      ],
+      "when": "Oct 4 · 5:57 AM–2:19 PM EDT",
+      "links": [
+        {
+          "label": "#195",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/195"
+        },
+        {
+          "label": "#194",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/194"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omadesign"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com · #93 Codex 29k token-budget audit",
+      "kind": "shipped",
+      "summary": "Merged and published the Oct 4 Codex/T3 token-budget audit as a featured blog post, with sanitized evidence, a redirect from the original report URL, and GFM table rendering with a mobile overflow wrapper.",
+      "bullets": [
+        "New post: /blog/codex-29k-token-budget",
+        "Evidence JSON + REPORT.txt published alongside",
+        "GFM tables render with mobile overflow"
+      ],
+      "when": "Oct 4 · 2:07 PM EDT",
+      "links": [
+        {
+          "label": "#93",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/93"
+        },
+        {
+          "label": "post",
+          "href": "https://www.michaelchurley.com/blog/codex-29k-token-budget"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/flea-omadesign · new repo + PR #2",
+      "kind": "shipped",
+      "summary": "New extension repo for the Flea file manager: native .oma thumbnails, column previews, and static/motion Quick Look for Omadesign files. PR #2 is open with review comments to work through; not counted in the index.",
+      "bullets": [
+        "Repo initialized Oct 4 · 10:54 AM EDT",
+        "#2 Add native .oma thumbnails and static/motion Quick Look (open)"
+      ],
+      "when": "Oct 4 · 10:54–11:02 AM EDT",
+      "links": [
+        {
+          "label": "#2",
+          "href": "https://github.com/michaelmonetized/flea-omadesign/pull/2"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/flea-omadesign"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/editbay · 6 more R2 PRs + 7 R2 issues",
+      "kind": "shipped",
+      "summary": "The native video/edit workspace kept moving through R2: six new open PRs on native media import, exact fractional composition evaluation, bounded decoded-picture caching, GPU texture rendering, supervised decode workers, and a native GPU viewer for editable sequences. Seven matching R2 tracking issues (#8–#18) were filed. Nothing merged yet.",
+      "bullets": [
+        "#7 Import native media with isolated workers and exact source timing",
+        "#10 Retain exact fractional composition evaluation and source dependencies",
+        "#12 Bound source-owned decoded pictures and retain exact native seeks",
+        "#14 Render typed SDR picture graphs into bounded resident GPU textures",
+        "#16 Run retained picture decoding in supervised native workers",
+        "#19 Show editable source sequences through the native GPU viewer"
+      ],
+      "when": "Oct 4 · 5:55 AM–Oct 5 · 12:31 AM EDT",
+      "links": [
+        {
+          "label": "#7",
+          "href": "https://github.com/michaelmonetized/editbay/pull/7"
+        },
+        {
+          "label": "#19",
+          "href": "https://github.com/michaelmonetized/editbay/pull/19"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/editbay"
+        }
+      ]
+    },
+    {
+      "title": "omatainer + Waynesville · quieter day",
+      "kind": "shipped",
+      "summary": "omatainer #507 (deck waveforms aligned to beats and output timing) was opened and later closed unmerged; the open PR stack sits at 148. Waynesville got one main commit (keep approved legacy review advisory, require new findings) and Ship failed again.",
+      "bullets": [
+        "omatainer #507 opened 6:09 AM, closed unmerged 8:54 PM EDT",
+        "Waynesville ee8ec47 · Ship CI failed (5th straight on main)"
+      ],
+      "when": "Oct 4 · 5:04 AM–8:54 PM EDT",
+      "links": [
+        {
+          "label": "omatainer #507",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/507"
+        },
+        {
+          "label": "Waynesville repo",
+          "href": "https://github.com/HurleyUS/waynesville.yourzaxbys.com"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 9 posts, ~2.5k public impressions",
+      "kind": "audience",
+      "summary": "Mostly replies in the T3 Code / Omarchy conversation: a Flea/gudfiles daily-driver reply to @hasen_95dx (1,279 impressions), Codex context-budget and multi-machine parity notes to @theo, a T3 Code nightly tip, a Grey Album reply, and a #my9albums post. 9 likes total.",
+      "when": "Oct 4 · 10:03 AM–2:00 PM EDT",
+      "links": [
+        {
+          "label": "top post",
+          "href": "https://x.com/MichaelH_rley/status/2106747034338287790"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Bing Places · Mack’s Shack BBQ is live",
+      "kind": "ops",
+      "summary": "Bing Places for Business confirmed the Mack’s Shack BBQ listing is live on Bing.",
+      "when": "Oct 4 · 10:27 PM EDT"
+    },
+    {
+      "title": "Hustle Launch · daily message report (Oct 4)",
+      "kind": "ops",
+      "summary": "Dash daily summary: 2 open messages still waiting.",
+      "when": "Oct 4 · 8:26 PM EDT"
+    },
+    {
+      "title": "Sentry · two new uncap issues",
+      "kind": "ops",
+      "summary": "UNCAP-N (Invariant failed) and UNCAP-P (ReadableStream getReader TypeError) opened in the uncap project.",
+      "when": "Oct 4 · 5:41–5:46 PM EDT"
+    },
+    {
+      "title": "Cloudflare · certificate activity on hustlelaunch.com",
+      "kind": "ops",
+      "summary": "Cloudflare flagged a certificate outside its routine types for hustlelaunch.com. Confirm it was an expected issuance.",
+      "when": "Oct 4 · 4:10 PM EDT"
+    },
+    {
+      "title": "Hustle Launch storage limits hit",
+      "kind": "ops",
+      "summary": "Vercel deployment storage for the hustle-launch team reached 100% of the free tier, and GitHub Actions storage for Hustle-Launch reached 100% of its included 0.5 GB.",
+      "when": "Oct 4 · 6:25–7:50 AM EDT"
+    },
+    {
+      "title": "Account security notices",
+      "kind": "ops",
+      "summary": "A Google identity was linked to the GitHub account, a new device signed into T3 Code, and X was linked to a Grok account. Confirm all three were you.",
+      "when": "Oct 4 · 7:41–10:01 AM EDT"
+    },
+    {
+      "title": "PostHog · Hustle Launch weekly error digest",
+      "kind": "ops",
+      "summary": "Weekly error-tracking digest for the Hustle Launch org landed; skim when free.",
+      "when": "Oct 5 · 4:40 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "editbay R0–R2 PR stack",
+      "detail": "Now 12 open PRs (#1–#19) with CodeRabbit/Codex review comments on most. Review and merge gates before calling a first release."
+    },
+    {
+      "title": "omatainer open PR stack",
+      "detail": "148 open PRs; #507 was closed unmerged. Merge/review when ready."
+    },
+    {
+      "title": "flea-omadesign #2",
+      "detail": "Six actionable CodeRabbit comments on the Quick Look/thumbnail PR; address before merge."
+    },
+    {
+      "title": "Waynesville Ship CI",
+      "detail": "Ship red on main for five straight runs (latest ee8ec47); fix before relying on auto-promote."
+    },
+    {
+      "title": "Hustle Launch storage",
+      "detail": "Vercel deployment storage and GitHub Actions storage both at 100%. Clean old deployments and artifacts before builds start failing."
+    },
+    {
+      "title": "uncap Sentry UNCAP-N / UNCAP-P",
+      "detail": "Two new client errors; triage when free."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error; still open."
+    },
+    {
+      "title": "omadesign site CI / preview",
+      "detail": "Site CI ran no jobs on feat/omastore-manifest and one Vercel preview for codex/installer-launch failed; both PRs merged anyway, so confirm main deploys clean."
+    },
+    {
+      "title": "Omadesign Product Hunt path",
+      "detail": "Relaunch still blocked under the six-month rule (earliest plain re-post Mar 18 2027 unless a significant-update case lands)."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "Dash still shows 2 open messages. Bing Places listing is now live."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye threads remain ignore-until-reopen. Jason Livengood / Sinclair stays parked until the Sandy conversation."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Still needs free Dropbox space (or a new target) so Softaculous can resume auto-upgrades."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified, still open."
+    }
+  ]
+}
