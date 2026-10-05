@@ -1,4 +1,5 @@
 import OmadesignCounts from "@/components/omadesign-counts";
+import Image from "next/image";
 
 /**
  * Official Product Hunt product badges for omadesign (product_id=1313169).
@@ -6,8 +7,7 @@ import OmadesignCounts from "@/components/omadesign-counts";
  * Dual-theme: light SVGs in Latte, dark SVGs in Mocha via Tailwind dark: classes.
  */
 export default function ProductHuntOmadesignEmbed() {
-  const alt =
-    "omadesign - Native Linux studio for design, paint, photo & motion | Product Hunt";
+  const alt = "omadesign - Native Linux studio for design, paint, photo & motion | Product Hunt";
 
   return (
     <section
@@ -17,6 +17,13 @@ export default function ProductHuntOmadesignEmbed() {
       <div className="flex flex-col items-center justify-center gap-md px-md w-full max-w-[1170px] mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-md w-full">
           <div className="flex flex-col items-center sm:items-start gap-xs text-center sm:text-left shrink-0">
+            <Image
+              src="/omadesign-logo.svg"
+              alt="Omadesign"
+              width={1872}
+              height={1024}
+              className="w-28 h-auto"
+            />
             <p className="text-sm font-black text-Text">omadesign on Product Hunt</p>
             <a
               href="https://omadesign.app"
