@@ -1,0 +1,254 @@
+{
+  "date": "2026-10-05",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 5, 2026 · 5:00 AM EDT → Oct 6, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-05T09:00:00Z → 2026-10-06T09:00:00Z",
+    "generatedEt": "Oct 6, 2026 · ~5:05 AM EDT",
+    "xPostsMeasured": 5,
+    "inboxSignalItems": 7,
+    "tldr": "Ships/index 5: Naarchy launch day prep landed — naarchy #2 (full October 6 release package: native Omadesign logo + motion, Remotion films, Product Hunt gallery) and michaelchurley.com #96 (interactive /portfolio/naarchy release page), plus #94 (Omadesign logo on the homepage announcement). my.hustlelaunch.com merged #52 (company packages + GTM launch flow, WordPress delivery) and #54 (local Grok worker for image/video QA). editbay opened 13 more R2/R3 PRs (#20–#42) with 12 tracking issues; omatainer opened #509 (NS7 + Pioneer/Akai controllers) and #510 (waveforms, MIDI editing, playlist import). Audience: 5 X posts, ~160 impressions. Inbox: new Google review for Mack’s Shack BBQ; Hustle Launch Vercel Fast Origin Transfer at 75%; naarchy CI couldn’t start runners.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/naarchy · #2 October 6 release package",
+      "kind": "shipped",
+      "summary": "Merged the full Naarchy launch identity and media as editable source, and published the bundle on the v0.4.0 release. No app source changed; this is the launch kit for the Oct 6 Product Hunt day.",
+      "bullets": [
+        "Five-shape native Omadesign logo with four-second native motion, animated SVG and Lottie exports",
+        "Seven Remotion compositions: three 38-second release cuts and two 24-second Omadesign campaign cuts, all H.264 30fps with hashes in launch/manifest.json",
+        "Real editor process footage, Product Hunt gallery, captions and campaign copy",
+        "Product Hunt launch scheduled for Oct 6 · 12:01 AM PT (3:01 AM EDT)"
+      ],
+      "when": "Oct 5 · 8:32–8:51 AM EDT",
+      "links": [
+        {
+          "label": "#2",
+          "href": "https://github.com/michaelmonetized/naarchy/pull/2"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/naarchy"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com · #96 Naarchy release page + #94 Omadesign logo",
+      "kind": "shipped",
+      "summary": "#96 adds /portfolio/naarchy, an interactive release page built from real captures: a scroll-driven four-feature tour, phone layout, reduced-motion controls, the captioned release film, local-data/privacy details and install commands. #94 puts the Omadesign logo above the homepage Product Hunt announcement.",
+      "bullets": [
+        "New page: /portfolio/naarchy",
+        "Scroll chapters + full film playback checked on desktop and phone",
+        "Homepage announcement now carries the Omadesign logo without mobile overflow"
+      ],
+      "when": "Oct 5 · 7:27–8:33 AM EDT",
+      "links": [
+        {
+          "label": "#96",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/96"
+        },
+        {
+          "label": "#94",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/94"
+        },
+        {
+          "label": "page",
+          "href": "https://www.michaelchurley.com/portfolio/naarchy"
+        }
+      ]
+    },
+    {
+      "title": "Hustle-Launch/my.hustlelaunch.com · #52 + #54 merged",
+      "kind": "shipped",
+      "summary": "#52 lands per-company packages and the GTM launch flow: server-enforced post/image/video/publishing/agent allowances, the receiving WordPress plugin, reviewed delivery and scheduling, version-protected draft editing and demo-to-campaign activation. #54 adds an account-scoped local Grok worker so image and video QA can run again on preview.",
+      "bullets": [
+        "Deployed to my.hustlelaunch.com (21eda40)",
+        "WordPress delivery verified: twelve parallel requests created exactly one post",
+        "Local worker generates Grok Imagine images and video clips, resumes after restart, and returns verified files to Convex storage",
+        "82 tests passing; typecheck, lint, production build and Convex preview push green"
+      ],
+      "when": "Oct 5 · 8:05–9:12 AM EDT",
+      "links": [
+        {
+          "label": "#52",
+          "href": "https://github.com/Hustle-Launch/my.hustlelaunch.com/pull/52"
+        },
+        {
+          "label": "#54",
+          "href": "https://github.com/Hustle-Launch/my.hustlelaunch.com/pull/54"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/editbay · 13 more R2/R3 PRs + 12 issues",
+      "kind": "shipped",
+      "summary": "The native editor pushed hard into sound and playback overnight: bounded native sound blocks, sealed PCM transport, a bounded sound clock, verified picture-and-sound masters, exact linked timeline cuts (first R3 work), and denser GPU picture preparation. Twelve matching tracking issues (#21–#43) were filed. Nothing merged yet; not counted in the index.",
+      "bullets": [
+        "#20 Render bounded native sound blocks from typed compositions",
+        "#27 Play native sequences through a bounded sound clock",
+        "#28 Deliver verified native picture and sound masters",
+        "#31 R3: author and deliver exact linked timeline cuts",
+        "#33 Contain native sound device failures and preserve the editor",
+        "#42 Prepare exact source pictures for dense native playback"
+      ],
+      "when": "Oct 5 · 6:48 PM–Oct 6 · 4:32 AM EDT",
+      "links": [
+        {
+          "label": "#20",
+          "href": "https://github.com/michaelmonetized/editbay/pull/20"
+        },
+        {
+          "label": "#42",
+          "href": "https://github.com/michaelmonetized/editbay/pull/42"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/editbay"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omatainer · #509 NS7 + stage controllers, #510 waveforms + MIDI",
+      "kind": "shipped",
+      "summary": "Two big open PRs. #509 brings the original Numark NS7 back on Linux (four-channel playback, motors, scratching, MIDI) with dedicated Pioneer DDJ-SP1, APC40 mkII and MPD232 mappings. #510 replaces blocky waveforms with detailed stereo, eight-band meshes and adds MIDI step entry, CC/bend lanes, M3U/iTunes playlist import and verified Linux updates. Both open; not counted.",
+      "bullets": [
+        "#509 opened Oct 5 · 10:51 AM EDT (issue #508)",
+        "#510 opened Oct 6 · 1:34 AM EDT",
+        "Open PR stack now 150"
+      ],
+      "when": "Oct 5 · 10:36 AM–Oct 6 · 1:34 AM EDT",
+      "links": [
+        {
+          "label": "#509",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/509"
+        },
+        {
+          "label": "#510",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/510"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 5 posts, ~160 public impressions",
+      "kind": "audience",
+      "summary": "An Omarchy/omadesign promo video (music by Suno, motion by omadesign, edit by Michael) led with 115 impressions; a teaser that a big blog post and video are coming, a follow-up on resurrecting the NS7 hardware on Omarchy, and a T3 Code background-threads tip for @erikkovari. 3 likes total.",
+      "when": "Oct 5 · 7:34–11:25 AM EDT",
+      "links": [
+        {
+          "label": "top post",
+          "href": "https://x.com/MichaelH_rley/status/2107122060141150239"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Google Business Profile · new review for Mack’s Shack BBQ",
+      "kind": "ops",
+      "summary": "Cody left a new review on the Mack’s Shack BBQ profile; respond when free.",
+      "when": "Oct 5 · 7:18 PM EDT"
+    },
+    {
+      "title": "Hustle Launch · daily message report (Oct 5)",
+      "kind": "ops",
+      "summary": "Dash daily summary: 2 open messages still waiting.",
+      "when": "Oct 5 · 10:00 PM EDT"
+    },
+    {
+      "title": "Vercel · hustle-launch Fast Origin Transfer at 75%",
+      "kind": "ops",
+      "summary": "The hustle-launch team has used 75% of its included Fast Origin Transfer (10 GB), on top of deployment storage already at 100%.",
+      "when": "Oct 5 · 2:25 PM EDT"
+    },
+    {
+      "title": "naarchy CI · runners didn’t start",
+      "kind": "ops",
+      "summary": "Four naarchy ci runs (three on PR #2, one on main 7c6f76b) failed in 2–3 seconds because an account-level lock kept GitHub-hosted jobs from starting.",
+      "when": "Oct 5 · 8:33–8:52 AM EDT"
+    },
+    {
+      "title": "Account security · new Vercel sign-in",
+      "kind": "ops",
+      "summary": "Vercel flagged a sign-in from a new device on the main account. Confirm it was you.",
+      "when": "Oct 5 · 9:54 AM EDT"
+    },
+    {
+      "title": "Google Cloud · unused OAuth clients",
+      "kind": "ops",
+      "summary": "Google says some projects have inactive OAuth clients scheduled for automatic deletion. Check none are still needed.",
+      "when": "Oct 5 · 5:13 PM EDT"
+    },
+    {
+      "title": "Search Console · merchwinner.com",
+      "kind": "ops",
+      "summary": "Search Console confirmed merchwinner.com is now being tracked (started Oct 2).",
+      "when": "Oct 5 · 6:28 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Naarchy Product Hunt day",
+      "detail": "Launch set for Oct 6 · 3:01 AM EDT with the release page and films live; social copy is prepared but nothing has been posted yet."
+    },
+    {
+      "title": "editbay R0–R3 PR stack",
+      "detail": "24 open PRs (#1–#42) with CodeRabbit/Codex comments on most. Review and merge gates before calling a first release."
+    },
+    {
+      "title": "omatainer open PR stack",
+      "detail": "150 open PRs, including #509 and #510 with fresh CodeRabbit comments. Merge/review when ready."
+    },
+    {
+      "title": "naarchy CI",
+      "detail": "GitHub-hosted runners blocked by an account-level lock; clear it so ci can run on main."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment storage at 100%, Fast Origin Transfer at 75%, Actions storage at 100%. Clean old deployments and artifacts before builds start failing."
+    },
+    {
+      "title": "Hustle Launch #51 provider QA",
+      "detail": "#52 merged with #51 still open for the remaining provider/account QA."
+    },
+    {
+      "title": "flea-omadesign #2",
+      "detail": "Quick Look/thumbnail PR still open with CodeRabbit comments to address."
+    },
+    {
+      "title": "Waynesville Ship CI",
+      "detail": "Ship red on main for five straight runs (latest ee8ec47); no new commits this window."
+    },
+    {
+      "title": "uncap Sentry UNCAP-N / UNCAP-P",
+      "detail": "Two client errors from Oct 4; triage when free."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error; still open."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "New Google review from Cody to answer; Dash still shows 2 open messages."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye threads remain ignore-until-reopen. Jason Livengood / Sinclair stays parked until the Sandy conversation."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Still needs free Dropbox space (or a new target) so Softaculous can resume auto-upgrades."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified, still open."
+    }
+  ]
+}
