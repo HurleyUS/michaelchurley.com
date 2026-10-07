@@ -1,0 +1,185 @@
+{
+  "date": "2026-10-06",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 6, 2026 · 5:00 AM EDT → Oct 7, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-06T09:00:00Z → 2026-10-07T09:00:00Z",
+    "generatedEt": "Oct 7, 2026 · ~5:05 AM EDT",
+    "xPostsMeasured": 5,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 0: a heads-down build day with nothing merged or released. omatainer pushed 60 commits (27 features) onto #510 — Session clips and launch modes, a linear Arrangement timeline, MIDI clock out, headphone cue bus, mic/aux mixer, audio export and performance recording, deck loop banks, beat/bar sync, fades and crossfades, pitch pickup, and APC40 mkII grid fixes from a physical capture. editbay opened 9 more R2/R3 PRs (#44–#60) with 9 tracking issues. Audience: 5 X replies, ~263 impressions. Inbox: Search Console flagged new indexing reasons on 9 sites; CodeRabbit hit its free OSS review limit on editbay.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omatainer · #510 app software checklist — 27 features in a day",
+      "kind": "shipped",
+      "summary": "The stage app went from deck tool toward full DAW overnight. Every feature commit was followed by a qualified, installed build recorded against the live stage session, with Pioneer, APC40 mkII and MPD hardware checked by hand. #510 is still open (437 files); not counted in the index.",
+      "bullets": [
+        "Session view: shared audio clips, atomic clip management with native presets, launch modes with musical timing and legato, scene launch properties",
+        "Arrangement view: linear playback on a native timeline, song sections with quantized loop navigation, sample-timed MIDI clock out",
+        "Mixing: isolated headphone cue bus with saved routing, mic and auxiliary mixer, saved track input monitoring, audio export and recoverable performance recording",
+        "Decks: beat jump, unified Cue audition, per-deck quantization, named loop banks, performance pad modes, tempo/beat/bar sync, hot cues linked to loops, pitch pickup and momentary bend",
+        "Hardware: APC40 mkII grid rows corrected from a physical controller capture; configurable encoder formats and high-res MIDI controls; indexed large-library browsing"
+      ],
+      "when": "Oct 6 · 5:24 AM–Oct 7 · 4:21 AM EDT",
+      "links": [
+        {
+          "label": "#510",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/510"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/omatainer"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/editbay · 9 more R2/R3 PRs + 9 issues",
+      "kind": "shipped",
+      "summary": "The native editor kept hardening sound and delivery: sustained-playback callback timing, a bounded and measured sound backend, reusable sound kernels, canonical PCM across cold seeks, source sound prepared ahead of playback, exact frame-range export in native and CLI, durable recovery checkpoints, and PipeWire presentation accounting. Nothing merged yet; not counted in the index.",
+      "bullets": [
+        "#44 Measure coherent callback time through bounded sustained playback",
+        "#46 Render bounded procedural masks and complete compact native cuts",
+        "#50 R3: export exact composition frame ranges in native and CLI workflows",
+        "#54 Preserve canonical PCM across cold seeks and decoder eviction",
+        "#58 Publish durable recovery checkpoints without blocking native input",
+        "#60 Account native PipeWire presentation and reject dropped device writes"
+      ],
+      "when": "Oct 6 · 5:00–11:13 AM EDT",
+      "links": [
+        {
+          "label": "#44",
+          "href": "https://github.com/michaelmonetized/editbay/pull/44"
+        },
+        {
+          "label": "#60",
+          "href": "https://github.com/michaelmonetized/editbay/pull/60"
+        },
+        {
+          "label": "repo",
+          "href": "https://github.com/michaelmonetized/editbay"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 5 replies, ~263 public impressions",
+      "kind": "audience",
+      "summary": "All replies, no original posts. Two answers to @stolinski asking about Omarchy on an M2 Mac mini (keep the Mac partition long enough to pull entitlements through your agent) led with 87 and 74 impressions; also a reply to @lilyraynyc on AI search behavior and a T3 Code office shot for @t3dotcodes. 2 likes total.",
+      "when": "Oct 6 · 12:44–5:52 PM EDT",
+      "links": [
+        {
+          "label": "top reply",
+          "href": "https://x.com/MichaelH_rley/status/2107589740362924268"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Search Console · new indexing reasons on 9 sites",
+      "kind": "ops",
+      "summary": "Overnight batch of new not-indexed reasons for omadesign.app, s12.in, bestwnc.com, jenningscustomhomes.com, hustlelaunch.com, ileague.golf, merchwinner.com, appestatesales.com and coordinatorapp.com (several also on sitemaps). Worth one pass to see if it’s a shared cause.",
+      "when": "Oct 7 · 2:48–4:41 AM EDT"
+    },
+    {
+      "title": "editbay · CodeRabbit free review limit reached",
+      "kind": "ops",
+      "summary": "CodeRabbit stopped reviewing editbay PRs (#48, #52, #60) after using all free OSS reviews; Codex reviews are still landing on #50, #54, #56 and #58.",
+      "when": "Oct 6 · 6:21–11:19 AM EDT"
+    },
+    {
+      "title": "Hustle Launch · October AI Search report ready",
+      "kind": "ops",
+      "summary": "Dash finished the monthly AI Search presence report for Hustle Launch (3 platforms, 1 location).",
+      "when": "Oct 7 · 2:00 AM EDT"
+    },
+    {
+      "title": "Hustle Launch · daily message report (Oct 6)",
+      "kind": "ops",
+      "summary": "Dash daily summary: 2 open messages still waiting.",
+      "when": "Oct 6 · 11:41 PM EDT"
+    },
+    {
+      "title": "Google Cloud · unused OAuth clients (reminder)",
+      "kind": "ops",
+      "summary": "Second notice that inactive OAuth clients are scheduled for automatic deletion. Check none are still needed.",
+      "when": "Oct 6 · 5:22 PM EDT"
+    },
+    {
+      "title": "Search Console · djsidethree.com tracking",
+      "kind": "ops",
+      "summary": "Search Console confirmed djsidethree.com is now being tracked (started Oct 4).",
+      "when": "Oct 6 · 8:26 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "omatainer #510",
+      "detail": "60 commits landed on the app-completion stack in one day; it’s now a 437-file PR. Review and split or merge before it grows further. Open PR stack still 150."
+    },
+    {
+      "title": "editbay R0–R3 PR stack",
+      "detail": "33 open PRs (#1–#60). CodeRabbit is out of free reviews, so lean on Codex comments or wait for the limit to reset before merge gates."
+    },
+    {
+      "title": "Search Console indexing sweep",
+      "detail": "New not-indexed reasons on 9 properties overnight; check for a common cause (sitemaps, redirects, noindex)."
+    },
+    {
+      "title": "Naarchy Product Hunt day",
+      "detail": "Launch was set for Oct 6 · 3:01 AM EDT; no post-launch numbers captured in this window."
+    },
+    {
+      "title": "naarchy CI",
+      "detail": "GitHub-hosted runners were blocked by an account-level lock on Oct 5; confirm ci can run on main."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment storage at 100%, Fast Origin Transfer at 75%, Actions storage at 100%. Clean old deployments and artifacts before builds start failing."
+    },
+    {
+      "title": "Hustle Launch #51 provider QA",
+      "detail": "Still open for the remaining provider/account QA."
+    },
+    {
+      "title": "flea-omadesign #2",
+      "detail": "Quick Look/thumbnail PR still open with CodeRabbit comments to address."
+    },
+    {
+      "title": "Waynesville Ship CI",
+      "detail": "Ship red on main (latest ee8ec47); no new commits this window."
+    },
+    {
+      "title": "uncap Sentry UNCAP-N / UNCAP-P",
+      "detail": "Two client errors from Oct 4; triage when free."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error; still open."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "Google review from Cody still to answer; Dash shows 2 open messages."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye threads remain ignore-until-reopen. Jason Livengood / Sinclair stays parked until the Sandy conversation."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "WordPress auto-updated to 7.1.3 on Oct 6; backups still need free Dropbox space (or a new target)."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified, still open."
+    }
+  ]
+}
