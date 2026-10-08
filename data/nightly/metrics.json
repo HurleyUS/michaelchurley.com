@@ -295,5 +295,14 @@
     },
     "source": "live-2026-10-07",
     "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. X: 5 replies measured (263 public impressions). omatainer pushed 60 commits (27 features) to open #510; editbay opened 9 R2/R3 PRs (#44–#60) unmerged. Vercel deploy count unavailable; GitHub merge/release used as proxy."
+  },
+  {
+    "date": "2026-10-07",
+    "productivity": 1,
+    "audience": {
+      "xImpressions": 471
+    },
+    "source": "live-2026-10-08",
+    "notes": "productivity = merged PRs (0) + GitHub releases (1: omatainer controller-profiles-1.0.0 prerelease) in 5am–5am ET window. X: 4 replies measured (471 public impressions). omatainer pushed 59 commits to open #510; editbay opened 3 release PRs (#63, #65, #67) unmerged plus tracker #61. Vercel deploy count unavailable; GitHub merge/release used as proxy."
   }
 ]

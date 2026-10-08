@@ -1,0 +1,213 @@
+{
+  "date": "2026-10-07",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 7, 2026 · 5:00 AM EDT → Oct 8, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-07T09:00:00Z → 2026-10-08T09:00:00Z",
+    "generatedEt": "Oct 8, 2026 · ~5:10 AM EDT",
+    "xPostsMeasured": 4,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 1: omatainer published a controller-profiles 1.0.0 data preview (signed NS7, APC40 mkII, DDJ-SP1 and MPD232 profiles) while 59 more commits landed on #510 — continuous crate playback, key shift and harmonic matching, slip, phrase slicer, MIDI clock in, loop rolls, DJ FX units, native VST3 hosting, Live Set and Pack import, MIDI transforms, generators and music file management. Three producer/DJ todos were folded into one (#511) at Michael’s request. editbay opened its ship-it tracker (#61) plus 3 release PRs (#63, #65, #67): native editing and delivery, a qualified two-hour realtime playback run, and checked install/rollback. Audience: 4 X replies, ~471 impressions. Inbox: Hustle Launch has a disconnected Google page; review bots weighed in on the new editbay PRs.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omatainer · Controller profiles 1.0.0 (data preview)",
+      "kind": "shipped",
+      "summary": "First published release of Omatainer’s declarative controller data: a signed catalog plus JSON profiles for the Numark NS7, Akai APC40 mkII, Pioneer DDJ-SP1 and Akai MPD232. Marked prerelease; it belongs to #510 and doesn’t mark the producer/DJ release complete. Counted in the index.",
+      "bullets": [
+        "Catalog authenticated with Ed25519; every asset has an exact model/port role, version, size and SHA-256",
+        "Downloads are JSON only, with no executable driver or factory sound",
+        "App side: authenticated downloads bind to the controller’s native USB identity, keep the bundled rollback available, and recover from cache without network access",
+        "Current physical qualification is still pending, per the release notes"
+      ],
+      "when": "Oct 7 · 11:21 PM EDT",
+      "links": [
+        {
+          "label": "release",
+          "href": "https://github.com/michaelmonetized/omatainer/releases/tag/controller-profiles-1.0.0"
+        },
+        {
+          "label": "#510",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/510"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omatainer · #510 another 59 commits toward producer + DJ completion",
+      "kind": "shipped",
+      "summary": "The app-completion stack kept moving around the clock, with each feature followed by a recorded, qualified install on the running rig. #510 is still open (now 722 files); not counted in the index.",
+      "bullets": [
+        "DJ: continuous playback from ordered crates, independent deck key shift with harmonic key matching, shared slip playback, phrase slicer, held loop rolls and reverse censor, chromatic cue pads, independently assigned FX units with draining tails",
+        "Sync and hardware: follows timestamped MIDI song clock and transport; powered-hub controller acceptance recorded",
+        "Producer: isolated native VST3 hosting with a scanner and nonblocking audio bridge, wired into routing, MIDI, undo and export; reviewed Live Set import with retained dependencies; producer library and Pack discovery",
+        "Composition: reversible MIDI transformations, saved key and scale, note chance and velocity lanes, editable chord/melody/articulation generators, opt-in capture of recently monitored MIDI",
+        "Library: versioned DJ library migration with source provenance, mounted-volume discovery, reviewed music file management with recoverable moves"
+      ],
+      "when": "Oct 7 · 6:02 AM–Oct 8 · 4:03 AM EDT",
+      "links": [
+        {
+          "label": "#510",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/510"
+        },
+        {
+          "label": "#511",
+          "href": "https://github.com/michaelmonetized/omatainer/issues/511"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/editbay · ship tracker #61 + 3 release PRs",
+      "kind": "shipped",
+      "summary": "editbay set out its five release gaps in one tracker and opened a PR for three of them. Nothing merged yet; not counted in the index.",
+      "bullets": [
+        "#63 Native editing, checked client delivery and portable projects: paired tracks, overwrite/slip/roll/slide, titles and fades, H.264/AAC and ProRes/PCM output, an eight-job render queue, and decoded QC of every frame before publishing",
+        "#65 Continuous native realtime playback: PipeWire fed from a fixed Rust ring; a recorded two-hour run hit the exact sample count with zero native underruns",
+        "#67 Checked native installation and verified rollback: pinned-manifest installer that stages, verifies and keeps the previous version",
+        "Tracking issues #62, #64 and #66 opened alongside"
+      ],
+      "when": "Oct 7 · 3:10–6:58 PM EDT",
+      "links": [
+        {
+          "label": "#61",
+          "href": "https://github.com/michaelmonetized/editbay/issues/61"
+        },
+        {
+          "label": "#63",
+          "href": "https://github.com/michaelmonetized/editbay/pull/63"
+        },
+        {
+          "label": "#65",
+          "href": "https://github.com/michaelmonetized/editbay/pull/65"
+        },
+        {
+          "label": "#67",
+          "href": "https://github.com/michaelmonetized/editbay/pull/67"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 4 replies, ~471 public impressions",
+      "kind": "audience",
+      "summary": "All replies, no original posts. A one-word reply to @thdxr led with 281 impressions; link replies to @wesbos (104), @syntaxfm (79) and @stolinski (7). 4 likes total.",
+      "when": "Oct 7 · 1:56–6:31 PM EDT",
+      "links": [
+        {
+          "label": "top reply",
+          "href": "https://x.com/MichaelH_rley/status/2107962085611331619"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Hustle Launch · Google page disconnected",
+      "kind": "ops",
+      "summary": "Dash flagged 1 disconnected Google page; some Hustle Launch features won’t work until it’s reconnected.",
+      "when": "Oct 7 · 11:39 AM EDT"
+    },
+    {
+      "title": "editbay · review bots on the new release PRs",
+      "kind": "ops",
+      "summary": "CodeRabbit posted 4 actionable comments on #63; Codex left review suggestions on #60, #65 and #67.",
+      "when": "Oct 7 · 6:14–11:18 PM EDT"
+    },
+    {
+      "title": "omarchy-pkgs · Tests run failed on the omadesign-bin branch",
+      "kind": "ops",
+      "summary": "The Tests workflow on #343’s branch failed with no jobs run, which points at workflow config rather than the package.",
+      "when": "Oct 7 · 2:47 PM EDT"
+    },
+    {
+      "title": "Cloudflare · new certificate activity for hustlelaunch.com",
+      "kind": "ops",
+      "summary": "Alert for a certificate outside Cloudflare’s routine types. Confirm it’s expected.",
+      "when": "Oct 7 · 8:37 AM EDT"
+    },
+    {
+      "title": "Hustle Launch · daily message report (Oct 7)",
+      "kind": "ops",
+      "summary": "Dash daily summary: 2 open messages still waiting.",
+      "when": "Oct 8 · 1:10 AM EDT"
+    },
+    {
+      "title": "Crowdo · Startup Launch Pack update",
+      "kind": "ops",
+      "summary": "Next part of the starter package is ready to review, including Quora authority placements.",
+      "when": "Oct 8 · 4:53 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "omatainer #510 / #511",
+      "detail": "Now 722 files and still open, with #511 as the single consolidated todo. Review and split or merge before it grows further. Open PR stack still 150."
+    },
+    {
+      "title": "editbay release PRs",
+      "detail": "36 open PRs (#1–#67). Address CodeRabbit’s 4 comments on #63 and the Codex notes on #60/#65/#67; #61 tracks the remaining gaps."
+    },
+    {
+      "title": "Hustle Launch Google page",
+      "detail": "Reconnect the disconnected Google page in Dash."
+    },
+    {
+      "title": "omarchy-pkgs #343",
+      "detail": "omadesign-bin PR’s Tests workflow ran no jobs; check the workflow trigger."
+    },
+    {
+      "title": "Search Console indexing sweep",
+      "detail": "New not-indexed reasons on 9 properties (Oct 7 batch); check for a common cause (sitemaps, redirects, noindex)."
+    },
+    {
+      "title": "naarchy CI",
+      "detail": "GitHub-hosted runners were blocked by an account-level lock on Oct 5; confirm ci can run on main."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment storage at 100%, Fast Origin Transfer at 75%, Actions storage at 100%. Clean old deployments and artifacts before builds start failing."
+    },
+    {
+      "title": "Hustle Launch #51 provider QA",
+      "detail": "Still open for the remaining provider/account QA."
+    },
+    {
+      "title": "flea-omadesign #2",
+      "detail": "Quick Look/thumbnail PR still open with CodeRabbit comments to address."
+    },
+    {
+      "title": "Waynesville Ship CI",
+      "detail": "Ship red on main (latest ee8ec47); no new commits this window."
+    },
+    {
+      "title": "uncap Sentry UNCAP-N / UNCAP-P",
+      "detail": "Two client errors from Oct 4; triage when free."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error; still open."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "Google review from Cody still to answer; Dash shows 2 open messages."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye threads remain ignore-until-reopen. Jason Livengood / Sinclair stays parked until the Sandy conversation."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Backups still need free Dropbox space (or a new target)."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified, still open."
+    }
+  ]
+}
