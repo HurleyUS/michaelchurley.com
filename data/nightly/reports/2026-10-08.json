@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-08",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 8, 2026 · 5:00 AM EDT → Oct 9, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-08T09:00:00Z → 2026-10-09T09:00:00Z",
+    "generatedEt": "Oct 9, 2026 · ~5:05 AM EDT",
+    "xPostsMeasured": 9,
+    "inboxSignalItems": 3,
+    "tldr": "Ships/index 0: nothing merged or released, but 45 more commits landed on omatainer #510 (now 773 files) — CPU-budget recovery, per-deck channel effects, saved FX layouts, Live 12 Set import, recorded-audio placement, large-set fades and NS7 suspend/wake recovery — and a new public repo, math-skills, went live. Audience: 8 X replies and 1 repost, ~1,607 public impressions, led by a T3 Code reply that drew 1,045. Inbox: Solo Launches asked if Omadesign is still active and the Buffer API token expires Oct 15.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omatainer · #510 another 45 commits toward producer + DJ completion",
+      "kind": "shipped",
+      "summary": "The single completion PR kept moving from morning to evening, each change followed by a recorded native qualification. #510 is still open (773 files); not counted in the index.",
+      "bullets": [
+        "DJ: qualified per-deck channel effects with learned selection, portable DJ FX layouts with reviewed atomic recall, and measured loopback return levels",
+        "Recovery: audio streams and watchdog signals recover after Linux CPU-budget exhaustion; stopped-controller recovery; NS7 USB transport restored after host suspend and reset on wake",
+        "Producer: reviewed Live 12 Set import (main routes, disabled return sends, complete imported Sets), recorded audio placed with compensated timing, aligned Live prints exported",
+        "Playback: large-set fades with refusal of unprimed fades and unavailable output routes; routed waveform positions aligned to delayed audio",
+        "Performance: bounded history reads, shared voice filter coefficients, and audio workers scheduled on the fastest allowed CPU class"
+      ],
+      "when": "Oct 8 · 5:49 AM–7:48 PM EDT",
+      "links": [
+        {
+          "label": "#510",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/510"
+        },
+        {
+          "label": "#511",
+          "href": "https://github.com/michaelmonetized/omatainer/issues/511"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/math-skills · published",
+      "kind": "shipped",
+      "summary": "A new public repo: “Skills for Real Mathematicians,” a parody of mattpocock/skills re-geared for research math. Two commits, README marked published; not counted in the index.",
+      "when": "Oct 8 · 6:29 PM EDT",
+      "links": [
+        {
+          "label": "math-skills",
+          "href": "https://github.com/michaelmonetized/math-skills"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 8 replies + 1 repost, ~1,607 public impressions",
+      "kind": "audience",
+      "summary": "A reply on the T3 Code thread led with 1,045 impressions, followed by a reply to @theo (248) and a @shadcn font-weight reply (186). 7 likes total across the replies; the repost of @wesbos is excluded from impressions.",
+      "when": "Oct 8 · 12:02–5:23 PM EDT",
+      "links": [
+        {
+          "label": "top reply",
+          "href": "https://x.com/MichaelH_rley/status/2108282878618398760"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Omadesign · Solo Launches asks if it’s still active",
+      "kind": "ops",
+      "summary": "Sharan at Solo Launches wrote “quick question re: Omadesign” asking whether you’re still working on it.",
+      "when": "Oct 9 · 12:46 AM EDT"
+    },
+    {
+      "title": "Buffer · API token expiring",
+      "kind": "ops",
+      "summary": "The “hustle” API token expires Oct 15, 2026; rotate it to avoid disrupting posting integrations.",
+      "when": "Oct 8 · 1:00 PM EDT"
+    },
+    {
+      "title": "Buffer · new sign-in confirmation",
+      "kind": "ops",
+      "summary": "Buffer asked to confirm a recent login attempt on Oct 8 evening; confirm it was you.",
+      "when": "Oct 8 · 7:37 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "omatainer #510 / #511",
+      "detail": "Now 773 files (+214k/−3k lines) and still open, with #511 as the single consolidated todo. Review and split or merge before it grows further. Open PR stack still 150."
+    },
+    {
+      "title": "editbay release PRs",
+      "detail": "36 open PRs (#1–#67). Address CodeRabbit’s 4 comments on #63 and the Codex notes on #60/#65/#67; #61 tracks the remaining gaps."
+    },
+    {
+      "title": "Omadesign · Solo Launches follow-up",
+      "detail": "Sharan from Solo Launches asked whether Omadesign is still active; decide whether to answer."
+    },
+    {
+      "title": "Hustle Launch Google page",
+      "detail": "Reconnect the disconnected Google page in Dash."
+    },
+    {
+      "title": "omarchy-pkgs #343",
+      "detail": "omadesign-bin PR’s Tests workflow ran no jobs; check the workflow trigger."
+    },
+    {
+      "title": "Search Console indexing sweep",
+      "detail": "New not-indexed reasons on 9 properties (Oct 7 batch); check for a common cause (sitemaps, redirects, noindex)."
+    },
+    {
+      "title": "naarchy CI",
+      "detail": "GitHub-hosted runners were blocked by an account-level lock on Oct 5; confirm ci can run on main."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment storage at 100%, Fast Origin Transfer at 75%, Actions storage at 100%. Clean old deployments and artifacts before builds start failing."
+    },
+    {
+      "title": "Hustle Launch #51 provider QA",
+      "detail": "Still open for the remaining provider/account QA."
+    },
+    {
+      "title": "flea-omadesign #2",
+      "detail": "Quick Look/thumbnail PR still open with CodeRabbit comments to address."
+    },
+    {
+      "title": "Waynesville Ship CI",
+      "detail": "Ship red on main (latest ee8ec47); no new commits this window."
+    },
+    {
+      "title": "uncap Sentry UNCAP-N / UNCAP-P",
+      "detail": "Two client errors from Oct 4; triage when free."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error; still open."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "Google review from Cody still to answer; Dash shows 2 open messages."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye threads remain ignore-until-reopen. Jason Livengood / Sinclair stays parked until the Sandy conversation."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Backups still need free Dropbox space (or a new target)."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified, still open."
+    },
+    {
+      "title": "Buffer API token",
+      "detail": "The “hustle” API token expires Oct 15; rotate it before scheduled posting breaks."
+    }
+  ]
+}
