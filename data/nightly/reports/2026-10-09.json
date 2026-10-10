@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-09",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 9, 2026 · 5:00 AM EDT → Oct 10, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-09T09:00:00Z → 2026-10-10T09:00:00Z",
+    "generatedEt": "Oct 10, 2026 · ~5:00 AM EDT",
+    "xPostsMeasured": 7,
+    "inboxSignalItems": 4,
+    "tldr": "Ships/index 2: Naarchy 0.5.0 shipped — the seasonal-welcomes PR (#3) merged and the v0.5.0 release went out, ahead of its Product Hunt launch at 12:01 AM PT today. Audience: 7 X posts (6 replies, 1 original), ~522 public impressions, led by two @theo replies (242 and 204). Inbox: Naarchy’s Product Hunt launch goes live today, XERJ selected Omadesign for its Corpus Hub, and new 5-star reviews came in for Mack’s Shack BBQ.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/naarchy · v0.5.0 released",
+      "kind": "shipped",
+      "summary": "PR #3, “Add seasonal welcomes and prepare Naarchy 0.5.0,” merged (7 commits, 27 files, +1,782/−146) and the v0.5.0 release was published about five minutes later. Counted in the index as 1 merged PR + 1 release.",
+      "bullets": [
+        "Seasonal welcomes and costumes for the island",
+        "Reconciled the seasonal branch with current launch main",
+        "Simplified calendar validation to satisfy Rust 1.92 Clippy",
+        "Recorded architecture build evidence and runtime requirements in the docs"
+      ],
+      "when": "Oct 9 · 7:25 AM–8:45 AM EDT",
+      "links": [
+        {
+          "label": "PR #3",
+          "href": "https://github.com/michaelmonetized/naarchy/pull/3"
+        },
+        {
+          "label": "v0.5.0",
+          "href": "https://github.com/michaelmonetized/naarchy/releases/tag/v0.5.0"
+        }
+      ]
+    },
+    {
+      "title": "michaelchurley.com · nightly: 2026-10-08 published",
+      "kind": "shipped",
+      "summary": "The previous stand-up report went live on the Nightly page.",
+      "when": "Oct 9 · 5:03 AM EDT",
+      "links": [
+        {
+          "label": "Nightly",
+          "href": "https://www.michaelchurley.com/nightly"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 7 posts (6 replies + 1 original), ~522 public impressions",
+      "kind": "audience",
+      "summary": "A reply to @theo’s “🪦” led with 242 impressions, then a “What’s chrome?” reply on the T3 Code vs. Chrome thread (204, 2 likes, 2 replies) and a reply to @kenwheeler (31). 4 likes total; a quip about an upcoming tech SEO conference in Durham went out late in the window.",
+      "when": "Oct 9 · 6:16 AM–Oct 9 · 9:58 PM EDT",
+      "links": [
+        {
+          "label": "top reply",
+          "href": "https://x.com/MichaelH_rley/status/2108504830582882744"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Naarchy · Product Hunt launch is live today",
+      "kind": "ops",
+      "summary": "Product Hunt confirmed Naarchy (“A little island for everything on your Linux desktop”) goes live at 12:01 AM PT on Oct 10 (3:01 AM ET); it suggests adding a maker comment and a Product Hunt embed on the landing page.",
+      "when": "Oct 9 · 3:01 PM EDT",
+      "links": [
+        {
+          "label": "Naarchy on Product Hunt",
+          "href": "https://www.producthunt.com/products/naarchy?launch=naarchy"
+        }
+      ]
+    },
+    {
+      "title": "Omadesign · selected for XERJ Corpus Hub",
+      "kind": "ops",
+      "summary": "Ivan, founder of XERJ (an open-source search engine for coding agents), says Omadesign was selected for the XERJ Corpus Hub.",
+      "when": "Oct 10 · 2:06 AM EDT"
+    },
+    {
+      "title": "Mack’s Shack BBQ · new reviews",
+      "kind": "ops",
+      "summary": "A new 5-star review from Nadean Banks (“Best brisket I’ve had”) landed in Dash, plus a new Google review from Mariana waiting for a response.",
+      "when": "Oct 9 · 5:02–8:23 PM EDT"
+    },
+    {
+      "title": "Hustle Launch · daily message report",
+      "kind": "ops",
+      "summary": "The Dash daily report shows 2 open messages.",
+      "when": "Oct 9 · 8:41 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "omatainer #510 / #511",
+      "detail": "Still open at 773 files (+214k/−3k lines) with no new pushes in this window; #511 stays the single consolidated todo. Review and split or merge before it grows further."
+    },
+    {
+      "title": "editbay release PRs",
+      "detail": "36 open PRs (#1–#67), none touched in this window. Address CodeRabbit’s 4 comments on #63 and the Codex notes on #60/#65/#67; #61 tracks the remaining gaps."
+    },
+    {
+      "title": "Naarchy · Product Hunt launch day",
+      "detail": "Launch went live at 3:01 AM ET today. Add the maker comment, drop in the Product Hunt embed, and reply to early comments."
+    },
+    {
+      "title": "Omadesign · XERJ Corpus Hub",
+      "detail": "XERJ selected Omadesign; decide whether to respond or claim the listing."
+    },
+    {
+      "title": "Omadesign · Solo Launches follow-up",
+      "detail": "Sharan from Solo Launches asked whether Omadesign is still active; decide whether to answer."
+    },
+    {
+      "title": "Hustle Launch Google page",
+      "detail": "Reconnect the disconnected Google page in Dash."
+    },
+    {
+      "title": "omarchy-pkgs #343",
+      "detail": "omadesign-bin PR’s Tests workflow ran no jobs; check the workflow trigger."
+    },
+    {
+      "title": "Search Console indexing sweep",
+      "detail": "New not-indexed reasons on 9 properties (Oct 7 batch); check for a common cause (sitemaps, redirects, noindex)."
+    },
+    {
+      "title": "naarchy CI",
+      "detail": "Confirm CI can run on main now that 0.5.0 shipped; GitHub-hosted runners were blocked by an account-level lock on Oct 5."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment storage at 100%, Fast Origin Transfer at 75%, Actions storage at 100%. Clean old deployments and artifacts before builds start failing."
+    },
+    {
+      "title": "Hustle Launch #51 provider QA",
+      "detail": "Still open for the remaining provider/account QA."
+    },
+    {
+      "title": "flea-omadesign #2",
+      "detail": "Quick Look/thumbnail PR still open with CodeRabbit comments to address."
+    },
+    {
+      "title": "Waynesville Ship CI",
+      "detail": "Ship red on main (latest ee8ec47); no new commits this window."
+    },
+    {
+      "title": "uncap Sentry UNCAP-N / UNCAP-P",
+      "detail": "Two client errors from Oct 4; triage when free."
+    },
+    {
+      "title": "getat.me Sentry GETATME-9",
+      "detail": "Convex posts:getAllPosts server error; still open."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "Google reviews from Cody and Mariana still to answer; Dash shows 2 open messages."
+    },
+    {
+      "title": "BirdEye / Sinclair holds",
+      "detail": "BirdEye threads remain ignore-until-reopen. Jason Livengood / Sinclair stays parked until the Sandy conversation."
+    },
+    {
+      "title": "salespromis Dropbox backup",
+      "detail": "Backups still need free Dropbox space (or a new target)."
+    },
+    {
+      "title": "Search Console dateModified",
+      "detail": "Profile page structured data: invalid dateModified, still open."
+    },
+    {
+      "title": "Buffer API token",
+      "detail": "The “hustle” API token expires Oct 15; rotate it before scheduled posting breaks."
+    }
+  ]
+}
