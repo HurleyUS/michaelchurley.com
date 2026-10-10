@@ -31,9 +31,16 @@ const SHIELDS = [
  * Same layout as the omadesign announcement: logo and name on the left,
  * the launch link beside it, and GitHub style count shields underneath.
  * @param props.className Extra classes for the outer section.
+ * @param props.siteLink Show the link to the Naarchy page (off on that page itself).
  * @returns The announcement section.
  */
-export default function ProductHuntNaarchyBanner({ className = "" }: { className?: string }) {
+export default function ProductHuntNaarchyBanner({
+  className = "",
+  siteLink = true,
+}: {
+  className?: string;
+  siteLink?: boolean;
+}) {
   return (
     <section
       className={`flex flex-col bg-Latte-Base dark:bg-Mocha-Base border-y border-Latte-Surface0 dark:border-Mocha-Surface0 py-lg ${className}`}
@@ -50,12 +57,14 @@ export default function ProductHuntNaarchyBanner({ className = "" }: { className
               className="w-14 h-auto"
             />
             <p className="text-sm font-black text-Text">Naarchy is live on Product Hunt</p>
-            <a
-              href="/portfolio/naarchy"
-              className="text-xs text-Subtext0 hover:text-Blue underline-offset-2 hover:underline"
-            >
-              michaelchurley.com/portfolio/naarchy
-            </a>
+            {siteLink && (
+              <a
+                href="/portfolio/naarchy"
+                className="text-xs text-Subtext0 hover:text-Blue underline-offset-2 hover:underline"
+              >
+                michaelchurley.com/portfolio/naarchy
+              </a>
+            )}
           </div>
 
           <div className="flex flex-col items-center sm:items-start gap-xs text-center sm:text-left">

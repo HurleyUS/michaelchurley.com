@@ -122,7 +122,7 @@ export default function NaarchyExperience() {
       <section className="n-hero" id="n-top">
         <div className="n-orbit n-orbit-one" aria-hidden="true" />
         <div className="n-orbit n-orbit-two" aria-hidden="true" />
-        <ProductHuntNaarchyBanner className="n-ph-banner" />
+        <ProductHuntNaarchyBanner className="n-ph-banner" siteLink={false} />
         <div className="n-hero-top">
           <span>
             <i /> MADE FOR YOUR LINUX DESKTOP
