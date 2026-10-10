@@ -8,6 +8,7 @@ import Link from "next/link";
 import { PiCalendarPlusLight } from "react-icons/pi";
 import BookingForm from "@/components/booking/booking-form";
 import BookingModal from "@/components/booking/booking-modal";
+import ProductHuntNaarchyBanner from "@/components/product-hunt-naarchy-banner";
 import ProductHuntOmadesignEmbed from "@/components/product-hunt-omadesign-embed";
 import { formatWorkDates, RESUME } from "@/lib/resume";
 import { PROFILE } from "@/lib/site-profile";
@@ -78,6 +79,7 @@ export default function Home() {
         </ContainerBoxedCenter>
       </section>
 
+      <ProductHuntNaarchyBanner />
       <ProductHuntOmadesignEmbed />
       <section
         id="who-is-michael-c-hurley"
