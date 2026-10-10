@@ -890,3 +890,12 @@ html:has(.naarchy-launch) body > footer {
     min-height: 800px;
   }
 }
+.naarchy-launch .n-ph-banner {
+  width: min(930px, 100%);
+  margin: 0 auto 28px;
+  border-radius: 18px;
+  border: 1px solid #f7f6ee33;
+  text-align: left;
+  letter-spacing: normal;
+  font-family: inherit;
+}

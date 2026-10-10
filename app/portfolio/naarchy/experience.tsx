@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import ProductHuntNaarchyBanner from "@/components/product-hunt-naarchy-banner";
 
 const repo = "https://github.com/michaelmonetized/naarchy";
 const chapters = [
@@ -121,6 +122,7 @@ export default function NaarchyExperience() {
       <section className="n-hero" id="n-top">
         <div className="n-orbit n-orbit-one" aria-hidden="true" />
         <div className="n-orbit n-orbit-two" aria-hidden="true" />
+        <ProductHuntNaarchyBanner className="n-ph-banner" />
         <div className="n-hero-top">
           <span>
             <i /> MADE FOR YOUR LINUX DESKTOP
