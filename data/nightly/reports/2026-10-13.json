@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-13",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 13, 2026 · 5:00 AM EDT → Oct 14, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-13T09:00:00Z → 2026-10-14T09:00:00Z",
+    "generatedEt": "Oct 14, 2026 · backfilled ~5:30 PM EDT (scheduled run failed)",
+    "xPostsMeasured": 4,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 2: Omadesign 0.6.3-nightly.20261013.0001 “Brushes that follow your hand” shipped — #207 (288 files) folded in @NixFred’s fixes with brush dynamics, tablet input, canvas fixes and fresh product media. Audience: 4 X posts (3 replies, 1 original release post), ~85 public impressions. Inbox: Crowdo handed the partnership call to its growth manager, tools.cafe found Naarchy, and Mack’s got 4 new Google reviews.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · 0.6.3-nightly.20261013.0001 — Brushes that follow your hand",
+      "kind": "shipped",
+      "summary": "PR #207 (288 files, +6,595/−3,147) merged and the release was published. Integrates @NixFred’s #202–#204 fixes. Counted as 1 merged PR + 1 release.",
+      "bullets": [
+        "Complete brush dynamics and tablet input; light pen strokes stay continuous, stylus buttons release safely",
+        "Fixed rotated scaling and sidebar resizing",
+        "Replaced old product media with current native captures",
+        "Shorthand release post covering changes since Oct 2; qualified on native ARM64 and IntelPro"
+      ],
+      "when": "Oct 13 · 9:02 AM–6:22 PM EDT",
+      "links": [
+        {
+          "label": "PR #207",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/207"
+        },
+        {
+          "label": "release",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.6.3-nightly.20261013.0001"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 4 posts (3 replies + 1 original), ~85 public impressions",
+      "kind": "audience",
+      "summary": "The “New in omadesign 0.6.3-nightly.20261013.0001” release post (27) and a reply to @kenwheeler (27) led; two replies to @ncfrontiersman on agents and VNC added 31.",
+      "when": "Oct 13 · 9:12–9:26 PM EDT",
+      "links": [
+        {
+          "label": "release post",
+          "href": "https://x.com/MichaelH_rley/status/2110176936446079414"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Crowdo · partnership call",
+      "kind": "ops",
+      "summary": "Anni says Igor, Crowdo’s growth manager, handles partnership calls; follow up to book it.",
+      "when": "Oct 13 · 10:01 AM EDT"
+    },
+    {
+      "title": "Naarchy · tools.cafe",
+      "kind": "ops",
+      "summary": "tools.cafe found Naarchy and wrote in about featuring it.",
+      "when": "Oct 13 · 8:18 AM EDT"
+    },
+    {
+      "title": "Mack’s Shack BBQ · 4 new Google reviews",
+      "kind": "ops",
+      "summary": "Google Business Profile shows 4 new reviews to answer; the Dash daily report shows 3 open messages.",
+      "when": "Oct 13 · 7:39 AM–11:19 PM EDT"
+    },
+    {
+      "title": "Vercel · 8 misconfigured domains",
+      "kind": "ops",
+      "summary": "Hustle Launch team has 8 misconfigured domains across 5 projects.",
+      "when": "Oct 14 · 2:54 AM EDT"
+    },
+    {
+      "title": "Thumbtack · software development leads",
+      "kind": "ops",
+      "summary": "New lead requests from Clovis, CA and Tempe, AZ (plus Port Jefferson Station, NY the day before).",
+      "when": "Oct 13 · 2:53 PM–Oct 14 · 12:35 AM EDT"
+    },
+    {
+      "title": "WordPress backup failing",
+      "kind": "ops",
+      "summary": "Softaculous pre-upgrade backups failed again, so auto-upgrades were skipped.",
+      "when": "Oct 13 · 8:54 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Vercel misconfigured domains",
+      "detail": "Fix or remove the 8 misconfigured domains on Hustle Launch."
+    },
+    {
+      "title": "Mack’s reviews + open messages",
+      "detail": "Answer the 4 new Google reviews; Dash shows 3 open messages."
+    },
+    {
+      "title": "omatainer #510 / #511",
+      "detail": "#510 still open and unmerged; #511 stays the single consolidated todo. Review and split or merge before it grows further."
+    },
+    {
+      "title": "editbay release PRs",
+      "detail": "Release PRs still open (now including #69); address the CodeRabbit/Codex notes on #60/#63/#65/#67."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment and Actions storage were at 100% last check; clean old deployments and artifacts."
+    },
+    {
+      "title": "Buffer API token",
+      "detail": "The “hustle” API token expires Oct 15; rotate it before scheduled posting breaks."
+    },
+    {
+      "title": "Daily Stand Up routine",
+      "detail": "Scheduled runs on Oct 11–14 failed during a usage outage; Oct 10–13 reports were backfilled on Oct 14."
+    }
+  ]
+}

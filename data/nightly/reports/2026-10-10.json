@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-10",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 10, 2026 · 5:00 AM EDT → Oct 11, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-10T09:00:00Z → 2026-10-11T09:00:00Z",
+    "generatedEt": "Oct 14, 2026 · backfilled ~5:30 PM EDT (scheduled run failed)",
+    "xPostsMeasured": 12,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 7: Naarchy launch day — 0.5.1 (plugin packages, T3 Code live activities, notifications on the island) and 0.5.2 shipped within 20 minutes, slopops Fleet #4 merged, and michaelchurley.com got a Product Hunt launch banner (#97); both dotfiles repos were scrubbed of tracked secrets. Audience: 12 X posts (10 replies, 2 original), ~994 public impressions. Inbox: Product Hunt confirmed Naarchy went live, and the first launch-day outreach arrived.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/naarchy · v0.5.1 + v0.5.2 released",
+      "kind": "shipped",
+      "summary": "PR #5 (plugin package system + T3 Code live activities; notifications on the island, 30 files, +3,469/−325) merged, then release PRs #6 and #7 merged and v0.5.1 and v0.5.2 went out. Counted as 3 merged PRs + 2 releases.",
+      "bullets": [
+        "Plugin package system with a T3 Code live-activities example",
+        "Notifications on the island: bell + count, peek, click to act, DND",
+        "0.5.2: notification keybind commands; queue for the notification bus name"
+      ],
+      "when": "Oct 10 · 9:00–10:01 AM EDT",
+      "links": [
+        {
+          "label": "PR #5",
+          "href": "https://github.com/michaelmonetized/naarchy/pull/5"
+        },
+        {
+          "label": "v0.5.1",
+          "href": "https://github.com/michaelmonetized/naarchy/releases/tag/v0.5.1"
+        },
+        {
+          "label": "v0.5.2",
+          "href": "https://github.com/michaelmonetized/naarchy/releases/tag/v0.5.2"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/slopops · Fleet: live T3 Code environments (#4)",
+      "kind": "shipped",
+      "summary": "Fleet now lists live T3 Code environments via MCP and opens a quick shell (4 files, +640/−79).",
+      "when": "Oct 10 · 9:14–9:47 AM EDT",
+      "links": [
+        {
+          "label": "PR #4",
+          "href": "https://github.com/michaelmonetized/slopops/pull/4"
+        }
+      ]
+    },
+    {
+      "title": "michaelchurley.com · Naarchy Product Hunt launch banner (#97)",
+      "kind": "shipped",
+      "summary": "A launch banner pointing to Naarchy on Product Hunt went live on the site.",
+      "when": "Oct 10 · 8:31–8:35 AM EDT",
+      "links": [
+        {
+          "label": "PR #97",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/97"
+        }
+      ]
+    },
+    {
+      "title": "dotfiles-omarchy + dotfiles-quattro · secrets scrubbed",
+      "kind": "shipped",
+      "summary": "14 commits across both dotfiles repos: Naarchy now owns notifications, comma keybinds, slopops Fleet; then credentials, tokens, caches and app state were untracked and the tracked tree was scrubbed.",
+      "when": "Oct 10 · 12:41–5:16 PM EDT",
+      "links": [
+        {
+          "label": "dotfiles-omarchy",
+          "href": "https://github.com/michaelmonetized/dotfiles-omarchy"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 12 posts (10 replies + 2 original), ~994 public impressions",
+      "kind": "audience",
+      "summary": "A reply to @kenwheeler led with 229 impressions, then a reply to @mark_k (200), a reply to @thdxr (162) and a reply to @poteto noting Naarchy hit 64 Product Hunt upvotes before 8 AM (142). Originals: a #mathday post (70) and “Hey @OmarchyMac users, meet naarchy” (50).",
+      "when": "Oct 10 · 6:20 AM–3:28 PM EDT",
+      "links": [
+        {
+          "label": "top reply",
+          "href": "https://x.com/MichaelH_rley/status/2108914862684250492"
+        },
+        {
+          "label": "Naarchy post",
+          "href": "https://x.com/MichaelH_rley/status/2108912186517061710"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Naarchy · Product Hunt launch is live",
+      "kind": "ops",
+      "summary": "Product Hunt confirmed Naarchy is live and suggested getting verified.",
+      "when": "Oct 10 · 7:01 AM EDT",
+      "links": [
+        {
+          "label": "Naarchy on Product Hunt",
+          "href": "https://www.producthunt.com/products/naarchy?launch=naarchy"
+        }
+      ]
+    },
+    {
+      "title": "Naarchy · launch-day outreach",
+      "kind": "ops",
+      "summary": "KrispiTech (tech blog) upvoted and pitched coverage.",
+      "when": "Oct 10 · 6:34 AM EDT"
+    },
+    {
+      "title": "Mack’s Shack BBQ · new reviews",
+      "kind": "ops",
+      "summary": "Google flagged a review from Nadean, then 2 more new reviews late in the window; the Dash daily report shows 2 open messages.",
+      "when": "Oct 10 · 5:23 AM–Oct 11 · 12:07 AM EDT"
+    },
+    {
+      "title": "Hustle Launch · Sentry weekly reports",
+      "kind": "ops",
+      "summary": "Two Sentry weekly reports for Hustle Launch (Oct 2–9): one at 23 errors (↑64%), the other at 9 issues / 30 errors (↓14%).",
+      "when": "Oct 10 · 2:30–3:34 PM EDT"
+    },
+    {
+      "title": "WordPress backup failing",
+      "kind": "ops",
+      "summary": "Softaculous says the pre-upgrade backup failed again, so plugin/theme auto-upgrades were skipped.",
+      "when": "Oct 10 · 8:54 AM EDT"
+    },
+    {
+      "title": "Raycast Pro trial",
+      "kind": "ops",
+      "summary": "Trial ends tomorrow.",
+      "when": "Oct 10 · 8:31 AM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "Naarchy · Product Hunt follow-through",
+      "detail": "Add the maker comment and Product Hunt embed, reply to early comments, and get verified."
+    },
+    {
+      "title": "naarchy CI",
+      "detail": "Confirm CI runs on main now that 0.5.x shipped."
+    },
+    {
+      "title": "omatainer #510 / #511",
+      "detail": "#510 still open and unmerged; #511 stays the single consolidated todo. Review and split or merge before it grows further."
+    },
+    {
+      "title": "editbay release PRs",
+      "detail": "Release PRs still open (now including #69); address the CodeRabbit/Codex notes on #60/#63/#65/#67."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment and Actions storage were at 100% last check; clean old deployments and artifacts."
+    },
+    {
+      "title": "Buffer API token",
+      "detail": "The “hustle” API token expires Oct 15; rotate it before scheduled posting breaks."
+    },
+    {
+      "title": "Daily Stand Up routine",
+      "detail": "Scheduled runs on Oct 11–14 failed during a usage outage; Oct 10–13 reports were backfilled on Oct 14."
+    }
+  ]
+}
