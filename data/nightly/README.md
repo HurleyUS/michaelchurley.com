@@ -1,44 +1,55 @@
-# Nightly data (CoS publish contract)
+# Nightly public publication contract
 
-Morning routine appends JSON here, commits, and pushes. Vercel redeploys
-`HurleyUS/michaelchurley.com` and `/nightly` updates.
+Everything here is public source data. HTML, React payloads, Markdown, and the
+combined AI-readable site export use it. `/nightly` remains indexable.
 
 ## Files
 
-- `metrics.json` — array of daily points:
-  `{ date, productivity, audience, source?, notes? }`
-- `reports/YYYY-MM-DD.json` — stand-up walkthrough:
-  `{ date, label?, timezone?, meta, shipped[], landed[], inbox[], loops[] }`
+- `reports/YYYY-MM-DD.json`: `{ date, label?, timezone?, meta, shipped[], landed[] }`
+- `meta`: only `tldr?`, `windowEt?`, and `windowUtc?`.
+- Project cards: `title`, `kind`, `summary`, and at least one reviewed public
+  `links[]` source; optional `bullets`, `quote`, `metrics`, and `when`.
+- `metrics.json`: `{ date, productivity, audience, source?, links? }`.
+  `public-project-cards` productivity counts retained in-window project cards,
+  excluding `outside` cards. It is an activity index, not a deployment count.
+  Audience values require public source links; omit unsupported measurements.
+  Filler must use `seed-placeholder`.
 
-## Window
+Report date D summarizes D at 05:00 through D+1 at 05:00 America/New_York
+(exclusive). Use the label `5am–5am ET` and the work-day date.
 
-Report date `D` = the work day being summarized (America/New_York):
+## Content review
 
-- Start: `D at 05:00:00 America/New_York`
-- End: `(D + 1 day) at 05:00:00 America/New_York` (exclusive)
-- Published/read on the morning of `D + 1` (~4:50am)
-- Label: `5am–5am ET`
+Publish completed public project work and clearly labeled public PR activity or
+announcements supported by sources accessible without signing in. Review every
+field, including summaries, quotes, bullets, link labels, metrics, and metadata.
+A public repository link does not make private operational context publishable.
 
-Example: at ~4:50am on Sep 24, publish `reports/2026-09-23.json` for window
-Sep 23 5am → Sep 24 5am (overwrite if present).
+Exclude inbox evidence, email messages or links, open loops and private task
+lists, personal meetings or appointments, billing or account information,
+credentials and security administration, private support conversations, and
+private operational status. Do not move excluded copy to another card, notes,
+metadata, test fixture, commit message, or public log. When public evidence is
+missing, omit the item; do not substitute inferred achievements or chart totals.
+Keep private daily planning in its private channel.
 
-## Rules
+`lib/nightly/publication.ts` rejects unknown fields, excluded sections, common
+private-content patterns, and links outside reviewed public source paths.
+Failures stop rendering and report only a generic message. These checks are
+necessary but cannot replace human review of meaning or current source access.
+Adding a source requires checking anonymous access and reviewing its content.
 
-- **No money in/out on the public Nightly.** Do not publish revenue, Stripe,
-  invoices, past-due, payments, billing amounts, payouts, or `$` framing in
-  metrics, reports, inbox, loops, or UI copy.
-- Prefer omit over invented follower counts.
-- Mark any chart filler with `"source": "seed-placeholder"`.
-- Productivity may be a simple ship/deploy (or merged PR + release) index.
-- `/nightly` is indexable (`robots: index, follow`).
-- **Work only.** Nightly JSON is ships, audience, inbox ops, and loops.
-  Personal calendar/meetings MUST NOT appear in reports; CoS delivers those
-  only in chat with the report link. Do not include `kind: "calendar"` cards
-  or titles starting with `Calendar ·`.
-- Public charts: **productivity + audience only**.
+## Local preparation and validation
 
-## Publish checklist
+1. Re-check current main and use an isolated worktree to preserve concurrent work.
+2. Review all changed report fields against their public sources.
+3. Run `bun run validate:nightly`, `bun test __tests__/lib/nightly-publication.test.tsx`,
+   `bun tsc`, and `bun lint --fix`. The local lint gate includes archive validation.
+4. Check dashboard, every dated HTML and Markdown report, and combined site export.
+   Feeds currently contain blog posts only; re-check any new consumer.
+5. Commit a sanitized category summary. Publishing requires the user's approval.
 
-1. Append/update `metrics.json` for the day (no `revenueUsd`).
-2. Write `reports/YYYY-MM-DD.json` (non-financial inbox/loops only).
-3. `git add data/nightly && git commit -m "nightly: YYYY-MM-DD" && git push`
+Web production builds use Blacksmith through the GitHub organization and deploy
+archived Vercel prebuilt output. Local checks do not deploy. Replacing current
+reports does not remove old Git history, immutable deployments, or third-party
+search/cache copies; do not rewrite history as part of a report correction.

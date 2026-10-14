@@ -11,11 +11,7 @@ export async function generateStaticParams() {
   return dates.map((date) => ({ date }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ date: string }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ date: string }> }) {
   const { date } = await params;
   return {
     title: `Stand Up · ${date}`,
@@ -24,11 +20,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function NightlyReportPage({
-  params,
-}: {
-  params: Promise<{ date: string }>;
-}) {
+export default async function NightlyReportPage({ params }: { params: Promise<{ date: string }> }) {
   const { date } = await params;
   const report = await getReport(date);
   if (!report) notFound();
@@ -40,16 +32,10 @@ export default async function NightlyReportPage({
           Nightly · {date}
         </Link>
         <a className="jump" href="#shipped">
-          What shipped
+          Project activity
         </a>
         <a className="jump" href="#landed">
           How it landed
-        </a>
-        <a className="jump" href="#inbox">
-          Inbox
-        </a>
-        <a className="jump" href="#loops">
-          Open loops
         </a>
         <Link className="jump" href="/nightly">
           ← Dashboard
@@ -67,38 +53,14 @@ export default async function NightlyReportPage({
               <div className="n">24h</div>
               <div className="l">Window</div>
             </div>
-            <div className="ny-metric">
-              <div className="n">{report.meta.deploysInWindow ?? "—"}</div>
-              <div className="l">In-window deploys</div>
-            </div>
-            <div className="ny-metric">
-              <div className="n">{report.meta.xPostsMeasured ?? "—"}</div>
-              <div className="l">X posts measured</div>
-            </div>
-            <div className="ny-metric">
-              <div className="n">
-                {report.meta.inboxSignalItems ?? report.inbox.length}
-              </div>
-              <div className="l">Inbox signal</div>
-            </div>
           </div>
           {report.meta.windowEt ? (
             <p className="ny-note" style={{ marginTop: 16 }}>
-              <strong style={{ color: "var(--ny-text)" }}>ET range:</strong>{" "}
-              {report.meta.windowEt}
+              <strong style={{ color: "var(--ny-text)" }}>ET range:</strong> {report.meta.windowEt}
               {report.meta.windowUtc ? (
                 <>
                   <br />
-                  <strong style={{ color: "var(--ny-text)" }}>UTC:</strong>{" "}
-                  {report.meta.windowUtc}
-                </>
-              ) : null}
-              {report.meta.generatedEt ? (
-                <>
-                  <br />
-                  <span style={{ color: "var(--ny-dim)" }}>
-                    Generated {report.meta.generatedEt}
-                  </span>
+                  <strong style={{ color: "var(--ny-text)" }}>UTC:</strong> {report.meta.windowUtc}
                 </>
               ) : null}
             </p>
@@ -107,12 +69,15 @@ export default async function NightlyReportPage({
 
         <section id="shipped">
           <h2>
-            <span className="num">01</span> What shipped
+            <span className="num">01</span> Project activity
           </h2>
           <p className="ny-lede">
-            Releases, merged PRs, notable commits, and deploys from the window.
+            Public releases, pull requests, and project updates from the window.
           </p>
           <div className="ny-cards">
+            {report.shipped.length === 0 ? (
+              <p className="ny-empty">No public project activity recorded.</p>
+            ) : null}
             {report.shipped.map((c) => (
               <ReportCardView key={c.title} card={c} />
             ))}
@@ -123,41 +88,15 @@ export default async function NightlyReportPage({
           <h2>
             <span className="num">02</span> How it landed
           </h2>
-          <p className="ny-lede">Public distribution metrics.</p>
+          <p className="ny-lede">Public project announcements and distribution.</p>
           <div className="ny-grid-2">
+            {report.landed.length === 0 ? (
+              <p className="ny-empty">No public project announcements recorded.</p>
+            ) : null}
             {report.landed.map((c) => (
               <ReportCardView key={c.title} card={c} />
             ))}
           </div>
-        </section>
-
-        <section id="inbox">
-          <h2>
-            <span className="num">03</span> Inbox as a result
-          </h2>
-          <p className="ny-lede">Signal from the window.</p>
-          <div className="ny-cards">
-            {report.inbox.map((c) => (
-              <ReportCardView key={c.title} card={c} />
-            ))}
-          </div>
-        </section>
-
-        <section id="loops">
-          <h2>
-            <span className="num">04</span> Open loops
-          </h2>
-          <p className="ny-lede">Concrete next moves from the day above.</p>
-          <ol className="ny-loops">
-            {report.loops.map((l) => (
-              <li key={l.title}>
-                <div>
-                  <strong>{l.title}</strong>
-                  <span>{l.detail}</span>
-                </div>
-              </li>
-            ))}
-          </ol>
         </section>
 
         <footer className="ny-footer">

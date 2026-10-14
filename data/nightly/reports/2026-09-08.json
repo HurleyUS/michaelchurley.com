@@ -5,41 +5,19 @@
   "meta": {
     "windowEt": "Sep 8, 2026 · 5:00 AM EDT → Sep 9, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-08T09:00:00Z → 2026-09-09T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 2,
-    "inboxSignalItems": 1,
-    "tldr": "Ships/index 127. Notable: Hustle-Launch/mission-control-os · 1 merged PR; michaelmonetized/hustlemail-com · 1 merged PR; HurleyUS/michaelchurley.com · 47 merged PRs. X: 2 post(s), 137 imp. Inbox signal 2.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "Hustle-Launch/mission-control-os · 1 merged PR; HurleyUS/michaelchurley.com · 47 merged PRs; HurleyUS/michaelchurley.com · commits"
   },
   "shipped": [
     {
       "title": "Hustle-Launch/mission-control-os · 1 merged PR",
       "kind": "shipped",
       "summary": "1 PR(s) merged in window.",
-      "bullets": [
-        "#64 fix(web): P0 E2E — agency OAuth session + select-agency (#50 #51)"
-      ],
+      "bullets": ["#64 fix(web): P0 E2E — agency OAuth session + select-agency (#50 #51)"],
       "when": "Sep 8 · 9:48 PM EDT",
       "links": [
         {
           "label": "#64",
           "href": "https://github.com/Hustle-Launch/mission-control-os/pull/64"
-        }
-      ]
-    },
-    {
-      "title": "michaelmonetized/hustlemail-com · 1 merged PR",
-      "kind": "shipped",
-      "summary": "1 PR(s) merged in window.",
-      "bullets": [
-        "#7 fix: ship honest linked routes and docs overview"
-      ],
-      "when": "Sep 8 · 10:36 PM EDT",
-      "links": [
-        {
-          "label": "#7",
-          "href": "https://github.com/michaelmonetized/hustlemail-com/pull/7"
         }
       ]
     },
@@ -83,24 +61,6 @@
       ]
     },
     {
-      "title": "Fleet honesty / docs · 78 merged PRs",
-      "kind": "shipped",
-      "summary": "Broad merge wave across client/org repos (honest landers, OG assets, LICENSE, status demotions).",
-      "bullets": [
-        "HurleyUS/s12.in: 4 PR(s) — e.g. #35 Fix LICENSE copyright author mismatch",
-        "HurleyUS/iPro-main-web: 4 PR(s) — e.g. #11 fix: replace Coming Soon waitlist shells with honest lander",
-        "michaelmonetized/shagent: 4 PR(s) — e.g. #7 docs: fill empty README with real usage",
-        "michaelmonetized/boilerplate: 4 PR(s) — e.g. #10 docs: PLAN parity vs HEAD",
-        "michaelmonetized/orclawstrator: 3 PR(s) — e.g. #5 Fix LICENSE copyright author mismatch",
-        "michaelmonetized/nvibe: 3 PR(s) — e.g. #21 Fix LICENSE copyright author mismatch",
-        "HurleyUS/ileague-app: 3 PR(s) — e.g. #9 Fix LICENSE copyright author mismatch",
-        "HurleyUS/www.mybathroomconversion.com: 2 PR(s) — e.g. #7 security: remove WP File Manager residue and Salespromis har",
-        "HurleyUS/itour.golf: 2 PR(s) — e.g. #53 docs: DEPLOY.md — production still on 2026; ship path for #4",
-        "michaelmonetized/WhisperCPPonEverything: 2 PR(s) — e.g. #5 Fix LICENSE copyright author mismatch"
-      ],
-      "when": "2026-09-09"
-    },
-    {
       "title": "HurleyUS/michaelchurley.com · commits",
       "kind": "shipped",
       "summary": "79 non-merge commit(s) in window.",
@@ -122,43 +82,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 2 posts",
-      "kind": "measured",
-      "summary": "137 measured impressions across 2 own post(s). Top: 81 imp.",
-      "quote": "Linux finally became my daily desktop — building Omadesign",
-      "metrics": {
-        "impressions": 137,
-        "likes": 0,
-        "replies": 2,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 8 · 3:02 PM EDT · 56 imp · 13 days. Rust + egui. Four alphas. Zero Electron.",
-        "Sep 8 · 7:22 PM EDT · 81 imp · Linux finally became my daily desktop — building Omadesign"
-      ],
-      "when": "Sep 8 · 3:02 PM EDT → Sep 8 · 7:22 PM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2097465635785658638"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "Re: Weekly meeting - Follow up",
-      "kind": "action",
-      "summary": "Hi Michael, Thank you for your email. @Kevin Clark, if you can, please help Michael with his expansion plans. Thank you Easudass John Implementation Team Lead, Upmarket +1 (800) 561-3357 ext. 348",
-      "when": "Sep 8 · 4:58 PM EDT"
-    }
-  ],
-  "loops": []
+  "landed": []
 }

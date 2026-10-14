@@ -1,362 +1,254 @@
 [
   {
     "date": "2026-09-02",
-    "productivity": 1,
-    "audience": {
-      "xImpressions": 28
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-03",
     "productivity": 0,
-    "audience": {
-      "xImpressions": 10
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-04",
     "productivity": 0,
     "audience": {},
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-05",
-    "productivity": 7,
+    "productivity": 1,
     "audience": {},
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (7) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-06",
-    "productivity": 7,
-    "audience": {
-      "xImpressions": 39
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (5) + GitHub releases (2) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 3,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-07",
-    "productivity": 12,
-    "audience": {
-      "xImpressions": 324
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (10) + GitHub releases (2) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-08",
-    "productivity": 127,
-    "audience": {
-      "xImpressions": 137
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (127) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 3,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-09",
-    "productivity": 3,
-    "audience": {
-      "xImpressions": 378
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 4,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-10",
-    "productivity": 0,
-    "audience": {
-      "xImpressions": 159
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 1,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-11",
-    "productivity": 0,
-    "audience": {
-      "xImpressions": 130
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 1,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-12",
     "productivity": 1,
     "audience": {},
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (1) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-13",
-    "productivity": 0,
+    "productivity": 1,
     "audience": {},
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-14",
     "productivity": 0,
-    "audience": {
-      "xImpressions": 25
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-15",
-    "productivity": 5,
+    "productivity": 3,
     "audience": {},
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (4) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-16",
     "productivity": 1,
     "audience": {},
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (1) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-17",
-    "productivity": 2,
-    "audience": {
-      "xImpressions": 202
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 1,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-18",
-    "productivity": 3,
-    "audience": {
-      "xImpressions": 10687
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-19",
-    "productivity": 13,
+    "productivity": 1,
     "audience": {},
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (13) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-20",
-    "productivity": 9,
-    "audience": {
-      "xImpressions": 103
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (6) + GitHub releases (3) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 4,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-21",
-    "productivity": 4,
-    "audience": {
-      "xImpressions": 102
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (2) + GitHub releases (2) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 3,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-22",
-    "productivity": 2,
-    "audience": {
-      "xImpressions": 130
-    },
-    "source": "backfill-2026-09-23",
-    "notes": "productivity = merged PRs (1) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 3,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-23",
-    "productivity": 6,
-    "audience": {
-      "xImpressions": 58
-    },
-    "source": "live-2026-09-24",
-    "notes": "productivity = merged PRs (6) + GitHub releases (0) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-24",
-    "productivity": 13,
-    "audience": {
-      "xImpressions": 1328
-    },
-    "source": "live-2026-09-25",
-    "notes": "productivity = merged PRs (12) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-25",
-    "productivity": 4,
-    "audience": {
-      "xImpressions": 1160
-    },
-    "source": "live-2026-09-26",
-    "notes": "productivity = merged PRs (3) + GitHub releases (1) in 5am–5am ET window. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 1,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-26",
-    "productivity": 0,
-    "audience": {
-      "xImpressions": 5
-    },
-    "source": "live-2026-09-27",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. Direct omadesign master push (changelog/QA close-out) not counted in index. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 1,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-27",
     "productivity": 2,
     "audience": {},
-    "source": "live-2026-09-28",
-    "notes": "productivity = merged PRs (1) + GitHub releases (1) in 5am–5am ET window. No X posts measured. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-28",
     "productivity": 1,
-    "audience": {
-      "xImpressions": 40
-    },
-    "source": "live-2026-09-29",
-    "notes": "productivity = merged PRs (1) + GitHub releases (0) in 5am–5am ET window. X: 1 post measured (40 impressions). Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-29",
-    "productivity": 18,
-    "audience": {
-      "xImpressions": 44
-    },
-    "source": "live-2026-09-30",
-    "notes": "productivity = merged PRs (17) + GitHub releases (1) in 5am–5am ET window. X: 1 post measured (44 impressions). Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-09-30",
-    "productivity": 16,
-    "audience": {
-      "xImpressions": 1143
-    },
-    "source": "live-2026-10-01",
-    "notes": "productivity = merged PRs (14) + GitHub releases (2) in 5am–5am ET window. X: 20 posts measured (1,143 organic impressions). Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-01",
-    "productivity": 0,
-    "audience": {
-      "xImpressions": 224
-    },
-    "source": "live-2026-10-02",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. X: 2 posts measured (224 organic impressions). Omadesign v0.6.2/v0.6.3 + #189–#193 were in prior window (before Oct 1 5am ET) — not double-counted. omatainer opened 12 feature PRs (#456–#467) unmerged. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-02",
-    "productivity": 1,
-    "audience": {
-      "xImpressions": 393
-    },
-    "source": "live-2026-10-03",
-    "notes": "productivity = merged PRs (0) + GitHub releases (1: michaelmonetized/omacut v0.4.1-preview.1) in 5am–5am ET window. X: 1 post measured (393 organic impressions). omatainer opened 17 feature PRs (#468–#484) unmerged. Direct michaelchurley.com Node 24 engines bump not counted in index. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 3,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-03",
-    "productivity": 0,
+    "productivity": 3,
     "audience": {},
-    "source": "live-2026-10-04",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. No X posts measured. omatainer opened 22 feature PRs (#485–#506) unmerged; editbay opened 6 R0–R2 PRs (#1–#6) unmerged; omadesign #194 (OmaStore) open. Waynesville 4 main commits + 4 Ship CI failures not counted in index. Vercel list_deployments 403 for hustle-launch team — deploy count unavailable; GitHub merge/release used as proxy."
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-04",
-    "productivity": 3,
-    "audience": {
-      "xImpressions": 2517
-    },
-    "source": "live-2026-10-05",
-    "notes": "productivity = merged PRs (3: omadesign #194, #195; michaelchurley.com #93) + GitHub releases (0) in 5am–5am ET window. X: 9 posts measured (2,517 public impressions). editbay opened 6 R2 PRs (#7–#19) unmerged; flea-omadesign new repo with PR #2 open; omatainer #507 closed unmerged. Waynesville 1 main commit + Ship CI failure not counted. Vercel deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 4,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-05",
-    "productivity": 5,
-    "audience": {
-      "xImpressions": 161
-    },
-    "source": "live-2026-10-06",
-    "notes": "productivity = merged PRs (5: naarchy #2; michaelchurley.com #94, #96; my.hustlelaunch.com #52, #54) + GitHub releases (0) in 5am–5am ET window. X: 5 posts measured (161 public impressions). editbay opened 13 R2/R3 PRs (#20–#42) unmerged; omatainer #509 and #510 open. Vercel deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 4,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-06",
-    "productivity": 0,
-    "audience": {
-      "xImpressions": 263
-    },
-    "source": "live-2026-10-07",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. X: 5 replies measured (263 public impressions). omatainer pushed 60 commits (27 features) to open #510; editbay opened 9 R2/R3 PRs (#44–#60) unmerged. Vercel deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-07",
-    "productivity": 1,
-    "audience": {
-      "xImpressions": 471
-    },
-    "source": "live-2026-10-08",
-    "notes": "productivity = merged PRs (0) + GitHub releases (1: omatainer controller-profiles-1.0.0 prerelease) in 5am–5am ET window. X: 4 replies measured (471 public impressions). omatainer pushed 59 commits to open #510; editbay opened 3 release PRs (#63, #65, #67) unmerged plus tracker #61. Vercel deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 3,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-08",
-    "productivity": 0,
-    "audience": {
-      "xImpressions": 1607
-    },
-    "source": "live-2026-10-09",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. X: 8 replies + 1 repost measured (1,607 public impressions). omatainer pushed 45 commits to open #510 (773 files); new public repo math-skills published. Vercel deploy count unavailable; GitHub merge/release used as proxy."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-09",
     "productivity": 2,
-    "audience": {
-      "xImpressions": 522
-    },
-    "source": "live-2026-10-10",
-    "notes": "productivity = merged PRs (1: naarchy #3) + GitHub releases (1: naarchy v0.5.0) in 5am–5am ET window. X: 6 replies + 1 original post measured (522 public impressions). No omatainer/editbay/omadesign pushes in window; Naarchy Product Hunt launch went live 3:01 AM ET Oct 10. Vercel deploy count unavailable; GitHub merge/release used as proxy."
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-10",
-    "productivity": 7,
-    "audience": {
-      "xImpressions": 994
-    },
-    "source": "backfill-2026-10-14",
-    "notes": "productivity = merged PRs (5: naarchy #5, #6, #7; slopops #4; michaelchurley.com #97) + GitHub releases (2: naarchy v0.5.1, v0.5.2) in 5am–5am ET window. X: 10 replies + 2 original posts measured (994 public impressions, measured Oct 14). dotfiles-omarchy/dotfiles-quattro secret scrub (14 commits, direct to main). Product Hunt final upvote count unavailable for the window. Backfilled Oct 14 after failed scheduled run."
+    "productivity": 3,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-11",
-    "productivity": 4,
-    "audience": {
-      "xImpressions": 374
-    },
-    "source": "backfill-2026-10-14",
-    "notes": "productivity = merged PRs (2: omadesign #199, #201) + GitHub releases (2: omadesign v0.6.3-nightly.20261011.0001, nfglyph v0.1.1) in 5am–5am ET window. X: 6 replies + 1 quote + 2 reposts measured (374 public impressions, measured Oct 14). New open PRs: omatainer #516, editbay #69. Backfilled Oct 14 after failed scheduled run."
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-12",
-    "productivity": 0,
-    "audience": {
-      "xImpressions": 164
-    },
-    "source": "backfill-2026-10-14",
-    "notes": "productivity = merged PRs (0) + GitHub releases (0) in 5am–5am ET window. X: 1 quote + 1 reply + 2 reposts measured (164 public impressions, measured Oct 14). omadesign: 4 contributor PRs from NixFred (#202–#205), later folded into #207. Backfilled Oct 14 after failed scheduled run."
+    "productivity": 1,
+    "audience": {},
+    "source": "public-project-cards"
   },
   {
     "date": "2026-10-13",
-    "productivity": 2,
-    "audience": {
-      "xImpressions": 85
-    },
-    "source": "backfill-2026-10-14",
-    "notes": "productivity = merged PRs (1: omadesign #207) + GitHub releases (1: omadesign v0.6.3-nightly.20261013.0001) in 5am–5am ET window. X: 3 replies + 1 original post measured (85 public impressions, measured Oct 14). Backfilled Oct 14 after failed scheduled run."
+    "productivity": 1,
+    "audience": {},
+    "source": "public-project-cards"
   }
 ]

@@ -5,22 +5,17 @@
   "meta": {
     "windowEt": "Sep 27, 2026 · 5:00 AM EDT → Sep 28, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-27T09:00:00Z → 2026-09-28T09:00:00Z",
-    "generatedEt": "Sep 28, 2026 · ~4:55 AM EDT",
-    "xPostsMeasured": 0,
-    "inboxSignalItems": 6,
-    "tldr": "Ships/index 2. michaelchurley.com AEO PR #91 merged (+ nav X-handle fix). Omadesign: Real-ESRGAN model assets prerelease + 13 issues / 13 open PRs filed (text, inspector, offline AI). X: 0 posts. Inbox: Thumbtack software lead, estate-sale valuation follow-up, Macks reviews, Cloudflare cert alert, Sunday Club live.",
-    "deploysInWindow": null
+    "tldr": "HurleyUS/michaelchurley.com · AEO PR #91 + follow-ups; michaelmonetized/omadesign · upscale-models-v1 + backlog wave"
   },
   "shipped": [
     {
       "title": "HurleyUS/michaelchurley.com · AEO PR #91 + follow-ups",
       "kind": "shipped",
-      "summary": "1 PR merged in window: answer-engine robots, llms.txt, JSON-LD, resume-driven .md/JSON routes, remote MCP/OpenAPI/feeds, privacy booking scrub, and X handle michaelh_rley. Direct follow-up commit fixed the header menu handle.",
+      "summary": "Added answer-engine discovery, structured site data, Markdown and JSON routes, feeds, and the updated public X handle.",
       "bullets": [
         "#91 AEO: allow answer engines in robots.txt, add llms.txt + JSON-LD",
         "feat(aeo): resume-driven content, .md routes, JSON endpoints, WebMCP tools",
         "feat(agents): remote MCP server, discovery, OpenAPI, feeds, rich JSON-LD, /aeo",
-        "fix(privacy): stop exposing booking details; X handle michaelh_rley",
         "f2d1be2 fix(nav): X handle michaelh_rley in the header menu"
       ],
       "when": "Sep 27 · 3:18–6:00 PM EDT",
@@ -67,72 +62,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "Sunday Club · omadesign live",
-      "kind": "ops",
-      "summary": "Overnight confirmation that omadesign is live on Sunday Club (starred).",
-      "when": "Sep 28 · 2:00 AM EDT"
-    }
-  ],
-  "inbox": [
-    {
-      "title": "Thumbtack · software lead (remote)",
-      "kind": "ops",
-      "summary": "One in-window lead: A. A. needs Software Development, North Haven CT (remote). Triage when ready.",
-      "when": "Sep 27 · 3:08 PM EDT"
-    },
-    {
-      "title": "Appalachian Estate Sales · Karen Dell follow-up",
-      "kind": "ops",
-      "summary": "After the off-site decline, Karen asked whether they can still provide a contents valuation for her lawyer. Client-side loop; Michael is CC’d on the lead alias.",
-      "when": "Sep 27 · 7:20 AM EDT"
-    },
-    {
-      "title": "Macks Shack BBQ · new reviews",
-      "kind": "ops",
-      "summary": "Google Business: Patrick review ping. Hustle Launch dash: 4-star from Gregory Jakes (wings/brisket/pulled pork spread) and 5-star from Lindsay Dunbar.",
-      "when": "Sep 27 · 5:13 AM–6:49 PM EDT"
-    },
-    {
-      "title": "Cloudflare · hustlelaunch.com certificate alert",
-      "kind": "action",
-      "summary": "New certificate activity flagged as outside routine Cloudflare types — review and take action if needed.",
-      "when": "Sep 27 · 6:53 PM EDT"
-    },
-    {
-      "title": "T3 Code · new device sign-in",
-      "kind": "action",
-      "summary": "Starred security notice: new device signed in to the T3 Code account. Confirm it was you.",
-      "when": "Sep 27 · 2:55 PM EDT"
-    },
-    {
-      "title": "Hustle Launch · daily message report",
-      "kind": "ops",
-      "summary": "Daily message report for Sep 27: 2 open messages in the dash.",
-      "when": "Sep 27 · 9:20 PM EDT"
-    }
-  ],
-  "loops": [
-    {
-      "title": "Omadesign PH relaunch Sep 30",
-      "detail": "Wed Sep 30 12:01 AM PT (3:01 AM ET) still the target; keep launch plan/copy review and QA footage on track — no blitz without Michael’s sign-off."
-    },
-    {
-      "title": "Omadesign open PR / issue stack",
-      "detail": "13 open PRs (#142, #146–#147, #159–#168) and matching issues (#144–#158) filed this window — merge/review before launch where it matters; #142 live agents still the base for offline AI work."
-    },
-    {
-      "title": "Thumbtack A. A. to triage",
-      "detail": "Remote software development lead (North Haven CT) — decide whether to quote."
-    },
-    {
-      "title": "Cloudflare cert review",
-      "detail": "hustlelaunch.com certificate activity outside routine types — confirm expected or revoke."
-    },
-    {
-      "title": "BirdEye / Sinclair holds",
-      "detail": "BirdEye weekly + Kevin threads remain ignore-until-reopen. Jason Livengood / Sinclair path stays parked until Sandy conversation."
-    }
-  ]
+  "landed": []
 }

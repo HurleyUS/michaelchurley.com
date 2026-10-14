@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 21, 2026 · 5:00 AM EDT → Sep 22, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-21T09:00:00Z → 2026-09-22T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 2,
-    "inboxSignalItems": 2,
-    "tldr": "Ships/index 4. Notable: omadesign · v0.5.6; omadesign · v0.5.7; michaelmonetized/omadesign · 2 merged PRs. X: 2 post(s), 102 imp. Inbox signal 2.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "omadesign · v0.5.6; omadesign · v0.5.7; michaelmonetized/omadesign · 2 merged PRs; Near-miss · Omadesign v0.5.5-nightly.1"
   },
   "shipped": [
     {
@@ -69,58 +64,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 2 posts",
-      "kind": "measured",
-      "summary": "102 measured impressions across 2 own post(s). Top: 69 imp.",
-      "quote": "Omadesign UI/UX Redesign LIVE",
-      "metrics": {
-        "impressions": 102,
-        "likes": 3,
-        "replies": 0,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 21 · 9:01 AM EDT · 69 imp · Omadesign UI/UX Redesign LIVE",
-        "Sep 21 · 7:22 PM EDT · 33 imp · Fresh logo for omadesign, designed in omadesign."
-      ],
-      "when": "Sep 21 · 9:01 AM EDT → Sep 21 · 7:22 PM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2102020341618844016"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "p/producthunt - \"Product Hunt Teams Up With OpenAIDevs for the GPT-6 Astra Challenge!\"",
-      "kind": "ph",
-      "summary": "Product Hunt Monday, September 21 p/producthunt - &quot;Product Hunt Teams Up With OpenAIDevs for the GPT-6 Astra Challenge!&quot; As a Maker who&#39;s built with OpenAI, the community would love to",
-      "when": "Sep 21 · 8:32 AM EDT"
-    },
-    {
-      "title": "Re: [michaelmonetized/omadesign] Release 0.5.6: local work, projects, and agent welcome screen (PR #",
-      "kind": "action",
-      "summary": "vercel[bot] left a comment (michaelmonetized/omadesign#84) The latest updates on your projects. Learn more about Vercel for GitHub. Project Deployment Actions Updated omadesign Ready Ready Preview Sep",
-      "when": "Sep 21 · 8:41 PM EDT"
-    }
-  ],
-  "loops": [
-    {
-      "title": "Omadesign 0.5.6 / 0.5.7 mark + film",
-      "detail": "Official mark + product film shipped overnight into this window."
-    },
-    {
-      "title": "Citations sheet / morning 0.5.8",
-      "detail": "Memory lead: citations sheet + 0.5.8 morning release — 0.5.8 lands early next window."
-    }
-  ]
+  "landed": []
 }

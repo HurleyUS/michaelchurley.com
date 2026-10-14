@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 9, 2026 · 5:00 AM EDT → Sep 10, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-09T09:00:00Z → 2026-09-10T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 2,
-    "inboxSignalItems": 2,
-    "tldr": "Ships/index 3. Notable: omadesign · v0.0.5-alpha; michaelmonetized/omadesign · 1 merged PR; HurleyUS/michaelchurley.com · 1 merged PR. X: 2 post(s), 378 imp. Inbox signal 2.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "omadesign · v0.0.5-alpha; michaelmonetized/omadesign · 1 merged PR; HurleyUS/michaelchurley.com · 1 merged PR; HurleyUS/michaelchurley.com · commits"
   },
   "shipped": [
     {
@@ -29,9 +24,7 @@
       "title": "michaelmonetized/omadesign · 1 merged PR",
       "kind": "shipped",
       "summary": "1 PR(s) merged in window.",
-      "bullets": [
-        "#52 Home is the install. GIMP comes with it."
-      ],
+      "bullets": ["#52 Home is the install. GIMP comes with it."],
       "when": "Sep 9 · 6:47 AM EDT",
       "links": [
         {
@@ -44,9 +37,7 @@
       "title": "HurleyUS/michaelchurley.com · 1 merged PR",
       "kind": "shipped",
       "summary": "1 PR(s) merged in window.",
-      "bullets": [
-        "#79 Add update: Naarchy 0.4.0 is tagged on GitHub"
-      ],
+      "bullets": ["#79 Add update: Naarchy 0.4.0 is tagged on GitHub"],
       "when": "Sep 9 · 6:42 AM EDT",
       "links": [
         {
@@ -74,67 +65,7 @@
           "href": "https://github.com/HurleyUS/michaelchurley.com"
         }
       ]
-    },
-    {
-      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · commits",
-      "kind": "shipped",
-      "summary": "2 non-merge commit(s) in window.",
-      "bullets": [
-        "fb29944 fix: rewrite /go as the offer, not the internal notes",
-        "a225c40 feat: ship /go lander with direct line 828-593-1935"
-      ],
-      "when": "Sep 9 · 12:06 PM EDT → Sep 9 · 11:58 AM EDT",
-      "links": [
-        {
-          "label": "repo",
-          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com"
-        }
-      ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 2 posts",
-      "kind": "measured",
-      "summary": "378 measured impressions across 2 own post(s). Top: 350 imp.",
-      "quote": "We’re live on Product Hunt — omadesign",
-      "metrics": {
-        "impressions": 378,
-        "likes": 12,
-        "replies": 10,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 9 · 5:24 PM EDT · 28 imp · Had to get this rant off my chest",
-        "Sep 10 · 3:38 AM EDT · 350 imp · We’re live on Product Hunt — omadesign"
-      ],
-      "when": "Sep 9 · 5:24 PM EDT → Sep 10 · 3:38 AM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2097952900194373863"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "Hustle Launch & BirdEye - Weekly Check-In",
-      "kind": "action",
-      "summary": "Hustle Launch &amp; BirdEye - Weekly Check-In Hi Michael, we&#39;re here for the meeting, waiting for you to join Thanks John Join Zoom Meeting birdeye.zoom.us/j/83465705400?pw... ID: 83465705400",
-      "when": "Sep 9 · 11:05 AM EDT"
-    },
-    {
-      "title": "[Action Needed]: Google pages disconnected",
-      "kind": "action",
-      "summary": "Some Google pages are disconnected 1 disconnected page If social pages are disconnected, some features in Hustle Launch will not function properly. Learn more Download the file for details. Download I",
-      "when": "Sep 9 · 11:26 AM EDT"
-    }
-  ],
-  "loops": []
+  "landed": []
 }

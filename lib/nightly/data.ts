@@ -1,13 +1,18 @@
 import { promises as fs } from "fs";
 import path from "path";
 import type { DailyMetric, DailyReport } from "./types";
+import { parsePublicMetrics, parsePublicReport } from "./publication";
 
 const dataRoot = path.join(process.cwd(), "data", "nightly");
 
 export async function getMetrics(): Promise<DailyMetric[]> {
-  const raw = await fs.readFile(path.join(dataRoot, "metrics.json"), "utf8");
-  const parsed = JSON.parse(raw) as DailyMetric[];
-  return parsed.sort((a, b) => a.date.localeCompare(b.date));
+  try {
+    const raw = await fs.readFile(path.join(dataRoot, "metrics.json"), "utf8");
+    const parsed = parsePublicMetrics(JSON.parse(raw));
+    return parsed.sort((a, b) => a.date.localeCompare(b.date));
+  } catch {
+    throw new Error("Nightly metrics unavailable: publication validation failed");
+  }
 }
 
 export async function listReportDates(): Promise<string[]> {
@@ -25,9 +30,12 @@ export async function getReport(date: string): Promise<DailyReport | null> {
   const file = path.join(dataRoot, "reports", `${date}.json`);
   try {
     const raw = await fs.readFile(file, "utf8");
-    return JSON.parse(raw) as DailyReport;
-  } catch {
-    return null;
+    const report = parsePublicReport(JSON.parse(raw));
+    if (report.date !== date) throw new Error("Nightly report date mismatch");
+    return report;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw new Error("Nightly report unavailable: publication validation failed");
   }
 }
 

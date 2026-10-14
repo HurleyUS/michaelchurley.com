@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 10, 2026 · 5:00 AM EDT → Sep 11, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-10T09:00:00Z → 2026-09-11T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 1,
-    "inboxSignalItems": 1,
-    "tldr": "Ships/index 0. Notable: HurleyUS/michaelchurley.com · commits; Hustle-Launch/migrate--www.hustlelaunch.com · commits. X: 1 post(s), 159 imp. Inbox signal 1.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "HurleyUS/michaelchurley.com · commits"
   },
   "shipped": [
     {
@@ -31,64 +26,7 @@
           "href": "https://github.com/HurleyUS/michaelchurley.com"
         }
       ]
-    },
-    {
-      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · commits",
-      "kind": "shipped",
-      "summary": "6 non-merge commit(s) in window.",
-      "bullets": [
-        "27378b7 fix: price the /go offers and tighten the copy",
-        "ca4d34c feat: redesign /go landers that sell the offer above the fold",
-        "1edc3b5 feat: Imagine OG stills plus 15s 16:9 spots and 9:16 reels",
-        "dcfdbb4 fix: put /go on the real site chrome and in the first screen",
-        "6b5b2a9 feat: /go grid plus generated OG cards for each offer",
-        "374c053 feat: four /go offers — foundation, grow, saturate, wide"
-      ],
-      "when": "Sep 10 · 11:52 PM EDT → Sep 10 · 6:25 AM EDT",
-      "links": [
-        {
-          "label": "repo",
-          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com"
-        }
-      ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 1 post",
-      "kind": "measured",
-      "summary": "159 measured impressions across 1 own post(s). Top: 159 imp.",
-      "quote": "Please test and throw me an upvote or a bug report.",
-      "metrics": {
-        "impressions": 159,
-        "likes": 3,
-        "replies": 3,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 10 · 9:22 AM EDT · 159 imp · Please test and throw me an upvote or a bug report."
-      ],
-      "when": "Sep 10 · 9:22 AM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2098039502895722925"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "Quick SEO gap for omadesign",
-      "kind": "action",
-      "summary": "Hi there, Congrats on launching omadesign on Product Hunt. Your site covers the native Linux creative suite well, but the searches people make when choosing a design tool on Linux may not be covered",
-      "when": "Sep 11 · 3:06 AM EDT"
-    }
-  ],
-  "loops": []
+  "landed": []
 }

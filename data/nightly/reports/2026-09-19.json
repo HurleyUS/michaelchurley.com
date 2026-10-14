@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 19, 2026 · 5:00 AM EDT → Sep 20, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-19T09:00:00Z → 2026-09-20T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 0,
-    "inboxSignalItems": 5,
-    "tldr": "Ships/index 13. Notable: michaelmonetized/omadesign · 13 merged PRs. Inbox signal 7.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "michaelmonetized/omadesign · 13 merged PRs; Near-miss · Omadesign v0.5.1"
   },
   "shipped": [
     {
@@ -64,49 +59,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley",
-      "kind": "none",
-      "summary": "No own posts measured in this window (API sampled; replies/retweets excluded from primary pull)."
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "You have been awarded a badge!",
-      "kind": "ph",
-      "summary": "Product Hunt Saturday, September 19 You have been awarded a badge! We want to share a token of our appreciation. Badges help people recognize the effort you put into helping this community, and we",
-      "when": "Sep 19 · 5:09 AM EDT"
-    },
-    {
-      "title": "Re: [michaelmonetized/omadesign] Add cloud waitlist with Omadesign reveal film and persistent signup",
-      "kind": "action",
-      "summary": "coderabbitai[bot] left a comment (michaelmonetized/omadesign#56) Review Change Stack Review Change Stack Note Currently processing new changes in this PR. This may take a few minutes, please wait... ⚙",
-      "when": "Sep 19 · 7:23 AM EDT"
-    },
-    {
-      "title": "Re: [michaelmonetized/omadesign] 0.5.2 native cloud: secure connection, project transfer and review ",
-      "kind": "action",
-      "summary": "vercel[bot] left a comment (michaelmonetized/omadesign#70) The latest updates on your projects. Learn more about Vercel for GitHub. Project Deployment Actions Updated omadesign Error Error Sep 19, 202",
-      "when": "Sep 19 · 11:21 AM EDT"
-    },
-    {
-      "title": "Re: [michaelmonetized/omadesign] 0.5.2 nightly: service verification, access boundaries and release ",
-      "kind": "action",
-      "summary": "vercel[bot] left a comment (michaelmonetized/omadesign#71) The latest updates on your projects. Learn more about Vercel for GitHub. Project Deployment Actions Updated omadesign Error Error Sep 19, 202",
-      "when": "Sep 19 · 11:37 AM EDT"
-    },
-    {
-      "title": "Connect with your new followers in omadesign’s Forum 💬",
-      "kind": "ph",
-      "summary": "Product Hunt Sunday, September 20 Connect with your new followers in omadesign&#39;s Forum 💬 Hi Michael, Have you checked out omadesign&#39;s dedicated forum yet? Engage Your Community - Your forum is",
-      "when": "Sep 20 · 4:00 AM EDT"
-    }
-  ],
-  "loops": []
+  "landed": []
 }

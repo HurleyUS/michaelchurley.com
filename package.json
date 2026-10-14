@@ -14,6 +14,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "validate": "node scripts/validate-launch.js",
+    "validate:nightly": "bun scripts/validate-nightly.mts",
     "portfolio:record": "node scripts/record-portfolio.mjs",
     "launch-check": "bun tsc --noEmit && bun test && bun run lint && node scripts/validate-launch.js",
     "format": "biome format --write .",

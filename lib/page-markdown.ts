@@ -155,7 +155,7 @@ async function nightlyMarkdown() {
 
 ${source("/nightly")}
 
-${PROFILE.name}'s daily stand-up: what shipped, how it landed, inbox signal, and open loops, plus productivity and audience trends.
+${PROFILE.name}'s public project updates and announcements, plus public activity and audience trends.
 
 - Reports: ${dates.length}
 - Latest productivity: ${last?.productivity ?? "n/a"}
@@ -188,22 +188,16 @@ async function nightlyReportMarkdown(date: string) {
   if (!report) return null;
   const section = (title: string, cards: ReportCard[]) =>
     `## ${title}\n\n${cards.length ? cards.map(cardMarkdown).join("\n\n") : "None."}`;
-  const loops = report.loops.map((l) => `- **${l.title}:** ${l.detail}`).join("\n") || "None.";
   return `# Daily Stand Up Report · ${date}
 
 ${source(`/nightly/report/${date}`)}
 
 ${report.meta.tldr ?? ""}
 
-${section("What shipped", report.shipped)}
+${section("Project activity", report.shipped)}
 
 ${section("How it landed", report.landed)}
 
-${section("Inbox", report.inbox)}
-
-## Open loops
-
-${loops}
 `;
 }
 

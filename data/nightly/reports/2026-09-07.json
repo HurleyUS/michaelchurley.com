@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 7, 2026 · 5:00 AM EDT → Sep 8, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-07T09:00:00Z → 2026-09-08T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 3,
-    "inboxSignalItems": 1,
-    "tldr": "Ships/index 12. Notable: omadesign · v0.0.3-alpha; omadesign · v0.0.4-alpha; michaelmonetized/omadesign · 5 merged PRs. X: 3 post(s), 324 imp. Inbox signal 4.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "omadesign · v0.0.3-alpha; omadesign · v0.0.4-alpha; Near-miss · Omadesign v0.0.2-alpha"
   },
   "shipped": [
     {
@@ -49,49 +44,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 3 posts",
-      "kind": "measured",
-      "summary": "324 measured impressions across 3 own post(s). Top: 162 imp.",
-      "quote": "Now with raw photo development and legacy design file format support",
-      "metrics": {
-        "impressions": 324,
-        "likes": 3,
-        "replies": 1,
-        "reposts": 1
-      },
-      "bullets": [
-        "Sep 7 · 10:14 AM EDT · 162 imp · Now with raw photo development and legacy design file format support",
-        "Sep 7 · 1:20 PM EDT · 23 imp · is it an IRL stream just bc I'm outside...",
-        "Sep 7 · 7:33 PM EDT · 139 imp · Looking for 10 Linux designers to try Omadesign"
-      ],
-      "when": "Sep 7 · 10:14 AM EDT → Sep 7 · 7:33 PM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2096965429507813725"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "What's new in Birdeye: Weekly Product Release Notes | September 07, 2026",
-      "kind": "action",
-      "summary": "Weekly Product Release Notes | September 07, 2026 Hi, Here&#39;s your weekly look at what&#39;s new, improved, and updated in Birdeye: Weekly Product Release Notes |",
-      "when": "Sep 7 · 10:22 AM EDT"
-    }
-  ],
-  "loops": [
-    {
-      "title": "LeadMinerr in active sales mix",
-      "detail": "Self-mail Sep 8 ~1:06 AM EDT — verify outreach next steps; don't invent funnel metrics."
-    }
-  ]
+  "landed": []
 }

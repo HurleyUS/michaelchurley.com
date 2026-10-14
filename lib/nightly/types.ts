@@ -10,7 +10,7 @@ export type DailyMetric = {
   productivity: number | null;
   audience: AudienceMetrics;
   source?: string;
-  notes?: string;
+  links?: ReportLink[];
 };
 
 export type ReportLink = { label: string; href: string };
@@ -23,12 +23,7 @@ export type ReportCard = {
   quote?: string;
   metrics?: Record<string, number>;
   when?: string;
-  links?: ReportLink[];
-};
-
-export type OpenLoop = {
-  title: string;
-  detail: string;
+  links: ReportLink[];
 };
 
 export type DailyReport = {
@@ -36,19 +31,10 @@ export type DailyReport = {
   label?: string;
   timezone?: string;
   meta: {
-    deploysInWindow?: number;
-    example?: boolean;
-    backfill?: boolean;
-    generatedEt?: string;
-    inboxSignalItems?: number;
-    readOnly?: boolean;
     tldr?: string;
     windowEt?: string;
     windowUtc?: string;
-    xPostsMeasured?: number;
   };
   shipped: ReportCard[];
   landed: ReportCard[];
-  inbox: ReportCard[];
-  loops: OpenLoop[];
 };

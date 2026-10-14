@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 6, 2026 · 5:00 AM EDT → Sep 7, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-06T09:00:00Z → 2026-09-07T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 1,
-    "inboxSignalItems": 0,
-    "tldr": "Ships/index 7. Notable: omadesign · v0.0.1-alpha; omadesign · v0.0.2-alpha; michaelmonetized/omadesign · 5 merged PRs. X: 1 post(s), 39 imp.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "omadesign · v0.0.1-alpha; omadesign · v0.0.2-alpha; michaelmonetized/omadesign · 5 merged PRs"
   },
   "shipped": [
     {
@@ -73,41 +68,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 1 post",
-      "kind": "measured",
-      "summary": "39 measured impressions across 1 own post(s). Top: 39 imp.",
-      "quote": "Now creative professionals can confidently make the move to omarchy.",
-      "metrics": {
-        "impressions": 39,
-        "likes": 0,
-        "replies": 1,
-        "reposts": 0
-      },
-      "bullets": [
-        "Sep 6 · 6:32 AM EDT · 39 imp · Now creative professionals can confidently make the move to omarchy."
-      ],
-      "when": "Sep 6 · 6:32 AM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2096546992742600710"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "Inbox signal · none",
-      "kind": "none",
-      "summary": "No non-financial product/ops signal threads matched in this window."
-    }
-  ],
-  "loops": []
+  "landed": []
 }

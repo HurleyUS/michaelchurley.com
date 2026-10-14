@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 18, 2026 · 5:00 AM EDT → Sep 19, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-18T09:00:00Z → 2026-09-19T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 20,
-    "inboxSignalItems": 4,
-    "tldr": "Ships/index 3. Notable: omadesign · v0.5.1; michaelmonetized/omadesign · 2 merged PRs. X: 20 post(s), 10687 imp. Inbox signal 4.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "omadesign · v0.5.1; michaelmonetized/omadesign · 2 merged PRs"
   },
   "shipped": [
     {
@@ -46,79 +41,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 20 posts",
-      "kind": "measured",
-      "summary": "10687 measured impressions across 20 own post(s). Top: 9702 imp.",
-      "quote": "Shipping Omadesign 0.5.0 on Product Hunt today",
-      "metrics": {
-        "impressions": 10687,
-        "likes": 83,
-        "replies": 13,
-        "reposts": 10
-      },
-      "bullets": [
-        "Sep 18 · 5:00 AM EDT · 81 imp · Dashed image placeholders",
-        "Sep 18 · 6:00 AM EDT · 47 imp · Four starters: mobile, landing, dashboard, card",
-        "Sep 18 · 7:00 AM EDT · 39 imp · Export selected frame as PNG/SVG/HTML",
-        "Sep 18 · 8:00 AM EDT · 48 imp · Undo still undoes — Layout included",
-        "Sep 18 · 8:47 AM EDT · 26 imp · Omadesign #57 on ProductHunt",
-        "Sep 18 · 9:00 AM EDT · 34 imp · Built for Linux first. PH launch + Astra",
-        "…+14 more posts"
-      ],
-      "when": "Sep 18 · 5:00 AM EDT → Sep 18 · 8:00 PM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2100934112827576559"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": "Your Product Hunt launch is LIVE! 🎉",
-      "kind": "ph",
-      "summary": "Product Hunt Friday, September 18 Your Product Hunt launch is LIVE! 🎉 Hi Michael, Congratulations! omadesign is now live on Product Hunt! Get Verified - Be sure to get verified to increase the weight",
-      "when": "Sep 18 · 7:01 AM EDT"
-    },
-    {
-      "title": "What's new in Birdeye: Weekly Product Release Notes | September 18, 2026",
-      "kind": "action",
-      "summary": "Weekly Product Release Notes | September 18, 2026 Hi, Here&#39;s your weekly look at what&#39;s new, improved, and updated in Birdeye: Weekly Product Release Notes |",
-      "when": "Sep 18 · 9:36 AM EDT"
-    },
-    {
-      "title": "GPT-6 Astra Challenge on Product Hunt 😸",
-      "kind": "ph",
-      "summary": "Thanks for launching and being a part of the GPT-6 Astra Challenge on Product Hunt! The day is far from over so be sure to: - Push your launch out across the social and community channels that matter",
-      "when": "Sep 18 · 1:52 PM EDT"
-    },
-    {
-      "title": "Keep your Product Hunt launch momentum going 🏎️💨",
-      "kind": "ph",
-      "summary": "Product Hunt Saturday, September 19 Keep your Product Hunt launch momentum going 🏎️💨 Hi Michael, Congratulations on an awesome launch! Now that your launch day is over, here&#39;s what happens next an",
-      "when": "Sep 19 · 4:01 AM EDT"
-    }
-  ],
-  "loops": [
-    {
-      "title": "Omadesign 0.5.0 Product Hunt launch day",
-      "detail": "Launch LIVE mail + amplify drip + AMA stream posts in this window (Sep 18 5am→Sep 19 5am ET). Top X post ~9.7k impressions. Keep maker presence honest — no invented upvote totals."
-    },
-    {
-      "title": "getat.me Convex residuals",
-      "detail": "GETATME error mail may still appear; egress fixes merged prior window."
-    },
-    {
-      "title": "PH momentum",
-      "detail": "Badge / momentum / Forum mails — optional engagement; omit invented PH counts."
-    }
-  ]
+  "landed": []
 }

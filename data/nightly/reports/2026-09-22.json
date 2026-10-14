@@ -5,12 +5,7 @@
   "meta": {
     "windowEt": "Sep 22, 2026 · 5:00 AM EDT → Sep 23, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-22T09:00:00Z → 2026-09-23T09:00:00Z",
-    "generatedEt": "Sep 23, 2026 · ~5:30 PM EDT",
-    "xPostsMeasured": 1,
-    "inboxSignalItems": 3,
-    "tldr": "Ships/index 2. Notable: omadesign · v0.5.8; michaelmonetized/omadesign · 1 merged PR; michaelmonetized/hustlemail · commits. X: 1 post(s), 130 imp. Inbox signal 5.",
-    "readOnly": true,
-    "backfill": true
+    "tldr": "omadesign · v0.5.8; michaelmonetized/omadesign · 1 merged PR; michaelmonetized/hustlemail · commits; Near-miss · Omadesign v0.5.7; Near-miss · Omadesign v0.5.6"
   },
   "shipped": [
     {
@@ -29,9 +24,7 @@
       "title": "michaelmonetized/omadesign · 1 merged PR",
       "kind": "shipped",
       "summary": "1 PR(s) merged in window.",
-      "bullets": [
-        "#86 Release 0.5.8: Lua plugins, welcome polish and editable compound paths"
-      ],
+      "bullets": ["#86 Release 0.5.8: Lua plugins, welcome polish and editable compound paths"],
       "when": "Sep 22 · 7:34 AM EDT",
       "links": [
         {
@@ -44,33 +37,12 @@
       "title": "michaelmonetized/hustlemail · commits",
       "kind": "shipped",
       "summary": "1 non-merge commit(s) in window.",
-      "bullets": [
-        "08d9398 Keep public HustleMail pages out of Clerk handshake [skip ci]"
-      ],
+      "bullets": ["08d9398 Keep public HustleMail pages out of Clerk handshake [skip ci]"],
       "when": "Sep 22 · 11:51 AM EDT",
       "links": [
         {
           "label": "repo",
           "href": "https://github.com/michaelmonetized/hustlemail"
-        }
-      ]
-    },
-    {
-      "title": "Hustle-Launch/migrate--www.hustlelaunch.com · commits",
-      "kind": "shipped",
-      "summary": "5 non-merge commit(s) in window.",
-      "bullets": [
-        "2493635 fix: align case-study canonical URLs with live routes [skip ci]",
-        "19906fc fix: restore portfolio links and case-study discovery [skip ci]",
-        "70eecbe Remove nonexistent case studies from sitemap [skip ci]",
-        "44a0045 Allow Google to crawl public rendering assets [skip ci]",
-        "77d4bb6 fix(seo): keep public pages out of Clerk auth redirects"
-      ],
-      "when": "Sep 22 · 12:22 PM EDT → Sep 22 · 11:22 AM EDT",
-      "links": [
-        {
-          "label": "repo",
-          "href": "https://github.com/Hustle-Launch/migrate--www.hustlelaunch.com"
         }
       ]
     },
@@ -97,76 +69,5 @@
       ]
     }
   ],
-  "landed": [
-    {
-      "title": "X · @MichaelH_rley · 1 post",
-      "kind": "measured",
-      "summary": "130 measured impressions across 1 own post(s). Top: 130 imp.",
-      "quote": "I don't think people truly understand just how determined I am at making Linux desktop the go to for creative professionals.",
-      "metrics": {
-        "impressions": 130,
-        "likes": 2,
-        "replies": 1,
-        "reposts": 1
-      },
-      "bullets": [
-        "Sep 22 · 10:56 AM EDT · 130 imp · I don't think people truly understand just how determined I am at maki…"
-      ],
-      "when": "Sep 22 · 10:56 AM EDT",
-      "links": [
-        {
-          "label": "Top post",
-          "href": "https://x.com/MichaelH_rley/status/2102411655032279200"
-        }
-      ]
-    },
-    {
-      "title": "Product Hunt / Reddit / LinkedIn",
-      "kind": "unreachable",
-      "summary": "No PH/Reddit/LinkedIn MCP metrics connectors. Inbox may note PH maker emails when present."
-    }
-  ],
-  "inbox": [
-    {
-      "title": " 🆕 The AI Gateway is here",
-      "kind": "action",
-      "summary": "All of the models, none of the keys ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿ ﻿",
-      "when": "Sep 22 · 1:23 PM EDT"
-    },
-    {
-      "title": "Maximize your maker presence on Product Hunt 👤",
-      "kind": "ph",
-      "summary": "Product Hunt Wednesday, September 23 Maximize your maker presence on Product Hunt 👤 Hi Michael, It&#39;s been 5 days since your launch! Here are some final tips to maintain your momentum on Product",
-      "when": "Sep 23 · 4:02 AM EDT"
-    },
-    {
-      "title": "Search Console · 16 indexing/presence notices",
-      "kind": "action",
-      "summary": "Google Search Console notices in window (indexing / presence).",
-      "bullets": [
-        "Improve Google presence for everythingmonetized.com",
-        "Improve Google presence for getat.me",
-        "Improve Google presence for hurleyus.com",
-        "Improve Google presence for iconference.golf",
-        "Get started using Search Console with https://www.macksbbqshack.com/",
-        "Get started using Search Console with https://macksbbqshack.com/",
-        "Improve Google presence for ileague.golf",
-        "Improve Google presence for ipro.golf",
-        "Improve Google presence for itour.golf",
-        "Improve Google presence for merchwinner.com",
-        "…+5 more"
-      ],
-      "when": "Sep 22 · 11:55 AM EDT"
-    }
-  ],
-  "loops": [
-    {
-      "title": "0.5.8 in window",
-      "detail": "v0.5.8 Make it your studio published ~7:28 AM EDT Sep 22 — counted in this 5am–5am report."
-    },
-    {
-      "title": "Nightly scaffolding",
-      "detail": "Daily Stand Up /nightly mount landed on site main around this period — keep backfill honest."
-    }
-  ]
+  "landed": []
 }

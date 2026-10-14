@@ -61,8 +61,8 @@ export function ProductivityChart({ metrics }: Props) {
     }));
   return (
     <ChartShell
-      title="Productivity index"
-      subtitle="Ships and deploys in each day's window."
+      title="Public project activity"
+      subtitle="Public project activity cards in each day's window."
       empty={!data.length}
     >
       <ResponsiveContainer>
@@ -105,13 +105,11 @@ export function ProductivityChart({ metrics }: Props) {
   );
 }
 
-
 export function AudienceChart({ metrics }: Props) {
   const data = metrics
     .map((m) => {
       const a = m.audience || {};
-      const reach =
-        a.totalReach ?? a.xImpressions ?? a.xFollowers ?? a.linkedInFollowers ?? null;
+      const reach = a.totalReach ?? a.xImpressions ?? a.xFollowers ?? a.linkedInFollowers ?? null;
       if (reach == null) return null;
       return { date: m.date, reach, source: m.source };
     })
@@ -120,7 +118,7 @@ export function AudienceChart({ metrics }: Props) {
   return (
     <ChartShell
       title="Audience growth"
-      subtitle="Reach and impressions when measured."
+      subtitle="Public audience measurements with source links."
       empty={!data.length}
     >
       <ResponsiveContainer>
