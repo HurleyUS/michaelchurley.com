@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-11",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 11, 2026 · 5:00 AM EDT → Oct 12, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-11T09:00:00Z → 2026-10-12T09:00:00Z",
+    "generatedEt": "Oct 14, 2026 · backfilled ~5:30 PM EDT (scheduled run failed)",
+    "xPostsMeasured": 9,
+    "inboxSignalItems": 6,
+    "tldr": "Ships/index 4: Omadesign 0.6.3-nightly.20261011.0001 shipped brush packs plus Photoshop/Illustrator imports (#199, #201), and nfglyph 0.1.1 went out; dotfiles got pre-publish ignore and secret checks. Audience: 9 X posts (6 replies, 1 quote, 2 reposts), ~374 public impressions. Inbox: a wave of Naarchy Product Hunt follow-up pitches and new Mack’s reviews.",
+    "deploysInWindow": null
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · 0.6.3-nightly.20261011.0001 — Brush packs",
+      "kind": "shipped",
+      "summary": "PR #199 (brush packs, Photoshop/Illustrator imports, website downloads; 39 files, +2,488/−28) merged, then release PR #201 moved nightlies to dated four-digit versions and the release was published.",
+      "bullets": [
+        "Portable brush packs",
+        "Photoshop/Illustrator imports, documented EPS artwork imports",
+        "Dated nightly tags with installer and website version paths kept in sync"
+      ],
+      "when": "Oct 11 · 11:16 PM–Oct 12 · 12:48 AM EDT",
+      "links": [
+        {
+          "label": "PR #199",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/199"
+        },
+        {
+          "label": "PR #201",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/201"
+        },
+        {
+          "label": "release",
+          "href": "https://github.com/michaelmonetized/omadesign/releases/tag/v0.6.3-nightly.20261011.0001"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/nfglyph · v0.1.1 released",
+      "kind": "shipped",
+      "summary": "Closes the tmux popup after a copy.",
+      "when": "Oct 11 · 11:06 PM EDT",
+      "links": [
+        {
+          "label": "v0.1.1",
+          "href": "https://github.com/michaelmonetized/nfglyph/releases/tag/v0.1.1"
+        }
+      ]
+    },
+    {
+      "title": "dotfiles · pre-publish checks",
+      "kind": "shipped",
+      "summary": "Both dotfiles repos now require ignore and secret checks before publishing, keep them active across branch changes, and check ignored paths with spaces across history.",
+      "when": "Oct 11 · 12:20–12:31 PM EDT"
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 9 posts (6 replies + 1 quote + 2 reposts), ~374 public impressions",
+      "kind": "audience",
+      "summary": "A reply to @thdxr led with 128 impressions, then “Omadesign available on …” quoting @jessyka_boat (113, 2 likes) and a keyboard-layout reply to @ThePrimeagen (50). Reposted @theo’s T3 Code post.",
+      "when": "Oct 11 · 7:42 AM–Oct 12 · 12:03 AM EDT",
+      "links": [
+        {
+          "label": "top reply",
+          "href": "https://x.com/MichaelH_rley/status/2109374546390245706"
+        },
+        {
+          "label": "Omadesign quote",
+          "href": "https://x.com/MichaelH_rley/status/2109374408376611225"
+        },
+        {
+          "label": "@michaelh_rley",
+          "href": "https://x.com/michaelh_rley"
+        }
+      ]
+    }
+  ],
+  "inbox": [
+    {
+      "title": "Naarchy · post-launch pitches",
+      "kind": "ops",
+      "summary": "Techbasedirectory, VellumUp and StartupFortune all reached out after the Product Hunt launch.",
+      "when": "Oct 11 · 7:56 AM–9:40 PM EDT"
+    },
+    {
+      "title": "Mack’s Shack BBQ · reviews",
+      "kind": "ops",
+      "summary": "2 new reviews landed (incl. Susan Cheek), and one reviewer later updated theirs.",
+      "when": "Oct 11 · 5:49 PM–Oct 12 · 2:04 AM EDT"
+    },
+    {
+      "title": "Jennings Custom Homes · lead form",
+      "kind": "ops",
+      "summary": "A new Hustle Launch lead message came in; it looks like spam.",
+      "when": "Oct 11 · 7:46 AM EDT"
+    },
+    {
+      "title": "Search Console · ipro.golf",
+      "kind": "ops",
+      "summary": "New reasons are keeping pages from being indexed.",
+      "when": "Oct 11 · 6:22 PM EDT"
+    },
+    {
+      "title": "Cloudflare · reaferral.com SSL",
+      "kind": "ops",
+      "summary": "Domain validation is needed to renew SSL certificates (repeats daily).",
+      "when": "Oct 11 · 5:10 AM EDT"
+    },
+    {
+      "title": "Loom · subscription deactivating",
+      "kind": "ops",
+      "summary": "Last-chance notice before the Loom workspace is deactivated.",
+      "when": "Oct 11 · 2:19 PM EDT"
+    }
+  ],
+  "loops": [
+    {
+      "title": "omatainer #516",
+      "detail": "New PR simplifying workspace menus and recovery dialogs, still open."
+    },
+    {
+      "title": "Cloudflare · reaferral.com SSL",
+      "detail": "Validate the domain so the certificate renews."
+    },
+    {
+      "title": "omatainer #510 / #511",
+      "detail": "#510 still open and unmerged; #511 stays the single consolidated todo. Review and split or merge before it grows further."
+    },
+    {
+      "title": "editbay release PRs",
+      "detail": "Release PRs still open (now including #69); address the CodeRabbit/Codex notes on #60/#63/#65/#67."
+    },
+    {
+      "title": "Hustle Launch Vercel + Actions usage",
+      "detail": "Deployment and Actions storage were at 100% last check; clean old deployments and artifacts."
+    },
+    {
+      "title": "Buffer API token",
+      "detail": "The “hustle” API token expires Oct 15; rotate it before scheduled posting breaks."
+    },
+    {
+      "title": "Daily Stand Up routine",
+      "detail": "Scheduled runs on Oct 11–14 failed during a usage outage; Oct 10–13 reports were backfilled on Oct 14."
+    }
+  ]
+}
