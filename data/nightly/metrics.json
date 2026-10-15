@@ -2,14 +2,20 @@
   {
     "date": "2026-09-02",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 28
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-03",
     "productivity": 0,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 10
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-04",
@@ -26,38 +32,56 @@
   {
     "date": "2026-09-06",
     "productivity": 3,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 39
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-07",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 324
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-08",
     "productivity": 3,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 137
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-09",
     "productivity": 4,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 378
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-10",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 159
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-11",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 130
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-12",
@@ -74,8 +98,11 @@
   {
     "date": "2026-09-14",
     "productivity": 0,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 25
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-15",
@@ -92,14 +119,20 @@
   {
     "date": "2026-09-17",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 202
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-18",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 10687
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-19",
@@ -110,44 +143,65 @@
   {
     "date": "2026-09-20",
     "productivity": 4,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 103
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-21",
     "productivity": 3,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 102
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-22",
     "productivity": 3,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 130
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-23",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 58
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-24",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 1328
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-25",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 1160
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-26",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 5
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-27",
@@ -158,32 +212,47 @@
   {
     "date": "2026-09-28",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 40
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-29",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 44
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-09-30",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 1143
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-01",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 224
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-02",
     "productivity": 3,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 393
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-03",
@@ -194,61 +263,91 @@
   {
     "date": "2026-10-04",
     "productivity": 4,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 2517
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-05",
     "productivity": 4,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 161
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-06",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 263
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-07",
     "productivity": 3,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 471
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-08",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 1607
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-09",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 522
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-10",
     "productivity": 3,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 994
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-11",
     "productivity": 2,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 374
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-12",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 164
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   },
   {
     "date": "2026-10-13",
     "productivity": 1,
-    "audience": {},
-    "source": "public-project-cards"
+    "audience": {
+      "xImpressions": 85
+    },
+    "source": "public-project-cards",
+    "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907"
   }
 ]

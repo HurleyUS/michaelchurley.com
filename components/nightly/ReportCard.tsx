@@ -9,6 +9,11 @@ export function ReportCardView({ card }: { card: ReportCard }) {
         <span className={kindPillClass(card.kind)}>{card.kind}</span>
       </div>
       <p>{card.summary}</p>
+      {card.archivedFrom ? (
+        <p className="ny-when">
+          Archived snapshot · {card.archivedFrom.slice(0, 7)} · not remeasured
+        </p>
+      ) : null}
       {card.quote ? (
         <p style={{ marginTop: 8, color: "var(--ny-text)", fontSize: 13 }}>
           &ldquo;{card.quote}&rdquo;

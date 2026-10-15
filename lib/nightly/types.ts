@@ -11,6 +11,7 @@ export type DailyMetric = {
   audience: AudienceMetrics;
   source?: string;
   links?: ReportLink[];
+  archivedFrom?: string;
 };
 
 export type ReportLink = { label: string; href: string };
@@ -24,6 +25,7 @@ export type ReportCard = {
   metrics?: Record<string, number>;
   when?: string;
   links: ReportLink[];
+  archivedFrom?: string;
 };
 
 export type DailyReport = {
@@ -34,6 +36,7 @@ export type DailyReport = {
     tldr?: string;
     windowEt?: string;
     windowUtc?: string;
+    xPostsMeasured?: number;
   };
   shipped: ReportCard[];
   landed: ReportCard[];

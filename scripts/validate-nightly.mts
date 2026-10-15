@@ -1,9 +1,11 @@
 import { getMetrics, getReport, listReportDates } from "../lib/nightly/data";
+import { assertAudienceArchive } from "../lib/nightly/archive";
 
 try {
   const dates = await listReportDates();
   const metrics = await getMetrics();
   const reports = await Promise.all(dates.map(getReport));
+  assertAudienceArchive(metrics, reports);
   if (
     metrics.length !== dates.length ||
     new Set(metrics.map((m) => m.date)).size !== metrics.length

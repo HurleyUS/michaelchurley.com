@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Sep 23, 2026 · 5:00 AM EDT → Sep 24, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-23T09:00:00Z → 2026-09-24T09:00:00Z",
-    "tldr": "HurleyUS/michaelchurley.com · 6 merged PRs; michaelmonetized/editbay · init"
+    "tldr": "HurleyUS/michaelchurley.com · 6 merged PRs; michaelmonetized/editbay · init",
+    "xPostsMeasured": 2
   },
   "shipped": [
     {
@@ -59,5 +60,19 @@
       ]
     }
   ],
-  "landed": []
+  "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 58,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    }
+  ]
 }

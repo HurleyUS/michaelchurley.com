@@ -169,6 +169,8 @@ ${archive}
 
 function cardMarkdown(card: ReportCard) {
   const parts = [`### ${card.title} (${card.kind})`, card.summary];
+  if (card.archivedFrom)
+    parts.push(`Archived snapshot · ${card.archivedFrom.slice(0, 7)} · not remeasured`);
   if (card.quote) parts.push(`> ${card.quote}`);
   if (card.bullets?.length) parts.push(card.bullets.map((b) => `- ${b}`).join("\n"));
   if (card.metrics) {

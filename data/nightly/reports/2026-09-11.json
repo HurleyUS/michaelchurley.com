@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Sep 11, 2026 · 5:00 AM EDT → Sep 12, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-11T09:00:00Z → 2026-09-12T09:00:00Z",
-    "tldr": "HurleyUS/michaelchurley.com · commits"
+    "tldr": "HurleyUS/michaelchurley.com · commits",
+    "xPostsMeasured": 2
   },
   "shipped": [
     {
@@ -24,5 +25,19 @@
       ]
     }
   ],
-  "landed": []
+  "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 130,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    }
+  ]
 }

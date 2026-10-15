@@ -53,6 +53,12 @@ export default async function NightlyReportPage({ params }: { params: Promise<{ 
               <div className="n">24h</div>
               <div className="l">Window</div>
             </div>
+            {report.meta.xPostsMeasured !== undefined ? (
+              <div className="ny-metric">
+                <div className="n">{report.meta.xPostsMeasured}</div>
+                <div className="l">X posts recorded in archive</div>
+              </div>
+            ) : null}
           </div>
           {report.meta.windowEt ? (
             <p className="ny-note" style={{ marginTop: 16 }}>

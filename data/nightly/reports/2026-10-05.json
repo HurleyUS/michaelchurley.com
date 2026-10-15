@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Oct 5, 2026 · 5:00 AM EDT → Oct 6, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-10-05T09:00:00Z → 2026-10-06T09:00:00Z",
-    "tldr": "michaelmonetized/naarchy · #2 October 6 release package; HurleyUS/michaelchurley.com · #96 Naarchy release page + #94 Omadesign logo; michaelmonetized/editbay · 13 more R2/R3 PRs + 12 issues; michaelmonetized/omatainer · #509 NS7 + stage controllers, #510 waveforms + MIDI"
+    "tldr": "michaelmonetized/naarchy · #2 October 6 release package; HurleyUS/michaelchurley.com · #96 Naarchy release page + #94 Omadesign logo; michaelmonetized/editbay · 13 more R2/R3 PRs + 12 issues; michaelmonetized/omatainer · #509 NS7 + stage controllers, #510 waveforms + MIDI",
+    "xPostsMeasured": 5
   },
   "shipped": [
     {
@@ -106,6 +107,16 @@
     }
   ],
   "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 161
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    },
     {
       "title": "Omadesign · public promo film",
       "kind": "audience",

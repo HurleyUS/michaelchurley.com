@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Oct 10, 2026 · 5:00 AM EDT → Oct 11, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-10-10T09:00:00Z → 2026-10-11T09:00:00Z",
-    "tldr": "michaelmonetized/naarchy · v0.5.1 + v0.5.2 released; michaelmonetized/slopops · Fleet: live T3 Code environments (#4); michaelchurley.com · Naarchy Product Hunt launch banner (#97)"
+    "tldr": "michaelmonetized/naarchy · v0.5.1 + v0.5.2 released; michaelmonetized/slopops · Fleet: live T3 Code environments (#4); michaelchurley.com · Naarchy Product Hunt launch banner (#97)",
+    "xPostsMeasured": 12
   },
   "shipped": [
     {
@@ -59,6 +60,16 @@
     }
   ],
   "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 994
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    },
     {
       "title": "Naarchy · public announcement",
       "kind": "audience",

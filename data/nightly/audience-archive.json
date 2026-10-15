@@ -1,0 +1,389 @@
+{
+  "sourceCommit": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+  "entries": [
+    {
+      "date": "2026-09-02",
+      "audience": {
+        "xImpressions": 28
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 28,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "audience": {
+        "xImpressions": 10
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 10,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-05",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-06",
+      "audience": {
+        "xImpressions": 39
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 39,
+        "likes": 0,
+        "replies": 1,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "audience": {
+        "xImpressions": 324
+      },
+      "xPostsMeasured": 3,
+      "engagement": {
+        "impressions": 324,
+        "likes": 3,
+        "replies": 1,
+        "reposts": 1
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "audience": {
+        "xImpressions": 137
+      },
+      "xPostsMeasured": 2,
+      "engagement": {
+        "impressions": 137,
+        "likes": 0,
+        "replies": 2,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "audience": {
+        "xImpressions": 378
+      },
+      "xPostsMeasured": 2,
+      "engagement": {
+        "impressions": 378,
+        "likes": 12,
+        "replies": 10,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "audience": {
+        "xImpressions": 159
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 159,
+        "likes": 3,
+        "replies": 3,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "audience": {
+        "xImpressions": 130
+      },
+      "xPostsMeasured": 2,
+      "engagement": {
+        "impressions": 130,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-12",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-13",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-14",
+      "audience": {
+        "xImpressions": 25
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 25,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-16",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-17",
+      "audience": {
+        "xImpressions": 202
+      },
+      "xPostsMeasured": 6,
+      "engagement": {
+        "impressions": 202,
+        "likes": 3,
+        "replies": 4,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "audience": {
+        "xImpressions": 10687
+      },
+      "xPostsMeasured": 20,
+      "engagement": {
+        "impressions": 10687,
+        "likes": 83,
+        "replies": 13,
+        "reposts": 10
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-20",
+      "audience": {
+        "xImpressions": 103
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 103,
+        "likes": 3,
+        "replies": 2,
+        "reposts": 1
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "audience": {
+        "xImpressions": 102
+      },
+      "xPostsMeasured": 2,
+      "engagement": {
+        "impressions": 102,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "audience": {
+        "xImpressions": 130
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 130,
+        "likes": 2,
+        "replies": 1,
+        "reposts": 1
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "audience": {
+        "xImpressions": 58
+      },
+      "xPostsMeasured": 2,
+      "engagement": {
+        "impressions": 58,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "audience": {
+        "xImpressions": 1328
+      },
+      "xPostsMeasured": 9,
+      "engagement": {
+        "impressions": 1328,
+        "likes": 3,
+        "replies": 1,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "audience": {
+        "xImpressions": 1160
+      },
+      "xPostsMeasured": 11,
+      "engagement": {
+        "impressions": 1160,
+        "likes": 4,
+        "replies": 3,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "audience": {
+        "xImpressions": 5
+      },
+      "xPostsMeasured": 1,
+      "engagement": {
+        "impressions": 5,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-09-28",
+      "audience": {
+        "xImpressions": 40
+      },
+      "xPostsMeasured": 1
+    },
+    {
+      "date": "2026-09-29",
+      "audience": {
+        "xImpressions": 44
+      },
+      "xPostsMeasured": 1
+    },
+    {
+      "date": "2026-09-30",
+      "audience": {
+        "xImpressions": 1143
+      },
+      "xPostsMeasured": 20
+    },
+    {
+      "date": "2026-10-01",
+      "audience": {
+        "xImpressions": 224
+      },
+      "xPostsMeasured": 2
+    },
+    {
+      "date": "2026-10-02",
+      "audience": {
+        "xImpressions": 393
+      },
+      "xPostsMeasured": 1
+    },
+    {
+      "date": "2026-10-03",
+      "audience": {},
+      "xPostsMeasured": 0
+    },
+    {
+      "date": "2026-10-04",
+      "audience": {
+        "xImpressions": 2517
+      },
+      "xPostsMeasured": 9
+    },
+    {
+      "date": "2026-10-05",
+      "audience": {
+        "xImpressions": 161
+      },
+      "xPostsMeasured": 5
+    },
+    {
+      "date": "2026-10-06",
+      "audience": {
+        "xImpressions": 263
+      },
+      "xPostsMeasured": 5
+    },
+    {
+      "date": "2026-10-07",
+      "audience": {
+        "xImpressions": 471
+      },
+      "xPostsMeasured": 4
+    },
+    {
+      "date": "2026-10-08",
+      "audience": {
+        "xImpressions": 1607
+      },
+      "xPostsMeasured": 9
+    },
+    {
+      "date": "2026-10-09",
+      "audience": {
+        "xImpressions": 522
+      },
+      "xPostsMeasured": 7
+    },
+    {
+      "date": "2026-10-10",
+      "audience": {
+        "xImpressions": 994
+      },
+      "xPostsMeasured": 12
+    },
+    {
+      "date": "2026-10-11",
+      "audience": {
+        "xImpressions": 374
+      },
+      "xPostsMeasured": 9
+    },
+    {
+      "date": "2026-10-12",
+      "audience": {
+        "xImpressions": 164
+      },
+      "xPostsMeasured": 4
+    },
+    {
+      "date": "2026-10-13",
+      "audience": {
+        "xImpressions": 85
+      },
+      "xPostsMeasured": 4
+    }
+  ]
+}

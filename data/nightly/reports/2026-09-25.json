@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Sep 25, 2026 · 5:00 AM EDT → Sep 26, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-25T09:00:00Z → 2026-09-26T09:00:00Z",
-    "tldr": "michaelmonetized/omadesign · Release 0.6.0 + 3 merged PRs"
+    "tldr": "michaelmonetized/omadesign · Release 0.6.0 + 3 merged PRs",
+    "xPostsMeasured": 11
   },
   "shipped": [
     {
@@ -39,5 +40,19 @@
       ]
     }
   ],
-  "landed": []
+  "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 1160,
+        "likes": 4,
+        "replies": 3,
+        "reposts": 0
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    }
+  ]
 }

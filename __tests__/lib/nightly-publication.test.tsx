@@ -9,6 +9,9 @@ import {
   parsePublicReport,
 } from "../../lib/nightly/publication";
 import { pageMarkdown } from "../../lib/page-markdown";
+import archive from "../../data/nightly/audience-archive.json";
+import { assertAudienceArchive } from "../../lib/nightly/archive";
+import { audienceChartData } from "../../lib/nightly/audience";
 
 // Synthetic examples only. Never make a regression fixture out of removed report copy.
 const publicCard = {
@@ -118,6 +121,56 @@ describe("public-only nightly contract", () => {
   });
 });
 
+test("preserves archived audience numbers and missing days independently of prose", async () => {
+  const metrics = await getMetrics();
+  const reports = await Promise.all(archive.entries.map((entry) => getReport(entry.date)));
+  expect(archive.sourceCommit).toBe("6ad43ac3a54a5bfc4ec805a041648315d1979907");
+  expect(archive.entries).toHaveLength(42);
+  expect(archive.entries.filter((entry) => Object.keys(entry.audience).length > 0)).toHaveLength(
+    33,
+  );
+  expect(archive.entries.filter((entry) => entry.engagement)).toHaveLength(18);
+  expect(() => assertAudienceArchive(metrics, reports)).not.toThrow();
+  const chart = audienceChartData(metrics);
+  expect(chart.filter((point) => point.reach !== null)).toHaveLength(33);
+  expect(chart.filter((point) => point.reach === null)).toHaveLength(9);
+  expect(chart.find((point) => point.date === "2026-09-18")?.reach).toBe(10687);
+  expect(chart.find((point) => point.date === "2026-10-13")?.reach).toBe(85);
+  const blanked = structuredClone(metrics);
+  blanked[0].audience = {};
+  expect(() => assertAudienceArchive(blanked, reports)).toThrow(
+    "Archived audience values must be preserved",
+  );
+  const fabricated = structuredClone(metrics);
+  fabricated.find((point) => point.date === "2026-09-04")!.audience = { xImpressions: 0 };
+  expect(() => assertAudienceArchive(fabricated, reports)).toThrow();
+  const stripped = structuredClone(reports);
+  stripped[0]!.landed = [];
+  expect(() => assertAudienceArchive(metrics, stripped)).toThrow();
+});
+
+test("archived numeric provenance does not permit private copy or unsourced project cards", () => {
+  const archived = {
+    ...publicCard,
+    kind: "audience",
+    links: [],
+    metrics: { impressions: 0 },
+    archivedFrom: archive.sourceCommit,
+  };
+  expect(
+    parsePublicReport({ ...fixture(), landed: [archived] }).landed[0].metrics?.impressions,
+  ).toBe(0);
+  expect(() =>
+    parsePublicReport({ ...fixture(), landed: [{ ...archived, summary: rejectedCopy[0] }] }),
+  ).toThrow();
+  expect(() =>
+    parsePublicReport({ ...fixture(), shipped: [{ ...archived, kind: "shipped" }] }),
+  ).toThrow();
+  expect(() =>
+    parsePublicReport({ ...fixture(), landed: [{ ...archived, archivedFrom: "unknown" }] }),
+  ).toThrow();
+});
+
 test("every archived date renders only public data in HTML and Markdown", async () => {
   const dates = await listReportDates();
   const metrics = await getMetrics();
@@ -135,6 +188,11 @@ test("every archived date renders only public data in HTML and Markdown", async 
     const markdown = await pageMarkdown(["nightly", "report", date]);
     expect(html).not.toMatch(forbidden);
     expect(markdown).not.toMatch(forbidden);
+    expect(
+      report.landed
+        .filter((card) => card.archivedFrom)
+        .every(() => html.includes("Archived snapshot") && markdown!.includes("not remeasured")),
+    ).toBe(true);
     expect(report.shipped.every((card) => markdown!.includes(card.title))).toBe(true);
     expect(
       report.shipped.flatMap((card) => card.links).every((link) => isPublicSource(link.href)),

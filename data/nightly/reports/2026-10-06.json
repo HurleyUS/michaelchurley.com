@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Oct 6, 2026 · 5:00 AM EDT → Oct 7, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-10-06T09:00:00Z → 2026-10-07T09:00:00Z",
-    "tldr": "michaelmonetized/omatainer · #510 app software checklist — 27 features in a day; michaelmonetized/editbay · 9 more R2/R3 PRs + 9 issues"
+    "tldr": "michaelmonetized/omatainer · #510 app software checklist — 27 features in a day; michaelmonetized/editbay · 9 more R2/R3 PRs + 9 issues",
+    "xPostsMeasured": 5
   },
   "shipped": [
     {
@@ -60,5 +61,16 @@
       ]
     }
   ],
-  "landed": []
+  "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 263
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    }
+  ]
 }

@@ -6,17 +6,29 @@ combined AI-readable site export use it. `/nightly` remains indexable.
 ## Files
 
 - `reports/YYYY-MM-DD.json`: `{ date, label?, timezone?, meta, shipped[], landed[] }`
-- `meta`: only `tldr?`, `windowEt?`, and `windowUtc?`.
+- `meta`: only `tldr?`, `windowEt?`, `windowUtc?`, and recorded `xPostsMeasured?`.
 - Project cards: `title`, `kind`, `summary`, and at least one reviewed public
   `links[]` source; optional `bullets`, `quote`, `metrics`, and `when`.
 - `metrics.json`: `{ date, productivity, audience, source?, links? }`.
   `public-project-cards` productivity counts retained in-window project cards,
   excluding `outside` cards. It is an activity index, not a deployment count.
-  Audience values require public source links; omit unsupported measurements.
+  Audience values require reviewed public source links or approved archived provenance; omit unsupported measurements.
   Filler must use `seed-placeholder`.
 
 Report date D summarizes D at 05:00 through D+1 at 05:00 America/New_York
 (exclusive). Use the label `5am–5am ET` and the work-day date.
+
+- `audience-archive.json` preserves the approved numeric snapshots from commit
+  `6ad43ac3a54a5bfc4ec805a041648315d1979907`: 33 daily impression values,
+  18 engagement records, and 42 recorded post counts. These are historical
+  snapshots, not newly verified provider measurements. Do not restore source
+  prose, private evidence, or old operational notes with the numbers.
+- `archivedFrom` identifies that approved source commit on metric points and
+  numeric audience cards. It never substitutes for sources on project cards.
+- Missing audience values remain missing; zero is a measurement only when
+  explicitly recorded. Audience charts retain gaps for unmeasured days.
+- Local archive validation and regression tests prevent existing numeric snapshots
+  from being cleared, altered, or replaced by invented values during a cleanup.
 
 ## Content review
 

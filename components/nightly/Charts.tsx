@@ -10,6 +10,7 @@ import {
   YAxis,
 } from "recharts";
 import type { DailyMetric } from "@/lib/nightly/types";
+import { audienceChartData } from "@/lib/nightly/audience";
 
 const accent = "#5eead4";
 const blue = "#7dd3fc";
@@ -106,20 +107,13 @@ export function ProductivityChart({ metrics }: Props) {
 }
 
 export function AudienceChart({ metrics }: Props) {
-  const data = metrics
-    .map((m) => {
-      const a = m.audience || {};
-      const reach = a.totalReach ?? a.xImpressions ?? a.xFollowers ?? a.linkedInFollowers ?? null;
-      if (reach == null) return null;
-      return { date: m.date, reach, source: m.source };
-    })
-    .filter(Boolean) as Array<{ date: string; reach: number; source?: string }>;
+  const data = audienceChartData(metrics);
 
   return (
     <ChartShell
       title="Audience growth"
-      subtitle="Public audience measurements with source links."
-      empty={!data.length}
+      subtitle="Recorded reach and impressions. Historical values are archived snapshots."
+      empty={!data.some((point) => point.reach !== null)}
     >
       <ResponsiveContainer>
         <AreaChart data={data} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>

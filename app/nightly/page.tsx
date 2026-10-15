@@ -55,6 +55,9 @@ export default async function NightlyDashboardPage() {
                 {latestMetric?.audience?.xImpressions ?? latestMetric?.audience?.totalReach ?? "—"}
               </div>
               <div className="l">Latest audience signal</div>
+              {latestMetric?.archivedFrom ? (
+                <p className="ny-when">Archived snapshot · not remeasured</p>
+              ) : null}
             </div>
           </div>
           <p className="ny-note" style={{ marginTop: 16 }}>

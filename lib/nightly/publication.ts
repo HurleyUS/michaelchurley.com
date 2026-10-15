@@ -75,22 +75,33 @@ const date = z
     return Number.isFinite(parsed.getTime()) && parsed.toISOString().slice(0, 10) === value;
   });
 const count = z.number().finite().nonnegative();
+const archivedFrom = z.literal("6ad43ac3a54a5bfc4ec805a041648315d1979907").optional();
 const link = z.strictObject({ label: text, href: z.string().refine(isPublicSource) });
-const card = z.strictObject({
-  title: text,
-  kind: z.enum(["shipped", "outside", "audience", "measured"]),
-  summary: text,
-  bullets: z.array(text).optional(),
-  quote: text.optional(),
-  metrics: z
-    .partialRecord(
-      z.enum(["impressions", "likes", "replies", "reposts", "downloads", "stars", "upvotes"]),
-      count,
-    )
-    .optional(),
-  when: text.optional(),
-  links: z.array(link).min(1),
-});
+const card = z
+  .strictObject({
+    title: text,
+    kind: z.enum(["shipped", "outside", "audience", "measured"]),
+    summary: text,
+    bullets: z.array(text).optional(),
+    quote: text.optional(),
+    metrics: z
+      .partialRecord(
+        z.enum(["impressions", "likes", "replies", "reposts", "downloads", "stars", "upvotes"]),
+        count,
+      )
+      .optional(),
+    when: text.optional(),
+    links: z.array(link),
+    archivedFrom,
+  })
+  .refine(
+    (value) =>
+      value.links.length > 0 ||
+      (value.kind === "audience" &&
+        Boolean(value.archivedFrom) &&
+        Boolean(value.metrics) &&
+        Object.keys(value.metrics!).length > 0),
+  );
 const report = z.strictObject({
   date,
   label: z.literal("5am–5am ET").optional(),
@@ -99,6 +110,7 @@ const report = z.strictObject({
     tldr: text.optional(),
     windowEt: text.optional(),
     windowUtc: text.optional(),
+    xPostsMeasured: count.optional(),
   }),
   shipped: z.array(card),
   landed: z.array(card),
@@ -115,8 +127,14 @@ const metric = z
     }),
     source: z.enum(["public-project-cards", "seed-placeholder"]).optional(),
     links: z.array(link).min(1).optional(),
+    archivedFrom,
   })
-  .refine((value) => Object.keys(value.audience).length === 0 || Boolean(value.links?.length));
+  .refine(
+    (value) =>
+      Object.keys(value.audience).length === 0 ||
+      Boolean(value.links?.length) ||
+      Boolean(value.archivedFrom),
+  );
 
 function parsePublic<T>(schema: z.ZodType<T>, value: unknown): T {
   const result = schema.safeParse(value);

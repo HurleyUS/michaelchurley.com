@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Oct 1, 2026 · 5:00 AM EDT → Oct 2, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-10-01T09:00:00Z → 2026-10-02T09:00:00Z",
-    "tldr": "michaelmonetized/omatainer · 12-PR feature stack opened; HurleyUS/michaelchurley.com · nightly 2026-09-30"
+    "tldr": "michaelmonetized/omatainer · 12-PR feature stack opened; HurleyUS/michaelchurley.com · nightly 2026-09-30",
+    "xPostsMeasured": 2
   },
   "shipped": [
     {
@@ -61,6 +62,16 @@
     }
   ],
   "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 224
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    },
     {
       "title": "Omadesign · public motion demo",
       "kind": "audience",

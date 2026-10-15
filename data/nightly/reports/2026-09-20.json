@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Sep 20, 2026 · 5:00 AM EDT → Sep 21, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-20T09:00:00Z → 2026-09-21T09:00:00Z",
-    "tldr": "omadesign · v0.5.3; omadesign · v0.5.4; omadesign · v0.5.5-nightly.1; michaelmonetized/omadesign · 6 merged PRs"
+    "tldr": "omadesign · v0.5.3; omadesign · v0.5.4; omadesign · v0.5.5-nightly.1; michaelmonetized/omadesign · 6 merged PRs",
+    "xPostsMeasured": 1
   },
   "shipped": [
     {
@@ -81,5 +82,19 @@
       ]
     }
   ],
-  "landed": []
+  "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 103,
+        "likes": 3,
+        "replies": 2,
+        "reposts": 1
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    }
+  ]
 }

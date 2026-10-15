@@ -5,7 +5,8 @@
   "meta": {
     "windowEt": "Sep 24, 2026 · 5:00 AM EDT → Sep 25, 2026 · 5:00 AM EDT",
     "windowUtc": "2026-09-24T09:00:00Z → 2026-09-25T09:00:00Z",
-    "tldr": "michaelmonetized/omadesign · Release 0.5.9 + 8 merged PRs; HurleyUS/michaelchurley.com · 4 merged PRs"
+    "tldr": "michaelmonetized/omadesign · Release 0.5.9 + 8 merged PRs; HurleyUS/michaelchurley.com · 4 merged PRs",
+    "xPostsMeasured": 9
   },
   "shipped": [
     {
@@ -89,5 +90,19 @@
       ]
     }
   ],
-  "landed": []
+  "landed": [
+    {
+      "title": "X · archived audience snapshot",
+      "kind": "audience",
+      "summary": "Historical aggregate values recorded for this reporting window.",
+      "metrics": {
+        "impressions": 1328,
+        "likes": 3,
+        "replies": 1,
+        "reposts": 0
+      },
+      "archivedFrom": "6ad43ac3a54a5bfc4ec805a041648315d1979907",
+      "links": []
+    }
+  ]
 }
