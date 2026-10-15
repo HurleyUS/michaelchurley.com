@@ -20,6 +20,7 @@ const publicRepositories = new Set([
   "michaelmonetized/omnux-gpu",
   "michaelmonetized/resend-listening-daemon",
   "michaelmonetized/slopops",
+  "omacom/omacut",
 ]);
 
 export function isPublicSource(href: string): boolean {

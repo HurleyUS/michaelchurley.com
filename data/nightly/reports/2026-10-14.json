@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-14",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 14, 2026 · 5:00 AM EDT → Oct 15, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-14T09:00:00Z → 2026-10-15T09:00:00Z",
+    "tldr": "omacom/omacut · drag-and-drop video opening (#21) merged upstream and shipped in Omacut v0.7.0, alongside the aarch64 package build; HurleyUS/michaelchurley.com · Oct 10–13 Nightly reports backfilled (#98) and moved to source-backed public project cards",
+    "xPostsMeasured": 1
+  },
+  "shipped": [
+    {
+      "title": "omacom/omacut · Drop videos onto the window (#21), shipped in v0.7.0",
+      "kind": "shipped",
+      "summary": "PR #21 was reworked for multi-clip timelines, merged upstream, and released minutes later in Omacut v0.7.0, which also credits the aarch64 package build from #22.",
+      "bullets": [
+        "Dropping into an empty window opens the video",
+        "Dropping onto an open edit adds the files after the clip under the playhead, undoably",
+        "Only plain local files are accepted; files that won’t open are skipped with a notice",
+        "The PKGBUILD now builds for aarch64 too"
+      ],
+      "quote": "Thanks, this is the better of the two drop PRs!",
+      "when": "Oct 14 · 5:25–5:45 AM EDT",
+      "links": [
+        {
+          "label": "PR #21",
+          "href": "https://github.com/omacom/omacut/pull/21"
+        },
+        {
+          "label": "v0.7.0",
+          "href": "https://github.com/omacom/omacut/releases/tag/v0.7.0"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/michaelchurley.com · Nightly backfill and source-backed cards (#98)",
+      "kind": "shipped",
+      "summary": "PR #98 restored the Oct 10–13 Nightly reports; follow-up commits moved /nightly to public project cards backed by reviewed public sources, with validation and regression tests.",
+      "bullets": [
+        "Oct 10–13 reports published",
+        "Every project card now links a public source",
+        "Historical audience snapshots preserved with provenance"
+      ],
+      "when": "Oct 14 · 5:12 PM–Oct 15 · 12:27 AM EDT",
+      "links": [
+        {
+          "label": "PR #98",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/98"
+        },
+        {
+          "label": "commit",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/commit/bc94396"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 1 reply, 19 public impressions",
+      "kind": "audience",
+      "summary": "A reply agreeing that marketing and distribution, not code, are what AI can’t copy.",
+      "metrics": {
+        "impressions": 19,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0
+      },
+      "when": "Oct 14 · 1:26 PM EDT",
+      "links": [
+        {
+          "label": "Public source",
+          "href": "https://x.com/MichaelH_rley/status/2110422103723811044"
+        }
+      ]
+    }
+  ]
+}

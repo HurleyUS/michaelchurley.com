@@ -131,7 +131,8 @@ test("preserves archived audience numbers and missing days independently of pros
   );
   expect(archive.entries.filter((entry) => entry.engagement)).toHaveLength(18);
   expect(() => assertAudienceArchive(metrics, reports)).not.toThrow();
-  const chart = audienceChartData(metrics);
+  const archivedDates = new Set(archive.entries.map((entry) => entry.date));
+  const chart = audienceChartData(metrics).filter((point) => archivedDates.has(point.date));
   expect(chart.filter((point) => point.reach !== null)).toHaveLength(33);
   expect(chart.filter((point) => point.reach === null)).toHaveLength(9);
   expect(chart.find((point) => point.date === "2026-09-18")?.reach).toBe(10687);
