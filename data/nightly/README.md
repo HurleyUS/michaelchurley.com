@@ -37,13 +37,20 @@ announcements supported by sources accessible without signing in. Review every
 field, including summaries, quotes, bullets, link labels, metrics, and metadata.
 A public repository link does not make private operational context publishable.
 
-Exclude inbox evidence, email messages or links, open loops and private task
-lists, personal meetings or appointments, billing or account information,
-credentials and security administration, private support conversations, and
-private operational status. Do not move excluded copy to another card, notes,
-metadata, test fixture, commit message, or public log. When public evidence is
-missing, omit the item; do not substitute inferred achievements or chart totals.
-Keep private daily planning in its private channel.
+Inbox-as-evidence and open-loops sections are allowed (policy 2026-10-15), but
+they must never include financial obligations (debts, collections, bills,
+settlements, payments owed), personal or private information, or personal or
+private engagements and partnerships. Examples that must never appear: Vizible
+Agency, Leadminerr, Birdeye, Sinclair, TalentFoot job hunting, and any
+collections agency. Lists of items Michael should follow up on must never appear
+in the public report; send them to him privately in chat instead.
+
+Also exclude email links, personal meetings or appointments, billing or account
+information, credentials and security administration, private support
+conversations, and private operational status. Do not move excluded copy to
+another card, notes, metadata, test fixture, commit message, or public log. When
+public evidence is missing, omit the item; do not substitute inferred
+achievements or chart totals.
 
 `lib/nightly/publication.ts` rejects unknown fields, excluded sections, common
 private-content patterns, and links outside reviewed public source paths.
@@ -59,7 +66,7 @@ Adding a source requires checking anonymous access and reviewing its content.
    `bun tsc`, and `bun lint --fix`. The local lint gate includes archive validation.
 4. Check dashboard, every dated HTML and Markdown report, and combined site export.
    Feeds currently contain blog posts only; re-check any new consumer.
-5. Commit a sanitized category summary. Publishing requires the user's approval.
+5. Commit a sanitized category summary and publish without waiting for approval.
 
 Web production builds use Blacksmith through the GitHub organization and deploy
 archived Vercel prebuilt output. Local checks do not deploy. Replacing current
