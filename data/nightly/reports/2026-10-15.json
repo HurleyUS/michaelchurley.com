@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-15",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 15, 2026 · 5:00 AM EDT → Oct 16, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-15T09:00:00Z → 2026-10-16T09:00:00Z",
+    "tldr": "150 PRs opened across the three free creative apps: michaelmonetized/omadesign (109) for keyboard access, editable file exchange and Live collaboration; michaelmonetized/omatainer (23) for plugin hosting and surround delivery; michaelmonetized/editbay (18) for HDR and high-depth masters",
+    "xPostsMeasured": 7
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · 109 PRs opened",
+      "kind": "shipped",
+      "summary": "A day-long run of open PRs for the next Omadesign releases, centered on full keyboard access, editable round-trips with other design formats, and higher-precision pixels. All are open for review; none merged in this window.",
+      "bullets": [
+        "Keyboard reach and stable field names across Design, Photo and Motion panels and dialogs",
+        "Editable import and export for SVG, PDF, IDML, PSD, Affinity and Illustrator files",
+        "RAW and high-depth pixels kept in floating point with memory-aware loading",
+        "Live collaboration with presence, offline reconnect and per-author undo",
+        "Editable 3D scenes, motion expressions, and 0.6.4–0.6.7 release prep"
+      ],
+      "when": "Oct 15 · 7:50 AM–10:05 PM EDT",
+      "links": [
+        {
+          "label": "#220 · 0.6.4 baseline",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/220"
+        },
+        {
+          "label": "#227 · IDML publishing",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/227"
+        },
+        {
+          "label": "#239 · live editing",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/239"
+        },
+        {
+          "label": "#244 · 3D scenes",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/244"
+        },
+        {
+          "label": "#328 · latest",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/328"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/omatainer · 23 PRs opened",
+      "kind": "shipped",
+      "summary": "Open PRs for the music production app covering native plugin hosting, surround speaker layouts, and delivery-grade audio files. All are open for review.",
+      "bullets": [
+        "CLAP and LV2 plugins hosted in isolated workers with saved state",
+        "Declared 2.1, 5.1 and 7.1 speaker routing with matching masters and stems",
+        "RF64 BWF and AIFF streaming plus loudness-checked final audio",
+        "Keyboard authoring for tracks, delivery and plugin rows"
+      ],
+      "when": "Oct 15 · 12:14–8:40 PM EDT",
+      "links": [
+        {
+          "label": "#520 · CLAP hosting",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/520"
+        },
+        {
+          "label": "#521 · LV2 hosting",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/521"
+        },
+        {
+          "label": "#538 · 7.1 masters",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/538"
+        },
+        {
+          "label": "#540 · latest",
+          "href": "https://github.com/michaelmonetized/omatainer/pull/540"
+        }
+      ]
+    },
+    {
+      "title": "michaelmonetized/editbay · 18 PRs opened",
+      "kind": "shipped",
+      "summary": "Open PRs for the film editor focused on HDR color, high-depth delivery formats, and editorial tools. All are open for review.",
+      "bullets": [
+        "HDR processing with a saved luminance scale and retained mastering tags",
+        "Lossless16, DNxHR HQX, HEVC Main8 and high-depth VP9 masters",
+        "Editable captions, multicam cutting, color scopes and exact relinking",
+        "Keyboard timeline authoring and saved task workspaces"
+      ],
+      "when": "Oct 15 · 12:15–9:34 PM EDT",
+      "links": [
+        {
+          "label": "#77 · multicam",
+          "href": "https://github.com/michaelmonetized/editbay/pull/77"
+        },
+        {
+          "label": "#82 · HDR color",
+          "href": "https://github.com/michaelmonetized/editbay/pull/82"
+        },
+        {
+          "label": "#86 · DNxHR masters",
+          "href": "https://github.com/michaelmonetized/editbay/pull/86"
+        },
+        { "label": "#88 · latest", "href": "https://github.com/michaelmonetized/editbay/pull/88" }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 7 posts, 198 public impressions",
+      "kind": "audience",
+      "summary": "One original post and six replies; the most-seen was a reply on an AI horror-film joke thread.",
+      "metrics": {
+        "impressions": 198,
+        "likes": 4,
+        "replies": 1,
+        "reposts": 0
+      },
+      "when": "Oct 15 · 11:58 AM–7:28 PM EDT",
+      "links": [
+        { "label": "Top post", "href": "https://x.com/MichaelH_rley/status/2110805923652411809" }
+      ]
+    }
+  ]
+}
