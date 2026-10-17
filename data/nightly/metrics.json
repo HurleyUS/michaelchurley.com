@@ -377,5 +377,19 @@
         "href": "https://x.com/MichaelH_rley/status/2110805923652411809"
       }
     ]
+  },
+  {
+    "date": "2026-10-16",
+    "productivity": 1,
+    "audience": {
+      "xImpressions": 22
+    },
+    "source": "public-project-cards",
+    "links": [
+      {
+        "label": "Public source",
+        "href": "https://x.com/MichaelH_rley/status/2111060182881210557"
+      }
+    ]
   }
 ]

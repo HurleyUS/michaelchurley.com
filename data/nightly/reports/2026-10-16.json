@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-16",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 16, 2026 · 5:00 AM EDT → Oct 17, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-16T09:00:00Z → 2026-10-17T09:00:00Z",
+    "tldr": "14 PRs opened on michaelmonetized/omadesign for symbols, graphic styles, recorded actions, color themes and screen export, plus a current-source build for human QA",
+    "xPostsMeasured": 1
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · 14 PRs opened",
+      "kind": "shipped",
+      "summary": "A day of open PRs for the next Omadesign release, starting with a current-source build for human QA and moving through reusable symbols, saved appearances, recorded editor actions and production-grade screen export. All are open for review; none merged in this window.",
+      "bullets": [
+        "Current Craft source integrated for human QA, with usable editor docks replacing the rejected nightly workspace",
+        "Linked vector symbols, independent symbol copies and batch instance commands",
+        "Color Guide with editable themes and artwork recoloring, plus saved graphic style presets",
+        "Recorded editor actions with persistent libraries and atomic playback",
+        "Asset collections, multi-row screen export, fractional and PPI sizing, and shared export presets",
+        "Real alpha channels, native selection workflows and more precise raster reopening"
+      ],
+      "when": "Oct 16 · 7:30 AM–8:50 PM EDT",
+      "links": [
+        {
+          "label": "#329 · human QA build",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/329"
+        },
+        {
+          "label": "#336 · linked symbols",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/336"
+        },
+        {
+          "label": "#342 · recorded actions",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/342"
+        },
+        {
+          "label": "#352 · export presets",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/352"
+        },
+        {
+          "label": "#354 · latest",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/354"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 1 post, 22 public impressions",
+      "kind": "audience",
+      "summary": "One reply in an Omarchy thread answering a request for a project link.",
+      "metrics": {
+        "impressions": 22,
+        "likes": 2,
+        "replies": 0,
+        "reposts": 0
+      },
+      "when": "Oct 16 · 7:42 AM EDT",
+      "links": [
+        { "label": "Top post", "href": "https://x.com/MichaelH_rley/status/2111060182881210557" }
+      ]
+    }
+  ]
+}
