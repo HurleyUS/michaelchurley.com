@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-17",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 17, 2026 · 5:00 AM EDT → Oct 18, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-17T09:00:00Z → 2026-10-18T09:00:00Z",
+    "tldr": "27 PRs opened on michaelmonetized/omadesign for Pixel alpha channels and Quick Mask, native Type workflows and precise editable SVG text",
+    "xPostsMeasured": 1
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · 27 PRs opened",
+      "kind": "shipped",
+      "summary": "A long build day on the next Omadesign release. The morning went to Pixel alpha channels, masks and filters, and the afternoon through the night went to native Type tools and faithful editable SVG text. All are open for review; none merged in this window.",
+      "bullets": [
+        "Paintable saved alpha channels, alpha Curves and persistent Quick Mask with native selection painting",
+        "Full filter families that run on alpha channels and Quick Mask, plus Pixel adjustments and filters in the top menus",
+        "Native Type commands: Find and Replace for text stories, Find Font, case and punctuation tools, and editable variable font instances",
+        "Editable SVG text that keeps kerning, pair spacing, leading, character scale, bidi targets and font fallback",
+        "Selected fonts embedded in PDF and editable SVG layouts, and outlines that keep character paint",
+        "Resizable dock columns, Auto Layout sizing fixes, nested-frame selection guides, and new layer ordering, mask and duplicate commands"
+      ],
+      "when": "Oct 17 · 6:04 AM EDT → Oct 18 · 4:21 AM EDT",
+      "links": [
+        {
+          "label": "#356 · paint alpha channels",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/356"
+        },
+        {
+          "label": "#360 · Quick Mask",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/360"
+        },
+        {
+          "label": "#382 · Find and Replace",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/382"
+        },
+        {
+          "label": "#388 · variable font instances",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/388"
+        },
+        {
+          "label": "#390 · font embedding",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/390"
+        },
+        {
+          "label": "#408 · latest",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/408"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 1 post, 167 public impressions",
+      "kind": "audience",
+      "summary": "A quote post confirming plans to join the next Sunday Builders Club session.",
+      "metrics": {
+        "impressions": 167,
+        "likes": 3,
+        "replies": 0,
+        "reposts": 0
+      },
+      "when": "Oct 17 · 1:43 PM EDT",
+      "links": [
+        { "label": "Top post", "href": "https://x.com/MichaelH_rley/status/2111513345757225250" }
+      ]
+    }
+  ]
+}
