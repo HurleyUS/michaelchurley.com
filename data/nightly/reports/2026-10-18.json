@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-18",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 18, 2026 · 5:00 AM EDT → Oct 19, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-18T09:00:00Z → 2026-10-19T09:00:00Z",
+    "tldr": "7 PRs opened on michaelmonetized/omadesign for native layer merge, flatten, stamp and clipping workflows, plus an upstream Qt 6.12 fix for omarchy-mx-mac",
+    "xPostsMeasured": 2
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · 7 PRs opened",
+      "kind": "shipped",
+      "summary": "A focused Sunday morning on layer compositing for the next Omadesign release. Every PR builds out native merge, flatten, stamp and clipping so layered work behaves the way Photoshop users expect. All are open for review; none merged in this window.",
+      "bullets": [
+        "Native layer merge and flatten workflows",
+        "Editable native layer clipping that reads and writes Photoshop clipping records",
+        "Merge selected layers, with an Alt stamp variant that keeps the originals",
+        "Merge and stamp bounds that follow the actual painted pixels",
+        "Merge and stamp across groups, with the selection restored on Undo and Redo",
+        "Group-tree rows in the Layers panel and whole-subtree Arrange"
+      ],
+      "when": "Oct 18 · 5:45 AM EDT → Oct 18 · 8:48 AM EDT",
+      "links": [
+        {
+          "label": "#412 · merge and flatten",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/412"
+        },
+        {
+          "label": "#414 · layer clipping",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/414"
+        },
+        {
+          "label": "#416 · merge and Alt stamp",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/416"
+        },
+        {
+          "label": "#420 · merge across groups",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/420"
+        },
+        {
+          "label": "#424 · latest",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/424"
+        }
+      ]
+    },
+    {
+      "title": "maralcbr/omarchy-mx-mac · 1 PR opened upstream",
+      "kind": "shipped",
+      "summary": "An upstream fix for Omarchy on Apple Silicon. Qt 6.12 adds its own Color type to QtQuick, which shadowed the shell palette, so the menu opened as a blank overlay and the bar fell back to its default height. The PR qualifies the palette references so the shell config loads again.",
+      "when": "Oct 18 · 10:31 AM EDT",
+      "links": [
+        {
+          "label": "#287 · Qt 6.12 palette fix",
+          "href": "https://github.com/maralcbr/omarchy-mx-mac/pull/287"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 2 posts, 13 public impressions",
+      "kind": "audience",
+      "summary": "Shared a live X Space in the afternoon, and that evening reposted Wes Grimes announcing that WayShare, which lets a Mac connect to an Omarchy desktop with the built-in Screen Sharing app, was submitted to the Omarchy package repo.",
+      "metrics": {
+        "impressions": 13,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      },
+      "when": "Oct 18 · 3:03 PM EDT → Oct 18 · 10:07 PM EDT",
+      "links": [
+        { "label": "Top post", "href": "https://x.com/MichaelH_rley/status/2111896014445596993" },
+        {
+          "label": "WayShare repost",
+          "href": "https://x.com/MichaelH_rley/status/2112002602183655621"
+        }
+      ]
+    }
+  ]
+}

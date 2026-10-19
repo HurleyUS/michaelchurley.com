@@ -8,6 +8,7 @@ const publicRepositories = new Set([
   "hurleyus/www.yourzaxbys.com",
   "hustle-launch/hustlemail",
   "hustle-launch/mission-control-os",
+  "maralcbr/omarchy-mx-mac",
   "michaelmonetized/editbay",
   "michaelmonetized/flea-omadesign",
   "michaelmonetized/hustlemail",
