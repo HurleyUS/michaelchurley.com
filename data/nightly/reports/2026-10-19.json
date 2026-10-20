@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-19",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 19, 2026 · 5:00 AM EDT → Oct 20, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-19T09:00:00Z → 2026-10-20T09:00:00Z",
+    "tldr": "27 PRs opened on michaelmonetized/omadesign in one evening push toward pro-app menu parity, channels, asset export, symbols, color and gradients",
+    "xPostsMeasured": 1
+  },
+  "shipped": [
+    {
+      "title": "michaelmonetized/omadesign · 27 PRs opened",
+      "kind": "shipped",
+      "summary": "A long Monday evening session closing the gap with the pro creative apps Omadesign replaces. The Layout, Motion, Develop, Effect and Type menus now run real commands, channels gained spot inks, calculations and Photoshop exchange, and the native compositor picked up conic and shape gradients. All are open for review; none merged in this window.",
+      "bullets": [
+        "Real commands in the Layout, Motion Animation, Develop, Effect and Type menus, plus Find Font and grouping",
+        "Spot ink channels with a canvas overlay, channel Calculations, and saved alpha and spot channels exchanged with Photoshop files",
+        "Exact flip and rotate for saved channels and the selection, and layer masks filtered through the shared channel engine",
+        "Asset Export gains bleed, JPEG quality, PNG-8, WebP and GIF variants, row reordering, and drag-to-collect from Layers",
+        "Symbol library import and in-place symbol swaps, plus linked document graphic styles",
+        "Recolor reduction presets, Gray and Lab tagged documents, auto white balance, and one-step Auto light undo",
+        "Conic and shape gradients in the native float compositor"
+      ],
+      "when": "Oct 19 · 4:52 PM EDT → Oct 19 · 10:13 PM EDT",
+      "links": [
+        {
+          "label": "#425 · grouping and type menus",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/425"
+        },
+        {
+          "label": "#435 · spot ink channels",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/435"
+        },
+        {
+          "label": "#438 · Asset Export variants",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/438"
+        },
+        {
+          "label": "#441 · symbol libraries",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/441"
+        },
+        {
+          "label": "#451 · latest",
+          "href": "https://github.com/michaelmonetized/omadesign/pull/451"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 1 post, 37 public impressions",
+      "kind": "audience",
+      "summary": "Replied to Mic King asking whether anyone had built a self-healing SERP scraper yet, noting an existing implementation that runs on Cloudflare with Browserbase and TanStack Start.",
+      "metrics": {
+        "impressions": 37,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0
+      },
+      "when": "Oct 19 · 8:29 PM EDT",
+      "links": [
+        { "label": "Reply", "href": "https://x.com/MichaelH_rley/status/2112340407950684617" }
+      ]
+    }
+  ]
+}
