@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-21",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 21, 2026 · 5:00 AM EDT → Oct 22, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-21T09:00:00Z → 2026-10-22T09:00:00Z",
+    "tldr": "PR #485 on HurleyUS/omadesign works through the 0.6.8 library test checklist, restoring the Properties pane, Motion presets and the Photo develop pane",
+    "xPostsMeasured": 4
+  },
+  "shipped": [
+    {
+      "title": "HurleyUS/omadesign · library test checklist PR",
+      "kind": "shipped",
+      "summary": "One branch working down the 33 test failures filed after 0.6.8. Nine commits landed across the day, closing issues as each suite went green. The PR is open for review and keeps going.",
+      "bullets": [
+        "Nested clipboard layers copy with settled selection bounds",
+        "Pinned suites declare the file versions they need, so stale runners refuse them",
+        "The Properties pane is back in every persona's dock",
+        "The compact mode tab strip anchors to its true row center",
+        "Bound SVG font family lists replay the parser's substituted face",
+        "Blend and layer row fixtures realigned with the current panels",
+        "Motion's properties pane gets its presets back",
+        "The Photo develop pane returns and the dock tracks native focus"
+      ],
+      "when": "Oct 21 · 5:15 AM EDT → Oct 21 · 11:04 PM EDT",
+      "links": [
+        {
+          "label": "#485 · library test checklist",
+          "href": "https://github.com/HurleyUS/omadesign/pull/485"
+        },
+        {
+          "label": "Photo develop pane fix",
+          "href": "https://github.com/HurleyUS/omadesign/commit/c6694a4"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 4 posts, 77 public impressions",
+      "kind": "audience",
+      "summary": "A morning round of replies: offering Rand Fishkin a conversation on MCP and WebMCP analytics, asking Wes Grimes about a native Wayland remote desktop client beyond TigerVNC, and a quote post on just building things.",
+      "metrics": {
+        "impressions": 77,
+        "likes": 1,
+        "replies": 1,
+        "reposts": 0
+      },
+      "when": "Oct 21 · 8:09 AM EDT → Oct 21 · 8:30 AM EDT",
+      "links": [
+        {
+          "label": "Analytics reply",
+          "href": "https://x.com/MichaelH_rley/status/2112884273875415059"
+        },
+        {
+          "label": "Remote desktop reply",
+          "href": "https://x.com/MichaelH_rley/status/2112883118306623511"
+        }
+      ]
+    }
+  ]
+}

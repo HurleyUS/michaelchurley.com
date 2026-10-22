@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-20",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 20, 2026 · 5:00 AM EDT → Oct 21, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-20T09:00:00Z → 2026-10-21T09:00:00Z",
+    "tldr": "Omadesign 0.6.8 Craft parity shipped as the first stable release since 0.6.3, followed by a 33-item library test checklist filed the same afternoon",
+    "xPostsMeasured": 3
+  },
+  "shipped": [
+    {
+      "title": "HurleyUS/omadesign · 0.6.8 Craft parity released",
+      "kind": "shipped",
+      "summary": "The craft parity stack (PRs #220 through #451) merged to master and shipped as Omadesign 0.6.8, the first stable release since 0.6.3. It rolls up the 0.6.4 to 0.6.7 milestones with the menu, channel, export, symbol, color and gradient work opened the night before.",
+      "bullets": [
+        "Conic and shape gradients in the native float compositor",
+        "Gray and Lab tagged documents and Recolor reduction presets",
+        "Real commands in the Motion Animation, Layout, Develop and Effect menus",
+        "Spot ink channels, channel Calculations and Photoshop channel exchange",
+        "Asset Export bleed, JPEG quality, PNG-8, WebP and GIF variants",
+        "Symbol library import, in-place symbol swaps and linked graphic styles"
+      ],
+      "when": "Oct 20 · 9:02 AM EDT → Oct 20 · 9:54 AM EDT",
+      "links": [
+        {
+          "label": "Release 0.6.8",
+          "href": "https://github.com/HurleyUS/omadesign/releases/tag/v0.6.8"
+        },
+        {
+          "label": "#430 · Type menu test fix",
+          "href": "https://github.com/HurleyUS/omadesign/pull/430"
+        }
+      ]
+    },
+    {
+      "title": "HurleyUS/omadesign · 33 library test issues filed",
+      "kind": "shipped",
+      "summary": "Right after the release, every deterministic library test failure was written up as its own tracked issue, covering nested layer copy, pinned file versions, keyboard focus routes, dock panes, the Photo develop workspace and a parallel test flake.",
+      "when": "Oct 20 · 4:46 PM EDT",
+      "links": [
+        {
+          "label": "#452 · first in the checklist",
+          "href": "https://github.com/HurleyUS/omadesign/issues/452"
+        },
+        {
+          "label": "#484 · parallel test flake",
+          "href": "https://github.com/HurleyUS/omadesign/issues/484"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 3 posts, 13,445 public impressions",
+      "kind": "audience",
+      "summary": "A reply to dvb's viral post broke out with over 13,000 impressions, alongside a pitch to Jankees to build on vicinae's Raycast extension compatibility for a better Linux launcher.",
+      "metrics": {
+        "impressions": 13445,
+        "likes": 77,
+        "replies": 6,
+        "reposts": 0
+      },
+      "when": "Oct 20 · 5:29 PM EDT → Oct 20 · 5:45 PM EDT",
+      "links": [
+        {
+          "label": "Top reply",
+          "href": "https://x.com/MichaelH_rley/status/2112661575563890837"
+        },
+        {
+          "label": "Launcher reply",
+          "href": "https://x.com/MichaelH_rley/status/2112660304953766167"
+        }
+      ]
+    }
+  ]
+}

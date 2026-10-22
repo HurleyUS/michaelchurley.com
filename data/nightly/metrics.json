@@ -433,5 +433,33 @@
         "href": "https://x.com/MichaelH_rley/status/2112340407950684617"
       }
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "productivity": 2,
+    "audience": {
+      "xImpressions": 13445
+    },
+    "source": "public-project-cards",
+    "links": [
+      {
+        "label": "Public source",
+        "href": "https://x.com/MichaelH_rley/status/2112661575563890837"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "productivity": 1,
+    "audience": {
+      "xImpressions": 77
+    },
+    "source": "public-project-cards",
+    "links": [
+      {
+        "label": "Public source",
+        "href": "https://x.com/MichaelH_rley/status/2112884273875415059"
+      }
+    ]
   }
 ]

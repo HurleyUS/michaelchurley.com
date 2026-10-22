@@ -5,6 +5,7 @@ import type { DailyMetric, DailyReport } from "./types";
 const publicRepositories = new Set([
   "hurleyus/getat.me",
   "hurleyus/michaelchurley.com",
+  "hurleyus/omadesign",
   "hurleyus/www.yourzaxbys.com",
   "hustle-launch/hustlemail",
   "hustle-launch/mission-control-os",
