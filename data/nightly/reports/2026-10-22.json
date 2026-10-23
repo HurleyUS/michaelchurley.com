@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-22",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 22, 2026 · 5:00 AM EDT → Oct 23, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-22T09:00:00Z → 2026-10-23T09:00:00Z",
+    "tldr": "A quiet public day: no new pushes to the public repos, and two X replies in a thread about logo design for Nix's AI projects",
+    "xPostsMeasured": 2
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "X · 2 posts, 15 public impressions",
+      "kind": "audience",
+      "summary": "Two replies under Nix's logo post for his AI projects, offering design thoughts and moving the conversation to DMs.",
+      "metrics": {
+        "impressions": 15,
+        "likes": 1,
+        "replies": 1,
+        "reposts": 0
+      },
+      "when": "Oct 22 · 4:27 PM EDT → Oct 22 · 6:43 PM EDT",
+      "links": [
+        {
+          "label": "Logo thread reply",
+          "href": "https://x.com/MichaelH_rley/status/2113366700984811756"
+        }
+      ]
+    }
+  ]
+}
