@@ -9,5 +9,282 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/blog/omadesign-0-5-8-portable-arm64-and-x86-64",
+      "destination": "/blog/omadesign-0-5-8-one-line-install",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-first-five-minutes",
+      "destination": "/blog/omadesign-0-5-8-one-line-install",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-design-persona-tools",
+      "destination": "/blog/omadesign-0-5-8-five-personas-one-document",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-layout-persona-tools",
+      "destination": "/blog/omadesign-0-5-8-five-personas-one-document",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-pixel-persona-tools",
+      "destination": "/blog/omadesign-0-5-8-five-personas-one-document",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-photo-persona-tools",
+      "destination": "/blog/omadesign-0-5-8-five-personas-one-document",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-motion-persona-tools",
+      "destination": "/blog/omadesign-0-5-8-five-personas-one-document",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-hud-modifiers-while-drawing",
+      "destination": "/blog/omadesign-0-5-8-shortcut-hud",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-theme-fallback-chain",
+      "destination": "/blog/omadesign-0-5-8-omarchy-theme-chrome",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-pencil-freehand",
+      "destination": "/blog/omadesign-0-5-8-pen-tool",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-fx-export-to-svg",
+      "destination": "/blog/omadesign-0-5-8-svg-fx-stack",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-guides-survive-save",
+      "destination": "/blog/omadesign-0-5-8-ruler-guides",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-lock-unlock-guides-0-5-8",
+      "destination": "/blog/omadesign-0-5-8-ruler-guides",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-ruler-zero-and-units",
+      "destination": "/blog/omadesign-0-5-8-ruler-guides",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-shift-constrain-alt-clone",
+      "destination": "/blog/omadesign-0-5-8-snapping-system",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-pixel-layer",
+      "destination": "/blog/omadesign-0-5-8-brush-eraser-fill",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-mask-invert-apply",
+      "destination": "/blog/omadesign-0-5-8-layer-masks",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-photo-undo-history",
+      "destination": "/blog/omadesign-0-5-8-omaphoto-sidecars",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-batch-save-settings",
+      "destination": "/blog/omadesign-0-5-8-copy-paste-adjustments",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-folder-job-limits",
+      "destination": "/blog/omadesign-0-5-8-whole-folder-apply",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-timing-and-energy",
+      "destination": "/blog/omadesign-0-5-8-motion-presets",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-playback-controls",
+      "destination": "/blog/omadesign-0-5-8-keyframe-editing",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-layout-templates",
+      "destination": "/blog/omadesign-0-5-8-fifty-two-templates",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-templates-offline-editable",
+      "destination": "/blog/omadesign-0-5-8-fifty-two-templates",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-three-right-tabs",
+      "destination": "/blog/omadesign-0-5-8-project-library-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-share-project-kit",
+      "destination": "/blog/omadesign-0-5-8-project-library-files",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-palette-save-export",
+      "destination": "/blog/omadesign-0-5-8-personal-vs-project-palettes",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-palette-conflict-handling",
+      "destination": "/blog/omadesign-0-5-8-personal-vs-project-palettes",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-brand-asset-place",
+      "destination": "/blog/omadesign-0-5-8-brand-bank-load",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-brand-accepted-formats",
+      "destination": "/blog/omadesign-0-5-8-brand-bank-load",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-typography-load-save-copy",
+      "destination": "/blog/omadesign-0-5-8-brand-typography-kit",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-sign-in-identity",
+      "destination": "/blog/omadesign-0-5-8-enable-sync-invite",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-plugins-offline-docs",
+      "destination": "/blog/omadesign-0-5-8-lua-5-4-embedded",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-starter-source-path",
+      "destination": "/blog/omadesign-0-5-8-studio-starter-twelve",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-plugin-categories",
+      "destination": "/blog/omadesign-0-5-8-host-api-surface",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-install-list-plugins-cli",
+      "destination": "/blog/omadesign-0-5-8-plugin-cli-batch",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-zoom-and-hand",
+      "destination": "/blog/omadesign-0-5-8-adobe-familiar-tool-keys",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-photo-navigation",
+      "destination": "/blog/omadesign-0-5-8-adobe-familiar-tool-keys",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-file-and-edit-keys",
+      "destination": "/blog/omadesign-0-5-8-adobe-familiar-tool-keys",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-arrange-and-transform-keys",
+      "destination": "/blog/omadesign-0-5-8-adobe-familiar-tool-keys",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-view-and-motion-keys",
+      "destination": "/blog/omadesign-0-5-8-adobe-familiar-tool-keys",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-vectors-pixels-photo-motion",
+      "destination": "/blog/omadesign-0-5-8-one-binary-not-three-apps",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-brand-kit-on-disk",
+      "destination": "/blog/omadesign-0-5-8-one-binary-not-three-apps",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-raw-sidecars-not-destructive",
+      "destination": "/blog/omadesign-0-5-8-one-binary-not-three-apps",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-plugins-without-extendscript-tax",
+      "destination": "/blog/omadesign-0-5-8-one-binary-not-three-apps",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-import-honesty-export-choice",
+      "destination": "/blog/omadesign-0-5-8-one-binary-not-three-apps",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-cloud-optional-showcase-explicit",
+      "destination": "/blog/omadesign-0-5-8-one-binary-not-three-apps",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-linux-first-creative-suite",
+      "destination": "/blog/omadesign-0-5-8-one-binary-not-three-apps",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-welcome-logo-0-5-8",
+      "destination": "/blog/omadesign-0-5-8-one-line-install",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-welcome-segmented-buttons",
+      "destination": "/blog/omadesign-0-5-8-one-line-install",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-persistent-title-bar",
+      "destination": "/blog/omadesign-0-5-8-document-tabs",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-filter-icon-states",
+      "destination": "/blog/omadesign-0-5-8-one-line-install",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-template-chooser-width",
+      "destination": "/blog/omadesign-0-5-8-fifty-two-templates",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-compete-waitlist",
+      "destination": "/blog/omadesign-0-5-8-publish-to-showcase",
+      "permanent": true
+    },
+    {
+      "source": "/blog/omadesign-0-5-8-native-dialogs-context",
+      "destination": "/blog/omadesign-0-5-8-place-command",
+      "permanent": true
+    }
   ]
 }

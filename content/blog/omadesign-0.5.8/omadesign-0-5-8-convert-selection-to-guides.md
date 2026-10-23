@@ -3,58 +3,59 @@ id: T048
 title: Convert selection to guides
 slug: omadesign-0-5-8-convert-selection-to-guides
 excerpt: Object → Guides → Convert selection to guides turns vectors into non-printing contours you can still edit. Curves, compounds, shapes, and live text keep their data. Release guides restores the artwork.
-tags: [omadesign, 0.5.8, guides]
+publishedAt: 2026-09-06T10:38:01Z
+tags: [omadesign, 0.0.1-alpha, guides]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-convert-selection-to-guides/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-convert-selection-to-guides/og.png
 ---
 
 ## The habit
 
-Sometimes the guide is not a straight line from the ruler. It is the curve of a logotype, the bowl of a letter, the edge of a compound path, the bounding box of a photograph. In Illustrator you select the path and choose View → Guides → Make Guides. The path stops printing and starts snapping. Release Guides turns it back into artwork, and if you are lucky the style comes back with it. A Bézier should stay a Bézier. Text should stay text. A compound should keep its holes.
+Sometimes the guide you need isn't a straight line from the ruler. It is the curve of a logotype, the bowl of a letter, the edge of a compound path, or the bounding box of a photograph. In Illustrator you select the path and choose View > Guides > Make Guides. The path stops printing and starts acting as a snap target. Release Guides turns it back into artwork, and if you are lucky the style comes back with it. A Bézier should stay a Bézier, text should stay text, and a compound should keep its holes.
 
-You edit guides. You move one. You pull a node on a curved guide so the snap follows the curve. You release it when the construction line turns out to be the final mark, and the edits you made as a guide are still in the artwork.
+You also edit guides. You move one, or pull a node on a curved guide so the snap follows the new curve. When a construction line turns out to be the final mark, you release it, and the edits you made while it was a guide should still be in the artwork.
 
-A placed photo is the exception you want handled literally. The pixels stay. A guide appears around the bounds. You snap to the frame of the picture. You do not trace the photograph into vectors by asking for a guide.
+A placed photo is the one case that should be handled literally. The pixels stay, and a guide appears around the bounds so you can snap to the frame of the picture. Asking for a guide should never trace the photograph into vectors.
 
-Exports forget guides. PNG, JPEG, SVG, Lottie. The `.oma` remembers them. That split is the whole reason guides exist. Construction in the working file. A clean picture on the way out.
+Exports leave guides out (PNG, JPEG, SVG, Lottie), and the `.oma` keeps them. That split is why guides exist: construction lines in the working file, and a clean picture on the way out.
 
 ## The constraint
 
-Convert selection to guides has to be reversible inside one undo model, and the reverse has to include the edits. Object → Guides → Convert selection to guides turns vector artwork into editable, non-printing contours. Release guides restores them as artwork, including geometry edits you made while they were guides. Both actions undo normally. Ctrl+Z after a convert gives you the artwork back as it was. Ctrl+Z after a release gives you the guides back. You do not keep a hidden duplicate "just in case the release is lossy." The command is not lossy on the data it claims to keep.
+Convert selection to guides has to be reversible within the normal undo model, and the reverse has to keep your edits. Object > Guides > Convert selection to guides turns vector artwork into editable, non-printing contours. Release guides turns them back into artwork, including geometry edits you made while they were guides. Both actions undo normally. Ctrl+Z after a convert gives you the artwork back as it was, and Ctrl+Z after a release gives you the guides back. You don't need to keep a hidden duplicate in case the release loses something, because the command keeps all the data it says it keeps.
 
-What it keeps: curves, compound paths, shapes, and live text keep their original data and style. Béziers stay Béziers. Text stays text. Compounds keep their holes. A convert that ran Convert to path in secret would destroy the headline to make a snap target. Flip is the command that asks you to convert text to paths first. This one does not. You can guide a live headline, snap other type to its cap line or its curve, and release it later as type you can still retype.
+Curves, compound paths, shapes, and live text keep their original data and style. Béziers stay Béziers, text stays text, and compounds keep their holes. A convert that secretly ran Convert to path would destroy the headline just to make a snap target. Flip asks you to convert text to paths first. This command doesn't. You can turn a live headline into a guide, snap other type to its cap line or its curve, and release it later as type you can still edit.
 
-Move, Node, and Reshape still edit a guide. Snapping follows the actual curve, including a Shift-constrained drag. A curved guide that snapped as if it were its bounding box would be a ruler guide with extra steps. The point of converting a path is the path.
+Move, Node, and Reshape still edit a guide. Snapping follows the actual curve, including during a Shift-constrained drag. A curved guide that snapped to its bounding box would be no better than a ruler guide, and the reason to convert a path is to snap to the path.
 
-A placed image does not become a vector trace. It gets a separate guide around its bounds. The pixels stay. You still have the photograph. You also have a rectangular construction line on its frame.
+A placed image doesn't become a vector trace. It gets a separate guide around its bounds, and the pixels stay, so you still have the photograph plus a rectangular construction line on its frame.
 
-PNG, JPEG, SVG, and Lottie leave guides out. The project save keeps them. Hidden guides, Ctrl+;, do not take the pointer and do not snap. Guides start locked, so a node edit waits on View → Guides → Unlock all guides.
+PNG, JPEG, SVG, and Lottie leave guides out, and the project save keeps them. Hidden guides (Ctrl+;) don't take the pointer and don't snap. Guides start locked, so node edits wait until you choose View > Guides > Unlock all guides.
 
 ## What landed
 
-Select vector artwork. Choose Object → Guides → Convert selection to guides. The vectors become non-printing contours. They stay editable. A curve is still a curve. A compound path still has its holes. A parameter shape still has its data. Live text still has its characters and its style. The look you had is the look the guide keeps, and it does not print.
+Select vector artwork and choose Object > Guides > Convert selection to guides. The vectors become non-printing contours that stay editable. A curve is still a curve, a compound path still has its holes, a parameter shape still has its data, and live text still has its characters and style. The guide keeps the look you had, and it doesn't print.
 
-Move, V, still moves a guide when guides are unlocked. Node, A, still edits points and handles. Reshape still runs on vector artwork, and the first handle you move still converts live text and parameter shapes to paths. Undo restores the original form. If you only needed to move or edit nodes, stay on V and A.
+Move (V) still moves a guide when guides are unlocked, and Node (A) still edits points and handles. Reshape still works on vector artwork, and the first handle you move still converts live text and parameter shapes to paths, with Undo restoring the original form. If you only need to move a guide or edit nodes, stay on V and A.
 
-Snapping follows the real curve, including a Shift-constrained drag. Alignment lines and gap measurements still appear. A hidden guide does not join that set.
+Snapping follows the real curve, including during a Shift-constrained drag, and alignment lines and gap measurements still appear. Hidden guides are left out of snapping.
 
-Release guides restores the artwork. Geometry you edited while it was a guide is in the restored art. The style is intact. A headline you did not warp is still a headline. A compound still has its counters. Both the convert and the release are normal undo steps.
+Release guides restores the artwork. Geometry you edited while it was a guide is in the restored art, and the style is intact. A headline you didn't warp is still a headline, and a compound still has its counters. The convert and the release are each a normal undo step.
 
-A placed image takes a different result. The command creates a separate guide around the image bounds and retains the pixels. The photograph is still the photograph. The guide is the frame. You can snap to the frame. You can move the guide. The pixels were not outlined.
+A placed image works differently. The command creates a separate guide around the image bounds and keeps the pixels. The photograph stays a photograph, and the guide marks its frame. You can snap to the frame and move the guide, and the pixels are never outlined.
 
-Project saves keep the arrangement. Reopen the `.oma` and the guides are guides, edits included. Exports omit them: PNG, JPEG, SVG, animated SVG, Lottie. Ctrl+; hides them with the ruler guides. View → Clear ruler guides is the ruler set. A converted logo stays until you release it or remove it yourself.
+Project saves keep the arrangement, so when you reopen the `.oma` the guides are still guides, edits included. Exports omit them: PNG, JPEG, SVG, animated SVG, and Lottie. Ctrl+; hides them along with the ruler guides. View > Clear ruler guides clears only the ruler set, so a converted logo stays until you release it or remove it yourself.
 
-Combine and Pathfinder refuse a mixture of guides and artwork. A converted guide selected together with a live shape will not boolean and will not combine. Select guides with guides, or release the guide back to artwork and then run the boolean. The refusal is the fence between construction and ink.
+Combine and Pathfinder reject a mix of guides and artwork. A converted guide selected together with a live shape won't boolean or combine. Select only guides, or release the guide back to artwork and then run the boolean. That rule keeps construction lines and printed artwork apart.
 
 ## In the hand
 
-Select the logotype paths. Object → Guides → Convert selection to guides. The contours stop being ink. Pull a headline with T and drag it until it snaps to the curve. Hold Shift if the headline's move should stay horizontal while it catches that curve.
+Select the logotype paths and choose Object > Guides > Convert selection to guides. The contours stop printing. Create a headline with T and drag it until it snaps to the curve. Hold Shift if the headline should move only horizontally while it catches the curve.
 
-Press A if a node on the guide should move. Unlock guides first if the drag will not take: View → Guides → Unlock all guides. Move the node. The snap target is the new curve. Lock all guides when the curve is right.
+Press A if a node on the guide needs to move. If the drag doesn't take, unlock guides first with View > Guides > Unlock all guides. Move the node, and the snap target becomes the new curve. Lock all guides when the curve is right.
 
-Choose Release guides when that logotype should be ink again. The node you moved is still moved. The fills and strokes you had are back on a printing object. Press Ctrl+Z if the release was early. You are on guides again, edit included.
+Choose Release guides when the logotype should print again. The node you moved stays moved, and your fills and strokes are back on a printing object. Press Ctrl+Z if you released too early, and you are back on guides with the edit included.
 
-Select a placed photograph. Convert selection to guides. You get a guide on the bounds. The photo is still visible as pixels. Snap a caption to the frame. The pixels did not become paths.
+Select a placed photograph and choose Convert selection to guides. You get a guide on the bounds, and the photo is still visible as pixels. Snap a caption to the frame. The pixels did not become paths.
 
 ```
 Object → Guides → Convert selection to guides
@@ -65,14 +66,12 @@ Ctrl+;                                  Hide, including these guides
 PNG JPEG SVG Lottie                     Guides left out
 ```
 
-Save. Reopen once if you do not trust guides yet. They are there. Export a PNG and look at it. The construction curve is not in the picture. The `.oma` still has it the next time you need to align a new line of type.
+Save, and reopen once if you want to confirm the guides are still there. Export a PNG and look at it. The construction curve isn't in the picture, and the `.oma` still has it the next time you need to align a new line of type.
 
-If the selection will not combine with a shape, it is still a guide. Release guides, then Ctrl+8 or Pathfinder, when you mean to weld ink to ink.
+If the selection won't combine with a shape, it is still a guide. When you want to weld artwork to artwork, choose Release guides first, then Ctrl+8 or Pathfinder.
 
 ## The edge
 
-Exports refuse guides. PNG, JPEG, SVG, and Lottie leave them out. The `.oma` keeps them, including curves, compounds, shape data, live text, and the geometry edits you made before release. You do not strip guides by hand to get a clean file.
+Exports always leave guides out (PNG, JPEG, SVG, and Lottie). The `.oma` keeps them, including curves, compounds, shape data, live text, and any geometry edits you made before release, so you never have to strip guides by hand to get a clean file.
 
-A placed image refuses to be traced by this command. The pixels stay. A separate guide appears around the bounds. Convert to path is still the explicit way to outline live text when a flip or a committed warp needs outlines. Convert to guides leaves the text as text.
-
-Select the curve, choose Object → Guides → Convert selection to guides, and snap the next object to the contour you can still edit.
+This command never traces a placed image. The pixels stay and a separate guide appears around the bounds. Convert to path is still the explicit way to outline live text when a flip or a committed warp needs outlines. Convert to guides leaves text as text.

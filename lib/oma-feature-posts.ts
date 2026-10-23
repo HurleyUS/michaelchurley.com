@@ -26,7 +26,7 @@ function field(raw: string, key: string) {
 
 function tags(raw: string) {
   const value = field(raw, "tags");
-  if (!value.startsWith("[")) return ["omadesign", "0.5.8"];
+  if (!value.startsWith("[")) return ["omadesign"];
   return value
     .slice(1, -1)
     .split(",")
@@ -34,14 +34,30 @@ function tags(raw: string) {
     .filter(Boolean);
 }
 
-function seriesNote(entry: CatalogEntry) {
-  const prev = entry.prev ? `[Previous](/blog/${entry.prev})` : "Start of the thread";
-  const next = entry.next ? `[Next](/blog/${entry.next})` : "End of the thread";
-  return `\n\n## The thread\n\nPart ${entry.n} of 144 in the Omadesign 0.5.8 feature thread.\n\n${prev} · ${next}\n`;
+/** Frontmatter `publishedAt` (ISO 8601) wins; otherwise the original thread timestamp. */
+function publishedAt(front: string, entry: CatalogEntry) {
+  const parsed = Date.parse(field(front, "publishedAt"));
+  if (Number.isFinite(parsed)) return parsed;
+  return Date.parse("2026-09-23T18:00:00Z") - (entry.n - 1) * 60_000;
 }
 
 /**
- * Omadesign 0.5.8 feature posts.
+ * Treats an empty media path as absent, so a post with no film renders without a player.
+ * (No filesystem check against public/: that would make Next trace every public asset
+ * into the blog function bundle.)
+ */
+function localAsset(src: string) {
+  return src.trim() ? src : undefined;
+}
+
+function seriesNote(entry: CatalogEntry, part: number, total: number) {
+  const prev = entry.prev ? `[Previous](/blog/${entry.prev})` : "Start of the thread";
+  const next = entry.next ? `[Next](/blog/${entry.next})` : "End of the thread";
+  return `\n\n## The thread\n\nPart ${part} of ${total} in the Omadesign feature thread.\n\n${prev} · ${next}\n`;
+}
+
+/**
+ * Omadesign feature thread posts.
  * Reads the markdown series from content/blog and attaches the film and OG image.
  */
 export function getOmaFeaturePosts(): StaticPost[] {
@@ -55,7 +71,7 @@ export function getOmaFeaturePosts(): StaticPost[] {
   ) as CatalogEntry[];
   const bySlug = new Map(catalog.map((entry) => [entry.slug, entry]));
   const posts: StaticPost[] = [];
-  for (const entry of catalog) {
+  for (const [index, entry] of catalog.entries()) {
     const file = path.join(ROOT, `${entry.slug}.md`);
     if (!fs.existsSync(file)) continue;
     const raw = fs.readFileSync(file, "utf8");
@@ -72,13 +88,13 @@ export function getOmaFeaturePosts(): StaticPost[] {
       title: field(front, "title") || known.title,
       slug,
       excerpt: field(front, "excerpt") || known.tweet.slice(0, 220),
-      content: `${body.trim()}\n${seriesNote(known)}`,
-      coverImage: field(front, "coverImage") || known.cover,
-      video: field(front, "video") || known.video,
+      content: `${body.trim()}\n${seriesNote(known, index + 1, catalog.length)}`,
+      coverImage: localAsset(field(front, "coverImage") || known.cover),
+      video: localAsset(field(front, "video") || known.video),
       tags: tags(front),
       featured: false,
       published: true,
-      publishedAt: Date.parse("2026-09-23T18:00:00Z") - (known.n - 1) * 60_000,
+      publishedAt: publishedAt(front, known),
       readingTime: Math.max(1, Math.round(words / 220)),
     });
   }
