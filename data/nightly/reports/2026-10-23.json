@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-23",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 23, 2026 · 5:00 AM EDT → Oct 24, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-23T09:00:00Z → 2026-10-24T09:00:00Z",
+    "tldr": "Planning day for Omadesign: a public hardening plan covering unsafe code, build speed, and worktree cleanup, plus three early-morning X replies",
+    "xPostsMeasured": 3
+  },
+  "shipped": [
+    {
+      "title": "Omadesign · hardening plan filed",
+      "kind": "shipped",
+      "summary": "Opened a public tracking issue from an audit of the Omadesign codebase, turning the findings into a checklist for safer native code, faster builds, and automatic cleanup of stale build artifacts and worktrees.",
+      "bullets": [
+        "Unsafe code: only 11 real blocks live in Omadesign's own source (LibRaw and lcms2 bindings); the plan wraps them in small documented blocks and denies unsafe code crate-wide elsewhere",
+        "Build speed: line-tables-only debug info measured 15% faster clean builds, 19% faster core rebuilds, and a 44% smaller target directory",
+        "Longer term: move the native bindings into their own crate, then split the single crate into a workspace, the biggest build-time win",
+        "Cleanup: a preview-by-default script for merged worktrees, stale build folders, and old release builds, plus a weekly timer"
+      ],
+      "when": "Oct 23 · 5:49 PM EDT",
+      "links": [
+        {
+          "label": "Hardening issue",
+          "href": "https://github.com/HurleyUS/omadesign/issues/486"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 3 posts, 184 public impressions",
+      "kind": "audience",
+      "summary": "Three replies in developer threads, including a note that the Wayland shortcut issue dax raised works fine in Hyprland, and a wish that t3 code could be prompted from a watch.",
+      "metrics": {
+        "impressions": 184,
+        "likes": 1,
+        "replies": 0,
+        "reposts": 0
+      },
+      "when": "Oct 23 · 5:45 AM EDT → Oct 23 · 5:51 AM EDT",
+      "links": [
+        {
+          "label": "Hyprland reply",
+          "href": "https://x.com/MichaelH_rley/status/2113568046539256011"
+        },
+        {
+          "label": "t3 code reply",
+          "href": "https://x.com/MichaelH_rley/status/2113568947194691798"
+        }
+      ]
+    }
+  ]
+}
