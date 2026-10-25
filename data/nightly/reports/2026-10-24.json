@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-24",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 24, 2026 · 5:00 AM EDT → Oct 25, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-24T09:00:00Z → 2026-10-25T09:00:00Z",
+    "tldr": "Omadesign QA day: two Transform panel bugs filed with exact repros for rotated objects and sub-pixel strokes, plus two X replies with product feedback",
+    "xPostsMeasured": 2
+  },
+  "shipped": [
+    {
+      "title": "Omadesign · Transform panel bugs filed",
+      "kind": "shipped",
+      "summary": "Hands-on testing turned up two related resize bugs in Omadesign's Transform panel, each filed publicly with step-by-step repros and a pointer to the likely fix.",
+      "bullets": [
+        "Rotated objects: on shapes turned ±90° or 270°, typing a new width changes the height instead; the fix reads and writes the object's own size through its transform, like Illustrator and Figma",
+        "Sub-pixel strokes: a 0.25 stroke outlined to a path is clamped to a 1px minimum when resized, losing its true thickness",
+        "Cross-linked repro: changing the width of a rotated 0.25 line collapsed it to a 1×1px square, tying both issues to the same minimum-size clamp"
+      ],
+      "when": "Oct 24 · 11:33 PM EDT",
+      "links": [
+        {
+          "label": "Rotated width/height issue",
+          "href": "https://github.com/HurleyUS/omadesign/issues/488"
+        },
+        {
+          "label": "Sub-pixel resize issue",
+          "href": "https://github.com/HurleyUS/omadesign/issues/487"
+        }
+      ]
+    }
+  ],
+  "landed": [
+    {
+      "title": "X · 2 posts, 35 public impressions",
+      "kind": "audience",
+      "summary": "Two replies with product feedback: a Grok Bot desktop bug report on Omarchy (screenshots can't be sent in messages), and a wish list for Vicinae covering UI polish, search, and deeper system menu integration.",
+      "metrics": {
+        "impressions": 35,
+        "likes": 0,
+        "replies": 1,
+        "reposts": 0
+      },
+      "when": "Oct 24 · 4:34 PM EDT → Oct 24 · 5:01 PM EDT",
+      "links": [
+        {
+          "label": "Grok Bot bug report reply",
+          "href": "https://x.com/MichaelH_rley/status/2114099962426376384"
+        },
+        {
+          "label": "Vicinae feedback reply",
+          "href": "https://x.com/MichaelH_rley/status/2114093091481411936"
+        }
+      ]
+    }
+  ]
+}
