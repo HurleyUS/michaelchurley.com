@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-25",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 25, 2026 · 5:00 AM EDT → Oct 26, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-25T09:00:00Z → 2026-10-26T09:00:00Z",
+    "tldr": "A quiet Sunday: no new pushes, pull requests, or issues on the public repos, and one repost on X boosting OpenCode's iOS work",
+    "xPostsMeasured": 1
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "X · 1 repost",
+      "kind": "audience",
+      "summary": "Reposted Ryan Vogel's post about polishing the OpenCode iOS app, the open-source AI coding agent's mobile client.",
+      "when": "Oct 25 · 5:44 PM EDT",
+      "links": [
+        {
+          "label": "OpenCode iOS repost",
+          "href": "https://x.com/MichaelH_rley/status/2114473235823673495"
+        }
+      ]
+    }
+  ]
+}
