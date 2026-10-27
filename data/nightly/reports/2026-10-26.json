@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-26",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 26, 2026 · 5:00 AM EDT → Oct 27, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-26T09:00:00Z → 2026-10-27T09:00:00Z",
+    "tldr": "Omadesign got two big pull requests up for review: a hardening pass that fixes sub-pixel resize and rotated Transform sizing and turns the library test suite green, and a stacked follow-up that splits the Little CMS and LibRaw bridges into their own crates in a new Cargo workspace",
+    "xPostsMeasured": 0
+  },
+  "shipped": [
+    {
+      "title": "Omadesign · hardening, sub-pixel resize, rotated Transform W/H",
+      "kind": "shipped",
+      "summary": "Opened a pull request that closes three Omadesign issues: resize and Transform fields now accept sub-pixel sizes, the Transform panel edits a rotated object's own width and height without swapping them at 90 degrees, and a hardening pass cleans up unsafe code and speeds up builds.",
+      "bullets": [
+        "Library tests go from 2101 passed and 58 failed on master to 2164 passed and 0 failed, with no new skips",
+        "A 0.25 px outlined stroke no longer snaps to 1 px",
+        "The aarch64 test relink dropped from 26 s to 13 s by linking with the bundled rust-lld"
+      ],
+      "when": "Oct 26 · 4:19 PM EDT",
+      "links": [
+        {
+          "label": "Omadesign PR #489",
+          "href": "https://github.com/HurleyUS/omadesign/pull/489"
+        }
+      ]
+    },
+    {
+      "title": "Omadesign · Cargo workspace with FFI bridge crates",
+      "kind": "shipped",
+      "summary": "Opened a stacked follow-up that makes Omadesign a Cargo workspace and moves the Little CMS and LibRaw bindings into their own crates, so the app crate itself no longer contains any unsafe code.",
+      "when": "Oct 27 · 4:13 AM EDT",
+      "links": [
+        {
+          "label": "Omadesign PR #490",
+          "href": "https://github.com/HurleyUS/omadesign/pull/490"
+        }
+      ]
+    }
+  ],
+  "landed": []
+}

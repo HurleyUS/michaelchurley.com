@@ -523,5 +523,21 @@
         "href": "https://x.com/MichaelH_rley/status/2114473235823673495"
       }
     ]
+  },
+  {
+    "date": "2026-10-26",
+    "productivity": 2,
+    "audience": {},
+    "source": "public-project-cards",
+    "links": [
+      {
+        "label": "Public source",
+        "href": "https://github.com/HurleyUS/omadesign/pull/489"
+      },
+      {
+        "label": "Public source",
+        "href": "https://github.com/HurleyUS/omadesign/pull/490"
+      }
+    ]
   }
 ]
