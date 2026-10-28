@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-27",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 27, 2026 · 5:00 AM EDT → Oct 28, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-27T09:00:00Z → 2026-10-28T09:00:00Z",
+    "tldr": "A quiet Tuesday: no new pushes, pull requests, issues, or releases on the public repos beyond the nightly report itself, and no posts on X, while the two Omadesign pull requests from Monday stay open for review",
+    "xPostsMeasured": 0
+  },
+  "shipped": [],
+  "landed": []
+}
