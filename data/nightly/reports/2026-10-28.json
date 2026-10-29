@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-28",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 28, 2026 · 5:00 AM EDT → Oct 29, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-28T09:00:00Z → 2026-10-29T09:00:00Z",
+    "tldr": "A quiet Wednesday on the code side: no new pushes, pull requests, issues, or releases on the public repos beyond the nightly report itself, while the two Omadesign pull requests from Monday stay open for review. Community time went to one X reply in an SEO thread on multilingual site structure and a spacing-scale design tip shared in a Product Hunt forum discussion about whitespace",
+    "xPostsMeasured": 1
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "X · 1 reply, 9 public impressions",
+      "kind": "audience",
+      "summary": "Joined an SEO thread with Daniel and Cyrus Shepard about whether multilingual sites should put each locale in a folder or on a subdomain.",
+      "metrics": {
+        "impressions": 9,
+        "likes": 0,
+        "replies": 0,
+        "reposts": 0
+      },
+      "when": "Oct 28 · 9:50 AM EDT",
+      "links": [
+        {
+          "label": "Multilingual SEO thread reply",
+          "href": "https://x.com/MichaelH_rley/status/2115441143416832360"
+        }
+      ]
+    }
+  ]
+}
