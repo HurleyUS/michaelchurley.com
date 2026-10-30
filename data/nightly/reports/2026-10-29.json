@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-29",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 29, 2026 · 5:00 AM EDT → Oct 30, 2026 · 5:00 AM EDT",
+    "windowUtc": "2026-10-29T09:00:00Z → 2026-10-30T09:00:00Z",
+    "tldr": "Another quiet Thursday on the code side: no new pushes, pull requests, issues, or releases on the public repos beyond the nightly report itself. Community time went to three X replies, sharing michaelchurley.com in a thread about personal sites, which turned into an invitation to talk AI on a podcast, and answering the Omarchy pin poll",
+    "xPostsMeasured": 3
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "X · 3 replies, 48 public impressions",
+      "kind": "audience",
+      "summary": "Shared michaelchurley.com in Jessyka Boatright's thread asking people to post their personal sites, which led to an invitation to talk about where AI is going on the podcast she runs with Tamara, and Michael said yes. He also answered Jankees's poll about an Omarchy community pin.",
+      "metrics": {
+        "impressions": 48,
+        "likes": 3,
+        "replies": 2,
+        "reposts": 0
+      },
+      "when": "Oct 29 · 6:16 AM–4:41 PM EDT",
+      "links": [
+        {
+          "label": "Personal site thread reply",
+          "href": "https://x.com/MichaelH_rley/status/2115749700208930905"
+        },
+        {
+          "label": "Podcast invite reply",
+          "href": "https://x.com/MichaelH_rley/status/2115906888403751395"
+        },
+        {
+          "label": "Omarchy pin poll reply",
+          "href": "https://x.com/MichaelH_rley/status/2115759579976114572"
+        }
+      ]
+    }
+  ]
+}
