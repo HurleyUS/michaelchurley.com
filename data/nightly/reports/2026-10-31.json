@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-31",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Oct 31, 2026 · 5:00 AM EDT → Nov 1, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-10-31T09:00:00Z → 2026-11-01T10:00:00Z",
+    "tldr": "A quiet Halloween on the code side: no new pushes, pull requests, issues, or releases on the public repos beyond the nightly report itself. X was the busy channel, with seven posts and replies, led by a Linux horror-story reply on It's FOSS that drew about 1.6K impressions",
+    "xPostsMeasured": 7
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "X · 7 posts and replies, 1,688 public impressions",
+      "kind": "audience",
+      "summary": "Answered It's FOSS's \"scare a Linux user in 3 words\" prompt with \"Grub failed loading,\" which became the day's top post. Also pushed back on AI-generated comment spam in Lily Ray's thread with a sharper way to plan forum marketing for multi-location local service businesses, asked Raycast to bring its mechanical key theme to the mobile app, and posted a guess-the-source teaser.",
+      "metrics": {
+        "impressions": 1688,
+        "likes": 37,
+        "replies": 1,
+        "reposts": 0
+      },
+      "when": "Oct 31 · 7:59 AM–4:13 PM EDT",
+      "links": [
+        {
+          "label": "It's FOSS Linux reply",
+          "href": "https://x.com/MichaelH_rley/status/2116601461874536783"
+        },
+        {
+          "label": "Local marketing reply to Lily Ray",
+          "href": "https://x.com/MichaelH_rley/status/2116599940260466905"
+        },
+        {
+          "label": "Raycast mobile theme post",
+          "href": "https://x.com/MichaelH_rley/status/2116500317650964988"
+        },
+        {
+          "label": "Guess-the-source teaser",
+          "href": "https://x.com/MichaelH_rley/status/2116624601211896284"
+        }
+      ]
+    }
+  ]
+}
