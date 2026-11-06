@@ -3,44 +3,45 @@ id: T075
 title: omapreset library
 slug: omadesign-0-5-8-omapreset-library
 excerpt: Save a named Photo look, filter the library, and move it as a .omapreset file. The preset keeps development values and categories, and a name clash keeps both.
-tags: [omadesign, 0.5.8, photo]
+publishedAt: 2026-09-07T18:36:51Z
+tags: [omadesign, 0.0.3-alpha, photo]
 video: /blog/omadesign-0-5-8/omadesign-0-5-8-omapreset-library/film.mp4
 coverImage: /blog/omadesign-0-5-8/omadesign-0-5-8-omapreset-library/og.png
 ---
 
 ## The habit
 
-A look that works wants a name. In Lightroom you make a preset, and the preset remembers which boxes were checked when you created it. Crop sneaks in. A local mask sneaks in. Next month you apply "Kitchen warm" to a portrait and the crop is the kitchen's crop. In Photoshop, Camera Raw presets live in a folder Adobe chose, and moving them to another machine is a scavenger hunt through a settings directory. Affinity Photo stores develop presets with the app. They are yours until you change machines, and then they are a support article.
+A look that works deserves a name. In Lightroom you make a preset, and it remembers which boxes were checked when you created it. Crop slips in, or a local mask slips in, and next month you apply "Kitchen warm" to a portrait and get the kitchen's crop. Camera Raw presets live in a folder Adobe chose, and moving them to another machine means digging through a settings directory. Affinity Photo stores develop presets with the app. They're yours until you change machines, and then they're a support article.
 
-The hand wants three things. Name the look while you can still see it. Find it later by that name, not by scrolling a dump of every experiment. Carry the file to the other computer without signing into anything. The look has to work on a photo it has never met. A wedding preset that only functions on the RAW it was born on is a sidecar with a nickname.
+You want three things. Name the look while you can still see it. Find it later by that name instead of scrolling through every experiment. Carry the file to another computer without signing into anything. And the look has to work on photos it has never seen. A wedding preset that only works on the RAW it was made from is just a sidecar with a nickname.
 
 ## The constraint
 
-Photo settings for a single original already have a home. The `.omaphoto` beside `photo.RAF` is that photo's grade. It is not a style you can drop on a different camera from a different year. Tie the reusable look to one original and you have copied a sidecar, not saved a preset.
+Settings for a single original already have a home. The `.omaphoto` beside `photo.RAF` is that photo's grade. It isn't a style you can apply to a different camera from a different year. If the reusable look were tied to one original, you'd have copied a sidecar instead of saving a preset.
 
-The preset has to store development values and the categories you meant to send. Light / tone can travel while Effects stays home. Effects is the detail group. The tone curve can travel while crop stays off. A file that only stores "all the sliders, always" will repeat the checkbox mistake. Categories are part of the preset because categories are part of the decision.
+So a preset stores development values plus the categories you chose to include. Light / tone can travel while Effects, the detail group, stays behind. The tone curve can travel while crop stays off. A file that stored every slider every time would repeat the checkbox mistake, so the categories are part of the preset because they're part of the decision.
 
-The library has to persist between sessions inside the one binary. There is no cloud preset sync to lean on, and there should not be. A `.omapreset` is a small file you can put on a disk, mail to yourself, or keep next to a job. Import has to survive a name collision. Two looks named "Warm" are two looks. Replacing one with the other because the strings match is how a careful grade disappears.
+The library has to persist between sessions inside the single binary. There's no cloud preset sync, and I don't think there should be. A `.omapreset` is a small file you can put on a disk, email to yourself or keep with a job. Import has to handle a name collision. Two looks named "Warm" are two looks, and replacing one with the other because the names match is how a careful grade disappears.
 
-Reads and writes of that library run in the background. Naming a look cannot freeze the viewer on a large RAW.
+The library reads and writes in the background, so naming a look doesn't freeze the viewer on a large RAW.
 
 ## What landed
 
-The Photo preset library saves named looks. You filter that list by name. You import a `.omapreset` and you export a `.omapreset`. The file is the look leaving the machine. The library is the look staying here.
+The Photo preset library saves named looks, and you can filter the list by name. You can import and export `.omapreset` files. The file is how a look leaves the machine, and the library is where it stays on this one.
 
-A preset holds development values and the chosen categories. That is why it works across unrelated originals. The preset does not need the hero's pixels, the hero's crop, or the hero's filename. You built it on a Fujifilm RAF and you apply it to a Canon CR3, a DNG, a PNG scan, a JPEG from the phone. The categories you stored are the categories that move. Crop and rotation stay out unless you saved them on. The preset uses the same boxes as paste: Light / tone, Tone curve, Color, Effects, Color mixer, Color grading, Crop, Rotation. Effects is the detail group.
+A preset holds development values and the chosen categories, which is why it works across unrelated originals. It doesn't need the original photo's pixels, crop or filename. You can build it on a Fujifilm RAF and apply it to a Canon CR3, a DNG, a PNG scan or a phone JPEG. Only the categories you stored move. Crop and rotation stay out unless you saved them in. The preset uses the same boxes as paste: Light / tone, Tone curve, Color, Effects, Color mixer, Color grading, Crop and Rotation. Effects is the detail group.
 
-The library persists between sessions. Quit, come back, the names are still there. You do not rebuild "North window" every morning.
+The library persists between sessions. Quit and come back and the names are still there, so you don't rebuild "North window" every morning.
 
-Imported name conflicts keep both looks, under distinct names. Bring in a `.omapreset` that says "North window" while you already have a "North window" and both remain in the library. Yours stays. Theirs stays. You can see which is which because the names were forced apart, and you can filter until you are looking at one of them. Nothing is overwritten because a string matched.
+When an imported name conflicts, both looks are kept under distinct names. Import a `.omapreset` called "North window" when you already have one, and both stay in the library. The names are forced apart so you can tell which is which, and you can filter down to either one. Nothing gets overwritten because two names matched.
 
-Use a preset through **Presets… → Use preset…** when you are about to apply a look, including when the target is a whole folder. The preset is the source of the values. The original you happen to be viewing is only the photo in the viewer. Later edits to that photo do not rewrite the named preset. A preset changes when you save a preset. A sidecar changes when you save settings.
+Apply a preset through **Presets… > Use preset…**, including when the target is a whole folder. The preset is the source of the values. The photo you happen to be viewing is only what's in the viewer. Later edits to that photo don't change the named preset. A preset changes when you save a preset, and a sidecar changes when you save settings.
 
 ## In the hand
 
-Develop the frame that deserves a name. Decide the categories the way you would for a paste. If this look is tone and color, leave Effects off. Leave crop and rotation out unless you truly want every future photo to inherit that frame. Then save the named look into the preset library.
+Develop the frame that deserves a name. Choose the categories the way you would for a paste. If the look is tone and color, leave Effects off. Leave crop and rotation out unless you really want every future photo to inherit that framing. Then save the named look to the preset library.
 
-Filter the library by name when the list gets long. "Warm" should narrow to the warms. You should not hunt a menu that sorts by the date you were tired.
+When the list gets long, filter it by name. Typing "Warm" should narrow it to the warm looks.
 
 Export the one you want to keep:
 
@@ -48,16 +49,14 @@ Export the one you want to keep:
 .omapreset
 ```
 
-That file is the portable look. Copy it to the other machine, the other user, the archive disk. On the far side, import the `.omapreset`. If the name is already taken, the library keeps both and gives them distinct names. Filter, pick the one you meant, and use it.
+That file is the portable look. Copy it to another machine, another user or an archive disk, and import the `.omapreset` there. If the name is already taken, the library keeps both under distinct names. Filter, pick the one you meant and use it.
 
-On a photo that has nothing to do with the original hero, choose **Presets… → Use preset…**. The categories stored in the preset are the categories that land. The photo keeps whatever you excluded. Save that photo's own `.omaphoto` with **Ctrl+S** when the result belongs to that file. The preset remains the preset. The sidecar remains that photograph.
+On a photo unrelated to the original, choose **Presets… > Use preset…**. The categories stored in the preset are the ones applied, and the photo keeps whatever you excluded. When the result belongs to that file, save its own `.omaphoto` with **Ctrl+S**. The preset stays the preset, and the sidecar belongs to that photograph.
 
-Build a second look on a different camera the next day. Name it. The first name is still in the library when you reopen the app. The two looks do not point at each other's originals.
+The next day, build a second look on a different camera and name it. The first one is still in the library when you reopen the app, and neither look references the other's original.
 
 ## The edge
 
-A preset refuses to be a hidden link to one RAW. It has no original to rewrite, and it does not follow later slider moves on the photo you were viewing when you saved it. Change the hero, and the named look stays the values and categories you stored.
+A preset isn't a hidden link to one RAW. It has no original to rewrite, and it doesn't pick up later slider moves on the photo you were viewing when you saved it. Change that photo and the named look keeps the values and categories you stored.
 
-A name clash refuses to delete either side. Import keeps both, with distinct names. You do not get a silent replace, and you do not get a merge that averages two grades into a third grade nobody made.
-
-Filter to the name, use the preset, and the categories you stored are the only ones that travel.
+A name clash never deletes either look. Import keeps both under distinct names. There's no silent replace and no merge that averages two grades into a third one nobody made.
