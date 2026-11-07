@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-06",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 6, 2026 · 5:00 AM EST → Nov 7, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-06T10:00:00Z → 2026-11-07T10:00:00Z",
+    "tldr": "Opened Omadesign pull request 491 so 0.6.9 can export ICC-tagged placed photos with layer effects, a case 0.6.8 blocked on every format. No posts on X",
+    "xPostsMeasured": 0
+  },
+  "shipped": [
+    {
+      "title": "HurleyUS/omadesign · pull request 491 opened",
+      "kind": "shipped",
+      "summary": "Opened a pull request so Omadesign 0.6.9 can export documents that hold ICC-tagged placed photos together with layer effects. Version 0.6.8 blocked every export of those files. Placed artwork is converted to the document color profile on import, and export renders a temporary copy so the original document stays unchanged. The pull request is open for review and has not merged.",
+      "bullets": [
+        "Place and import convert pixels to the destination document color model and profile",
+        "Export of an 8-bit document with tagged photos and effects uses a temporary copy",
+        "Layer effects render through that copy instead of blocking the export",
+        "The 0.6.8 site update post is included so the latest-update check passes"
+      ],
+      "when": "Nov 7 · 4:50 AM EST",
+      "links": [
+        {
+          "label": "Pull request 491 · export tagged photos with effects",
+          "href": "https://github.com/HurleyUS/omadesign/pull/491"
+        }
+      ]
+    }
+  ],
+  "landed": []
+}
