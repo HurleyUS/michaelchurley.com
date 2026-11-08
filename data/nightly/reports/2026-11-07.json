@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-07",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 7, 2026 · 5:00 AM EST → Nov 8, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-07T10:00:00Z → 2026-11-08T10:00:00Z",
+    "tldr": "Released Omadesign 0.6.9 and 0.6.10 and merged both pull requests, so documents with placed photos and layer effects now export in every format and effects keep wide-gamut color. No posts on X",
+    "xPostsMeasured": 0
+  },
+  "shipped": [
+    {
+      "title": "Omadesign 0.6.9 · Export what you placed",
+      "kind": "shipped",
+      "summary": "Released a fix for 0.6.8, where a document with ICC-tagged placed photos and a layer effect such as Drop Shadow failed every export. PNG, JPEG, TIFF, SVG, PDF, PSD, PSB, ORA and IDML exports now work from the app and from the command line, and export never changes the document. Pull request 491 merged later the same day.",
+      "bullets": [
+        "Placed and imported artwork converts to the document color model and profile",
+        "Raster layer effects render in precise exports instead of refusing",
+        "Existing documents export as they are"
+      ],
+      "when": "Nov 7 · 5:11 AM EST release, 3:55 PM EST merge",
+      "links": [
+        {
+          "label": "Omadesign 0.6.9 release notes",
+          "href": "https://github.com/HurleyUS/omadesign/releases/tag/v0.6.9"
+        },
+        {
+          "label": "Pull request 491 · export placed photos with effects",
+          "href": "https://github.com/HurleyUS/omadesign/pull/491"
+        }
+      ]
+    },
+    {
+      "title": "Omadesign 0.6.10 · Effects in every color space",
+      "kind": "shipped",
+      "summary": "Released a follow-up that fixes a color bug in 0.6.9, which rendered effected layers through 8-bit sRGB and clipped wide-gamut color. Shadows, glows and overlays are now built in the document profile, group and clipping effects render, and CMYK effect colors convert into each ink. Pull request 492 merged the same afternoon.",
+      "bullets": [
+        "Placed artwork now also matches the document bit depth",
+        "JPEG from tagged RGB documents embeds the document profile",
+        "Float documents export 16-bit PNG; CMYK documents export PNG and JPEG",
+        "SVG, PDF, ORA, IDML and AI upscaling use a temporary 8-bit sRGB copy"
+      ],
+      "when": "Nov 7 · 6:37 AM EST release, 3:55 PM EST merge",
+      "links": [
+        {
+          "label": "Omadesign 0.6.10 release notes",
+          "href": "https://github.com/HurleyUS/omadesign/releases/tag/v0.6.10"
+        },
+        {
+          "label": "Pull request 492 · effects in every color space",
+          "href": "https://github.com/HurleyUS/omadesign/pull/492"
+        }
+      ]
+    }
+  ],
+  "landed": []
+}
