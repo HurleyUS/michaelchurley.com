@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-09",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 9, 2026 · 5:00 AM EST → Nov 10, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-09T10:00:00Z → 2026-11-10T10:00:00Z",
+    "tldr": "A quiet Monday in public: no new pushes, pull requests, issues, or releases on the public repos beyond the nightly report itself, and no posts on X",
+    "xPostsMeasured": 0
+  },
+  "shipped": [],
+  "landed": []
+}
