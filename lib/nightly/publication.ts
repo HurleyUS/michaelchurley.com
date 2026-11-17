@@ -22,6 +22,7 @@ const publicRepositories = new Set([
   "michaelmonetized/omnux-gpu",
   "michaelmonetized/resend-listening-daemon",
   "michaelmonetized/slopops",
+  "michaelmonetized/yab",
   "omacom/omacut",
 ]);
 

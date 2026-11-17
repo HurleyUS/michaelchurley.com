@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-16",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 16, 2026 · 5:00 AM EST → Nov 17, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-16T10:00:00Z → 2026-11-17T10:00:00Z",
+    "tldr": "Merged two pull requests that bring Omaweb, a keyboard-first Linux browser built on Yab, to life and then make it chromeless by default with a hidden tab sidebar"
+  },
+  "shipped": [
+    {
+      "title": "Omaweb · Rust and Qt Quick browser for Omarchy",
+      "kind": "shipped",
+      "summary": "Merged a rewrite of Yab for Linux: Omaweb is a keyboard-first, Hyprland-native browser with a Rust core, Qt Quick chrome and Qt WebEngine pages that follows the active Omarchy theme and font and reloads when they change. The upstream macOS, iOS and Android code is untouched, with credit kept in the notice and READMEs.",
+      "bullets": [
+        "New omarchy directory with 31 files changed",
+        "Live reload of the active Omarchy theme and font"
+      ],
+      "when": "Nov 16 · 12:09 PM EST merge",
+      "links": [
+        {
+          "label": "Pull request 1 · Omaweb Rust and Qt Quick rewrite",
+          "href": "https://github.com/michaelmonetized/yab/pull/1"
+        }
+      ]
+    },
+    {
+      "title": "Omaweb · Chromeless by default",
+      "kind": "shipped",
+      "summary": "Merged a follow-up that matches Yab's README screenshot: no window frame or title bar, no URL bar or toolbar, and the page runs edge to edge. A tab sidebar stays hidden until you touch the left edge or press Ctrl+Shift+B, and it can be pinned open. Addresses go through an on-demand palette, and the classic layout remains available.",
+      "bullets": [
+        "Address palette on Ctrl+L, Ctrl+T and Ctrl+K",
+        "Release build and 12 tests passed before merge"
+      ],
+      "when": "Nov 16 · 1:52 PM EST merge",
+      "links": [
+        {
+          "label": "Pull request 2 · chromeless with hidden tab sidebar",
+          "href": "https://github.com/michaelmonetized/yab/pull/2"
+        }
+      ]
+    }
+  ],
+  "landed": []
+}
