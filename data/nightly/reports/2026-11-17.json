@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-17",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 17, 2026 · 5:00 AM EST → Nov 18, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-17T10:00:00Z → 2026-11-18T10:00:00Z",
+    "tldr": "Merged Omaweb feature parity with Yab: Spaces, pinned favorites, split view, Peek, an agent panel, Chrome profiles and Chrome extension support"
+  },
+  "shipped": [
+    {
+      "title": "Omaweb · Yab feature parity, Chrome profiles and extensions",
+      "kind": "shipped",
+      "summary": "Merged the pull request that brings Omaweb up to the feature set of upstream Yab on Linux: pinned favorites, Spaces, folders, auto-archive, split view, Peek, an agent chat panel, a settings screen and a library, plus separate Chrome-style profiles with a Chrome importer and extension support through Qt WebEngine.",
+      "bullets": [
+        "42 files changed",
+        "Extension status documented honestly in the pull request"
+      ],
+      "when": "Nov 17 · 4:25 PM EST merge",
+      "links": [
+        {
+          "label": "Pull request 3 · Yab feature parity, Chrome profiles and extensions",
+          "href": "https://github.com/michaelmonetized/yab/pull/3"
+        }
+      ]
+    }
+  ],
+  "landed": []
+}
