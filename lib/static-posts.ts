@@ -4399,7 +4399,425 @@ Because a lander that prices against Typeform still needs a resolvable product s
 **Engagement Q:** How many of your “forms that feed your CRM” repos are four marketing pages where Start Free points at a route that does not exist?
 `;
 
+const NEOVIM_IDE_COVER =
+  "/blog/neovim-ide-tmux-gigachad-layout-cursor-agent/cover.png";
+
+const NEOVIM_IDE_CONTENT = `![tmux IDE grid — Agent | Neovim | Tasks/Git + Console/Terminal](/blog/neovim-ide-tmux-gigachad-layout-cursor-agent/screenshots/layout-ascii.png)
+
+## Who
+
+I wanted a **project IDE** without buying another Electron shell: open a folder, get Neovim in the middle, and already have an agent, Taskwarrior, LazyGit, and spare shells in panes around it.
+
+If you live in tmux + NvChad, you already know the ritual — split, title, send-keys, forget which pane had lazygit. I wanted that ritual to be one command.
+
+This is the **outer** layout story. The sibling **nvibe** pack is the **inner** Neovim one (Lua + \`nvchad.term\`). Different repos. Different layers. Same operator itch.
+
+## What
+
+I keep [michaelmonetized/neovim-ide](https://github.com/michaelmonetized/neovim-ide) public. GitHub linguist says JavaScript. The product that actually lays out panes is **~7.5 KB of zsh** under \`src/\`.
+
+\`src/neovim-ide.sh\` is the entry: sanitize a session name from argv, basename, or \`.neovim\` JSON \`.name\` via \`jq\`; offer attach/rename if the session exists; \`tmux new -s\` detached; \`cd\` into the project; then fire \`~/.local/bin/nvide-layout\` and \`~/.local/bin/nvide-init\`.
+
+The banner at the top of that file still draws the intended grid:
+
+\`\`\`
+- ollama -|- nvim ---------------------|- Tasks -
+- ChtSh - |                            |- Git ---
+          |- Console ----|- Terminal - |
+\`\`\`
+
+\`src/neovim-ide-layout.sh\` splits and titles panes: Agent, Cheatsheet, Neovim, Tasks, Git, Console, Terminal. It aliases \`tmux\` to **\`/opt/homebrew/bin/tmux\`** — Homebrew-shaped, not portable.
+
+\`src/neovim-ide-init.sh\` is where the honesty check bites: it \`send-keys\` **\`cursor-agent\`** into the Agent pane (not ollama), starts \`nvim\` on pane 2, \`task list && tasksh\` on Tasks, \`lazygit\` on Git when \`.git\` exists, then sleeps and punches \`:Minimap\` + \`C-n\` for nvim-tree.
+
+![MIT vs GPL-3.0 vs ISC](/blog/neovim-ide-tmux-gigachad-layout-cursor-agent/screenshots/license-gap.png)
+
+License stack at HEAD \`38ed773\`:
+
+- README footer + script header: **MIT**
+- \`LICENSE.md\`: full **GNU GPL v3** text (GitHub \`licenseInfo\` agrees)
+- \`ts/package.json\`: **\`"license": "ISC"\`**, version **1.0.0**
+
+\`install.sh\` is **0 bytes**. README still says it moves \`src/\` to \`~/bin/\`, config to \`~/.config/neovim-ide/\`, and links \`nvide-*\` into \`~/.local/bin\`. Without that, the entry script's \`nvide-layout\` / \`nvide-init\` calls are wishful.
+
+TypeScript side: \`ts/cli.tsx\` is an Ink path wizard (123 lines). It can \`mkdir\` or \`execa('mkproject', …)\`. It **never** calls \`tmux\`. On success it prints “Project path ready” and exits. \`ts/neovim-ide.mjs\` is a **1.7MB** React/Ink-style bundle. \`ts/REVIEW.md\` is a FALLOW dump over that bundle (Total LOC 39772, Dead Files 100%, CRAP scores in the tens of thousands on React internals). About **4095** tracked paths live under \`ts/node_modules/\`; only **29** tracked files sit outside it.
+
+\`PLAN.md\` (Jan 2026) lists Critical “Core IDE Features” — LSP, nvim-cmp, Treesitter, neo-tree, Telescope — as if this repo were a Neovim config. It is not. \`sitrep.md\` says Status **SHIPPED**, stack “Shell, Lua”, last commit **2026-01-31**, “Fully functional.” HEAD is a June 22 nightly.
+
+![docs vs shipped — PLAN / install / CLI](/blog/neovim-ide-tmux-gigachad-layout-cursor-agent/screenshots/docs-vs-shipped.png)
+
+\`src/neovim-ide-tmux.sh\` is the fzf project picker over \`$HOME/Projects/\` with a shebang typo: \`#1/usr/bin/env zsh\`. Config default: \`ide_project_path="$HOME/Projects/"\`.
+
+## Where
+
+Code: [github.com/michaelmonetized/neovim-ide](https://github.com/michaelmonetized/neovim-ide) — **public**. Stars: 0. No homepage URL. No hosted demo.
+
+Runtime expectations from the tree/header: tmux, jq, mkproject, lazygit, ollama (still listed), tasksh, Neovim 0.9+ / NvChad, optional minimap + nvim-tree. Bun only if you insist on the Ink CLI.
+
+Screenshots section in README is still \`> TODO\`.
+
+## When
+
+- **2024-08-25–28** — \`2b79f59\` mkproject scaffold → \`57e0164\` initial commit → \`.neovim\` session-name support (\`f159d67\`, “retrievin”) → \`5290d69\` tmux support. Four commits; the shell layout product lands.
+- **2026-01-08** — \`d81f21b\` PLAN.md improvement opportunities (LSP wishlist).
+- **2026-01-31** — \`52f0e4a\` chore sync (sitrep still points here).
+- **2026-02-27** — \`915f5d6\` README install instructions + structure (still describing empty \`install.sh\`).
+- **2026-06-22** — \`2976b7e\` / HEAD \`38ed773\` nightlies. Last push \`2026-06-22T21:56:52Z\`. **9** commits total.
+
+![9-commit arc](/blog/neovim-ide-tmux-gigachad-layout-cursor-agent/screenshots/commit-arc.png)
+
+## Why
+
+Because my “IDE” was already panes I pay for — tmux, nvim, lazygit, an agent CLI — and I wanted one command that refuses to start a project session half-empty.
+
+I also want the diary to stay honest: the ASCII still says ollama while init starts cursor-agent; the license badges disagree; the installer file is empty; the Ink CLI is a path form, not a launcher; PLAN.md dreams of an LSP IDE this repo is not. Leave those in the draft next to the GIGACHAD one-liner.
+
+## Engagement Q
+
+Would you trust a “GIGACHAD of NvChad” launcher whose banner still says **ollama**, whose init starts **cursor-agent**, whose README says **MIT** while \`LICENSE.md\` is **GPL-3.0** — and do you want that layout **outside** Neovim in tmux, or **inside** via something like nvibe?
+`;
+
+const NEW_DESIGN_GALLERY_COVER =
+  "/blog/new-design-gallery-embla-catalog-not-landers/cover.png";
+
+const NEW_DESIGN_GALLERY_CONTENT = `![Design Gallery home with Embla strip and category filters](/blog/new-design-gallery-embla-catalog-not-landers/screenshots/gallery-home.png)
+
+## Who
+
+I needed a catalog — filter, scroll, lightbox, share a slug — not another tabbed full-lander kit.
+
+Frontenders on Next 16 + Embla. Operators comparing this private catalog to public mockup-gallery. Not twelveux. Not the WebGL playground.
+
+## What
+
+Package \`new-design-gallery\` **0.1.0**. Next 16. React 19. Tailwind 4.
+
+\`DesignGallery\`: Embla carousel + category filters + Radix lightbox + Phosphor share (\`navigator.share\` → clipboard). Eleven metadata cards in \`designs.ts\` — hospitality, contractors (incl. King's Roofing NC), professionals, SaaS. All thumbs \`placeholder.co/800x600\`. Detail routes via \`generateStaticParams\`. Golden-ratio + Catppuccin CSS. Vitest **39** cases; length assert still says **10** after the 11th card.
+
+![Embla carousel strip](/blog/new-design-gallery-embla-catalog-not-landers/screenshots/embla-carousel.png)
+
+## Where
+
+Live: https://new-design-gallery.vercel.app — title Design Gallery.
+
+Repo: https://github.com/michaelmonetized/new-design-gallery (private).
+
+Sibling contrast: HurleyUS/mockup-gallery · mockup-gallery-nu.vercel.app (ten full landers / tabs).
+
+![Contractors filter](/blog/new-design-gallery-embla-catalog-not-landers/screenshots/contractors-filter.png)
+
+## When
+
+**2026-03-28, 10:52 PM ET.** \`a968bd6\` — carousel, filters, lightbox, share, 39 tests.
+
+**2026-06-22, 4:55 PM ET.** \`9558f07\` — AGENTS/uncap/CSS + King's Roofing NC.
+
+**2026-06-22, 5:57 PM ET.** HEAD \`95553df\` — empty nightly. Three commits. Still 0.1.0.
+
+## Why
+
+Catalog UX vs lander kit. Same March 28 era, different product. Placeholder thumbs until real art. Test drift is the scar.
+
+What belongs on card eleven — another contractor, or a real screenshot?
+
+![Detail Mountain Lodge](/blog/new-design-gallery-embla-catalog-not-landers/screenshots/detail-mountain-lodge.png)
+`;
+
+const WHISPERCPP_COVER =
+  "/blog/whispercpponeverything-ctrl-w-streaming-stt-cyan-glow/cover.png";
+
+const WHISPERCPP_CONTENT = `![OG / menubar streaming](/blog/whispercpponeverything-ctrl-w-streaming-stt-cyan-glow/screenshots/menubar-streaming.png)
+
+## Who
+
+I build local tooling when cloud dictation is the wrong trust boundary.
+
+For operators who want **Ctrl+W anywhere → text typed into the focused field** with **whisper.cpp on the machine**, and who need the honest split between the **streaming HEAD** and the **batch/orange README** still sitting in the same private repo.
+
+## What
+
+I built **WhisperCPPonEverything** — private \`https://github.com/michaelmonetized/WhisperCPPonEverything\`. Native macOS **menubar** (\`LSUIElement\`) Swift Package executable. HEAD \`d33e5e2\`. **11** commits. 0 stars. Bundle \`com.whispercpponeverything.app\` **2.0.0**. Renamed from **VoiceType**.
+
+Stack facts from \`Package.swift\` + sources:
+
+- Platforms: **macOS 14+**
+- Frameworks only: AppKit, CoreGraphics, ApplicationServices — **zero SPM dependencies**
+- Hotkey: **Ctrl+W** via \`CGEvent\` tap (active session → listenOnly → HID listenOnly fallback)
+- macOS **15+**: \`CGPreflightListenEventAccess\` / \`CGPreflightPostEventAccess\` + request APIs before tap create
+- Transcription: subprocess \`/opt/homebrew/bin/whisper-stream\` with model \`/opt/homebrew/share/whisper-cpp/models/ggml-medium.bin\`, args \`-l en --step 3000 --length 5000 --keep 200\`
+- Incremental inject: strip ANSI + \`[timestamp]\` prefixes, **suffix-prefix overlap dedupe**, then \`TextInjector\` Unicode \`CGEvent\` keystrokes (5ms between chars)
+- Visual: fullscreen \`.screenSaver\` overlay, **cyan** 20-layer soft glow, 1.5Hz pulse, \`ignoresMouseEvents\`
+- State machine: **\`idle ↔ streaming\`** only (\`State.swift\`)
+- Logging: \`~/Library/Logs/WhisperCPPonEverything.log\`
+- Checked-in \`WhisperCPPonEverything.app\` with **arm64 Mach-O** binary
+
+![Pipeline](/blog/whispercpponeverything-ctrl-w-streaming-stt-cyan-glow/screenshots/pipeline.png)
+
+![Cyan glow](/blog/whispercpponeverything-ctrl-w-streaming-stt-cyan-glow/screenshots/cyan-glow.png)
+
+What the README still claims (stale vs HEAD):
+
+- 🟠 **Orange** screen glow while listening
+- **Silence detection** ends recording after 5 seconds
+- Batch-style “speak → stop → transcribed text is typed”
+
+What CLAUDE.md + Swift say at HEAD: cyan soft glow, toggle stop, **streaming** text as whisper-stream prints lines. PLAN.md still names \`AudioRecorder.swift\` / \`Transcriber.swift\` — those files are not in the tree. TODO.md phases are all unchecked. StatusItem streaming mic is still **\`.systemOrange\`** next to a cyan overlay.
+
+![Stale docs gap](/blog/whispercpponeverything-ctrl-w-streaming-stt-cyan-glow/screenshots/stale-docs-gap.png)
+
+![Permissions triad](/blog/whispercpponeverything-ctrl-w-streaming-stt-cyan-glow/screenshots/permissions-triad.png)
+
+This is **not** \`niri-macos\` (Swift AX tiling). **Not** a SaaS dictation lander. Local Homebrew whisper-stream or the app alerts “whisper-cpp Not Found”.
+
+## Where
+
+Code: [github.com/michaelmonetized/WhisperCPPonEverything](https://github.com/michaelmonetized/WhisperCPPonEverything) — private.
+
+Runtime probes at pack time: no public web product. Install path documented as \`swift build -c release\` then copy into \`/Applications/WhisperCPPonEverything.app/Contents/MacOS/\` + ad-hoc \`codesign\`. CLAUDE note: **each new binary invalidates TCC** — remove/re-add Accessibility.
+
+Required on disk: \`whisper-stream\` + \`ggml-medium.bin\` under Homebrew paths above.
+
+## When
+
+- **2026-02-15** — PLAN/README/TODO → rename → sources build → VoiceType rename → whisper-cli path fixes → app bundle → **cyan instead of orange**
+- **2026-02-16** — \`92bb411\` streaming STT + soft glow + macOS 15+ permission support
+- **2026-06-22** — two \`nightly\` commits; HEAD \`d33e5e2\` (also last GitHub push)
+
+![Commit arc](/blog/whispercpponeverything-ctrl-w-streaming-stt-cyan-glow/screenshots/commit-arc.png)
+
+## Why
+
+I wanted dictation that stays on-box and types into whatever already has focus — Slack, terminal, browser — without a cloud STT round-trip. Ctrl+W was the whole UX. Streaming beat “record a WAV then wait.” Cyan beat “ugly orange.” Sequoia event-access APIs were the tax for keeping the tap alive.
+
+Engagement: how many private STT menubar apps still advertise orange silence-batch in README while HEAD streams cyan into the focused field?
+
+Draft + assets only until Michael publishes.
+`;
+
+const BUFFER_CLI_COVER =
+  "/blog/buffer-cli-wpzinc-parity-agent-oauth-no-scrape/cover.png";
+
+const BUFFER_CLI_CONTENT = `I wanted Buffer scheduling without WordPress and without cookie-scraping CLIs.
+
+For people who already know WPZinc wp-to-buffer-pro and want the same OAuth + config shape outside PHP.
+
+## What
+
+I built **buffer-cli** — public https://github.com/michaelmonetized/buffer-cli. HEAD \`778ecaf\`. **3** commits. **0** stars. Default **main**. Version **0.1.0** (CHANGELOG still **[Unreleased]**). CLI only.
+
+**Shipped (~1892 LOC):** auth, profiles, post, config, tags, info. Bun + commander.
+
+![CLI post / profiles](/blog/buffer-cli-wpzinc-parity-agent-oauth-no-scrape/screenshots/cli-post-profiles.png)
+
+![OAuth WPZinc flow](/blog/buffer-cli-wpzinc-parity-agent-oauth-no-scrape/screenshots/oauth-wpzinc-flow.png)
+
+**Gateway:** Buffer -> wpzinc OAuth -> localhost:9876 -> ~/.buffer-cli. X-Forwarded-Host www.hustlelaunch.com.
+
+**Parity:** types/config match wp-to-buffer-pro; template tags {title} {url} {excerpt}.
+
+![Docs vs shipped](/blog/buffer-cli-wpzinc-parity-agent-oauth-no-scrape/screenshots/readme-parity-gap.png)
+
+**Gaps:** no queue.ts; no --from; token refresh TODO; PLAN mostly unchecked; FALLOW postCommand CRAP 1190.
+
+![Architecture](/blog/buffer-cli-wpzinc-parity-agent-oauth-no-scrape/screenshots/architecture-stack.png)
+
+## Where
+
+Code: https://github.com/michaelmonetized/buffer-cli — public. No live web app.
+
+Run: bun install && bun run src/index.ts
+
+## When
+
+**2026-02-16** — 9b53095 feat: initial implementation (+3097 LOC).
+**2026-06-22** — 95fe1c3 nightly: fallow-gate + REVIEW.md.
+**2026-06-22** — 778ecaf nightly -> HEAD.
+## Why
+
+![Commit arc](/blog/buffer-cli-wpzinc-parity-agent-oauth-no-scrape/screenshots/commit-arc.png)
+
+Because Buffer own CLI is gone and scraping gets you banned.
+**Engagement Q:** Cut README to match HEAD, or finish queue.ts first?
+`;
+
+const HUSTLECHAT_COVER =
+  "/blog/hustlechat-com-intercom-alt-convex-claims-parkweb/cover.png";
+
+const HUSTLECHAT_CONTENT = `![Home hero](/blog/hustlechat-com-intercom-alt-convex-claims-parkweb/screenshots/home-hero.png)
+
+## Who
+
+I keep private product shells. Some ship. Some land. Some claim Convex without importing it.
+
+For operators comparing a **live-chat Intercom-alternative lander** to the **GoDaddy parkweb page** answering hustlechat.com.
+
+## What
+
+I built **hustlechat-com** — private michaelmonetized/hustlechat-com. HEAD \`a570134\`. 3 commits. package hustlechat.com@0.1.0. Stock README.
+Stack: Next 16.2.6 + React 19.2.6 + Tailwind 4. Deps: next/react only — **no convex** despite copy claiming Convex real-time.
+Pricing: Free $0 / Teams $8 / Premium $18 / Enterprise $28. Competitors: Intercom $74+ / Drift $2500+ / Crisp $25+.
+Fake SDKs \`@hustlechat/*\` + cdn widget; Sign In buttons have no href; docs → app.hustlechat.com NXDOMAIN.
+Brand \`#6366f1\`/\`#f472b6\`/\`#22d3ee\`. Routes: \`/\` \`/pricing\` \`/docs\`.
+
+![Pricing](/blog/hustlechat-com-intercom-alt-convex-claims-parkweb/screenshots/pricing-flat.png)
+
+![Competitors](/blog/hustlechat-com-intercom-alt-convex-claims-parkweb/screenshots/competitor-table.png)
+
+![Fake SDK](/blog/hustlechat-com-intercom-alt-convex-claims-parkweb/screenshots/missing-routes.png)
+
+Not hustlemail-com. Not hustledesk-com.
+
+## Where
+
+Code: github.com/michaelmonetized/hustlechat-com — private.
+## When
+2026-02-18 4db53a8 initial site. 2026-06-22 nightlies 9fec5f3 then HEAD a570134.
+![Commit arc](/blog/hustlechat-com-intercom-alt-convex-claims-parkweb/screenshots/commit-arc.png)
+## Why
+Convex in the hero without convex in package.json. Fake SDKs. Parkweb domain. Not a live chat product.
+**Engagement Q:** How many landers claim a backend they never added as a dependency?
+- hustlechat.com JS redirect to /lander GoDaddy parkweb
+- app + cdn NXDOMAIN; vercel DEPLOYMENT_NOT_FOUND
+`;
+
 export const staticPosts: StaticPost[] = [
+  {
+    _id: "static:neovim-ide-tmux-gigachad-layout-cursor-agent",
+    title: "neovim-ide: the GIGACHAD of NvChad is a tmux layout (ollama ASCII, cursor-agent reality)",
+    slug: "neovim-ide-tmux-gigachad-layout-cursor-agent",
+    excerpt:
+      "Public michaelmonetized/neovim-ide: zsh + tmux launcher that builds an IDE-shaped pane grid (Agent | Neovim | Tasks/Git + Console/Terminal). Banner still draws ollama; init starts cursor-agent. README says MIT, LICENSE.md is GPL-3.0, package.json ISC. install.sh is 0 bytes. Ink CLI never calls tmux. 9 commits. HEAD 38ed773.",
+    content: NEOVIM_IDE_CONTENT,
+    coverImage: NEOVIM_IDE_COVER,
+    tags: [
+      "neovim-ide",
+      "neovim",
+      "nvim",
+      "tmux",
+      "nvchad",
+      "zsh",
+      "cursor-agent",
+      "lazygit",
+      "ink",
+      "bun",
+      "ide-layout",
+      "michaelmonetized",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-09-09T09:10:00Z"),
+    readingTime: 4,
+  },
+  {
+    _id: "static:new-design-gallery-embla-catalog-not-landers",
+    title: "new-design-gallery: I shipped a catalog UX, not another tabbed lander kit",
+    slug: "new-design-gallery-embla-catalog-not-landers",
+    excerpt:
+      "I stood up new-design-gallery \u2014 Embla carousel, category filters, Radix lightbox, Web Share/clipboard, and per-slug detail routes for 11 catalog cards. Live on new-design-gallery.vercel.app. Same March 28 day as mockup-gallery; different product.",
+    content: NEW_DESIGN_GALLERY_CONTENT,
+    coverImage: NEW_DESIGN_GALLERY_COVER,
+    tags: [
+      "new-design-gallery",
+      "design-gallery",
+      "nextjs",
+      "embla",
+      "tailwind",
+      "catppuccin",
+      "vitest",
+      "vercel",
+      "portfolio",
+      "martech",
+      "catalog",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-09-09T09:00:00Z"),
+    readingTime: 1,
+  },
+  {
+    _id: "static:whispercpponeverything-ctrl-w-streaming-stt-cyan-glow",
+    title: "WhisperCPPonEverything: Ctrl+W streaming STT menubar, cyan glow, whisper-stream",
+    slug: "whispercpponeverything-ctrl-w-streaming-stt-cyan-glow",
+    excerpt:
+      "Private Swift Package macOS menubar dictation app \u2014 Ctrl+W toggles idle\u2194streaming, spawns Homebrew whisper-stream + ggml-medium, injects text via CGEvent with suffix-prefix dedupe, soft cyan 20-layer screen glow, macOS 15+ listen/post event access. Renamed from VoiceType. README still describes batch orange/silence path. Version 2.0.0. 11 commits. HEAD d33e5e2. Not cloud STT.",
+    content: WHISPERCPP_CONTENT,
+    coverImage: WHISPERCPP_COVER,
+    tags: [
+      "whispercpponeverything",
+      "whisper.cpp",
+      "whisper-stream",
+      "speech-to-text",
+      "stt",
+      "dictation",
+      "menubar",
+      "macos",
+      "swift",
+      "swift-package",
+      "cgevent",
+      "accessibility",
+      "local-ai",
+      "michaelmonetized",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-09-09T08:50:00Z"),
+    readingTime: 2,
+  },
+  {
+    _id: "static:buffer-cli-wpzinc-parity-agent-oauth-no-scrape",
+    title: "buffer-cli: wp-to-buffer-pro parity in the terminal \u2014 OAuth, no scrape",
+    slug: "buffer-cli-wpzinc-parity-agent-oauth-no-scrape",
+    excerpt:
+      "Public michaelmonetized/buffer-cli: Bun/TS CLI that ports WPZinc wp-to-buffer-pro Buffer OAuth + config schema to the terminal. Official API via WPZinc gateway (X-Forwarded-Host: www.hustlelaunch.com). README still lists queue.ts/--from never shipped; token refresh TODO; CHANGELOG Unreleased vs package 0.1.0. 3 commits. HEAD 778ecaf.",
+    content: BUFFER_CLI_CONTENT,
+    coverImage: BUFFER_CLI_COVER,
+    tags: [
+      "buffer-cli",
+      "buffer",
+      "cli",
+      "typescript",
+      "bun",
+      "oauth",
+      "wpzinc",
+      "wp-to-buffer-pro",
+      "social-media",
+      "scheduler",
+      "agent",
+      "michaelmonetized",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-09-09T08:40:00Z"),
+    readingTime: 1,
+  },
+  {
+    _id: "static:hustlechat-com-intercom-alt-convex-claims-parkweb",
+    title: "hustlechat.com: Intercom-alt lander that claims Convex with no Convex dep",
+    slug: "hustlechat-com-intercom-alt-convex-claims-parkweb",
+    excerpt:
+      "Private Next 16 live-chat marketing shell \u2014 Free/$0 \u00b7 Teams $8 \u00b7 Premium $18 \u00b7 Enterprise $28 vs Intercom $74+/Drift $2,500+/Crisp $25+. Copy says powered by Convex; package.json has next/react only. Fake @hustlechat/* SDKs, github.com/hustlechat 404, app/cdn NXDOMAIN. Live hustlechat.com is GoDaddy parkweb (/lander). Demo ChatWidget is setState. 3 commits. HEAD a570134.",
+    content: HUSTLECHAT_CONTENT,
+    coverImage: HUSTLECHAT_COVER,
+    tags: [
+      "hustlechat-com",
+      "hustlechat",
+      "live-chat",
+      "intercom-alternative",
+      "convex",
+      "marketing-site",
+      "nextjs",
+      "tailwind",
+      "pricing",
+      "parkweb",
+      "godaddy",
+      "lander",
+      "michaelmonetized",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-09-09T08:30:00Z"),
+    readingTime: 1,
+  },
   {
     _id: "static:hustlecrm-com-eight-per-user-crm-lander-legacy-php-domain",
     title: "hustlecrm.com: $8/user CRM lander vs legacy PHP login domain",
