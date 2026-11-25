@@ -2,6 +2,9 @@ import { ContainerBoxedCenter } from "@/components/layout/containers";
 import BookingForm from "@/components/booking/booking-form";
 import { Metadata } from "next";
 
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Book a Meeting | Michael C. Hurley",
   description:
