@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { fetchQuery } from "convex/nextjs";
 import { api } from "@/convex/_generated/api";
+import { getStaticPosts } from "@/lib/static-posts";
 
 const BASE_URL = "https://www.michaelchurley.com";
 
@@ -45,5 +46,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...blogRoutes];
+  const seen = new Set(blogRoutes.map((route) => route.url));
+  const staticBlogRoutes: MetadataRoute.Sitemap = getStaticPosts()
+    .filter((post) => !seen.has(`${BASE_URL}/blog/${post.slug}`))
+    .map((post) => ({
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.publishedAt),
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    }));
+
+  return [...staticRoutes, ...staticBlogRoutes, ...blogRoutes];
 }

@@ -1,3 +1,5 @@
+import { getOmaFeaturePosts } from "./oma-feature-posts";
+
 export type StaticPost = {
   _id: string;
   title: string;
@@ -5,6 +7,7 @@ export type StaticPost = {
   excerpt: string;
   content: string;
   coverImage?: string;
+  video?: string;
   tags: string[];
   featured: boolean;
   published: boolean;
@@ -6597,7 +6600,314 @@ Checkboxes that leave TrustIndex and login handoff open are more honest than a f
 Would you move NS off Bluehost next, or fix homepage GA injection and kill the About Partners lorem first?
 `;
 
+const VIZIBLE_WNC_COVER = "/blog/vizible-agency-wnc-local-seo/cover.png";
+
+const VIZIBLE_WNC_CONTENT = `![Vizible Agency homepage. Digital marketing finally done right, live portal, #2 local search rank](/blog/vizible-agency-wnc-local-seo/screenshots/home.png)
+
+## Who
+
+I work with Western North Carolina operators. The Canton pit. The Waynesville roofer. The Asheville clinic. The Hendersonville shop that still answers the phone on the third ring.
+
+Those people do not lose to national brands because they lack hustle. They lose because Google Maps is the storefront now, and their listing is a rumor. Wrong hours. Wrong category. Six reviews from 2019. A service area drawn as a circle that includes a town forty minutes over a gap and excludes one twenty minutes down the interstate.
+
+This is for the owner who already decided they need to be found. Not for the owner who wants another "we post on Facebook" retainer.
+
+## What
+
+I partnered with **Vizible Agency** to sell local SEO and local digital marketing into this corridor.
+
+Vizible is a localized marketing platform with a person attached. Local search and listing sync. A live business portal. A Personal CMO on the plans that include one. Reputation, social, paid, SMS, an AI receptionist. Month to month. They publish the stack at [vizibleagency.com](https://vizibleagency.com).
+
+The local search piece is the reason I signed:
+
+- Business profile and listing management across the directories that actually move the map pack
+- Local keyword tracking on a grid, not a vanity rank
+- AI-generated profiles that start from name, location, category, and services
+- Listing Sync Pro into the three main data aggregators
+- Reporting that pulls Google Business Profile, Search Console, Analytics, Facebook, and Google Ads into one place
+
+Plans I can put in front of a WNC owner, from their published ladder: **Vantage $497/mo** (local SEO, listings, portal). **Visionary $997/mo** adds the CMO, reputation, social. **Velocity $1,497/mo** adds SMS, email, the AI voice agent. **Viral** is custom, paid media and CRM.
+
+Full breakdown lives on this site at [/vizible](/vizible).
+
+![Vizible Local Search Marketing service page](/blog/vizible-agency-wnc-local-seo/screenshots/local-search.png)
+
+They already wrote Asheville as a market, not a city-name find-and-replace. That page is the product brief for this partnership.
+
+## Where
+
+The work is Western North Carolina. Asheville is the commercial center for a trade area that includes Hendersonville, Weaverville, Black Mountain, Waynesville, Marion, and the mountain towns in between. Distance and drive time are not friends here.
+
+Vizible's own Asheville local search page says the quiet part: visitor searches are generic and fast; resident searches name the nearby town and pick a provider they intend to keep. Autumn is the visitor peak. The quiet months belong to locals. Since the 2024 flooding, construction, restoration, and tree work have been a different competitive field, including crews from outside the region.
+
+![Vizible Asheville local search market page](/blog/vizible-agency-wnc-local-seo/screenshots/asheville.png)
+
+I am the person in this market. Vizible is the platform. You talk to me. I put you on the stack.
+
+## When
+
+**2026-03-10.** Partnership live. This is the date I can offer Vizible local search and local digital marketing to WNC businesses as a product, not a referral I hope someone answers.
+
+They had already published Asheville as a named local-search market. I did not invent the geography. I put a local operator in front of it.
+
+## Why
+
+A website without a clean Google Business Profile is a brochure in a drawer. A Facebook page without citations is a hobby. The map pack is the storefront, and the storefront was being run by whoever last logged into GBP in 2022.
+
+I wanted a platform that already knew this region is not a radius, plus a CMO who will sit in the numbers instead of mailing a PDF. Vizible had both. I had the operators.
+
+If you run a shop between Asheville and the Tennessee line, what is wrong on your Google profile today: the service area, the photos, or the reviews a visitor would actually trust?
+`;
+
+const WLOS_AMP_COVER = "/blog/wlos-sinclair-amp-ctv-ott/cover.png";
+
+const WLOS_AMP_CONTENT = `![WLOS & MY40 360 Marketing. Broadcast and digital, Asheville and Greenville](/blog/wlos-sinclair-amp-ctv-ott/screenshots/reachwlos.png)
+
+## Who
+
+Small businesses in this DMA were locked out of television the old way. Thirty-second linear buys belonged to car dealers, hospitals, and whoever could stomach a media kit. Cord-cutters never saw the spot anyway.
+
+This is for the operator who already decided they need to be on the living-room screen. The roofer. The clinic. The regional retailer. Not for the brand that still thinks "TV" means a 6pm news adjacency and a hope.
+
+## What
+
+I partnered with the **WLOS media team** through **Sinclair** and **AMP Sales & Marketing Solutions** so small businesses can buy the same class of **CTV/OTT** inventory the national accounts already run.
+
+CTV is the screen. OTT is how the ad gets there. In practice you buy them together. Streaming television. Targeted by DMA or ZIP. Not a time slot you pray someone is watching.
+
+WLOS and MY40 already list the digital stack on [reachwlos.com](https://reachwlos.com/service-two/):
+
+- **OTT/CTV:** Compulse OTT, Sports OTT, Amazon OTT
+- Google Search
+- Social: Meta, TikTok, Snapchat, LinkedIn
+- YouTube
+- Display and video on WLOS.com, the News 13 app, the weather app
+- Audience extension, geofencing, email, Smart Mailer, branded content
+
+The local team still does monthly business reviews and reports through one dashboard. Creative can be built in-house. Google Preferred Partner on the search side.
+
+AMP is the pipe behind that. Sinclair launched **AMP Sales & Marketing Solutions** on January 16, 2025 as the unified advertising sales force: digital, traditional, local, social, audio, CTV, and streaming. National sales, sports, long form, network development. The public face is [ampmediasales.com](https://ampmediasales.com). One of their published client notes is blunt: Compulse (AMP) is a premium OTT product.
+
+That is the enterprise access. The partnership is me walking a small business into it instead of leaving the buy on a national insertion order.
+
+![WLOS digital strategy. Sinclair, Compulse, OTT/CTV in the service list](/blog/wlos-sinclair-amp-ctv-ott/screenshots/digital.png)
+
+## Where
+
+WLOS is ABC 13 in Asheville. MY40 sits next to it. The marketing team works out of Asheville and Greenville. Phone on their site: **828-684-1340**.
+
+The audience is this mountain DMA and the small businesses that already buy search and still lose the living room to whoever is streaming.
+
+AMP's footprint is national. 185 Sinclair stations in 86 markets. The point of the partnership is not that a Canton shop buys 86 markets. The point is they can buy **this** market on the same CTV/OTT rails.
+
+![AMP Sales & Marketing Solutions. Sinclair unified sales force, CTV and streaming](/blog/wlos-sinclair-amp-ctv-ott/screenshots/amp.png)
+
+## When
+
+**2026-08-03.** Partnership live. AMP had already been the Sinclair sales brand since January 2025. WLOS had already been selling Compulse OTT. What changed is I can put a small-business operator on that inventory without pretending they need a New York media buyer.
+
+## Why
+
+Linear TV is not where the cord-cutters went. They went to the streaming apps on the same glass. National brands followed them. Main Street did not, because the buy looked like an enterprise product.
+
+It is an enterprise product. That is the point. AMP aggregated the OTT. WLOS will still sit in the room. I will still translate the media kit into a ZIP list and a budget a shop can survive.
+
+If you were on the couch in Buncombe County tonight, whose commercial should have been on that stream: yours, or the chain that already knew how to buy CTV?
+`;
+
+const LEADMINERR_COVER = "/blog/leadminerr-voice-closed-deals/cover.png";
+
+const LEADMINERR_CONTENT = `![LeadMinerr homepage. Convert fresh and aged leads into booked appointments, live campaigns](/blog/leadminerr-voice-closed-deals/screenshots/home.png)
+
+## Who
+
+National sales teams. Regional desks. Local closers. The people who already bought the leads and then watched them rot in a CRM while a human SDR burned eight hours to book two meetings.
+
+Leads are not deals. A list is not a pipeline. Voice is still how a lot of this country agrees to buy, and most teams are still dialing like it is 2014: spam-labeled DIDs, no TCPA story, aged inventory treated as trash.
+
+This is for operators who want closed deals and booked appointments handed to the closer. Not for tourists who want a chatbot demo.
+
+## What
+
+I partnered with **[LeadMinerr.com](https://leadminerr.com)** to deliver closed deals through voice.
+
+LeadMinerr is compliance-first outbound infrastructure. Instant activation. No setup fees in their public offer. Per-attempt economics instead of a rented dialer and a surprise telco invoice.
+
+What the platform actually does:
+
+- Launch voice campaigns across verticals in minutes
+- Conversational AI plus agentic AI on the dial
+- Route qualified calls to an AI agent, a call center, an affiliate, or a CRM
+- **DialGuard:** 11-layer scrub before every dial (litigator DB, reassigned numbers, DNC, consent decay, dummies, the rest)
+- **CarrierShield:** managed numbers across AT&T, Verizon, T-Mobile so "Spam Likely" is not the default greeting
+- Warm transfer, live SIP to your floor, or consent-only capture
+- AI voice agents that qualify, verify, hit a live calendar, and hand off with context. They also close when the campaign is built for it
+- Aged and fresh inventory on the same campaign. 30/60/90-day lists are not dead. The dialer was
+
+They sell to call centers, performance marketers, and lead buyers. Verticals on the site include insurance, solar, Medicare, ACA, home services, mortgage, HVAC, legal intake. Local teams run the same rails with smaller caps.
+
+I am not the dialer. I am the partner who will put a national, regional, or local sales team on it and stay in the reporting.
+
+![LeadMinerr. Sentiment and topic scoring on every call](/blog/leadminerr-voice-closed-deals/screenshots/ai-sentiment.jpg)
+
+## Where
+
+The product lives at [leadminerr.com](https://leadminerr.com). App at app.leadminerr.com. Login on the marketing shell. Demo request is the front door.
+
+The work is not a WNC-only story. National desks. Regional floors. Local teams that still live on the phone. If your closer is in Asheville and your list is in four time zones, that is a LeadMinerr campaign, not a spreadsheet.
+
+## When
+
+**2026-09-08.** Partnership live. Their public journal was already writing operator math. CPA for outbound voice on August 22. TCPA one-to-one consent as an operator problem, not a blog slogan.
+
+I am not pretending I built the dialer. I am putting sales teams I work with onto a stack that already scrubs, paces, and transfers.
+
+## Why
+
+A lead vendor will sell you a CSV. A dialer will sell you minutes. Neither one owes you a booked appointment.
+
+I wanted voice that ends in a transfer or a calendar slot, with the compliance story in front of the first ring. LeadMinerr built that for people who already know what a connect rate is. I brought the teams.
+
+If your floor is still working last quarter's list by hand, what do you want the first campaign to return: a warm transfer to the closer, a booked slot, or a consent record you can actually defend?
+`;
+
+const BIRDEYE_COVER = "/blog/birdeye-mom-and-pop-reputation/cover.png";
+
+const BIRDEYE_CONTENT = `![Birdeye dashboard. Inbox, listings, reviews, referrals in one operator console](/blog/birdeye-mom-and-pop-reputation/screenshots/dashboard.png)
+
+## Who
+
+Mom-and-pop shops. The bakery with nine Google reviews, three of them complaints from 2018. The plumber who is better than the national van and loses the map pack anyway. The dentist who still asks at the desk and never sends the text.
+
+Chains already run reputation like a department. Aspen Dental. Blaze Pizza. Black Bear Diner. David's Bridal. Extra Space Storage. That is Birdeye's published roster. Main Street was left with a login to Google and a hope.
+
+This is for the owner who already decided reviews are the sales team. Not for the owner who wants to argue with a one-star from a bot.
+
+## What
+
+I partnered with **Birdeye** to put that chain-level reputation stack on a single location.
+
+Birdeye is the reviews and listings platform the multi-location brands already pay for. The SMB surface is the same thesis: be found, be chosen, be the business people come back to. Public site: [birdeye.com/small-business](https://birdeye.com/small-business/).
+
+What I can actually put on a shop:
+
+- Automated review requests after the appointment or the invoice
+- One inbox for Google, Facebook, and the long tail of review sites (they publish 150+ / 200+ depending on the page)
+- On-brand responses instead of the owner typing on a phone at 9pm
+- Listings AI: fix the NAP once, sync across 50+ directories
+- Review generation, review marketing, referrals, webchat, social, surveys, ticketing, competitor views
+
+Their published SMB outcomes: **450%** more website traffic, **350%** more Google reviews, **20%** more leads per month. On the reviews product they publish **128%** more reviews in the first 90 days and a **4.9** average star rating across locations that run the program. Those are Birdeye's numbers, not a case study I invented for a Canton shop.
+
+The point of the partnership is not that a mom-and-pop becomes Aspen Dental. The point is they stop competing against Aspen Dental with a shoebox of paper reviews.
+
+![Birdeye Reviews. Generation, response, marketing, root-cause agents](/blog/birdeye-mom-and-pop-reputation/screenshots/reviews-product.png)
+
+## Where
+
+The platform is national. I am offering it here, to single-location and small multi-location operators who were never going to get a Birdeye enterprise AE on their own.
+
+If you have a storefront in Asheville, Waynesville, Hendersonville, Boone, or the towns in between, this is the same console a 1,700-location brand uses to request, respond, and syndicate. One location. Same rails.
+
+![Birdeye Listings AI. NAP in one dashboard, sync outbound](/blog/birdeye-mom-and-pop-reputation/screenshots/listings.png)
+
+## When
+
+**2026-07-21.** Partnership live. Birdeye was already the default answer in every serious reputation RFP. What changed is I can put a mom-and-pop on it without a national-brand minimum as the front door.
+
+## Why
+
+People do not click the third result with two stars. They click the business that looks alive. Chains industrialize that. Independent shops treat it like a chore and then wonder why the map pack belongs to the van with the 4.8.
+
+I wanted the same request-respond-listings loop the chains run, priced and implemented for one shop, with me in the middle so the owner is not learning a new SaaS at closing time.
+
+If you only fixed one thing on your Google profile this week, would it be asking for the reviews you already earned, answering the ones you are hiding from, or correcting the hours a visitor is staring at right now?
+`;
+
 export const staticPosts: StaticPost[] = [
+  {
+    _id: "static:vizible-agency-wnc-local-seo",
+    title: "Vizible Agency: I partnered to bring local SEO to WNC businesses",
+    slug: "vizible-agency-wnc-local-seo",
+    excerpt:
+      "I partnered with Vizible Agency on March 10, 2026 to sell local SEO and local digital marketing into Western North Carolina. Listings, map-pack reporting, a Personal CMO on the paid tiers, and an Asheville market page that already understands mountain drive time.",
+    content: VIZIBLE_WNC_CONTENT,
+    coverImage: VIZIBLE_WNC_COVER,
+    tags: [
+      "partnership",
+      "vizible",
+      "local-seo",
+      "western-north-carolina",
+      "asheville",
+      "marketing",
+      "announcement",
+      "local-business",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-03-10T14:00:00Z"),
+    readingTime: 4,
+  },
+  {
+    _id: "static:wlos-sinclair-amp-ctv-ott",
+    title: "WLOS + Sinclair AMP: I opened enterprise CTV/OTT to small businesses",
+    slug: "wlos-sinclair-amp-ctv-ott",
+    excerpt:
+      "I partnered with the WLOS media team through Sinclair and AMP on August 3, 2026 so small businesses can buy Compulse / Sports / Amazon OTT on the same rails as national accounts. CTV is the screen. OTT is the pipe.",
+    content: WLOS_AMP_CONTENT,
+    coverImage: WLOS_AMP_COVER,
+    tags: [
+      "partnership",
+      "wlos",
+      "sinclair",
+      "amp",
+      "ctv",
+      "ott",
+      "advertising",
+      "small-business",
+      "announcement",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-08-03T14:00:00Z"),
+    readingTime: 4,
+  },
+  {
+    _id: "static:leadminerr-voice-closed-deals",
+    title: "LeadMinerr: I partnered to close deals by voice for sales teams",
+    slug: "leadminerr-voice-closed-deals",
+    excerpt:
+      "I partnered with LeadMinerr.com on September 8, 2026 to put national, regional, and local sales teams on compliance-first voice: DialGuard, CarrierShield, AI agents that qualify and transfer, aged lists that actually ring.",
+    content: LEADMINERR_CONTENT,
+    coverImage: LEADMINERR_COVER,
+    tags: ["partnership", "leadminerr", "voice", "sales", "ai-agents", "outbound", "announcement"],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-09-08T14:00:00Z"),
+    readingTime: 4,
+  },
+  {
+    _id: "static:birdeye-mom-and-pop-reputation",
+    title: "Birdeye: I brought chain-level reputation management to mom-and-pop shops",
+    slug: "birdeye-mom-and-pop-reputation",
+    excerpt:
+      "I partnered with Birdeye on July 21, 2026 so a single shop can run the same review-request, response, and listings loop Aspen Dental and Blaze Pizza already run. Chain rails. Mom-and-pop seat.",
+    content: BIRDEYE_CONTENT,
+    coverImage: BIRDEYE_COVER,
+    tags: [
+      "partnership",
+      "birdeye",
+      "reputation",
+      "reviews",
+      "listings",
+      "local-business",
+      "announcement",
+    ],
+    featured: true,
+    published: true,
+    publishedAt: Date.parse("2026-07-21T14:00:00Z"),
+    readingTime: 4,
+  },
   {
     _id: "static:monarch-mountain-foundations-wordpress-to-next-dns-still-php",
     title: "Monarch Mountain Foundations: I migrated WordPress to Next — DNS still serves PHP",
@@ -8702,7 +9012,7 @@ export const staticPosts: StaticPost[] = [
   },
   {
     _id: "static:waynesville-zaxbys-single-store-ops-portal",
-    title: "modern-design-playground: I left agents running for ten hours and they rebuilt nine worlds",
+    title: "Waynesville Zaxby's: I built a single-store ops portal so Russ Avenue's public face and shift office share one origin",
     slug: "waynesville-zaxbys-single-store-ops-portal",
     excerpt:
       "I shipped waynesville.yourzaxbys.com as a Next.js 16 + Convex + Clerk single-store portal for 424 Russ Ave: public events/careers/community out front, live shift metrics, Steritech CAPs, hiring, training, and attendance behind the door. Package 0.1.0, 235 commits, HEAD c9f97b7. Not the franchise SaaS sibling.",
@@ -8935,7 +9245,7 @@ export const staticPosts: StaticPost[] = [
   },
   {
     _id: "static:omnux-report-one-command-diagnostics-redaction",
-    title: "WNC History Tours: I shipped the booking shell before the tour pages existed",
+    title: "omnux-report: I shipped one-command diagnostics with consent and redaction as the default",
     slug: "omnux-report-one-command-diagnostics-redaction",
     excerpt:
       "omnux-report is an offline MIT Shell diagnostics tool (HEAD f9729a6) that ships a consenting redacted .tar.zst + SHA256 for Omnux on Apple Silicon, with SEP structure only. Validated on a real M1 Pro Omarchy box plus a ten-check fixture harness; mx-mac packaging and owner release still open.",
@@ -9406,16 +9716,22 @@ export const staticPosts: StaticPost[] = [
   },
 ];
 
+function publishedStaticPosts() {
+  const seen = new Set(staticPosts.map((post) => post.slug));
+  const series = getOmaFeaturePosts().filter((post) => !seen.has(post.slug));
+  return [...staticPosts, ...series].filter((post) => post.published);
+}
+
 export function getStaticPosts(tag?: string) {
-  const posts = staticPosts.filter((p) => p.published);
+  const posts = publishedStaticPosts();
   if (!tag) return posts;
-  return posts.filter((p) => p.tags.includes(tag));
+  return posts.filter((post) => post.tags.includes(tag));
 }
 
 export function getStaticPostBySlug(slug: string) {
-  return staticPosts.find((p) => p.slug === slug && p.published) ?? null;
+  return publishedStaticPosts().find((post) => post.slug === slug) ?? null;
 }
 
 export function getStaticTags() {
-  return Array.from(new Set(staticPosts.flatMap((p) => p.tags))).sort();
+  return Array.from(new Set(publishedStaticPosts().flatMap((post) => post.tags))).sort();
 }

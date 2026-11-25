@@ -70,11 +70,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           ← Back to Blog
         </Link>
 
-        {/* Cover image */}
-        {post.coverImage && (
-          <div className="aspect-video relative rounded-lg overflow-hidden">
-            <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
-          </div>
+        {"video" in post && post.video ? (
+          <video
+            src={post.video}
+            poster={post.coverImage}
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full rounded-lg bg-black"
+          />
+        ) : (
+          post.coverImage && (
+            <div className="aspect-video relative rounded-lg overflow-hidden">
+              <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
+            </div>
+          )
         )}
 
         {/* Header */}
