@@ -8,16 +8,17 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: Vercel environment to pull before building
+        description: Vercel environment to pull when deploying to production
         required: true
         default: production
         type: choice
         options:
+          - preview
           - production
       deploy_prod:
-        description: Deploy with --prod
+        description: Deploy with --prod and alias the production domain. Leave false for a preview.
         required: true
-        default: true
+        default: false
         type: boolean
 
 concurrency:
@@ -34,6 +35,9 @@ jobs:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
       VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      # Push to main/master is always production. Dispatch uses deploy_prod (default false).
+      DEPLOY_PROD: ${{ github.event_name == 'push' || inputs.deploy_prod }}
+      VERCEL_ENVIRONMENT: ${{ (github.event_name == 'push' || inputs.deploy_prod) && (github.event.inputs.environment || 'production') || 'preview' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -64,8 +68,8 @@ jobs:
       - name: Install dependencies
         run: bun install --production --frozen-lockfile
 
-      - name: Pull Vercel production environment
-        run: bunx --bun vercel pull --yes --environment="${{ github.event.inputs.environment || 'production' }}" --token="$VERCEL_TOKEN"
+      - name: Pull Vercel environment
+        run: bunx --bun vercel pull --yes --environment="$VERCEL_ENVIRONMENT" --token="$VERCEL_TOKEN"
 
       - name: Build Vercel output
         env:
@@ -74,7 +78,10 @@ jobs:
           CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
         run: |
           export GZ_OPT="-9"
-          if [ -n "${CONVEX_DEPLOYMENT:-}" ] && [ -n "${CONVEX_DEPLOY_KEY:-}" ]; then
+          if [ "$DEPLOY_PROD" != "true" ]; then
+            unset CONVEX_DEPLOYMENT CONVEX_DEPLOY_KEY
+            bunx --bun vercel build --token="$VERCEL_TOKEN"
+          elif [ -n "${CONVEX_DEPLOYMENT:-}" ] && [ -n "${CONVEX_DEPLOY_KEY:-}" ]; then
             bunx convex deploy --yes --cmd 'bunx --bun vercel build --prod --token="$VERCEL_TOKEN"'
           else
             unset CONVEX_DEPLOYMENT CONVEX_DEPLOY_KEY
@@ -97,11 +104,17 @@ jobs:
       - name: Deploy prebuilt output
         timeout-minutes: 10
         run: |
-          bunx vercel deploy --prebuilt --prod --archive=tgz --yes --token="$VERCEL_TOKEN" | tee deployment.log
+          if [ "$DEPLOY_PROD" = "true" ]; then
+            bunx vercel deploy --prebuilt --prod --archive=tgz --yes --token="$VERCEL_TOKEN" | tee deployment.log
+          else
+            bunx vercel deploy --prebuilt --archive=tgz --yes --token="$VERCEL_TOKEN" | tee deployment.log
+          fi
           tail -n 1 deployment.log > deployment-url.txt
           {
             echo "### Deployment"
             echo ""
+            echo "- Production: $DEPLOY_PROD"
+            echo "- Vercel environment: $VERCEL_ENVIRONMENT"
             echo "- URL: $(cat deployment-url.txt)"
           } >> "$GITHUB_STEP_SUMMARY"
 
