@@ -1,4 +1,5 @@
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
+export const revalidate = 3600;
 
 import { ContainerBoxedCenter } from "@/components/layout/containers";
 import { Button } from "@/components/ui/button";
@@ -24,9 +25,9 @@ export default function Home() {
       <JsonLd data={profilePageSchema()} />
       <section className="flex flex-col bg-gradient-to-b from-Base to-Crust static">
         <Image
-          src="/hero-bg.png"
-          width={3840}
-          height={1864}
+          src="/hero-bg.webp"
+          width={1920}
+          height={932}
           alt=""
           className="absolute inset-0 pointer-events-none mix-blend-overlay w-full h-auto"
         />

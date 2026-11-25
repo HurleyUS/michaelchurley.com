@@ -3,6 +3,9 @@ import { getLlmsPosts } from "@/lib/llms";
 import { RESUME_UPDATED } from "@/lib/resume";
 import { SITE_URL } from "@/lib/site-profile";
 
+/** Rebuild at most once an hour so crawlers do not pay a Convex/list pass per request. */
+export const revalidate = 3600;
+
 /** Last content revision of the static pages (book, portfolio, vizible, omadesign, aeo). */
 const PAGES_UPDATED = "2026-09-27";
 
