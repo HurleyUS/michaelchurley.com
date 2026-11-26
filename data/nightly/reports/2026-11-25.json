@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-25",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 25, 2026 · 5:00 AM EST → Nov 26, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-25T10:00:00Z → 2026-11-26T10:00:00Z",
+    "tldr": "Performance and caching pull requests opened across public repos: Cloudflare Workers targets with Clerk kept off public pages, and edge-cached public pages. None were merged in this window"
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "Open PRs · Cloudflare Workers targets and cached public pages",
+      "kind": "outside",
+      "summary": "Opened public pull requests that move public pages off the auth path and onto cached delivery: Omadesign's site gets a Cloudflare Workers target with Clerk removed from public pages (homepage payload cut from 788 KB to 64 KB), Mission Control OS gets a Workers target with Clerk limited to signed-in routes, and michaelchurley.com gets cached public pages, a smaller homepage hero and a public /book route. Still open at the end of the window.",
+      "bullets": [
+        "Omadesign site PR: 11 files changed",
+        "Mission Control OS PR: 10 files changed",
+        "michaelchurley.com cache PR: 7 files changed"
+      ],
+      "when": "Nov 25 · 8:04 AM–8:26 AM EST opened",
+      "links": [
+        {
+          "label": "Omadesign pull request 493",
+          "href": "https://github.com/HurleyUS/omadesign/pull/493"
+        },
+        {
+          "label": "Mission Control OS pull request 67",
+          "href": "https://github.com/Hustle-Launch/mission-control-os/pull/67"
+        },
+        {
+          "label": "michaelchurley.com pull request 99",
+          "href": "https://github.com/HurleyUS/michaelchurley.com/pull/99"
+        }
+      ]
+    }
+  ]
+}
