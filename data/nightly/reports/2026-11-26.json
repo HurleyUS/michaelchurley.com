@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-26",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 26, 2026 · 5:00 AM EST → Nov 27, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-26T10:00:00Z → 2026-11-27T10:00:00Z",
+    "tldr": "Qi, the Omarchy browser formerly called Omaweb, gained a Chromium (CEF) engine that runs real Chrome extensions and opens existing Chromium profiles. The pull request went through four rounds of QA and review fixes, and it was still open at the end of the window"
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "Open PR · Qi browser: real Chrome extensions and Chrome profiles",
+      "kind": "outside",
+      "summary": "Renamed the Omaweb browser to Qi and added Qi (CEF), a Chromium 158 build running native on Wayland with the Chrome runtime, so real Chrome Web Store extensions such as password managers work. It opens your existing Chromium profiles directly, after a dated backup, instead of creating new ones. A profile picker, a hidden toolbar (Ctrl+L) and single-instance link handling are included. Four follow-up commits fixed QA findings and review comments: a crash on exit, a stray Chromium session window, address-bar focus, safer profile snapshots and backups, and a recoverable settings migration. Still open at the end of the window.",
+      "bullets": [
+        "52 files changed, +4,033 / −239",
+        "5 commits, 52 Rust tests passing",
+        "Review threads answered across four QA rounds"
+      ],
+      "when": "Nov 26 · 9:54 AM–7:41 PM EST",
+      "links": [
+        { "label": "Qi pull request 4", "href": "https://github.com/michaelmonetized/yab/pull/4" },
+        { "label": "Session and address-bar fix commit", "href": "https://github.com/michaelmonetized/yab/commit/2f2689d" },
+        { "label": "Recoverable migration commit", "href": "https://github.com/michaelmonetized/yab/commit/96ed4d4" }
+      ]
+    }
+  ]
+}
