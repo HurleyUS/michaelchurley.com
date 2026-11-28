@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-27",
+  "label": "5am–5am ET",
+  "timezone": "America/New_York",
+  "meta": {
+    "windowEt": "Nov 27, 2026 · 5:00 AM EST → Nov 28, 2026 · 5:00 AM EST",
+    "windowUtc": "2026-11-27T10:00:00Z → 2026-11-28T10:00:00Z",
+    "tldr": "Qi, the Omarchy browser formerly called Omaweb, kept moving on its Chromium (CEF) pull request: profile-safety fixes, tabs on a vertical sidebar, a floating address bar, and a cleaner exit. Seven more commits landed and the pull request was still open at the end of the window"
+  },
+  "shipped": [],
+  "landed": [
+    {
+      "title": "Open PR · Qi browser: tabs, sidebar and profile safety",
+      "kind": "outside",
+      "summary": "Seven more commits on the Qi (CEF) pull request. Profile handling got safer: a SQLite database stays with its wal, shm and journal files, an interrupted move finishes cleanly, and snapshots now go to the XDG cache and refuse to delete their source. The window gained real tabs on a vertical sidebar that collapses until the pointer hits the left edge, a floating address bar, shortcuts in a keys.toml file, and a clean exit that no longer trips Chrome's close abort. Still open at the end of the window.",
+      "bullets": [
+        "7 commits in the window, about +3,300 / −780 lines",
+        "Pull request now at 59 files changed, +6,574 / −240",
+        "Review feedback from automated reviewers addressed in follow-up commits"
+      ],
+      "when": "Nov 27 · 8:38 AM → Nov 28 · 2:21 AM EST",
+      "links": [
+        {
+          "label": "Qi pull request 4",
+          "href": "https://github.com/michaelmonetized/yab/pull/4"
+        },
+        {
+          "label": "Sidebar and address bar commit",
+          "href": "https://github.com/michaelmonetized/yab/commit/b1405eb"
+        },
+        {
+          "label": "Real tabs and clean exit commit",
+          "href": "https://github.com/michaelmonetized/yab/commit/7c08ae9"
+        },
+        {
+          "label": "Profile damage prevention commit",
+          "href": "https://github.com/michaelmonetized/yab/commit/3675d68"
+        }
+      ]
+    }
+  ]
+}
